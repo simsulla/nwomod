@@ -49,8 +49,6 @@ acquire_core_state
 annex_core_country
 acquire_state 
 conquest 
-#acquire_puppet_core_state
-#annex_puppet_core_country
 cut_down_to_size 
 release_puppet
 become_independent
@@ -478,10 +476,8 @@ acquire_state = {
 	}
 	
 	allowed_states = {
-		is_colonial = no
 		any_owned_province = {
 			NOT = {	is_core = THIS }
-			is_colonial = no
 		}
 		NOT = { any_owned_province = { is_capital = yes } }
 	}
