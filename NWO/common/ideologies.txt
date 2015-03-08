@@ -1,0 +1,551 @@
+# If you add types, and use those tags, do not change them without changing everywhere they are used.
+
+islamist_group = {
+	islamist = {
+		uncivilized = no
+		color = { 49 79 79 }
+		date = 1905.1.1
+	
+		
+		add_political_reform = {
+			base = 0
+			modifier = {
+				factor = 1
+				ruling_party_ideology = islamist
+			}
+		}
+	
+	
+		remove_political_reform = {
+			base = 0
+			modifier = {
+				factor = 1
+				ruling_party_ideology = islamist 
+			}
+		}
+	
+	
+		add_social_reform = {
+			base = 0
+			modifier = {
+				factor = 1
+				ruling_party_ideology = islamist 
+			}
+		}
+	
+	
+		remove_social_reform = {
+			base = 0
+			modifier = {
+				factor = 1
+				ruling_party_ideology = islamist 
+			}
+		}
+		
+		
+		
+	}
+}	
+
+republican_group = {
+
+	populist = { 
+		uncivilized = no
+		color = { 255 165 0 }
+		date = 1905.1.1
+		
+		add_political_reform = {
+			base = 0
+			group = {
+				modifier = {
+					factor = 0.1
+						
+						political_movement_strength = 0.1
+				}
+				modifier = {
+					factor = 0.1
+	
+						political_movement_strength = 0.2
+				}
+				modifier = {
+					factor = 0.1
+		
+						political_movement_strength = 0.3
+				}
+				modifier = {
+					factor = 0.1
+					
+						political_movement_strength = 0.4
+				}
+				modifier = {
+					factor = 0.1
+					
+						political_movement_strength = 0.5
+				}
+				modifier = {
+					factor = 0.1
+						political_movement_strength = 0.6
+				}
+				modifier = {
+					factor = 0.1
+					
+						political_movement_strength = 0.7
+				}
+				modifier = {
+					factor = 0.1
+						political_movement_strength = 0.8
+				}
+				modifier = {
+					factor = 0.1
+						political_movement_strength = 0.9
+				}
+			}
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 0
+			
+			group = {
+				modifier = {
+					factor = 0.1
+
+						social_movement_strength = 0.1
+				}
+				modifier = {
+					factor = 0.1
+
+						
+						social_movement_strength = 0.2
+
+				}
+				modifier = {
+					factor = 0.1
+
+						social_movement_strength = 0.3
+				}
+				modifier = {
+					factor = 0.1
+						social_movement_strength = 0.4
+				}
+				modifier = {
+					factor = 0.1
+
+						social_movement_strength = 0.5
+				}
+				modifier = {
+					factor = 0.1
+						social_movement_strength = 0.6
+					}
+				
+				modifier = {
+					factor = 0.1
+		
+						social_movement_strength = 0.7
+				
+				}
+				modifier = {
+					factor = 0.1
+
+						social_movement_strength = 0.8
+					}
+				
+				modifier = {
+					factor = 0.1
+	
+						
+						social_movement_strength = 0.9
+			
+				}
+			}
+			
+		}
+		remove_social_reform = {
+			base = 0
+		}
+		
+		add_military_reform = {
+			base = 0.5
+		}
+		
+		add_economic_reform = {
+			base = -0.5
+		}
+	}
+	
+	socialist = {
+		uncivilized = no
+		color = { 255 0 0 }
+		date = 1860.1.1
+		
+		add_political_reform = {
+			base = 0
+			group = {
+				modifier = {
+					factor = 0.1
+		
+						political_movement_strength = 0.1
+					}
+			
+				modifier = {
+					factor = 0.1
+		
+						
+						political_movement_strength = 0.2
+					
+				}
+				modifier = {
+					factor = 0.1
+					 
+						
+						political_movement_strength = 0.3
+				
+				}
+				modifier = {
+					factor = 0.1
+				
+						
+						political_movement_strength = 0.4
+					}
+				modifier = {
+					factor = 0.1
+		
+						
+						political_movement_strength = 0.5
+					
+				}
+				modifier = {
+					factor = 0.1
+					
+						
+						political_movement_strength = 0.6
+					
+				}
+				modifier = {
+					factor = 0.1
+					
+						
+						political_movement_strength = 0.7
+					
+				}
+				modifier = {
+					factor = 0.1
+					
+						political_movement_strength = 0.8
+					
+				}
+				modifier = {
+					factor = 0.1
+				
+						political_movement_strength = 0.9
+					
+				}
+			}
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 1
+		}
+		remove_social_reform = {
+			base = 0
+		}
+	}
+	
+	communist = {
+		uncivilized = no
+		color = { 150 10 10 }
+		date = 1865.1.1
+		
+		add_political_reform = {
+			base = 0
+		}
+		remove_political_reform = {
+			base = 1
+		}
+		add_social_reform = {
+			base = 1
+		}
+		remove_social_reform = {
+			base = 0
+		}	
+	}
+
+	progressive = { # social_liberal
+		color = { 255 20 147 }
+		date = 1900.1.1
+		
+		add_political_reform = {
+			base = 1
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 1
+		}
+		remove_social_reform = {
+			base = 0
+		}
+	}
+	
+	green = {
+		color = { 0 127 14 }
+		date = 1980.1.1
+				
+		add_political_reform = {
+			base = 1
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 1
+		}
+		remove_social_reform = {
+			base = 0
+		}
+	}
+		
+}
+
+liberal_group = {
+
+	conservative = {
+		color = { 0 0 128 }
+		
+		can_reduce_militancy = yes
+		
+		add_political_reform = {
+			base = 0
+			group = {
+				modifier = {
+					factor = 0.1
+						
+						political_movement_strength = 0.1
+				}
+				modifier = {
+					factor = 0.1
+	
+						political_movement_strength = 0.2
+				}
+				modifier = {
+					factor = 0.1
+		
+						political_movement_strength = 0.3
+				}
+				modifier = {
+					factor = 0.1
+					
+						political_movement_strength = 0.4
+				}
+				modifier = {
+					factor = 0.1
+					
+						political_movement_strength = 0.5
+				}
+				modifier = {
+					factor = 0.1
+						political_movement_strength = 0.6
+				}
+				modifier = {
+					factor = 0.1
+					
+						political_movement_strength = 0.7
+				}
+				modifier = {
+					factor = 0.1
+						political_movement_strength = 0.8
+				}
+				modifier = {
+					factor = 0.1
+						political_movement_strength = 0.9
+				}
+			}
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 0
+			
+			group = {
+				modifier = {
+					factor = 0.1
+
+						social_movement_strength = 0.1
+				}
+				modifier = {
+					factor = 0.1
+
+						
+						social_movement_strength = 0.2
+
+				}
+				modifier = {
+					factor = 0.1
+
+						social_movement_strength = 0.3
+				}
+				modifier = {
+					factor = 0.1
+						social_movement_strength = 0.4
+				}
+				modifier = {
+					factor = 0.1
+
+						social_movement_strength = 0.5
+				}
+				modifier = {
+					factor = 0.1
+						social_movement_strength = 0.6
+					}
+				
+				modifier = {
+					factor = 0.1
+		
+						social_movement_strength = 0.7
+				
+				}
+				modifier = {
+					factor = 0.1
+
+						social_movement_strength = 0.8
+					}
+				
+				modifier = {
+					factor = 0.1
+	
+						
+						social_movement_strength = 0.9
+			
+				}
+			}
+			
+		}
+		remove_social_reform = {
+			base = 0
+		}
+		
+		add_military_reform = {
+			base = 0.5
+		}
+		
+		add_economic_reform = {
+			base = -0.5
+		}
+	}
+	
+	liberal = {
+		color = { 51 153 255 }
+
+		
+		add_political_reform = {
+			base = 1
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 0
+			
+			group = {
+				modifier = {
+					factor = 0.1
+				
+						
+						social_movement_strength = 0.1
+					
+				}
+				modifier = {
+					factor = 0.1
+					
+						
+						social_movement_strength = 0.2
+					
+				}
+				modifier = {
+					factor = 0.1
+						
+						social_movement_strength = 0.3
+					
+				}
+				modifier = {
+					factor = 0.1
+		
+						
+						social_movement_strength = 0.4
+					
+				}
+				modifier = {
+					factor = 0.1
+				
+						
+						social_movement_strength = 0.5
+					
+				}
+				modifier = {
+					factor = 0.1
+			
+						
+						social_movement_strength = 0.6
+					
+				}
+				modifier = {
+					factor = 0.1
+									
+						social_movement_strength = 0.7
+				
+				}
+				modifier = {
+					factor = 0.1
+			
+						social_movement_strength = 0.8
+				
+				}
+				modifier = {
+					factor = 0.1
+			
+						
+						social_movement_strength = 0.9
+				}
+			}
+		}
+		remove_social_reform = {
+			base = 0
+		}
+		
+		add_military_reform = {
+			base = 0.5
+		}
+		
+		add_economic_reform = {
+			base = 1
+		}
+	}
+	
+	# REM anarcho_liberal
+
+	# REM abolitionist
+}
+	
+sectarian_group = {
+	separatist = {
+		color = { 30 60 60 }
+		
+		add_political_reform = {
+			base = 0
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 0
+		}
+		remove_social_reform = {
+			base = 0
+		}	
+	}
+}

@@ -1,0 +1,1102 @@
+# INSTRUCTIONS:
+# -------------
+# constructing_cb - default to yes. if "no", cant be picked for generation or as add_wargoal if no CB already
+# is_triggered_only - Triggered from within the code or by event effects. DO NOT REMOVE THE STOCK ONES.
+# mutual - The CB effects will also be used by the defender in peace treaties
+# months - The number of months this CB will be valid. Only works for triggered CBs.
+# prerequisites - A condition that automatically activates a CB. Does not work for triggered CBs. 'THIS' scope is the target country.
+# badboy_factor - Multiplied with any badboy increase normally associated with a peace option.
+# prestige_factor - Multiplied with any prestige increase normally associated with a peace option.
+# peace_cost_factor - Multiplied with the cost of the peace options in the peace treaty
+# po_xxx - Peace options. If toggled on, badboy_factor and prestige_factor are multiplied with any associated base changes to these (see defines.txt.)
+# allowed_states - If 'po_demand_states' is on, badboy_factor applies to these provinces. 'THIS' scope is us.
+# on_add - effect triggered when war goal added (triggering country's scope)
+# construction_speed - base modifier for how long creating this CB will take. default is 1. 1.2 means 20% faster
+# great_war_obligatory - cb is always added to the peace offer/demand in great wars.
+# po_remove_cores - may be used only with: po_transfer_provinces, po_demand_state, po_annex
+# crisis - can be offered as a wargoal in a crisis
+#
+# The peace options are:
+#po_annex
+#po_demand_state
+#po_add_to_sphere
+#po_disarmament
+#po_reparations
+#po_transfer_provinces
+#po_remove_prestige
+#po_make_puppet
+#po_release_puppet
+#po_status_quo
+#po_install_communist_gov_type
+#po_uninstall_communist_gov_type
+#po_remove_cores
+#po_colony
+
+# NOTE: The order in which the peace options are listed is the order in which the AI will normally prioritize them in peace treaties
+
+# TRIGGERED - Triggered from within the code or by event effects
+# --------------------------------------------------------------
+
+# Order that CBs are executed in a peace treaty
+peace_order = { 
+add_to_sphere 
+take_from_sphere 
+status_quo 
+gunboat 
+free_peoples
+liberate_country
+acquire_core_state 
+annex_core_country
+acquire_state 
+conquest 
+#acquire_puppet_core_state
+#annex_puppet_core_country
+cut_down_to_size 
+release_puppet
+become_independent
+make_puppet
+humiliate
+install_democracy
+}
+
+gunboat = {
+	sprite_index = 1
+	is_triggered_only = yes
+	months = 12
+	constructing_cb = no
+	crisis = no
+	
+	can_use = {
+		OR =
+		{
+			has_country_modifier = in_bankrupcy
+			has_country_modifier = generalised_debt_default
+		}
+		in_default = THIS
+		# both we THIS and target must not be sphered or vassaled
+		part_of_sphere = no
+		is_vassal = no
+		THIS = {
+			part_of_sphere = no
+			is_vassal = no
+		}		
+	}
+
+	break_truce_prestige_factor = 0
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 0
+	
+	badboy_factor = 1
+	prestige_factor = 5
+	peace_cost_factor = 1
+	penalty_factor = 1
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	po_gunboat = yes
+	
+	war_name = WAR_GUNBOAT_NAME
+}
+
+status_quo = {
+	sprite_index = 1
+	is_triggered_only = yes
+	months = 12
+	constructing_cb = no
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		always = no
+	}
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	badboy_factor = 1
+	prestige_factor = 1
+	peace_cost_factor = 1
+	penalty_factor = 1
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	po_status_quo = yes
+	
+	war_name = WAR_NAME
+}
+
+# Conquest
+conquest = {
+	sprite_index = 2
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		NOT = { number_of_states = 2 }
+		is_independant = yes
+                NOT = { is_our_vassal = THIS }
+                is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+
+	badboy_factor = 2.2
+	prestige_factor = 5
+	peace_cost_factor = 1
+	penalty_factor = 1
+	
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	construction_speed = 0.5
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	po_annex = yes
+	
+	war_name = WAR_CONQUEST_NAME
+}
+
+# Sphere of Influence Gain
+add_to_sphere = {
+	sprite_index = 3
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 2
+	prestige_factor = 2
+	peace_cost_factor = 50
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = { is_greater_power = yes }
+		is_greater_power = no
+		is_independant = yes
+		part_of_sphere = no
+                NOT = { is_our_vassal = THIS }
+                is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+	
+	is_valid = {
+		THIS = { is_greater_power = yes }
+		is_greater_power = no
+	}
+	
+	po_add_to_sphere = yes
+	
+	war_name = WAR_ADD_SPHERE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+take_from_sphere = {
+	sprite_index = 4
+	is_triggered_only = yes
+	months = 12
+	
+	badboy_factor = 2
+	prestige_factor = 3
+	peace_cost_factor = 20
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = { is_greater_power = yes }
+		is_greater_power = yes
+                NOT = { is_our_vassal = THIS }
+                is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		is_sphere_leader_of = FROM
+		FROM = { is_vassal = no }
+		NOT = { relation = { who = THIS value = 0 } } 
+	}
+	
+	po_add_to_sphere = yes
+	
+	war_name = WAR_TAKE_SPHERE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+# Acquire Core State
+acquire_core_state = {
+	sprite_index = 5
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+	
+	badboy_factor = 0
+	prestige_factor = 5
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = { 
+		NOT = { is_our_vassal = THIS }
+		number_of_states = 2 # annex if you want their last state
+		any_owned_province = {
+			is_core = THIS
+		}
+                NOT = { is_our_vassal = THIS }
+                is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+	
+	allowed_states = {
+		any_owned_province = {
+			is_core = THIS
+		}
+		not = { any_owned_province = { is_capital = yes } }
+	}
+
+	po_demand_state = yes
+	
+	war_name = WAR_TAKE_CORE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+# Annex Core Country
+annex_core_country = {
+	sprite_index = 5
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 5
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		any_owned_province = {
+			is_core = THIS
+		}
+		NOT = {
+			any_owned_province = {
+				NOT = {
+					is_core = THIS
+				}
+			}
+		}
+                NOT = { is_our_vassal = THIS }
+                is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+
+	po_annex = yes
+	
+	war_name = WAR_RESTORE_ORDER_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+# Gain control of State
+acquire_state = {
+	sprite_index = 6
+	is_triggered_only = yes
+	months = 12
+	construction_speed = 0.5
+	
+	badboy_factor = 2.2
+	prestige_factor = 2
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		number_of_states = 2 # annex if you want their last state
+		any_owned_province = {
+			NOT = { is_core = THIS }
+		}
+		is_independant = yes
+		part_of_sphere = no
+        NOT = { is_our_vassal = THIS }
+        is_vassal = no
+		OR = {
+				THIS = { government = populist_dictatorship }
+				THIS = { government = nationalist_dictatorship }
+				THIS = { government = islamist_dictatorship }
+				THIS = { government = proletarian_dictatorship }
+				war_with = THIS
+				NOT = { relation = { who = THIS value = -50 } }
+				FROM = { involved_in_crisis = yes }
+				THIS = { ai = no }
+		}
+	}
+	
+	allowed_states = {
+		is_colonial = no
+		any_owned_province = {
+			NOT = {	is_core = THIS }
+			is_colonial = no
+		}
+		NOT = { any_owned_province = { is_capital = yes } }
+	}
+	
+	allowed_states_in_crisis = {
+		any_owned_province = {
+			any_neighbor_province = {
+				owner = { tag = THIS }
+			}
+		}
+	}		
+
+	po_demand_state = yes
+	
+	war_name = WAR_TAKE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+
+# Cut Down to size
+cut_down_to_size = {
+	sprite_index = 8
+	is_triggered_only = yes
+	months = 12
+	
+	badboy_factor = 1.3
+	prestige_factor = 1
+	peace_cost_factor = 25
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	po_disarmament = yes
+	po_reparations = yes
+
+	war_name = WAR_NAME
+	
+	can_use = {
+		is_disarmed = no
+		part_of_sphere = no
+        NOT = { is_our_vassal = THIS }
+        is_vassal = no
+		OR = {
+				THIS = { government = populist_dictatorship }
+				THIS = { government = nationalist_dictatorship }
+				THIS = { government = islamist_dictatorship }
+				THIS = { government = proletarian_dictatorship }
+				war_with = THIS
+				NOT = { relation = { who = THIS value = -50 } }
+				FROM = { involved_in_crisis = yes }
+				THIS = { ai = no }
+		}
+	}
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+# Free Peoples
+free_peoples = {
+	sprite_index = 9
+	is_triggered_only = yes
+	months = 12
+
+	badboy_factor = 1.5
+	prestige_factor = 1
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+                NOT = { is_our_vassal = THIS }
+                is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		number_of_states = 2
+		part_of_sphere = no
+		is_vassal = no
+		FROM = {
+			exists = yes
+		}
+		
+		any_owned_province = {
+			is_core = FROM
+			NOT =
+			{
+				is_core = THIS
+			}
+		}
+		is_releasable_vassal = FROM
+	}
+
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal's state
+	allowed_states = {
+		any_owned_province = {
+			is_core = FROM
+		}
+	}
+
+	po_transfer_provinces = yes
+
+	war_name = WAR_FREE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		country_event = 2651
+	}	
+}
+
+# Liberate country
+liberate_country = {
+	sprite_index = 15
+	is_triggered_only = yes
+	months = 12
+
+	badboy_factor = 2.2
+	prestige_factor = 1
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		number_of_states = 2
+		NOT = { tag = FROM }
+		FROM = { exists = yes }
+		part_of_sphere = no
+		is_vassal = no
+		any_owned_province = {
+			is_core = FROM
+			NOT =
+			{
+				is_core = THIS
+			}
+		}
+		is_releasable_vassal = FROM
+	}
+
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal's state
+	allowed_states = {
+		any_owned_province = {
+			is_core = FROM
+		}
+	}
+	all_allowed_states = yes
+	po_transfer_provinces = yes
+	po_remove_cores = yes
+
+	war_name = WAR_LIBERATE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		country_event =	2651	# Territorial Loss event
+	}
+}
+
+# Release Puppet
+release_puppet = {
+	sprite_index = 10
+	is_triggered_only = yes
+	months = 12
+
+	badboy_factor = 1
+	prestige_factor = 1
+	peace_cost_factor = 15
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		num_of_vassals_no_substates = 1
+                is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		is_our_vassal = FROM
+		FROM = { is_substate = no }
+	}
+	
+	po_release_puppet = yes
+	po_add_to_sphere = yes
+
+	war_name = WAR_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+# Make Puppet
+make_puppet = {
+	sprite_index = 10
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 2.0
+	prestige_factor = 1
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		NOT = { number_of_states = 4 }
+		is_greater_power = no
+		is_vassal = no
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	
+	po_make_puppet = yes
+
+	war_name = WAR_PUPPET_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+        on_po_accepted = {
+                country_event = 19370
+        }
+}
+
+# Become Independent
+become_independent = {
+	sprite_index = 10
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	always = yes
+
+	badboy_factor = 1
+	prestige_factor = 1
+	peace_cost_factor = 15
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		is_our_vassal = THIS
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		OR = {
+			FROM = { is_our_vassal = THIS }
+			war_with = THIS
+		}
+	}
+	
+	po_release_puppet = yes
+	po_add_to_sphere = yes
+
+	war_name = WAR_INDEPENDENCE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+		add_war_goal = {
+			casus_belli = liberate_country
+		}
+		add_war_goal = {
+			casus_belli = make_puppet
+		}
+		leave_alliance = FROM
+		release_vassal = THIS
+	}
+}
+
+
+# Humiliate
+humiliate = {
+	sprite_index = 11
+	is_triggered_only = yes
+	months = 12
+
+	badboy_factor = 1.5
+	prestige_factor = 1
+	peace_cost_factor = 15
+	penalty_factor = 1
+	
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	po_remove_prestige = yes
+
+	tws_battle_factor = 2.0
+	
+	war_name = WAR_HUMILIATE_NAME
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		has_recently_lost_war = no
+               OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = nationalist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
+                        THIS = { government = proletarian_dictatorship }
+                        war_with = THIS
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+install_democracy = {
+	sprite_index = 13
+	is_triggered_only = yes
+	months = 12
+	construction_speed = 1.5
+	crisis = no
+
+	badboy_factor = 3
+	prestige_factor = 5
+	peace_cost_factor = 50
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		THIS = {
+			is_greater_power = yes
+			# mass_politics = 1
+			OR = {
+				government = hms_government
+				government = democracy
+			}
+		}
+		is_vassal = no
+		civilized = yes
+		NOT = { is_our_vassal = THIS }
+		OR = {
+			government = proletarian_dictatorship
+			government = populist_dictatorship
+			government = nationalist_dictatorship
+			government = islamist_dictatorship
+		}
+		THIS = {
+			NOT = {
+				war_policy = pacifism
+			}
+		}
+               OR = {                        
+                        NOT = { relation = { who = THIS value = -50 } }
+                        FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
+                }
+	}
+	
+	po_remove_prestige = yes
+
+	war_name = WAR_NAME
+	
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism 
+			to = pro_military
+			value = 0.05
+		}
+	}
+	
+	on_po_accepted = {
+		THIS = {
+			set_country_flag = friendly_democracy
+			any_country = {
+				limit = {
+					OR = {
+						government = proletarian_dictatorship
+						government = populist_dictatorship
+						government = nationalist_dictatorship
+						government = islamist_dictatorship
+					}
+				}
+				relation = { who = THIS value = -50 }
+			}
+		}
+		country_event = 96085
+	}
+}
+
+install_communism = {
+        sprite_index = 12
+        is_triggered_only = yes
+        months = 12
+        construction_speed = 1.5
+        crisis = no
+
+        badboy_factor = 5
+        prestige_factor = 5
+        peace_cost_factor = 50
+        penalty_factor = 1
+
+        break_truce_prestige_factor = 1
+        break_truce_infamy_factor = 1
+        break_truce_militancy_factor = 1
+        truce_months = 0
+        
+        good_relation_prestige_factor = 1
+        good_relation_infamy_factor = 1
+        good_relation_militancy_factor = 1
+
+        can_use = {
+                THIS = {
+                        is_greater_power = yes
+                        NOT = { has_country_flag = in_great_war }
+                        government = proletarian_dictatorship
+                }
+                has_global_flag = great_wars_enabled
+                is_vassal = no
+                NOT = { is_our_vassal = THIS }
+                NOT = { government = proletarian_dictatorship }
+                THIS = {
+                        NOT = {
+                                war_policy = pacifism
+                        }
+                }
+                war_with = THIS
+        }
+        
+        po_remove_prestige = yes
+
+        war_name = WAR_NAME
+        
+        on_add = {
+                move_issue_percentage = {
+                        from = jingoism 
+                        to = pro_military
+                        value = 0.05
+                }
+        }
+        
+        on_po_accepted = {
+                THIS = {
+                        set_country_flag = friendly_communist
+                        any_country = {
+                                limit = {
+                                        OR = {
+                                                government = hms_government
+                                                government = democracy
+                                        }
+                                }
+                                relation = { who = THIS value = -50 }
+                        }
+                }
+                country_event = 96087
+        }
+}
+
