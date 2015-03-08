@@ -1,0 +1,1633 @@
+#international_science
+romanticist_literature = {
+	limit = { international_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 2
+			nationalvalue = nv_order
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				invention = romanticist_art
+				invention = romanticist_music
+			}
+		}
+	}
+	effect = {
+		activate_building = recreation_factory
+		shared_prestige = 5 
+	}
+}
+romanticist_art = {
+	limit = { international_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 2
+			prestige = 30
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				invention = romanticist_literature
+				invention = romanticist_music
+			}
+		}
+	}
+	effect = {
+		shared_prestige = 5  
+	}
+}
+romanticist_music = {
+	limit = { international_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			is_greater_power = no
+		}
+		modifier = {
+			factor = 2
+			plurality = 5
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				invention = romanticist_art
+				invention = romanticist_literature
+			}
+		}
+	}
+	effect = {
+		shared_prestige = 5 
+	}
+}
+#contemporary_science
+realist_literature = {
+	limit = { contemporary_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			is_greater_power = no
+		}
+		modifier = {
+			factor = 2
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				invention = realist_art
+				invention = realist_music
+			}
+		}
+	}
+	effect = {
+		shared_prestige = 10 
+	}
+}
+realist_art = {
+	limit = { contemporary_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 3
+			plurality = 5
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				invention = realist_literature
+				invention = realist_music
+			}
+		}
+	}
+	effect = {
+		shared_prestige = 10 
+	}
+}
+realist_music = {
+	limit = { contemporary_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = realist_art
+				invention = realist_literature
+			}
+		}
+		modifier = {
+			factor = 2
+			strd_internet = 1
+		}
+	}
+	effect = {
+		shared_prestige = 10 
+	}
+}
+#distributed_computations
+impressionist_literature = {
+	limit = { distributed_computations = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = impressionist_art
+				invention = impressionist_music
+			}
+		}
+		modifier = {
+			factor = 2
+			global_enrollment = 1
+		}
+	}
+	effect = {
+		shared_prestige = 15 
+	}
+}
+impressionist_art = {
+	limit = { distributed_computations = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = impressionist_literature
+				invention = impressionist_music
+			}
+		}
+		modifier = {
+			factor = 2
+			globalization = 1
+		}
+	}
+	effect = {
+		shared_prestige = 15
+	}
+}
+impressionist_music = {
+	limit = { distributed_computations = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = impressionist_art
+				invention = impressionist_literature
+			}
+		}
+		modifier = {
+			factor = 2
+			high_speed_uni_network = 1
+		}
+	}
+	effect = {
+		shared_prestige = 15 
+	}
+}
+#virtual_science
+expressionist_literature = {
+	limit = { virtual_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = expressionist_art
+				invention = expressionist_music
+			}
+		}
+		modifier = {
+			factor = 2
+			seventies_subcultures = 1
+		}
+			
+	}
+	effect = {
+		shared_prestige = 20 
+	}
+}
+expressionist_art = {
+	limit = { virtual_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = expressionist_literature
+				invention = expressionist_music
+			}
+		}
+		modifier = {
+			factor = 2
+			age_of_protests = 1
+		}
+	}
+	effect = {
+		shared_prestige = 20 
+	}
+}
+expressionist_music = {
+	limit = { virtual_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = expressionist_art
+				invention = expressionist_literature
+			}
+		}
+		modifier = {
+			factor = 2
+			digital_revolution = 1
+		}
+	}
+	effect = {
+		shared_prestige = 20 
+	}
+}
+#quantum_science
+avantgarde_literature = {
+	limit = { quantum_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = avantgarde_art
+				invention = avantgarde_music
+			}
+		}
+		modifier = {
+			factor = 2
+			virtual_science = 1
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+avantgarde_art = {
+	limit = { quantum_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = avantgarde_literature
+				invention = avantgarde_music
+			}
+		}
+		modifier = {
+			factor = 2
+			preschool_education = 1
+		}
+	}
+	effect = {
+		shared_prestige = 25
+	}
+}
+avantgarde_music = {
+	limit = { quantum_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			OR = {
+				invention = avantgarde_art
+				invention = avantgarde_literature
+			}
+		}
+		modifier = {
+			factor = 2
+			invention = jazz
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+surcontemporary_science = {
+	limit = { quantum_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			virtual_science = 1
+		}
+		modifier = {
+			factor = 2
+			invention = dogma_of_violence
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+modern_design = {
+	limit = { quantum_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			blended_learning = 1
+		}
+		modifier = {
+			factor = 2
+			invention = sociology
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+jazz = {
+	limit = { quantum_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			fifth_generation_warfare = 1
+		}
+		modifier = {
+			factor = 2
+			invention = biased_multiculturalism
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+socialist_contemporary_science = {
+	limit = { quantum_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 2
+			invention = dogma_of_mass_action
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+#strd_internet
+neokantian_strd_internet = {
+	limit = { strd_internet = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			globalization = 1
+		}
+		modifier = {
+			factor = 2
+			informatization_education = 1
+		}
+	}
+	effect = {
+		activate_building = culture_factory 
+		shared_prestige = 5 
+	}
+}
+hegelian_strd_internet = {
+	limit = { strd_internet = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			international_science = 1
+		}
+		modifier = {
+			factor = 2
+			digital_revolution = 1
+		}
+	}
+	effect = {
+		shared_prestige = 5 
+	}
+}
+proto_existentialism = {
+	limit = { strd_internet = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = romanticist_literature
+		}
+		modifier = {
+			factor = 2
+			informatization_education = 1
+		}
+	}
+	effect = {
+		shared_prestige = 5 
+	}
+}
+#high_speed_uni_network
+pragmatism = {
+	limit = { high_speed_uni_network = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			contemporary_science = 1
+		}
+		modifier = {
+			factor = 2
+			global_enrollment = 1
+		}
+	}
+	effect = {
+		shared_prestige = 10 
+	}
+}
+i_high_speed_uni_network = {
+	limit = { high_speed_uni_network = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			digital_revolution = 1
+		}
+		modifier = {
+			factor = 2
+			vanguard_method = 1
+		}
+	}
+	effect = {
+		shared_prestige = 10 
+	}
+}
+#uni_internet
+i_uni_internet = {
+	limit = { uni_internet = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			distributed_computations = 1
+		}
+		modifier = {
+			factor = 2
+			molecular_biology = 1
+		}	
+		modifier = {
+			factor = 1
+			plurality = 5
+		}
+	}
+	effect = {
+		shared_prestige = 15 
+	}
+}
+modern_logics = {
+	limit = { uni_internet = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			informatization_education = 1
+		}
+		modifier = {
+			factor = 2
+			war_on_terror = 1
+		}
+	}
+	effect = {
+		shared_prestige = 15 
+	}
+}
+logical_global_enrollment = {
+	limit = { uni_internet = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			distributed_computations = 1
+		}
+		modifier = {
+			factor = 2
+			molecular_biology = 1
+		}
+	}
+	effect = {
+		shared_prestige = 15 
+	}
+}
+philosophy_of_language = {
+	limit = { uni_internet = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 2
+			age_of_protests = 1
+		}
+	}
+	effect = {
+		shared_prestige = 15
+	}
+}
+#digital_revolution
+phenomenology = {
+	limit = { digital_revolution = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = expressionist_literature
+		}
+		modifier = {
+			factor = 2
+			blended_learning = 1
+		}
+	}
+	effect = {
+		shared_prestige = 20 
+	}
+}
+hermeneutics = {
+	limit = { digital_revolution = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			blended_learning = 1
+		}
+		modifier = {
+			factor = 2
+			invention = darwinism
+		}
+	}
+	effect = {
+		shared_prestige = 20 
+	}
+}
+#virtual_science
+existentialism = {
+	limit = { virtual_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = expressionist_literature
+		}
+		modifier = {
+			factor = 2
+			invention = dogma_of_violence
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+nihilism_and_the_will = {
+	limit = { virtual_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = national_fraternity
+		}
+		modifier = {
+			factor = 2
+			invention = social_anthropology
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+futurism = {
+	limit = { virtual_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = stainless_steel
+		}
+		modifier = {
+			factor = 2
+			biotechnology = 1
+		}
+	}
+	effect = {
+		shared_prestige = 25 
+	}
+}
+quantum_theory = {
+	limit = { virtual_science = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 2
+			invention = phenomenology
+		}
+	}
+	effect = {
+		shared_prestige = 25
+	}
+}
+#molecular_biology
+darwinism = {
+	limit = { molecular_biology = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			distributed_computations = 1
+		}
+		modifier = {
+			factor = 2
+			invention = genetics:_heredity
+		}
+		modifier = {
+			factor = 1
+			invention = philosophy_of_language
+		}
+	}
+	effect = {
+		education_efficiency = 0.50
+	}
+}
+social_darwinism = {
+	limit = { molecular_biology = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = darwinism
+		}
+		modifier = {
+			factor = 2
+			invention = national_fraternity
+		}
+	}
+	effect = {
+		war_exhaustion = -0.05
+	}
+}
+#blended_learning
+sociology = {
+	limit = { blended_learning = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			uni_internet = 1
+		}
+		modifier = {
+			factor = 2
+			vanguard_method = 1
+		}
+	}
+	core_pop_consciousness_modifier = 0.01
+}
+social_psychology = {
+	limit = { blended_learning = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			seventies_subcultures = 1
+		}
+		modifier = {
+			factor = 2
+			next_generation_subcultures = 1
+		}
+	}
+	core_pop_consciousness_modifier = 0.01
+}
+political_science = {
+	limit = { blended_learning = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			political_polarization = 1
+		}
+		modifier = {
+			factor = 1
+			sixth_generation_jets = 1
+		}
+		modifier = {
+			factor = 1
+			ship_defense_system = 1
+		}
+	}
+	core_pop_consciousness_modifier = 0.01
+}
+social_anthropology = {
+	limit = { blended_learning = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = darwinism
+		}
+		modifier = {
+			factor = 2
+			exascale_computing = 1
+		}
+	}
+	effect = {
+		colonial_prestige = 0.1 
+	}
+}
+#preschool_education
+the_revolt_of_the_masses = {
+	limit = { preschool_education = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			political_polarization = 1
+		}
+		modifier = {
+			factor = 2
+			fifth_generation_warfare = 1
+		}
+	}
+	effect = {
+		plurality = 0.10
+		war_exhaustion = -0.25
+	}
+}
+the_decline_of_the_west_and_the_lost_generation = {
+	limit = { preschool_education = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			fifth_generation_warfare = 1
+		}
+		modifier = {
+			factor = 2
+			invention = mission_to_civilize
+		}
+	}
+	core_pop_consciousness_modifier = 0.05
+}
+#globalization
+authoritarianism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			OR = {
+				ruling_party_ideology = populist
+				AND = {
+					government = absolute_monarchy
+					ruling_party_ideology = conservative
+					}
+				}
+		}
+	}
+	core_pop_consciousness_modifier = -0.02
+}
+hierarchical_order = {
+	limit = { globalization = 1 
+			OR = { 
+			government = hms_government
+			government = absolute_monarchy
+			}			
+}
+	chance = {
+		base = 1
+		modifier = {
+			factor = 3
+			government = absolute_monarchy
+		}
+	}
+	core_pop_militancy_modifier = -0.01
+	core_pop_consciousness_modifier = 0.01
+}
+traditionalism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 3
+			ruling_party_ideology = populist
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = conservative
+		}
+		modifier = {
+			factor = 2
+			government = absolute_monarchy
+		}
+	}
+	core_pop_consciousness_modifier = -0.01
+}
+political_religion = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			religious_policy = moralism
+		}
+		modifier = {
+			factor = -2
+			religious_policy = secularized
+		}
+		modifier = {
+			factor = -3
+			religious_policy = pro_atheism
+		}
+	}
+	political_reform_desire = 0.1
+}
+paternalism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 2
+			NOT = { average_consciousness = 3.0 }
+		}
+		modifier = {
+			factor = 2
+			vote_franschise = registered_voting
+		}
+	}
+	org_regain = 0.05
+}
+constitutionalism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			government = hms_government
+		}
+		modifier = {
+			factor = 1
+			NOT = { political_parties = parties_not_allowed }
+		}
+		
+
+	}
+	effect = {
+		plurality = 0.05
+		suppression_points_modifier = -0.05
+	}
+}
+individualism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			nationalvalue = nv_liberty
+		}
+		modifier = {
+			factor = 1
+			average_consciousness = 2
+		}
+	}
+	effect = {
+		plurality = 0.05
+		suppression_points_modifier = -0.05
+	}
+}
+rationalism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 2
+			average_consciousness = 1
+		}
+	}
+	effect = {
+		plurality = 0.05
+	}
+}
+secularization = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 3
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = liberal
+			}
+		}
+	}
+	effect = {
+		plurality = 0.05
+	}
+}
+social_conscience = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = 3
+			average_consciousness = 2
+		}
+	}
+	effect = {
+		plurality = 0.05
+		suppression_points_modifier = -0.05
+	}
+}
+egalitarianism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = 2
+			government = democracy
+		}
+		modifier = {
+			factor = 1
+			NOT = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = conservative
+			}
+		}		
+	}
+	effect = {
+		plurality = 0.05
+	}
+}
+collectivism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = 1
+			ruling_party_ideology = socialist
+		}
+	}
+	effect = {
+		plurality = 0.05
+	}
+}
+determinism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 1
+			socialist = 0.2
+		}
+		modifier = {
+			factor = 1
+			tech_school = culture_tech_school
+		}
+	}
+	effect = {
+		plurality = 0.05
+	}
+}
+atheism = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			tech_school = culture_tech_school
+		}
+		modifier = {
+			factor = 1
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 2
+			pro_atheism = 20
+		}
+	}
+	effect = {
+		plurality = 0.05
+	}
+}
+social_justice = {
+	limit = { globalization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = socialist
+			}
+		}
+	}
+	effect = {
+		plurality = 0.05
+	}
+}
+#war_on_terror
+populism_vs_establishment = {
+	limit = { war_on_terror = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 1
+			nationalvalue = nv_order
+		}
+	}
+	political_reform_desire = 0.05
+
+}
+clericalism_vs._anticlericalism = {
+	limit = { war_on_terror = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			NOT = {
+				moralism = 10
+			}
+		}
+		modifier = {
+			factor = 1
+			average_militancy = 3
+		}
+	}
+	effect = {
+		plurality = 0.05
+	}
+}
+bureaucracy_vs._nepotism = {
+	limit = { war_on_terror = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			nationalvalue = nv_order
+		}
+		modifier = {
+			factor = 1
+			average_consciousness = 2
+		}
+	}
+
+	social_reform_desire = 0.05
+}
+meritocracy_vs._aristocracy = {
+	limit = { war_on_terror = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			literacy = 0.4
+		}
+		modifier = {
+			factor = 2
+			nationalvalue = nv_liberty
+		}
+	}
+	effect = {
+		plurality = 0.05 
+	}
+}
+#age_of_protests
+national_fraternity = {
+	limit = { age_of_protests = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			prestige = 50
+		}
+	}
+	effect = {
+		war_exhaustion = -0.05
+		plurality = 0.05
+	}
+}
+biased_multiculturalism = {
+	limit = { age_of_protests = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			ruling_party_ideology = populist
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = conservative
+		}
+		modifier = {
+			factor = 1
+			nationalvalue = nv_order
+		}
+	}
+	effect = {
+		colonial_migration = 0.05
+	}
+}
+manifest_destiny = {
+	limit = { age_of_protests = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			nationalvalue = nv_liberty
+		}
+		modifier = {
+			factor = -1
+			nationalvalue = nv_order
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = liberal
+		}
+	}
+	effect = {
+		war_exhaustion = -0.05
+		morale = 0.1
+	}
+}
+expansionism = {
+	limit = { age_of_protests = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			badboy = 5
+		}
+	}
+	effect = {
+		war_exhaustion = -0.05
+		plurality = -0.05
+	}
+}
+mission_to_civilize = {
+	limit = { age_of_protests = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 4
+			colonial_nation = yes
+		}
+	}
+	effect = {
+		colonial_prestige = 0.1
+		diplomatic_points = 0.2
+	}
+}
+separatism = {
+	limit = { age_of_protests = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_militancy = 3
+		}
+		modifier = {
+			factor = 2
+			average_consciousness = 2
+		}
+	}
+	effect = {
+		seperatism = 0.5
+		rebel_org_gain = {
+			faction = nationalist_rebels 
+			value = 0.33
+		}
+	}
+}
+#national_trauma = {
+#	limit = { age_of_protests = 1 }
+#	chance = {
+#		base = 5
+#	}
+#	effect = {
+#		plularity = 
+#	}
+#}
+#revanchism = {
+#	limit = { age_of_protests = 1 }
+#	chance = {
+#		base = 5
+#	}
+#	effect = { 
+#	}
+#}
+#political_polarization
+dogma_of_violence = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 2
+			nationalvalue = nv_order
+		}
+	}
+	effect = {
+		enable_crime = anarchic_bomb_throwers
+	}
+}
+dogma_of_mass_action = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = 3
+			ruling_party_ideology = socialist
+		}
+	}
+	effect = {
+		rebel_org_gain = {
+			faction = communist_rebels
+			value = 0.25
+		}
+	}
+}
+terrorism = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = islamist
+				ruling_party_ideology = communist
+			}
+		}
+		modifier = {
+			factor = -1
+			nationalvalue = nv_liberty
+		}
+	}
+	effect = {
+		enable_crime = terrorist_cells 
+	}
+}
+#general_strikes = {
+#	limit = { political_polarization = 1 }
+#	chance = {
+#		base = 5
+#	}
+#	effect = { 
+#	}
+#}
+secret_police = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			OR = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = islamist
+				ruling_party_ideology = communist
+			}
+		}
+		modifier = {
+			factor = 2
+			nationalvalue = nv_order
+		}
+	}
+	effect = {
+		rebel_org_gain = {
+			faction = all
+			value = -0.25
+		}
+		
+		suppression_points_modifier = 0.25
+	}
+}
+womens_suffrage_movement = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			OR = {
+				nationalvalue = nv_liberty
+				nationalvalue = nv_equality
+			}
+		}
+		modifier = {
+			factor = 3
+			ruling_party_ideology = liberal
+		}
+	}
+	effect = {
+		mobilisation_economy_impact = -0.2
+	}
+}
+rhetoric_of_hate = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 3
+		modifier = {
+			factor = 1
+			year = 1900
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = islamist
+				ruling_party_ideology = communist
+			}
+		}
+		modifier = {
+			factor = -1
+			nationalvalue = nv_liberty
+		}
+	}
+	effect = {
+		war_exhaustion = -0.05
+		soldier_to_pop_loss = 0.01
+	}
+}
+nostalgic_international_science = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_consciousness = 2
+		}
+		modifier = {
+			factor = 1
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		war_exhaustion = -0.05
+		rebel_org_gain = {
+			faction = populist_rebels
+			value = 0.50
+		}
+	}
+}
+anti_egalitarianism = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			nationalvalue = nv_order
+		}
+		modifier = {
+			factor = 3
+			ruling_party_ideology = populist
+		}
+	}
+	effect = {
+		war_exhaustion = -0.05
+		enable_crime = citizen_guard
+	}
+}
+vangaurd_party = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = communist
+		}
+	}
+	effect = {
+		rebel_org_gain = {
+			faction = communist_rebels
+			value = 0.75
+		}
+	}
+}
+#new_world_order
+the_doctrine_of_fascism = {
+	limit = { new_world_order = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			ruling_party_ideology = islamist
+		}
+		modifier = {
+			factor = 1
+			nationalvalue = nv_order
+		}
+		modifier = {
+			factor = 3
+			average_militancy = 4
+		}
+	}
+	effect = {
+		rebel_org_gain = {
+			faction = islamist_rebels
+			value = 0.75
+		}
+	}
+}
+paramilitary_groups = {
+	limit = { new_world_order = 1 }
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			war_exhaustion = 3
+		}
+		modifier = {
+			factor = 2
+			average_militancy = 3
+		}
+	}
+	effect = {
+		rebel_org_gain = {
+			faction = islamist_rebels
+			value = 0.25
+		} 
+	}
+}
+the_police_state = {
+	limit = { new_world_order = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			OR = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = islamist
+				ruling_party_ideology = communist
+			}
+		}
+		modifier = {
+			factor = 2
+			nationalvalue = nv_order
+		}
+	}
+	effect = {
+		rebel_org_gain = {
+			faction = all
+			value = -0.25
+		}
+		
+		suppression_points_modifier = 0.25
+	}
+}
+#next_generation_subcultures
+mass_advertising = {
+	limit = { next_generation_subcultures = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 7
+			nationalvalue = nv_liberty
+		}
+		modifier = {
+			factor = 2
+			government = democracy
+		}
+		modifier = {
+			factor = 1
+			government = hms_government
+		}
+	}
+	effect = {
+		education_efficiency = 0.25
+		suppression_points_modifier = -0.05
+	}
+	core_pop_consciousness_modifier = 0.01
+}
+national_radio_networks = {
+	limit = { next_generation_subcultures = 1 }
+	chance = {
+		base = 3
+		modifier = {
+			factor = 5
+			year = 1920
+		}
+		modifier = {
+			factor = 2
+			government = democracy
+		}
+		modifier = {
+			factor = -1
+			NOT = {
+				publishing_rights = unregulated_publishing
+			}
+		}
+	}
+	effect = { 
+		suppression_points_modifier = -0.05
+	}
+	core_pop_consciousness_modifier = 0.01
+}
+the_talkies = {
+	limit = { next_generation_subcultures = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			nationalvalue = nv_liberty
+		}
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+	}
+	effect = {
+		shared_prestige = 20
+		suppression_points_modifier = -0.05
+	}
+	core_pop_consciousness_modifier = 0.01
+}
