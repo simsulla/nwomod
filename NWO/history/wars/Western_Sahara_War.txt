@@ -1,0 +1,21 @@
+#Western_Sahara_War.txt
+name = "Western Sahara War"
+1990.1.1 = {
+	add_attacker = WSA
+	add_defender = MOR
+	war_goal = {
+		casus_belli = acquire_core_state
+		actor = WSA
+		receiver = MOR
+		state_province_id = 1774
+	}
+	war_goal = {
+		casus_belli = cut_down_to_size
+		actor = MOR
+		receiver = WSA
+	}
+}
+1991.9.6 = {
+	rem_attacker = WSA
+	rem_defender = MOR
+}
