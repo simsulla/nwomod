@@ -1,0 +1,76 @@
+# These events are built to model the evolution of trade blocks
+# http://en.wikipedia.org/wiki/Trade_bloc
+#
+
+# 
+# Trade Blocks
+#
+# XEU EU
+# XCC CARICOM
+# XAU AU
+# XEW -ECOWAS
+# XEC -ECCAS
+# XEF -East African Federation
+# XSA -SADC
+# XSU USAN
+# XMS -MERCOSUR
+# XAC -CAN
+# XAL AL
+# XGC -GCC
+# XMU -AMU
+# XAN - ASEAN
+# XCI CAIS
+# XNA NAFTA
+# XIO SAARC
+# XPI PIF
+# XEA EAEC
+# XTC TC - Turkic Council
+# XCA Economic Cooperation Organization
+
+political_decisions = {
+
+#An Open Market
+# trade_block_ambition - called during elections in on_action.txt
+# this events regulates the nations engagement in the trade block
+	trade_block_ambition = {
+		picture = "trade_block_ambition"
+		potential = {
+			NOT = { 
+				has_country_flag = trade_block_ambition 
+			}		
+		}
+
+		allow = {
+			war = no
+			election = yes
+			trade_policy = free_trade
+		}
+		
+		effect = {
+			set_country_flag = trade_block_ambition
+			artisans = {
+				militancy = 1
+			}
+			capitalists = {
+				consciousness = -2
+			}
+			any_pop = {
+				dominant_issue = {
+					factor = 0.30
+					value = free_trade
+				}
+			}
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = protectionism
+					factor = 3
+				}
+			}
+		}
+	}
+
+}

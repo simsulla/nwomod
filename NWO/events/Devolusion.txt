@@ -1,0 +1,165 @@
+province_event = {
+	id = 15500
+	title = "EVTNAME15500"
+	desc = "EVTDESC15500"
+	picture = "streetriot"
+	
+	trigger = {
+		is_primary_culture = no
+		is_accepted_culture = no
+		controlled_by = owner
+		owner = { has_country_modifier = sectarian_divide }
+		has_national_minority = yes
+		any_core = { NOT = { tag = THIS } }
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		# foreign powers may insight tension by increasing the flashpoint level
+		modifier = {
+			factor = 0.5
+			state_scope = {
+				flashpoint_tension  = 50
+			}
+		}
+		# a dominating primary culture makes us more likely to request autonomy
+		modifier = {
+			factor = 0.5
+			capital_scope = {
+				is_primary_culture = yes
+			}
+		}
+		# a dominating majority primary culture makes us even more likely to request autonomy
+		modifier = {
+			factor = 0.5
+			owner = {
+				is_primary_culture = THIS
+			}
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				AND = {
+					average_consciousness = 5
+					average_militancy = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				owner = {
+					age_of_protests = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				owner = {
+					minorities_promotive = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA15500"		#Deny Autonomy
+		set_province_flag = denied_autonomy
+		state_scope = {
+			any_pop = {
+				militancy = 5
+				consciousness = 5
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB15500"		# Promised autonomy
+		state_scope = {
+			any_pop = {
+				militancy = -2
+				consciousness = 2
+			}
+		}
+		add_province_modifier = { name = promised_autonomy duration = -1 }
+		owner = { country_event = 15501 }
+	}
+}
+
+country_event = {
+	id = 15501
+	title = "EVTNAME15501"
+	desc = "EVTDESC15501"
+	picture = "streetriot"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA15501"		#Accept
+        random_country = {
+			limit = { 
+				exists = yes 
+				any_core = { 
+					owned_by = THIS 
+					has_province_modifier = promised_autonomy
+				} 
+			}
+            country_event = 15502
+		}
+        random_country = {
+			limit = { 
+				exists = no
+				any_core = { 
+					owned_by = THIS 
+					has_province_modifier = promised_autonomy
+				} 
+			}
+			release_vassal = THIS
+		}		
+	}
+
+}
+
+country_event = {
+	id = 15502
+	title = "EVTNAME15502"
+	desc = "EVTDESC15502"
+	picture = "celebration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA15502"		
+		all_core = { 
+			limit = {
+				owned_by = FROM
+				has_province_modifier = promised_autonomy
+			}
+			secede_province = THIS
+			remove_province_modifier = promised_autonomy
+		} 
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = "EVTOPTB15502"		# 
+		all_core = { 
+			limit = {
+				owned_by = FROM
+				has_province_modifier = promised_autonomy
+			}
+			remove_province_modifier = promised_autonomy
+		} 
+	}
+}
+

@@ -1,0 +1,332 @@
+# prompts you to declare interest for a starting crisis
+country_event = {
+	id = 20000
+	title = "EVTNAME20000"
+	desc = "EVTDESC20000"
+	picture = "crisis"
+	trigger = {
+	}
+
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA20000" # declare interest
+		ai_chance = {
+			factor = 100
+		}
+
+		add_crisis_interest = yes
+	}
+	option = {
+		name = "EVTOPTB20000" # decline
+
+		prestige_factor = -0.2
+	}
+}
+
+province_event = {
+	id = 20100
+	title = "EVTNAME20100" #Flashpoint event for GPs
+	desc = "EVTDESC20100"
+	picture = "crisis"
+	trigger = {
+		owner = { is_greater_power = yes }
+		state_scope = {
+			has_flashpoint = yes
+			flashpoint_tension = 5
+			NOT = { flashpoint_tension = 90 }
+			}
+	}
+	
+	mean_time_to_happen =  {
+		months = 250
+
+		modifier = {
+			factor = 0.5
+			war_policy = jingoism
+		}
+		modifier = {
+			factor = 0.75
+			war_policy = pro_military
+		}
+		modifier = {
+			factor = 1.25
+			war_policy = anti_military
+		}
+		modifier = {
+			factor = 1.5
+			war_policy = pacifism
+		}
+	}
+
+	option = {
+		name = "EVTOPTA20100" # 
+		ai_chance = {
+			factor = 95
+		}
+		state_scope = {
+			flashpoint_tension = 10
+		}
+	}
+	option = {
+		name = "EVTOPTB20100" # 
+		ai_chance = {
+			factor = 5
+		}
+
+		owner = { prestige_factor = -0.15 }
+	}
+}
+
+province_event = {
+	id = 20101
+	title = "EVTNAME20101" #Flashpoint event for others
+	desc = "EVTDESC20101"
+	picture = "crisis"
+	trigger = {
+		owner = { is_greater_power = no }
+		state_scope = {
+			has_flashpoint = yes
+				flashpoint_tension = 5
+				NOT = { flashpoint_tension = 90 }
+			}
+	}
+	
+	mean_time_to_happen =  {
+		months = 250
+
+		modifier = {
+			factor = 0.5
+			war_policy = jingoism
+		}
+		modifier = {
+			factor = 0.75
+			war_policy = pro_military
+		}
+		modifier = {
+			factor = 1.25
+			war_policy = anti_military
+		}
+		modifier = {
+			factor = 1.5
+			war_policy = pacifism
+		}
+	}
+
+	option = {
+		name = "EVTOPTA20101" # 
+		ai_chance = {
+			factor = 70
+		}
+		state_scope = {
+			flashpoint_tension = 10
+		}
+	}
+	option = {
+		name = "EVTOPTB20101" # decline
+		ai_chance = {
+			factor = 30
+		}
+
+		owner = { prestige_factor = -0.1 }
+	}
+}
+
+country_event = {
+	id = 20102
+	title = "EVTNAME20102" #Claim Crisis GP
+	desc = "EVTDESC20102"
+	picture = "crisis"
+	trigger = {
+		crisis_exist = yes
+		involved_in_crisis = yes
+		is_greater_power = yes
+		is_claim_crisis = yes
+	}
+	
+	mean_time_to_happen =  {
+		months = 24
+
+		modifier = {
+			factor = 0.5
+			war_policy = jingoism
+		}
+		modifier = {
+			factor = 0.75
+			war_policy = pro_military
+		}
+		modifier = {
+			factor = 1.25
+			war_policy = anti_military
+		}
+		modifier = {
+			factor = 1.5
+			war_policy = pacifism
+		}
+	}
+
+	option = {
+		name = "EVTOPTA20102" # 
+		ai_chance = {
+			factor = 95
+		}
+			add_crisis_temperature = 10
+	}
+	option = {
+		name = "EVTOPTB20102" # 
+		ai_chance = {
+			factor = 5
+		}
+
+		prestige_factor = -0.15
+	}
+}
+
+country_event = {
+	id = 20103
+	title = "EVTNAME20103" #Liberation Crisis GP
+	desc = "EVTDESC20103"
+	picture = "crisis"
+	trigger = {
+		crisis_exist = yes
+		involved_in_crisis = yes
+		is_greater_power = yes
+		is_liberation_crisis = yes
+	}
+	
+	mean_time_to_happen =  {
+		months = 24
+
+		modifier = {
+			factor = 0.5
+			war_policy = jingoism
+		}
+		modifier = {
+			factor = 0.75
+			war_policy = pro_military
+		}
+		modifier = {
+			factor = 1.25
+			war_policy = anti_military
+		}
+		modifier = {
+			factor = 1.5
+			war_policy = pacifism
+		}
+	}
+
+	option = {
+		name = "EVTOPTA20103" # 
+		ai_chance = {
+			factor = 95
+		}
+			add_crisis_temperature = 10
+	}
+	option = {
+		name = "EVTOPTB20103" # 
+		ai_chance = {
+			factor = 5
+		}
+
+		prestige_factor = -0.15
+	}
+}
+
+country_event = {
+	id = 20104
+	title = "EVTNAME20104" #Claim Crisis non GP, e.g target
+	desc = "EVTDESC20104" 
+	picture = "crisis"
+	trigger = {
+		crisis_exist = yes
+		involved_in_crisis = yes
+		is_greater_power = no
+		is_claim_crisis = yes
+	}
+	
+	mean_time_to_happen =  {
+		months = 24
+
+		modifier = {
+			factor = 0.5
+			war_policy = jingoism
+		}
+		modifier = {
+			factor = 0.75
+			war_policy = pro_military
+		}
+		modifier = {
+			factor = 1.25
+			war_policy = anti_military
+		}
+		modifier = {
+			factor = 1.5
+			war_policy = pacifism
+		}
+	}
+
+	option = {
+		name = "EVTOPTA20104" # 
+		ai_chance = {
+			factor = 70
+		}
+			add_crisis_temperature = 5
+	}
+	option = {
+		name = "EVTOPTB20104" # decline
+		ai_chance = {
+			factor = 30
+		}
+
+		#
+	}
+}
+
+country_event = {
+	id = 20105
+	title = "EVTNAME20105" #Liberation Crisis non GP
+	desc = "EVTDESC20105"
+	picture = "crisis"
+	trigger = {
+		crisis_exist = yes
+		involved_in_crisis = yes
+		is_greater_power = no
+		is_liberation_crisis = yes
+	}
+	
+	mean_time_to_happen =  {
+		months = 24
+
+		modifier = {
+			factor = 0.5
+			war_policy = jingoism
+		}
+		modifier = {
+			factor = 0.75
+			war_policy = pro_military
+		}
+		modifier = {
+			factor = 1.25
+			war_policy = anti_military
+		}
+		modifier = {
+			factor = 1.5
+			war_policy = pacifism
+		}
+	}
+
+	option = {
+		name = "EVTOPTA20105" # 
+		ai_chance = {
+			factor = 70
+		}
+			add_crisis_temperature = 5
+	}
+	option = {
+		name = "EVTOPTB20105" # decline
+		ai_chance = {
+			factor = 30
+		}
+
+		#
+	}
+}

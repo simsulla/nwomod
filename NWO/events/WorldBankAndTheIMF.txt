@@ -1,0 +1,156 @@
+# Yearly event distributing money
+country_event = {
+	id = 15600
+	title = "EVTNAME15600"
+	desc = "EVTDESC15600"
+	picture = "world_bank"
+	
+	trigger = {
+		has_country_flag = world_bank
+		# TODO event spam ai = yes
+	}	
+	mean_time_to_happen = {
+		months = 1
+        modifier = {
+            factor = 3
+            year = 1993 
+        }
+        modifier = {
+			# 4 * 3 = 12
+            factor = 4 
+            year = 1994
+        }
+	}
+	
+	option = {
+		name = "EVTOPTA15600"
+ 		any_country = {
+			limit = {
+				NOT = { has_country_modifier = interest_sanctions }
+			}
+			any_owned = {
+               any_pop = {
+                       money = 1000
+               }
+            }
+ 		}
+		# V2 bug any_contry for decisions does not include THIS
+		any_owned = {
+            any_pop = {
+                  money = 1000
+            }
+        }
+	}
+}
+
+country_event = {
+	id = 15602
+	title = "EVTNAME15602"
+	desc = "EVTDESC15602"
+	picture = "world_bank"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA15602"
+		clr_country_flag = the_imf
+		clr_country_flag = world_bank
+		add_country_modifier = {
+			name = stock_market_crash
+			duration = 740
+		}
+	}
+}
+
+country_event = {
+	id = 15603
+	title = "the_imf_title"
+	desc = "the_imf_desc"
+	picture = "world_bank"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { 
+			has_country_flag = the_imf
+		}
+		OR = {
+			AND = {
+				tag = GER
+				year = 1992
+			}
+			AND = { 
+				tag = FRA
+				NOT = { year = 1992 }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "the_imf_title"
+		set_country_flag = the_imf
+		# printing money makes us over consume form abroad
+		add_country_modifier = {
+			name = bretton_system
+			duration = -1
+		}
+		random_province = {
+			limit = {
+				province_id = 564
+				owned_by = GER
+				year = 1992
+			}
+			trade_goods = credit
+		}
+		random_province = {
+			limit = {
+				province_id = 425
+				owned_by = FRA
+				NOT = { year = 1992 }
+			}
+			trade_goods = credit
+		}
+	}
+}
+
+country_event = {
+	id = 15604
+	title = "world_bank_title"
+	desc = "world_bank_desc"
+	picture = "world_bank"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { 
+			has_country_flag = world_bank
+		}
+		tag = USA
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "world_bank_title"
+		set_country_flag = world_bank
+		# printing money makes us over consume form abroad
+		add_country_modifier = {
+			name = bretton_system
+			duration = -1
+		}
+		random_province = {
+			limit = {
+				province_id = 232
+				owned_by = USA
+			}
+			trade_goods = credit
+		}		
+		country_event = 15600
+	}
+}

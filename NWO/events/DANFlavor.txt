@@ -1,0 +1,89 @@
+### MAM REMOVED ###
+#LouisPioFirst
+#LouisPioSecond
+#LouisPioThird
+
+#West Indies Revolt
+country_event = {
+
+	id = 36204
+	news = yes
+	news_desc_long = "EVTDESC36204_NEWS_LONG"
+	news_desc_medium = "EVTDESC36204_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC36204_NEWS_SHORT"
+	
+	trigger = {
+		tag = DEN 
+		year = 1848
+		owns = 2223 #St Thomas, Virgin Islands 
+#		slavery = yes_slavery
+		NOT = {
+			year = 1852
+			has_country_flag = WestIndiesRevolt
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 8
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1849
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1850
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1851
+		}
+	}
+
+	title = "EVTNAME36204"
+	desc = "EVTDESC36204"
+	picture = "Slaves"
+
+	option = {
+		name = "EVTOPTA36204" 
+		set_country_flag = WestIndiesRevolt
+		money = -500
+#		political_reform = no_slavery
+	}
+
+	option = {
+		name = "EVTOPTB36204" 
+		set_country_flag = WestIndiesRevolt
+		slaves = {
+			militancy = 10
+			consciousness = 5
+		}
+		any_pop = {
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 2
+			}
+		}
+	}
+}
+
+### MAM REMOVED ###
+#SchlewsigDENesGermanized
+#GeneralStrike
+#AlberiniAffair
+#36210
+#36211 Hedeselskab
+#36212
+#36213
+#EstrupAssassination
+#36217
+#36218
+#36219
+#36220
+#SCAStudent #see SWE36622 for parallel event
+
+
+###events 36221 and 36222 are in USAFlavor.txt (US purchase VI events)

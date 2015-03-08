@@ -1,0 +1,79 @@
+political_decisions = {
+
+	rename_malvinas = {
+		picture = "falkland"
+		potential = {
+			tag = ARG
+			owns = 2131
+			NOT = {
+				has_global_flag = rename_malvinas
+			}
+		}
+		
+		allow = {
+			owns = 2131
+		}
+		
+		effect = {
+			2131 = {
+				change_province_name = "Islas Malvinas"
+			}
+			prestige = 5
+			set_global_flag = rename_malvinas
+		}
+	}
+
+	restore_falkland = {
+		picture = "falkland"
+		potential = {
+			tag = ENG
+			has_global_flag = rename_malvinas
+			owns = 2131
+		}
+		
+		allow = {
+			owns = 2131
+		}
+		
+		effect = {
+			2131 = {
+				change_province_name = "Falkland Islands"
+			}
+			prestige = 5
+			clr_global_flag = rename_malvinas
+		}
+	}
+
+	falkland_purchase = {
+		picture = "falkland"
+		potential = {
+			2131 = {
+				NOT = { owned_by = THIS }
+				is_core = THIS
+			}
+			NOT = { has_country_flag = falkland_purchase }
+		}
+		
+		allow = {
+			war = no
+			money = 100000
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			2131 = {
+				owner = {
+					war = no
+					relation = { who = THIS value = 50 }
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = falkland_purchase
+			2131 = {
+				owner = { country_event = 32553 }
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+### MAM REMOVED ###
+# 44100
+# 44101
+# 44102
+# 44103
+# 44104
+# 44105
+# 44106
+# 44107
+# 44108
+# 44109
+# 44110
+# 44111
+# 44112
+# 44113
+# 44114
+# 44115
+# 44116 #Second Great Awakening
+# 44117
+# 44118
+# 44119
+# 44120 # Moral Crusaders
+# 44121
+
+#Panama Canal
+country_event = {
+	id = 44200
+	title = "EVTNAME44200"
+	desc= "EVTDESC44200"
+	#picture
+	
+	trigger = {
+		tag = USA
+		exists = PNM
+		NOT = {war_with = PNM}
+		owns = 1723
+		year = 1999
+	}
+	
+	mean_time_to_happen = {
+		months = 11
+	}
+	
+	option = {
+		name = "EVTOPTA44200"
+		1723 = { secede_province = PNM }
+	}
+	option = {
+		name = "EVTOPTB44200"
+		prestige = -30
+	}
+}
+
+
+
+#9/11
+country_event = {
+	id = 1
+	news = yes
+	news_desc_long = "EVTDESC1_NEWS_LONG"
+	news_desc_medium = "EVTDESC1_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC1_NEWS_SHORT"
+	title = "EVTNAME1"
+	desc= "EVTDESC1"
+	picture = "911"
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = USA
+		year = 2001
+		month = 8
+	}
+	
+	mean_time_to_happen = {
+		days = 11
+	}
+	
+	option = {
+		name = "EVTOPTA1"
+		any_pop = {
+		consciousness = 3
+		militancy = 1
+		}
+	}
+}

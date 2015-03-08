@@ -1,0 +1,65 @@
+country_event = { #koreas same government form = unite
+	id = 100100
+	title = "EVTNAME100100"
+	desc = "EVTDESC100100"
+	trigger = {
+		exists = SKO
+		exists = NKO
+		NOT = { has_global_flag = korea_reformed }
+		SKO = {NOT = {war_with = NKO}}
+		OR = {
+			AND = {
+				tag = SKO
+				NKO = {ai = yes}
+			}
+			AND = {
+				ai = no
+				tag = NKO
+				SKO = {ai = yes}
+			}
+		}
+		OR = {
+			AND = {
+				SKO = {government = proletarian_dictatorship}
+				NKO = {government = proletarian_dictatorship}
+			}
+			AND = {
+				SKO = {government = presidential_dictatorship}
+				NKO = {government = presidential_dictatorship}
+			}
+			AND = {
+				SKO = {government = populist_dictatorship}
+				NKO = {government = populist_dictatorship}
+			}
+			AND = {
+				SKO = {government = absolute_monarchy}
+				NKO = {government = absolute_monarchy}
+			}
+			AND = {
+				SKO = {government = hms_government}
+				NKO = {government = hms_government}
+			}
+			AND = {
+				SKO = {government = democracy}
+				NKO = {government = democracy}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "EVTOPTA100100"
+		set_global_flag = korea_reformed
+		change_tag = KOR
+		SKO = {
+			all_core = { add_core = KOR }
+
+		}
+		NKO = {
+			all_core = { add_core = KOR }
+		}
+		inherit = SKO
+		inherit = NKO
+	}
+}

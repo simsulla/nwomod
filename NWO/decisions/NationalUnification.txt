@@ -1,0 +1,185 @@
+political_decisions = {
+	form_union_nation = {
+		potential = {
+			culture_has_union_tag = yes
+			NOT = {
+				OR = {
+					cultural_union = { exists = yes }
+					is_culture_group = germanic
+					is_culture_group = arabic
+				}
+			}
+		}
+		
+		allow = {
+			prestige = 45
+			war = no
+			cultural_union = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 20
+			change_tag = culture
+			any_country = {
+				limit = {
+					is_culture_group = THIS
+					in_sphere = THIS
+				}
+				country_event = { id=11101 days=0 }
+			}
+			add_accepted_culture = union
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	form_germany = {
+		potential = {
+			is_culture_group = germanic
+			NOT = {
+				exists = GER
+				tag = ISR
+			}
+		}
+		
+		allow = {
+			is_greater_power = yes
+			prestige = 45
+			war = no
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 20
+			change_tag = GER
+			any_country = {
+				limit = {
+					is_culture_group = germanic
+					in_sphere = THIS
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### MAM START ###
+	form_usca = {
+		potential = {
+			OR = {
+				tag = BLZ
+				tag = COS
+				tag = ELS
+				tag = HON
+				tag = NIC
+				tag = PNM
+			}
+			NOT = { exists = XCA }
+			NOT = { has_global_flag = usca_reformed }
+		}
+		allow = {
+			XCA = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = usca_reformed
+			prestige = 20
+			all_core = { add_core = XCA }
+			change_tag = XCA
+			PNM = {
+				all_core = {
+					add_core = XCA
+				}
+			}
+			2190 = {
+				add_core = XCA
+			}
+			any_country = {
+				limit = {
+					any_core = {is_core = XCA}
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_eaf = { #East African Federation
+		potential = {
+			OR = {
+				tag = TAN
+				tag = RWA
+				tag = UGA
+				tag = BRN
+				tag = KEN
+			}
+			NOT = { exists = XEF }
+			NOT = { has_global_flag = eaf_formed }
+		}
+		allow = {
+			XEF = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = eaf_formed
+			prestige = 20
+			all_core = { add_core = XEF }
+			change_tag = XEF
+			any_country = {
+				limit = {
+					any_core = {is_core = XEF}
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,54 @@
+political_decisions = {
+	adopt_the_san_francisco_system = {
+		potential = {
+			year = 3000
+			tag = JAP
+			NOT = {
+				OR = {
+					has_country_flag = the_san_francisco_system_adopted
+					has_global_flag = san_francisco_system_renounced
+				}
+			}
+		}
+		allow = {
+			OR = {
+				government = democracy
+				government = hms_government
+				#government = parliamentary_republic
+				#government = parliamentary_republic_chancellor
+				#government = parliamentary_republic_president
+				#government = presidential_republic_full
+				#government = presidential_republic_semi
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = the_san_francisco_system
+				duration = -1
+			}
+			set_country_flag = san_francisco_system
+		}
+	}
+	article_nine_japan = {
+		potential = {
+			year = 3000
+			tag = JAP
+			NOT = {
+				OR= {
+					has_country_flag = article_nine_japan_adopted
+					has_global_flag = article_nine_japan_renounced
+				}
+			}
+		}
+		allow = {
+			government = democracy
+		}
+		effect = {
+			add_country_modifier = {
+				name = article_nine_japan_const
+				duration = -1
+			}
+			set_country_flag = article_nine_japan_adopted
+		}
+	}
+}

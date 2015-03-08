@@ -1,0 +1,396 @@
+#############################################################
+#															#
+#                  	Birth Rate Events						#
+#															#
+#############################################################
+
+## Country modifiers
+# one_child literacy > 70% consciousness > 6
+# one_point_five_children literacy > 40% AND consciousness > 4 
+# two_children literacy literacy > 40% AND  consciousness < 4
+# two_point_five_children literacy < 40% AND  consciousness < 3
+# three_children literacy < 20% AND consciousness < 2
+# four_children literacy < 10% AND consciousness < 1 
+# five_children literacy < 5% AND consciousness < 1 
+# six_children literacy < 3% AND  consciousness < 1 
+## Province modifiers set every 25 years
+# muslim_moral_values pop_majority_religion = sunni or shiit
+# family_values average_consciousness NOT 40
+
+# consciousness, literacy and bad economy cause low birth rates
+country_event = { # one_child
+	id = 2260602
+	title = EVTNAME226062 # "Birth Rate Very Low!"
+	desc = EVTDESC226062
+	picture = "administration"
+	
+	trigger = {
+		literacy = 0.90
+		OR = {
+			consciousness = 6
+			capital_scope = { continent = europe }
+			tag = USA
+			tag = CAN
+		}
+		NOT = {
+			has_country_modifier = one_child
+			has_country_modifier = one_point_five_children
+			has_country_modifier = two_children 
+			has_country_modifier = two_point_five_children
+			has_country_modifier = three_children
+			has_country_modifier = four_children
+			has_country_modifier = five_children
+		}
+	}
+	
+	option = {
+		name = EVTOPTA226062
+		remove_country_modifier = one_child
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		remove_country_modifier = five_children
+		add_country_modifier = {
+			name = one_child
+			duration = 3650
+		}
+	}
+}
+
+# consciousness, literacy and bad economy cause low birth rates
+country_event = { # one_point_five_children
+	id = 2260603
+	title = EVTNAME226063 # "Birth Rate Low!"
+	desc = EVTDESC226063
+	picture = "administration"
+	
+	trigger = {
+		literacy = 0.70
+                OR = {
+                        consciousness = 4
+                        capital_scope = { continent = europe }
+                        tag = USA
+                        tag = CAN
+                }
+		NOT = {
+			has_country_modifier = one_child
+			has_country_modifier = one_point_five_children
+			has_country_modifier = two_children 
+			has_country_modifier = two_point_five_children
+			has_country_modifier = three_children
+			has_country_modifier = four_children
+			has_country_modifier = five_children
+		}
+	}
+	
+	option = {
+		name = EVTOPTA226063
+		remove_country_modifier = one_child
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		remove_country_modifier = five_children
+		add_country_modifier = {
+			name = one_point_five_children 
+			duration = 3650
+		}
+	}
+}
+
+# consciousness, literacy and bad economy cause low birth rates
+country_event = { # two_children
+	id = 2260604
+	title = EVTNAME226064 # "Birth Rate Stable!"
+	desc = EVTDESC226064
+	picture = "administration"
+	
+	trigger = {
+		literacy = 0.40
+		NOT = { 
+                	OR = {
+                        	consciousness = 4
+                        	capital_scope = { continent = europe }
+                        	tag = USA
+                        	tag = CAN
+                	}
+		}
+		NOT = {
+			has_country_modifier = one_child
+			has_country_modifier = one_point_five_children
+			has_country_modifier = two_children 
+			has_country_modifier = two_point_five_children
+			has_country_modifier = three_children
+			has_country_modifier = four_children
+			has_country_modifier = five_children
+		}
+	}
+	
+	option = {
+		name = EVTOPTA226064
+		remove_country_modifier = one_child
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		remove_country_modifier = five_children
+		add_country_modifier = {
+			name = two_children 
+			duration = 3650
+		}
+	}
+}
+
+# consciousness, literacy and bad economy cause low birth rates
+country_event = { # two_point_five_children
+	id = 2260605
+	title = EVTNAME226065 # "Birth Rate Positive!"
+	desc = EVTOPTA226065
+	picture = "administration"
+	
+	trigger = {
+		literacy = 0.2
+		NOT = { literacy = 0.4 }
+                NOT = { 
+                        OR = {
+                                consciousness = 4
+                                capital_scope = { continent = europe }
+                                tag = USA
+                                tag = CAN
+                        }
+                }
+		NOT = {
+			has_country_modifier = one_child
+			has_country_modifier = one_point_five_children
+			has_country_modifier = two_children 
+			has_country_modifier = two_point_five_children
+			has_country_modifier = three_children
+			has_country_modifier = four_children
+			has_country_modifier = five_children
+		}
+	}
+	
+	option = {
+		name = EVTOPTA226065
+		remove_country_modifier = one_child
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		remove_country_modifier = five_children
+		add_country_modifier = {
+			name = two_point_five_children
+			duration = 3650
+		}
+	}
+}
+
+country_event = { # three_children
+	id = 2260606
+	title = EVTNAME226066 # "Birth Rate High!"
+	desc = EVTDESC226066
+	picture = "administration"
+	
+	trigger = {
+		literacy = 0.1
+                NOT = { 
+                        OR = {
+                                consciousness = 2
+                                capital_scope = { continent = europe }
+                                tag = USA
+                                tag = CAN
+                        }
+                }
+		NOT = {
+			has_country_modifier = one_child
+			has_country_modifier = one_point_five_children
+			has_country_modifier = two_children 
+			has_country_modifier = two_point_five_children
+			has_country_modifier = three_children
+			has_country_modifier = four_children
+			has_country_modifier = five_children
+		}
+	}
+	
+	option = {
+		name = EVTOPTA226066
+		remove_country_modifier = one_child
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		remove_country_modifier = five_children
+		add_country_modifier = {
+			name = three_children
+			duration = 3650
+		}
+	}
+}
+
+country_event = { # four_children
+	id = 2260607
+	title = EVTNAME226067 # "Birth Rate Very High!"
+	desc = EVTDESC226067
+	picture = "administration"
+	
+	trigger = {
+		literacy = 0.03
+                NOT = { 
+                        OR = {
+                                consciousness = 1
+                                capital_scope = { continent = europe }
+                                tag = USA
+                                tag = CAN
+                        }
+                }
+		NOT = {
+			has_country_modifier = one_child
+			has_country_modifier = one_point_five_children
+			has_country_modifier = two_children 
+			has_country_modifier = two_point_five_children
+			has_country_modifier = three_children
+			has_country_modifier = four_children
+			has_country_modifier = five_children
+		}
+	}
+	
+	option = {
+		name = EVTOPTA226067
+		remove_country_modifier = one_child
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		remove_country_modifier = five_children
+		add_country_modifier = {
+			name = four_children
+			duration = 3650
+		}
+	}
+}
+
+country_event = { # five_children
+	id = 2260608
+	title = EVTNAME226068 # "Birth Rate Exploding!"
+	desc = EVTDESC226068
+	picture = "administration"
+	
+	trigger = {
+                NOT = { 
+                        OR = {
+                                consciousness = 1
+                                capital_scope = { continent = europe }
+                                tag = USA
+                                tag = CAN
+                        }
+                }
+		NOT = { literacy = 0.03 }
+		NOT = {
+			has_country_modifier = one_child
+			has_country_modifier = one_point_five_children
+			has_country_modifier = two_children 
+			has_country_modifier = two_point_five_children
+			has_country_modifier = three_children
+			has_country_modifier = four_children
+			has_country_modifier = five_children
+		}
+	}
+	
+	option = {
+		name = EVTOPTA226068
+		remove_country_modifier = one_child
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		remove_country_modifier = five_children
+		add_country_modifier = {
+			name = five_children
+			duration = 3650
+		}
+	}
+}
+
+country_event = { # family_values
+	id = 2260610
+	title = EVTNAME2260610 # "Family values!"
+	desc = EVTDESC2260610
+	picture = "administration"
+	
+	trigger = {
+		any_owned_province = {
+			NOT = {
+				has_province_modifier = family_values
+                       		pop_majority_religion = irreligion
+			}
+			has_national_minority = yes
+                	OR = {
+				NOT = { average_consciousness = 1 }
+                       		pop_majority_religion = sunni
+                       		AND = {
+                               		pop_majority_religion = shiite
+                               		is_state_religion = no
+                       		}
+               		}
+               	}
+	}
+	
+	# try and avoid event spam in large religious countries
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 0.5
+			literacy = 0.05
+		}
+		modifier = {
+			factor = 0.5
+			literacy = 0.1
+		}
+		modifier = {
+			factor = 0.5
+			literacy = 0.2
+		}
+		modifier = {
+			factor = 0.5
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.5
+			literacy = 0.4
+		}
+	}
+	
+	option = {
+		name = EVTOPTA2260610
+		any_owned = {
+			limit = {
+			  NOT = {
+                                has_province_modifier = family_values
+                                pop_majority_religion = irreligion
+                          }
+                          has_national_minority = yes
+                          OR = {
+                                NOT = { average_consciousness = 1 }
+                                pop_majority_religion = sunni
+                                AND = {
+                                        pop_majority_religion = shiite
+                                        is_primary_culture = no
+                                }
+                          }
+			}
+			add_province_modifier = {
+				name = family_values
+				duration = 9125
+			}
+		}
+	}
+}
+

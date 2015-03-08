@@ -1,0 +1,187 @@
+# World Bank and the IMF
+
+political_decisions = {
+
+	the_imf = {
+		picture = "the_imf"
+		potential = {
+			is_greater_power = yes
+			NOT = { has_country_modifier = stock_market_crash }
+			NOT = { has_country_flag = the_imf }
+		}
+		allow = {
+			OR = {
+				AND = {
+					NOT = { year = 2092 }
+					money = 100000000
+				}
+				AND = {
+					NOT = { year = 1992 }
+					money = 10000000
+				}
+			}
+		}
+		effect = {
+			set_country_flag = the_imf
+			set_country_flag = become_the_imf
+
+			random_country = { 
+				limit = { 
+					tag = THIS
+					NOT = { year = 2090 }
+				}
+				money = -10000000
+			}
+			random_country = { 
+				limit = { 
+					tag = THIS
+					NOT = { year = 1992 }
+				}
+				money = -1000000
+			}
+			random_country = { 
+				limit = { 
+					has_country_flag = the_imf
+					NOT = { tag = THIS }
+				}
+				country_event = 15602
+			}
+		}
+	}
+	
+	world_bank = {
+		picture = "world_bank"
+		potential = {
+			is_greater_power = yes
+			rank = 2
+			NOT = { has_country_flag = world_bank }
+			NOT = { has_country_modifier = stock_market_crash }
+		}
+		allow = {
+			rank = 1
+			OR = {
+				AND = {
+					NOT = { year = 2092 }
+					money = 100000000
+				}
+				AND = {
+					NOT = { year = 1992 }
+					money = 10000000
+				}
+			}
+		}
+		effect = {
+			set_country_flag = world_bank
+			set_country_flag = become_world_bank
+			random_country = { 
+				limit = { 
+					tag = THIS
+					NOT = { year = 2090 }
+				}
+				money = -1000000
+			}
+			random_country = { 
+				limit = { 
+					tag = THIS
+					NOT = { year = 1992 }
+				}
+				money = -10000000
+			}
+			# TODO remove more money for later years
+		}
+	}	
+	
+	interest_sanctions = {
+		picture = "un_sanctions"
+		potential = {
+			OR = { 
+				has_country_flag = world_bank
+				has_country_flag = the_imf
+			}
+			ai = no
+		}
+		allow = {
+			any_greater_power = { 
+				NOT = { tag = THIS }
+				OR = { 
+					has_country_flag = world_bank
+					has_country_flag = the_imf
+				}
+				relation = {
+					who = THIS
+					value = 100
+				}
+			}
+			any_greater_power = { 
+				NOT = {
+					has_country_modifier = interest_sanctions
+					relation = {
+						who = THIS
+						value = -150
+					}
+				}
+			}
+		}
+		effect = {
+			any_greater_power = { 
+				limit = {
+					NOT = {
+						has_country_modifier = interest_sanctions
+						relation = {
+							who = THIS
+							value = -150
+						}
+					}
+				}
+			}
+			add_country_modifier = {
+				name = interest_sanctions
+				duration = 1825
+			}
+		}
+	
+	}
+	
+	remove_interest_sanctions = {
+		picture = "un_sanctions"
+		potential = {
+			OR = { 
+				has_country_flag = world_bank
+				has_country_flag = the_imf
+			}
+			ai = no
+		}
+		allow = {
+			any_greater_power = { 
+				NOT = { tag = THIS }
+				OR = { 
+					has_country_flag = world_bank
+					has_country_flag = the_imf
+				}
+				relation = {
+					who = THIS
+					value = 100
+				}
+			}
+			any_greater_power = { 
+				has_country_modifier = interest_sanctions
+				relation = {
+					who = THIS
+					value = 50
+				}
+			}
+		}
+		effect = {
+			any_greater_power = { 
+				limit = {
+					has_country_modifier = interest_sanctions
+					relation = {
+						who = THIS
+						value = 50
+					}
+				}
+			}
+			remove_country_modifier = interest_sanctions
+		}
+	}	
+}

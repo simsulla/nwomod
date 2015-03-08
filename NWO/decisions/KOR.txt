@@ -1,0 +1,44 @@
+political_decisions = {
+	form_korea = {
+		potential = {
+			OR = {
+				tag = SKO
+				tag = NKO
+			}
+			NOT = { exists = KOR }
+			NOT = { has_global_flag = korea_reformed }
+		}
+		allow = {
+			KOR = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = korea_reformed
+			prestige = 20
+			all_core = { add_core = KOR }
+			change_tag = KOR
+			any_country = {
+				limit = {
+					any_core = {is_core = KOR}
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

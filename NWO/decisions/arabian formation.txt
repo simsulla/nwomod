@@ -1,0 +1,83 @@
+political_decisions = {
+	form_arabia = {
+
+		potential = {
+			XGC = { exists = no }
+			is_culture_group = arabic
+		}
+		
+		allow = {
+			OR = {
+				AND = { 
+					is_greater_power = yes
+					any_neighbor_country = {
+						in_sphere = this
+						is_culture_group = arabic
+						relation = { who = THIS value = 100 }
+					}
+				}
+				### MAM EDIT ###
+				### MAM: Must be saudi arabia and own self, Arab Emirates, Bahrain and Qatar core territories
+				AND = {
+					tag = SAA
+					SAA = {
+							all_core = { 
+							owned_by = THIS 
+						}
+					}
+					UAR = {
+						all_core = { 
+							owned_by = THIS 
+						}
+					}
+					BHR = {
+						all_core = { 
+							owned_by = THIS 
+						}
+					}
+					QAT = {
+						all_core = { 
+							owned_by = THIS 
+						}
+					}
+				}
+				### MAM END ###
+			}
+		}
+		effect = {
+			prestige = 20
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				remove_core = THIS 
+				add_core = XGC
+			}
+			change_tag = XGC
+			random_country = {
+				limit = {
+					is_culture_group = THIS
+					in_sphere = THIS
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+				}
+				country_event = 111011928
+			}
+			add_accepted_culture = union
+			any_country = {
+				limit = {
+					is_culture_group = THIS
+				}
+				all_core = {
+					add_core = XGC
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

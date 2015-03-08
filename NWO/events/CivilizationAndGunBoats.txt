@@ -1,0 +1,1186 @@
+#Wind of Westernization
+country_event = {
+	id = 13000
+	title = "EVTNAME13000"
+	desc = "EVTDESC13000"
+	news = yes
+	news_desc_long = "EVTDESC13000_NEWS_LONG"
+	news_desc_medium = "EVTDESC13000_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC13000_NEWS_SHORT"
+	picture = "Western"
+
+	trigger = {
+		civilized = no
+		is_independant = yes
+		#part_of_sphere = no
+		NOT = {
+			has_country_modifier = western_influences
+			has_country_modifier = uncivilized_isolationism
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	option = {
+		name = "EVTOPTA13000"
+		add_country_modifier = {
+			name = "western_influences"
+			duration = -1
+		}
+		ai_chance = {
+			factor = 0.75
+		}
+	}
+	option = {
+		name = "EVTOPTB13000"
+		add_country_modifier = {
+			name = "uncivilized_isolationism"
+			duration = -1
+		}
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+}
+
+#Western Approaches
+province_event = {
+	id = 13010
+	title = "EVTNAME13010"
+	desc = "EVTDESC13010"
+
+	trigger = {
+		NOT = {
+			has_province_modifier = western_presence
+		}
+		owner = {
+			has_country_modifier = western_influences
+			is_greater_power = no
+			civilized = no
+			war = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.9
+			is_coastal = yes
+		}
+		modifier = {
+			factor = 0.7
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				num_of_cities = 10
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				num_of_cities = 15
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				num_of_cities = 20
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				num_of_cities = 25
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				num_of_cities = 30
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				num_of_cities = 35
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				num_of_cities = 40
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13010"
+		add_province_modifier = {
+			name = "western_presence"
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB13010"
+		random_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			country_event = { id=13015 days=0 }
+		}
+	}
+}
+
+#Insult
+country_event = {
+	id = 13015
+	title = "EVTNAME13015"
+	desc = "EVTDESC13015"
+	picture = "Outside_influences"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA13015"
+		casus_belli = {
+			target = FROM
+			type = cut_down_to_size
+			months = 12
+		}
+		relation = {
+			who = FROM
+			value = -50
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13015"
+		relation = {
+			who = FROM
+			value = 20
+		}
+		prestige = -5
+		any_pop = {
+			scaled_militancy = {
+				issue = jingoism
+				factor = 4
+			}
+			scaled_militancy = {
+				issue = pro_military
+				factor = 3
+			}
+		}
+		ai_chance = {
+			factor = 0.05
+		}
+	}
+}
+
+### MAM REMOVED ###
+#Shipwrecked Sailors
+#Foreign Smugglers
+#Point of Trade sells Opium
+#Opium addiction spreads to coastal province
+#Opium addiction spreads inland
+#Local governor protests opium use
+#Sayings of The Dutch
+#Local aristocrat insulted
+#Microscope imported
+#Anti-foreign revolt
+
+#Point of Trade
+province_event = {
+	id = 13040
+	title = "EVTNAME13040"
+	desc = "EVTDESC13040"
+
+	trigger = {
+		is_coastal = yes
+		owner = {
+			has_country_modifier = uncivilized_isolationism
+			NOT = { has_country_modifier = foreign_trading_post }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 250
+		modifier = {
+			factor = 0.8
+			NOT = {
+				poor_strata_life_needs = 0.8
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				middle_strata_everyday_needs = 0.8
+			}
+		}
+		modifier = {
+			factor = 1.5
+			poor_strata_life_needs = 0.9
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				total_num_of_ports = 10
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				total_num_of_ports = 15
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				total_num_of_ports = 20
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				total_num_of_ports = 25
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				total_num_of_ports = 30
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				total_num_of_ports = 35
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				total_num_of_ports = 40
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13040"
+		owner = {
+			add_country_modifier = {
+				name = foreign_trading_post
+				duration = 3650
+			}
+		}
+		any_pop = {
+			consciousness = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB13040"
+		any_pop = {
+			consciousness = 3
+			militancy = 3
+		}
+	}
+}
+#Princes recieve foreign education
+country_event = {
+	id = 13110
+	title = "EVTNAME13110"
+	desc = "EVTDESC13110"
+	picture = "Western_education"
+
+	trigger = {
+		has_country_modifier = western_influences
+		OR = {
+			government = hms_government
+			government = absolute_monarchy
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			prestige = 25
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				prestige = 20
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13110"
+		set_country_flag = princes_recieve_foreign_education
+		years_of_research = 0.01
+		any_pop = {
+			consciousness = 2
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13110"
+		remove_country_modifier = western_influences
+		add_country_modifier = {
+			name = uncivilized_isolationism
+			duration = -1
+		}
+	}
+}
+#Foreign governant
+country_event = {
+	id = 13120
+	title = "EVTNAME13120"
+	desc = "EVTDESC13120"
+	news = yes
+	news_desc_long = "EVTDESC13120_NEWS_LONG"
+	news_desc_medium = "EVTDESC13120_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC13120_NEWS_SHORT"
+	picture = "Western_education"
+
+	trigger = {
+		has_country_flag = princes_recieve_foreign_education
+		OR = {
+			government = hms_government
+			government = absolute_monarchy
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA13120"
+		years_of_research = 0.01
+	}
+
+	option = {
+		name = "EVTOPTB13120"
+#		political_reform = no_slavery
+		prestige = 5
+		any_pop = {
+			militancy = 3
+		}
+	}
+}
+#Military Mission
+province_event = {
+	id = 13130
+	title = "EVTNAME13130"
+	desc = "EVTDESC13130"
+
+	trigger = {
+		owner = {
+			has_country_modifier = western_influences
+		}
+		NOT = {
+			has_province_modifier = european_military_mission
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 1.1
+			average_militancy = 3
+		}
+		modifier = {
+			factor = 1.1
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.1
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				prestige = 30
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13130"
+		add_province_modifier = {
+			name = european_military_mission
+			duration = 1825
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13130"
+		random_country = {
+			limit = {
+				civilized = yes
+				is_greater_power = yes
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+	}
+}
+#Military Intelligence Spreads
+province_event = {
+	id = 13140
+	title = "EVTNAME13140"
+	desc = "EVTDESC13140"
+
+	trigger = {
+		has_province_modifier = european_military_mission
+		owner = {
+			war = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 80
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				average_consciousness = 3
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13140"
+		remove_province_modifier = european_military_mission
+		owner = {
+			war_exhaustion = 2
+		}
+	}
+}
+#Europeans Harrassed
+province_event = {
+	id = 13150
+	title = "EVTNAME13150"
+	desc = "EVTDESC13150"
+
+	trigger = {
+		OR = {
+			has_province_modifier = european_military_mission
+			has_province_modifier = western_presence
+			owner = {
+				has_country_modifier = foreign_trading_post
+			}
+		}
+		average_militancy = 4
+	}
+
+	mean_time_to_happen = {
+		months = 50
+		modifier = {
+			factor = 0.9
+			average_militancy = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				average_consciousness = 3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				average_militancy = 3
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13150"
+		remove_province_modifier = european_military_mission
+		remove_province_modifier = western_presence
+		owner = {
+			remove_country_modifier = foreign_trading_post
+		}
+		random_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13150"
+		any_pop = {
+			limit = {
+				militancy = 4
+			}
+			reduce_pop = 0.95
+		}
+	}
+}
+#Drunken Sailor
+province_event = {
+	id = 13160
+	title = "EVTNAME13160"
+	desc = "EVTDESC13160"
+
+	trigger = {
+		OR = {
+			has_province_modifier = european_military_mission
+			has_province_modifier = western_presence
+			owner = {
+				has_country_modifier = foreign_trading_post
+			}
+		}
+		is_coastal = yes
+		owner = {
+			NOT = { has_country_modifier = extraterritoriality_granted }
+			is_greater_power = no
+			civilized = no
+			}
+	}
+
+	mean_time_to_happen = {
+		months = 3000
+		modifier = {
+			factor = 0.9
+			NOT = {
+				owner = {
+					prestige = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				owner = {
+					prestige = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				owner = {
+					prestige = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 1.4
+			owner = {
+				prestige = 25
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13160"
+		owner = {
+			add_country_modifier = {
+				name = extraterritoriality_granted
+				duration = -1
+			}
+		}
+		random_country = {
+			limit = {
+				is_greater_power = yes
+				NOT = { tag = THIS }
+			}
+			country_event = { id=13180 days=0 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13160"
+		random_country = {
+			limit = {
+				is_greater_power = yes
+				NOT = { tag = THIS }
+			}
+			country_event = { id=13170 days=0 }
+		}
+		ai_chance = {
+			factor = 0.05
+		}
+	}
+}
+#Sailor Executed
+country_event = {
+	id = 13170
+	title = "EVTNAME13170"
+	desc = "EVTDESC13170"
+	picture = "Outside_influences"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA13170"
+		prestige = 5
+		casus_belli = {
+			target = FROM
+			type = cut_down_to_size
+			months = 12
+		}
+	}
+
+	option = {
+		name = "DIPLO_CALL_ALLIES"
+		prestige = 5
+		casus_belli = {
+			target = FROM
+			type = cut_down_to_size
+			months = 12
+		}
+		war = {
+			target = FROM
+			call_ally = yes
+			attacker_goal = {
+				casus_belli = cut_down_to_size
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13170"
+		prestige = -5
+	}
+}
+#Extraterritoriality Granted
+country_event = {
+	id = 13180
+	title = "EVTNAME13180"
+	desc = "EVTDESC13180"
+	picture = "Outside_influences"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA13180"
+		prestige = 5
+	}
+}
+#Military Reform
+country_event = {
+	id = 13190
+	title = "EVTNAME13190"
+	desc = "EVTDESC13190"
+	picture = "Military_reform"
+
+	trigger = {
+		has_country_modifier = western_influences
+	}
+
+	mean_time_to_happen = {
+		months = 5000
+		modifier = {
+			factor = 0.05
+			any_owned_province = {
+				has_province_modifier = european_military_mission
+			}
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 1.4
+			average_militancy = 4
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13190"
+		add_country_modifier = {
+			name = military_reform
+			duration = 730
+		}
+		any_pop = {
+			militancy = 1
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13190"
+		prestige = 30
+	}
+}
+#Our Master's Voice
+country_event = {
+	id = 13200
+	title = "EVTNAME13200"
+	desc = "EVTDESC13200"
+	picture = "Military_reform"
+
+	trigger = {
+		has_country_modifier = uncivilized_isolationism
+		civilized = no
+		part_of_sphere = yes
+		sphere_owner = {
+				NOT = {
+				truce_with = THIS
+				}
+			}
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+
+	option = {
+		name = "EVTOPTA13200"
+		add_country_modifier = {
+			name = western_influences
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13200"
+		sphere_owner = {
+			country_event = { id=13201 days=0 }
+		}
+	}
+}
+#Notify from event 13200
+country_event = {
+	id = 13201
+	title = "EVTNAME13201"
+	desc = "EVTDESC13201"
+	picture = "Outside_influences"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA13201"
+		diplomatic_influence = {
+			who = FROM
+			value = -200
+		}
+		casus_belli = {
+			target = FROM
+			type = add_to_sphere
+			months = 12
+		}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = add_to_sphere
+			}
+		}
+	}
+
+	option = {
+		name = "DIPLO_CALL_ALLIES"
+		diplomatic_influence = {
+			who = FROM
+			value = -100
+		}
+		casus_belli = {
+			target = FROM
+			type = cut_down_to_size
+			months = 12
+		}
+		war = {
+			target = FROM
+			call_ally = yes
+			attacker_goal = {
+				casus_belli = cut_down_to_size
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13201"
+		diplomatic_influence = {
+			who = FROM
+			value = -100
+		}
+		prestige = -20
+	}
+}
+#Educational Reform
+country_event = {
+	id = 13210
+	title = "EVTNAME13210"
+	desc = "EVTDESC13210"
+	picture = "Western_education"
+
+	trigger = {
+		has_country_modifier = western_influences
+		NOT = { has_country_modifier = educational_reform }
+	}
+
+	mean_time_to_happen = {
+		months = 400
+	}
+
+	option = {
+		name = "EVTOPTA13210"
+		add_country_modifier = {
+			name = educational_reform
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13210"
+		prestige = 5
+	}
+}
+#Legation Quarter
+province_event = {
+	id = 13220
+	title = "EVTNAME13220"
+	desc = "EVTDESC13220"
+
+	trigger = {
+		NOT = {
+			has_province_modifier = legation_quarter
+		}
+		is_capital = yes
+		owner = {
+			has_country_modifier = western_influences
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 170
+		modifier = {
+			factor = 0.9
+			owner = {
+				prestige = 10
+			}
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				prestige = 15
+			}
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				prestige = 20
+			}
+		}
+		modifier = {
+			factor = 1.1
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.1
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 1.1
+			average_militancy = 6
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13220"		#Set up a legation quarter
+		add_province_modifier = {
+			name = legation_quarter
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13220"		#The foreigners have nothing to offer
+		random_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			relation = {
+				who = THIS
+				value = -30
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 12
+			}
+		}
+		owner = {
+			badboy = 2
+			prestige = 2
+		}
+	}
+}
+#Foreign Diplomat killed
+province_event = {
+	id = 13230
+	title = "EVTNAME13230"
+	desc = "EVTDESC13230"
+	news = yes
+	news_desc_long = "EVTDESC13230_NEWS_LONG"
+	news_desc_medium = "EVTDESC13230_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC13230_NEWS_SHORT"
+
+	trigger = {
+		has_province_modifier = legation_quarter
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 1.2
+			NOT = {
+				average_consciousness = 3
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13230"
+		add_province_modifier = {
+			name = kettler_denkmal
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13230"
+		random_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			relation = {
+				who = THIS
+				value = -40
+			}
+		}
+		owner = {
+			prestige = -5
+		}
+	}
+
+	option = {
+		name = "EVTOPTC13230"
+		random_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			relation = {
+				who = THIS
+				value = -80
+			}
+		}
+		owner = {
+			prestige = -5
+		}
+	}
+}
+
+### MAM REMOVED ###
+#A ship on our shores
+#Our ship turned away
+#Foreigners demand a lifting of import restrictions
+#The Opium War
+
+#Angered aristocracy
+province_event = {
+	id = 13280
+	title = "EVTNAME13280"
+	desc = "EVTDESC13280"
+
+	trigger = {
+		owner = {
+			has_country_modifier = western_influences
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 900
+	}
+
+	option = {
+		name = "EVTOPTA13280"
+		state_scope = {
+			aristocrats = {
+				consciousness = 2
+				militancy = 3
+			}
+		}
+	}
+}
+
+#100 days of reform
+country_event = {
+	id = 13290
+	title = "EVTNAME13290"
+	desc = "EVTDESC13290"
+	picture = "Opiumwar"
+
+	trigger = {
+		has_country_modifier = uncivilized_isolationism
+	}
+
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 4
+		}
+	}
+
+	option = {
+		name = "EVTOPTA13290"
+		years_of_research = 0.4
+		bureaucrats = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+		farmers = {
+			militancy = 1
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13290"
+		years_of_research = 0.2
+	}
+}
+
+### UNCIV FLAVOR ###
+
+### MAM REMOVED ###
+# SIA -- An Elephant for America?
+# CHI -- Torching of The Summer Palace
+# Boxers Burn something
+# Doctrine of Lapse 1/2
+# Doctrine of Lapse 2/2
+
+#Westernize
+
+country_event = {
+	title = "EVTNAME90950"
+	desc = "EVTDESC90950"
+	picture = "Prosper"
+
+	id = 90950
+
+	is_triggered_only = yes
+	
+	trigger = {
+		#
+		}
+
+	option = {				
+		name = "EVTOPTA90950"
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 12
+		}
+		
+		relation = {
+			who = FROM
+			value = -100
+		}
+		
+	}
+	
+	option = {				
+		name = "EVTOPTB90950"
+
+		relation = {
+			who = FROM
+			value = 100
+		}
+		
+	}
+
+}

@@ -1,0 +1,31 @@
+political_decisions = {
+	join_nato = {
+		potential = {
+			year = 3000
+			NOT = {
+				OR = {
+					has_country_flag = joined_nato
+					has_country_flag = left_nato
+				}
+			}
+		}
+		allow = {
+			OR = {
+				government = democracy
+				government = hms_government
+				#government = parliamentary_republic
+				#government = parliamentary_republic_chancellor
+				#government = parliamentary_republic_president
+				#government = presidential_republic_full
+				#government = presidential_republic_semi
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = north_atlantic_treaty_organization
+				duration = -1
+			}
+			set_country_flag = joined_nato
+		}
+	}
+}
