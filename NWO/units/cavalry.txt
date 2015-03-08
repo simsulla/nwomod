@@ -1,0 +1,55 @@
+##plane
+cavalry = {
+	icon = 2
+	
+	type = land
+	sprite = Infantry
+	active = yes
+	unit_type = cavalry
+	floating_flag = yes
+	
+	#Avatar
+	sprite_mount = GenericMount
+	sprite_mount_attach_node = Saddle_Node
+
+	#Core Abilities
+	priority = 25
+	max_strength = 3
+	default_organisation = 30
+	maximum_speed = 10.00
+	weighted_value = 13
+
+
+	#Building Costs
+	build_time = 390
+	build_cost = {
+		small_arms = 50
+		clothes = 20
+		#ammunition = 15
+		canned_food = 25
+		weaponry = 10
+		fuel = 5
+		
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		small_arms = 0.25
+		clothes = 0.1
+		#ammunition = 0.075
+		canned_food = 0.125
+		weaponry = 0.05
+		fuel = 0.025
+	}
+	
+
+	#Land Abilties
+	reconnaissance = 1
+	attack = 4
+	defence = 4
+	discipline = 1
+	support = 0
+	maneuver = 2
+	siege = 0
+	
+}

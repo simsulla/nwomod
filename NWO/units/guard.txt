@@ -1,0 +1,46 @@
+#Marines
+guard = {
+	icon = 18
+	
+	type = land
+	sprite = Infantry
+	active = no
+	unit_type = infantry
+	primary_culture = yes
+	floating_flag = no
+
+	#Core Abilities
+	priority = 18
+	max_strength = 3
+	default_organisation = 30
+	maximum_speed = 4.00
+	weighted_value = 8
+
+
+	#Building Costs
+	build_time = 210
+	build_cost = {
+		small_arms = 60
+		clothes = 30
+		weaponry = 28
+		canned_food = 40
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		small_arms = 0.3
+		clothes = 0.15
+		weaponry = 0.15
+		canned_food = 0.2
+	}
+	
+
+	#Land Abilties
+	reconnaissance = 1
+	attack = 3
+	defence = 3
+	discipline = 1.1
+	support = 0
+	maneuver = 1
+	siege = 0
+}

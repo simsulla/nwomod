@@ -1,0 +1,55 @@
+#Jet
+dragoon = {
+	icon = 14
+	
+	type = land
+	sprite = Plane
+	active = no
+	unit_type = support
+	
+	#Avatar
+	sprite_override = Cavalry
+	sprite_mount = GenericMount
+	sprite_mount_attach_node = Saddle_Node
+	floating_flag = yes
+	
+	#Core Abilities
+	priority = 35
+	max_strength = 3
+	default_organisation = 30
+	maximum_speed = 10.00
+	weighted_value = 21
+
+
+	#Building Costs
+	build_time = 450
+	build_cost = {
+		clothes = 14
+		canned_food = 14
+		weaponry = 14
+		#explosives = 49
+		aeroplanes = 56
+		fuel = 35
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		clothes = 0.07
+		canned_food = 0.07
+		weaponry = 0.07
+		#explosives = 0.245
+		aeroplanes = 0.28
+		fuel = 0.175
+	}
+	
+
+	#Land Abilties
+	reconnaissance = 3
+	attack = 5
+	defence = 5
+	discipline = 0.5
+	support = 1
+	maneuver = 4
+	siege = 1
+	
+}

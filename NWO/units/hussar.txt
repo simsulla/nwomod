@@ -1,0 +1,55 @@
+#Helicopter
+hussar = {
+	icon = 15
+	
+	type = land
+	sprite = Plane
+	active = no
+	unit_type = support
+	floating_flag = no
+	
+	#Avatar
+	#sprite_override = Cavalry
+	#sprite_mount = GenericMount
+	#sprite_mount_attach_node = Saddle_Node
+	
+	#Core Abilities
+	priority = 40
+	max_strength = 3
+	default_organisation = 30
+	maximum_speed = 10.00
+	weighted_value = 15
+
+
+	#Building Costs
+	build_time = 450
+	build_cost = {
+		clothes = 10
+		canned_food = 10
+		weaponry = 10
+		#explosives = 35
+		aeroplanes = 40
+		fuel = 25
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		clothes = 0.05
+		canned_food = 0.05
+		weaponry = 0.05
+		#explosives = 0.175
+		aeroplanes = 0.20
+		fuel = 0.125
+	}
+	
+
+	#Land Abilties
+	reconnaissance = 2
+	attack = 3
+	defence = 3
+	discipline = 0.5
+	support = 1.0
+	maneuver = 3
+	siege = 1
+	
+}

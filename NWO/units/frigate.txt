@@ -1,0 +1,44 @@
+##patrol_boat
+frigate = {
+	icon = 5
+	naval_icon = 2
+	
+	type = naval
+	sprite = Frigate
+	unit_type = light_ship
+	capital = yes
+	floating_flag = yes
+	colonial_points = 2
+	
+	#Core Abilities
+	priority = 13
+	max_strength = 100
+	default_organisation = 30
+	maximum_speed = 8
+	weighted_value = 4.0
+	can_build_overseas = yes
+
+	#Building Costs
+	build_time = 180
+	build_cost = {
+		ships = 20
+		weaponry = 5
+	}
+	min_port_level = 0
+	limit_per_port = -1
+	supply_consumption_score = 3
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		ships = 0.3
+		weaponry = 0.04 #0.08
+	}
+	
+	#Naval Abilties
+	hull = 10
+	gun_power = 20
+	fire_range = 0.4
+	evasion = 0.20
+	torpedo_attack = 0
+}
+

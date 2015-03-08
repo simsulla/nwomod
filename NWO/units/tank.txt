@@ -1,0 +1,45 @@
+tank = {
+	icon = 20
+	
+	type = land
+	sprite = Tank
+	active = no
+	unit_type = cavalry
+	floating_flag = yes
+	
+	#Core Abilities
+	priority = 50
+	max_strength = 3
+	default_organisation = 30
+	maximum_speed = 10.00
+	weighted_value = 9.0
+
+
+	#Building Costs
+	build_time = 540
+	build_cost = {
+		weaponry = 30
+		clothes = 40
+		canned_food = 50
+		fuel = 50
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		weaponry = 0.3
+		clothes = 0.4
+		canned_food = 0.5
+		fuel = 0.5
+	}
+	
+
+	#Land Abilties
+	reconnaissance = 0
+	attack = 6
+	defence = 6
+	discipline = 1
+	support = 0.0
+	maneuver = 2
+	siege = 2
+	
+}

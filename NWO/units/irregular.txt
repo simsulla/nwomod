@@ -1,0 +1,39 @@
+irregular = {
+	icon = 17
+	
+	type = land
+	sprite = Infantry
+	active = yes
+	unit_type = infantry
+	floating_flag = no
+	
+	#Core Abilities
+	priority = 5
+	max_strength = 3
+	default_organisation = 30
+	maximum_speed = 4.00
+	weighted_value = 0.5 #halved because militia, function is "basevalue/2"
+
+
+	#Building Costs
+	build_time = 60
+	build_cost = {
+		small_arms = 5
+		grain = 25
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		small_arms = 0.025
+		grain = 0.125
+	}
+	
+
+	#Land Abilties
+	reconnaissance = 0
+	attack = 1
+	defence = 1
+	discipline = 0.9
+	support = 0.0
+	maneuver = 1
+}

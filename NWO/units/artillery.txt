@@ -1,0 +1,55 @@
+##tank
+artillery = { 
+	icon = 3
+	
+	type = land
+	sprite = Artillery
+	active = no
+	unit_type = cavalry
+	floating_flag = no
+
+	#Core Abilities
+	priority = 20
+	max_strength = 3
+	default_organisation = 30
+	maximum_speed = 10.00
+	weighted_value = 9
+
+
+	#Building Costs, copy of tank but halved
+	#needs are the same, better to copy
+	build_time = 270
+	build_cost = {
+		#artillery = 7.5
+		#regular_clothes = 10
+		#explosives = 7.5
+		canned_food = 12.5
+		#barrels = 12.5
+		fuel = 12.5
+		clothes = 10
+		weaponry = 12.5
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		#artillery = 0.0375
+		#regular_clothes = 0.05
+		#explosives = 0.0375
+		canned_food = 0.0625
+		#barrels = 0.0625
+		fuel = 0.0625
+		clothes = 0.05
+		weaponry = 0.0375
+	}
+	
+
+	#Land Abilties
+	reconnaissance = 0
+	attack = 2
+	defence = 2
+	discipline = 0.5
+	support = 1.0
+	maneuver = 2
+	siege = 1
+
+}
