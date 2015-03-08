@@ -245,10 +245,6 @@ naval_firepower_doctrine = {
 			factor = 1
 			higher_density_reactor = 1
 		}
-		modifier = {
-			factor = 2
-			ddx_destroyers = 1
-		}
 	}
 	effect = {
 		navy_base = {
@@ -372,7 +368,7 @@ awses = {
 		}
 		modifier = {
 			factor = 2
-			invention = marine_radar
+			invention = radar
 		}
 	}
 	effect = {
@@ -512,7 +508,7 @@ protected_cruisers = {
 		}
 		modifier = {
 			factor = 2
-			env_sustainability = 1
+			sustainable_energy = 1
 		}
 	}
 	effect = {
@@ -553,7 +549,7 @@ pre_dreadnought = {
 		}
 		modifier = {
 			factor = 1
-			env_sustainability = 1
+			sustainable_energy = 1
 		}
 		modifier = {
 			factor = 1
@@ -568,85 +564,6 @@ pre_dreadnought = {
 		}
 	}
 }
-#ddx_destroyers
-dreadnoughts = {
-	limit = { ddx_destroyers = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = pre_dreadnought
-		}
-		modifier = {
-			factor = 2
-			aegis_combined = 1
-		}
-	}
-	effect = {
-		activate_unit = dreadnought 
-	}
-}
-#light_cruisers = {
-#	limit = { ddx_destroyers = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = ironclads
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#battlecruisers = {
-#	limit = { ddx_destroyers = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = pre_dreadnought
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#ocean_going_submarines = {
-#	limit = { ddx_destroyers = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = submarines
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#magnetohydrodynamic_propulsors
-#advanced_destroyers = {
-#	limit = { magnetohydrodynamic_propulsors = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = destroyers
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#modern_destroyers = {
-#	limit = { magnetohydrodynamic_propulsors = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = advanced_destroyers
-#		}
-#	}
-#	effect = {
-#	}
-#}
 advanced_cruisers = {
 	limit = { magnetohydrodynamic_propulsors = 1 }
 	chance = {
@@ -681,7 +598,7 @@ modern_cruisers = {
 		}
 		modifier = {
 			factor = 2
-			deep_sea_mining = 1
+			deep_mining = 1
 		}
 	}
 	effect = {
@@ -690,26 +607,10 @@ modern_cruisers = {
 		}  
 	}
 }
-#advanced_battlecruisers = {
-#	limit = { magnetohydrodynamic_propulsors = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = battlecruisers
-#		}
-#	}
-#	effect = { 
-#	}
-#}
 advanced_battleships = {
 	limit = { magnetohydrodynamic_propulsors = 1 }
 	chance = {
 		base = 2
-		modifier = {
-			factor = 2
-			invention = dreadnoughts
-		}
 		modifier = {
 			factor = 1
 			evidence_based_medicine = 1
@@ -735,10 +636,6 @@ modern_battleships = {
 			invention = advanced_battleships
 		}
 		modifier = {
-			factor = 1
-			exascale_computing = 1
-		}
-		modifier = {
 			factor = 2
 			modern_battlespace = 1
 		}
@@ -758,54 +655,6 @@ experimental_carriers = {
 		activate_unit = battleship 
 	}
 }
-#converted_hulk_carriers = {
-#	limit = { magnetohydrodynamic_propulsors = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = experimental_carriers
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#purpose_built_carriers = {
-#	limit = { magnetohydrodynamic_propulsors = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = converted_hulk_carriers
-#		}
-#	}
-#	effect = { 
-#	}
-#}
-#advanced_submarines = {
-#	limit = { magnetohydrodynamic_propulsors = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = ocean_going_submarines
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#modern_battlecruisers = {
-#	limit = { magnetohydrodynamic_propulsors = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = advanced_battlecruisers
-#		}
-#	}
-#	effect = {
-#	}
-#}
 #nuclear_reactors
 optical_rangefinders = {
 	limit = { nuclear_reactors = 1 }
@@ -840,10 +689,6 @@ gyrostabilized_fire_control = {
 			factor = 1
 			carrier_battle_group = 1
 		}
-		modifier = {
-			factor = 1
-			supercomputers = 1
-		}
 	}
 	effect = {
 		navy_base = {
@@ -857,35 +702,6 @@ gyrostabilized_fire_control = {
 		}		
 	}
 }
-#torpedo_gyroscope = {
-#	limit = { nuclear_reactors = 1 }
-#	chance = {
-#		base = 6
-#	}
-#	effect = {
-#	}
-#}
-#supercarriers
-#sea_mine_equipment = {
-#	limit = { supercarriers = 1 }
-#	chance = {
-#		base = 6
-#	}
-#	effect = { 
-#	}
-#}
-#self_propelled_torpedoes = {
-#	limit = { supercarriers = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = torpedo_gyroscope
-#		}
-#	}
-#	effect = {
-#	}
-#}
 armour_piercing_projectiles = {
 	limit = { supercarriers = 1 }
 	chance = {
@@ -987,12 +803,8 @@ rifled_guns = {
 	chance = {
 		base = 2
 		modifier = {
-			factor = 2
-			invention = precision_work
-		}
-		modifier = {
 			factor = 1
-			petascale_computing = 1
+			quantum_computer = 1
 		}
 	}
 	effect = {
@@ -1017,7 +829,7 @@ quick_firing_guns = {
 		}
 		modifier = {
 			factor = 1
-			petascale_computing = 1
+			quantum_computer = 1
 		}
 	}
 	effect = {
@@ -1042,7 +854,7 @@ armoured_citadels = {
 		}
 		modifier = {
 			factor = 1
-			env_sustainability = 1
+			sustainable_energy = 1
 		}
 	}
 	effect = {
@@ -1083,10 +895,6 @@ on_board_recon_aircraft = {
 	chance = {
 		base = 2
 		modifier = {
-			factor = 2
-			invention = wright_n_langleys_aeroplanes
-		}
-		modifier = {
 			factor = 1
 			supercarrier_battle_group = 1
 		}
@@ -1105,10 +913,6 @@ gun_hydraulics = {
 			factor = 2
 			evidence_based_medicine = 1
 		}
-		modifier = {
-			factor = 1
-			invention = machine_tools
-		}
 	}
 	effect = {
 		dreadnought = {
@@ -1122,15 +926,7 @@ heavy_armour_plates = {
 		base = 2
 		modifier = {
 			factor = 2
-			env_sustainability = 1
-		}
-		modifier = {
-			factor = 1
-			invention = martin_steel 
-		}
-		modifier = {
-			factor = 1
-			invention = thomas_steel
+			sustainable_energy = 1
 		}
 	}
 	effect = {
@@ -1206,11 +1002,11 @@ advanced_fire_control = {
 		base = 2
 		modifier = {
 			factor = 1
-			deep_sea_mining = 1
+			deep_mining = 1
 		}
 		modifier = {
 			factor = 2
-			env_sustainability = 1
+			sustainable_energy = 1
 		}
 		modifier = {
 			factor = 1
@@ -1230,7 +1026,7 @@ night_training = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = gaslights
+			invention = transistor_transistor_logic
 		}
 		modifier = {
 			factor = 2
@@ -1352,7 +1148,7 @@ underway_refueling = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = cracking
+			invention = horizontal_drilling
 		}
 		modifier = {
 			factor = 2
