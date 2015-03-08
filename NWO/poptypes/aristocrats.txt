@@ -110,14 +110,15 @@ country_migration_target =
 		vote_franschise = promoted_voting
 	}
 	modifier = {
-		factor = 4.0
+		factor = 2.0
 		OR = { 
 			continent = north_america
 			continent = south_america
 			continent = oceania
+			continent = europe
 		}
 	}
-		modifier = {
+	modifier = {
 		factor = 0.1
 		NOT = {
 			any_owned_province = {
