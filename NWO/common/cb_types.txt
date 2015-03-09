@@ -581,13 +581,13 @@ free_peoples = {
                 NOT = { is_our_vassal = THIS }
                 is_vassal = no
                 OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = nationalist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        THIS = { government = proletarian_dictatorship }
-                        war_with = THIS
                         NOT = { relation = { who = THIS value = -50 } }
                         FROM = { involved_in_crisis = yes }
+                }
+                OR = {
+                        war_with = THIS
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
                         THIS = { ai = no }
                 }
 	}
@@ -605,10 +605,10 @@ free_peoples = {
 		
 		any_owned_province = {
 			is_core = FROM
-			NOT =
-			{
-				is_core = THIS
-			}
+			#NOT =
+			#{
+			#	is_core = THIS
+			#}
 		}
 		is_releasable_vassal = FROM
 	}
@@ -664,14 +664,14 @@ liberate_country = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
                 OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = nationalist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        THIS = { government = proletarian_dictatorship }
-                        war_with = THIS
                         NOT = { relation = { who = THIS value = -50 } }
                         FROM = { involved_in_crisis = yes }
+                }
+                OR = {
+                        THIS = { government = populist_dictatorship }
+                        THIS = { government = islamist_dictatorship }
                         THIS = { ai = no }
+                        war_with = THIS
                 }
 	}
 
@@ -686,10 +686,10 @@ liberate_country = {
 		is_vassal = no
 		any_owned_province = {
 			is_core = FROM
-			NOT =
-			{
-				is_core = THIS
-			}
+			#NOT =
+			#{
+			#	is_core = THIS
+			#}
 		}
 		is_releasable_vassal = FROM
 	}
