@@ -106,11 +106,7 @@ political_decisions = {
 			war = no
 			election = yes
 			is_greater_power = yes 
-			any_greater_power = {
-				has_country_flag = xeu_ambition
-                NOT = { tag = THIS }
-                NOT = { brigades_compare = 1 }
-			}
+			NOT = { has_country_modifier = chair_ambitions }
 			trust_busting = 1
 			OR = {
 				ruling_party_ideology = conservative
@@ -125,6 +121,10 @@ political_decisions = {
 			prestige = 15
 			clr_global_flag = xeu_republican_ambition
 			set_global_flag = xeu_liberal_ambition
+			add_country_modifier = {
+				name = chair_ambitions
+				duration = 720
+			}			
 		}
 	}
 	
@@ -138,11 +138,7 @@ political_decisions = {
 			war = no
 			election = yes
 			is_greater_power = yes 
-			any_greater_power = {
-				has_country_flag = xeu_ambition
-                NOT = { tag = THIS }
-                NOT = { brigades_compare = 1 }
-			}
+			NOT = { has_country_modifier = chair_ambitions }
 			third_way = 1 
 			OR = {
 				ruling_party_ideology = socialist
@@ -157,6 +153,10 @@ political_decisions = {
 			prestige = 15
 			clr_global_flag = xeu_liberal_ambition
 			set_global_flag = xeu_republican_ambition
+			add_country_modifier = {
+				name = chair_ambitions
+				duration = 720
+			}
 		}
 	}	
 
