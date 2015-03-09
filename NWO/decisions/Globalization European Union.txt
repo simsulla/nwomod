@@ -106,12 +106,12 @@ political_decisions = {
 			war = no
 			election = yes
 			is_greater_power = yes 
-			any_greater_power = {
+			NOT = { 
+			    any_greater_power = {
 				has_country_flag = xeu_ambition
-				NOT = { 
-					tag = THIS 
-					stronger_army_than = THIS
-				}
+				NOT = { tag = THIS }
+				stronger_army_than = THIS
+			    } 
 			}
 			trust_busting = 1
 			OR = {
@@ -140,13 +140,13 @@ political_decisions = {
 			war = no
 			election = yes
 			is_greater_power = yes 
-                        any_greater_power = {
+                        NOT = { 
+			    any_greater_power = {
                                 has_country_flag = xeu_ambition
-                                NOT = { 
-                                        tag = THIS
-                                        stronger_army_than = THIS
-                                }
-                        }
+                                NOT = { tag = THIS }
+                                stronger_army_than = THIS
+                            } 
+			}
 			third_way = 1 
 			OR = {
 				ruling_party_ideology = socialist
