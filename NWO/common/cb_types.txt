@@ -583,6 +583,7 @@ free_peoples = {
                 OR = {
                         NOT = { relation = { who = THIS value = -50 } }
                         FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
                 }
                 OR = {
                         war_with = THIS
@@ -666,6 +667,7 @@ liberate_country = {
                 OR = {
                         NOT = { relation = { who = THIS value = -50 } }
                         FROM = { involved_in_crisis = yes }
+                        THIS = { ai = no }
                 }
                 OR = {
                         THIS = { government = populist_dictatorship }
@@ -681,15 +683,15 @@ liberate_country = {
 	allowed_countries = {
 		number_of_states = 2
 		NOT = { tag = FROM }
-		FROM = { exists = yes }
+		FROM = { exists = no }
 		part_of_sphere = no
 		is_vassal = no
 		any_owned_province = {
 			is_core = FROM
-			#NOT =
-			#{
-			#	is_core = THIS
-			#}
+			NOT =
+			{
+				is_core = THIS
+			}
 		}
 		is_releasable_vassal = FROM
 	}
