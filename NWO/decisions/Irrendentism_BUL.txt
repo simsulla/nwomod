@@ -1,0 +1,95 @@
+political_decisions = {
+
+#Other irredentism
+        claim_greater_bulgaria = {
+
+                potential = {
+                        tag = BUL
+                        NOT = { has_country_flag = claim_greater_bulgaria }
+                }
+
+                allow = {
+                        tag = BUL
+                        NOT = { has_country_flag = claim_greater_bulgaria }
+			NOT = { has_unclaimed_cores = yes } 
+                        war = no
+                        is_vassal = no
+			NOT = { part_of_sphere = yes }
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist 
+				jingoism = 24
+                        }
+                        NOT = { 
+                                 OR = {
+                                    ruling_party_ideology = socialist
+                                    ruling_party_ideology = progressive
+                                    ruling_party_ideology = liberal
+                                 }
+                        }
+
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_bulgaria
+                        823 = { #Kavala
+                                add_core = BUL
+                        }
+                        829 = { #Xanthe
+                                add_core = BUL
+                        }
+                        830 = { #Dedegatch
+                                add_core = BUL
+                        }
+                        807 = { #Bitola
+                                add_core = BUL
+                        }
+                        806 = { #Skopje
+                                add_core = BUL
+                        }
+                        818 = { #Silistre
+                                add_core = BUL
+                        }
+                }
+
+        }
+
+        abandon_greater_bulgaria = {
+
+                potential = {
+                        tag = BUL
+                        has_country_flag = claim_greater_bulgaria
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_bulgaria
+			OR = {
+                        	ruling_party_ideology = socialist
+                        	ruling_party_ideology = progressive
+                        	ruling_party_ideology = liberal
+			}
+                }
+
+                effect = {
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_bulgaria
+			all_core = { 
+				limit = { NOT = { owned_by = THIS } }
+				remove_core = BUL
+			}
+                }
+
+        }
+
+
+}
+
