@@ -1,0 +1,81 @@
+political_decisions = {
+
+        claim_greater_azerbaijan = {
+
+                potential = {
+                        tag = AZB
+                        NOT = { has_country_flag = claim_greater_azerbaijan }
+                }
+
+                allow = {
+                       tag = AZB
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_azerbaijan
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_azerbaijan
+                        1109 = { add_core = AZB }
+                        1108 = { add_core = AZB }
+                        1111 = { add_core = AZB }
+                        1123 = { add_core = AZB }
+                        1112 = { add_core = AZB }
+                        1113 = { add_core = AZB }
+                        1106 = { add_core = AZB }
+                }
+
+        }
+
+        abandon_claim_greater_azerbaijan = {
+
+                potential = {
+                        tag = AZB
+                        has_country_flag = claim_greater_azerbaijan
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_azerbaijan
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_azerbaijan
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = AZB
+                        }
+                }
+
+        }
+
+
+
+}
+

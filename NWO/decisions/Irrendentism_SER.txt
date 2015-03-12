@@ -1,0 +1,89 @@
+political_decisions = {
+
+        claim_greater_serbia = {
+
+                potential = {
+                        tag = SER
+                        NOT = { has_country_flag = claim_greater_serbia }
+                }
+
+                allow = {
+                       tag = SER
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_serbia
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_serbia
+						793 = { add_core = SER }
+						789 = { add_core = SER }
+						774 = { add_core = SER }
+						772 = { add_core = SER }
+						776 = { add_core = SER }
+						777 = { add_core = SER }
+						779 = { add_core = SER }
+						782 = { add_core = SER }
+						783 = { add_core = SER }
+						787 = { add_core = SER }
+						786 = { add_core = SER }
+						785 = { add_core = SER }
+						780 = { add_core = SER }
+						781 = { add_core = SER }
+						2688 = { add_core = SER }
+                }
+
+        }
+
+        abandon_claim_greater_serbia = {
+
+                potential = {
+                        tag = SER
+                        has_country_flag = claim_greater_serbia
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_serbia
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_serbia
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = SER
+                        }
+                }
+
+        }
+
+
+
+}
+

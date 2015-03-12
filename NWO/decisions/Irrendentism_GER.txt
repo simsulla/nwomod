@@ -1,0 +1,87 @@
+political_decisions = {
+
+        claim_greater_germany = {
+
+                potential = {
+                        tag = GER
+                        NOT = { has_country_flag = claim_greater_germany }
+                }
+
+                allow = {
+                       tag = GER
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_germany
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_germany
+                        684 = { add_core = GER }
+                        683 = { add_core = GER }
+                        682 = { add_core = GER }
+                        681 = { add_core = GER }
+                        546 = { add_core = GER }
+                        679 = { add_core = GER }
+                        692 = { add_core = GER }
+                        680 = { add_core = GER }
+                        693 = { add_core = GER }
+                        696 = { add_core = GER }
+                        695 = { add_core = GER }
+                        697 = { add_core = GER }
+                        698 = { add_core = GER }
+                }
+
+        }
+
+        abandon_claim_greater_germany = {
+
+                potential = {
+                        tag = GER
+                        has_country_flag = claim_greater_germany
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_germany
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_germany
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = GER
+                        }
+                }
+
+        }
+
+
+
+}
+

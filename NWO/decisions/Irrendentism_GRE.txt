@@ -1,0 +1,78 @@
+political_decisions = {
+
+        claim_greater_greece = {
+
+                potential = {
+                        tag = GRE
+                        NOT = { has_country_flag = claim_greater_greece }
+                }
+
+                allow = {
+                       tag = GRE
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_greece
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_greece
+                        968 = { add_core = GRE }
+                        828 = { add_core = GRE }
+                        859 = { add_core = GRE }
+                        858 = { add_core = GRE }
+                }
+
+        }
+
+        abandon_claim_greater_greece = {
+
+                potential = {
+                        tag = GRE
+                        has_country_flag = claim_greater_greece
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_greece
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_greece
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = GRE
+                        }
+                }
+
+        }
+
+
+
+}
+

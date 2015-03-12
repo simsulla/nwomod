@@ -1,6 +1,5 @@
 political_decisions = {
 
-#Other irredentism
         claim_greater_bulgaria = {
 
                 potential = {
@@ -9,25 +8,21 @@ political_decisions = {
                 }
 
                 allow = {
-                        tag = BUL
-                        NOT = { has_country_flag = claim_greater_bulgaria }
-			NOT = { has_unclaimed_cores = yes } 
-                        war = no
-                        is_vassal = no
-			NOT = { part_of_sphere = yes }
+                       tag = BUL
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_bulgaria
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
                         prestige = 45
                         OR = {
-                                ruling_party_ideology = populist 
-				jingoism = 24
+                                ruling_party_ideology = populist
+                                jingoism = 24
                         }
-                        NOT = { 
-                                 OR = {
-                                    ruling_party_ideology = socialist
-                                    ruling_party_ideology = progressive
-                                    ruling_party_ideology = liberal
-                                 }
-                        }
-
                 }
 
                 effect = {
@@ -55,37 +50,38 @@ political_decisions = {
 
         }
 
-        abandon_greater_bulgaria = {
+        abandon_claim_greater_bulgaria = {
 
                 potential = {
                         tag = BUL
                         has_country_flag = claim_greater_bulgaria
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+						OR = {
+							government = democracy
+							government = hms_government
+						}
                 }
 
                 allow = {
                         war = no
                         is_vassal = no
                         has_country_flag = claim_greater_bulgaria
-			OR = {
+						OR = {
                         	ruling_party_ideology = socialist
                         	ruling_party_ideology = progressive
                         	ruling_party_ideology = liberal
-			}
+						}
                 }
 
                 effect = {
+						prestige = 10
                         any_pop = {
                                 consciousness = 1
                         }
                         clr_country_flag = claim_greater_bulgaria
-			all_core = { 
-				limit = { NOT = { owned_by = THIS } }
-				remove_core = BUL
-			}
+						all_core = { 
+							limit = { NOT = { owned_by = THIS } }
+							remove_core = BUL
+						}
                 }
 
         }

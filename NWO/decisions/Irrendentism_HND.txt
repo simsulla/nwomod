@@ -1,0 +1,93 @@
+political_decisions = {
+
+        claim_greater_india = {
+
+                potential = {
+                        tag = HND
+                        NOT = { has_country_flag = claim_greater_india }
+                }
+
+                allow = {
+                       tag = HND
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_india
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+	
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_india
+                        1256 = { add_core = HND }
+                        1257 = { add_core = HND }
+                        1254 = { add_core = HND }
+                        1255 = { add_core = HND }
+                        1290 = { add_core = HND }
+                        1288 = { add_core = HND }
+                        1289 = { add_core = HND }
+                        1222 = { add_core = HND }
+                        1221 = { add_core = HND }
+                        1220 = { add_core = HND }
+                        1219 = { add_core = HND }
+                        1218 = { add_core = HND }
+                        1223 = { add_core = HND }
+                        1231 = { add_core = HND }
+                        1228 = { add_core = HND }
+                        1232 = { add_core = HND }
+                        1227 = { add_core = HND }
+                        1229 = { add_core = HND }
+                        1230 = { add_core = HND }
+                }
+
+        }
+
+        abandon_claim_greater_india = {
+
+                potential = {
+                        tag = HND
+                        has_country_flag = claim_greater_india
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_india
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_india
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = HND
+                        }
+                }
+
+        }
+
+
+
+}
+

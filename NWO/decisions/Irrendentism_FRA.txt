@@ -1,0 +1,75 @@
+political_decisions = {
+
+        claim_greater_france = {
+
+                potential = {
+                        tag = FRA
+                        NOT = { has_country_flag = claim_greater_france }
+                }
+
+                allow = {
+                       tag = FRA
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_france
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_france
+                        537 = { add_core = FRA }
+                }
+
+        }
+
+        abandon_claim_greater_france = {
+
+                potential = {
+                        tag = FRA
+                        has_country_flag = claim_greater_france
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_france
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_france
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = FRA
+                        }
+                }
+
+        }
+
+
+
+}
+

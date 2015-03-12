@@ -1,0 +1,79 @@
+political_decisions = {
+
+        claim_greater_somalia = {
+
+                potential = {
+                        tag = SOM
+                        NOT = { has_country_flag = claim_greater_somalia }
+                }
+
+                allow = {
+                       tag = SOM
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_somalia
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_somalia
+                        2031 = { add_core = SOM }
+                        1875 = { add_core = SOM }
+                        1865 = { add_core = SOM }
+                        1867 = { add_core = SOM }
+                        1866 = { add_core = SOM }
+                }
+
+        }
+
+        abandon_claim_greater_somalia = {
+
+                potential = {
+                        tag = SOM
+                        has_country_flag = claim_greater_somalia
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_somalia
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_somalia
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = SOM
+                        }
+                }
+
+        }
+
+
+
+}
+

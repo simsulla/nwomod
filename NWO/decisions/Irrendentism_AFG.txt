@@ -8,29 +8,26 @@ political_decisions = {
                 }
 
                 allow = {
-                        tag = AFG
-                        NOT = { has_country_flag = claim_greater_afghanistan }
-                        NOT = { has_unclaimed_cores = yes }
-			is_vassal = no
-                        part_of_sphere = no
+                       tag = AFG
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_afghanistan
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
                         prestige = 45
                         OR = {
                                 ruling_party_ideology = populist
                                 jingoism = 24
                         }
-                        NOT = { 
-                                 OR = {
-                                    ruling_party_ideology = socialist
-                                    ruling_party_ideology = progressive
-                                    ruling_party_ideology = liberal
-                                 }
-                        }
-
                 }
 
                 effect = {
                         badboy = 12
-                        set_country_flag = claim_greater_afganistan
+                        set_country_flag = claim_greater_afghanistan
                         1223 = { 
                                 add_core = AFG
                         }
@@ -44,7 +41,7 @@ political_decisions = {
 
         }
 
-        abandon_greater_afghanistan = {
+        abandon_claim_greater_afghanistan = {
 
                 potential = {
                         tag = AFG
@@ -67,6 +64,7 @@ political_decisions = {
                 }
 
                 effect = {
+						prestige = 10
                         any_pop = {
                                 consciousness = 1
                         }

@@ -1,0 +1,83 @@
+political_decisions = {
+
+        claim_greater_armenia = {
+
+                potential = {
+                        tag = ARM
+                        NOT = { has_country_flag = claim_greater_armenia }
+                }
+
+                allow = {
+                       tag = ARM
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_armenia
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_armenia
+                        1093 = { add_core = ARM }
+                        1106 = { add_core = ARM }
+                        1101 = { add_core = ARM }
+                        890 = { add_core = ARM }
+                        885 = { add_core = ARM }
+                        886 = { add_core = ARM }
+                        891 = { add_core = ARM }
+                        887 = { add_core = ARM }
+                        882 = { add_core = ARM }
+                }
+
+        }
+
+        abandon_claim_greater_armenia = {
+
+                potential = {
+                        tag = ARM
+                        has_country_flag = claim_greater_armenia
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_armenia
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_armenia
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = ARM
+                        }
+                }
+
+        }
+
+
+
+}
+

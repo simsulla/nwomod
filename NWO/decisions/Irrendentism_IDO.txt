@@ -1,0 +1,91 @@
+political_decisions = {
+
+        claim_greater_indonesia = {
+
+                potential = {
+                        tag = IDO
+                        NOT = { has_country_flag = claim_greater_indonesia }
+                }
+
+                allow = {
+                       tag = IDO
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_indonesia
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_indonesia
+                        1397 = { add_core = IDO }
+                        1396 = { add_core = IDO }
+                        1393 = { add_core = IDO }
+                        1395 = { add_core = IDO }
+                        1394 = { add_core = IDO }
+                        2576 = { add_core = IDO }
+                        1384 = { add_core = IDO }
+                        1385 = { add_core = IDO }
+                        1386 = { add_core = IDO }
+                        1387 = { add_core = IDO }
+                        1390 = { add_core = IDO }
+                        1391 = { add_core = IDO }
+                        2575 = { add_core = IDO }
+                        1388 = { add_core = IDO }
+                        1389 = { add_core = IDO }
+                        1392 = { add_core = IDO }
+                        1446 = { add_core = IDO }
+                }
+
+        }
+
+        abandon_claim_greater_indonesia = {
+
+                potential = {
+                        tag = IDO
+                        has_country_flag = claim_greater_indonesia
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_indonesia
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_indonesia
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = IDO
+                        }
+                }
+
+        }
+
+
+
+}
+

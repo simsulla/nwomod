@@ -1,0 +1,76 @@
+political_decisions = {
+
+        claim_greater_bolivia = {
+
+                potential = {
+                        tag = BOL
+                        NOT = { has_country_flag = claim_greater_bolivia }
+                }
+
+                allow = {
+                       tag = BOL
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_bolivia
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_bolivia
+                        2307 = { add_core = BOL }
+                        2309 = { add_core = BOL }
+                }
+
+        }
+
+        abandon_claim_greater_bolivia = {
+
+                potential = {
+                        tag = BOL
+                        has_country_flag = claim_greater_bolivia
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_bolivia
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_bolivia
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = BOL
+                        }
+                }
+
+        }
+
+
+
+}
+

@@ -1,0 +1,96 @@
+political_decisions = {
+
+        claim_greater_russia = {
+
+                potential = {
+                        tag = RUS
+                        NOT = { has_country_flag = claim_greater_russia }
+                }
+
+                allow = {
+                       tag = RUS
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_russia
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_russia
+                        966 = { add_core = RUS }
+                        967 = { add_core = RUS }
+                        964 = { add_core = RUS }
+                        350 = { add_core = RUS }
+                        1187 = { add_core = RUS }
+                        1181 = { add_core = RUS }
+                        1184 = { add_core = RUS }
+                        2611 = { add_core = RUS }
+                        677 = { add_core = RUS }
+                        678 = { add_core = RUS }
+                        968 = { add_core = RUS }
+                        969 = { add_core = RUS }
+                        671 = { add_core = RUS }
+                        670 = { add_core = RUS }
+                        672 = { add_core = RUS }
+                        965 = { add_core = RUS }
+                        973 = { add_core = RUS }
+                        976 = { add_core = RUS }
+                        975 = { add_core = RUS }
+                        974 = { add_core = RUS }
+                        978 = { add_core = RUS }
+                        980 = { add_core = RUS }
+                }
+
+        }
+
+        abandon_claim_greater_russia = {
+
+                potential = {
+                        tag = RUS
+                        has_country_flag = claim_greater_russia
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_russia
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_russia
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = RUS
+                        }
+                }
+
+        }
+
+
+
+}
+

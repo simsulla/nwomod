@@ -1,0 +1,84 @@
+political_decisions = {
+
+        claim_greater_south = {
+
+                potential = {
+                        tag = CSA
+                        NOT = { has_country_flag = claim_greater_south }
+                }
+
+                allow = {
+                       tag = CSA
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_south
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_south
+                        200 = { add_core = CSA }
+                        199 = { add_core = CSA }
+                        198 = { add_core = CSA }
+                        132 = { add_core = CSA }
+                        134 = { add_core = CSA }
+                        133 = { add_core = CSA }
+                        137 = { add_core = CSA }
+                        138 = { add_core = CSA }
+                        135 = { add_core = CSA }
+                        136 = { add_core = CSA }
+                }
+
+        }
+
+        abandon_claim_greater_south = {
+
+                potential = {
+                        tag = CSA
+                        has_country_flag = claim_greater_south
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_south
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_south
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = CSA
+                        }
+                }
+
+        }
+
+
+
+}
+

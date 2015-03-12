@@ -1,0 +1,84 @@
+political_decisions = {
+
+        claim_greater_hungary = {
+
+                potential = {
+                        tag = HUN
+                        NOT = { has_country_flag = claim_greater_hungary }
+                }
+
+                allow = {
+                       tag = HUN
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_hungary
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_hungary
+                        638 = { add_core = HUN }
+                        637 = { add_core = HUN }
+                        950 = { add_core = HUN }
+                        2538 = { add_core = HUN }
+                        647 = { add_core = HUN }
+                        651 = { add_core = HUN }
+                        654 = { add_core = HUN }
+                        660 = { add_core = HUN }
+                        661 = { add_core = HUN }
+                        2533 = { add_core = HUN }
+                }
+
+        }
+
+        abandon_claim_greater_hungary = {
+
+                potential = {
+                        tag = HUN
+                        has_country_flag = claim_greater_hungary
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_hungary
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_hungary
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = HUN
+                        }
+                }
+
+        }
+
+
+
+}
+

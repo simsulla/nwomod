@@ -1,0 +1,83 @@
+political_decisions = {
+
+        claim_greater_korea = {
+
+                potential = {
+                        tag = SKO
+                        NOT = { has_country_flag = claim_greater_korea }
+                }
+
+                allow = {
+                       tag = SKO
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_korea
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_korea
+						1625 = { add_core = SOM }
+						1626 = { add_core = SOM }
+						1627 = { add_core = SOM }
+						1629 = { add_core = SOM }
+						1619 = { add_core = SOM }
+						1620 = { add_core = SOM }
+						1621 = { add_core = SOM }
+						1622 = { add_core = SOM }
+						1623 = { add_core = SOM }
+                }
+
+        }
+
+        abandon_claim_greater_korea = {
+
+                potential = {
+                        tag = SKO
+                        has_country_flag = claim_greater_korea
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_korea
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_korea
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = SKO
+                        }
+                }
+
+        }
+
+
+
+}
+

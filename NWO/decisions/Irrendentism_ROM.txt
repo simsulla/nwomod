@@ -1,0 +1,80 @@
+political_decisions = {
+
+        claim_greater_romania = {
+
+                potential = {
+                        tag = ROM
+                        NOT = { has_country_flag = claim_greater_romania }
+                }
+
+                allow = {
+                       tag = ROM
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_romania
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_romania
+                        662 = { add_core = ROM }
+                        676 = { add_core = ROM }
+                        677 = { add_core = ROM }
+                        678 = { add_core = ROM }
+                        2589 = { add_core = ROM }
+                        818 = { add_core = ROM }
+                }
+
+        }
+
+        abandon_claim_greater_romania = {
+
+                potential = {
+                        tag = ROM
+                        has_country_flag = claim_greater_romania
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_romania
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_romania
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = ROM
+                        }
+                }
+
+        }
+
+
+
+}
+
