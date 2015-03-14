@@ -986,3 +986,139 @@ country_event = {
         }
 }
 
+country_event = {
+	id = 19378
+	title = "EVTNAME19379"
+	desc = "EVTDESC19379"
+	picture = "nuclear"
+
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1946
+		NOT = { year = 1947 }
+		ai = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA19379"
+		USA = {
+			set_country_flag = has_the_atomic_bomb
+			set_country_flag = develop_atomic_bomb
+			add_country_modifier = {
+				name = has_the_atomic_bomb
+				duration = 5475
+            }
+		}
+		RUS = {
+			set_country_flag = develop_atomic_bomb
+			add_country_modifier = {
+				name = develop_atomic_bomb
+				duration = 1440
+            }
+		}
+		ENG = {
+			set_country_flag = develop_atomic_bomb
+			add_country_modifier = {
+				name = develop_atomic_bomb
+				duration = 2520
+            }
+		}		
+	}
+}
+
+country_event = {
+	id = 19379
+	title = "EVTNAME19379"
+	desc = "EVTDESC19379"
+	picture = "nuclear"
+
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1992
+		ai = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA19379"
+		any_greater_power = {
+			limit = {
+				OR = { 
+					tag = USA
+					tag = RUS
+					tag = CHI
+				}
+			}
+			set_country_flag = has_the_atomic_bomb
+			set_country_flag = develop_atomic_bomb
+			add_country_modifier = {
+				name = nuclear_weapon_power
+				duration = 5475
+            }
+		}
+		any_country = {
+			limit = {
+				OR = { 
+					tag = HND
+					tag = PAK
+					tag = ISR
+				}
+			}
+			set_country_flag = has_the_atomic_bomb
+			set_country_flag = develop_atomic_bomb
+			add_country_modifier = {
+				name = has_the_atomic_bomb
+				duration = 5475
+            }
+		}
+	}
+}
+
+country_event = {
+	id = 19380
+	title = "EVTNAME19380"
+	desc = "EVTDESC19380"
+	picture = "nuclear_peace"
+
+	is_triggered_only = yes
+
+	immediate = {
+		end_war = FROM
+	}
+	
+	option = {
+		name = "EVTOPTA19380"
+	}
+
+}
+
+country_event = {
+	id = 19381
+	title = "EVTNAME19381"
+	desc = "EVTDESC19381"
+	picture = "nuclear_peace"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA19381"
+		any_country = {
+			limit = { war_with = FROM }
+			FROM = { country_event = 19380 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19381"
+	}
+	
+}

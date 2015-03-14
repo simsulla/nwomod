@@ -1,0 +1,239 @@
+political_decisions = {
+
+        non_proliferation_treaty = {
+				picture = "non_proliferation_treaty"
+                potential = {
+					year = 1968
+					NOT = { has_country_modifier = non_proliferation_treaty }
+					NOT = { OR = { is_greater_power = yes is_secondary_power = yes } }
+                    NOT =  { 
+						any_neighbor_country = { has_country_modifier = has_the_atomic_bomb }
+						OR = { 
+							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+						}
+					}
+					
+                }
+
+                allow = {
+					NOT = { has_country_modifier = non_proliferation_treaty }
+					NOT = { OR = { is_greater_power = yes is_secondary_power = yes } }
+                    NOT =  { 
+						any_neighbor_country = { has_country_modifier = has_the_atomic_bomb }
+						OR = { 
+							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+						}
+					}
+                }
+
+                effect = {
+					add_country_modifier = {
+                        name = non_proliferation_treaty
+						duration = 3650
+	                }
+                }
+        }
+		
+        develop_atomic_bomb = {
+				picture = "develop_atomic_bomb"
+                potential = {
+					NOT = { has_country_modifier = non_proliferation_treaty has_country_flag = develop_atomic_bomb }
+					OR = { is_greater_power = yes is_secondary_power = yes }
+                    NOT =  { 
+						part_of_sphere = yes 
+						OR = { 
+							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+						}
+					}
+                }
+
+                allow = {
+					NOT = { has_country_modifier = non_proliferation_treaty }
+					invention = the_atomic_bomb
+					OR = { is_greater_power = yes is_secondary_power = yes }
+                    NOT =  { 
+						part_of_sphere = yes 
+						OR = { 
+							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+						}
+					}
+                }
+
+                effect = {
+					set_country_flag = develop_atomic_bomb
+					add_country_modifier = {
+						name = develop_atomic_bomb
+						duration = 5475
+					}
+                }
+        }
+		
+        has_the_atomic_bomb = {
+				picture = "has_the_atomic_bomb"
+                potential = {
+					NOT = { has_country_flag = has_the_atomic_bomb  }
+					has_country_flag = develop_atomic_bomb
+					OR = { is_greater_power = yes is_secondary_power = yes }
+                }
+
+                allow = {
+					OR = { is_greater_power = yes is_secondary_power = yes }
+					NOT = { has_country_modifier = develop_atomic_bomb }
+					has_country_flag = develop_atomic_bomb
+					OR = { is_greater_power = yes  jingoism = 10 }
+					prestige = 50
+                    NOT =  { 
+						part_of_sphere = yes 
+						OR = { 
+							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+						}
+					}					
+                }
+
+                effect = {
+					set_country_flag = has_the_atomic_bomb
+					add_country_modifier = {
+                        name = has_the_atomic_bomb
+						duration = 5475
+	                }
+                }
+        }
+		
+        nuclear_weapon_power = {
+				picture = "nuclear_weapon_power"
+                potential = {
+					has_country_flag = has_the_atomic_bomb
+					OR = { is_greater_power = yes is_secondary_power = yes }
+					NOT = { has_country_modifier = nuclear_weapon_power }
+                }
+
+                allow = {
+					is_greater_power = yes
+					NOT = { has_country_modifier = nuclear_weapon_power }
+					NOT = { has_country_modifier = has_the_atomic_bomb has_country_modifier = non_proliferation_treaty }
+					has_country_flag = has_the_atomic_bomb
+                    NOT =  { 
+						OR = { 
+							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+						}
+					}					
+                }
+
+                effect = {
+					add_country_modifier = {
+                        name = nuclear_weapon_power
+						duration = 5475
+	                }
+                }
+        }
+		
+        nuclear_peace = {
+				picture = "nuclear_peace"
+                potential = {
+					NOT = { has_country_modifier = nuclear_peace }
+					war = yes
+					OR = { 
+						has_country_modifier = has_the_atomic_bomb
+						has_country_modifier = nuclear_weapon_power
+						AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+					}
+                }
+
+                allow = {
+					national_provinces_occupied = 0.1
+					war = yes
+					OR = { 
+						AND = { has_country_modifier = has_the_atomic_bomb any_neighbor_country = { war_with = THIS } }
+						has_country_modifier = nuclear_weapon_power
+						AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+					}						
+                }
+
+                effect = {
+					random_country = {
+						limit = { 
+							war_with = THIS
+							THIS = { has_country_modifier = nuclear_weapon_power }
+						}
+						country_event = 19380
+					}
+					random_country = {
+						limit = { 
+							war_with = THIS
+							neighbour  = THIS
+							THIS = { has_country_modifier = has_the_atomic_bomb }
+						}
+						country_event = 19380
+					}
+					random_country = {
+						limit = { 
+							tag = USA
+							THIS = { 
+								NOT = { tag = USA }  
+								OR = { has_country_modifier = alliance_nato has_country_modifier = rio_pact has_country_modifier = anzus_alliance } 
+							}
+						}
+						country_event = 19381
+					}
+					random_country = {
+						limit = { 
+							tag = RUS
+							THIS = { NOT = { tag = RUS } OR = { has_country_modifier = warsaw_pact has_country_modifier = csto_alliance } }
+						}
+						country_event = 19381
+					}
+					random_country = {
+						limit = { 
+							tag = CHI
+							THIS = { NOT = { tag = CHI }  has_country_modifier = sco_pact }
+						}
+						country_event = 19381
+					}
+					add_country_modifier = {
+                        name = nuclear_peace
+						duration = 365
+	                }
+                }
+        }
+		
+}
