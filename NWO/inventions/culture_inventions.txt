@@ -768,6 +768,28 @@ social_anthropology = {
 		colonial_prestige = 0.1 
 	}
 }
+#cold war
+the_atomic_bomb = {
+        limit = { cold_war = 1 }
+        chance = {
+                base = 2
+                modifier = {
+                        factor = 12
+                        OR = { 
+				tag = USA 
+				tag = RUS 
+			} 
+                }
+                modifier = {
+                        factor = 2
+                        is_greater_power = yes
+                }
+        }
+        effect = {
+                permanent_prestige = 5
+        }
+}
+
 #preschool_education
 the_revolt_of_the_masses = {
 	limit = { preschool_education = 1 }

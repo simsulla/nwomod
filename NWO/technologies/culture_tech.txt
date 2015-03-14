@@ -785,6 +785,14 @@ cold_war = {
 			factor = 1.02
 			tech_school = culture_tech_school
 		}
+                modifier = {
+                        factor = 6
+                        OR = {
+				tag = USA
+				tag = RUS
+			}
+			is_greater_power = yes
+                }
 		modifier = {
 			factor = 6
 			is_greater_power = yes
