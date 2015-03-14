@@ -1,0 +1,590 @@
+political_decisions = {
+
+		# NATO
+        alliance_nato = {
+				picture = "alliance_nato"
+                potential = {
+					#year = 1949
+                    NOT =  {
+						has_country_modifier = alliance_nato 
+						has_country_modifier = leave_alliance_nato 
+					}
+					OR = {
+						tag = USA
+						tag = CAN
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							continent = europe
+						}
+					}
+					OR = {
+						USA = { has_country_modifier = alliance_nato }
+						tag = USA
+					}
+                }
+
+                allow = {
+					has_unclaimed_cores = no
+                    NOT =  {
+						has_country_modifier = alliance_nato 
+						has_country_modifier = leave_alliance_nato 
+					}
+					OR = {
+						tag = USA
+						tag = CAN
+						continent = europe
+					}
+					OR = {
+						tag = USA
+						tag = CAN
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							continent = europe
+						}
+					}
+					OR = {
+						AND = { 
+							is_greater_power = yes
+							OR = { tag = USA  relation = { who = USA value = 50 } }
+						}
+						sphere_owner = {  has_country_modifier = alliance_nato }
+					}
+					OR = { government = democracy government = hms_government }
+                }
+
+                effect = {
+					random_country = {
+						limit = {
+							tag = THIS
+							NOT = { tag = USA }
+						}
+						create_alliance = USA
+					}
+					add_country_modifier = {
+                        name = alliance_nato
+						duration = 3650
+	                }
+                }
+        }
+
+        leave_alliance_nato = {
+				picture = "alliance_nato"
+                potential = {
+					has_country_modifier = alliance_nato 
+					NOT = { 
+						tag = USA
+						alliance_with = USA
+						sphere_owner = { tag = USA }
+					}
+                }
+
+                allow = {
+					has_country_modifier = alliance_nato 
+					NOT = { 
+						tag = USA
+						alliance_with = USA
+						sphere_owner = { tag = USA }
+					}
+					OR = { 
+						has_unclaimed_cores = yes
+						NOT = { OR = { government = democracy government = hms_government } }
+						NOT = { relation = { who = USA value = 0 } }
+					}
+                }
+
+                effect = {
+					remove_country_modifier = alliance_nato
+					add_country_modifier = {
+                        name = leave_alliance_nato
+						duration = 3650
+	                }
+                }
+        }
+
+		#Inter-American Treaty of Reciprocal Assistance
+        rio_pact = {
+				picture = "rio_pact"
+                potential = {
+					year = 1947
+                    NOT =  {
+						has_country_modifier = rio_pact 
+						has_country_modifier = leave_rio_pact 
+					}
+					NOT = { tag = CAN }
+					OR = {
+						tag = USA
+						continent = north_america
+						continent = south_america
+					}
+					OR = { is_greater_power = yes part_of_sphere = yes }
+					OR = {
+						USA = { has_country_modifier = rio_pact }
+						tag = USA
+					}
+                }
+
+                allow = {
+					has_unclaimed_cores = no
+                    NOT =  {
+						has_country_modifier = rio_pact 
+						has_country_modifier = leave_rio_pact 
+					}
+					NOT = { tag = CAN }
+					OR = {
+						tag = USA
+						continent = north_america
+						continent = south_america
+					}
+					OR = { is_greater_power = yes part_of_sphere = yes }
+					OR = {
+						AND = { 
+							is_greater_power = yes
+							OR = { tag = USA  relation = { who = USA value = 50 } }
+						}
+						sphere_owner = {  has_country_modifier = rio_pact }
+					}
+					OR = { government = democracy government = hms_government }
+                }
+
+                effect = {
+					random_country = {
+						limit = {
+							tag = THIS
+							NOT = { tag = USA }
+						}
+						create_alliance = USA
+					}
+					add_country_modifier = {
+                        name = rio_pact
+						duration = 3650
+	                }
+                }
+        }
+
+        leave_rio_pact = {
+				picture = "rio_pact"
+                potential = {
+					has_country_modifier = rio_pact 
+					NOT = { 
+						tag = USA
+						alliance_with = USA
+						sphere_owner = { tag = USA }
+					}
+                }
+
+                allow = {
+					has_country_modifier = rio_pact 
+					NOT = { 
+						tag = USA
+						alliance_with = USA
+						sphere_owner = { tag = USA }
+					}
+					OR = { 
+						has_unclaimed_cores = yes
+						NOT = { OR = { government = democracy government = hms_government } }
+						NOT = { relation = { who = USA value = 0 } }
+					}
+                }
+
+                effect = {
+					remove_country_modifier = rio_pact
+					add_country_modifier = {
+                        name = leave_rio_pact
+						duration = 3650
+	                }
+                }
+        }
+
+		#Warsaw Pact
+		warsaw_pact = {
+				picture = "warsaw_pact"
+                potential = {
+					year = 1955
+                    NOT =  {
+						has_country_modifier = warsaw_pact 
+						has_country_modifier = leave_warsaw_pact 
+					}
+					government = proletarian_dictatorship
+					OR = {
+						tag = RUS
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							continent = europe
+						}
+					}
+					OR = {
+						RUS = { has_country_modifier = warsaw_pact }
+						tag = RUS
+					}
+                }
+
+                allow = {
+					has_unclaimed_cores = no
+                    NOT =  {
+						has_country_modifier = warsaw_pact 
+						has_country_modifier = leave_warsaw_pact 
+					}
+					OR = {
+						tag = RUS
+						continent = europe
+					}
+					OR = {
+						tag = RUS
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							continent = europe
+						}
+					}
+					OR = {
+						AND = { 
+							is_greater_power = yes
+							OR = { tag = RUS  relation = { who = RUS value = 50 } }
+						}
+						sphere_owner = {  has_country_modifier = warsaw_pact }
+					}
+					government = proletarian_dictatorship
+                }
+
+                effect = {
+					random_country = {
+						limit = {
+							tag = THIS
+							NOT = { tag = RUS }
+						}
+						create_alliance = RUS
+					}
+					add_country_modifier = {
+                        name = warsaw_pact
+						duration = 3650
+	                }
+                }
+        }
+
+        leave_warsaw_pact = {
+				picture = "warsaw_pact"
+                potential = {
+					has_country_modifier = warsaw_pact 
+					NOT = { 
+						tag = RUS
+						alliance_with = RUS
+						sphere_owner = { tag = RUS }
+					}
+                }
+
+                allow = {
+					has_country_modifier = warsaw_pact 
+					NOT = { 
+						tag = RUS
+						alliance_with = RUS
+						sphere_owner = { tag = RUS }
+					}
+					OR = { 
+						has_unclaimed_cores = yes
+						NOT = { government = proletarian_dictatorship }
+						NOT = { relation = { who = RUS value = 0 } }
+					}
+                }
+
+                effect = {
+					remove_country_modifier = warsaw_pact
+					add_country_modifier = {
+                        name = leave_warsaw_pact
+						duration = 3650
+	                }
+                }
+        }
+
+		# CSTO
+        csto_alliance = {
+				picture = "csto_alliance"
+                potential = {
+					year = 1992
+                    NOT =  {
+						has_country_modifier = csto_alliance 
+						has_country_modifier = leave_csto_alliance 
+					}
+					OR = {
+						tag = RUS
+						tag = BYE
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							continent = asia
+						}
+					}
+					OR = {
+						RUS = { has_country_modifier = csto_alliance }
+						tag = RUS
+					}
+                }
+
+                allow = {
+					has_unclaimed_cores = no
+                    NOT =  {
+						has_country_modifier = csto_alliance 
+						has_country_modifier = leave_csto_alliance 
+					}
+					OR = {
+						tag = RUS
+						tag = BYE
+						continent = asia
+					}
+					OR = {
+						tag = RUS
+						tag = BYE
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							continent = asia
+						}
+					}
+					OR = {
+						AND = { 
+							is_greater_power = yes
+							OR = { tag = RUS  relation = { who = RUS value = 50 } }
+						}
+						sphere_owner = {  has_country_modifier = csto_alliance }
+					}
+					NOT = { government = proletarian_dictatorship }
+                }
+
+                effect = {
+					random_country = {
+						limit = {
+							tag = THIS
+							NOT = { tag = RUS }
+						}
+						create_alliance = RUS
+					}
+					add_country_modifier = {
+                        name = csto_alliance
+						duration = 3650
+	                }
+                }
+        }
+
+        leave_csto_alliance = {
+				picture = "csto_alliance"
+                potential = {
+					has_country_modifier = csto_alliance 
+					NOT = { 
+						tag = RUS
+						alliance_with = RUS
+						sphere_owner = { tag = RUS }
+					}
+                }
+
+                allow = {
+					has_country_modifier = csto_alliance 
+					NOT = { 
+						tag = RUS
+						alliance_with = RUS
+						sphere_owner = { tag = RUS }
+					}
+					OR = { 
+						has_unclaimed_cores = yes
+						government = proletarian_dictatorship
+						NOT = { relation = { who = RUS value = 0 } }
+					}
+                }
+
+                effect = {
+					remove_country_modifier = csto_alliance
+					add_country_modifier = {
+                        name = leave_csto_alliance
+						duration = 3650
+	                }
+                }
+        }
+
+		#ANZUS
+        anzus_alliance = {
+				picture = "anzus_alliance"
+                potential = {
+                    NOT =  {
+						has_country_modifier = anzus_alliance 
+						has_country_modifier = leave_anzus_alliance 
+					}
+					OR = {
+						tag = USA
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							continent = oceania
+						}
+					}
+					OR = {
+						USA = { has_country_modifier = anzus_alliance }
+						tag = USA
+					}
+                }
+
+                allow = {
+					year = 1951
+					has_unclaimed_cores = no
+                    NOT =  {
+						has_country_modifier = anzus_alliance 
+						has_country_modifier = leave_anzus_alliance 
+					}
+					OR = {
+						tag = USA
+						continent = oceania
+					}
+					OR = {
+						tag = USA
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							continent = oceania
+						}
+					}
+					OR = {
+						AND = { 
+							is_greater_power = yes
+							OR = { tag = USA  relation = { who = USA value = 50 } }
+						}
+						sphere_owner = {  has_country_modifier = anzus_alliance }
+					}
+					OR = { government = democracy government = hms_government }
+                }
+
+                effect = {
+					random_country = {
+						limit = {
+							tag = THIS
+							NOT = { tag = USA }
+						}
+						create_alliance = USA
+					}
+					add_country_modifier = {
+                        name = anzus_alliance
+						duration = 3650
+	                }
+                }
+        }
+
+        leave_anzus_alliance = {
+				picture = "anzus_alliance"
+                potential = {
+					has_country_modifier = anzus_alliance 
+					NOT = { 
+						tag = USA
+						alliance_with = USA
+						sphere_owner = { tag = USA }
+					}
+                }
+
+                allow = {
+					has_country_modifier = anzus_alliance 
+					NOT = { 
+						tag = USA
+						alliance_with = USA
+						sphere_owner = { tag = USA }
+					}
+					OR = { 
+						has_unclaimed_cores = yes
+						NOT = { OR = { government = democracy government = hms_government } }
+						NOT = { relation = { who = USA value = 0 } }
+					}
+                }
+
+                effect = {
+					remove_country_modifier = anzus_alliance
+					add_country_modifier = {
+                        name = leave_anzus_alliance
+						duration = 3650
+	                }
+                }
+        }
+
+		# SCO
+        sco_pact = {
+				picture = "sco_pact"
+                potential = {
+					year = 2001
+                    NOT =  {
+						has_country_modifier = sco_pact 
+						has_country_modifier = leave_sco_pact 
+					}
+					OR = {
+						tag = CHI
+						tag = RUS
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							NOT = { num_of_ports = 1 }
+							continent = asia
+						}
+					}
+					OR = {
+						CHI = { has_country_modifier = sco_pact }
+						tag = CHI
+					}
+                }
+
+                allow = {
+                    NOT =  {
+						has_country_modifier = sco_pact 
+						has_country_modifier = leave_sco_pact 
+					}
+					OR = {
+						tag = CHI
+						tag = RUS
+						AND = {
+							OR = { is_greater_power = yes part_of_sphere = yes }
+							NOT = { num_of_ports = 1 }
+							continent = asia
+						}
+					}
+					OR = {
+						AND = { 
+							is_greater_power = yes
+							OR = { tag = CHI  relation = { who = CHI value = 50 } }
+						}
+						sphere_owner = {  has_country_modifier = sco_pact }
+					}
+                }
+
+                effect = {
+					random_country = {
+						limit = {
+							tag = THIS
+							NOT = { tag = CHI }
+						}
+						create_alliance = CHI
+					}
+					add_country_modifier = {
+                        name = sco_pact
+						duration = 3650
+	                }
+                }
+        }
+
+        leave_sco_pact = {
+				picture = "sco_pact"
+                potential = {
+					has_country_modifier = sco_pact 
+					NOT = { 
+						tag = CHI
+						alliance_with = CHI
+						sphere_owner = { tag = CHI }
+					}
+                }
+
+                allow = {
+					has_country_modifier = sco_pact 
+					NOT = { 
+						tag = CHI
+						alliance_with = CHI
+						sphere_owner = { tag = CHI }
+					}
+					OR = { 
+						has_unclaimed_cores = yes
+						NOT = { relation = { who = CHI value = 0 } }
+					}
+                }
+
+                effect = {
+					remove_country_modifier = sco_pact
+					add_country_modifier = {
+                        name = leave_sco_pact
+						duration = 3650
+	                }
+                }
+        }		
+}
