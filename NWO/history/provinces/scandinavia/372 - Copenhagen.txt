@@ -5,7 +5,6 @@ trade_goods = grain
 life_rating = 35
 terrain = urban_copenhagen
 colonial = 0
-naval_base = 1
 state_building = {
 	level = 1
 	building = integrated_circuits_factory
@@ -16,11 +15,6 @@ state_building = {
 	building = inorganic_chemicals_factory
 	upgrade = yes
 }
-state_building = {
-	level = 1
-	building = cattle_canned_food_factory
-	upgrade = yes
-}
 1992.1.1 = {
 owner = DEN
 controller = DEN
@@ -28,5 +22,14 @@ add_core = DEN
 life_rating = 35
 railroad = 2
 colonial = 0
-naval_base = 2
+state_building = {
+	level = 2
+	building = financial_services_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = computers_factory
+	upgrade = yes
+}
 }
