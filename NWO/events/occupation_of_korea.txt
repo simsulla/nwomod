@@ -1,0 +1,131 @@
+# The Provisional Government of the Republic of Korea
+
+country_event = {
+	id = 8209001
+
+	title = EVT_8209001_NAME
+	desc = EVT_8209001_DESC
+	picture = "united_korea"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		NOT = { exists = SKO exists = NKO }
+		war = no
+		1624 = { controlled_by = USA } # Seoul
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = EVT_8209001_A
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = EVT_8209001_B 
+		ai_chance = { factor = 0 }
+		set_country_flag = recognized_provincial_gov_korea
+	}
+
+}
+
+### Divided Korea: NKO is released
+
+country_event = {
+	id = 8209002
+
+	title = EVT_8209002_NAME
+	desc = EVT_8209002_DESC
+	picture = "divided_korea"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		NOT = { exists = NKO }
+		1619 = { controlled_by = RUS } # Pyongyang
+		year = 1947
+		has_country_flag = korea_trusteeship
+	}
+
+	mean_time_to_happen = {
+		months = 22
+		modifier = {
+			factor = 0.1
+			SKO = { exists = yes } 
+		}
+	}
+
+	option = {
+		name = EVT_8209002_A
+		ai_chance = { factor = 100 }
+		release_vassal = NKO
+	}
+	
+	option = {
+		name = EVT_8209002_B # We will remain there
+		ai_chance = { factor = 0 }
+	   any_pop = {
+			limit = {
+				culture = korean
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+		   militancy = 10
+		   consciousness = 4
+	   }
+	}
+
+}
+
+### Divided Korea: SKO is released
+
+country_event = {
+	id = 8209003
+
+	title = EVT_8209003_NAME
+	desc = EVT_8209003_DESC
+	picture = "divided_korea"
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		NOT = { exists = SKO }
+		1624 = { controlled_by = USA } # Seoul
+		has_country_flag = korea_trusteeship # 1947
+	}
+
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.1
+			has_country_flag = recognized_provincial_gov_korea
+		}
+	}
+
+	option = {
+		name = EVT_8209003_A
+		ai_chance = { factor = 100 }
+		release_vassal = SKO
+	}
+	
+	option = {
+		name = EVT_8209003_B # We will remain there
+		ai_chance = { factor = 0 }
+	   any_pop = {
+			limit = {
+				culture = korean
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+		    militancy = 10
+		    consciousness = 4
+	   }
+	}
+
+}

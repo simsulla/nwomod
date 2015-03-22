@@ -1,0 +1,29 @@
+political_decisions = {
+
+	korea_trusteeship = {
+			picture = "korea_trusteeship"
+			potential = {
+				OR = {
+					tag = USA
+					tag = RUS
+				}
+				NOT = { has_country_flag = korea_trusteeship }
+				NOT = { has_country_flag = recognized_provincial_gov_korea }
+			}
+
+			allow = {
+				OR = {
+					tag = USA
+					tag = RUS
+				}
+				NOT = { has_country_flag = recognized_provincial_gov_korea }
+				war = no
+				year = 1947
+			}
+
+			effect = {
+					set_country_flag = korea_trusteeship
+			}
+
+	}
+}
