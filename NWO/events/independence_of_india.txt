@@ -1,0 +1,166 @@
+# Interim Government of India
+country_event = {
+	id = 8214010
+
+	title = EVT_8214010_NAME
+	desc = EVT_8214010_DESC
+	picture = "independence_of_india"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		NOT = { exists = HND }
+		war = no
+		1236 = { controlled_by = ENG } # Delhi
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = EVT_8214010_A 
+		ai_chance = { factor = 0 }
+		prestige = -2 
+		any_pop = {
+			limit = {
+				culture = indian_muslim
+			}
+			consciousness = 2
+			militancy = 5
+		}
+		country_event = { id = 8214011 days = 365 } 
+	}
+	
+	option = {
+		name = EVT_8214010_B 
+		any_pop = {
+			limit = {
+				culture = indian
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		ai_chance = { factor = 100 }
+		country_event = { id = 8214011 days = 365 } 
+	}
+
+	option = {
+		name = EVT_8214010_C
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				OR = { culture = indian culture = indian_muslim }
+			}
+			militancy = 10
+		}
+		add_country_modifier = { name = denied_independence duration = -1 }
+	}
+
+}
+
+country_event = {
+	id = 8214011
+
+	title = EVT_8214011_NAME
+	desc = EVT_8214011_DESC
+	picture = "ali_jinnah_negotiating"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_8214011_A 
+		ai_chance = { factor = 100 }
+		country_event = { id = 8214012 days = 30 } 
+	}
+	
+	option = {
+		name = EVT_8214011_B
+		ai_chance = { factor = 0 }
+		badboy = 1.0
+		any_pop = {
+			limit = {
+				culture = indian
+			}
+			militancy = 10
+		}
+		add_country_modifier = { name = denied_independence duration = -1 }
+	}
+
+}
+
+country_event = {
+	id = 8214012
+
+	title = EVT_8214012_NAME
+	desc = EVT_8214012_DESC
+	picture = "independence_of_india"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_8214012_A 
+		ai_chance = { factor = 100 }
+		prestige = -2 
+		any_pop = {
+			limit = {
+				culture = indian_muslim
+			}
+			consciousness = 2
+			militancy = 10
+		}
+		country_event = { id = 8214013 days = 30 } 
+	}
+	
+	option = {
+		name = EVT_8214012_B 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = indian
+			}
+			consciousness = 2
+			militancy = 10
+		}
+		country_event = { id = 8214010 days = 365 } 
+	}
+
+}
+
+country_event = {
+	id = 8214013
+
+	title = EVT_8214013_NAME
+	desc = EVT_8214013_DESC
+	picture = "independence_of_india"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_8214013_A 
+		ai_chance = { factor = 100 }
+		prestige = -10
+		release_vassal = HND
+		release_vassal = PAK
+	}
+	
+	option = {
+		name = EVT_8214013_B 
+		ai_chance = { factor = 0 }
+		prestige = -20
+		any_pop = {
+			limit = {
+				culture = indian_muslim
+			}
+			consciousness = 2
+			militancy = 10
+		}
+		any_owned = {
+			limit = { is_core = PAK }
+			add_core = HND
+		}
+		release_vassal = HND
+	}
+
+}
