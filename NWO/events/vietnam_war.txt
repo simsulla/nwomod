@@ -23,7 +23,7 @@ country_event = {
 
 	option = {
 		name = EVT_8228001_A # South Vietnam Independence
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 0 }
 		prestige = -20 
 		release = SVI
 		release_vassal = CAM diplomatic_influence = { who = CAM value = -100 }
@@ -32,7 +32,7 @@ country_event = {
 	
 	option = {
 		name = EVT_8228001_B # Leave Vietnam to it's faith
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 100 }
 		USA = { country_event = 8228002 }
 		release_vassal = CAM diplomatic_influence = { who = CAM value = -100 }
 		release_vassal = LUA diplomatic_influence = { who = LUA value = -100 }

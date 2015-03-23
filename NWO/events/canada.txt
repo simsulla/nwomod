@@ -1,0 +1,40 @@
+country_event = {
+	id = 8002621
+
+	title = EVT_8002621_NAME
+	desc = EVT_8002621_DESC
+	picture = "newfoundland"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		74 = { controlled_by = ENG }
+		NOT = { 74 = { has_province_modifier = nationalist_agitation } }
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = EVT_8002621_A # Newfoundland Responsible government
+		ai_chance = { factor = 0 }
+		prestige = 5
+		release_vassal = NFL
+	}
+	
+	option = {
+		name = EVT_8002621_B # Integrate with Canada
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = EVT_8002621_C # stay integrated part of the empire
+		ai_chance = { factor = 0 }
+		prestige = -5
+		74 = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+	}
+
+}

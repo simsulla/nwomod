@@ -1,0 +1,41 @@
+country_event = {
+	id = 8011501
+
+	title = EVT_8011501_NAME
+	desc = EVT_8011501_DESC
+	picture = "philippines_and_usa"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_our_vassal = PHI
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = EVT_8011501_A # Philippine Independence
+		ai_chance = { factor = 100 }
+		prestige = 5
+		release_vassal = PHI
+	}
+	
+	option = {
+		name = EVT_8011501_B # Keep our domination of the Philippines
+		any_pop = {
+			limit = {
+				culture = filipino
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}
