@@ -1,0 +1,92 @@
+# Sri Lanka
+country_event = {
+	id = 8028301
+
+	title = EVT_8028301_NAME
+	desc = EVT_8028301_DESC
+	picture = "independence_of_india"
+
+	trigger = {
+		tag = ENG
+		NOT = { exists = SRL }
+		war = no
+		1321 = { controlled_by = ENG } # Colombo
+	}
+
+	mean_time_to_happen = {
+		months = 90
+		modifier = { 
+			NOT = { year = 1947 }
+			factor = 0.1
+		}
+		modifier = { 
+			1321 = { average_militancy = 5 } # Colombo
+			factor = 0.1
+		}
+	}
+
+	option = {
+		name = EVT_8028301_A # Outline the future for Sri Lanka as a British Dominion
+		ai_chance = { factor = 0 }
+		country_event = { id = 8028302 days = 365 } 
+	}
+
+	option = {
+		name = EVT_8028301_B
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = singalese
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			militancy = 10
+		}
+		add_country_modifier = { name = denied_independence duration = -1 }
+	}
+
+}
+
+country_event = {
+	id = 8028302
+
+	title = EVT_8028302_NAME
+	desc = EVT_8028302_DESC
+	picture = "independence_of_india"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_8028302_A #  Dominion
+		ai_chance = { factor = 100 }
+		prestige = -2 
+		any_pop = {
+			limit = {
+				culture = singalese
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			consciousness = 2
+			militancy = 10
+		}
+		release_vassal = SRL
+		SRL = { government = hms_government }
+		remove_country_modifier = denied_independence
+	}
+	
+	option = {
+		name = EVT_8028302_B # Go back on our promise
+		ai_chance = { factor = 0 }
+		badboy = 0.1
+		any_pop = {
+			limit = {
+				culture = burmese
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			militancy = 10
+		}
+		add_country_modifier = { name = denied_independence duration = -1 }
+	}
+
+}
