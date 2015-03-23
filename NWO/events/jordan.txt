@@ -1,0 +1,39 @@
+country_event = {
+	id = 8007901
+
+	title = EVT_8007901_NAME
+	desc = EVT_8007901_DESC
+	picture = "king_abdullah"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_our_vassal = JOR
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+
+	option = {
+		name = EVT_8007901_A # Jordan Independence
+		ai_chance = { factor = 100 }
+		prestige = 5
+		release_vassal = JOR diplomatic_influence = { who = JOR value = -100 }
+	}
+	
+	option = {
+		name = EVT_8007901_B # Keep our domination of the Trans Jordan
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 2
+			militancy = 5
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}
