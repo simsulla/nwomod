@@ -1,0 +1,141 @@
+country_event = {
+	id = 8008601
+
+	title = EVT_8008601_NAME
+	desc = EVT_8008601_DESC
+	picture = "king_idris_of_libya"
+
+	trigger = {
+		OR = { 
+			AND = { tag = ENG 1731 = { controlled_by = ENG } }  # Tripoli
+			AND = { tag = FRA 1743 = { controlled_by = FRA }  } # Fezzan / Ghat
+		}
+		NOT = { has_country_flag = king_idris_of_libya }
+		NOT = { exists = TRI }
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = EVT_8008601_A 
+		ai_chance = { factor = 100 }
+		any_country = {
+			limit = { primary_culture = sunni_arab government = absolute_monarchy }
+			relation = { who = THIS value = 50 }
+		}
+		prestige = -2
+		set_country_flag = king_idris_of_libya
+	}
+	
+	option = {
+		name = EVT_8008601_B 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 1
+			militancy = 2
+		}
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = -50 }
+		}
+		badboy = 0.5
+	}
+
+}
+
+country_event = {
+	id = 8008602
+
+	title = EVT_8008602_NAME
+	desc = EVT_8008602_DESC
+	picture = "king_idris_of_libya"
+
+	trigger = {
+		tag = ENG
+		has_country_flag = king_idris_of_libya
+		NOT = { exists = TRI }
+		war = no
+		1731 = { controlled_by = ENG }
+	}
+
+	mean_time_to_happen = {
+		months = 60 
+	}
+
+	option = {
+		name = EVT_8008602_A 
+		ai_chance = { factor = 100 }
+		badboy = -1
+		release = TRI
+		diplomatic_influence = { who = TRI value = 100 }
+	}
+	
+	option = {
+		name = EVT_8008602_B 
+		ai_chance = { factor = 0 }
+		clr_country_flag = king_idris_of_libya
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 1
+			militancy = 2
+		}
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = -50 }
+		}
+		badboy = 0.5
+	}
+
+}
+
+country_event = {
+	id = 8008603
+
+	title = EVT_8008603_NAME
+	desc = EVT_8008603_DESC
+	picture = "king_idris_of_libya"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = { has_country_flag = king_idris_of_libya }
+		exists = TRI
+		war = no
+		1743 = { controlled_by = FRA }
+	}
+
+	option = {
+		name = EVT_8008603_A 
+		ai_chance = { factor = 100 }
+		badboy = -1
+		release = TRI
+		diplomatic_influence = { who = TRI value = 100 }
+		clr_country_flag = king_idris_of_libya
+	}
+	
+	option = {
+		name = EVT_8008603_B 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 1
+			militancy = 2
+		}
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = -50 }
+		}
+	}
+
+}
