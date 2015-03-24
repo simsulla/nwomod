@@ -1,0 +1,110 @@
+#
+country_event = {
+	id = 8005301
+
+	title = EVT_8005301_NAME
+	desc = EVT_8005301_DESC
+	picture = "haile_selassie"
+
+	trigger = {
+		tag = ENG
+		NOT = { exists = ERI }
+		exists = ETH
+		war = no
+		1848 = { controlled_by = ENG } # Assmara
+		1848 = { is_core = ETH }
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	option = {
+		name = EVT_8005301_A 
+		ai_chance = { factor = 100 }
+		prestige = -2
+		any_pop = {
+			limit = {
+				OR = { culture = tigre culture = afar }
+			}
+			consciousness = 2
+			militancy = 2
+		}
+		release = ERI
+		ERI = { government = hms_government  }
+		ETH = { create_vassal = ERI }
+	}
+	
+	option = {
+		name = EVT_8005301_B 
+		ai_chance = { factor = 0 }
+		relation = { who = ETH value = -100 }
+		diplomatic_influence = { who = ETH value = -100 }
+		release_vassal = ERI
+	}
+
+	option = {
+		name = EVT_8005301_C
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				OR = { culture = tigre culture = afar }
+			}
+			militancy = 10
+		}
+		badboy = 10
+		add_country_modifier = { name = denied_independence duration = 365 }
+	}
+
+}
+
+country_event = {
+	id = 8005302
+
+	title = EVT_8005302_NAME
+	desc = EVT_8005302_DESC
+	picture = "eritrea"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ETH
+		exists = ERI
+		is_our_vassal = ERI
+		war = no
+		1848 = { controlled_by = ERI } # Assmara
+		1848 = { is_core = ETH }
+		ERI = { ai = no }
+	}
+
+	mean_time_to_happen = {
+		months = 48 # TODO depend on ETH reforms
+	}
+
+	option = {
+		name = EVT_8005302_A 
+		ai_chance = { factor = 100 }
+		badboy = 4
+		any_pop = {
+			limit = {
+				OR = { culture = tigre culture = tigray }
+			}
+			consciousness = 2
+			militancy = 10
+		}
+		ERI = {annex_to = THIS }
+	}
+	
+	option = {
+		name = EVT_8005302_B 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				OR = { culture = tigre culture = tigray }
+			}
+			consciousness = 2
+			militancy = 5
+		}
+	}
+
+}
