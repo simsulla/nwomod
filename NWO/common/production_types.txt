@@ -414,7 +414,7 @@ paper_factory = {
 	output_goods = paper 
 	value = 80
 	bonus = {
-		trigger = { trade_goods_in_state = cotton }
+		trigger = { trade_goods_in_state = timber }
 		value = 0.25
 	}
 }
@@ -895,7 +895,7 @@ automobiles_factory = {
 	output_goods = automobiles 
 	value = 60
 	bonus = {
-		trigger = { has_building = steel_chemicals_factory }
+		trigger = { has_building = steel_factory }
 		value = 0.125
 	}
 	bonus = {
@@ -1010,7 +1010,7 @@ weaponry_factory = {
 	output_goods = weaponry 
 	value = 30.00
 	bonus = {
-		trigger = { has_building = computers_factory }
+		trigger = { has_building = automobiles_factory }
 		value = 0.125
 	}
 	bonus = {
