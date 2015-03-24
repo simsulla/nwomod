@@ -1,0 +1,41 @@
+political_decisions = {
+
+	support_zionism = {
+		picture = "support_zionism"
+		potential = {
+			tag = USA
+			ISR = { exists = no }
+			919 = { owned_by = ENG } 
+			NOT = { 
+				has_country_flag = support_zionism 
+				ENG = { has_country_modifier = stock_market_crash } 
+			}
+		}
+
+		allow = {
+ 		    tag = USA
+			is_vassal = no
+			part_of_sphere = no
+			NOT = {
+				has_country_flag = support_zionism
+			}
+			OR = {
+				AND = {
+					year = 1947
+					ai = yes
+				}
+				AND = {
+					ai = no
+					rank = 1
+					relation =  { who = ENG value = 0 } 
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = support_zionism
+			ENG = { country_event = 8007601 }
+		}
+
+	}
+}

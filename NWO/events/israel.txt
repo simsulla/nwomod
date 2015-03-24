@@ -1,0 +1,185 @@
+# Jewish Resistance Movement
+country_event = {
+	id = 8007601
+
+	title = EVT_8007601_NAME
+	desc = EVT_8007601_DESC
+	picture = "palestine_civil_war_1948"
+
+	is_triggered_only = yes # ENG
+	
+	option = {
+		name = EVT_8007601_A 
+		ai_chance = { factor = 100 }
+		relation = { who = USA value = 10 }
+		prestige = -2
+		country_event = { id = 8007602 days = 335 } 
+	}
+	
+	option = {
+		name = EVT_8007601_B 
+		ai_chance = { factor = 0 }
+		relation = { who = USA value = -50 }
+		add_country_modifier =  { name = stock_market_crash duration = 365 }
+		USA = { clr_country_flag = support_zionism }
+	}
+	
+	option = {
+		name = EVT_8007601_C 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 1
+			militancy = 2
+		}
+		any_pop = {
+			limit = {
+				OR = { culture = jewish culture =  haredim_jewish }
+				location = { province_id = 919 }
+			}
+			reduce_pop = 1.1
+		}
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = -50 }
+		}
+		badboy = -0.5
+		add_country_modifier =  { name = stock_market_crash duration = 365 }
+		USA = { clr_country_flag = support_zionism }
+	}	
+}
+
+# United Nations Partition Plan for Palestine 
+country_event = {
+	id = 8007602
+
+	title = EVT_8007602_NAME
+	desc = EVT_8007602_DESC
+	picture = "un_parition_of_palestine"
+
+	is_triggered_only = yes # ENG
+	
+	option = {
+		name = EVT_8007602_A 
+		ai_chance = { factor = 100 }
+		prestige = -2
+		release = ISR
+		USA = { country_event = 8007603 }
+		release = PAL
+		PAL = { country_event = 8007604 }
+		end_military_access = EGY
+	}
+	
+	option = {
+		name = EVT_8007602_B
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 1
+			militancy = 2
+		}
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = -10 }
+		}
+		badboy = -2
+		add_country_modifier =  { name = stock_market_crash duration = 365 }
+	}
+	
+	option = {
+		name = EVT_8007602_C
+		ai_chance = { factor = 0 }
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = 20 }
+		}
+		badboy = -2
+		add_country_modifier =  { name = stock_market_crash duration = 365 }
+		release = PAL
+		PAL = { country_event = 8007604 }
+	}	
+}
+
+country_event = {
+	id = 8007603
+
+	title = EVT_8007603_NAME
+	desc = EVT_8007603_DESC
+	picture = "independence_of_israel"
+
+	is_triggered_only = yes # USA
+	
+	immediate = {
+		set_country_flag = support_zionism 
+	}
+	
+	option = {
+		name = EVT_8007603_A 
+		ai_chance = { factor = 100 }
+		prestige = 2
+		diplomatic_influence = { who = ISR value = 200 }
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = -10 }
+		}
+		ISR = { weaponry = 100 small_arms = 100 }
+	}
+	
+	option = {
+		name = EVT_8007603_B
+		ai_chance = { factor = 0 }
+		add_country_modifier = { name = ruling_party_scandal duration = 1000 }
+	}
+	
+}
+
+country_event = {
+	id = 8007604
+
+	title = EVT_8007604_NAME
+	desc = EVT_8007604_DESC
+	picture = "independence_of_palestine"
+
+	is_triggered_only = yes # PAL
+	
+	immediate = {
+		release = ISR 
+	}
+	
+	option = {
+		name = EVT_8007604_A 
+		ai_chance = { factor = 100 }
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = 200 }
+		}
+		create_alliance = JOR
+		create_alliance = EGY
+		war = {
+			target = ISR
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		USA = { country_event = 8007603 }
+	}
+	
+	option = {
+		name = EVT_8007604_B
+		prestige = -20
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 1
+			militancy = 10
+		}		
+		ai_chance = { factor = 0 }
+		USA = { country_event = 8007603 }		
+	}
+	
+}
