@@ -1,0 +1,34 @@
+
+country_event = {
+	id = 8005001
+
+	title = EVT_8005001_NAME
+	desc = EVT_8005001_DESC
+	picture = "nasser_in_crowd"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVT_8005001_A 
+		ai_chance = { factor = 100 }
+		FROM = {
+			relation = { who = THIS value = -10 }
+		}
+		prestige = -10
+		release = EGY
+	}
+	
+	option = {
+		name = EVT_8005001_B 
+		ai_chance = { factor = 0 }
+		FROM = {
+			add_casus_belli = {
+				target = THIS
+				type = acquire_core_state
+				months = 12
+			}		
+			relation = { who = THIS value = -200 }
+		}
+		badboy = 0.5
+	}
+}

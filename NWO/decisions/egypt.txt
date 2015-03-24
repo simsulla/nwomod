@@ -1,0 +1,38 @@
+political_decisions = {
+
+	claim_the_suez = {
+		picture = "claim_the_suez"
+		potential = {
+			tag = EGY
+			NOT = { 
+				has_country_flag = claim_the_suez 
+				1755 = { owned_by = ENG } 
+			}
+		}
+
+		allow = {
+ 		    tag = EGY
+			is_vassal = no
+			part_of_sphere = no
+			NOT = {
+				has_country_flag = claim_the_suez
+			}
+			OR = {
+				AND = {
+					year = 1953
+					ai = yes
+				}
+				AND = {
+					ai = no
+					relation =  { who = ENG value = 150 } 
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = claim_the_suez
+			ENG = { country_event = 8005001 }
+		}
+
+	}
+}
