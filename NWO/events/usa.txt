@@ -1,0 +1,45 @@
+
+country_event = {
+	id = 8015801
+
+	title = EVT_8008601_NAME
+	desc = EVT_8008601_DESC
+	picture = "us_congress"
+
+	trigger = {
+		tag = USA
+		NOT = { exists = PUR }
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = {
+		name = EVT_8008601_A 
+		ai_chance = { factor = 100 }
+		release_vassal = PUR
+		prestige = 2
+	}
+	
+	option = {
+		name = EVT_8008601_B 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				OR = { culture = mestizo culture = white_spanish culture = black_spanish }
+			}
+			consciousness = 1
+		}
+		any_country = {
+			limit = { 
+				OR = { 
+					primary_culture = mestizo primary_culture = white_spanish primary_culture = black_spanish } 
+				}
+			relation = { who = THIS value = -5 }
+		}
+		badboy = 0.5
+	}
+
+}

@@ -1,0 +1,32 @@
+country_event = {
+	id = 8005701
+
+	title = EVT_8005701_NAME
+	desc = EVT_8005701_DESC
+	picture = "pondicherry"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVT_8005701_A 
+		ai_chance = { factor = 100 }
+		FROM = {
+			relation = { who = THIS value = 100 }
+		}
+		prestige = -2
+	}
+	
+	option = {
+		name = EVT_8005701_B 
+		ai_chance = { factor = 0 }
+		FROM = {
+			add_casus_belli = {
+				target = THIS
+				type = acquire_core_state
+				months = 12
+			}		
+			relation = { who = THIS value = -200 }
+		}
+		badboy = 0.5
+	}
+}
