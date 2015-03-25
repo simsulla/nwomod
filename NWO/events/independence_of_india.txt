@@ -140,6 +140,11 @@ country_event = {
 	option = {
 		name = EVT_8214013_A 
 		ai_chance = { factor = 100 }
+		any_pop = {
+			limit = { OR = { culture = indian culture = indian_muslim } }
+			consciousness = 2
+			militancy = -10
+		}		
 		prestige = -10
 		release = BHU
 		release = JAK
@@ -156,8 +161,15 @@ country_event = {
 				culture = indian_muslim
 			}
 			consciousness = 2
-			militancy = 10
+			militancy = 5
 		}
+		any_pop = {
+			limit = {
+				culture = indian
+			}
+			consciousness = 2
+			militancy = -10
+		}		
 		any_owned = {
 			limit = { is_core = PAK }
 			add_core = HND
