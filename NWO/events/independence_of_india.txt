@@ -141,11 +141,10 @@ country_event = {
 		name = EVT_8214013_A 
 		ai_chance = { factor = 100 }
 		prestige = -10
-		release = JAK
-		release = HND
-		release = PAK
-		release = NEP
 		release = BHU
+		release = JAK
+		release_vassal = HND
+		release_vassal = PAK
 	}
 	
 	option = {
@@ -163,9 +162,9 @@ country_event = {
 			limit = { is_core = PAK }
 			add_core = HND
 		}
-		release = HND
-		release = NEP
+		release_vassal = HND
 		release = BHU
+		release = JAK
 	}
 
 }
