@@ -12,6 +12,10 @@ country_event = {
 	mean_time_to_happen = {
 		months = 1
         modifier = {
+            factor = 0
+            NOT = { year = 1992 } 
+        }
+        modifier = {
             factor = 3
             year = 1993 
         }
@@ -57,7 +61,7 @@ country_event = {
 		clr_country_flag = world_bank
 		add_country_modifier = {
 			name = stock_market_crash
-			duration = 740
+			duration = 1750
 		}
 	}
 }

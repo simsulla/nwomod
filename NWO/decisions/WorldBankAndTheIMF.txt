@@ -94,11 +94,31 @@ political_decisions = {
 	interest_sanctions = {
 		picture = "un_sanctions"
 		potential = {
+			ai = no
 			OR = { 
 				has_country_flag = world_bank
 				has_country_flag = the_imf
 			}
-			ai = no
+			any_greater_power = { 
+				NOT = { tag = THIS }
+				OR = { 
+					has_country_flag = world_bank
+					has_country_flag = the_imf
+				}
+				relation = {
+					who = THIS
+					value = 50
+				}
+			}
+			any_greater_power = { 
+				NOT = {
+					has_country_modifier = interest_sanctions
+					relation = {
+						who = THIS
+						value = 0
+					}
+				}
+			}
 		}
 		allow = {
 			any_greater_power = { 
@@ -141,47 +161,4 @@ political_decisions = {
 		}
 	
 	}
-	
-	remove_interest_sanctions = {
-		picture = "un_sanctions"
-		potential = {
-			OR = { 
-				has_country_flag = world_bank
-				has_country_flag = the_imf
-			}
-			ai = no
-		}
-		allow = {
-			any_greater_power = { 
-				NOT = { tag = THIS }
-				OR = { 
-					has_country_flag = world_bank
-					has_country_flag = the_imf
-				}
-				relation = {
-					who = THIS
-					value = 100
-				}
-			}
-			any_greater_power = { 
-				has_country_modifier = interest_sanctions
-				relation = {
-					who = THIS
-					value = 50
-				}
-			}
-		}
-		effect = {
-			any_greater_power = { 
-				limit = {
-					has_country_modifier = interest_sanctions
-					relation = {
-						who = THIS
-						value = 50
-					}
-				}
-			}
-			remove_country_modifier = interest_sanctions
-		}
-	}	
 }
