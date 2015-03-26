@@ -1,2 +1,167 @@
 
 # Arabian Event to Inherit
+
+country_event = {
+	id = 111011929
+	title = "EVT_111011929_NAME"
+	desc = "EVT_111011929_DESC"
+	picture = "independence_of_palestine"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_111011929_A"
+		add_country_modifier = {
+			name = denied_independence
+			duration = 1750
+		}
+		any_country = {
+			limit = { 
+				tag = TUN
+				MOR = { exists = yes is_vassal = yes primary_culture = sunni_arab }
+			}
+			MOR = { country_event = 111011929 }
+		}
+	}
+}
+
+country_event = {
+	id = 111011930
+	title = "EVT_111011930_NAME"
+	desc = "EVT_111011930_DESC"
+	picture = "arab_league"
+
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			primary_culture = sunni_arab
+			primary_culture = shia_arab
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			ai = no
+			factor = 0.5
+		}			
+	}
+	
+	option = {
+		name = "EVT_111011930_A"
+		set_global_flag = arab_league
+	}
+}
+
+country_event = {
+	id = 111011931
+	title = "EVT_111011931_NAME"
+	desc = "EVT_111011931_DESC"
+	picture = "tanger_protocol"
+
+	trigger = {
+		primary_culture = sunni_arab
+		has_country_modifier = denied_independence
+		is_vassal = yes
+		overlord = { NOT = { has_country_modifier = xal_ambition } }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = { 
+			factor = 0.9
+			tag = MOR
+		}
+		modifier = { 
+			factor = 0.5
+			tag = TUN
+		}
+	}
+	
+	option = {
+		name = "EVT_111011931_A"
+		ai_chance = { factor = 100 }
+		overlord = { country_event = 111011932 }
+	}
+	
+	option = {
+		name = "EVT_111011931_B"
+		ai_chance = { factor = 0 }
+		overlord = { 
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			country_event = 111011932
+		}
+	}
+	
+	option = {
+		name = "EVT_111011931_C"
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 2
+			militancy = 5
+		}
+	}
+	
+	
+}
+
+country_event = {
+	id = 111011932
+	title = "EVT_111011932_NAME"
+	desc = "EVT_111011932_DESC"
+	picture = "arab_independance"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_111011932_A"
+		ai_chance = { factor = 0 }
+		war = {
+			target = FROM
+			attacker_goal = {
+                casus_belli = make_puppet
+			}
+			defender_goal = {
+                casus_belli = become_independent
+			}
+		}
+	}
+	option = {
+		name = "EVT_111011932_B"
+		ai_chance = { factor = 0 }
+		add_casus_belli = {
+	        target = FROM
+			type = make_puppet
+			months = 12
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -200
+		}		
+		relation = {
+			who = FROM
+			value = -100
+		}		
+	}
+	
+	option = {
+		name = "EVT_111011932_C"
+		ai_chance = { factor = 100 }
+		relation = {
+			who = FROM
+			value = -20
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -20
+		}		
+	}
+}
+

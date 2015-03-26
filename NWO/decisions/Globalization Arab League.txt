@@ -1,0 +1,102 @@
+political_decisions = {
+	xal_ambition = {
+		picture = "xal_ambition"
+		potential = {
+			has_global_flag = arab_league
+			OR = {
+				primary_culture = sunni_arab
+				primary_culture = shia_arab
+			}
+			NOT = { has_country_modifier = xal_ambition }
+		}
+		allow = {
+			is_vassal = no
+			marshall_plan = 1
+			election = no
+			war = no
+		}
+		effect = {
+			add_country_modifier = { name = xal_ambition duration = 1750 }	
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = jingoism
+					factor = 3
+				}
+			}
+			any_neighbor_country = {
+				limit = { 
+					is_vassal = yes
+					overlord = { NOT = { has_country_modifier = xal_ambition } }
+					primary_culture = sunni_arab
+					NOT = { has_country_modifier = xal_ambition }
+				}
+				country_event = 111011929
+			}
+		}
+	}
+
+	# Arab League as a Freetrade area
+	xal_liberal_ambition = {
+		picture = "xal_liberal_ambition"
+		potential = {
+			has_country_flag = trade_block_ambition
+			has_country_modifier = xal_ambition
+			NOT = { has_global_flag = xal_liberal_ambition }
+		}
+		allow = {
+			war = no
+			election = yes
+			is_greater_power = yes 
+			trust_busting = 1
+			NOT = { has_country_modifier = chair_ambitions }
+			OR = {
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
+			}
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+		}
+		effect = {
+			prestige = 15
+			clr_global_flag = xal_republican_ambition
+			set_global_flag = xal_liberal_ambition
+			add_country_modifier = { name = chair_ambitions duration = 1750 }			
+		}
+	}
+	
+	xal_republican_ambition = {
+		picture = "xal_republican_ambition"
+		potential = {
+			has_country_modifier = xal_ambition
+			NOT = { has_global_flag = xal_republican_ambition }
+		}
+		allow = {
+			war = no
+			election = yes
+			is_secondary_power = yes 
+			NOT = { has_country_modifier = chair_ambitions }
+			third_way = 1 
+			OR = {
+				ruling_party_ideology = conservative
+				ruling_party_ideology = populist
+			}
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+		}
+		effect = {
+			prestige = 15
+			clr_global_flag = xal_liberal_ambition
+			set_global_flag = xal_republican_ambition
+			add_country_modifier = { name = chair_ambitions duration = 1750 }			
+		}
+	}	
+	
+}
