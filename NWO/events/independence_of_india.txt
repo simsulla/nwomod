@@ -146,10 +146,10 @@ country_event = {
 			militancy = -10
 		}		
 		prestige = -10
+		release = HND
+		release = PAK
 		release = BHU
 		release = JAK
-		release_vassal = HND
-		release_vassal = PAK
 	}
 	
 	option = {
@@ -174,9 +174,81 @@ country_event = {
 			limit = { is_core = PAK }
 			add_core = HND
 		}
-		release_vassal = HND
+		release = HND
 		release = BHU
 		release = JAK
+	}
+
+}
+
+country_event = {
+	id = 8214014
+
+	title = EVT_8214014_NAME
+	desc = EVT_8214014_DESC
+	picture = "independence_of_india"
+
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = JAK
+		is_vassal = no
+		HND = { exists = yes }
+		OR = { government = hms_government government = absolute_monarchy }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = EVT_8214014_A # join India
+		HND = {
+			inherit = THIS
+		}
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = EVT_8214014_B # remain independent
+		relation = { who = HND value = -200 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+country_event = {
+	id = 8214015
+
+	title = EVT_8214015_NAME
+	desc = EVT_8214015_DESC
+	picture = "independence_of_india"
+
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = JAK
+		is_vassal = no
+		PAK = { exists = yes }
+		NOT = { OR = { government = hms_government government = absolute_monarchy } }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = EVT_8214015_A # join Pakistan
+		PAK = {
+			inherit = THIS
+		}
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = EVT_8214015_B # remain independent
+		relation = { who = PAK value = -200 }
+		ai_chance = { factor = 0 }
 	}
 
 }
