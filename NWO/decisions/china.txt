@@ -1,0 +1,84 @@
+political_decisions = {
+
+	the_return_of_hong_kong = {
+		picture = "the_return_of_hong_kong"
+		potential = {
+			OR = { tag = CHI tag = TAI }
+			NOT = { has_country_flag = the_return_of_hong_kong }
+			OR = {
+				1496 = { owned_by = ENG } 
+				HKG = { vassal_of = ENG }
+			}
+			OR = {
+				relation =  { who = ENG value = 50 } 
+				year = 1992
+			}
+		}
+
+		allow = {
+			OR = { tag = CHI tag = TAI }
+			NOT = { has_country_flag = the_return_of_hong_kong }
+			OR = { 1496 = { owned_by = ENG } HKG = { vassal_of = ENG } }
+			part_of_sphere = no
+			is_vassal = no
+			OR = {
+				year = 1997
+				AND = {
+					ai = no
+					relation =  { who = ENG value = 100 } 
+					rank = 2
+					NOT = { ENG = { rank = 2 } }
+				}
+			}
+		}
+
+		effect = {
+			TAI = { set_country_flag = the_return_of_hong_kong }
+			CHI = { set_country_flag = the_return_of_hong_kong }
+			ENG = { country_event = 8002801 }
+		}
+
+	}
+	
+	the_return_of_macao = {
+		picture = "the_return_of_macao"
+		potential = {
+			OR = { tag = CHI tag = TAI }
+			NOT = { has_country_flag = the_return_of_macao }
+			OR = { 1498 = { owned_by = POR } MCA = { vassal_of = POR } }
+			OR = {
+				relation =  { who = POR value = 0 } 
+				has_country_flag = the_return_of_hong_kong
+			}
+		}
+
+		allow = {
+			OR = { tag = CHI tag = TAI }
+			NOT = { has_country_flag = the_return_of_macao }
+			OR = { 1498 = { owned_by = POR } MCA = { vassal_of = POR } }
+			part_of_sphere = no
+			is_vassal = no
+			OR = {
+				year = 1997
+				AND = {
+					ai = no
+					OR = {
+						relation =  { who = POR value = 100 } 
+						has_country_flag = the_return_of_hong_kong
+					}
+					rank = 4
+					NOT = { POR = { rank = 4 } }
+				}
+			}
+		}
+
+		effect = {
+			TAI = { set_country_flag = the_return_of_macao }
+			CHI = { set_country_flag = the_return_of_macao }
+			POR = { country_event = 8002802 }
+		}
+
+	}	
+	
+
+}

@@ -84,3 +84,115 @@ country_event = {
 	}
 }
 
+# Hong Kong / Macao
+country_event = {
+	id = 8002801
+	title = "EVT_8002801_NAME"
+	desc = "EVT_8002801_DESC"
+	picture = "chinese_hongkong"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_8002801_A"
+		ai_chance = {
+			factor = 100
+		}
+		prestige = -2
+		release = HKG
+		FROM = { country_event = 8002803 }
+	}
+
+	option = {
+		name = "EVT_8002801_B"
+		ai_chance = {
+			factor = 0
+		}
+		prestige = 10
+		relation = {
+			who = FROM
+			value = -200
+		}
+		leave_alliance = FROM
+		FROM = { country_event = 8002804 }
+	}
+
+}
+
+country_event = {
+	id = 8002802
+	title = "EVT_8002802_NAME"
+	desc = "EVT_8002802_DESC"
+	picture = "macao"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_8002802_A"
+		ai_chance = {
+			factor = 100
+		}
+		prestige = -2
+		release = MCA
+		FROM = { country_event = 8002803 } # accept autonomy
+	}
+
+	option = {
+		name = "EVT_8002802_B"
+		ai_chance = {
+			factor = 0
+		}
+		prestige = 2
+		relation = {
+			who = FROM
+			value = -200
+		}
+		leave_alliance = FROM
+		FROM = { country_event = 8002804 } # refuse
+	}
+
+}
+
+country_event = {
+	id = 8002803
+	title = "EVT_8002803_NAME"
+	desc = "EVT_8002803_DESC"
+	picture = "chinese_hongkong"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_8002803_A"
+		create_vassal = HKG 
+		create_vassal = MCA
+		relation = {
+			who = FROM
+			value = 20
+		}
+	}
+
+}
+
+country_event = {
+	id = 8002804
+	title = "EVT_8002804_NAME"
+	desc = "EVT_8002804_DESC"
+	picture = "chinese_intervention_in_korea"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_8002804_A" # demand unconditional return
+		ai_chance = {
+			factor = 0
+		}
+		leave_alliance = FROM
+		add_casus_belli = {
+			target = FROM
+			type = acquire_core_state
+			months = 12
+		}
+		relation = { who = FROM value = -200 }
+	}
+
+}
