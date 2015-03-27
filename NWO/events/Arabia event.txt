@@ -82,7 +82,10 @@ country_event = {
 	option = {
 		name = "EVT_111011931_A"
 		ai_chance = { factor = 100 }
-		overlord = { country_event = 111011932 }
+		overlord = { 
+			leave_alliance = THIS
+			country_event = 111011932 
+		}
 	}
 	
 	option = {
@@ -93,6 +96,7 @@ country_event = {
 				who = THIS
 				value = -200
 			}
+			leave_alliance = THIS
 			country_event = 111011932
 		}
 	}
@@ -120,16 +124,22 @@ country_event = {
 
 	is_triggered_only = yes
 	
+	immediate = {
+		release_vassal = FROM 
+	}
+	
 	option = {
 		name = "EVT_111011932_A"
 		ai_chance = { factor = 0 }
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 12
+		}
 		war = {
 			target = FROM
 			attacker_goal = {
                 casus_belli = make_puppet
-			}
-			defender_goal = {
-                casus_belli = become_independent
 			}
 		}
 	}
