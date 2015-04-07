@@ -1124,3 +1124,74 @@ country_event = {
 	}
 	
 }
+
+#################################################################################
+#																				#
+#          These events deal with new governments after a gov change war		#
+#																				#
+#################################################################################
+
+country_event = {
+	id = 96085
+	title = "EVTNAME96085" #Democracy
+	desc = "EVTDESC96085"
+	picture = "unite"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA96085" #We welcome the new regime.
+		government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_weighted_voting
+		clr_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		set_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		clr_country_flag = fascist_election_win
+		clr_country_flag = reactionary_election_win
+		clr_country_flag = anarcho_liberal_election_win
+		clr_country_flag = social_liberal_election_win
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_democracy }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_democracy
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 100 }
+			create_alliance = THIS
+			clr_country_flag = friendly_democracy
+		}
+		capital_scope = {
+			any_pop = {
+				limit = { literacy = 0.2 }
+				ideology = { factor = 0.1 value = liberal }
+			}
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = islamist
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = communist
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = populist
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -4
+			}
+		}
+	}
+}
