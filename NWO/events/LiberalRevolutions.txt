@@ -8,6 +8,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		literacy = 0.3
+		vote_franschise = none_voting
 		NOT = {
 			OR = {
 				has_country_flag = liberal_revolution_in_progress
@@ -15,8 +16,6 @@ country_event = {
 				has_country_flag = had_liberal_revolution
 			}
 			#is_ideology_enabled = socialist now enabled by default
-			vote_franschise = universal_weighted_voting
-			vote_franschise = promoted_voting
 		}
 		NOT = {
 			has_global_flag = liberal_revolutions_should_now_fire

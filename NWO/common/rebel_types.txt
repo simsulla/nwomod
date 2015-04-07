@@ -119,7 +119,7 @@ islamist_rebels = {
 		}
 		modifier = {
 			factor = 1.0105
-			pop_majority_ideology = conservative
+			pop_majority_ideology = islamist
 			NOT = {
 				country = {
 					has_country_modifier = global_liberal_agitation
@@ -132,7 +132,7 @@ islamist_rebels = {
 			NOT = { OR = { religion = sunni religion = shiite } }
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0
 			country = { government = islamist_dictatorship }
 		}
 		modifier = {
@@ -545,10 +545,6 @@ communist_rebels = {
 			pop_majority_ideology = communist
 		}
 		modifier = {
-			factor = 1.15
-			pop_majority_ideology = socialist
-		}
-		modifier = {
 			factor = 1.015
 			country = { plurality = 10 }
 		}
@@ -759,12 +755,6 @@ socialist_rebels = {
 			factor = 1.15
 			pop_majority_ideology = socialist
 		}
-		
-		modifier = {
-			factor = 1.05
-			pop_majority_ideology = communist
-		}
-
 		modifier = {
 			factor = 1.15
 			political_reform_want = 0.15
