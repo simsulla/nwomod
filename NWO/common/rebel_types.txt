@@ -346,6 +346,12 @@ populist_rebels = {
 				minorities = yes
 			}
 		}
+		modifier = {
+			factor = 0.1
+			location = {
+				is_colonial = yes
+			}
+		}
 	}
  
  	#This is checked for EACH province in the Area of Operations
@@ -596,6 +602,12 @@ communist_rebels = {
 			factor = 2.0
 			is_capital = yes
 		}
+		modifier = {
+			factor = 0.1
+			location = {
+				is_colonial = yes
+			}
+		}
 	}
 	
  	# Province Scope
@@ -778,6 +790,12 @@ socialist_rebels = {
 		modifier = {
 			factor = 0.5
 			country = { OR = { government = democracy government = hms_government } }
+		}
+		modifier = {
+			factor = 0.1
+			location = {
+				is_colonial = yes
+			}
 		}
 	}
  
@@ -1136,6 +1154,12 @@ liberal_rebels = {
 			factor = 1.5
 			country = {
 				has_country_modifier = global_liberal_agitation
+			}
+		}
+		modifier = {
+			factor = 0.1
+			location = {
+				is_colonial = yes
 			}
 		}
 	}
