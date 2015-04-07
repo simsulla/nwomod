@@ -119,13 +119,11 @@ islamist_rebels = {
 		}
 		modifier = {
 			factor = 1.0105
-			AND = {
-				pop_majority_ideology = conservative
-				NOT = {
-					country = {
-						has_country_modifier = global_liberal_agitation
-						has_country_modifier = springtime_of_nations	
-					}
+			pop_majority_ideology = conservative
+			NOT = {
+				country = {
+					has_country_modifier = global_liberal_agitation
+					has_country_modifier = springtime_of_nations	
 				}
 			}
 		}
@@ -293,7 +291,7 @@ populist_rebels = {
 			NOT = {		
 				OR = {
 					pop_majority_ideology = populist
-					pop_majority_ideology = conservative
+					AND = { pop_majority_ideology = conservative militancy = 10 }
 					militancy = 5
 				}
 			}	
@@ -322,8 +320,9 @@ populist_rebels = {
 		}
 		modifier = {
 			factor = 1.15
-			NOT = { political_reform_want = 0.05 
-					social_reform_want = 0.05 
+			NOT = { 
+				political_reform_want = 0.01 # 0.05 
+				#social_reform_want = 0.05 
 			}
 		}
 		modifier = {
