@@ -201,10 +201,16 @@ migration_target =
 		factor = 1.2
 		has_pop_religion = THIS
 	}
-#	modifier = {
-#		factor = 1.5
-#		any_core = { is_primary_culture = THIS }
-#	}
+	#modifier = {
+	#	factor = 1.5
+	#	any_core = { is_primary_culture = THIS }
+	#}
+	# prevent china swamping minority areas with migrants
+	modifier = {
+		factor = 0.1
+		has_pop_culture = chinese
+		has_culture_core = no
+	}
 	modifier = {
 		factor = 0.75
 		state_scope = {
