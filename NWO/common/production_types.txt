@@ -1493,8 +1493,8 @@ artisan_pharmaceuticals = {
 	workforce = 40000
 }
 
-artisan_integrated_circuits = {       
-	template = factory_template
+artisan_integrated_circuits = {
+
 	input_goods = {    
 		inorganic_chemicals = 60	
 		fuel = 30
@@ -1511,3 +1511,91 @@ artisan_integrated_circuits = {
 	workforce = 40000
 }
 
+artisan_software_developer = {
+
+	input_goods = {    
+		optics = 60	
+		integrated_circuits = 60	
+	}
+	output_goods = computers 
+	value = 177
+
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+artisan_telephonist = {
+
+	input_goods = {    
+		telecommunications = 30.00	
+		computers = 30.00	
+	}
+	output_goods = communication 
+	value = 60
+
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+artisan_teacher = {       
+	input_goods = {    
+		telecommunications = 30.00	
+		computers = 30.00	
+	}
+	output_goods = education_rnd 
+	value = 60
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+artisan_culture = {       
+	input_goods = {    
+		health = 30.00	
+		beverage_tobacco = 30.00	
+	}
+	output_goods = culture 
+	value = 60.00
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+artisan_recreation = {       
+	input_goods = {    
+		health = 30.00	
+		aeroplanes = 30.00	
+	}
+	output_goods = recreation 
+	value = 60.00
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
