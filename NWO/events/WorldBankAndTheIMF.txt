@@ -5,26 +5,28 @@ country_event = {
 	desc = "EVTDESC15600"
 	picture = "world_bank"
 	
-	trigger = {
-		has_country_flag = world_bank
+	is_triggered_only = yes
+	
+	#trigger = {
+	#	has_country_flag = world_bank
 		# TODO event spam ai = yes
-	}	
-	mean_time_to_happen = {
-		months = 1
-        modifier = {
-            factor = 3
-            NOT = { year = 1992 } 
-        }
-        modifier = {
-            factor = 3
-            year = 1993 
-        }
-        modifier = {
-			# 4 * 3 = 12
-            factor = 4 
-            year = 1994
-        }
-	}
+	#}	
+	#mean_time_to_happen = {
+	#	months = 1
+    #    modifier = {
+    #        factor = 3
+    #        NOT = { year = 1992 } 
+    #    }
+    #    modifier = {
+    #        factor = 3
+    #        year = 1993 
+    #    }
+    #    modifier = {
+	#		# 4 * 3 = 12
+    #        factor = 4 
+    #        year = 1994
+    #    }
+	#}
 	
 	option = {
 		name = "EVTOPTA15600"
