@@ -139,6 +139,12 @@ islamist_rebels = {
 			factor = 1.015
 			country = { plurality = 10 }
 		}
+		modifier = {
+			factor = 0
+			location = {
+				is_colonial = yes
+			}
+		}
 	}
  
  	#This is checked for EACH province in the Area of Operations
@@ -346,7 +352,7 @@ populist_rebels = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			location = {
 				is_colonial = yes
 			}
@@ -568,6 +574,12 @@ communist_rebels = {
 				average_consciousness = 6
 			}
 		}
+		modifier = {
+			factor = 0
+			location = {
+				is_colonial = yes
+			}
+		}		
 	}
  
  	#This is checked for EACH province in the Area of Operations
@@ -781,7 +793,7 @@ socialist_rebels = {
 			country = { OR = { government = democracy government = hms_government } }
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			location = {
 				is_colonial = yes
 			}
@@ -860,14 +872,14 @@ nationalist_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
-		proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship = democracy
 		presidential_dictatorship = presidential_dictatorship
-		populist_dictatorship = populist_dictatorship
-		islamist_dictatorship = islamist_dictatorship
-		absolute_monarchy = absolute_monarchy
-		nationalist_dictatorship = populist_dictatorship
-		hms_government = hms_government
-		democracy = democracy
+		populist_dictatorship = democracy
+		islamist_dictatorship = democracy
+		absolute_monarchy = presidential_dictatorship
+		nationalist_dictatorship = democracy
+		hms_government = proletarian_dictatorship
+		democracy = presidential_dictatorship
 	}
 	
 	
@@ -994,7 +1006,7 @@ nationalist_rebels = {
 			is_accepted_culture = no
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.4
 			location = {
 				is_colonial = yes
 			}
@@ -1146,7 +1158,7 @@ liberal_rebels = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			location = {
 				is_colonial = yes
 			}
@@ -1222,6 +1234,13 @@ liberal_rebels = {
 			political_reform_want = 0.05
 			NOT = { political_reform_want = 0.15 }
 		}
+
+		modifier = {
+			factor = 1.2
+			location = {
+				is_colonial = yes
+			}
+		}		
 	}
  
  	#This is checked for EACH province in the Area of Operations
@@ -1388,7 +1407,7 @@ carlist_rebels = {
 	
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
-		factor = 1.02
+		factor = 0.01
 		
 		modifier = {
 			factor = 0
@@ -1431,7 +1450,12 @@ carlist_rebels = {
 			factor = 1.015
 			country = { plurality = 10 }
 		}
-
+		modifier = {
+			factor = 0
+			location = {
+				is_colonial = yes
+			}
+		}
 	}
  
  	#This is checked for EACH province in the Area of Operations
