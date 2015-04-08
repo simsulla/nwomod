@@ -188,7 +188,7 @@ grain_canned_food_factory = {
 		grain = 40
 	}
 	output_goods = canned_food 
-	value = 128
+	value = 163
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = grain 
@@ -203,7 +203,7 @@ rice_canned_food_factory = {
 		rice = 60
 	}
 	output_goods = canned_food 
-	value = 192
+	value = 232
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = rice 
@@ -272,7 +272,7 @@ gas_fuel_factory = {    # liquefied natural gas
 		gas = 24
 	} 
 	output_goods = fuel 
-	value = 112
+	value = 102
 	bonus = {
 		trigger = { trade_goods_in_state = gas }
 		value = 0.25
@@ -285,7 +285,7 @@ coal_fuel_factory = {
 		coal = 48
 	} 
 	output_goods = fuel 
-	value = 223
+	value = 204
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.25
@@ -347,7 +347,7 @@ fabric_factory = {
 		cotton = 142	
 	}
 	output_goods = fabric 
-	value = 153
+	value = 151
 	bonus = {
 		trigger = { trade_goods_in_state = cotton }
 		value = 0.25
@@ -373,7 +373,7 @@ wool_fabric_factory = {
 		wool = 36	
 	}
 	output_goods = fabric 
-	value = 42
+	value = 44
 	bonus = {
 		trigger = { trade_goods_in_state = wool }
 		value = 0.25
@@ -505,7 +505,7 @@ heating_electricity_factory = {
 		fuel = 120
 	}
 	output_goods = heating_electricity 
-	value = 120
+	value = 104
 	bonus = {
 		trigger = { 
 			OR = {
@@ -633,7 +633,7 @@ furniture_factory = {
 		fabric = 120.00	
 	}
 	output_goods = furniture 
-	value = 80
+	value = 76
 	bonus = {
 		trigger = { 
 			OR = {
@@ -685,7 +685,7 @@ beverages_sugar_factory = {
                 glass = 30
         }
         output_goods = beverages
-        value = 33
+        value = 32
         bonus = {
                 trigger = { has_building = glass_factory }
                 value = 0.125
@@ -747,7 +747,7 @@ electric_gear_factory = {
 		fuel = 50	
 	}
 	output_goods = electric_gear 
-	value = 40
+	value = 39
 	bonus = {
 		trigger = { has_building = copper_wire_factory }
 		value = 0.125
@@ -803,7 +803,7 @@ ships_factory = {
 	}
 	output_goods = ships 
 	is_coastal = yes
-	value = 18.00
+	value = 18
 	bonus = {
 		trigger = { has_building = steel_factory }
 		value = 0.125
@@ -839,7 +839,7 @@ computers_factory = {
 		integrated_circuits = 60	
 	}
 	output_goods = computers 
-	value = 180
+	value = 177
 	bonus = {
 		trigger = { has_building = optics_factory }
 		value = 0.125
@@ -857,7 +857,7 @@ telecommunications_factory = {
 		integrated_circuits = 70
 	}
 	output_goods = telecommunications 
-	value = 301
+	value = 287
 	bonus = {
 		trigger = { has_building = optics_factory }
 		value = 0.125
@@ -875,7 +875,7 @@ electric_telecommunications_factory = {
 		integrated_circuits = 30.00	
 	}
 	output_goods = telecommunications 
-	value = 175
+	value = 171
 	bonus = {
 		trigger = { has_building = electric_gear_factory }
 		value = 0.125
@@ -952,7 +952,7 @@ health_factory = {
 		optics = 80	
 	}
 	output_goods = health 
-	value = 60.00
+	value = 59
 	bonus = {
 		trigger = { has_building = pharmaceuticals_factory }
 		value = 0.125
@@ -970,7 +970,7 @@ furniture_houseware_factory = {
 		heating_electricity = 60
 	}
 	output_goods = furniture_houseware 
-	value = 120
+	value = 124
 	bonus = {
 		trigger = { has_building = furniture_factory }
 		value = 0.125
@@ -988,7 +988,7 @@ clothes_footwear_factory = {
 		footwear = 160	
 	}
 	output_goods = clothes_footwear 
-	value = 320
+	value = 322
 	bonus = {
 		trigger = { has_building = clothes_factory }
 		value = 0.125
@@ -1008,7 +1008,7 @@ weaponry_factory = {
 		automobiles = 30.00	
 	}
 	output_goods = weaponry 
-	value = 30.00
+	value = 30
 	bonus = {
 		trigger = { has_building = automobiles_factory }
 		value = 0.125
@@ -1031,7 +1031,7 @@ transport_factory = {
 		automobiles = 30.00	
 	}
 	output_goods = transport 
-	value = 60.00
+	value = 59.00
 	bonus = {
 		trigger = { has_building = automobiles_factory }
 		value = 0.125
@@ -1055,7 +1055,7 @@ communication_factory = {
 		computers = 30.00	
 	}
 	output_goods = communication 
-	value = 60.00
+	value = 60
 	bonus = {
 		trigger = { has_building = computers_factory }
 		value = 0.125
@@ -1078,7 +1078,7 @@ education_rnd_factory = {
 		computers = 30.00	
 	}
 	output_goods = education_rnd 
-	value = 60.00
+	value = 60
 	bonus = {
 		trigger = { has_building = computers_factory }
 		value = 0.125
@@ -1136,7 +1136,7 @@ financial_services_factory = {
 		computers = 60.00	
 	}
 	output_goods = financial_services 
-	value = 60.00
+	value = 60
 	bonus = {
 		trigger = { has_building = computers_factory }
 		value = 0.25
@@ -1378,7 +1378,7 @@ artisan_canned_food = {
 		cattle = 30
 	}
 	output_goods = canned_food 
-	value = 88
+	value = 114
 	
 	owner = {
 		poptype = artisan 
@@ -1395,7 +1395,7 @@ artisan_costermonger = {
 		fruit = 30
 	}
 	output_goods = canned_food 
-	value = 88
+	value = 114
 	
 	owner = {
 		poptype = artisan 
@@ -1413,7 +1413,7 @@ artisan_baker = {
 		grain = 40
 	}
 	output_goods = canned_food 
-	value = 60
+	value = 136
 	
 	owner = {
 		poptype = artisan 
@@ -1430,7 +1430,7 @@ artisan_rice_trader = {
 		rice = 60
 	}
 	output_goods = canned_food 
-	value = 90
+	value = 198
 	
 	owner = {
 		poptype = artisan 
@@ -1448,7 +1448,7 @@ artisan_seeds_trader = {
 		oil_seeds = 30
 	}
 	output_goods = canned_food 
-	value = 88
+	value = 114
 	
 	owner = {
 		poptype = artisan 
@@ -1459,3 +1459,55 @@ artisan_seeds_trader = {
 	
 	workforce = 40000
 }
+
+artisan_gas_fuel = {    # liquefied natural gas  
+	input_goods = {    
+		gas = 24
+	} 
+	output_goods = fuel 
+	value = 112
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+artisan_pharmaceuticals = {
+	input_goods = {    
+		plastics = 30	
+		fuel = 30
+	}
+	output_goods = pharmaceuticals 
+	value = 74
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+artisan_integrated_circuits = {       
+	template = factory_template
+	input_goods = {    
+		inorganic_chemicals = 60	
+		fuel = 30
+	}
+	output_goods = integrated_circuits 
+	value = 29
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
