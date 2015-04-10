@@ -73,15 +73,15 @@ country_event = {
 	option = {
 		name = EVT_8209002_B # We will remain there
 		ai_chance = { factor = 0 }
-	   any_pop = {
+		set_country_flag = korea_trusteeship
+		any_pop = {
 			limit = {
 				culture = korean
 				is_primary_culture = no
 				is_accepted_culture = no
 			}
-		   militancy = 10
-		   consciousness = 4
-			set_country_flag = korea_trusteeship
+			militancy = 10
+			consciousness = 4
 	   }
 	}
 
