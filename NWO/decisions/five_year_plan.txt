@@ -1,0 +1,32 @@
+political_decisions = {
+
+	five_year_plan = {
+			picture = "five_year_plan"
+			potential = {
+				OR = {
+					continent = asia
+					continent = africa
+					government = proletarian_dictatorship
+					tag = ARG
+				}
+				NOT = { tag = JAP }
+				NOT = { has_country_modifier = five_year_plan }
+			}
+
+			allow = {
+				OR = {
+					government = proletarian_dictatorship
+					ruling_party_ideology = socialist
+					ruling_party_ideology = progressive
+				}
+				public_switched_telephone_network = 1
+				war = no
+			}
+
+			effect = {
+				prestige = 5
+				add_country_modifier = { name = five_year_plan duration = 1825 }
+			}
+
+	}
+}
