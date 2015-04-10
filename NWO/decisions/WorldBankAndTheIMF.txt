@@ -8,6 +8,7 @@ political_decisions = {
 			is_greater_power = yes
 			NOT = { has_country_modifier = stock_market_crash }
 			NOT = { has_country_flag = the_imf }
+			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
 		}
 		allow = {
 			OR = {
@@ -56,6 +57,7 @@ political_decisions = {
 			rank = 2
 			NOT = { has_country_flag = world_bank }
 			NOT = { has_country_modifier = stock_market_crash }
+			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
 		}
 		allow = {
 			rank = 1

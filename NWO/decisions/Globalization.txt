@@ -35,9 +35,8 @@ political_decisions = {
 	trade_block_ambition = {
 		picture = "trade_block_ambition"
 		potential = {
-			NOT = { 
-				has_country_flag = trade_block_ambition 
-			}		
+			NOT = { has_country_flag = trade_block_ambition }		
+			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
 		}
 
 		allow = {
