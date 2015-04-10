@@ -4,8 +4,8 @@ political_decisions = {
 			picture = "korea_trusteeship"
 			potential = {
 				OR = {
-					tag = USA
-					tag = RUS
+					AND = { 1624 = { controlled_by = USA } tag = USA }
+					AND = { 1619 = { controlled_by = RUS } tag = RUS }
 				}
 				NOT = { has_country_flag = korea_trusteeship }
 				NOT = { has_country_flag = recognized_provincial_gov_korea }
@@ -16,13 +16,15 @@ political_decisions = {
 					tag = USA
 					tag = RUS
 				}
+				public_switched_telephone_network = 1
 				NOT = { has_country_flag = recognized_provincial_gov_korea }
 				war = no
 				year = 1947
 			}
 
 			effect = {
-					set_country_flag = korea_trusteeship
+				prestige = 5
+				set_country_flag = korea_trusteeship
 			}
 
 	}

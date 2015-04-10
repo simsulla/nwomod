@@ -49,8 +49,10 @@ country_event = {
 		government = proletarian_dictatorship
 		NOT = { exists = NKO }
 		1619 = { controlled_by = RUS } # Pyongyang
-		year = 1947
-		has_country_flag = korea_trusteeship
+		OR = { 
+			year = 1947
+			has_country_flag = korea_trusteeship
+		}
 	}
 
 	mean_time_to_happen = {
@@ -65,6 +67,7 @@ country_event = {
 		name = EVT_8209002_A
 		ai_chance = { factor = 100 }
 		release_vassal = NKO
+		set_country_flag = korea_trusteeship
 	}
 	
 	option = {
@@ -78,6 +81,7 @@ country_event = {
 			}
 		   militancy = 10
 		   consciousness = 4
+			set_country_flag = korea_trusteeship
 	   }
 	}
 
@@ -97,7 +101,10 @@ country_event = {
 		tag = USA
 		NOT = { exists = SKO }
 		1624 = { controlled_by = USA } # Seoul
-		has_country_flag = korea_trusteeship # 1947
+		OR = { 
+			year = 1947
+			has_country_flag = korea_trusteeship
+		}
 	}
 
 	mean_time_to_happen = {
