@@ -38,7 +38,6 @@ political_decisions = {
 				add_province_modifier = { name = denazification duration = 700 }
 			}
 		}
-		ai_will_do = { factor = 1 }
 	}
 	
 	monnet_plan = {
@@ -71,7 +70,6 @@ political_decisions = {
 				add_province_modifier = { name = colonial_exploitation duration = 700 }
 			}
 		}
-		ai_will_do = { factor = 1 }
 	}
 	
 	saar_protectorate = {
@@ -101,7 +99,6 @@ political_decisions = {
 			set_country_flag = saar_protectorate
 			release_vassal = SAL
 		}
-		ai_will_do = { factor = 1 }
 	}
 	
 	establish_west_germany = {
@@ -153,7 +150,6 @@ political_decisions = {
 			release = GER
 			diplomatic_influence = { who = GER value = 100 }
 		}
-		ai_will_do = { factor = 1 }
 	}
 	
 	establish_east_germany = {
@@ -194,7 +190,6 @@ political_decisions = {
 			set_country_flag = establish_east_germany
 			release = DDR
 		}
-
 	}
 
 	end_occupation_of_germany = {
@@ -222,7 +217,9 @@ political_decisions = {
 			release = GER
 			diplomatic_influence = { who = GER value = 100 }
 		}
-
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	
 	end_of_sonderweg = {
@@ -256,7 +253,6 @@ political_decisions = {
 				remove_core = GER
 			}
 		}
-		ai_will_do = { factor = 1 }
 	}
 
 	accept_ruhr_area = {
@@ -290,7 +286,6 @@ political_decisions = {
 			prestige = -20
 			FRA = { diplomatic_influence = { who = GER value = 50 } }
 		}
-		ai_will_do = { factor = 1 }
 	}
 
 	ruhr_area = {
@@ -338,7 +333,6 @@ political_decisions = {
 			}
 			diplomatic_influence = { who = GER value = 200 }
 		}
-		ai_will_do = { factor = 1 }
 	}
 	
 }
