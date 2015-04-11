@@ -105,16 +105,17 @@ political_decisions = {
 		picture = "establish_west_germany"
 		potential = {
 			GER = { exists = no }
-			has_country_flag = denazification
 			OR = { 
 				AND = { 
+					has_country_flag = denazification
 					tag = ENG
 					year = 1952
 					369 = { owned_by = ENG }
 				}
 				AND = { 
+					has_country_flag = denazification
 					tag = USA 
-					564 = { owned_by = USA NOT = { has_province_modifier = colonial_exploitation } } 
+					564 = { owned_by = USA NOT = { has_province_modifier = denazification } } 
 				}
 			}
 			NOT = { has_country_flag = establish_west_germany }
@@ -130,7 +131,7 @@ political_decisions = {
 				}
 				AND = { 
 					tag = USA 
-					564 = { owned_by = USA NOT = { has_province_modifier = colonial_exploitation } } 
+					564 = { owned_by = USA NOT = { has_province_modifier = denazification } } 
 				}
 			}
 			OR = {
@@ -232,7 +233,6 @@ political_decisions = {
 
 		allow = {
 			tag = GER
-			NOT = { has_country_flag = ruhr_area }
 			OR = {
 				AND = {
 					year = 1949
@@ -285,6 +285,7 @@ political_decisions = {
 			set_country_flag = accept_ruhr_area
 			prestige = -20
 			FRA = { diplomatic_influence = { who = GER value = 50 } }
+			relation = { who = FRA value = 100 }
 		}
 	}
 
@@ -305,7 +306,6 @@ political_decisions = {
 			578 = { owned_by = GER } # Dusseldorf
 			577 = { owned_by = GER } # Cleves
 			579 = { owned_by = FRA } # East of Rhine
-			NOT = { has_country_flag = ruhr_area }
 			GER = { has_country_flag = accept_ruhr_area }
 			OR = {
 				AND = {
@@ -330,9 +330,42 @@ political_decisions = {
 					secede_province = FRA
 					add_province_modifier = { name = blood_and_iron_mine duration = 1000 }
 				}
+				capital = 574 # Bonn
 			}
+			set_country_flag = ruhr_area
 			diplomatic_influence = { who = GER value = 200 }
 		}
 	}
 	
+	end_international_authority_over_ruhr = {
+		picture = "ruhr_area"
+		potential = {
+			tag = GER
+			GER = { has_country_flag = accept_ruhr_area }
+			580 = { owned_by = FRA } # Dortmund
+			578 = { owned_by = FRA } # Dusseldorf
+			577 = { owned_by = FRA } # Cleves
+			FRA = { has_country_flag = ruhr_area }
+		}
+
+		allow = {
+			tag = GER
+			any_core = { 
+				NOT = { has_province_modifier = blood_and_iron_mine } 
+				owned_by = FRA
+			}
+			OR = {
+				AND = {
+					year = 1951
+					ai = yes
+				}
+				relation = { who = FRA value = 150 }
+			}
+		}
+
+		effect = {
+			FRA = { country_event = 8005702 }
+			clr_country_flag = accept_ruhr_area
+		}
+	}
 }

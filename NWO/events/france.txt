@@ -31,3 +31,47 @@ country_event = {
 		badboy = 0.5
 	}
 }
+
+country_event = {
+	id = 8005702
+
+	title = end_international_authority_over_ruhr_title
+	desc = end_international_authority_over_ruhr_desc
+	picture = "pondicherry"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVT_8005702_A 
+		ai_chance = { factor = 100 }
+		any_owned = {
+			limit = { is_core = GER NOT = { is_core = FRA } }
+			secede_province = GER
+		}
+		prestige = 5
+		relation = { who = GER value = 50 }
+		diplomatic_influence = { who = GER value = 50 }
+	}
+	
+	option = {
+		name = EVT_8005702_B 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = german
+			}
+			consciousness = 2
+			militancy = 10
+		}		
+		FROM = {
+			add_casus_belli = {
+				target = THIS
+				type = acquire_core_state
+				months = 12
+			}
+			relation = { who = THIS value = -100 }
+		}
+		diplomatic_influence = { who = GER value = -50 }
+		badboy = 5
+	}
+}
