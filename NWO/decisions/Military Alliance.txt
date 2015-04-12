@@ -60,6 +60,12 @@ political_decisions = {
 						}
 						create_alliance = USA
 					}
+					any_country = { 
+						limit = {
+							has_country_modifier = alliance_nato
+						}
+						relation = { who = THIS value = 100 }
+					}
 					add_country_modifier = {
                         name = alliance_nato
 						duration = 3650
@@ -98,6 +104,13 @@ political_decisions = {
                         name = leave_alliance_nato
 						duration = 3650
 	                }
+					any_country = { 
+						limit = {
+							has_country_modifier = alliance_nato
+						}
+						relation = { who = THIS value = -50 }
+					}
+					
                 }
         }
 

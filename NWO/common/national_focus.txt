@@ -32,14 +32,26 @@ diplomatic_focus =
 		own_provinces = no
 
 		flashpoint_tension = 0.15
-
-		limit = {
-			is_core = THIS
-			THIS = {
-				is_greater_power = no
+		limit = { 
+			OR = {
+				THIS = {is_greater_power = yes }
+				AND = { 
+					THIS = { is_secondary_power = yes }
+					continent = THIS
+				}
+				AND = { 
+					THIS = { civilized = yes }
+					state_scope = {
+						any_owned_province = {
+							any_neighbor_province = { owned_by = THIS }
+						}
+					}
+				}
+				is_core = THIS
 			}
 		}
 	}
+
 	market_manipulation =
 	{
 		icon = 37

@@ -1,0 +1,55 @@
+political_decisions = {
+
+	united_nations = {
+		picture = "united_nations"
+		potential = {
+			NOT = { has_country_modifier = united_nations }
+		}
+
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+				part_of_sphere = yes
+			}
+			OR = {
+				is_vassal = no
+				government = proletarian_dictatorship
+			}
+		}
+
+		effect = {
+			remove_country_modifier = not_member_of_united_nations
+			add_country_modifier = { name = united_nations duration = -1 }
+		}
+	}
+	
+	united_nations_security_council = {
+		picture = "united_nations_security_council"
+		potential = {
+			is_greater_power = yes
+			OR = { 
+				AND = { tag = CHI has_global_flag = china_united_nations_security_council }
+				tag = TAI
+				tag = ENG
+				tag = USA
+				tag = FRA
+				tag = RUS
+			}
+			crisis_exist = yes
+			involved_in_crisis = no
+		}
+
+		allow = {
+			any_greater_power = {
+				involved_in_crisis = yes
+				relation = { who = THIS value = 50 }
+			}
+			war = no
+		}
+
+		effect = {
+			add_crisis_interest = yes
+		}
+	}
+}
