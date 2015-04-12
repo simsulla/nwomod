@@ -16,15 +16,11 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = { tag = CHI tag = TAI }
-			NOT = { has_country_flag = the_return_of_hong_kong }
-			OR = { 1496 = { owned_by = ENG } HKG = { vassal_of = ENG } }
 			part_of_sphere = no
 			is_vassal = no
 			OR = {
-				year = 1997
+				AND = { year = 1997 ai = yes }
 				AND = {
-					ai = no
 					relation =  { who = ENG value = 100 } 
 					rank = 2
 					NOT = { ENG = { rank = 2 } }
@@ -52,15 +48,11 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = { tag = CHI tag = TAI }
-			NOT = { has_country_flag = the_return_of_macao }
-			OR = { 1498 = { owned_by = POR } MCA = { vassal_of = POR } }
 			part_of_sphere = no
 			is_vassal = no
 			OR = {
-				year = 1997
+				AND = { year = 1997 ai = yes }
 				AND = {
-					ai = no
 					OR = {
 						relation =  { who = POR value = 100 } 
 						has_country_flag = the_return_of_hong_kong
