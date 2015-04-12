@@ -7,14 +7,15 @@ equivalent = labourers
 
 everyday_needs = { 
 	glass = 1.0
-	canned_food = 6.0
+	canned_food = 60
 	cigarettes = 1.0
 	beverages = 1.0
 	pharmaceuticals = 1.0
-	telecommunications = 1.0
+	telecommunications = 2.0
 	automobiles = 2.0
+	beverage_tobacco = 1.0
 	computers = 1.0
-	fuel = 2.0
+	fuel = 4.0
 	fabric = 1.0
 	footwear = 1.0
 	furniture = 1.0
@@ -23,7 +24,6 @@ everyday_needs = {
 	cement = 1
 	lumber = 1
 	heating_electricity = 10
-
 }
 
 life_needs = { 
@@ -31,22 +31,23 @@ life_needs = {
 }
 
 
-
-luxury_needs = { # 8.0
-		automobiles = 10
-        canned_food = 6
-        jewellery = 4
-        beverage_tobacco = 16
-        health = 16 
-        furniture_houseware = 24
-        clothes_footwear = 20
-        heating_electricity = 44
-        transport = 18
-        communication = 16
-        education_rnd = 8
-        culture = 18
-        recreation = 16
-        financial_services = 24
+# laborers will shop till they drop!
+# ensure that credit miners spend all money they get.
+luxury_needs = {
+	automobiles = 40
+	telecommunications = 40
+	jewellery = 20
+	beverage_tobacco = 16
+	health = 16 
+	furniture_houseware = 24
+	clothes_footwear = 20
+	heating_electricity = 44
+	transport = 18
+	communication = 16
+	education_rnd = 8
+	culture = 18
+	recreation = 16
+	financial_services = 24
 }
 
 country_migration_target =
