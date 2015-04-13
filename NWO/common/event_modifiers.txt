@@ -737,8 +737,8 @@ family_values = {
 }
 
 free_trade_area = {
-	max_tariff = -0.1
-	#min_tariff = -0.1
+	#max_tariff = 0.0
+	#min_tariff = -1.0
 	icon = 11
 }
 
@@ -747,8 +747,9 @@ chair_ambitions = {
 }
 
 bretton_system = {
-	#max_tariff = -1.0
-	#min_tariff = -1.0
+	tax_efficiency = -0.4
+	#max_tariff = -1.25 # -> -0.5 / -1.0
+	# min_tariff = 0 # -> -1 / -1
 	icon = 11
 }
 
@@ -765,7 +766,8 @@ border_less = {
 }
 
 customs_union = {
-	max_tariff = -0.05
+	#min_tariff = -1.0
+	#max_tariff = -0.02
 	icon = 11
 }
 
