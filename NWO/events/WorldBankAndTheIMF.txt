@@ -9,6 +9,7 @@ country_event = {
 		OR = { 
 			has_country_flag = world_bank
 			has_country_flag = the_imf
+			has_country_flag = dev_bank
 			capital_scope = { province_id = 300 } # City of London
 		}
 		NOT = { has_country_modifier = bretton_system }
@@ -17,7 +18,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 1
+		months = 12
 	}
 	
 	option = {
@@ -36,6 +37,7 @@ country_event = {
 		OR = { 
 			has_country_flag = world_bank
 			has_country_flag = the_imf
+			has_country_flag = dev_bank
 			capital_scope = { province_id = 300 } # City of London
 		}
 		has_country_modifier = bretton_system
@@ -43,12 +45,13 @@ country_event = {
 		ai = yes
 	}
 	mean_time_to_happen = {
-		months = 1
+		months = 12
 	}
 	
 	option = {
 		name = "EVTOPTA15601"
 		remove_country_modifier = bretton_system
+		money = 1000000 # write of debt
 	}
 }
 
@@ -64,10 +67,13 @@ country_event = {
 		name = "EVTOPTA15602"
 		clr_country_flag = the_imf
 		clr_country_flag = world_bank
-		add_country_modifier = {
-			name = stock_market_crash
-			duration = 1750
-		}
+		clr_country_flag = dev_bank
+		random_owned = {
+			limit = {
+				trade_goods = credit
+			}
+			trade_goods = coal
+		}			
 	}
 }
 
@@ -150,6 +156,50 @@ country_event = {
 			}
 			trade_goods = credit
 		}		
-		#country_event = 15600
+	}
+}
+
+country_event = {
+	id = 15605
+	title = "dev_bank_title"
+	desc = "dev_bank_desc"
+	picture = "dev_bank"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "dev_bank_title"
+		random_owned = {
+			limit = {
+				OR = {
+					AND = { 
+						province_id = 232 # New York
+						owned_by = USA
+					}
+					AND = { 
+						province_id = 564 # Frankfurt
+						owned_by = GER
+					}
+					AND = { 
+						province_id = 1538 # Shanghai
+						owned_by = CHI
+					}
+					AND = { 
+						province_id = 1538 # Shanghai
+						owned_by = TAI
+					}
+					AND = { 
+						NOT = { 
+							owner = { tag = USA }
+							owner = { tag = CHI }
+							owner = { tag = TAI }
+							owner = { tag = GER }
+						}
+						is_capital = yes
+					}
+				}
+			}
+			trade_goods = credit
+		}		
 	}
 }

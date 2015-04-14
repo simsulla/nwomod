@@ -2,44 +2,111 @@
 
 political_decisions = {
 
+	special_drawing_rights = {
+		picture = "special_drawing_rights"
+		potential = {
+			is_greater_power = yes
+			NOT = { has_country_flag = special_drawing_rights }
+			#NOT = { has_country_flag = the_imf has_country_flag = world_bank has_country_flag = dev_bank  capital_scope = { trade_goods = credit } }
+			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
+			has_recently_lost_war = no
+			#year = 1952
+		}
+		allow = {
+			OR = {
+				AND = { NOT = { year = 1952 } money = 10000000 }
+				AND = { NOT = { year = 1962 } money = 20000000 }
+				AND = { NOT = { year = 1972 } money = 30000000 }
+				AND = { NOT = { year = 1982 } money = 40000000 }
+				AND = { NOT = { year = 1992 } money = 50000000 }
+				AND = { NOT = { year = 2002 } money = 60000000 }
+				AND = { NOT = { year = 2012 } money = 70000000 }
+				AND = { NOT = { year = 2022 } money = 80000000 }
+				AND = { NOT = { year = 2032 } money = 90000000 }
+				AND = { NOT = { year = 2042 } money = 100000000 }
+				AND = { NOT = { year = 2052 } money = 110000000 }
+				AND = { NOT = { year = 2062 } money = 120000000 }
+				AND = { NOT = { year = 2072 } money = 130000000 }
+				AND = { NOT = { year = 2082 } money = 140000000 }
+				AND = { NOT = { year = 2092 } money = 150000000 }
+			}
+		}
+		effect = {
+			set_country_flag = special_drawing_rights # event 15606
+
+			random_country = { limit = { tag = THIS NOT = { year = 1952 } } money = -10000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 1962 } } money = -20000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 1972 } } money = -30000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 1982 } } money = -40000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 1992 } } money = -50000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2002 } } money = -60000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2012 } } money = -70000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2022 } } money = -80000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2032 } } money = -90000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2042 } } money = -100000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2052 } } money = -110000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2062 } } money = -120000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2072 } } money = -130000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2082 } } money = -140000000 }
+			random_country = { limit = { tag = THIS NOT = { year = 2092 } } money = -150000000 }
+		}
+	}
+	
+	city_of_london = {
+		picture = "city_of_london"
+		potential = {
+			is_greater_power = yes
+			NOT = { tag = ENG }
+			ENG = { capital_scope = { trade_goods = credit } }
+			has_country_flag = special_drawing_rights
+			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }	
+			#year = 1952
+		}
+		allow = {
+			any_greater_power = { 
+				NOT = { tag = THIS }
+				tag = ENG
+				NOT = { money = 1000000 }
+			}
+			money = 2000000
+		}
+		effect = {
+			set_country_flag = dev_bank
+			country_event = 15605
+			money = -1000000
+			random_country = { 
+				limit = { 
+					has_country_flag = the_imf
+					NOT = { tag = THIS }
+				}
+				country_event = 15602
+			}
+		}
+	}	
+		
 	the_imf = {
 		picture = "the_imf"
 		potential = {
 			is_greater_power = yes
-			NOT = { has_country_modifier = stock_market_crash }
+			continent = europe
 			NOT = { has_country_flag = the_imf }
-			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
+			has_country_flag = special_drawing_rights
+			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }	
+			year = 1952
 		}
 		allow = {
-			OR = {
-				AND = {
-					NOT = { year = 2092 }
-					money = 100000000
-				}
-				AND = {
-					NOT = { year = 1992 }
-					money = 10000000
-				}
+			any_greater_power = { 
+				NOT = { tag = THIS }
+				has_country_flag = the_imf
+				NOT = { money = 1000000 }
 			}
+			money = 2000000
 		}
 		effect = {
 			set_country_flag = the_imf
-			set_country_flag = become_the_imf
-
-			random_country = { 
-				limit = { 
-					tag = THIS
-					NOT = { year = 2090 }
-				}
-				money = -10000000
-			}
-			random_country = { 
-				limit = { 
-					tag = THIS
-					NOT = { year = 1992 }
-				}
-				money = -1000000
-			}
+			clr_country_flag = special_drawing_rights
+			country_event = 15605
+			money = -1000000
 			random_country = { 
 				limit = { 
 					has_country_flag = the_imf
@@ -56,110 +123,65 @@ political_decisions = {
 			is_greater_power = yes
 			rank = 2
 			NOT = { has_country_flag = world_bank }
-			NOT = { has_country_modifier = stock_market_crash }
+			has_country_flag = special_drawing_rights
 			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
+			#year = 1952
 		}
 		allow = {
 			rank = 1
-			OR = {
-				AND = {
-					NOT = { year = 2092 }
-					money = 100000000
-				}
-				AND = {
-					NOT = { year = 1992 }
-					money = 10000000
-				}
+			any_greater_power = { 
+				NOT = { tag = THIS }
+				has_country_flag = world_bank
+				NOT = { money = 1000000 }
 			}
+			money = 2000000
 		}
 		effect = {
 			set_country_flag = world_bank
-			set_country_flag = become_world_bank
+			clr_country_flag = special_drawing_rights
+			country_event = 15605
+			money = -1000000
 			random_country = { 
 				limit = { 
-					tag = THIS
-					NOT = { year = 2090 }
+					has_country_flag = world_bank
+					NOT = { tag = THIS }
 				}
-				money = -1000000
+				country_event = 15602
 			}
-			random_country = { 
-				limit = { 
-					tag = THIS
-					NOT = { year = 1992 }
-				}
-				money = -10000000
-			}
-			# TODO remove more money for later years
 		}
 	}	
-	
-	interest_sanctions = {
-		picture = "un_sanctions"
+
+	dev_bank = {
+		picture = "dev_bank"
 		potential = {
-			ai = no
-			OR = { 
-				has_country_flag = world_bank
-				has_country_flag = the_imf
-			}
-			any_greater_power = { 
-				NOT = { tag = THIS }
-				OR = { 
-					has_country_flag = world_bank
-					has_country_flag = the_imf
-				}
-				relation = {
-					who = THIS
-					value = 50
-				}
-			}
-			any_greater_power = { 
-				NOT = {
-					has_country_modifier = interest_sanctions
-					relation = {
-						who = THIS
-						value = 0
-					}
-				}
-			}
+			is_greater_power = yes
+			rank = 2
+			NOT = { has_country_flag = dev_bank }
+			has_country_flag = special_drawing_rights
+			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
+			#year = 1952
 		}
 		allow = {
+			rank = 1
 			any_greater_power = { 
 				NOT = { tag = THIS }
-				OR = { 
-					has_country_flag = world_bank
-					has_country_flag = the_imf
-				}
-				relation = {
-					who = THIS
-					value = 100
-				}
+				has_country_flag = dev_bank
+				NOT = { money = 1000000 }
 			}
-			any_greater_power = { 
-				NOT = {
-					has_country_modifier = interest_sanctions
-					relation = {
-						who = THIS
-						value = -150
-					}
-				}
-			}
+			money = 2000000
 		}
 		effect = {
-			any_greater_power = { 
-				limit = {
-					NOT = {
-						has_country_modifier = interest_sanctions
-						relation = {
-							who = THIS
-							value = -150
-						}
-					}
+			set_country_flag = dev_bank
+			clr_country_flag = special_drawing_rights
+			country_event = 15605
+			money = -1000000
+			random_country = { 
+				limit = { 
+					has_country_flag = dev_bank
+					NOT = { tag = THIS }
 				}
-			}
-			add_country_modifier = {
-				name = interest_sanctions
-				duration = 1825
+				country_event = 15602
 			}
 		}
-	}
+	}	
 }
