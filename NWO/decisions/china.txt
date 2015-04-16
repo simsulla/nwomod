@@ -1,5 +1,52 @@
 political_decisions = {
 
+# first decision if RUS(CHI) AI: else decision sino_soviet_friendship done by russia
+	sino_soviet_friendship_chi = {
+		picture = "sino_soviet_friendship"
+		potential = {
+			NOT = { has_country_flag = sino_soviet_friendship }
+			OR = { RUS = { ai = yes } AND =  { RUS = { ai = yes } CHI = { ai = yes } }  }
+			tag = CHI
+		}
+
+		allow = {
+			CHI = { war = no }
+			relation =  { who = RUS value = 100 } 
+		}
+
+		effect = {
+			set_country_flag = sino_soviet_friendship
+			relation = { who = RUS value = 100 } 
+			add_country_modifier = { name = comecon duration = 1750 }
+			create_alliance = RUS
+			RUS = { diplomatic_influence = { who = CHI value = 100 }  }
+		}
+	}
+	
+	the_return_of_port_arthur = {
+		picture = "the_return_of_port_arthur"
+		potential = {
+			has_country_flag = sino_soviet_friendship
+			NOT = { has_country_modifier = comecon_excluded }
+			NOT = { has_country_flag = the_return_of_port_arthur }
+			tag = CHI
+			RUS = { war = no government = proletarian_dictatorship }
+			CHI = { war = no government = proletarian_dictatorship }
+			1481 = { owned_by = RUS }
+		}
+
+		allow = {
+			NOT = { has_country_modifier = comecon }
+			OR = { relation = { who = RUS value = 180 } ai = yes }
+		}
+
+		effect = {
+			RUS = { country_event = 32500 }
+			add_country_modifier = { name = comecon duration = 1750 }
+			set_country_flag = the_return_of_port_arthur
+		}
+	}	
+
 	the_return_of_hong_kong = {
 		picture = "the_return_of_hong_kong"
 		potential = {

@@ -125,7 +125,6 @@ political_decisions = {
 			NOT = { has_country_flag = world_bank }
 			has_country_flag = special_drawing_rights
 			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
-			#year = 1952
 		}
 		allow = {
 			rank = 1
@@ -183,5 +182,47 @@ political_decisions = {
 				country_event = 15602
 			}
 		}
-	}	
+	}
+	
+	bretton_system = {
+		picture = "bretton_system"
+		potential = {
+			NOT = { has_country_modifier = comecon }
+			NOT = { has_country_modifier = bretton_system_excluded }
+			NOT = { has_country_modifier = bretton_system }
+		}
+		allow = {
+			OR = { 
+				AND = { relation = { who = USA value = 100 } USA = { has_country_flag = world_bank } }
+				overlord = { has_country_flag = world_bank } 
+				sphere_owner = { has_country_flag = world_bank } 
+				government = democracy
+				government = hms_government
+			}
+		}
+		effect = {
+			add_country_modifier = { name = bretton_system duration = -1 }
+		}
+	}		
+
+	comecon = {
+		picture = "comecon"
+		potential = {
+			government = proletarian_dictatorship
+			NOT = { has_country_modifier = comecon }
+			NOT = { has_country_modifier = comecon_excluded }
+			NOT = { has_country_modifier = bretton_system }
+		}
+		allow = {
+			OR = { 
+				relation = { who = RUS value = 150 } # enables China to join
+				overlord = { tag = RUS } 
+				sphere_owner = { tag = RUS } 
+			}
+		}
+		effect = {
+			add_country_modifier = { name = comecon duration = -1 }
+		}
+	}		
+	
 }

@@ -14,3 +14,36 @@
 
 # Convention of Peking
 # China refuses
+
+country_event = {
+	id = 32500
+	title = "the_return_of_port_arthur_title"
+	desc = "the_return_of_port_arthur_desc"
+	picture = "the_return_of_port_arthur"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "the_return_of_port_arthur_opta" # refuse
+		diplomatic_influence = { who = FROM value = -100 }
+		relation = { who = FROM value = -100 }
+		leave_alliance = FROM
+		FROM = { remove_country_modifier = comecon }
+		1481 = {
+			state_scope = {
+				flashpoint_tension = 30
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "the_return_of_port_arthur_optb"
+		diplomatic_influence = { who = FROM value = 100 }
+		relation = { who = FROM value = 100 }
+		create_alliance = FROM # CHI
+		any_owned = { limit = { province_id = 1481 } 1481 = { secede_province = FROM } }
+		ai_chance = { factor = 100 }
+	}
+	
+}

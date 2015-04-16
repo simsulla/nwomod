@@ -196,3 +196,25 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	title = "EVTNAME90902"
+	desc = "EVTDESC90902"
+	picture = "communist_china_buildup"
+
+	id = 90902
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		war = no
+		capital_scope = { NOT = { province_id = 1612 } }
+		any_owned_province = { province_id = 1612 }
+	}
+
+	option = {				
+		name = "EVTOPTA90902"
+		capital = 1612
+	}
+}

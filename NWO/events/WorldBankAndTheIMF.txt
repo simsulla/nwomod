@@ -1,58 +1,58 @@
-# Yearly event distributing money
-country_event = {
-	id = 15600
-	title = "EVTNAME15600"
-	desc = "EVTDESC15600"
-	picture = "world_bank"
+# 
+#country_event = {
+#	id = 15600
+#	title = "EVTNAME15600"
+	# desc = "EVTDESC15600"
+	# picture = "world_bank"
 	
-	trigger = {
-		OR = { 
-			has_country_flag = world_bank
-			has_country_flag = the_imf
-			has_country_flag = dev_bank
-			capital_scope = { province_id = 300 } # City of London
-		}
-		NOT = { has_country_modifier = bretton_system }
-		money = 1000000
-		ai = yes
-	}
+	# trigger = {
+		# OR = { 
+			# has_country_flag = world_bank
+			# has_country_flag = the_imf
+			# has_country_flag = dev_bank
+			# capital_scope = { province_id = 300 } # City of London
+		# }
+		# NOT = { has_country_modifier = bretton_system }
+		# money = 1000000
+		# ai = yes
+	# }
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 	
-	option = {
-		name = "EVTOPTA15600"
-		add_country_modifier = { name = bretton_system duration = -1 }
-	}
-}
+	# option = {
+		# name = "EVTOPTA15600"
+		# add_country_modifier = { name = bretton_system duration = -1 }
+	# }
+# }
 
-country_event = {
-	id = 15601
-	title = "EVTNAME15601"
-	desc = "EVTDESC15601"
-	picture = "world_bank"
+# country_event = {
+	# id = 15601
+	# title = "EVTNAME15601"
+	# desc = "EVTDESC15601"
+	# picture = "world_bank"
 	
-	trigger = {
-		OR = { 
-			has_country_flag = world_bank
-			has_country_flag = the_imf
-			has_country_flag = dev_bank
-			capital_scope = { province_id = 300 } # City of London
-		}
-		has_country_modifier = bretton_system
-		NOT = { money = 1000000 }
-		ai = yes
-	}
-	mean_time_to_happen = {
-		months = 1
-	}
+	# trigger = {
+		# OR = { 
+			# has_country_flag = world_bank
+			# has_country_flag = the_imf
+			# has_country_flag = dev_bank
+			# capital_scope = { province_id = 300 } # City of London
+		# }
+		# has_country_modifier = bretton_system
+		# NOT = { money = 1000000 }
+		# ai = yes
+	# }
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 	
-	option = {
-		name = "EVTOPTA15601"
-		remove_country_modifier = bretton_system
-	}
-}
+	# option = {
+		# name = "EVTOPTA15601"
+		# remove_country_modifier = bretton_system
+	# }
+# }
 
 country_event = {
 	id = 15602
