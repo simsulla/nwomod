@@ -190,12 +190,16 @@ political_decisions = {
 			NOT = { has_country_modifier = comecon }
 			NOT = { has_country_modifier = bretton_system_excluded }
 			NOT = { has_country_modifier = bretton_system }
+			NOT = { OR = { is_vassal = yes tag = RUS } government = proletarian_dictatorship }
 		}
 		allow = {
+			war = no
 			OR = { 
-				AND = { relation = { who = USA value = 100 } USA = { has_country_flag = world_bank } }
+				AND = { relation = { who = USA value = 150 } USA = { has_country_flag = world_bank } }
 				overlord = { has_country_flag = world_bank } 
 				sphere_owner = { has_country_flag = world_bank } 
+			}
+			OR = { 
 				government = democracy
 				government = hms_government
 			}
@@ -215,6 +219,8 @@ political_decisions = {
 		}
 		allow = {
 			OR = { 
+				war = no
+				tag = RUS
 				relation = { who = RUS value = 150 } # enables China to join
 				overlord = { tag = RUS } 
 				sphere_owner = { tag = RUS } 
