@@ -107,8 +107,10 @@ country_event = {
         random_country = {
 			limit = { 
 				exists = yes 
+				relation = { who = THIS value = 100 }
 				any_core = { 
 					owned_by = THIS 
+					NOT = { is_core = THIS } 
 					has_province_modifier = promised_autonomy
 				} 
 			}
@@ -122,7 +124,7 @@ country_event = {
 					has_province_modifier = promised_autonomy
 				} 
 			}
-			release_vassal = THIS
+			release_vassal = THIS 
 		}		
 	}
 
