@@ -511,7 +511,7 @@ country_event = {
 	}
 }
 
-# Great wars
+# The Cold War Great wars
 country_event = {
 	id = 19355
 	news = yes
@@ -521,15 +521,15 @@ country_event = {
 	title = "EVTNAME19355"
 	desc = "EVTDESC19355"
 	major = yes
-	picture = "greatpowers"
+	picture = "cold_war"
 
 	fire_only_once = yes
 
 	trigger = {
-		great_wars_enabled = no
+		# great_wars_enabled = no why is this yes??
 		NOT = { has_global_flag = great_wars_enabled }
-		detente = 1
-		year = 1992
+		tag = USA
+		cold_war = 1
 	}
 
 	mean_time_to_happen = {
@@ -539,7 +539,21 @@ country_event = {
 	option = {
 		name = "EVTOPTA19355"
 		great_wars_enabled = yes
-		set_global_flag = great_wars_enabled		
+		set_global_flag = great_wars_enabled
+		any_country = { 
+			limit = { 
+				government = proletarian_dictatorship
+			}
+			relation = { who = THIS value = -100 }
+		}
+		any_country = { 
+			limit = { 
+				NOT = { government = proletarian_dictatorship }
+			}
+			relation = { who = THIS value = 50 }
+		}
+		ENG = { relation = { who = THIS value = 200 } }
+
 	}
 }
 
