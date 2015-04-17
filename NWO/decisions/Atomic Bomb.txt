@@ -47,12 +47,9 @@ political_decisions = {
         develop_atomic_bomb = {
 				picture = "develop_atomic_bomb"
                 potential = {
-			NOT = { tag = USA tag = RUS } # they get this by event
-					industrial_score = 10
+					has_global_flag = initial_atomb_bomb_setup
 					NOT = { has_country_modifier = non_proliferation_treaty has_country_flag = develop_atomic_bomb }
-					OR = { is_greater_power = yes is_secondary_power = yes }
                     NOT =  { 
-						part_of_sphere = yes 
 						OR = { 
 							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
 							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
@@ -62,6 +59,7 @@ political_decisions = {
 							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
 						}
 					}
+					
                 }
 
                 allow = {
@@ -71,14 +69,6 @@ political_decisions = {
 					OR = { is_greater_power = yes is_secondary_power = yes }
                     NOT =  { 
 						part_of_sphere = yes 
-						OR = { 
-							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
-						}
 					}
                 }
 
@@ -97,16 +87,7 @@ political_decisions = {
 					NOT = { has_country_flag = has_the_atomic_bomb  }
 					has_country_flag = develop_atomic_bomb
 					OR = { is_greater_power = yes is_secondary_power = yes }
-                }
-
-                allow = {
-					OR = { is_greater_power = yes is_secondary_power = yes }
-					NOT = { has_country_modifier = develop_atomic_bomb }
-					has_country_flag = develop_atomic_bomb
-					OR = { is_greater_power = yes  jingoism = 10 }
-					prestige = 50
                     NOT =  { 
-						part_of_sphere = yes 
 						OR = { 
 							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
 							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
@@ -115,6 +96,16 @@ political_decisions = {
 							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
 							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
 						}
+					}					
+                }
+
+                allow = {
+					OR = { is_greater_power = yes is_secondary_power = yes }
+					NOT = { has_country_modifier = develop_atomic_bomb }
+					OR = { is_greater_power = yes  jingoism = 10 }
+					prestige = 50
+                    NOT =  { 
+						part_of_sphere = yes 
 					}					
                 }
 
@@ -133,13 +124,6 @@ political_decisions = {
 					has_country_flag = has_the_atomic_bomb
 					OR = { is_greater_power = yes is_secondary_power = yes }
 					NOT = { has_country_modifier = nuclear_weapon_power }
-                }
-
-                allow = {
-					is_greater_power = yes
-					NOT = { has_country_modifier = nuclear_weapon_power }
-					NOT = { has_country_modifier = has_the_atomic_bomb has_country_modifier = non_proliferation_treaty }
-					has_country_flag = has_the_atomic_bomb
                     NOT =  { 
 						OR = { 
 							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
@@ -150,6 +134,13 @@ political_decisions = {
 							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
 						}
 					}					
+                }
+
+                allow = {
+					is_greater_power = yes
+					NOT = { has_country_modifier = nuclear_weapon_power }
+					NOT = { has_country_modifier = has_the_atomic_bomb has_country_modifier = non_proliferation_treaty }
+					money = 1000000
                 }
 
                 effect = {
@@ -180,16 +171,6 @@ political_decisions = {
                 allow = {
 					national_provinces_occupied = 0.1
 					war = yes
-					OR = { 
-						AND = { has_country_modifier = has_the_atomic_bomb any_neighbor_country = { war_with = THIS } }
-						has_country_modifier = nuclear_weapon_power
-						AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
-						AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
-						AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
-						AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
-						AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
-						AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
-					}						
                 }
 
                 effect = {

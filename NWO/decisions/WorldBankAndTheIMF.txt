@@ -194,6 +194,7 @@ political_decisions = {
 		}
 		allow = {
 			war = no
+			marshall_plan = 1
 			OR = { 
 				overlord = { has_country_flag = world_bank } 
 				sphere_owner = { has_country_flag = world_bank } 
@@ -220,6 +221,7 @@ political_decisions = {
 			NOT = { has_country_modifier = bretton_system }
 		}
 		allow = {
+			containment = 1
 			OR = { 
 				war = no
 				tag = RUS
