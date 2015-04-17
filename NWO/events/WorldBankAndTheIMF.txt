@@ -72,7 +72,7 @@ country_event = {
 				trade_goods = credit
 			}
 			trade_goods = coal
-		}			
+		}	
 	}
 }
 
@@ -201,4 +201,40 @@ country_event = {
 			trade_goods = credit
 		}		
 	}
+}
+
+country_event = {
+	id = 15606
+	title = "special_drawing_rights_title"
+	desc = "special_drawing_rights_desc"
+	picture = "special_drawing_rights"
+	
+	trigger = {
+		has_country_flag = special_drawing_rights
+		money = 2000000
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "special_drawing_rights_yes"
+		treasury = -1000000
+		random_country = { 
+			limit = { 
+				capital_scope = { trade_goods = credit }
+				NOT = { tag = THIS }
+			}
+			treasury = -1000000
+		}		
+		ai_chance = { factor = 1 modifier = { factor = 0 money = 1000000  } }
+	}
+	
+	option = {
+		name = "special_drawing_rights_no"
+		clr_country_flag = special_drawing_rights
+		ai_chance = { factor = 1 modifier = { factor = 0 NOT = { money = 1000000  } } }
+	}
+
 }

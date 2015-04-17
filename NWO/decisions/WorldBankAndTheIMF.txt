@@ -5,50 +5,20 @@ political_decisions = {
 	special_drawing_rights = {
 		picture = "special_drawing_rights"
 		potential = {
-			is_greater_power = yes
+			is_secondary_power = yes
 			NOT = { has_country_flag = special_drawing_rights }
 			#NOT = { has_country_flag = the_imf has_country_flag = world_bank has_country_flag = dev_bank  capital_scope = { trade_goods = credit } }
+			#year = 1968
 			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
-			has_recently_lost_war = no
-			#year = 1952
 		}
 		allow = {
-			OR = {
-				AND = { NOT = { year = 1952 } money = 10000000 }
-				AND = { NOT = { year = 1962 } money = 20000000 }
-				AND = { NOT = { year = 1972 } money = 30000000 }
-				AND = { NOT = { year = 1982 } money = 40000000 }
-				AND = { NOT = { year = 1992 } money = 50000000 }
-				AND = { NOT = { year = 2002 } money = 60000000 }
-				AND = { NOT = { year = 2012 } money = 70000000 }
-				AND = { NOT = { year = 2022 } money = 80000000 }
-				AND = { NOT = { year = 2032 } money = 90000000 }
-				AND = { NOT = { year = 2042 } money = 100000000 }
-				AND = { NOT = { year = 2052 } money = 110000000 }
-				AND = { NOT = { year = 2062 } money = 120000000 }
-				AND = { NOT = { year = 2072 } money = 130000000 }
-				AND = { NOT = { year = 2082 } money = 140000000 }
-				AND = { NOT = { year = 2092 } money = 150000000 }
-			}
+			is_greater_power = yes
+			has_recently_lost_war = no
+			money = 60000000
 		}
 		effect = {
-			set_country_flag = special_drawing_rights # event 15606
-
-			random_country = { limit = { tag = THIS NOT = { year = 1952 } } money = -10000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 1962 } } money = -20000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 1972 } } money = -30000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 1982 } } money = -40000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 1992 } } money = -50000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2002 } } money = -60000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2012 } } money = -70000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2022 } } money = -80000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2032 } } money = -90000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2042 } } money = -100000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2052 } } money = -110000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2062 } } money = -120000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2072 } } money = -130000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2082 } } money = -140000000 }
-			random_country = { limit = { tag = THIS NOT = { year = 2092 } } money = -150000000 }
+			set_country_flag = special_drawing_rights 
+			treasury = -10000000
 		}
 	}
 	
@@ -73,7 +43,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = dev_bank
 			country_event = 15605
-			money = -1000000
+			treasury = -1000000
 			random_country = { 
 				limit = { 
 					has_country_flag = the_imf
@@ -106,7 +76,7 @@ political_decisions = {
 			set_country_flag = the_imf
 			clr_country_flag = special_drawing_rights
 			country_event = 15605
-			money = -1000000
+			treasury = -1000000
 			random_country = { 
 				limit = { 
 					has_country_flag = the_imf
@@ -139,7 +109,7 @@ political_decisions = {
 			set_country_flag = world_bank
 			clr_country_flag = special_drawing_rights
 			country_event = 15605
-			money = -1000000
+			treasury = -1000000
 			random_country = { 
 				limit = { 
 					has_country_flag = world_bank
@@ -173,7 +143,7 @@ political_decisions = {
 			set_country_flag = dev_bank
 			clr_country_flag = special_drawing_rights
 			country_event = 15605
-			money = -1000000
+			treasury = -1000000
 			random_country = { 
 				limit = { 
 					has_country_flag = dev_bank
@@ -194,7 +164,7 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			marshall_plan = 1
+			cold_war_doctrine = 1
 			OR = { 
 				overlord = { has_country_flag = world_bank } 
 				sphere_owner = { has_country_flag = world_bank } 
