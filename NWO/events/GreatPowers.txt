@@ -526,7 +526,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		# great_wars_enabled = no why is this yes??
+		# great_wars_enabled = no why is this enable?
 		NOT = { has_global_flag = great_wars_enabled }
 		tag = USA
 		cold_war = 1
@@ -553,6 +553,11 @@ country_event = {
 			relation = { who = THIS value = 50 }
 		}
 		ENG = { relation = { who = THIS value = 200 } }
+		# need to put this somewere
+		enable_canal = 1
+		enable_canal = 2
+		enable_canal = 3
+		enable_canal = 4	
 
 	}
 }
