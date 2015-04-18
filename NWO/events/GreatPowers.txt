@@ -552,6 +552,13 @@ country_event = {
 			}
 			relation = { who = THIS value = 50 }
 		}
+		any_country = { 
+			limit = { 
+				exists = yes
+			}
+			set_country_flag = recognized_government
+		}
+		
 		ENG = { relation = { who = THIS value = 200 } }
 		# need to put this somewere
 		enable_canal = 1
@@ -1199,15 +1206,15 @@ country_event = {
 		any_pop = {
 			scaled_militancy = {
 				ideology = islamist
-				factor = 6
+				factor = 2
 			}
 			scaled_militancy = {
 				ideology = communist
-				factor = 6
+				factor = 2
 			}
 			scaled_militancy = {
 				ideology = populist
-				factor = 6
+				factor = 1
 			}
 			scaled_militancy = {
 				ideology = liberal

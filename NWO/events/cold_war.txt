@@ -1,0 +1,148 @@
+
+# Soviet support communist regimes not in our sphere, may by decision improve relation with us thus targeting membership in comecon
+country_event = {
+	id = 19800
+	title = "EVTNAME19800"
+	desc = "EVTDESC19800"
+	picture = "soviet_economy"
+
+	trigger = {
+		NOT = { tag = RUS }
+		government = proletarian_dictatorship
+		RUS = { is_greater_power = yes government = proletarian_dictatorship } 
+		NOT = { has_country_modifier = comecon }
+		NOT = { has_country_modifier = bretton_system }
+		# TODO somehow china soviet rivality
+		#AND = {
+		#	NOT = { relation = { who = CHI value = 100 } }
+		#	CHI = { is_greater_power = yes government = proletarian_dictatorship }
+		#}
+		is_greater_power = no
+		war = no
+		year = 1948 # allow game start nations to become members of commecon
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA19800"
+		ai_chance = { factor = 100 }
+		RUS = { country_event =  19801 }
+		any_country = {
+			limit = { NOT = { government = proletarian_dictatorship } }
+			relation = { who = THIS value = -100 } 
+			diplomatic_influence = { who = THIS value = -50 } 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB19800"
+		ai_chance = { factor = 0 }
+		any_country = { 
+			limit = { NOT = { government = proletarian_dictatorship } } 
+			relation = { who = THIS value = -50 } 
+			diplomatic_influence = { who = THIS value = -50 } 
+		}
+	}
+}
+
+country_event = {
+	id = 19801
+	title = "EVTNAME19801"
+	desc = "EVTDESC19801"
+	picture = "soviet_economy"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19800"
+		ai_chance = { factor = 100 }
+		relation = { who = FROM value = -10 }
+		diplomatic_influence = { who = FROM value = 50 }
+	}
+	
+	option = {
+		name = "EVTOPTB19801"
+		ai_chance = { factor = 0 }
+		relation = { who = FROM value = -10 }
+	}
+
+}
+
+country_event = {
+	id = 19802
+	title = "EVTNAME19802" # Demand recognition of the new regime
+	desc = "EVTDESC19802"
+	picture = "recognized_government"
+
+	trigger = {
+		NOT = { has_country_flag = recognized_government }
+		NOT = { has_country_modifier = unrecognized_government }
+		OR = { 
+			government = proletarian_dictatorship
+			government = populist_dictatorship
+			government = nationalist_dictatorship 
+			government = islamist_dictatorship 
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "EVTOPTA19802"
+		ai_chance = { factor = 100 }
+		any_greater_power = { 
+			limit = { rank = 1 }
+			country_event =  19803
+		}
+		add_country_modifier = { name = unrecognized_government duration = 3600 }
+	}
+	
+}
+
+# US install_democracy war on any nation not having the flag recognized_government (set by startup event 19355)
+country_event = {
+	id = 19803
+	title = "EVTNAME19803"
+	desc = "EVTDESC19803"
+	picture = "castro_triumph"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19803"
+		ai_chance = { factor = 100 }
+		relation = { who = FROM value = -100 }
+		add_casus_belli = {
+	        target = FROM
+			type = install_democracy
+			months = 24
+		}
+		any_pop = {
+			dominant_issue = {
+				factor = 0.02
+				value = jingoism
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB19803"
+		ai_chance = { factor = 0 }
+		relation = { who = FROM value = -50 }
+		any_pop = {
+			dominant_issue	= {
+				factor = 0.01
+				value = jingoism
+			}
+		}
+		FROM = { set_country_flag = recognized_government }
+	}
+
+}
+
+
