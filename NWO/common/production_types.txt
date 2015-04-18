@@ -835,11 +835,11 @@ aeroplane_factory = {
 computers_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 60	
-		integrated_circuits = 60	
+		optics = 6.0	
+		integrated_circuits = 6.0	
 	}
 	output_goods = computers 
-	value = 375
+	value = 40
 	bonus = {
 		trigger = { has_building = optics_factory }
 		value = 0.125
@@ -853,11 +853,11 @@ computers_factory = {
 telecommunications_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 30	
-		integrated_circuits = 70
+		optics = 3.0	
+		integrated_circuits = 7.0
 	}
 	output_goods = telecommunications 
-	value = 426
+	value = 46
 	bonus = {
 		trigger = { has_building = optics_factory }
 		value = 0.125
@@ -912,11 +912,11 @@ automobiles_factory = {
 jewellery_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 30	
-		precious_metals = 18	
+		optics = 3.0	
+		precious_metals = 1.8	
 	}
 	output_goods = jewellery 
-	value = 372
+	value = 45
 	bonus = {
 		trigger = { trade_goods_in_state = precious_metals }
 		value = 0.125
@@ -948,11 +948,11 @@ beverage_tobacco_factory = {
 health_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		pharmaceuticals = 45	
-		optics = 80	
+		pharmaceuticals = 4.5	
+		optics = 8.0	
 	}
 	output_goods = health 
-	value = 464
+	value = 50
 	bonus = {
 		trigger = { has_building = pharmaceuticals_factory }
 		value = 0.125
@@ -966,11 +966,11 @@ health_factory = {
 furniture_houseware_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		furniture = 150	
-		heating_electricity = 60
+		furniture = 15.0	
+		heating_electricity = 6.0
 	}
 	output_goods = furniture_houseware 
-	value = 118
+	value = 14
 	bonus = {
 		trigger = { has_building = furniture_factory }
 		value = 0.125
@@ -984,11 +984,11 @@ furniture_houseware_factory = {
 clothes_footwear_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		clothes = 440	
-		footwear = 160	
+		clothes = 44.0	
+		footwear = 16.0	
 	}
 	output_goods = clothes_footwear 
-	value = 318
+	value = 33
 	bonus = {
 		trigger = { has_building = clothes_factory }
 		value = 0.125
@@ -1074,8 +1074,8 @@ communication_factory = {
 education_rnd_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		telecommunications = 30.00	
-		computers = 30.00	
+		telecommunications = 30
+		computers = 30
 	}
 	output_goods = education_rnd 
 	value = 58
@@ -1115,11 +1115,11 @@ culture_factory = {
 recreation_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		health = 30.00	
-		aeroplanes = 30.00	
+		health = 3.0
+		aeroplanes = 3.0	
 	}
 	output_goods = recreation 
-	value = 134
+	value = 15
 	bonus = {
 		trigger = { has_building = health_factory }
 		value = 0.125
@@ -1514,11 +1514,11 @@ artisan_integrated_circuits = {
 artisan_software_developer = {
 
 	input_goods = {    
-		optics = 60	
-		integrated_circuits = 60	
+		optics = 6	
+		integrated_circuits = 6	
 	}
 	output_goods = computers 
-	value = 373
+	value = 38
 
 	owner = {
 		poptype = artisan 
@@ -1551,8 +1551,8 @@ artisan_telephonist = {
 
 artisan_teacher = {       
 	input_goods = {    
-		telecommunications = 30.00	
-		computers = 30.00	
+		telecommunications = 30	
+		computers = 30
 	}
 	output_goods = education_rnd 
 	value = 57
@@ -1585,11 +1585,11 @@ artisan_culture = {
 
 artisan_recreation = {       
 	input_goods = {    
-		health = 30.00	
-		aeroplanes = 30.00	
+		health = 3	
+		aeroplanes = 3	
 	}
 	output_goods = recreation 
-	value = 133
+	value = 14
 	owner = {
 		poptype = artisan 
 		effect = output
