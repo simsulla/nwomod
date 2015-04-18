@@ -88,3 +88,48 @@ country_event = {
 	}
 
 }
+
+# French won Vietnam war
+country_event = {
+	id = 8228003
+
+	title = EVT_8228003_NAME
+	desc = EVT_8228003_DESC
+	picture = "french_vietnam"
+
+	trigger = {
+		tag = FRA
+		NOT = { exists = SVI }
+		NOT = { exists = DAI }
+		war = no
+		1380 = { controlled_by = FRA } # Saigon
+		1369 = { controlled_by = FRA } # Hanoi
+	}
+
+	mean_time_to_happen = {
+		months = 24 # militanyc modifier
+	}
+
+	option = {
+		name = EVT_8228003_A # Vietnam Independence
+		ai_chance = { factor = 0 }
+		prestige = -2
+		release_vassal = DAI
+		DAI = { government = hms_government }
+	}
+	
+	option = {
+		name = EVT_8228003_B
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = vietnamese
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			militancy = 10
+	   }
+	   badboy = 1
+	}
+
+}
