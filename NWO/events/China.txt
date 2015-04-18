@@ -307,16 +307,15 @@ country_event = {
 		TAI = { 
 			exists = yes
 			capital_scope  = { province_id = 1485 } # fed to Taiwan
+			is_greater_power = no
+			part_of_sphere = no
 		}
-		is_greater_power = no
-		part_of_sphere = no
 	}
 
 	option = {
 		name = "EVTOPTA90905" # support Taiwan
 		ai_chance = { factor = 100 }
 		diplomatic_influence = { who = TAI value = 100 }
-		RUS = { diplomatic_influence = { who = TAI value = -100 } }
 		relation = { who = TAI value = 100 }
 	}
 
