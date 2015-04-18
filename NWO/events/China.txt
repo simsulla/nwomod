@@ -183,9 +183,6 @@ country_event = {
 
 	option = {
 		name = "EVT_8002804_A" # demand unconditional return
-		ai_chance = {
-			factor = 0
-		}
 		leave_alliance = FROM
 		add_casus_belli = {
 			target = FROM
@@ -203,6 +200,138 @@ country_event = {
 	picture = "communist_china_buildup"
 
 	id = 90902
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		exists = yes
+		war = no
+		capital_scope = { NOT = { province_id = 1612 } }
+		any_owned_province = { province_id = 1612 }
+	}
+
+	option = {				
+		name = "EVTOPTA90902"
+		capital = 1612
+	}
+}
+
+country_event = {
+	title = "EVTNAME90903"
+	desc = "EVTDESC90903"
+	picture = "kmt_end_of_instability"
+
+	id = 90903
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = TAI
+		exists = yes
+		war = yes
+		war_with = CHI
+		OR = { 
+			CHI = { brigades_compare = 0.6 }
+			national_provinces_occupied = 0.5
+		}
+		any_owned_province = { province_id = 1485 } # we must still control Taibei
+	}
+	
+	option = {				
+		name = "EVTOPTA90903" # flee to Taiwan
+		ai_chance = { factor = 100 }
+		any_country = { limit = { war_with = THIS NOT = { tag = CHI } } end_war = THIS }
+		any_owned = { 
+			limit = { controlled_by = CHI NOT = { province_id = 1485 } NOT = { province_id = 1499 } NOT = { province_id = 2576 } NOT = { province_id = 2562 } }
+			secede_province = CHI
+		}
+		any_owned = { 
+			limit = { NOT = { controlled_by = CHI } NOT = { province_id = 1485 } NOT = { province_id = 1499 } NOT = { province_id = 2576 } NOT = { province_id = 2562 } }
+			secede_province = CHI
+			change_controller = REB
+		}
+		end_war = CHI
+		capital = 1485
+		CHI = { country_event = 90904 }
+	}
+	
+	option = {				
+		name = "EVTOPTB90903" # continue the war
+		ai_chance = { factor = 0 }		
+	}
+}
+
+country_event = {
+	id = 90904
+	title = "EVTNAME90904"
+	desc = "EVTDESC90904"
+	picture = "kmt_flees_to_taiwan"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA90904" # continue the war
+		ai_chance = { factor = 100 }	
+		war = {
+			target = TAI
+			attacker_goal = {
+				   casus_belli = acquire_core_state
+				   state_province_id = 1499
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		relation = { who = FROM value = -200 }
+	}
+
+	option = {				
+		name = "EVTOPTB90904" # accept KMT escaped
+		ai_chance = { factor = 0 }		
+	}
+
+}
+
+country_event = {
+	id = 90905
+	title = "EVTNAME90905"
+	desc = "EVTDESC90905"
+	picture = "kmt_unitedstates"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		TAI = { 
+			exists = yes
+			capital_scope  = { province_id = 1485 } # fed to Taiwan
+		}
+		is_greater_power = no
+		part_of_sphere = no
+	}
+
+	option = {
+		name = "EVTOPTA90905" # support Taiwan
+		ai_chance = { factor = 100 }
+		diplomatic_influence = { who = TAI value = 100 }
+		RUS = { diplomatic_influence = { who = TAI value = -100 } }
+		relation = { who = TAI value = 100 }
+	}
+
+	option = {
+		name = "EVTOPTB90905" # don't det involved
+		ai_chance = { factor = 0 }		
+	}
+
+}
+
+country_event = {
+	title = "EVTNAME90902"
+	desc = "EVTDESC90902"
+	picture = "communist_china_buildup"
+
+	id = 90906
 	
 	fire_only_once = yes
 
