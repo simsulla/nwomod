@@ -124,10 +124,10 @@ cement_template = {
 fish_canned_food_factory = {       
 	template = factory_template	
 	input_goods = { 
-		fish = 30
+		fish = 15
 	}
 	output_goods = canned_food 
-	value = 109
+	value = 67
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = fish
@@ -139,10 +139,10 @@ fish_canned_food_factory = {
 cattle_canned_food_factory = {       
 	template = factory_template	
 	input_goods = { 
-		cattle = 30
+		cattle = 15
 	}
 	output_goods = canned_food 
-	value = 109
+	value = 67
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = cattle 
@@ -155,10 +155,10 @@ cattle_canned_food_factory = {
 wool_canned_food_factory = {       
 	template = factory_template	
 	input_goods = { 
-		wool = 30
+		wool = 15
 	}
 	output_goods = canned_food 
-	value = 109
+	value = 67
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = wool 
@@ -170,10 +170,10 @@ wool_canned_food_factory = {
 fruit_canned_food_factory = {       
 	template = factory_template	
 	input_goods = { 
-		fruit = 30
+		fruit = 15
 	}
 	output_goods = canned_food 
-	value = 109
+	value = 67
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = fruit 
@@ -200,10 +200,10 @@ grain_canned_food_factory = {
 rice_canned_food_factory = {       
 	template = factory_template	
 	input_goods = { 
-		rice = 60
+		rice = 40
 	}
 	output_goods = canned_food 
-	value = 193
+	value = 137
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = rice 
@@ -215,10 +215,10 @@ rice_canned_food_factory = {
 oil_seeds_canned_food_factory = {       
 	template = factory_template	
 	input_goods = { 
-		oil_seeds = 30
+		oil_seeds = 15
 	}
 	output_goods = canned_food 
-	value = 109
+	value = 67
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = oil_seeds 
@@ -230,10 +230,10 @@ oil_seeds_canned_food_factory = {
 cement_factory = {       
 	template = cement_template
 	input_goods = {           
-		coal = 42
+		coal = 22
 	} 
 	output_goods = cement 
-	value = 120.00
+	value = 72
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.25
@@ -326,11 +326,11 @@ lumber_factory = {
 inorganic_chemicals_factory = {       
 	template = factory_template
 	input_goods = {    
-		other_minerals = 45	# see glass
-		coal = 20	
+		other_minerals = 20	# see glass
+		coal = 10
 	}
 	output_goods = inorganic_chemicals 
-	value = 20
+	value = 10
 	bonus = {
 		trigger = { trade_goods_in_state = other_minerals }
 		value = 0.125
@@ -422,11 +422,11 @@ paper_factory = {
 glass_factory = {       
 	template = factory_template
 	input_goods = {    
-		other_minerals = 45	
-		coal = 21	
+		other_minerals = 20	
+		coal = 10
 	}
 	output_goods = glass 
-	value = 87
+	value = 45
 	bonus = {
 		trigger = { trade_goods_in_state = other_minerals }
 		value = 0.125
@@ -564,11 +564,11 @@ clothes_factory = {
 optics_factory = {       
 	template = factory_template
 	input_goods = {    
-		plastics = 30	
-		glass = 30	
+		plastics = 8	
+		glass = 8	
 	}
 	output_goods = optics 
-	value = 6
+	value = 2
 	bonus = {
 		trigger = { 
 			OR = {
@@ -721,11 +721,11 @@ beverages_coffee_factory = {
 beverages_tea_factory = {
         template = factory_template
         input_goods = { 
-                tea = 240
+                tea = 240 # TODO
                 glass = 30
         }       
         output_goods = beverages
-        value = 72
+        value = 71
         bonus = {
                 trigger = { has_building = glass_factory }
                 value = 0.125
@@ -835,11 +835,11 @@ aeroplane_factory = {
 computers_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 6.0	
-		integrated_circuits = 6.0	
+		optics = 6
+		integrated_circuits = 6
 	}
 	output_goods = computers 
-	value = 40
+	value = 43
 	bonus = {
 		trigger = { has_building = optics_factory }
 		value = 0.125
@@ -853,11 +853,11 @@ computers_factory = {
 telecommunications_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 3.0	
-		integrated_circuits = 7.0
+		optics = 1	
+		integrated_circuits = 2
 	}
 	output_goods = telecommunications 
-	value = 46
+	value = 18
 	bonus = {
 		trigger = { has_building = optics_factory }
 		value = 0.125
@@ -871,11 +871,11 @@ telecommunications_factory = {
 electric_telecommunications_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		electric_gear = 30.00	
-		integrated_circuits = 30.00	
+		electric_gear = 30	
+		integrated_circuits = 30	
 	}
 	output_goods = telecommunications 
-	value = 169
+	value = 175
 	bonus = {
 		trigger = { has_building = electric_gear_factory }
 		value = 0.125
@@ -912,11 +912,11 @@ automobiles_factory = {
 jewellery_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 3.0	
-		precious_metals = 1.8	
+		optics = 3
+		precious_metals = 18	
 	}
 	output_goods = jewellery 
-	value = 45
+	value = 9
 	bonus = {
 		trigger = { trade_goods_in_state = precious_metals }
 		value = 0.125
@@ -934,7 +934,7 @@ beverage_tobacco_factory = {
 		beverages = 40	
 	}
 	output_goods = beverage_tobacco 
-	value = 63
+	value = 64
 	bonus = {
 		trigger = { has_building = cigarettes_factory }
 		value = 0.125
@@ -952,7 +952,7 @@ health_factory = {
 		optics = 8.0	
 	}
 	output_goods = health 
-	value = 50
+	value = 54
 	bonus = {
 		trigger = { has_building = pharmaceuticals_factory }
 		value = 0.125
@@ -1005,7 +1005,7 @@ weaponry_factory = {
 	template = modern_factory_template
 	input_goods = {    
 		telecommunications = 30	
-		automobiles = 30.00	
+		automobiles = 30	
 	}
 	output_goods = weaponry 
 	value = 59
@@ -1051,11 +1051,11 @@ transport_factory = {
 communication_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		telecommunications = 30.00	
-		computers = 30.00	
+		telecommunications = 30
+		computers = 30
 	}
 	output_goods = communication 
-	value = 58
+	value = 59
 	bonus = {
 		trigger = { has_building = computers_factory }
 		value = 0.125
@@ -1078,7 +1078,7 @@ education_rnd_factory = {
 		computers = 30
 	}
 	output_goods = education_rnd 
-	value = 58
+	value = 59
 	bonus = {
 		trigger = { has_building = computers_factory }
 		value = 0.125
@@ -1136,7 +1136,7 @@ financial_services_factory = {
 		computers = 58
 	}
 	output_goods = financial_services 
-	value = 57
+	value = 58
 	bonus = {
 		trigger = { has_building = computers_factory }
 		value = 0.25
@@ -1358,10 +1358,10 @@ credit_mine = {
 
 artisan_fishmonger = {       
 	input_goods = { 
-		fish = 30
+		fish = 15
 	}
 	output_goods = canned_food 
-	value = 96
+	value = 54
 	
 	owner = {
 		poptype = artisan 
@@ -1375,10 +1375,10 @@ artisan_fishmonger = {
 
 artisan_canned_food = {       
 	input_goods = { 
-		cattle = 30
+		cattle = 15
 	}
 	output_goods = canned_food 
-	value = 96
+	value = 54
 	
 	owner = {
 		poptype = artisan 
@@ -1392,10 +1392,10 @@ artisan_canned_food = {
 
 artisan_costermonger = {       
 	input_goods = { 
-		fruit = 30
+		fruit = 15
 	}
 	output_goods = canned_food 
-	value = 96
+	value = 54
 	
 	owner = {
 		poptype = artisan 
@@ -1427,10 +1427,10 @@ artisan_baker = {
 
 artisan_rice_trader = {       
 	input_goods = { 
-		rice = 60
+		rice = 40
 	}
 	output_goods = canned_food 
-	value = 180
+	value = 124
 	
 	owner = {
 		poptype = artisan 
@@ -1445,10 +1445,10 @@ artisan_rice_trader = {
 
 artisan_seeds_trader = {       
 	input_goods = { 
-		oil_seeds = 30
+		oil_seeds = 15
 	}
 	output_goods = canned_food 
-	value = 96
+	value = 54
 	
 	owner = {
 		poptype = artisan 
@@ -1518,7 +1518,7 @@ artisan_software_developer = {
 		integrated_circuits = 6	
 	}
 	output_goods = computers 
-	value = 38
+	value = 41
 
 	owner = {
 		poptype = artisan 
@@ -1537,7 +1537,7 @@ artisan_telephonist = {
 		computers = 30.00	
 	}
 	output_goods = communication 
-	value = 57
+	value = 58
 
 	owner = {
 		poptype = artisan 
@@ -1555,7 +1555,7 @@ artisan_teacher = {
 		computers = 30
 	}
 	output_goods = education_rnd 
-	value = 57
+	value = 58
 	owner = {
 		poptype = artisan 
 		effect = output
