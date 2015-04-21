@@ -2,7 +2,9 @@
 name = "Bosnian War"
 1992.1.1 = {
 	add_attacker = BOS
+	add_attacker = HZB
 	add_defender = RSR
+	add_defender = SRK
 	add_defender = SER
 	war_goal = {
 		casus_belli = annex_core_country
@@ -10,9 +12,22 @@ name = "Bosnian War"
 		receiver = RSR
 		country = RSR
 	}
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = acquire_core_state
+		actor = RSR
+		receiver = BOS
+		state_province_id = 786
+	}	
 }
 1995.12.14 = {
 	rem_attacker = BOS
+	rem_attacker = HZB
 	rem_defender = RSR
+	rem_defender = SRK
 	rem_defender = SER
 }
