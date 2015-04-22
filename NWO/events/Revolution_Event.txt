@@ -140,7 +140,7 @@ country_event = {
 
 	title = "EVTNAME800051"  #The New Regime- islamist # Fascist
 	desc = "EVTDESC800051"
-	picture = "Fascist"
+	picture = "islamist"
 
 	option = {
 		name = "EVTOPTA800051"
@@ -154,7 +154,7 @@ country_event = {
 					NOT = { ruling_party_ideology = islamist }
 				}
 			}
-			owner = { ruling_party_ideology = populist }
+			owner = { ruling_party_ideology = islamist }
 		}
 		capital_scope = {
 			any_pop = {
@@ -169,11 +169,11 @@ country_event = {
 		any_pop = {
 			scaled_militancy = {
 				ideology = populist
-				factor = -4
+				factor = 1
 			}
 			scaled_militancy = {
 				ideology = conservative
-				factor = -2
+				factor = -4
 			}
 			scaled_militancy = {
 				ideology = islamist
@@ -181,15 +181,15 @@ country_event = {
 			}
 			scaled_militancy = {
 				ideology = liberal
-				factor = 2
+				factor = 1
 			}
 			scaled_militancy = {
 				ideology = socialist
-				factor = 2
+				factor = 1
 			}
 			scaled_militancy = {
 				ideology = communist
-				factor = 4
+				factor = 2
 			}
 		}
 		any_owned = {
