@@ -1,0 +1,50 @@
+#afghanistan.txt
+country_event = {
+	id = 8000101
+
+	title = EVT_8000101_NAME
+	desc = EVT_8000101_DESC
+	picture = "taliban"
+
+	trigger = {
+		tag = AFG
+		NOT = { government = islamist_dictatorship }
+		NOT = { has_country_modifier = sharia }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = EVT_8000101_A 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			scaled_militancy = {
+				issue = moralism
+                factor = 5
+            }
+		}		
+		add_country_modifier = { name = sharia duration = 1750 }
+	}
+
+	option = {
+		name = EVT_8000101_B
+		ai_chance = { factor = 100 }
+		any_pop = {
+			scaled_consciousness = {
+				issue = moralism
+                factor = 5
+            }
+		}
+		any_pop = {
+			limit = {
+				religion = sunni
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+            militancy = 6
+		}
+	}
+
+}
