@@ -43,3 +43,50 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	id = 8015802
+
+	title = EVT_8015802_NAME
+	desc = EVT_8015802_DESC
+	picture = "911"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		war = no
+		AFG = { government = islamist_dictatorship }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = { factor = 0.8 AFG = { government = islamist_dictatorship } }
+	}
+
+	option = {
+		name = EVT_8015802_A 
+		ai_chance = { factor = 100 }
+		any_country = { relation = { who = AFG value = -200 } }
+		war = {
+			target = AFG
+			attacker_goal = { casus_belli = install_democracy }
+			call_ally = yes
+		}
+		prestige = 20
+		badboy = 0.5
+	}
+	
+	option = {
+		name = EVT_8015802_B 
+		ai_chance = { factor = 0 }
+		any_country = { relation = { who = AFG value = -200 } }
+		add_casus_belli = {
+			target = AFG
+			type = install_democracy
+			months = 60
+		}
+		prestige = -20
+	}
+
+}
