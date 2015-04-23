@@ -782,30 +782,19 @@ promote_to =
 	soldiers =
 	{
 		factor = 0.01
+		modifier = {
+			factor = -100 
+			NOT = { is_accepted_culture = yes }
+			NOT = { is_primary_culture = yes }
+		}	
 		group = {
 			modifier = {
 				factor = -4
 				recruited_percentage = 0.0
 			}
 			modifier = {
-				factor = 1
-				recruited_percentage = 0.25
-			}
-			modifier = {
-				factor = 1
-				recruited_percentage = 0.33
-			}
-			modifier = {
-				factor = 1
-				recruited_percentage = 0.40
-			}
-			modifier = {
 				factor = 0.5
-				recruited_percentage = 0.50
-			}
-			modifier = {
-				factor = 0.5
-				recruited_percentage = 0.60
+				recruited_percentage = 0.90
 			}
 		}
 	
@@ -865,32 +854,8 @@ promote_to =
 				soldiers = 0.015
 			}
 			modifier = {
-				factor = -2
+				factor = -50
 				soldiers = 0.02
-			}
-			modifier = {
-				factor = -2
-				soldiers = 0.025
-			}
-			modifier = {
-				factor = -2
-				soldiers = 0.03
-			}
-			modifier = {
-				factor = -2
-				soldiers = 0.035
-			}
-			modifier = {
-				factor = -2
-				soldiers = 0.04
-			}
-			modifier = {
-				factor = -2
-				soldiers = 0.045
-			}
-			modifier = {
-				factor = -100
-				soldiers = 0.05
 			}
 		}
 	}
