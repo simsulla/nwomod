@@ -691,6 +691,7 @@ ai =
 	INDUSTRYWORKER_WEIGHT = 3.5, -- ai weight for new industry workers
 	EDUCATOR_WEIGHT = 4.5, -- ai weigth for new clergy
 	SOLDIER_WEIGHT = 5.0, -- ai weight for soldiers
+	SOLDIER_FRACTION = 0.005, -- max amount of population AI wants to be soldiers
 	CAPITALIST_FRACTION = 0.01, -- max amount of population AI wants to be capis
 	PRODUCTION_WEIGHT = 0.5, -- ai weight for new production
 	SPAM_PENALTY = 10, -- makes certain diplomatic action less common 
