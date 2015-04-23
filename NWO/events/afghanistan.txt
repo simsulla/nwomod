@@ -25,6 +25,7 @@ country_event = {
                 factor = 5
             }
 		}		
+		prestige = -10
 		add_country_modifier = { name = sharia duration = 1750 }
 	}
 
@@ -32,18 +33,11 @@ country_event = {
 		name = EVT_8000101_B
 		ai_chance = { factor = 100 }
 		any_pop = {
-			scaled_consciousness = {
-				issue = moralism
-                factor = 5
-            }
-		}
-		any_pop = {
 			limit = {
 				religion = sunni
 				is_primary_culture = no
-				is_accepted_culture = no
 			}
-            militancy = 6
+            militancy = 10
 		}
 	}
 
