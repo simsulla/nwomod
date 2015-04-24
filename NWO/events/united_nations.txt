@@ -41,8 +41,8 @@ country_event = {
 			limit = { 
 				THIS = { 
 					OR = { 
-						AND = { tag = CHI has_global_flag = china_united_nations_security_council }
-						tag = TAI
+						AND = { tag = CHI year = 1971 }
+						AND = { tag = TAI NOT = { year = 1971 } }
 						tag = ENG
 						tag = USA
 						tag = FRA
@@ -53,7 +53,8 @@ country_event = {
 				is_greater_power = yes 
 				# same list as in  united_nations.txt decition
 				OR = { 
-					AND = { tag = CHI has_global_flag = china_united_nations_security_council }
+					AND = { tag = CHI year = 1971 }
+					AND = { tag = TAI NOT = { year = 1971 } }
 					tag = TAI
 					tag = ENG
 					tag = USA
