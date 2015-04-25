@@ -289,14 +289,42 @@ migration_target =
 
 promote_to =
 {
-	# Demoted
-	soldiers = { 
+	aristocrats =
+	{
 		factor = 0.01
-		modifier = { factor = 5 NOT = { life_needs = 0.80 } }		
 		group = {
-			modifier = { factor = 2.5 unemployment = 0.5 }
-			modifier = { factor = 2.5 unemployment = 0.9 }
+			modifier = { factor = 10 state_scope = { NOT = { aristocrats = 0.008 } } }
+			modifier = { factor = -2 state_scope = { aristocrats = 0.008 } }
+			modifier = { factor = -2 state_scope = { aristocrats = 0.016 } }
+			modifier = { factor = -2 state_scope = { aristocrats = 0.024 } }
+			modifier = { factor = -2 state_scope = { aristocrats = 0.032 } }
+			modifier = { factor = -2 state_scope = { aristocrats = 0.04 } }
+			modifier = { factor = -2 state_scope = { aristocrats = 0.06 } }
+			modifier = { factor = -2 state_scope = { aristocrats = 0.08 } }
 		}
+	}
+	
+	capitalists = {
+		factor = 0.01
+		group = {
+			modifier = { factor = 10 state_scope = { NOT = { capitalists = 0.008 } } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.016 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.024 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.032 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.04 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.06 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.08 } }
+		}		
+	}
+	# Demoted
+	craftsmen = {
+		factor = 0.01
+		modifier = { factor = 5 location = { NOT = { unemployment_by_type = { type = craftsmen value = 0.1 } } } }
+	}	
+	farmers = { #and labourers
+		factor = 0.01
+		modifier = { factor = 5 location = { NOT = { unemployment_by_type = { type = farmers value = 0.1 } } } }
+		modifier = { factor = 5 location = { NOT = { unemployment_by_type = { type = labourers value = 0.1 } } } }
 	}
 }
 

@@ -411,49 +411,15 @@ promote_to =
 {
 	craftsmen = {
 		factor = 0.01
-		group = {
-			modifier = { factor = 1 literacy = 0.05 }
-			modifier = { factor = 1 literacy = 0.1 }
-			modifier = { factor = 1 literacy = 0.2 }
-			modifier = { factor = 1 literacy = 0.3 }
-			modifier = { factor = 1 literacy = 0.4 }
-			modifier = { factor = 1 literacy = 0.5 }
-			modifier = { factor = 1 literacy = 0.6 }
-			modifier = { factor = 1 literacy = 0.7 }
-			modifier = { factor = 1 literacy = 0.8 }
-			modifier = { factor = 1 literacy = 0.9 }
-		}
-		modifier = { factor = -10 luxury_needs = 0.90 }
-		group = {
-			modifier = { factor = -5 everyday_needs = 0.5 }
-			modifier = { factor = -5 everyday_needs = 0.9 }
-		}
-		modifier = { factor = 2 location = { work_available = { worker = craftsmen } NOT = { unemployment_by_type = { type = craftsmen value = 0.1 } } } }
+		modifier = { factor = 5 location = { work_available = { worker = craftsmen } NOT = { unemployment_by_type = { type = craftsmen value = 0.3 } } } }
 	}
 
 	soldiers =
 	{
 		factor = 0.01
-		modifier = { factor = -10 NOT = { is_primary_culture = yes } }
+		modifier = { factor = -2 NOT = { is_primary_culture = yes } }
 		group = {
-			modifier = { factor = 1 literacy = 0.05 }
-			modifier = { factor = 1 literacy = 0.1 }
-			modifier = { factor = 1 literacy = 0.2 }
-			modifier = { factor = 1 literacy = 0.3 }
-			modifier = { factor = 1 literacy = 0.4 }
-			modifier = { factor = 1 literacy = 0.5 }
-			modifier = { factor = 1 literacy = 0.6 }
-			modifier = { factor = 1 literacy = 0.7 }
-			modifier = { factor = 1 literacy = 0.8 }
-			modifier = { factor = 1 literacy = 0.9 }
-		}
-		modifier = { factor = -10 luxury_needs = 0.90 }
-		group = {
-			modifier = { factor = -5 everyday_needs = 0.5 }
-			modifier = { factor = -5 everyday_needs = 0.9 }
-		}	
-		group = {
-			modifier = { factor = 2 state_scope = { soldiers = 0.001 } }
+			modifier = { factor = 1 state_scope = { soldiers = 0.001 } }
 			modifier = { factor = -2 state_scope = { soldiers = 0.001 } }
 			modifier = { factor = -2 state_scope = { soldiers = 0.002 } }
 			modifier = { factor = -2 state_scope = { soldiers = 0.003 } }

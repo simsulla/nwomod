@@ -248,15 +248,8 @@ migration_target =
 
 promote_to =
 {
-	# Demoted
-	artisans = { #and labourers
-		factor = 0.01
-		modifier = { factor = 5 NOT = { life_needs = 0.80 } }		
-		group = {
-			modifier = { factor = 2.5 unemployment = 0.5 }
-			modifier = { factor = 2.5 unemployment = 0.9 }
-		}
-	}
+	capitalists = { factor = 0.01 modifier = { factor = 2 } }
+	artisans = { factor = 0.01 modifier = { factor = 2 } }
 }
 
 ideologies = {

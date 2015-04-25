@@ -296,25 +296,8 @@ promote_to =
 	aristocrats =
 	{
 		factor = 0.01
-		modifier = { factor = 2 NOT = { is_primary_culture = yes } }
 		group = {
-			modifier = { factor = 1 literacy = 0.05 }
-			modifier = { factor = 1 literacy = 0.1 }
-			modifier = { factor = 1 literacy = 0.2 }
-			modifier = { factor = 1 literacy = 0.3 }
-			modifier = { factor = 1 literacy = 0.4 }
-			modifier = { factor = 1 literacy = 0.5 }
-			modifier = { factor = 1 literacy = 0.6 }
-			modifier = { factor = 1 literacy = 0.7 }
-			modifier = { factor = 1 literacy = 0.8 }
-			modifier = { factor = 1 literacy = 0.9 }
-		}
-		modifier = { factor = -10 luxury_needs = 0.90 }
-		group = {
-			modifier = { factor = -5 everyday_needs = 0.5 }
-			modifier = { factor = -5 everyday_needs = 0.9 }
-		}	
-		group = {
+			modifier = { factor = 10 state_scope = { NOT = { aristocrats = 0.008 } } }
 			modifier = { factor = -2 state_scope = { aristocrats = 0.008 } }
 			modifier = { factor = -2 state_scope = { aristocrats = 0.016 } }
 			modifier = { factor = -2 state_scope = { aristocrats = 0.024 } }
@@ -328,75 +311,27 @@ promote_to =
 	capitalists = {
 		factor = 0.01
 		group = {
-			modifier = { factor = 1 literacy = 0.05 }
-			modifier = { factor = 1 literacy = 0.1 }
-			modifier = { factor = 1 literacy = 0.2 }
-			modifier = { factor = 1 literacy = 0.3 }
-			modifier = { factor = 1 literacy = 0.4 }
-			modifier = { factor = 1 literacy = 0.5 }
-			modifier = { factor = 1 literacy = 0.6 }
-			modifier = { factor = 1 literacy = 0.7 }
-			modifier = { factor = 1 literacy = 0.8 }
-			modifier = { factor = 1 literacy = 0.9 }
-		}
-		modifier = { factor = -10 luxury_needs = 0.90 }
-		group = {
-			modifier = { factor = -5 everyday_needs = 0.5 }
-			modifier = { factor = -5 everyday_needs = 0.9 }
-		}
-	}
-
-	officers =
-	{
-		factor = 0.01
-		modifier = { factor = -10 NOT = { is_primary_culture = yes } }
-		group = {
-			modifier = { factor = 1 literacy = 0.05 }
-			modifier = { factor = 1 literacy = 0.1 }
-			modifier = { factor = 1 literacy = 0.2 }
-			modifier = { factor = 1 literacy = 0.3 }
-			modifier = { factor = 1 literacy = 0.4 }
-			modifier = { factor = 1 literacy = 0.5 }
-			modifier = { factor = 1 literacy = 0.6 }
-			modifier = { factor = 1 literacy = 0.7 }
-			modifier = { factor = 1 literacy = 0.8 }
-			modifier = { factor = 1 literacy = 0.9 }
-		}
-		modifier = { factor = -10 luxury_needs = 0.90 }
-		group = {
-			modifier = { factor = -5 everyday_needs = 0.5 }
-			modifier = { factor = -5 everyday_needs = 0.9 }
-		}	
-		group = {
-			modifier = { factor = 2 state_scope = { soldiers = 0.001 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.002 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.003 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.004 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.005 } }
-			modifier = { factor = -12 state_scope = { soldiers = 0.01 } }
-		}
+			modifier = { factor = 10 state_scope = { NOT = { capitalists = 0.008 } } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.016 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.024 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.032 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.04 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.06 } }
+			modifier = { factor = -2 state_scope = { capitalists = 0.08 } }
+		}		
 	}
 
 	# Demoted
 	craftsmen = {
 		factor = 0.01
-		modifier = { factor = 5 NOT = { life_needs = 0.80 } }		
-		group = {
-			modifier = { factor = 2.5 unemployment = 0.5 }
-			modifier = { factor = 2.5 unemployment = 0.9 }
-		}
-		modifier = { factor = -5 location = { unemployment_by_type = { type = craftsmen value = 0.1 } } }
+		modifier = { factor = 5 location = { NOT = { unemployment_by_type = { type = craftsmen value = 0.1 } } } }
 	}	
 	farmers = { #and labourers
 		factor = 0.01
-		modifier = { factor = 5 NOT = { life_needs = 0.80 } }		
-		group = {
-			modifier = { factor = 2.5 unemployment = 0.5 }
-			modifier = { factor = 2.5 unemployment = 0.9 }
-		}
-		modifier = { factor = -5 location = { unemployment_by_type = { type = farmers value = 0.1 } } }
-		modifier = { factor = -5 location = { unemployment_by_type = { type = labourers value = 0.1 } } }
+		modifier = { factor = 5 location = { NOT = { unemployment_by_type = { type = farmers value = 0.1 } } } }
+		modifier = { factor = 5 location = { NOT = { unemployment_by_type = { type = labourers value = 0.1 } } } }
 	}
+
 
 }
 
