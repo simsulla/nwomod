@@ -4,6 +4,9 @@ political_decisions = {
 	sino_soviet_friendship_chi = {
 		picture = "sino_soviet_friendship"
 		potential = {
+			RUS = { war = no government = proletarian_dictatorship }
+			war = no
+			government = proletarian_dictatorship
 			NOT = { has_country_flag = sino_soviet_friendship }
 			OR = { RUS = { ai = yes } AND =  { RUS = { ai = yes } CHI = { ai = yes } }  }
 			tag = CHI
