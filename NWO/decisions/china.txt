@@ -24,6 +24,10 @@ political_decisions = {
 			create_alliance = RUS
 			RUS = { diplomatic_influence = { who = CHI value = 100 }  }
 		}
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	
 	the_return_of_port_arthur = {
@@ -47,6 +51,9 @@ political_decisions = {
 			RUS = { country_event = 32500 }
 			add_country_modifier = { name = comecon duration = 1750 }
 			set_country_flag = the_return_of_port_arthur
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}	
 
@@ -72,7 +79,7 @@ political_decisions = {
 				AND = { year = 1997 ai = yes }
 				AND = {
 					relation =  { who = ENG value = 100 } 
-					rank = 2
+					rank = 3
 					NOT = { ENG = { rank = 2 } }
 				}
 			}
@@ -83,6 +90,11 @@ political_decisions = {
 			CHI = { set_country_flag = the_return_of_hong_kong }
 			ENG = { country_event = 8002801 }
 		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
 	}
 	
 	the_return_of_macao = {
@@ -118,7 +130,116 @@ political_decisions = {
 			CHI = { set_country_flag = the_return_of_macao }
 			POR = { country_event = 8002802 }
 		}
+		
+		ai_will_do = {
+			factor = 1
+		}
 	}	
 	
+	chinese_reunification = {
+		picture = "chinese_reunification"
+		potential = {
+			OR = {
+				tag = TAI
+				tag = CHI
+			}
+			NOT = { has_global_flag = chinese_reunification }
+		}
+		allow = {
+			TAI = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}		
+			CHI = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+			OR = { 
+				AND = { CHI = { government = proletarian_dictatorship } TAI = { government = proletarian_dictatorship} } 
+				AND = { CHI = { government = democracy } TAI = { government = democracy} } 
+			}
+		}
+		effect = {
+			set_global_flag = chinese_reunification
+			prestige = 20
+			change_tag = CHI
+			any_country = {
+				limit = {
+					any_core = {is_core = CHI}
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	lesser_taiwan = {
+			picture = "lesser_taiwan"
+			potential = {
+					tag = TAI
+					OR = {
+							government = democracy
+							government = hms_government
+					}
+					2576 = { owned_by = THIS }
+					CHI = { exists = yes }
+			}
 
+			allow = {
+					war = no
+					average_militancy = 5
+					OR = {
+						is_vassal = no
+						part_of_sphere = yes
+					}
+					OR = {
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal
+					}
+			}
+
+			effect = {
+					prestige = 10
+					any_pop = {
+					   consciousness = 1
+					   militancy = -4
+					}
+					set_country_flag = lesser_taiwan
+					all_core = { 
+						limit = { NOT = { owned_by = THIS } }
+						remove_core = TAI
+					}
+					2576 = { remove_core = TAI }
+					relation = { who = JAP value = 50 }
+					relation = { who = IDO value = 50 }
+					relation = { who = PHI value = 50 }
+					relation = { who = MSY value = 50 }
+					relation = { who = CHI value = -100 }
+					# TODO add event that offerc China to rejct CHI = { country_event = xxxxx } 
+					2576 = { owner = CHI }
+			}
+
+	}	
+	
+	
 }
