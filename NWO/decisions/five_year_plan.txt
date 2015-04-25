@@ -16,8 +16,7 @@ political_decisions = {
 			allow = {
 				OR = {
 					government = proletarian_dictatorship
-					ruling_party_ideology = socialist
-					ruling_party_ideology = progressive
+					AND = { NOT = { year = 1992 } ruling_party_ideology = socialist }
 				}
 				public_switched_telephone_network = 1
 				war = no
