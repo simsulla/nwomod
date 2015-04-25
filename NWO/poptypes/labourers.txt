@@ -224,6 +224,12 @@ migration_target =
 	#	any_core = { is_primary_culture = THIS }
 	#}
 	modifier = {
+		# prevent mass migration to minority areas (like chines to autonomous regions )
+		factor = -10
+		is_primary_culture  = yes
+		location = { is_primary_culture = no is_capital = no }
+	}
+	modifier = {
 		factor = 8
 		is_state_capital = yes
 	}

@@ -218,6 +218,12 @@ migration_target =
 	#}
 	# prevent china swamping minority areas with migrants
 	modifier = {
+		# prevent mass migration to minority areas (like chines to autonomous regions )
+		factor = -10
+		is_primary_culture  = yes
+		location = { is_primary_culture = no is_capital = no }
+	}
+	modifier = {
 		factor = 8
 		is_state_capital = yes
 	}
