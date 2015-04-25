@@ -4,11 +4,23 @@ promotion_chance =
 	group = {
 		modifier = {
 			factor = 0.03
-			literacy = 0.05
+			literacy = 0.02
 		}
 		modifier = {
 			factor = 0.03
-			literacy = 0.1 
+			literacy = 0.04 
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.1
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.12
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.16
 		}
 		modifier = {
 			factor = 0.03
@@ -16,31 +28,19 @@ promotion_chance =
 		}
 		modifier = {
 			factor = 0.03
-			literacy = 0.3
+			literacy = 0.24
 		}
 		modifier = {
 			factor = 0.03
-			literacy = 0.4
+			literacy = 0.28
 		}
 		modifier = {
 			factor = 0.03
-			literacy = 0.5
+			literacy = 0.32
 		}
 		modifier = {
 			factor = 0.03
-			literacy = 0.6
-		}
-		modifier = {
-			factor = 0.03
-			literacy = 0.7
-		}
-		modifier = {
-			factor = 0.03
-			literacy = 0.8
-		}
-		modifier = {
-			factor = 0.03
-			literacy = 0.9
+			literacy = 0.36
 		}
 	}
 
@@ -313,19 +313,19 @@ factor = 0.5
 	group = {
 		modifier = {
 			factor = -0.1
-			not = { literacy = 0.4 }
-		}
-		modifier = {
-			factor = -0.1
-			not = { literacy = 0.3 }
-		}
-		modifier = {
-			factor = -0.1
 			not = { literacy = 0.2 }
 		}
 		modifier = {
 			factor = -0.1
+			not = { literacy = 0.15 }
+		}
+		modifier = {
+			factor = -0.1
 			not = { literacy = 0.1 }
+		}
+		modifier = {
+			factor = -0.1
+			not = { literacy = 0.05 }
 		}
 	}
 	modifier = {
@@ -366,9 +366,10 @@ factor = 0.5
 		}		
 	}
 	modifier = {
-		factor = 3
-		THIS = { has_pop_religion = jewish }
-		location = { NOT = { is_core = ISR } }
+		# prevent mass migration to minority areas (like chines to autonomous regions )
+		factor = -0.4
+		is_primary_culture  = yes
+		location = { is_primary_culture = no is_capital = no }
 	}
 }
 
@@ -429,11 +430,6 @@ colonialmigration_chance = {
 	modifier = { # roundabout way to mod that only people with money can emigrate
 		factor = -10
 		strata = poor
-	}
-	modifier = {
-		factor = 3
-		has_pop_religion = jewish
-		location = { NOT = { is_core = ISR } } 
 	}
 	modifier = {
 		factor = -100
@@ -616,11 +612,6 @@ emigration_chance =
 	modifier = { # roundabout way to mod that only people with money can emigrate
 		factor = -10
 		strata = poor
-	}
-	modifier = {
-		factor = 3
-		has_pop_religion = jewish
-		location = { NOT = { is_core = ISR } } 
 	}
 	modifier = {
 		factor = -100
