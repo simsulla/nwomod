@@ -10,9 +10,14 @@ country_event = {
 		NOT = { tag = FROM }
 		part_of_sphere = no
 		is_vassal = no
+		FROM = {
+			part_of_sphere = no
+			is_vassal = no
+		}
 	}
 
 	is_triggered_only = yes
+	
 	option = {
 		name = "EVTOPTA70002"
 		casus_belli = {
@@ -33,7 +38,7 @@ country_event = {
 		# limitations same as for gunboat war
 		part_of_sphere = no
 		is_vassal = no
-		THIS = {
+		FROM = {
 			part_of_sphere = no
 			is_vassal = no
 		}		
@@ -57,10 +62,18 @@ country_event = {
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
 	trigger = {
-
+		NOT = { tag = FROM }
+		# limitations same as for gunboat war
+		part_of_sphere = no
+		is_vassal = no
+		FROM = {
+			part_of_sphere = no
+			is_vassal = no
+		}
 	}
 
 	is_triggered_only = yes
+
 	option = {
 		name = "EVTOPTA70002"
 		casus_belli = {
