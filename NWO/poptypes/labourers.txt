@@ -469,12 +469,85 @@ promote_to =
 
 ideologies = {
 	
+	nationalist = {
+		factor = 1
+		modifier = { factor = 0 is_primary_culture = yes NOT = { ruling_party_ideology = nationalist } }
+		modifier = { factor = 0 is_primary_culture = no	ruling_party_ideology = nationalist } # exclude populist and islamists
+		modifier = {
+			factor = 0.5
+			not = { militancy = 6 }
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.01
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.02
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.03
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.04
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.05
+		}
+		modifier = {
+			factor = 2
+		 	revanchism = 0.10
+		}
+		modifier = {
+			factor = 4
+		 	revanchism = 0.15
+		}
+		modifier = {
+			factor = 8
+		 	revanchism = 0.20
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { political_reform_want = 0.15 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { political_reform_want = 0.05 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { political_reform_want = 0.10 }
+		}	
+		modifier = {
+			factor = 2
+			ruling_party_ideology = populist
+		}
+		modifier = {
+			factor = 1.1
+			poor_strata_militancy = 5
+		}
+		modifier = {
+			factor = 1.1
+			poor_strata_militancy = 6
+		}
+		modifier = {
+			factor = 1.1
+			poor_strata_militancy = 7
+		}
+		modifier = {
+			factor = 1.1
+			poor_strata_militancy = 8
+		}
+	}
+	
 	populist = {
 		factor = 1
-		modifier = { 
-			factor = 0.01
-			is_primary_culture = no
-		}
+		modifier = { factor = 0  OR = { location = { pop_majority_religion = sunni } location = { pop_majority_religion = shiite } } } # only muslim
+		modifier = { factor = 0 is_primary_culture = no } 
+		modifier = { factor = 0 is_primary_culture = yes ruling_party_ideology = nationalist } # exclude nationalist
 		modifier = {
 			factor = 0.5
 			not = { militancy = 6 }
@@ -547,11 +620,8 @@ ideologies = {
 	
 	islamist = {
 		factor = 1
-		modifier = {
-			factor = 0.01
-			NOT = { religion = sunni }
-			NOT = { religion = shiite }
-		}
+		modifier = { factor = 0 NOT = { location = { pop_majority_religion = sunni } location = { pop_majority_religion = shiite } } } # only muslim
+		modifier = { factor = 0 is_primary_culture = yes ruling_party_ideology = nationalist } # exclude nationalist
 		modifier = {
 			factor = 0.5
 			militancy = 6
@@ -637,13 +707,7 @@ ideologies = {
 	
 	conservative = {
 		factor = 1
-		modifier = {
-			factor = 0.01
-			OR = { 
-				religion = sunni
-				religion = shiite
-			}
-		}
+		modifier = { factor = 0 OR = { location = { pop_majority_religion = sunni } location = { pop_majority_religion = shiite }  } is_primary_culture = yes }
 		modifier = {
 			factor = 0.5
 			militancy = 6
