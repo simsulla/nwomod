@@ -6,8 +6,8 @@ political_decisions = {
                 potential = {
 					year = 1949
                     NOT =  {
-						has_country_modifier = alliance_nato 
-						has_country_modifier = leave_alliance_nato 
+						capital_scope = { has_province_modifier = alliance_nato }
+						capital_scope = { has_province_modifier = leave_alliance_nato } 
 					}
 					OR = {
 						tag = USA
@@ -18,7 +18,7 @@ political_decisions = {
 						}
 					}
 					OR = {
-						USA = { has_country_modifier = alliance_nato }
+						USA = { capital_scope = { has_province_modifier = alliance_nato } }
 						tag = USA
 					}
 					NOT = { government = proletarian_dictatorship }
@@ -27,8 +27,8 @@ political_decisions = {
                 allow = {
 					has_unclaimed_cores = no
                     NOT =  {
-						has_country_modifier = alliance_nato 
-						has_country_modifier = leave_alliance_nato 
+						capital_scope = { has_province_modifier = alliance_nato }
+						capital_scope = { has_province_modifier = leave_alliance_nato }
 					}
 					OR = {
 						tag = USA
@@ -48,7 +48,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = USA  relation = { who = USA value = 50 } }
 						}
-						sphere_owner = {  has_country_modifier = alliance_nato }
+						sphere_owner = {  capital_scope = { has_province_modifier = alliance_nato } }
 					}
 					OR = { government = democracy government = hms_government }
                 }
@@ -63,7 +63,7 @@ political_decisions = {
 					}
 					any_country = { 
 						limit = {
-							has_country_modifier = alliance_nato
+							capital_scope = { has_province_modifier = alliance_nato }
 						}
 						relation = { who = THIS value = 100 }
 					}
@@ -79,7 +79,7 @@ political_decisions = {
         leave_alliance_nato = {
 				picture = "alliance_nato"
                 potential = {
-					has_country_modifier = alliance_nato 
+					capital_scope = { has_province_modifier = alliance_nato }
 					NOT = { 
 						tag = USA
 						alliance_with = USA
@@ -89,7 +89,7 @@ political_decisions = {
                 }
 
                 allow = {
-					has_country_modifier = alliance_nato 
+					capital_scope = { has_province_modifier = alliance_nato }
 					NOT = { 
 						tag = USA
 						alliance_with = USA
@@ -111,9 +111,7 @@ political_decisions = {
 						}
 					}
 					any_country = { 
-						limit = {
-							has_country_modifier = alliance_nato
-						}
+						limit = { capital_scope = { has_province_modifier = alliance_nato } }
 						relation = { who = THIS value = -50 }
 					}
 					
@@ -126,8 +124,8 @@ political_decisions = {
                 potential = {
 					year = 1947
                     NOT =  {
-						has_country_modifier = rio_pact 
-						has_country_modifier = leave_rio_pact 
+						capital_scope = { has_province_modifier = rio_pact }
+						capital_scope = { has_province_modifier = leave_rio_pact }
 					}
 					NOT = { tag = CAN }
 					OR = {
@@ -137,7 +135,7 @@ political_decisions = {
 					}
 					OR = { is_greater_power = yes part_of_sphere = yes }
 					OR = {
-						USA = { has_country_modifier = rio_pact }
+						USA = { capital_scope = { has_province_modifier = rio_pact } }
 						tag = USA
 					}
 					NOT = { relation = { who = USA value = 0 } }
@@ -147,8 +145,8 @@ political_decisions = {
                 allow = {
 					has_unclaimed_cores = no
                     NOT =  {
-						has_country_modifier = rio_pact 
-						has_country_modifier = leave_rio_pact 
+						capital_scope = { has_province_modifier = rio_pact }
+						capital_scope = { has_province_modifier = leave_rio_pact }
 					}
 					NOT = { tag = CAN }
 					OR = {
@@ -162,7 +160,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = USA  relation = { who = USA value = 50 } }
 						}
-						sphere_owner = {  has_country_modifier = rio_pact }
+						sphere_owner = {  capital_scope = { has_province_modifier = rio_pact } }
 					}
 					OR = { government = democracy government = hms_government }
                 }
@@ -187,7 +185,7 @@ political_decisions = {
         leave_rio_pact = {
 				picture = "rio_pact"
                 potential = {
-					has_country_modifier = rio_pact 
+					capital_scope = { has_province_modifier = rio_pact  }
 					NOT = { 
 						tag = USA
 						alliance_with = USA
@@ -197,7 +195,7 @@ political_decisions = {
                 }
 
                 allow = {
-					has_country_modifier = rio_pact 
+					capital_scope = { has_province_modifier = rio_pact }
 					NOT = { 
 						tag = USA
 						alliance_with = USA
@@ -227,8 +225,8 @@ political_decisions = {
                 potential = {
 					year = 1955
                     NOT =  {
-						has_country_modifier = warsaw_pact 
-						has_country_modifier = leave_warsaw_pact 
+						capital_scope = { has_province_modifier = warsaw_pact }
+						capital_scope = { has_province_modifier = leave_warsaw_pact }
 					}
 					government = proletarian_dictatorship
 					OR = {
@@ -239,7 +237,7 @@ political_decisions = {
 						}
 					}
 					OR = {
-						RUS = { has_country_modifier = warsaw_pact }
+						RUS = { capital_scope = { has_province_modifier = warsaw_pact } }
 						tag = RUS
 					}
                 }
@@ -247,8 +245,8 @@ political_decisions = {
                 allow = {
 					has_unclaimed_cores = no
                     NOT =  {
-						has_country_modifier = warsaw_pact 
-						has_country_modifier = leave_warsaw_pact 
+						capital_scope = { has_province_modifier = warsaw_pact }
+						capital_scope = { has_province_modifier = leave_warsaw_pact }
 					}
 					OR = {
 						tag = RUS
@@ -266,7 +264,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = RUS  relation = { who = RUS value = 50 } }
 						}
-						sphere_owner = {  has_country_modifier = warsaw_pact }
+						sphere_owner = {  capital_scope = { has_province_modifier = warsaw_pact } }
 					}
 					government = proletarian_dictatorship
                 }
@@ -291,7 +289,7 @@ political_decisions = {
         leave_warsaw_pact = {
 				picture = "warsaw_pact"
                 potential = {
-					has_country_modifier = warsaw_pact 
+					capital_scope = { has_province_modifier = warsaw_pact }
 					NOT = { 
 						tag = RUS
 						alliance_with = RUS
@@ -301,7 +299,7 @@ political_decisions = {
                 }
 
                 allow = {
-					has_country_modifier = warsaw_pact 
+					capital_scope = { has_province_modifier = warsaw_pact }
 					NOT = { 
 						tag = RUS
 						alliance_with = RUS
@@ -331,8 +329,8 @@ political_decisions = {
                 potential = {
 					year = 1992
                     NOT =  {
-						has_country_modifier = csto_alliance 
-						has_country_modifier = leave_csto_alliance 
+						capital_scope = { has_province_modifier = csto_alliance }
+						capital_scope = { has_province_modifier = leave_csto_alliance }
 					}
 					OR = {
 						tag = RUS
@@ -343,7 +341,7 @@ political_decisions = {
 						}
 					}
 					OR = {
-						RUS = { has_country_modifier = csto_alliance }
+						RUS = { capital_scope = { has_province_modifier = csto_alliance } }
 						tag = RUS
 					}
                 }
@@ -351,8 +349,8 @@ political_decisions = {
                 allow = {
 					has_unclaimed_cores = no
                     NOT =  {
-						has_country_modifier = csto_alliance 
-						has_country_modifier = leave_csto_alliance 
+						capital_scope = { has_province_modifier = csto_alliance }
+						capital_scope = { has_province_modifier = leave_csto_alliance }
 					}
 					OR = {
 						tag = RUS
@@ -372,7 +370,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = RUS  relation = { who = RUS value = 50 } }
 						}
-						sphere_owner = {  has_country_modifier = csto_alliance }
+						sphere_owner = {  capital_scope = { has_province_modifier = csto_alliance } }
 					}
 					NOT = { government = proletarian_dictatorship }
                 }
@@ -397,7 +395,7 @@ political_decisions = {
         leave_csto_alliance = {
 				picture = "csto_alliance"
                 potential = {
-					has_country_modifier = csto_alliance 
+					capital_scope = { has_province_modifier = csto_alliance }
 					NOT = { 
 						tag = RUS
 						alliance_with = RUS
@@ -407,7 +405,7 @@ political_decisions = {
                 }
 
                 allow = {
-					has_country_modifier = csto_alliance 
+					capital_scope = { has_province_modifier = csto_alliance }
 					NOT = { 
 						tag = RUS
 						alliance_with = RUS
@@ -437,8 +435,8 @@ political_decisions = {
                 potential = {
 					year = 1951
                     NOT =  {
-						has_country_modifier = anzus_alliance 
-						has_country_modifier = leave_anzus_alliance 
+						capital_scope = { has_province_modifier = anzus_alliance }
+						capital_scope = { has_province_modifier = leave_anzus_alliance }
 					}
 					OR = {
 						tag = USA
@@ -448,7 +446,7 @@ political_decisions = {
 						}
 					}
 					OR = {
-						USA = { has_country_modifier = anzus_alliance }
+						USA = { capital_scope = { has_province_modifier = anzus_alliance } }
 						tag = USA
 					}
 					NOT = { government = proletarian_dictatorship }
@@ -457,8 +455,8 @@ political_decisions = {
                 allow = {
 					has_unclaimed_cores = no
                     NOT =  {
-						has_country_modifier = anzus_alliance 
-						has_country_modifier = leave_anzus_alliance 
+						capital_scope = { has_province_modifier = anzus_alliance }
+						capital_scope = { has_province_modifier = leave_anzus_alliance }
 					}
 					OR = {
 						tag = USA
@@ -476,7 +474,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = USA  relation = { who = USA value = 50 } }
 						}
-						sphere_owner = {  has_country_modifier = anzus_alliance }
+						sphere_owner = {  capital_scope = { has_province_modifier = anzus_alliance } }
 					}
 					OR = { government = democracy government = hms_government }
                 }
@@ -501,7 +499,7 @@ political_decisions = {
         leave_anzus_alliance = {
 				picture = "anzus_alliance"
                 potential = {
-					has_country_modifier = anzus_alliance 
+					capital_scope = { has_province_modifier = anzus_alliance }
 					NOT = { 
 						tag = USA
 						alliance_with = USA
@@ -511,7 +509,7 @@ political_decisions = {
                 }
 
                 allow = {
-					has_country_modifier = anzus_alliance 
+					capital_scope = { has_province_modifier = anzus_alliance }
 					NOT = { 
 						tag = USA
 						alliance_with = USA
@@ -541,8 +539,8 @@ political_decisions = {
                 potential = {
 					year = 2001
                     NOT =  {
-						has_country_modifier = sco_pact 
-						has_country_modifier = leave_sco_pact 
+						capital_scope = { has_province_modifier = sco_pact }
+						capital_scope = { has_province_modifier = leave_sco_pact }
 					}
 					OR = {
 						tag = CHI
@@ -554,15 +552,15 @@ political_decisions = {
 						}
 					}
 					OR = {
-						CHI = { has_country_modifier = sco_pact }
+						CHI = { capital_scope = { has_province_modifier = sco_pact } }
 						tag = CHI
 					}
                 }
 
                 allow = {
                     NOT =  {
-						has_country_modifier = sco_pact 
-						has_country_modifier = leave_sco_pact 
+						capital_scope = { has_province_modifier = sco_pact }
+						capital_scope = { has_province_modifier = leave_sco_pact }
 					}
 					OR = {
 						tag = CHI
@@ -578,7 +576,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = CHI  relation = { who = CHI value = 50 } }
 						}
-						sphere_owner = {  has_country_modifier = sco_pact }
+						sphere_owner = {  capital_scope = { has_province_modifier = sco_pact } }
 					}
                 }
 
@@ -602,7 +600,7 @@ political_decisions = {
         leave_sco_pact = {
 				picture = "sco_pact"
                 potential = {
-					has_country_modifier = sco_pact 
+					capital_scope = { has_province_modifier = sco_pact }
 					NOT = { 
 						tag = CHI
 						alliance_with = CHI
@@ -612,7 +610,7 @@ political_decisions = {
                 }
 
                 allow = {
-					has_country_modifier = sco_pact 
+					capital_scope = { has_province_modifier = sco_pact }
 					NOT = { 
 						tag = CHI
 						alliance_with = CHI
