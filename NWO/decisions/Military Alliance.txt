@@ -67,10 +67,12 @@ political_decisions = {
 						}
 						relation = { who = THIS value = 100 }
 					}
-					add_country_modifier = {
-                        name = alliance_nato
-						duration = 3650
-	                }
+					capital_scope = {
+						add_province_modifier = {
+							name = alliance_nato
+							duration = 3650
+						}
+					}
                 }
         }
 
@@ -101,11 +103,13 @@ political_decisions = {
                 }
 
                 effect = {
-					remove_country_modifier = alliance_nato
-					add_country_modifier = {
-                        name = leave_alliance_nato
-						duration = 3650
-	                }
+					capital_scope = {
+						remove_province_modifier = alliance_nato
+						add_province_modifier = {
+							name = leave_alliance_nato
+							duration = 3650
+						}
+					}
 					any_country = { 
 						limit = {
 							has_country_modifier = alliance_nato
@@ -171,9 +175,11 @@ political_decisions = {
 						}
 						create_alliance = USA
 					}
-					add_country_modifier = {
-                        name = rio_pact
-						duration = 3650
+					capital_scope = {
+						add_province_modifier = {
+							name = rio_pact
+							duration = 3650
+						}
 	                }
                 }
         }
@@ -205,11 +211,13 @@ political_decisions = {
                 }
 
                 effect = {
-					remove_country_modifier = rio_pact
-					add_country_modifier = {
-                        name = leave_rio_pact
-						duration = 3650
-	                }
+					capital_scope = {
+						remove_province_modifier = rio_pact
+						add_province_modifier = {
+							name = leave_rio_pact
+							duration = 3650
+						}
+					}
                 }
         }
 
@@ -271,9 +279,11 @@ political_decisions = {
 						}
 						create_alliance = RUS
 					}
-					add_country_modifier = {
-                        name = warsaw_pact
-						duration = 3650
+					capital_scope = {
+						add_province_modifier = {
+							name = warsaw_pact
+							duration = 3650
+						}
 	                }
                 }
         }
@@ -305,10 +315,12 @@ political_decisions = {
                 }
 
                 effect = {
-					remove_country_modifier = warsaw_pact
-					add_country_modifier = {
-                        name = leave_warsaw_pact
-						duration = 3650
+					capital_scope = { 
+						remove_province_modifier = warsaw_pact
+						add_province_modifier = {
+							name = leave_warsaw_pact
+							duration = 3650
+						}
 	                }
                 }
         }
@@ -373,10 +385,12 @@ political_decisions = {
 						}
 						create_alliance = RUS
 					}
-					add_country_modifier = {
-                        name = csto_alliance
-						duration = 3650
-	                }
+					capital_scope = { 
+						add_province_modifier = {
+							name = csto_alliance
+							duration = 3650
+						}
+					}
                 }
         }
 
@@ -407,11 +421,13 @@ political_decisions = {
                 }
 
                 effect = {
-					remove_country_modifier = csto_alliance
-					add_country_modifier = {
-                        name = leave_csto_alliance
-						duration = 3650
-	                }
+					capital_scope = { 
+						remove_province_modifier = csto_alliance
+						add_province_modifier = {
+							name = leave_csto_alliance
+							duration = 3650
+						}
+					}
                 }
         }
 
@@ -473,10 +489,12 @@ political_decisions = {
 						}
 						create_alliance = USA
 					}
-					add_country_modifier = {
-                        name = anzus_alliance
-						duration = 3650
-	                }
+					capital_scope = { 
+						add_province_modifier = {
+							name = anzus_alliance
+							duration = 3650
+						}
+					}
                 }
         }
 
@@ -507,11 +525,13 @@ political_decisions = {
                 }
 
                 effect = {
-					remove_country_modifier = anzus_alliance
-					add_country_modifier = {
-                        name = leave_anzus_alliance
-						duration = 3650
-	                }
+					capital_scope = { 
+						remove_province_modifier = anzus_alliance
+						add_province_modifier = {
+							name = leave_anzus_alliance
+							duration = 3650
+						}
+					}
                 }
         }
 
@@ -570,10 +590,12 @@ political_decisions = {
 						}
 						create_alliance = CHI
 					}
-					add_country_modifier = {
-                        name = sco_pact
-						duration = 3650
-	                }
+					capital_scope = { 
+						add_province_modifier = {
+							name = sco_pact
+							duration = 3650
+						}
+					}
                 }
         }
 
@@ -603,11 +625,13 @@ political_decisions = {
                 }
 
                 effect = {
-					remove_country_modifier = sco_pact
-					add_country_modifier = {
-                        name = leave_sco_pact
-						duration = 3650
-	                }
+					capital_scope = { 
+						remove_province_modifier = sco_pact
+						add_province_modifier = {
+							name = leave_sco_pact
+							duration = 3650
+						}
+					}
                 }
         }		
 }
