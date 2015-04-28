@@ -32,6 +32,11 @@ diplomatic_focus =
 		own_provinces = no
 
 		flashpoint_tension = 0.15
+		own_provinces = no
+		farm_rgo_eff = -0.5
+		mine_rgo_eff = -0.5
+		local_factory_throughput = -1
+		
 		limit = { 
 			OR = {
 				THIS = {is_greater_power = yes }
@@ -59,126 +64,6 @@ diplomatic_focus =
 		farm_rgo_eff = -0.5
 		mine_rgo_eff = -0.5
 		local_factory_throughput = -1
-		limit = { 
-			OR = {
-				THIS = { is_greater_power = yes }
-				THIS = { is_secondary_power = yes }
-				AND = { 
-					THIS = { civilized = yes }
-					state_scope = {
-						any_owned_province = {
-							any_neighbor_province = { owned_by = THIS }
-						}
-					}
-				}
-				is_core = THIS
-			}
-		}
-	}
-	promote_islamist_ngos =
-	{
-		icon = 32
-		own_provinces = no
-
-		ideology = islamist
-		loyalty_value = 0.001
-
-		limit = { 
-			OR = {
-				THIS = { is_greater_power = yes }
-				THIS = { is_secondary_power = yes }
-				AND = { 
-					THIS = { civilized = yes }
-					state_scope = {
-						any_owned_province = {
-							any_neighbor_province = { owned_by = THIS }
-						}
-					}
-				}
-				is_core = THIS
-			}
-		}
-	}
-	promote_populist_ngos =
-	{
-		icon = 33
-		own_provinces = no
-
-		ideology = populist
-		loyalty_value = 0.001
-
-		limit = { 
-			OR = {
-				THIS = { is_greater_power = yes }
-				THIS = { is_secondary_power = yes }
-				AND = { 
-					THIS = { civilized = yes }
-					state_scope = {
-						any_owned_province = {
-							any_neighbor_province = { owned_by = THIS }
-						}
-					}
-				}
-				is_core = THIS
-			}
-		}
-	}
-	promote_liberal_ngos =
-	{
-		icon = 34
-		own_provinces = no
-
-		ideology = liberal
-		loyalty_value = 0.001
-
-		limit = { 
-			OR = {
-				THIS = { is_greater_power = yes }
-				THIS = { is_secondary_power = yes }
-				AND = { 
-					THIS = { civilized = yes }
-					state_scope = {
-						any_owned_province = {
-							any_neighbor_province = { owned_by = THIS }
-						}
-					}
-				}
-				is_core = THIS
-			}
-		}
-	}
-	promote_progressive_ngos =
-	{
-		icon = 35
-		own_provinces = no
-
-		ideology = progressive
-		loyalty_value = 0.001
-
-		limit = { 
-			OR = {
-				THIS = { is_greater_power = yes }
-				THIS = { is_secondary_power = yes }
-				AND = { 
-					THIS = { civilized = yes }
-					state_scope = {
-						any_owned_province = {
-							any_neighbor_province = { owned_by = THIS }
-						}
-					}
-				}
-				is_core = THIS
-			}
-		}
-	}
-	promote_socialist_ngos =
-	{
-		icon = 36
-		own_provinces = no
-
-		ideology = socialist
-		loyalty_value = 0.001
-
 		limit = { 
 			OR = {
 				THIS = { is_greater_power = yes }
@@ -385,6 +270,126 @@ production_focus =
 
 party_loyalty_focus =
 {
+	promote_islamist_ngos =
+	{
+		icon = 32
+		own_provinces = no
+
+		ideology = islamist
+		loyalty_value = 0.001
+
+		limit = { 
+			OR = {
+				THIS = { is_greater_power = yes }
+				THIS = { is_secondary_power = yes }
+				AND = { 
+					THIS = { civilized = yes }
+					state_scope = {
+						any_owned_province = {
+							any_neighbor_province = { owned_by = THIS }
+						}
+					}
+				}
+				is_core = THIS
+			}
+		}
+	}
+	promote_populist_ngos =
+	{
+		icon = 33
+		own_provinces = no
+
+		ideology = populist
+		loyalty_value = 0.001
+
+		limit = { 
+			OR = {
+				THIS = { is_greater_power = yes }
+				THIS = { is_secondary_power = yes }
+				AND = { 
+					THIS = { civilized = yes }
+					state_scope = {
+						any_owned_province = {
+							any_neighbor_province = { owned_by = THIS }
+						}
+					}
+				}
+				is_core = THIS
+			}
+		}
+	}
+	promote_liberal_ngos =
+	{
+		icon = 34
+		own_provinces = no
+
+		ideology = liberal
+		loyalty_value = 0.001
+
+		limit = { 
+			OR = {
+				THIS = { is_greater_power = yes }
+				THIS = { is_secondary_power = yes }
+				AND = { 
+					THIS = { civilized = yes }
+					state_scope = {
+						any_owned_province = {
+							any_neighbor_province = { owned_by = THIS }
+						}
+					}
+				}
+				is_core = THIS
+			}
+		}
+	}
+	promote_progressive_ngos =
+	{
+		icon = 35
+		own_provinces = no
+
+		ideology = progressive
+		loyalty_value = 0.001
+
+		limit = { 
+			OR = {
+				THIS = { is_greater_power = yes }
+				THIS = { is_secondary_power = yes }
+				AND = { 
+					THIS = { civilized = yes }
+					state_scope = {
+						any_owned_province = {
+							any_neighbor_province = { owned_by = THIS }
+						}
+					}
+				}
+				is_core = THIS
+			}
+		}
+	}
+	promote_socialist_ngos =
+	{
+		icon = 36
+		own_provinces = no
+
+		ideology = socialist
+		loyalty_value = 0.001
+
+		limit = { 
+			OR = {
+				THIS = { is_greater_power = yes }
+				THIS = { is_secondary_power = yes }
+				AND = { 
+					THIS = { civilized = yes }
+					state_scope = {
+						any_owned_province = {
+							any_neighbor_province = { owned_by = THIS }
+						}
+					}
+				}
+				is_core = THIS
+			}
+		}
+	}
 	islamist_focus =
 	{
 		ideology = islamist

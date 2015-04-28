@@ -771,27 +771,9 @@ comecon_excluded = {
 	icon = 10
 }
 
-visa_free = {
-    education_efficiency_modifier = 0.05
-	immigrant_attract = 0.05
-	icon = 7
-}
-
-border_less = {
-    education_efficiency_modifier = 0.05
-	immigrant_attract = 0.05
-	icon = 7
-}
-
-customs_union = {
-	#min_tariff = -1.0
-	#max_tariff = -0.02
-	icon = 7
-}
-
 single_market = {
-    factory_throughput = 0.01
-    RGO_throughput = 0.01
+    local_factory_throughput = 0.1
+    local_RGO_throughput = 0.1
 	icon = 9
 }
 
@@ -799,6 +781,18 @@ currency_union = {
 	loan_interest = -0.02
 	icon = 9
 }
+
+currency_union_province = {
+	icon = 9
+}
+
+defence_union = {
+    local_factory_throughput = 0.1
+    local_RGO_throughput = 0.1
+	icon = 9
+}
+
+rejected_union = {}
 
 promised_autonomy = {
 	icon = 15
@@ -811,52 +805,52 @@ denied_independence = {
 }
 
 alliance_nato = {
-	icon = 18
+	icon = 17
     local_ruling_party_support = 0.1
 }
 
 leave_alliance_nato = {
-	icon = 19
+	icon = 18
     local_ruling_party_support = -0.1
 }
 rio_pact = {
-	icon = 18
+	icon = 17
     local_ruling_party_support = 0.1
 }
 leave_rio_pact = {
-	icon = 19
+	icon = 18
     local_ruling_party_support = -0.1
 }
 warsaw_pact = {
-	icon = 18
+	icon = 17
     local_ruling_party_support = 0.1
 }
 leave_warsaw_pact = {
-	icon = 19
+	icon = 18
     local_ruling_party_support = -0.1
 }
 csto_alliance = {
-	icon = 18
+	icon = 17
     local_ruling_party_support = 0.1
 }
 leave_csto_alliance = {
-	icon = 19
+	icon = 18
     local_ruling_party_support = -0.1
 }
 anzus_alliance = {
-	icon = 18
+	icon = 17
     local_ruling_party_support = 0.1
 }
 leave_anzus_alliance = {
-	icon = 19
+	icon = 18
     local_ruling_party_support = -0.1
 }
 sco_pact = {
-	icon = 18
+	icon = 17
     local_ruling_party_support = 0.1
 }
 leave_sco_pact = {
-	icon = 19
+	icon = 18
     local_ruling_party_support = -0.1
 }
 non_proliferation_treaty = {

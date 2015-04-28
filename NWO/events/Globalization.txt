@@ -1,0 +1,67 @@
+#
+# Globalization events
+#
+
+country_event = {
+	id = 11106
+	title = "EVTNAME11106"
+	desc = "EVTDESC11106"
+	picture = "annexation_into_union"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA11106"
+		any_owned = { add_core = FROM }
+		FROM = {
+			inherit = THIS
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = FROM value = 50 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = FROM value = 0 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTC11106"
+		add_country_modifier = { name = rejected_union duration = 3500 }
+		prestige = 1
+		relation = {
+			who = FROM
+			value = -200
+		}
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+		}
+		leave_alliance = FROM
+		any_pop = {
+			militancy = 3
+			consciousness = 2
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_country_flag = wants_to_unify
+			}
+			modifier = {
+				factor = 0
+				vassal_of = FROM
+			}
+		}
+	}
+}

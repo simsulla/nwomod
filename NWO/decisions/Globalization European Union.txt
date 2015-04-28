@@ -1,4 +1,8 @@
 political_decisions = {
+
+#
+# Member Decisions: 	
+#
 	xeu_ambition = {
 		picture = "xeu_ambition"
 		potential = {
@@ -14,30 +18,16 @@ political_decisions = {
 		}
 		allow = {
 			OR = {
-				NOT = {
-					has_global_flag = xeu_republican_ambition
-					has_global_flag = xeu_liberal_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
 			}
 			OR = {
 				government = democracy
 				government = hms_government
 			}
-			marshall_plan = 1
+			bank_for_international_settlements = 1
 			election = no
 			war = no
 		}
@@ -52,7 +42,8 @@ political_decisions = {
 					issue = protectionism
 					factor = 3
 				}
-			}			
+			}
+			tech_school = XEU_tech_school			
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -61,20 +52,10 @@ political_decisions = {
 		picture = "end_xeu_ambition"
 		potential = {
 			has_country_flag = xeu_ambition
-			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
+			NOT = {
+				OR = {
+					government = democracy
+					government = hms_government
 				}
 			}
 		}
@@ -82,248 +63,74 @@ political_decisions = {
 			OR = {
 				ruling_party_ideology = communist
 				ruling_party_ideology = populist
+				ruling_party_ideology = nationalist
 				ruling_party_ideology = islamist
 			}
 			war = no
 		}
 		effect = {
 			clr_country_flag = xeu_ambition
+			all_core = { remove_core = XEU }
+			capital_scope = { 
+				remove_province_modifier = single_market			
+				remove_province_modifier = currency_union_province
+				remove_province_modifier = defence_union
+			}
+			remove_country_modifier = currency_union
 			any_pop = {
 				scaled_militancy = {
 					issue = free_trade
 					factor = 3
 				}
-			}			
+			}
+			tech_school = traditional_academic			
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
-	xeu_liberal_ambition = {
-		picture = "xeu_liberal_ambition"
+	xeu_single_market= {
+		picture = "single_market"
 		potential = {
-			has_country_flag = xeu_ambition
-			NOT = { has_global_flag = xeu_liberal_ambition }
-		}
-		allow = {
-			war = no
-			election = yes
-			is_greater_power = yes 
-			NOT = { has_country_modifier = chair_ambitions }
-			trust_busting = 1
-			OR = {
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-		}
-		effect = {
-			prestige = 15
-			clr_global_flag = xeu_republican_ambition
-			set_global_flag = xeu_liberal_ambition
-			add_country_modifier = {
-				name = chair_ambitions
-				duration = 720
-			}			
-		}
-	}
-	
-	xeu_republican_ambition = {
-		picture = "xeu_republican_ambition"
-		potential = {
-			has_country_flag = xeu_ambition
-			NOT = { has_global_flag = xeu_republican_ambition }
-		}
-		allow = {
-			war = no
-			election = yes
-			is_greater_power = yes 
-			NOT = { has_country_modifier = chair_ambitions }
-			third_way = 1 
+			has_country_flag = trade_block_ambition
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
 			}
+			NOT = { capital_scope = { has_province_modifier = single_market } }
+		}
+		allow = {
+			has_country_flag = xeu_ambition
 			OR = {
 				government = democracy
 				government = hms_government
 			}
+			capitalism = 1
+			election = no
+			war = no
 		}
 		effect = {
-			prestige = 15
-			clr_global_flag = xeu_liberal_ambition
-			set_global_flag = xeu_republican_ambition
-			add_country_modifier = {
-				name = chair_ambitions
-				duration = 720
-			}
+			capital_scope = {  add_province_modifier = { name = single_market duration = -1 } }
 		}
 		ai_will_do = { factor = 1 }
-	}	
-
-
-#
-# Free Trade Area	
-#
-	xeu_free_trade_area = {
-		picture = "xeu_free_trade_area"
-		potential = {
-			has_country_flag = xeu_ambition
-			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
-			}
-			NOT = {
-				has_country_modifier = free_trade_area
-			}
-		}
-		allow = {
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-			election = no
-			war = no
-			trust_busting = 1
-		}
-		effect = {
-			add_country_modifier = {
-				name = free_trade_area
-				duration = -1
-			}
-		}
 	}
 
-#
-# Economic and monetary union	
-#
-
-# Customs Union	
-	xeu_customs_union = {
-		picture = "xeu_customs_union"
-		potential = {
-			has_country_flag = xeu_ambition
-			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
-			}
-			has_country_modifier = free_trade_area
-			NOT = {
-				has_country_modifier = customs_union
-			}
-		}
-		allow = {
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-			election = no
-			war = no
-			capitalism = 1
-		}
-		effect = {
-			add_country_modifier = {
-				name = customs_union
-				duration = -1
-			}
-		}
-	}
-
-
-# Single Market
-	xeu_single_market= {
-		picture = "xeu_single_market"
-		potential = {
-			has_country_flag = xeu_ambition
-			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
-			}
-			has_country_modifier = customs_union
-			NOT = {
-				has_country_modifier = single_market
-			}
-		}
-		allow = {
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-			economic_globalization = 1
-			election = no
-			war = no
-		}
-		effect = {
-			add_country_modifier = {
-				name = single_market
-				duration = -1
-			}
-		}
-	}
-
-# Currency Union
 	xeu_currency_union = {
-		picture = "xeu_currency_union"
+		picture = "currency_union"
 		potential = {
-			has_country_flag = xeu_ambition
+			has_country_flag = trade_block_ambition
 			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
 			}
-			has_country_modifier = single_market
 			NOT = { has_country_modifier = currency_union }
 		}
 		allow = {
+			has_country_flag = xeu_ambition
+			capital_scope = { has_province_modifier = single_market }
 			OR = {
 				government = democracy
 				government = hms_government
@@ -338,125 +145,26 @@ political_decisions = {
 				name = currency_union
 				duration = -1
 			}
+			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
 		}
+		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
 	}
 
-#
-# Free Travel
-#
-	
-# Visa-free
-	xeu_visa_free = {
-		picture = "xeu_visa_free"
-		potential = {
-			has_country_flag = xeu_ambition
-			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
-			}
-			has_country_modifier = free_trade_area
-			NOT = { has_country_modifier = visa_free }
-		}
-		allow = {
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-			new_keynesian = 1
-			election = no
-			war = no
-		}
-		effect = {
-			add_country_modifier = {
-				name = visa_free
-				duration = -1
-			}
-		}
-	}
-	
-# Border-less
-	xeu_border_less = {
-		picture = "xeu_border_less"
-		potential = {
-			has_country_flag = xeu_ambition
-			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
-			}
-			has_country_modifier = visa_free
-			NOT = { has_country_modifier = border_less }
-		}
-		allow = {
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-			election = no
-			war = no
-			new_keynesian = 1
-		}
-		effect = {
-			add_country_modifier = {
-				name = border_less
-				duration = -1
-			}
-		}
-	}
-
-	
-#
-# Political Union
-#
 	xeu_political_union = {
-		picture = "xeu_political_union"
+		picture = "xeu_ambition"
 		potential = {
-			NOT = { has_country_flag = political_union }
-			has_country_flag = xeu_ambition
+			has_country_flag = trade_block_ambition
+			NOT = { capital_scope = { is_core = XEU } }
 			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
 			}
-			has_country_modifier = visa_free
-			has_country_modifier = border_less
-			has_country_modifier = currency_union
 		}
 		allow = {
+			has_country_flag = xeu_ambition
+			has_country_modifier = currency_union
 			OR = {
 				government = democracy
 				government = hms_government
@@ -468,59 +176,23 @@ political_decisions = {
 		effect = {
 			# add core to all provinces
 			all_core = { add_core = XEU }
-			set_country_flag = political_union
 		}
-	}
-	
-#
-# Defence union
-#
-	xeu_defence_union_proposal = {
-		picture = "xeu_defence_union"
-		potential = {
-			has_country_flag = xeu_ambition
-			OR = {
-				AND = {
-					OR = {
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-					}
-					has_global_flag = xeu_republican_ambition
-				}
-				AND = {
-					OR = {
-						ruling_party_ideology = conservative
-						ruling_party_ideology = liberal
-					}
-					has_global_flag = xeu_liberal_ambition
-				}
-			}
-			has_country_flag = political_union
-			NOT = { has_country_flag = xeu_defence_union_proposal }
-		}
-		allow = {
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-			has_unclaimed_cores = no
-			election = no
-			commodities_and_credit = 1
-		}
-		effect = {
-			set_country_flag = xeu_defence_union_proposal
-		}
+		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
 	}
 
+#
+# Leader Decision: Political Union
+#
 	xeu_defence_union = {
-		picture = "xeu_defence_union"
+		picture = "defence_union"
 		potential = {
-			has_country_flag = xeu_ambition
-			has_country_flag = political_union
-			has_country_flag = xeu_defence_union_proposal
-			NOT = { has_country_flag = defence_union }
+			has_country_flag = trade_block_ambition
+			is_vassal = no
+			is_greater_power = yes
+			NOT = { capital_scope = { has_province_modifier = defence_union } }
 		}
 		allow = {
+			capital_scope = { is_core = XEU }
 			OR = {
 				government = democracy
 				government = hms_government
@@ -528,20 +200,23 @@ political_decisions = {
 			election = no
 			war = no
 			age_of_protests = 1
+			has_unclaimed_cores = no
+			OR = { 
+				is_greater_power = yes
+				sphere_owner = { has_country_flag = xeu_ambition }
+			}
 		}
 		effect = {
-			set_country_flag = defence_union
+			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
 		}
+		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
 	}
 
-#
-# Union
-#
 	xeu_form_union = {
 		picture = "xeu_ambition"
 		potential = {
+			has_country_flag = trade_block_ambition
 			has_country_flag = xeu_ambition
-			has_country_flag = defence_union
 			XEU = { exists = no }
 		}
 		allow = {
@@ -553,19 +228,17 @@ political_decisions = {
 			is_greater_power = yes 
 			political_polarization = 1
             war = no
+			capital_scope = { has_province_modifier = defence_union } 
+			has_unclaimed_cores = no
             XEU = {
                 all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
-                            war = no
-                            is_greater_power = no
-                        }
+                    owner = {
+                        war = no
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+						}
+						has_country_flag = xeu_ambition
                     }
                 }
             }
@@ -573,7 +246,6 @@ political_decisions = {
 		effect = {
 			prestige = 20
 			all_core = {
-				remove_core = THIS
 				add_core = XEU
 			}
 			change_tag = XEU
@@ -581,14 +253,6 @@ political_decisions = {
 			add_accepted_culture = white_anglo
 			add_accepted_culture = white_french
 			add_accepted_culture = white_spanish
-			set_global_flag = 3hurrahs
-			any_country = {
-				limit = {
-					capital_scope = { is_core = XEU }
-					exists = yes
-				}
-				country_event = 11106
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -598,14 +262,17 @@ political_decisions = {
 	xeu_enlarge_union = {
 		picture = "xeu_ambition"
 		potential = {
+			has_country_flag = trade_block_ambition
 			has_country_flag = xeu_ambition
 			tag = XEU
-			any_neighbor_country = {
-				capital_scope = { continent = europe }
-				tag = TUR
-			}
 		}
 		allow = {
+			any_neighbor_country = { 
+				has_country_flag = xeu_ambition 
+				in_sphere = THIS 
+				NOT = { has_country_modifier = rejected_union } 
+				has_unclaimed_cores = no
+			}
 			OR = {
 				government = democracy
 				government = hms_government
@@ -614,36 +281,10 @@ political_decisions = {
 			is_greater_power = yes 
 			political_polarization = 1
             war = no
-            XEU = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
-                            war = no
-                            is_greater_power = no
-                        }
-                    }
-                }
-            }
 		}
 		effect = {
 			prestige = 20
-			all_core = {
-				remove_core = THIS
-				add_core = XEU
-			}
-			any_country = {
-				limit = {
-					capital_scope = { is_core = XEU }
-					exists = yes
-				}
-				country_event = 11106
-			}
+			any_neighbor_country = { limit = { has_country_flag = xeu_ambition in_sphere = THIS } country_event = 11106 }
 		}
 		ai_will_do = {
 			factor = 1

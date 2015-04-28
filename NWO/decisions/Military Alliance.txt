@@ -43,12 +43,9 @@ political_decisions = {
 							continent = europe
 						}
 					}
-					OR = {
-						AND = { 
-							is_greater_power = yes
-							OR = { tag = USA  relation = { who = USA value = 50 } }
-						}
-						sphere_owner = {  capital_scope = { has_province_modifier = alliance_nato } }
+					AND = { 
+						is_greater_power = yes
+						OR = { tag = USA  relation = { who = USA value = 50 } }
 					}
 					OR = { government = democracy government = hms_government }
                 }
