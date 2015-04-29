@@ -11,10 +11,8 @@ political_decisions = {
 				capital_scope = { continent = europe }
 				tag = TUR
 			}
-			NOT = {
-				tag = RUS
-				has_country_flag = xeu_ambition
-			}
+			NOT = { tag = RUS }
+			NOT = { has_country_flag = xeu_ambition has_country_flag = in_trade_block tag = XEU }
 		}
 		allow = {
 			OR = {
@@ -33,6 +31,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = xeu_ambition
+			set_country_flag = in_trade_block
 			any_pop = {
 				scaled_militancy = {
 					issue = protectionism
@@ -49,7 +48,7 @@ political_decisions = {
 	}
 
 	end_xeu_ambition = {
-		picture = "end_xeu_ambition"
+		picture = "xeu_parlament"
 		potential = {
 			has_country_flag = xeu_ambition
 			NOT = {
@@ -70,6 +69,7 @@ political_decisions = {
 		}
 		effect = {
 			clr_country_flag = xeu_ambition
+			clr_country_flag = in_trade_block
 			all_core = { remove_core = XEU }
 			capital_scope = { 
 				remove_province_modifier = single_market			
@@ -188,7 +188,7 @@ political_decisions = {
 		potential = {
 			has_country_flag = trade_block_ambition
 			is_vassal = no
-			is_greater_power = yes
+			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 		}
 		allow = {
@@ -202,7 +202,7 @@ political_decisions = {
 			age_of_protests = 1
 			has_unclaimed_cores = no
 			OR = { 
-				is_greater_power = yes
+				is_secondary_power = yes
 				sphere_owner = { has_country_flag = xeu_ambition }
 			}
 		}
@@ -213,7 +213,7 @@ political_decisions = {
 	}
 
 	xeu_form_union = {
-		picture = "xeu_ambition"
+		picture = "xeu_parlament"
 		potential = {
 			has_country_flag = trade_block_ambition
 			has_country_flag = xeu_ambition
@@ -253,6 +253,7 @@ political_decisions = {
 			add_accepted_culture = white_anglo
 			add_accepted_culture = white_french
 			add_accepted_culture = white_spanish
+			clr_country_flag = in_trade_block
 		}
 		ai_will_do = {
 			factor = 1

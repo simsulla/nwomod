@@ -1,0 +1,300 @@
+political_decisions = {
+
+#
+# Member Decisions: 	
+#
+	xea_ambition = {
+		picture = "xea_ambition"
+		potential = {
+			has_country_flag = trade_block_ambition
+			OR = {
+				tag = RUS
+				tag = BYE
+				tag = KAZ
+				tag = KYR
+				tag = TAJ
+				tag = ARM
+				tag = MOL
+				tag = UKR
+				tag = TRD
+				tag = TRK
+				tag = AZB
+				tag = UZB
+			}
+			NOT = { has_country_flag = xea_ambition has_country_flag = in_trade_block tag = XEA }
+		}
+		allow = {
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
+			}
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			bank_for_international_settlements = 1
+			election = no
+			war = no
+		}
+		effect = {
+			set_country_flag = xea_ambition
+			set_country_flag = in_trade_block
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = protectionism
+					factor = 3
+				}
+			}
+			tech_school = XEA_tech_school			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	end_xea_ambition = {
+		picture = "xea_parlament"
+		potential = {
+			has_country_flag = xea_ambition
+			NOT = {
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+			}
+		}
+		allow = {
+			OR = {
+				ruling_party_ideology = communist
+				ruling_party_ideology = populist
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = islamist
+			}
+			war = no
+		}
+		effect = {
+			clr_country_flag = xea_ambition
+			clr_country_flag = in_trade_block
+			all_core = { remove_core = XEA }
+			capital_scope = { 
+				remove_province_modifier = single_market			
+				remove_province_modifier = currency_union_province
+				remove_province_modifier = defence_union
+			}
+			remove_country_modifier = currency_union
+			any_pop = {
+				scaled_militancy = {
+					issue = free_trade
+					factor = 3
+				}
+			}
+			tech_school = traditional_academic			
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	xea_single_market= {
+		picture = "single_market"
+		potential = {
+			has_country_flag = trade_block_ambition
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
+			}
+			NOT = { capital_scope = { has_province_modifier = single_market } }
+		}
+		allow = {
+			has_country_flag = xea_ambition
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			capitalism = 1
+			election = no
+			war = no
+		}
+		effect = {
+			capital_scope = {  add_province_modifier = { name = single_market duration = -1 } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xea_currency_union = {
+		picture = "currency_union"
+		potential = {
+			has_country_flag = trade_block_ambition
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
+			}
+			NOT = { has_country_modifier = currency_union }
+		}
+		allow = {
+			has_country_flag = xea_ambition
+			capital_scope = { has_province_modifier = single_market }
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			economic_globalization = 1
+			election = no
+			war = no
+		}
+		effect = {
+			# add core to capital
+			add_country_modifier = {
+				name = currency_union
+				duration = -1
+			}
+			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
+		}
+		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+	}
+
+	xea_political_union = {
+		picture = "xea_ambition"
+		potential = {
+			has_country_flag = trade_block_ambition
+			NOT = { capital_scope = { is_core = XEA } }
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
+			}
+		}
+		allow = {
+			has_country_flag = xea_ambition
+			has_country_modifier = currency_union
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			election = no
+			war = no
+			commodities_and_credit = 1
+		}
+		effect = {
+			# add core to all provinces
+			all_core = { add_core = XEA }
+		}
+		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+	}
+
+#
+# Leader Decision: Political Union
+#
+	xea_defence_union = {
+		picture = "defence_union"
+		potential = {
+			has_country_flag = trade_block_ambition
+			is_vassal = no
+			is_secondary_power = yes
+			NOT = { capital_scope = { has_province_modifier = defence_union } }
+		}
+		allow = {
+			capital_scope = { is_core = XEA }
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			election = no
+			war = no
+			age_of_protests = 1
+			has_unclaimed_cores = no
+			OR = { 
+				is_secondary_power = yes
+				sphere_owner = { has_country_flag = xea_ambition }
+			}
+		}
+		effect = {
+			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
+		}
+		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+	}
+
+	xea_form_union = {
+		picture = "xea_parlament"
+		potential = {
+			has_country_flag = trade_block_ambition
+			has_country_flag = xea_ambition
+			XEA = { exists = no }
+		}
+		allow = {
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			election = no
+			is_greater_power = yes 
+			political_polarization = 1
+            war = no
+			capital_scope = { has_province_modifier = defence_union } 
+			has_unclaimed_cores = no
+            XEA = {
+                all_core = {
+                    owner = {
+                        war = no
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+						}
+						has_country_flag = xea_ambition
+                    }
+                }
+            }
+		}
+		effect = {
+			prestige = 20
+			all_core = {
+				add_core = XEA
+			}
+			change_tag = XEA
+			primary_culture = russian
+			clr_country_flag = in_trade_block
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	xea_enlarge_union = {
+		picture = "xea_ambition"
+		potential = {
+			has_country_flag = trade_block_ambition
+			has_country_flag = xea_ambition
+			tag = XEA
+		}
+		allow = {
+			any_neighbor_country = { 
+				has_country_flag = xea_ambition 
+				in_sphere = THIS 
+				NOT = { has_country_modifier = rejected_union } 
+				has_unclaimed_cores = no
+			}
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			election = no
+			is_greater_power = yes 
+			political_polarization = 1
+            war = no
+		}
+		effect = {
+			prestige = 20
+			any_neighbor_country = { limit = { has_country_flag = xea_ambition in_sphere = THIS } country_event = 11106 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+}
