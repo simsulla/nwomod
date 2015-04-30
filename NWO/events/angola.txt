@@ -1,0 +1,65 @@
+country_event = {
+	id = 8000601
+	title = "EVT_8000601_NAME" # Halloween massacre Angola
+	desc = "EVT_8000601_DESC"
+	picture = "angola_civil_war" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ANG
+		ruling_party_ideology = socialist
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "EVT_8000608_A"
+		any_pop = {
+			limit = {
+				OR = { culture = ovimbundu culture = bakongo }
+			}
+			militancy = 3
+			consciousness = 4
+		}
+		any_owned = {
+			limit = { NOT = { OR = { province_id = 1999 province_id = 2001  province_id = 2000  province_id = 2002  province_id = 2009 province_id = 2003 } } }
+			change_controller = REB
+		}
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_8000608_B"
+		any_pop = {
+			limit = {
+				culture = kimbundu
+			}
+			militancy = 3
+			consciousness = 4
+		}
+		ruling_party_ideology = populist
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "EVT_8000608_C"
+		any_pop = {
+			limit = {
+				culture = kimbundu
+			}
+			militancy = 3
+			consciousness = 4
+		}
+		ruling_party_ideology = populist
+		government = populist_dictatorship
+		any_owned = {
+			limit = { OR = { province_id = 1999 province_id = 2001  province_id = 2000  province_id = 2002  province_id = 2009 province_id = 2003 } }
+			change_controller = REB
+		}
+		ai_chance = { factor = 0 }
+	}
+	
+}
