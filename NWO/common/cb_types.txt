@@ -961,12 +961,7 @@ install_democracy = {
 
 	can_use = {
 		THIS = {
-			is_greater_power = yes
-			# mass_politics = 1
-			OR = {
-				government = hms_government
-				government = democracy
-			}
+			NOT = { government = proletarian_dictatorship government = islamist_dictatorship }
 		}
 		is_vassal = no
 		civilized = yes

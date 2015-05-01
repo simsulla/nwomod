@@ -1,0 +1,93 @@
+country_event = {
+	id = 8003301
+	title = "EVT_8003301_NAME" # first Congo war
+	desc = "EVT_8003301_DESC"
+	picture = "congo_war" 
+	
+	is_triggered_only = yes # Rwanda supports rebels 8029501
+	
+	option = {
+		name = "EVT_8003301_A" # face the rebels
+		any_pop = {
+			limit = {
+				OR = { culture = tutsi culture = nyakole culture = african_minor }
+			}
+			militancy = 20
+			consciousness = 4
+		}
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_8003301_B" # war with Rwanda
+		badboy = 10
+		war = { target = RWA attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = install_democracy } }
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+country_event = {
+	id = 8003302
+	title = "EVT_8003302_NAME" # second Congo war
+	desc = "EVT_8003302_DESC"
+	picture = "congo_war" 
+	
+	is_triggered_only = yes # Uganda supports rebels 8027003
+
+	immediate = { 
+		release = ITU 
+		any_neighbor_country = { limit = { tag = UGA } create_alliance = ITU } 
+	}
+	
+	option = {
+		name = "EVT_8003302_A" # gather an alliance
+		casus_belli ={
+			target = ITU
+			type = annex_core_country
+			months = 12
+		}
+		casus_belli ={
+			target = ITU
+			type = make_puppet
+			months = 12
+		}
+		any_country = {
+			limit = { OR = { tag = NAM tag = ANG tag = ZIM } }
+			country_event = 8003303 # request alliance
+		}
+		relation = { who = ITU value = -200 }
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_8003302_B" # war with Ituri
+		war = { target = ITU attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+country_event = {
+	id = 8003303
+	title = "EVT_8003303_NAME" # Alliance with ..
+	desc = "EVT_8003303_DESC"
+	picture = "congo_war" 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_8003303_A" # accept
+		FROM = { relation = { who = THIS value = 100 } }
+		relation = { who = ITU value = -200 }
+		create_alliance = FROM
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_8003303_B"
+		prestige = -5
+		ai_chance = { factor = 0 }
+	}
+	
+}

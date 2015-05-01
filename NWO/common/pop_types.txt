@@ -371,6 +371,7 @@ factor = 0.5
 		is_primary_culture  = yes
 		location = { is_primary_culture = no is_capital = no }
 	}
+	
 }
 
 #general colonial migration mtth, same for all pops
@@ -734,6 +735,12 @@ emigration_chance =
 			location = { controlled_by = owner }
 		}		
 	}
+	modifier = {
+		factor = 200
+		is_primary_culture  = no
+		country = { has_country_flag = ethnic_cleansing }
+	}
+	
 }
 
 #general assimilation mtth, same for all pops

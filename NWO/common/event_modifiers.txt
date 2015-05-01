@@ -30,6 +30,18 @@ war_torn = {
         icon = 4
 }
 
+ethnic_cleansing = { 
+	local_factory_output = -0.25
+	local_RGO_throughput = -0.25
+	immigrant_attract = -0.25
+	immigrant_push = 0.75
+	population_growth = -0.002
+	loan_interest = 0.05
+	icon = 14 
+}
+
+neighbor_ethnic_cleansing = { global_immigrant_attract = 2 icon = 14}
+
 ##### POLITICAL EVENTS ######
 government_sanitarium = {
 	population_growth = 0.005
@@ -673,10 +685,6 @@ commonwealth_of_nations = {
 	icon = 7
 }
 
-north_atlantic_treaty_organization = {
-	icon = 15
-}
-
 the_san_francisco_system = {
 	icon = 8
 }
@@ -741,12 +749,6 @@ five_children = {
 family_values = {
 	population_growth = 0.001
 	icon = 17
-}
-
-free_trade_area = {
-	#max_tariff = 0.0
-	#min_tariff = -1.0
-	icon = 5
 }
 
 chair_ambitions = {

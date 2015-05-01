@@ -1,0 +1,62 @@
+country_event = {
+	id = 8029501
+	title = "EVT_8029501_NAME"
+	desc = "EVT_8029501_DESC"
+	picture = "congo_war" 
+	
+	fire_only_once = yes
+	
+	trigger = { # Uganda has successfully intervened in Rwanda 8027001
+		tag = RWA
+		government = democracy
+		has_recently_lost_war = yes
+		NOT = { any_owned_province = { NOT = { has_country_modifier = ethnic_cleansing } } }
+		badboy = 10
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVT_8029501_A" # riece of tutsi nationalism
+		government = nationalist_dictatorship
+		primary_culture = tutsi
+		UGA = { country_event = 8027002 } # offer alliance
+		CNG = { country_event = 8003301 } # support rebellion
+		small_arms = 200
+		money = 100000		
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_8029501_B" # never mind
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+country_event = {
+	id = 8029502
+	title = "EVT_8029502_NAME" # Alliance with Uganda
+	desc = "EVT_8029502_DESC"
+	picture = "congo_war" 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_8029502_A" # accept
+		relation = { who = FROM value = 100 }
+		relation = { who = CNG value = -200 }
+		create_alliance = FROM
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_8029502_B"
+		prestige = -5
+		ai_chance = { factor = 0 }
+	}
+	
+	
+}

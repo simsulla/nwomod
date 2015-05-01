@@ -1,0 +1,49 @@
+political_decisions = {
+
+	ethnic_cleansing = {
+			picture = "ethnic_cleansing"
+			alert = no
+			potential = {
+				government = populist_dictatorship
+				NOT = { has_country_flag = ethnic_cleansing }
+			}
+
+			allow = {
+				#OR = { NOT = { tag = RWA } year = 1996 }
+				NOT = { badboy = 1 }
+				war = no
+			}
+
+			effect = {
+				set_country_flag = ethnic_cleansing
+				set_country_flag = ethnic_cleansed
+				badboy = 20
+				add_country_modifier = {  name = ethnic_cleansing duration = 90 } 
+				any_neighbor_country = { add_country_modifier = { name = neighbor_ethnic_cleansing duration = 90 } }
+			}
+			ai_will_do = { 
+				factor = 1 
+				modifier = { has_country_flag = ethnic_cleansed factor = 0  } 
+				modifier = {  NOT = { OR = { tag = RWA tag = RSR tag = SRK tag = SER tag = CRO tag = BOS } } factor = 0 } 
+			}
+	}
+	
+	end_ethnic_cleansing = {
+			picture = "ethnic_cleansing"
+			
+			potential = {
+				has_country_flag = ethnic_cleansing
+			}
+
+			allow = {
+				NOT = { has_country_modifier = ethnic_cleansing }
+				war = no
+			}
+
+			effect = {
+				badboy = -2
+				clr_country_flag = ethnic_cleansing
+			}
+			ai_will_do = { factor = 1 }
+	}
+}

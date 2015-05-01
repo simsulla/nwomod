@@ -34,10 +34,10 @@ diplomatic_focus =
 		limit = { 
 			OR = {
 				THIS = {is_greater_power = yes }
-				AND = { 
-					THIS = { is_secondary_power = yes }
-					continent = THIS
-				}
+				#AND = { 
+				#	THIS = { is_secondary_power = yes }
+				#	continent = THIS
+				#}
 				AND = { 
 					THIS = { civilized = yes }
 					state_scope = {

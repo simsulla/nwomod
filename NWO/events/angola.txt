@@ -16,7 +16,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8000608_A"
+		name = "EVT_8000601_A"
 		any_pop = {
 			limit = {
 				OR = { culture = ovimbundu culture = bakongo }
@@ -32,7 +32,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8000608_B"
+		name = "EVT_8000601_B"
 		any_pop = {
 			limit = {
 				culture = kimbundu
@@ -45,7 +45,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8000608_C"
+		name = "EVT_8000601_C"
 		any_pop = {
 			limit = {
 				culture = kimbundu
@@ -56,10 +56,11 @@ country_event = {
 		ruling_party_ideology = populist
 		government = populist_dictatorship
 		any_owned = {
-			limit = { OR = { province_id = 1999 province_id = 2001  province_id = 2000  province_id = 2002  province_id = 2009 province_id = 2003 } }
+			limit = { OR = { province_id = 2001  province_id = 2000  province_id = 2002  province_id = 2009 province_id = 2003 } }
 			change_controller = REB
 		}
 		ai_chance = { factor = 0 }
 	}
 	
 }
+
