@@ -316,7 +316,7 @@ lumber_factory = {
 		timber = 28	
 	}
 	output_goods = lumber 
-	value = 27
+	value = 52
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.25
@@ -633,7 +633,7 @@ furniture_factory = {
 		fabric = 120.00	
 	}
 	output_goods = furniture 
-	value = 78
+	value = 69
 	bonus = {
 		trigger = { 
 			OR = {
@@ -1229,21 +1229,21 @@ grain_farm = {
 }
 
 rice_farm = {
-	template = RGO_template_labourers
+	template = RGO_template_farmers
 	output_goods = rice 
 	value = 2.0
 	farm = yes
 }
 
 timber_lodge = {
-	template = RGO_template_labourers
+	template = RGO_template_farmers
 	output_goods = timber 
 	value = 2.0
 	farm = yes
 }
 
 oil_seeds_ranch = {
-	template = RGO_template_labourers
+	template = RGO_template_farmers
 	output_goods = oil_seeds 
 	value = 2.0
 	farm = yes
@@ -1341,7 +1341,7 @@ coffee_plantation = {
 }
 
 cotton_plantation = {
-	template = RGO_template_labourers
+	template = RGO_template_farmers
 	output_goods = cotton 
 	value = 2.0
 	farm = yes
