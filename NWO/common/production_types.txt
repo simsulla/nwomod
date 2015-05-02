@@ -313,10 +313,10 @@ steel_factory = {
 lumber_factory = {       
 	template = factory_template
 	input_goods = {    
-		timber = 70	
+		timber = 56	
 	}
 	output_goods = lumber 
-	value = 58
+	value = 48
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.25
@@ -409,10 +409,10 @@ rubber_plastics_factory = {
 paper_factory = {       
 	template = factory_template
 	input_goods = {    
-		timber = 180	
+		timber = 148	
 	}
 	output_goods = paper 
-	value = 77
+	value = 64
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.25
@@ -934,7 +934,7 @@ beverage_tobacco_factory = {
 		beverages = 40	
 	}
 	output_goods = beverage_tobacco 
-	value = 64
+	value = 65
 	bonus = {
 		trigger = { has_building = cigarettes_factory }
 		value = 0.125
@@ -1101,7 +1101,7 @@ culture_factory = {
 		beverage_tobacco = 30.00	
 	}
 	output_goods = culture 
-	value = 60
+	value = 58
 	bonus = {
 		trigger = { has_building = health_factory }
 		value = 0.125
@@ -1572,7 +1572,7 @@ artisan_culture = {
 		beverage_tobacco = 30.00	
 	}
 	output_goods = culture 
-	value = 59
+	value = 57
 	owner = {
 		poptype = artisan 
 		effect = output
