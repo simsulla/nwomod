@@ -444,17 +444,13 @@ promote_to =
 		factor = 0.01
 		modifier = { factor = -20 NOT = { is_primary_culture = yes } }
 		group = {
-			modifier = { factor = 10  NOT = { state_scope = { soldiers = 0.001 } } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.001 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.002 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.003 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.004 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.005 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.006 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.007 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.008 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.009 } }
-			modifier = { factor = -2 state_scope = { soldiers = 0.01 } }
+			modifier = { factor = 10 state_scope = { NOT = { soldiers = 0.008 } } }
+			modifier = { factor = -2 state_scope = { soldiers = 0.016 } }
+			modifier = { factor = -2 state_scope = { soldiers = 0.024 } }
+			modifier = { factor = -2 state_scope = { soldiers = 0.032 } }
+			modifier = { factor = -2 state_scope = { soldiers = 0.04 } }
+			modifier = { factor = -2 state_scope = { soldiers = 0.06 } }
+			modifier = { factor = -2 state_scope = { soldiers = 0.08 } }
 		}
 	}
 
