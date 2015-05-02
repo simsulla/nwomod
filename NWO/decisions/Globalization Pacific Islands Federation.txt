@@ -6,8 +6,7 @@ political_decisions = {
 	xpi_ambition = {
 		picture = "xpi_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			capital_scope = { continent = oceania }
+			has_country_flag = trade_block_ambition capital_scope = { continent = oceania }
 			NOT = { has_country_flag = xpi_ambition has_country_flag = in_trade_block tag = XPI }
 		}
 		allow = {
@@ -87,7 +86,7 @@ political_decisions = {
 	xpi_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = oceania }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -115,7 +114,7 @@ political_decisions = {
 	xpi_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = oceania }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -149,7 +148,7 @@ political_decisions = {
 	xpi_political_union = {
 		picture = "xpi_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = oceania }
 			NOT = { capital_scope = { is_core = XPI } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -182,7 +181,7 @@ political_decisions = {
 	xpi_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = oceania }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -211,7 +210,7 @@ political_decisions = {
 	xpi_form_union = {
 		picture = "xpi_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = oceania }
 			has_country_flag = xpi_ambition
 			XPI = { exists = no }
 		}
@@ -258,7 +257,7 @@ political_decisions = {
 	xpi_enlarge_union = {
 		picture = "xpi_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = oceania }
 			has_country_flag = xpi_ambition
 			tag = XPI
 		}

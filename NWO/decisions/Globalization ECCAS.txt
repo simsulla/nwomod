@@ -6,17 +6,7 @@ political_decisions = {
 	xec_ambition = {
 		picture = "xec_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = CAM
-				tag = CAR
-				tag = CHA
-				tag = ROC
-				tag = EQG
-				tag = GAB
-				tag = CNG
-				tag = ANG
-			}
+			has_country_flag = trade_block_ambition OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			NOT = { has_country_flag = xec_ambition has_country_flag = in_trade_block tag = XEC }
 		}
 		allow = {
@@ -96,7 +86,7 @@ political_decisions = {
 	xec_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -124,7 +114,7 @@ political_decisions = {
 	xec_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -158,7 +148,7 @@ political_decisions = {
 	xec_political_union = {
 		picture = "xec_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			NOT = { capital_scope = { is_core = XEC } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -191,7 +181,7 @@ political_decisions = {
 	xec_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -220,7 +210,7 @@ political_decisions = {
 	xec_form_union = {
 		picture = "xec_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			has_country_flag = xec_ambition
 			XEC = { exists = no }
 		}
@@ -267,7 +257,7 @@ political_decisions = {
 	xec_enlarge_union = {
 		picture = "xec_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			has_country_flag = xec_ambition
 			tag = XEC
 		}

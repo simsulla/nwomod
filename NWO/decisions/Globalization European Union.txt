@@ -6,11 +6,7 @@ political_decisions = {
 	xeu_ambition = {
 		picture = "xeu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				capital_scope = { continent = europe }
-				tag = TUR
-			}
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR }
 			NOT = { tag = RUS }
 			NOT = { has_country_flag = xeu_ambition has_country_flag = in_trade_block tag = XEU }
 		}
@@ -91,7 +87,7 @@ political_decisions = {
 	xeu_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -119,7 +115,7 @@ political_decisions = {
 	xeu_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -153,7 +149,7 @@ political_decisions = {
 	xeu_political_union = {
 		picture = "xeu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR }
 			NOT = { capital_scope = { is_core = XEU } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -186,7 +182,7 @@ political_decisions = {
 	xeu_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -215,7 +211,7 @@ political_decisions = {
 	xeu_form_union = {
 		picture = "xeu_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR }
 			has_country_flag = xeu_ambition
 			XEU = { exists = no }
 		}
@@ -263,7 +259,7 @@ political_decisions = {
 	xeu_enlarge_union = {
 		picture = "xeu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR }
 			has_country_flag = xeu_ambition
 			tag = XEU
 		}

@@ -6,8 +6,7 @@ political_decisions = {
 	xau_ambition = {
 		picture = "xau_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			capital_scope = { continent = africa }
+			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			NOT = { has_country_flag = xau_ambition has_country_flag = in_trade_block tag = XAU }
 		}
 		allow = {
@@ -87,7 +86,7 @@ political_decisions = {
 	xau_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -115,7 +114,7 @@ political_decisions = {
 	xau_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -149,7 +148,7 @@ political_decisions = {
 	xau_political_union = {
 		picture = "xau_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			NOT = { capital_scope = { is_core = XAU } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -182,7 +181,7 @@ political_decisions = {
 	xau_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			is_vassal = no
 			is_greater_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -211,7 +210,7 @@ political_decisions = {
 	xau_form_union = {
 		picture = "xau_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			has_country_flag = xau_ambition
 			XAU = { exists = no }
 		}
@@ -258,7 +257,7 @@ political_decisions = {
 	xau_enlarge_union = {
 		picture = "xau_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			has_country_flag = xau_ambition
 			tag = XAU
 		}

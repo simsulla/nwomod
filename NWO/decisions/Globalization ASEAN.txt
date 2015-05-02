@@ -6,19 +6,7 @@ political_decisions = {
 	xan_ambition = {
 		picture = "xan_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = BUR
-				tag = THI
-				tag = MSY
-				tag = IDO
-				tag = DAI
-				tag = CAM
-				tag = LUA
-				tag = BRU
-				tag = SNG
-				tag = PHI
-			}
+			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 			NOT = { has_country_flag = xan_ambition has_country_flag = in_trade_block tag = XAN }
 		}
 		allow = {
@@ -98,7 +86,7 @@ political_decisions = {
 	xan_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -126,7 +114,7 @@ political_decisions = {
 	xan_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -160,7 +148,7 @@ political_decisions = {
 	xan_political_union = {
 		picture = "xan_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 			NOT = { capital_scope = { is_core = XAN } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -193,7 +181,7 @@ political_decisions = {
 	xan_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -222,7 +210,7 @@ political_decisions = {
 	xan_form_union = {
 		picture = "xan_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 			has_country_flag = xan_ambition
 			XAN = { exists = no }
 		}
@@ -272,7 +260,7 @@ political_decisions = {
 	xan_enlarge_union = {
 		picture = "xan_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 			has_country_flag = xan_ambition
 			tag = XAN
 		}

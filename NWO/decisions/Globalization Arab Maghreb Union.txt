@@ -6,15 +6,7 @@ political_decisions = {
 	xmu_ambition = {
 		picture = "xmu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = MAU
-				tag = MOR
-				tag = ALG
-				tag = TUN
-				tag = TRI
-				tag = WSA
-			}
+			has_country_flag = trade_block_ambition OR = { tag = MAU tag = MOR tag = ALG tag = TUN tag = TRI tag = WSA }
 			NOT = { has_country_flag = xmu_ambition has_country_flag = in_trade_block tag = XMU }
 		}
 		allow = {
@@ -94,7 +86,7 @@ political_decisions = {
 	xmu_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = MAU tag = MOR tag = ALG tag = TUN tag = TRI tag = WSA }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -122,7 +114,7 @@ political_decisions = {
 	xmu_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = MAU tag = MOR tag = ALG tag = TUN tag = TRI tag = WSA }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -156,7 +148,7 @@ political_decisions = {
 	xmu_political_union = {
 		picture = "xmu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = MAU tag = MOR tag = ALG tag = TUN tag = TRI tag = WSA }
 			NOT = { capital_scope = { is_core = XMU } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -189,7 +181,7 @@ political_decisions = {
 	xmu_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = MAU tag = MOR tag = ALG tag = TUN tag = TRI tag = WSA }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -218,7 +210,7 @@ political_decisions = {
 	xmu_form_union = {
 		picture = "xmu_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = MAU tag = MOR tag = ALG tag = TUN tag = TRI tag = WSA }
 			has_country_flag = xmu_ambition
 			XMU = { exists = no }
 		}
@@ -263,7 +255,7 @@ political_decisions = {
 	xmu_enlarge_union = {
 		picture = "xmu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = MAU tag = MOR tag = ALG tag = TUN tag = TRI tag = WSA }
 			has_country_flag = xmu_ambition
 			tag = XMU
 		}

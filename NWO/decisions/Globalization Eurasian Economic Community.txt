@@ -6,21 +6,7 @@ political_decisions = {
 	xea_ambition = {
 		picture = "xea_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = RUS
-				tag = BYE
-				tag = KAZ
-				tag = KYR
-				tag = TAJ
-				tag = ARM
-				tag = MOL
-				tag = UKR
-				tag = TRD
-				tag = TRK
-				tag = AZB
-				tag = UZB
-			}
+			has_country_flag = trade_block_ambition OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = TRK tag = AZB tag = UZB }
 			NOT = { has_country_flag = xea_ambition has_country_flag = in_trade_block tag = XEA }
 		}
 		allow = {
@@ -100,7 +86,7 @@ political_decisions = {
 	xea_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = TRK tag = AZB tag = UZB }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -128,7 +114,7 @@ political_decisions = {
 	xea_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = TRK tag = AZB tag = UZB }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -162,7 +148,7 @@ political_decisions = {
 	xea_political_union = {
 		picture = "xea_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = TRK tag = AZB tag = UZB }
 			NOT = { capital_scope = { is_core = XEA } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -195,7 +181,7 @@ political_decisions = {
 	xea_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = TRK tag = AZB tag = UZB }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -224,7 +210,7 @@ political_decisions = {
 	xea_form_union = {
 		picture = "xea_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = TRK tag = AZB tag = UZB }
 			has_country_flag = xea_ambition
 			XEA = { exists = no }
 		}
@@ -269,7 +255,7 @@ political_decisions = {
 	xea_enlarge_union = {
 		picture = "xea_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = TRK tag = AZB tag = UZB }
 			has_country_flag = xea_ambition
 			tag = XEA
 		}

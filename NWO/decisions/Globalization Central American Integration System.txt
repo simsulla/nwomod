@@ -6,16 +6,7 @@ political_decisions = {
 	xci_ambition = {
 		picture = "xci_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = HON
-				tag = GUA
-				tag = ELS
-				tag = COS
-				tag = PNM
-				tag = NIC
-				tag = BLZ
-			}
+			has_country_flag = trade_block_ambition OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 			NOT = { has_country_flag = xci_ambition has_country_flag = in_trade_block tag = XCI }
 		}
 		allow = {
@@ -123,7 +114,7 @@ political_decisions = {
 	xci_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -157,7 +148,7 @@ political_decisions = {
 	xci_political_union = {
 		picture = "xci_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 			NOT = { capital_scope = { is_core = XCI } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -190,7 +181,7 @@ political_decisions = {
 	xci_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -219,7 +210,7 @@ political_decisions = {
 	xci_form_union = {
 		picture = "xci_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 			has_country_flag = xci_ambition
 			XCI = { exists = no }
 		}
@@ -265,7 +256,7 @@ political_decisions = {
 	xci_enlarge_union = {
 		picture = "xci_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 			has_country_flag = xci_ambition
 			tag = XCI
 		}

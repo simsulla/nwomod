@@ -6,14 +6,7 @@ political_decisions = {
 	xef_ambition = {
 		picture = "xef_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = KEN
-				tag = TAN
-				tag = UGA
-				tag = RWA
-				tag = BRN
-			}
+			has_country_flag = trade_block_ambition OR = { tag = KEN tag = TAN tag = UGA tag = RWA tag = BRN }
 			NOT = { has_country_flag = xef_ambition has_country_flag = in_trade_block tag = XEF }
 		}
 		allow = {
@@ -93,7 +86,7 @@ political_decisions = {
 	xef_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = KEN tag = TAN tag = UGA tag = RWA tag = BRN }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -121,7 +114,7 @@ political_decisions = {
 	xef_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = KEN tag = TAN tag = UGA tag = RWA tag = BRN }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -155,7 +148,7 @@ political_decisions = {
 	xef_political_union = {
 		picture = "xef_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = KEN tag = TAN tag = UGA tag = RWA tag = BRN }
 			NOT = { capital_scope = { is_core = XEF } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -188,7 +181,7 @@ political_decisions = {
 	xef_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = KEN tag = TAN tag = UGA tag = RWA tag = BRN }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -217,7 +210,7 @@ political_decisions = {
 	xef_form_union = {
 		picture = "xef_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = KEN tag = TAN tag = UGA tag = RWA tag = BRN }
 			has_country_flag = xef_ambition
 			XEF = { exists = no }
 		}
@@ -262,7 +255,7 @@ political_decisions = {
 	xef_enlarge_union = {
 		picture = "xef_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = KEN tag = TAN tag = UGA tag = RWA tag = BRN }
 			has_country_flag = xef_ambition
 			tag = XEF
 		}

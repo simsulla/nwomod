@@ -6,20 +6,7 @@ political_decisions = {
 	xca_ambition = {
 		picture = "xca_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = TUR
-				tag = KAZ
-				tag = KYR
-				tag = TKR
-				tag = UZB
-				tag = AZB
-				tag = PER
-				tag = AFG
-				tag = PAK
-				tag = TAJ
-				tag = NCY
-			}
+			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
 			NOT = { has_country_flag = xca_ambition has_country_flag = in_trade_block tag = XCA }
 		}
 		allow = {
@@ -99,7 +86,7 @@ political_decisions = {
 	xca_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -127,7 +114,7 @@ political_decisions = {
 	xca_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -161,7 +148,7 @@ political_decisions = {
 	xca_political_union = {
 		picture = "xca_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
 			NOT = { capital_scope = { is_core = XCA } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -194,7 +181,7 @@ political_decisions = {
 	xca_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -223,7 +210,7 @@ political_decisions = {
 	xca_form_union = {
 		picture = "xca_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
 			has_country_flag = xca_ambition
 			XCA = { exists = no }
 		}
@@ -270,7 +257,7 @@ political_decisions = {
 	xca_enlarge_union = {
 		picture = "xca_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
 			has_country_flag = xca_ambition
 			tag = XCA
 		}

@@ -6,16 +6,7 @@ political_decisions = {
 	xio_ambition = {
 		picture = "xio_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = HND
-				tag = PAK
-				tag = NEP
-				tag = BHU
-				tag = BNG
-				tag = AFG
-				tag = MLD
-			}
+			has_country_flag = trade_block_ambition OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
 			NOT = { has_country_flag = xio_ambition has_country_flag = in_trade_block tag = XIO }
 		}
 		allow = {
@@ -95,7 +86,7 @@ political_decisions = {
 	xio_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -123,7 +114,7 @@ political_decisions = {
 	xio_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -157,7 +148,7 @@ political_decisions = {
 	xio_political_union = {
 		picture = "xio_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
 			NOT = { capital_scope = { is_core = XIO } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -190,7 +181,7 @@ political_decisions = {
 	xio_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -219,7 +210,7 @@ political_decisions = {
 	xio_form_union = {
 		picture = "xio_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
 			has_country_flag = xio_ambition
 			XIO = { exists = no }
 		}
@@ -267,7 +258,7 @@ political_decisions = {
 	xio_enlarge_union = {
 		picture = "xio_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
 			has_country_flag = xio_ambition
 			tag = XIO
 		}

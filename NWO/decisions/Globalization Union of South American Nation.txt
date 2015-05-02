@@ -6,8 +6,7 @@ political_decisions = {
 	xsu_ambition = {
 		picture = "xsu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			capital_scope = { continent = south_america }
+			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			NOT = { has_country_flag = xsu_ambition has_country_flag = in_trade_block tag = XSU }
 		}
 		allow = {
@@ -87,7 +86,7 @@ political_decisions = {
 	xsu_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -115,7 +114,7 @@ political_decisions = {
 	xsu_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -149,7 +148,7 @@ political_decisions = {
 	xsu_political_union = {
 		picture = "xsu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			NOT = { capital_scope = { is_core = XSU } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -182,7 +181,7 @@ political_decisions = {
 	xsu_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -211,7 +210,7 @@ political_decisions = {
 	xsu_form_union = {
 		picture = "xsu_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			has_country_flag = xsu_ambition
 			XSU = { exists = no }
 		}
@@ -257,7 +256,7 @@ political_decisions = {
 	xsu_enlarge_union = {
 		picture = "xsu_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			has_country_flag = xsu_ambition
 			tag = XSU
 		}

@@ -6,15 +6,7 @@ political_decisions = {
 	xgc_ambition = {
 		picture = "xgc_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			OR = {
-				tag = SAA
-				tag = KUW
-				tag = BHR
-				tag = QAT
-				tag = UAR
-				tag = OMA
-			}
+			has_country_flag = trade_block_ambition OR = { tag = SAA tag = KUW tag = BHR tag = QAT tag = UAR tag = OMA }
 			NOT = { has_country_flag = xgc_ambition has_country_flag = in_trade_block tag = XGC }
 		}
 		allow = {
@@ -96,7 +88,7 @@ political_decisions = {
 	xgc_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = SAA tag = KUW tag = BHR tag = QAT tag = UAR tag = OMA }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -125,7 +117,7 @@ political_decisions = {
 	xgc_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = SAA tag = KUW tag = BHR tag = QAT tag = UAR tag = OMA }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -160,7 +152,7 @@ political_decisions = {
 	xgc_political_union = {
 		picture = "xgc_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = SAA tag = KUW tag = BHR tag = QAT tag = UAR tag = OMA }
 			NOT = { capital_scope = { is_core = XGC } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -194,7 +186,7 @@ political_decisions = {
 	xgc_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = SAA tag = KUW tag = BHR tag = QAT tag = UAR tag = OMA }
 			is_vassal = no
 			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -223,7 +215,7 @@ political_decisions = {
 	xgc_form_union = {
 		picture = "xgc_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = SAA tag = KUW tag = BHR tag = QAT tag = UAR tag = OMA }
 			has_country_flag = xgc_ambition
 			XGC = { exists = no }
 		}
@@ -269,7 +261,7 @@ political_decisions = {
 	xgc_enlarge_union = {
 		picture = "xgc_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
+			has_country_flag = trade_block_ambition OR = { tag = SAA tag = KUW tag = BHR tag = QAT tag = UAR tag = OMA }
 			has_country_flag = xgc_ambition
 			tag = XGC
 		}
