@@ -558,7 +558,7 @@ colonialmigration_chance = {
 #general emigration chance
 emigration_chance = 
 {
-	factor = 0.25
+	factor = 0.75 # 0.25
 	group = {
 		modifier = {
 			factor = 0.25
@@ -605,13 +605,14 @@ emigration_chance =
 		factor = -10
 		country = { 
 			OR = {
+				government = absolute_monarchy
 				government = hms_government
 				government = democracy
 			}
 		}
 	}
 	modifier = { # roundabout way to mod that only people with money can emigrate
-		factor = -10
+		factor = -0.1
 		strata = poor
 	}
 	modifier = {
