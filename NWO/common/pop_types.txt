@@ -558,7 +558,7 @@ colonialmigration_chance = {
 #general emigration chance
 emigration_chance = 
 {
-	factor = 0.6 # 0.25
+	factor = 0.02
 	group = {
 		modifier = {
 			factor = 0.25
@@ -596,28 +596,30 @@ emigration_chance =
 		factor = 0.2
 		strata = rich
 	}
-	# roundabout way to mod that only refugees emigrate / nobody_gets_out and democracises
 	modifier = {
 		factor = -10
 		country = { immigration_policy = nobody_gets_out }
 	}
+	# roundabout way to mod that mostly refugees emigrate
 	modifier = { 
-		factor = -10
+		factor = 0.1
 		country = { 
-			OR = {
-				government = absolute_monarchy
-				government = hms_government
-				government = democracy
+			NOT = { 
+				OR = {
+					government = absolute_monarchy
+					government = hms_government
+					government = democracy
+				}
 			}
 		}
 	}
 	modifier = { # roundabout way to mod that only people with money can emigrate
-		factor = -10
+		factor = -1
 		strata = poor
 	}
 	modifier = {
-		factor = -100
-		not = { 
+		factor = -10
+		NOT = { 
 			location = { controlled_by = owner }
 		}
 	}
@@ -741,7 +743,31 @@ emigration_chance =
 		is_primary_culture  = no
 		country = { has_country_flag = ethnic_cleansing }
 	}
-	
+	# ugly but need to limit pop fragmentation and sino indian swamping
+	modifier = { 
+		factor = 0.6
+		OR = { 
+			culture = sunni_arab
+			culture = black_anglo
+			culture = black_french
+			culture = black_portuguese
+			culture = black_spanish
+			culture = white_spanish
+			culture = mestizo
+			culture = somali
+		}
+	}
+	# ugly but need to limit pop fragmentation and sino indian swamping
+	modifier = { 
+		factor = -1.2
+		OR = { 
+			culture = indian
+			culture = muslim_indian
+			culture = bengali
+			culture = bengali_hindu
+			culture = chinese
+		}
+	}
 }
 
 #general assimilation mtth, same for all pops
