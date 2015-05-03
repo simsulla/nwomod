@@ -25,7 +25,7 @@ country_event = { # one_child
 	picture = "administration"
 	
 	trigger = {
-		literacy = 0.90
+		literacy = 0.45
 		OR = {
 			consciousness = 6
 			capital_scope = { continent = europe }
@@ -67,7 +67,7 @@ country_event = { # one_point_five_children
 	picture = "administration"
 	
 	trigger = {
-		literacy = 0.70
+		literacy = 0.35
                 OR = {
                         consciousness = 4
                         capital_scope = { continent = europe }
@@ -109,7 +109,7 @@ country_event = { # two_children
 	picture = "administration"
 	
 	trigger = {
-		literacy = 0.40
+		literacy = 0.20
 		NOT = { 
                 	OR = {
                         	consciousness = 4
@@ -153,7 +153,7 @@ country_event = { # two_point_five_children
 	picture = "administration"
 	
 	trigger = {
-		literacy = 0.2
+		literacy = 0.1
 		NOT = { literacy = 0.4 }
                 NOT = { 
                         OR = {
@@ -197,7 +197,7 @@ country_event = { # three_children
 	picture = "administration"
 	
 	trigger = {
-		literacy = 0.1
+		literacy = 0.05
                 NOT = { 
                         OR = {
                                 consciousness = 2
@@ -240,7 +240,7 @@ country_event = { # four_children
 	picture = "administration"
 	
 	trigger = {
-		literacy = 0.03
+		literacy = 0.015
                 NOT = { 
                         OR = {
                                 consciousness = 1
@@ -291,7 +291,7 @@ country_event = { # five_children
                                 tag = CAN
                         }
                 }
-		NOT = { literacy = 0.03 }
+		NOT = { literacy = 0.015 }
 		NOT = {
 			has_country_modifier = one_child
 			has_country_modifier = one_point_five_children
@@ -323,24 +323,25 @@ country_event = { # family_values
 	id = 2260610
 	title = EVTNAME2260610 # "Family values!"
 	desc = EVTDESC2260610
-	picture = "administration"
+	picture = "pre_demographic_transition"
 	
 	trigger = {
+		NOT = { has_country_modifier = demographics }
 		any_owned_province = {
 			NOT = {
+				has_province_modifier = pre_demographic_transition 
 				has_province_modifier = family_values
-                       		pop_majority_religion = irreligion
+           		pop_majority_religion = irreligion
 			}
-			has_national_minority = yes
-                	OR = {
+			OR = {
 				NOT = { average_consciousness = 1 }
-                       		pop_majority_religion = sunni
-                       		AND = {
-                               		pop_majority_religion = shiite
-                               		is_state_religion = no
-                       		}
-               		}
-               	}
+           		pop_majority_religion = sunni
+           		AND = {
+              		pop_majority_religion = shiite
+               		is_state_religion = no
+           		}
+      		}
+       	}
 	}
 	
 	# try and avoid event spam in large religious countries
@@ -370,21 +371,25 @@ country_event = { # family_values
 	
 	option = {
 		name = EVTOPTA2260610
+		add_country_modifier = {
+			name = demographics
+			duration = 3500
+		}
 		any_owned = {
 			limit = {
-			  NOT = {
-                                has_province_modifier = family_values
-                                pop_majority_religion = irreligion
-                          }
-                          has_national_minority = yes
-                          OR = {
-                                NOT = { average_consciousness = 1 }
-                                pop_majority_religion = sunni
-                                AND = {
-                                        pop_majority_religion = shiite
-                                        is_primary_culture = no
-                                }
-                          }
+				NOT = {
+					has_province_modifier = pre_demographic_transition 
+					has_province_modifier = family_values
+					pop_majority_religion = irreligion
+				}
+				OR = {
+					NOT = { average_consciousness = 1 }
+					pop_majority_religion = sunni
+					AND = {
+						pop_majority_religion = shiite
+						is_state_religion = no
+					}
+				}
 			}
 			add_province_modifier = {
 				name = family_values
@@ -394,3 +399,51 @@ country_event = { # family_values
 	}
 }
 
+country_event = { # pre_demographic_transition
+	id = 2260611
+	title = EVT_2260611_NAME # "Family values!"
+	desc = EVT_2260611_DESC
+	picture = "pre_demographic_transition"
+	
+	trigger = {
+		NOT = { has_country_modifier = demographics }
+		any_owned_province = {
+			NOT = {
+				has_province_modifier = pre_demographic_transition
+           		pop_majority_religion = irreligion
+			}
+			OR = {
+				AND = { NOT = { year = 2000 } pop_majority_religion = sunni }
+				AND = { NOT = { year = 2010 } continent = africa } 
+				AND = { NOT = { year = 2030 } continent = africa pop_majority_religion = sunni  }
+      		}
+       	}
+	}
+	
+	# try and avoid event spam in large religious countries
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = EVT_2260611_OPTA
+		add_country_modifier = {
+			name = demographics
+			duration = 3500
+		}
+		any_owned = {
+			limit = {
+				NOT = { has_province_modifier = pre_demographic_transition }
+				OR = {
+					AND = { NOT = { year = 2000 } pop_majority_religion = sunni }
+					AND = { NOT = { year = 2020 } continent = africa owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
+					AND = { NOT = { year = 2050 } continent = africa pop_majority_religion = sunni owner = {  NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
+				}
+			}
+			add_province_modifier = {
+				name = pre_demographic_transition
+				duration = 3500
+			}
+		}
+	}
+}
