@@ -291,7 +291,7 @@ demotion_chance =
 
 #general migration chance mtth, same for all pops
 migration_chance = {
-factor = 0.5
+    factor = 0.02
 	group = {
 		modifier = {
 			factor = 0.1
@@ -366,10 +366,10 @@ factor = 0.5
 		}		
 	}
 	modifier = {
-		# prevent mass migration to minority areas (like chines to autonomous regions )
-		factor = -1.2
+		# prevent mass migration to minority areas (like chines to autonomous regions ) THIS DOES NOT WORK!?
+		factor = -90
 		is_primary_culture  = yes
-		location = { is_primary_culture = no is_capital = no }
+		location = { NOT = { is_primary_culture = yes } }
 	}
 	
 }
