@@ -66,3 +66,110 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = 8215011
+
+	title = EVT_8215011_NAME
+	desc = EVT_8215011_DESC
+	picture = "united_nations_peacekeeping_mission"
+
+	trigger = {
+		has_country_modifier = united_nations
+		NOT = { has_country_modifier = call_for_un_peacekeeping_mission }
+		is_greater_power = no
+		OR = { government = hms_government government = democracy } 
+		ai = yes
+		OR = { 
+			AND = { num_of_revolts = 1 NOT = { num_of_cities = 3 } }
+			AND = { num_of_revolts = 2 num_of_cities = 3  }
+			AND = { num_of_revolts = 3 num_of_cities = 9  }
+			AND = { num_of_revolts = 4 num_of_cities = 18 }
+		}
+		war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVT_8215011_A 
+		ai_chance = { factor = 100 }
+		prestige = -2 
+		add_country_modifier = { name = call_for_un_peacekeeping_mission duration = 700 }
+		random_country = { limit = { ai = no has_country_modifier = united_nations } country_event = 8215012 }
+	}
+	
+	# no need for second factor ai will always do
+}
+
+country_event = {
+	id = 8215012
+
+	title = EVT_8215012_NAME
+	desc = EVT_8215012_DESC
+	picture = "united_nations_peacekeeping_mission"
+
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_8215012_A 
+		prestige = 10
+		add_country_modifier = { name = un_peacekeeping_mission duration = 700 }
+		FROM = { add_country_modifier = { name = un_peacekeeping_mission duration = 700 } } 
+		military_access = FROM
+	}
+	
+	option = {
+		name = EVT_8215012_B # never mind 
+	}
+}
+
+country_event = {
+	id = 8215013
+
+	title = EVT_8215013_NAME
+	desc = EVT_8215013_DESC
+	picture = "united_nations_peacekeeping_mission"
+
+	trigger = {
+		has_country_modifier = call_for_un_peacekeeping_mission
+		NOT = { government = hms_government government = democracy }
+		ai = yes
+		war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVT_8215013_A 
+		ai_chance = { factor = 100 }
+		prestige = 2
+		remove_country_modifier = call_for_un_peacekeeping_mission
+		random_country = { limit = { ai = no has_country_modifier = un_peacekeeping_mission } country_event = 8215014 }
+	}
+	
+	# no need for second factor ai will always do
+}
+
+country_event = {
+	id = 8215014
+
+	title = EVT_8215014_NAME
+	desc = EVT_8215014_DESC
+	picture = "united_nations_peacekeeping_mission"
+
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_8215014_A 
+		prestige = -20
+		relation = { who = FROM value = -100 }
+		remove_country_modifier = un_peacekeeping_mission
+		add_country_modifier = { name = ruling_party_scandal duration = 350 }
+	}
+	
+}
