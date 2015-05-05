@@ -928,109 +928,66 @@ assimilation_chance =
 #general conversion mtth, same for all pops
 conversion_chance = 
 {
-	factor = 0.1
+	factor = 0.02
+
 	group = {
 		modifier = {
-			factor = 0.2
-			luxury_needs = 0.9
+			factor = 2
+			literacy = 0.1
 		}
 		modifier = {
-			factor = 0.2
-			luxury_needs = 0.7
+			factor = 2
+			literacy = 0.2
 		}
 		modifier = {
-			factor = 0.2
-			luxury_needs = 0.5
-		}
-	}
-	group = {
-		modifier = {
-			factor = 0.1
-			everyday_needs = 0.9
+			factor = 2
+			literacy = 0.3
 		}
 		modifier = {
-			factor = 0.1
-			everyday_needs = 0.7
+			factor = 2
+			literacy = 0.4
 		}
 		modifier = {
-			factor = 0.1
-			everyday_needs = 0.5
-		}
-	}	
-	modifier = {
-		factor = -3
-		not = { consciousness = 3 }
-	}
-	modifier = {
-		factor = 5
-		OR = { 
-			strata = rich
-			strata = middle
-		}
-	}
-	modifier = {
-		factor = -5
-		not = { consciousness = 2 }
-	}
-	modifier = {
-		factor = -10
-		not = { consciousness = 1 }
-	}
-	modifier = {
-		factor = -10
-		has_pop_religion = jewish
-	}
-    modifier = {
-        factor = -10
-        has_pop_religion = irreligion
-    }
-    modifier = {
-        factor = -1
-        has_pop_religion = sunni
-    }
-    modifier = {
-       factor = -1
-       has_pop_religion = shiite
-    }
-	modifier = {
-		factor = 3
-		has_pop_religion = animist
-		location = { continent = africa }
-	}
-	group = {
-		modifier = {
-			factor = 0.5
-			not = { life_needs = 0.9 }
+			factor = 2
+			literacy = 0.5
 		}
 		modifier = {
-			factor = 0.5
-			not = { life_needs = 0.8 }
-		}
-		modifier = {
-			factor = 0.5
-			not = { life_needs = 0.7 }
+			factor = 2
+			literacy = 0.6
 		}
 	}
 	modifier = {
-		factor = -10000
-		not = { 
-		location = { controlled_by = owner }
-		}
-	}
-	modifier = {
-		factor = 2
-		culture = this
-	}
-	modifier = {
-		factor = -3
+		factor = -0.5
 		country = { religious_policy = moralism }
 	}
 	modifier = {
-		factor = -1
+		factor = 0.1
 		country = { religious_policy = pro_atheism }
 	}
 	modifier = {
 		factor = 2
 		country = { religious_policy = secularized }
 	}
+
+	modifier = {
+		factor = 2
+		culture = THIS
+	}
+
+	modifier = {
+		factor = -20
+		has_pop_religion = jewish
+	}
+    modifier = {
+        factor = -20
+        has_pop_religion = irreligion
+    }
+    modifier = {
+        factor = -4
+        has_pop_religion = sunni
+    }
+    modifier = {
+       factor = -4
+       has_pop_religion = shiite
+    }
 }
