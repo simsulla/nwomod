@@ -159,12 +159,12 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 7
+		days = 2
 	}
 	
 	option = {
 		name = "special_drawing_rights_yes"
-		treasury = -1000000
+		money = -1950000 
 		any_country = { 
 			limit = {
 				OR = { 
@@ -175,15 +175,15 @@ country_event = {
 				}
 				NOT = { tag = THIS }
 			}
-			treasury = -1000000
+			money = -1950000  
 		}		
-		ai_chance = { factor = 1 modifier = { factor = 0 money = 1000000  } }
+		ai_chance = { factor = 1 modifier = { factor = 0 money = 59000000  } }
 	}
 	
 	option = {
 		name = "special_drawing_rights_no"
 		clr_country_flag = special_drawing_rights
-		ai_chance = { factor = 1 modifier = { factor = 0 NOT = { money = 1000000  } } }
+		ai_chance = { factor = 1 modifier = { factor = 0 NOT = { money = 59000000  } } }
 	}
 
 }

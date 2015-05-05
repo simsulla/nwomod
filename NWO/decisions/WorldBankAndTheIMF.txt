@@ -18,7 +18,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = special_drawing_rights 
-			treasury = -10000000
+			treasury = -1000000
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -34,10 +34,7 @@ political_decisions = {
 		}
 		allow = {
 			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
-			any_greater_power = {
-				tag = ENG
-				NOT = { money = 1000000 }
-			}
+			ENG = { NOT = { money = 1000000 } }
 			money = 2000000
 		}
 		effect = {
