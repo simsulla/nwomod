@@ -8,7 +8,7 @@ political_decisions = {
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			NOT = { has_country_flag = special_drawing_rights }
 			#NOT = { has_country_flag = the_imf has_country_flag = world_bank has_country_flag = dev_bank  capital_scope = { trade_goods = credit } }
-			#year = 1968
+			year = 1968
 		}
 		allow = {
 			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
@@ -30,12 +30,11 @@ political_decisions = {
 			NOT = { tag = ENG }
 			ENG = { capital_scope = { trade_goods = credit } }
 			has_country_flag = special_drawing_rights
-			#year = 1952
+			year = 1952
 		}
 		allow = {
 			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
-			any_greater_power = { 
-				NOT = { tag = THIS }
+			any_greater_power = {
 				tag = ENG
 				NOT = { money = 1000000 }
 			}
@@ -45,13 +44,7 @@ political_decisions = {
 			set_country_flag = dev_bank
 			country_event = 15605
 			treasury = -1000000
-			random_country = { 
-				limit = { 
-					has_country_flag = the_imf
-					NOT = { tag = THIS }
-				}
-				country_event = 15602
-			}
+			ENG = {	country_event = 15602 }
 		}
 		ai_will_do = { factor = 1 }
 	}	
@@ -97,6 +90,7 @@ political_decisions = {
 			rank = 2
 			NOT = { has_country_flag = world_bank }
 			has_country_flag = special_drawing_rights
+			year = 1952
 		}
 		allow = {
 			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
@@ -131,7 +125,7 @@ political_decisions = {
 			rank = 2
 			NOT = { has_country_flag = dev_bank }
 			has_country_flag = special_drawing_rights
-			#year = 1952
+			year = 1952
 		}
 		allow = {
 			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
