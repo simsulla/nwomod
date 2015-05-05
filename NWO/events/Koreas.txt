@@ -10,12 +10,14 @@ country_event = { #koreas same government form = unite
 		OR = {
 			AND = {
 				tag = SKO
-				NKO = {ai = yes}
+				NKO = {ai = yes is_vassal = no part_of_sphere = no }
+				is_vassal = no
 			}
 			AND = {
 				ai = no
 				tag = NKO
-				SKO = {ai = yes}
+				SKO = {ai = yes is_vassal = no part_of_sphere = no}
+				is_vassal = no
 			}
 		}
 		OR = {
