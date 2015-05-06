@@ -121,11 +121,7 @@ country_migration_target =
 	modifier = { factor = 1.1 rank = 90 }
 	modifier = { factor = 1.1 rank = 100 }
 	modifier = { factor = 1.1 rank = 200 }
-	modifier = {
-		factor = 2.0
-		tag = USA
-		THIS = { has_pop_culture = mestizo }
-	}
+	
 	modifier = {
 		factor = 0.9
 		unemployment = 0.05
@@ -264,6 +260,11 @@ migration_target =
 #		factor = 1.5
 #		any_core = { is_primary_culture = THIS }
 #	}
+	modifier = {
+		# prevent mass migration to minority areas (like chines to autonomous regions )
+		factor = -4
+		is_primary_culture  = no
+	}
 	modifier = {
 		factor = 0.75
 		state_scope = {
