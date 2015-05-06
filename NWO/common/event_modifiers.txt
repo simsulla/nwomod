@@ -704,6 +704,19 @@ war_torn = {
 #	icon = 7
 #}
 
+# Factors influencing pop growth
+#Scale Literacy
+#-3	60,00%
+#-2	20,00% 
+#-1	10,00%
+#-0	0,00%
+# Where scale sets number of children: 0 is three_children
+#
+# culture irreligion: family_values 2.5% active half time -> 1.2%
+# religion and geography,pre_demographic_transition 2.5% active half time -> 1.2%
+
+
+
 one_point_five_children = {
 	global_population_growth = -0.005
 	education_efficiency_modifier = 0.1
@@ -711,8 +724,8 @@ one_point_five_children = {
 }
 
 two_children = {
-        #global_population_growth = 0.001
-        education_efficiency_modifier = 0.1
+	global_population_growth = 0.001
+	education_efficiency_modifier = 0.1
 	icon = 17
 }
 
@@ -729,6 +742,7 @@ three_children = {
 }
 
 demographics = {} # just a marker for performance 
+demographics_culture = {} # just a marker for performance 
 
 family_values = {
 	population_growth = 0.001
