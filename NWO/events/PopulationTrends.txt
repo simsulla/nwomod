@@ -162,7 +162,8 @@ country_event = { # pre_demographic_transition
 	picture = "pre_demographic_transition"
 	
 	trigger = {
-		AND = { NOT = { year = 1990 } year = 1997 } # ugly make the event not overlap family_values 
+		NOT = { year = 1990 } 
+		year = 1997 # ugly make the event not overlap family_values 
 		NOT = { has_country_modifier = demographics }
 		any_owned_province = {
 			NOT = { has_province_modifier = pre_demographic_transition }

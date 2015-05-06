@@ -107,7 +107,7 @@ country_migration_target =
 {
 	factor = 1
 
-	modifier = { factor = 1.4 total_pops = 25000000 } # 100,000,000
+	modifier = { factor = 2.0 total_pops = 25000000 } # 100,000,000
 	modifier = { factor = 1.2 total_pops = 2500000 } # 10,000,000
 	modifier = { factor = 1.1 total_pops = 250000 } # 1,000,000
 	modifier = { factor = 1.1 rank = 10 }
@@ -121,10 +121,11 @@ country_migration_target =
 	modifier = { factor = 1.1 rank = 90 }
 	modifier = { factor = 1.1 rank = 100 }
 	modifier = { factor = 1.1 rank = 200 }
-	# african, middle east and asian migrants go primary to europe or asia
-    modifier = { factor = 2.0 THIS = { OR = { religion = sunni religion = shiite religion = hindu religion = sikh } } OR = { continent = europe continent = asia } }
-    modifier = { factor = 2.0 THIS = { OR = { culture = mestizo culture = white_spanish } } OR = { continent = north_america continent = south_america } }
-
+	modifier = {
+		factor = 2.0
+		tag = USA
+		THIS = { has_pop_culture = mestizo }
+	}
 	modifier = {
 		factor = 0.9
 		unemployment = 0.05

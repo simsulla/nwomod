@@ -591,30 +591,40 @@ emigration_chance =
 			luxury_needs = 0.6
 		}
 	}
+	modifier = { 
+		factor = 10
+		country = { tag = MEX }
+	}
+	modifier = { 
+		factor = 2
+		OR = { culture  = mestizo culture  = white_spanish culture  = sunni_arab culture  = somali culture  = turkish culture  = black_anglo culture  = black_french culture  = black_portuguese } 
+	}
 	# rich more likely to migrate - due to only emigrate from dictatorships
 	modifier = {
 		factor = 0.2
 		strata = rich
 	}
-	modifier = {
-		factor = -10
-		country = { immigration_policy = nobody_gets_out }
-	}
 	# roundabout way to mod that mostly refugees emigrate
 	modifier = { 
-		factor = 0.1
+		factor = 0.2
 		country = { 
 			NOT = { 
 				OR = {
 					government = absolute_monarchy
 					government = hms_government
 					government = democracy
+					government = proletarian_dictatorship
 				}
 			}
 		}
 	}
+	modifier = { 
+		factor = -0.4
+		country = { immigration_policy = nobody_gets_out }
+	}	
 	modifier = { # roundabout way to mod that only people with money can emigrate
 		factor = -1
+		NOT = { country = {  tag = MEX } }
 		strata = poor
 	}
 	modifier = {
@@ -742,20 +752,6 @@ emigration_chance =
 		factor = 200
 		is_primary_culture  = no
 		country = { has_country_flag = ethnic_cleansing }
-	}
-	# ugly but need to limit pop fragmentation and sino indian swamping
-	modifier = { 
-		factor = 0.6
-		OR = { 
-			culture = sunni_arab
-			culture = black_anglo
-			culture = black_french
-			culture = black_portuguese
-			culture = black_spanish
-			culture = white_spanish
-			culture = mestizo
-			culture = somali
-		}
 	}
 	# ugly but need to limit pop fragmentation and sino indian swamping
 	modifier = { 
