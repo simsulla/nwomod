@@ -47,3 +47,37 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = 32501
+	title = "kuril_islands_dispute_title"
+	desc = "kuril_islands_dispute_desc"
+	picture = "kuril_islands_dispute"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "kuril_islands_dispute_opta" # refuse
+		relation = { who = FROM value = -300 }
+		1089 = {
+			state_scope = {
+				flashpoint_tension = 30
+			}
+		}
+		FROM = { clr_country_flag = kuril_islands_dispute }
+		ai_chance = { factor = 95 }
+	}
+	
+	option = {
+		name = "kuril_islands_dispute_optb"
+		1089 = { secede_province = JAP }
+		FROM = { clr_country_flag = kuril_islands_dispute treasury = -1900000 }
+		treasury = 1900000
+		ai_chance = { 
+			factor = 5
+			modifier = { NOT = { money = 100000 } factor = 10 } 
+			modifier = { is_greater_power = no factor = 15 }
+			modifier = { has_recently_lost_war  = yes factor = 5 } 
+		}
+	}
+}
