@@ -5,6 +5,9 @@ political_decisions = {
 				picture = "alliance_nato"
                 potential = {
 					year = 1949
+                    NOT =  { in_sphere = RUS }					
+                    NOT =  { capital_scope = { has_province_modifier = csto_alliance } }
+                    NOT =  { tag = RUS }					
                     NOT =  {
 						capital_scope = { has_province_modifier = alliance_nato }
 						capital_scope = { has_province_modifier = leave_alliance_nato } 
