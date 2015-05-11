@@ -6,6 +6,9 @@ country_event = {
 	title = "EVTNAME70002"
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
+
+	is_triggered_only = yes
+
 	trigger = {
 		NOT = { tag = FROM }
 		part_of_sphere = no
@@ -16,8 +19,6 @@ country_event = {
 		}
 	}
 
-	is_triggered_only = yes
-	
 	option = {
 		name = "EVTOPTA70002"
 		casus_belli = {
@@ -33,6 +34,9 @@ country_event = {
 	title = "EVTNAME70002"
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
+
+	is_triggered_only = yes
+
 	trigger = {
 		NOT = { tag = FROM }
 		# limitations same as for gunboat war
@@ -44,7 +48,6 @@ country_event = {
 		}		
 	}
 
-	is_triggered_only = yes
 	option = {
 		name = "EVTOPTA70002"
 		casus_belli = {
@@ -55,34 +58,6 @@ country_event = {
 }
 
 
-# Nation that owns your debt goes bankrupt, but the amount is small
-country_event = {
-	id = 70004
-	title = "EVTNAME70002"
-	desc = "EVTDESC70002"
-	picture = "Bankruptcy"
-	trigger = {
-		NOT = { tag = FROM }
-		# limitations same as for gunboat war
-		part_of_sphere = no
-		is_vassal = no
-		FROM = {
-			part_of_sphere = no
-			is_vassal = no
-		}
-	}
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTA70002"
-		casus_belli = {
-			type = gunboat
-			target = FROM
-		}
-	}
-}
-
 country_event = {
 	id = 70005
 	title = "EVTNAME70005"
@@ -90,20 +65,19 @@ country_event = {
 	picture = "Bankruptcy"
 	trigger = {
 		NOT = { tag = FROM }
-		is_our_vassal = THIS
+		is_our_vassal = FROM
 	}
 
 	is_triggered_only = yes
 	
 	option = {
 		name = "EVTOPTA70005"
-		random_country = {
-			limit = { tag = FROM }
-			country_event = 70006
-		}
+		FROM = { country_event = 70006 }
+		ai_chance = { factor = 100 }
 	}
 	option = {
 		name = "EVTOPTB70005" # never mind
+		ai_chance = { factor = 0 }
 	}
 	
 }
@@ -120,7 +94,7 @@ country_event = {
 		name = "EVTOPTA70006" # accept
 		annex_to = FROM
         ai_chance = {
-			factor = 50
+			factor = 75
             modifier = {
                 factor = 2
 				FROM = { is_primary_culture = THIS }
@@ -138,17 +112,15 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB70006" # become_independent
-		war = {
+		release_vassal = FROM
+		relation = { who = FROM value = -100 }
+		add_casus_belli = {
 			target = FROM
-			attacker_goal = {
-				casus_belli = become_independent
-			}
-			defender_goal = {
-				casus_belli = make_puppet
-			}
+			type = make_puppet
+			months = 12
 		}
         ai_chance = {
-			factor = 50
+			factor = 25
 		}
 	}
 	
