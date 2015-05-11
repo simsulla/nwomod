@@ -188,7 +188,6 @@ political_decisions = {
 		potential = {
 			has_country_flag = trade_block_ambition OR = { tag = SAA tag = KUW tag = BHR tag = QAT tag = UAR tag = OMA }
 			is_vassal = no
-			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 		}
 		allow = {
@@ -202,6 +201,7 @@ political_decisions = {
 			age_of_protests = 1
 			has_unclaimed_cores = no
 			OR = { 
+				is_greater_power = yes
 				is_secondary_power = yes
 				sphere_owner = { has_country_flag = xgc_ambition }
 			}

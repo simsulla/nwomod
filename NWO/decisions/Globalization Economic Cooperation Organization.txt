@@ -183,7 +183,6 @@ political_decisions = {
 		potential = {
 			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
 			is_vassal = no
-			is_secondary_power = yes
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 		}
 		allow = {
@@ -197,6 +196,7 @@ political_decisions = {
 			age_of_protests = 1
 			has_unclaimed_cores = no
 			OR = { 
+				is_greater_power = yes
 				is_secondary_power = yes
 				sphere_owner = { has_country_flag = xca_ambition }
 			}
