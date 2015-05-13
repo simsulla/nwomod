@@ -233,11 +233,13 @@ vassal_nation = {
 sectarian_divide = {
 	trigger = {
 		OR = {
-			capital_scope = {
-				is_primary_culture = yes
-			}
+			colonial_nation = yes
 			ruling_party_ideology = populist
-			ruling_party_ideology = islamist
+			AND = { 
+				capital_scope = { is_primary_culture = yes }
+				average_militancy = 4
+				average_consciousness = 4
+			}
 		}
 	}
 	icon = 10
