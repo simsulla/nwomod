@@ -5,4 +5,48 @@ political_decisions = {
 	#call_geneva_convention = {}
 	#sign_the_geneva_convention = {}
 	#build_gotthard_tunnel = {}
+	
+	swiss_neutrality = {
+		picture = "swiss_neutrality"
+		potential = {
+			tag = SWI
+			NOT =  { capital_scope = { has_province_modifier = neutrality } }
+		}
+
+		allow = {
+			#part_of_sphere = no
+			has_unclaimed_cores = no
+		}
+
+		effect = {
+			capital_scope = { 
+				add_province_modifier = {
+					name = neutrality
+					duration = 17500
+				}
+			}
+		}
+	}
+	
+	austria_neutrality = {
+		picture = "austria_neutrality"
+		potential = {
+			tag = AUS
+			NOT =  { capital_scope = { has_province_modifier = neutrality } }
+		}
+
+		allow = {
+			#part_of_sphere = no
+			has_unclaimed_cores = no
+		}
+
+		effect = {
+			capital_scope = { 
+				add_province_modifier = {
+					name = neutrality
+					duration = 17500
+				}
+			}
+		}
+	}	
 }
