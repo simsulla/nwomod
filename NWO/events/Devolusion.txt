@@ -17,7 +17,13 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
+		modifier = {
+			factor = 0.1
+			any_neighbor_province = {
+				has_province_modifier = promised_autonomy
+			}
+		}
 		modifier = {
 			factor = 0.5
 			state_scope = {
