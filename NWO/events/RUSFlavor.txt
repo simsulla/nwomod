@@ -64,14 +64,14 @@ country_event = {
 				flashpoint_tension = 30
 			}
 		}
-		FROM = { clr_country_flag = kuril_islands_dispute }
+		FROM = { country_event = 32502 }
 		ai_chance = { factor = 95 }
 	}
 	
 	option = {
 		name = "kuril_islands_dispute_optb"
 		1089 = { secede_province = JAP remove_core = RUS }
-		FROM = { clr_country_flag = kuril_islands_dispute treasury = -1900000 }
+		FROM = { country_event = 32503 }
 		treasury = 1900000
 		ai_chance = { 
 			factor = 5
@@ -79,5 +79,33 @@ country_event = {
 			modifier = { is_greater_power = no factor = 15 }
 			modifier = { has_recently_lost_war  = yes factor = 5 } 
 		}
+	}
+}
+
+country_event = {
+	id = 32502
+	title = "kuril_islands_dispute_title"
+	desc = "kuril_islands_dispute_desc"
+	picture = "kuril_islands_dispute"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "kuril_islands_dispute_reject_opta" # reject
+		clr_country_flag = kuril_islands_dispute 
+	}
+}
+
+country_event = {
+	id = 32503
+	title = "kuril_islands_dispute_title"
+	desc = "kuril_islands_dispute_desc"
+	picture = "kuril_islands_dispute"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "kuril_islands_dispute_accept_opta" # accept
+		clr_country_flag = kuril_islands_dispute treasury = -1900000 
 	}
 }
