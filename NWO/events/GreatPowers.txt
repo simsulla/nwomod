@@ -1184,6 +1184,7 @@ country_event = {
 		clr_country_flag = reactionary_election_win
 		clr_country_flag = anarcho_liberal_election_win
 		clr_country_flag = social_liberal_election_win
+
 		random_country = {
 			limit = {
 				is_sphere_leader_of = THIS
@@ -1225,5 +1226,23 @@ country_event = {
 				factor = -4
 			}
 		}
+	}
+}
+
+country_event = {
+	id = 96086
+	title = "EVT_sanctions_NAME" 
+	desc = "EVT_sanctions_DESC"
+	picture = "sanctions"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_sanctions_OPTA" #Darn!
+		add_country_modifier = { name = bretton_system_excluded duration = 350 }
+		add_country_modifier = { name = stock_market_crash duration = 30 }
+		FROM = { add_country_modifier = { name = central_planning_inflexibility duration = 350 } }
+		remove_country_modifier = bretton_system
+		end_war = FROM
 	}
 }
