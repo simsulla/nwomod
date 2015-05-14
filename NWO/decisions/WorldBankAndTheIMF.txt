@@ -6,8 +6,8 @@ political_decisions = {
 		picture = "special_drawing_rights"
 		potential = {
 			OR = { is_greater_power = yes is_secondary_power = yes }
-			NOT = { has_country_flag = special_drawing_rights }
-			#NOT = { has_country_flag = the_imf has_country_flag = world_bank has_country_flag = dev_bank  capital_scope = { trade_goods = credit } }
+			NOT = { has_country_modifier = special_drawing_rights }
+			NOT = { has_country_flag = the_imf has_country_flag = world_bank has_country_flag = dev_bank  capital_scope = { trade_goods = credit } }
 			year = 1968
 		}
 		allow = {
@@ -17,8 +17,40 @@ political_decisions = {
 			money = 60000000
 		}
 		effect = {
-			set_country_flag = special_drawing_rights 
-			treasury = -1000000
+			set_country_flag = financial_attack
+			add_country_modifier = { name = special_drawing_rights duration = 3500 } 
+			any_country = { 
+				limit = {
+					OR = { 
+						AND = { tag = ENG capital_scope = { trade_goods = credit } }
+						AND = { THIS = { OR = { has_country_flag = world_bank has_country_flag = dev_bank } } has_country_flag = the_imf }
+						AND = { THIS = { rank = 2 } has_country_flag = world_bank }
+						has_country_flag = dev_bank
+					}
+					NOT = { tag = THIS }
+				}
+				country_event = 15606
+			}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	end_financial_attack = {
+		picture = "end_financial_attack"
+		potential = {
+			is_greater_power = yes
+			has_country_flag = financial_attack
+		}
+		allow = {
+			has_country_modifier = special_drawing_rights
+		}
+		effect = {
+			clr_country_flag = financial_attack
+			remove_country_modifier = special_drawing_rights
+			any_country = { 
+				limit = { NOT = { tag = THIS } has_country_flag = special_drawing_rights }
+				country_event = 15607
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -29,7 +61,7 @@ political_decisions = {
 			is_greater_power = yes
 			NOT = { tag = ENG }
 			ENG = { capital_scope = { trade_goods = credit } }
-			has_country_flag = special_drawing_rights
+			has_country_modifier = special_drawing_rights
 			year = 1952
 		}
 		allow = {
@@ -52,7 +84,7 @@ political_decisions = {
 			is_greater_power = yes
 			continent = europe
 			NOT = { has_country_flag = the_imf }
-			has_country_flag = special_drawing_rights
+			has_country_modifier = special_drawing_rights
 			year = 1952
 		}
 		allow = {
@@ -66,7 +98,6 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = the_imf
-			clr_country_flag = special_drawing_rights
 			country_event = 15605
 			treasury = -1000000
 			random_country = { 
@@ -76,6 +107,7 @@ political_decisions = {
 				}
 				country_event = 15602
 			}
+			any_greater_power = { remove_country_modifier = special_drawing_rights }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -86,7 +118,7 @@ political_decisions = {
 			is_greater_power = yes
 			rank = 2
 			NOT = { has_country_flag = world_bank }
-			has_country_flag = special_drawing_rights
+			has_country_modifier = special_drawing_rights
 			year = 1952
 		}
 		allow = {
@@ -101,7 +133,6 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = world_bank
-			clr_country_flag = special_drawing_rights
 			country_event = 15605
 			treasury = -1000000
 			random_country = { 
@@ -111,6 +142,7 @@ political_decisions = {
 				}
 				country_event = 15602
 			}
+			any_greater_power = { remove_country_modifier = special_drawing_rights }
 		}
 		ai_will_do = { factor = 1 }
 	}	
@@ -121,7 +153,7 @@ political_decisions = {
 			is_greater_power = yes
 			rank = 2
 			NOT = { has_country_flag = dev_bank }
-			has_country_flag = special_drawing_rights
+			has_country_modifier = special_drawing_rights
 			year = 1952
 		}
 		allow = {
@@ -136,7 +168,6 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = dev_bank
-			clr_country_flag = special_drawing_rights
 			country_event = 15605
 			treasury = -1000000
 			random_country = { 
@@ -146,6 +177,7 @@ political_decisions = {
 				}
 				country_event = 15602
 			}
+			any_greater_power = { remove_country_modifier = special_drawing_rights }
 		}
 		ai_will_do = { factor = 1 }
 	}
