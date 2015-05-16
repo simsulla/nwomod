@@ -19,15 +19,27 @@ political_decisions = {
 		effect = {
 			set_country_flag = financial_attack
 			add_country_modifier = { name = special_drawing_rights duration = 3500 } 
-			any_country = { 
+			random_country = { # first take on London
 				limit = {
-					OR = { 
-						AND = { tag = ENG capital_scope = { trade_goods = credit } }
-						AND = { THIS = { OR = { has_country_flag = world_bank has_country_flag = dev_bank } } has_country_flag = the_imf }
-						AND = { THIS = { rank = 2 } has_country_flag = world_bank }
-						has_country_flag = dev_bank
-					}
+					tag = ENG
+					capital_scope = { trade_goods = credit }
 					NOT = { tag = THIS }
+				}
+				country_event = 15606
+			}	
+			random_country = { # than the IMF (or Dev Bank)
+				limit = {
+					OR = { has_country_flag = the_imf has_country_flag = dev_bank }
+					NOT = { tag = THIS }
+					NOT = { tag = ENG capital_scope = { trade_goods = credit } }
+				}
+				country_event = 15606
+			}
+			random_country = { # them the World Bank
+				limit = {
+					has_country_flag = world_bank
+					NOT = { tag = THIS }
+					THIS = { rank = 1 }
 				}
 				country_event = 15606
 			}	
@@ -37,6 +49,7 @@ political_decisions = {
 
 	end_financial_attack = {
 		picture = "end_financial_attack"
+		alert = no
 		potential = {
 			is_greater_power = yes
 			has_country_flag = financial_attack
@@ -52,7 +65,7 @@ political_decisions = {
 				country_event = 15607
 			}
 		}
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 1  modifier = { factor = 0  money = 1000000 } }
 	}
 	
 	city_of_london = {
@@ -65,15 +78,18 @@ political_decisions = {
 			year = 1952
 		}
 		allow = {
-			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
-			ENG = { NOT = { money = 1000000 } }
-			money = 2000000
+			ENG = { 
+				OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+				has_country_modifier = special_drawing_rights 
+				capital_scope = { trade_goods = credit } 
+			}
 		}
 		effect = {
 			set_country_flag = dev_bank
-			country_event = 15605
-			treasury = -1000000
-			ENG = {	country_event = 15602 }
+			clr_country_flag = financial_attack
+			country_event = 15605 
+			ENG = {	country_event = 15602 } 
+			any_country = { limit = { has_country_modifier = special_drawing_rights } remove_country_modifier = special_drawing_rights clr_country_flag = financial_attack }
 		}
 		ai_will_do = { factor = 1 }
 	}	
@@ -81,107 +97,104 @@ political_decisions = {
 	the_imf = {
 		picture = "the_imf"
 		potential = {
-			is_greater_power = yes
-			continent = europe
+			capital_scope = { continent = europe }
 			NOT = { has_country_flag = the_imf }
 			has_country_modifier = special_drawing_rights
 			year = 1952
 		}
 		allow = {
-			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
 			any_greater_power = { 
 				NOT = { tag = THIS }
-				has_country_flag = the_imf
-				NOT = { money = 1000000 }
+				OR = { has_country_flag = dev_bank has_country_flag = the_imf }
+				OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+				has_country_modifier = special_drawing_rights
 			}
-			money = 2000000
 		}
 		effect = {
-			set_country_flag = the_imf
-			country_event = 15605
-			treasury = -1000000
 			random_country = { 
 				limit = { 
-					has_country_flag = the_imf
+					OR = { has_country_flag = dev_bank has_country_flag = the_imf }
 					NOT = { tag = THIS }
+					OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+					has_country_modifier = special_drawing_rights
 				}
-				country_event = 15602
+				country_event = 15602 
 			}
-			any_greater_power = { remove_country_modifier = special_drawing_rights }
+			set_country_flag = the_imf
+			country_event = 15605 
+			any_country = { limit = { has_country_modifier = special_drawing_rights } remove_country_modifier = special_drawing_rights clr_country_flag = financial_attack }
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
-	world_bank = {
-		picture = "world_bank"
-		potential = {
-			is_greater_power = yes
-			rank = 2
-			NOT = { has_country_flag = world_bank }
-			has_country_modifier = special_drawing_rights
-			year = 1952
-		}
-		allow = {
-			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
-			rank = 1
-			any_greater_power = { 
-				NOT = { tag = THIS }
-				has_country_flag = world_bank
-				NOT = { money = 1000000 }
-			}
-			money = 2000000
-		}
-		effect = {
-			set_country_flag = world_bank
-			country_event = 15605
-			treasury = -1000000
-			random_country = { 
-				limit = { 
-					has_country_flag = world_bank
-					NOT = { tag = THIS }
-				}
-				country_event = 15602
-			}
-			any_greater_power = { remove_country_modifier = special_drawing_rights }
-		}
-		ai_will_do = { factor = 1 }
-	}	
-
 	dev_bank = {
 		picture = "dev_bank"
 		potential = {
-			is_greater_power = yes
-			rank = 2
 			NOT = { has_country_flag = dev_bank }
 			has_country_modifier = special_drawing_rights
 			year = 1952
 		}
 		allow = {
-			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
-			rank = 1
 			any_greater_power = { 
 				NOT = { tag = THIS }
-				has_country_flag = dev_bank
-				NOT = { money = 1000000 }
+				OR = { has_country_flag = dev_bank has_country_flag = the_imf }
+				OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+				has_country_modifier = special_drawing_rights
 			}
-			money = 2000000
 		}
 		effect = {
-			set_country_flag = dev_bank
-			country_event = 15605
-			treasury = -1000000
 			random_country = { 
 				limit = { 
-					has_country_flag = dev_bank
+					OR = { has_country_flag = dev_bank has_country_flag = the_imf }
 					NOT = { tag = THIS }
+					OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+					has_country_modifier = special_drawing_rights 
 				}
 				country_event = 15602
 			}
-			any_greater_power = { remove_country_modifier = special_drawing_rights }
+			set_country_flag = dev_bank
+			clr_country_flag = financial_attack
+			country_event = 15605 
+			any_country = { limit = { has_country_modifier = special_drawing_rights } remove_country_modifier = special_drawing_rights clr_country_flag = financial_attack }
 		}
 		ai_will_do = { factor = 1 }
 	}
-	
+
+	world_bank = {
+		picture = "world_bank"
+		potential = {
+			rank = 1
+			NOT = { has_country_flag = world_bank }
+			has_country_modifier = special_drawing_rights
+			year = 1952
+		}
+		allow = {
+			rank = 1
+			any_greater_power = { 
+				NOT = { tag = THIS }
+				has_country_flag = world_bank
+				OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+				has_country_modifier = special_drawing_rights
+			}
+		}
+		effect = {
+			random_country = { 
+				limit = { 
+					has_country_flag = world_bank
+					NOT = { tag = THIS }
+					OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+					has_country_modifier = special_drawing_rights
+				}
+				country_event = 15602 
+			}
+			set_country_flag = world_bank
+			clr_country_flag = financial_attack
+			country_event = 15605
+			any_country = { limit = { has_country_modifier = special_drawing_rights } remove_country_modifier = special_drawing_rights clr_country_flag = financial_attack }
+		}
+		ai_will_do = { factor = 1 }
+	}	
+
 	bretton_system = {
 		picture = "bretton_system"
 		potential = {
