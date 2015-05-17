@@ -14,7 +14,7 @@ political_decisions = {
 			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
 			is_greater_power = yes
 			has_recently_lost_war = no
-			money = 60000000
+			money = 1900000
 		}
 		effect = {
 			set_country_flag = financial_attack
@@ -65,7 +65,7 @@ political_decisions = {
 				country_event = 15607
 			}
 		}
-		ai_will_do = { factor = 1  modifier = { factor = 0  money = 1000000 } }
+		ai_will_do = { factor = 1  modifier = { factor = 0  money = 100000 } }
 	}
 	
 	city_of_london = {
@@ -79,7 +79,7 @@ political_decisions = {
 		}
 		allow = {
 			ENG = { 
-				OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+				OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy } 
 				has_country_modifier = special_drawing_rights 
 				capital_scope = { trade_goods = credit } 
 			}
@@ -106,7 +106,7 @@ political_decisions = {
 			any_greater_power = { 
 				NOT = { tag = THIS }
 				OR = { has_country_flag = dev_bank has_country_flag = the_imf }
-				OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+				OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy } 
 				has_country_modifier = special_drawing_rights
 			}
 		}
@@ -115,7 +115,7 @@ political_decisions = {
 				limit = { 
 					OR = { has_country_flag = dev_bank has_country_flag = the_imf }
 					NOT = { tag = THIS }
-					OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+					OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy } 
 					has_country_modifier = special_drawing_rights
 				}
 				country_event = 15602 
@@ -138,7 +138,7 @@ political_decisions = {
 			any_greater_power = { 
 				NOT = { tag = THIS }
 				OR = { has_country_flag = dev_bank has_country_flag = the_imf }
-				OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+				OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy } 
 				has_country_modifier = special_drawing_rights
 			}
 		}
@@ -147,7 +147,7 @@ political_decisions = {
 				limit = { 
 					OR = { has_country_flag = dev_bank has_country_flag = the_imf }
 					NOT = { tag = THIS }
-					OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+					OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy } 
 					has_country_modifier = special_drawing_rights 
 				}
 				country_event = 15602
@@ -173,7 +173,7 @@ political_decisions = {
 			any_greater_power = { 
 				NOT = { tag = THIS }
 				has_country_flag = world_bank
-				OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+				OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy } 
 				has_country_modifier = special_drawing_rights
 			}
 		}
@@ -182,7 +182,7 @@ political_decisions = {
 				limit = { 
 					has_country_flag = world_bank
 					NOT = { tag = THIS }
-					OR = { NOT = { money = 1000000 } has_country_modifier = in_bankrupcy } 
+					OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy } 
 					has_country_modifier = special_drawing_rights
 				}
 				country_event = 15602 
