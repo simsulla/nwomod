@@ -2,54 +2,6 @@
 
 populist_group = {
 	# pragmatic
-	nationalist = { 
-		uncivilized = no
-		color = { 255 165 0 }
-		date = 1905.1.1
-		
-		add_political_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = populist }
-			}
-		}
-	
-	
-		remove_political_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = populist }
-			}
-		}
-	
-	
-		add_social_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = populist }
-			}
-		}
-	
-	
-		remove_social_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = populist }
-			}
-		}
-		
-		add_military_reform = {
-			base = 0.5
-		}
-		
-		add_economic_reform = {
-			base = -0.5
-		}
-	}
 	populist = { 
 		uncivilized = no
 		color = { 255 165 0 }
