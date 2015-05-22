@@ -48,7 +48,7 @@ populationsize_30k  = {
 		}
 	}
 	research_points = -1
-	global_immigrant_attract = -0.15
+	global_immigrant_attract = -1.0
 	icon = 11
 }
 
@@ -61,7 +61,7 @@ populationsize_100k = {
 	}
 	icon = 5
 	research_points = -0.75
-	global_immigrant_attract = -0.15
+	global_immigrant_attract = -0.8
 }
 
 populationsize_300k = {
@@ -73,7 +73,7 @@ populationsize_300k = {
 	}
 	icon = 5
 	research_points = -0.5
-	global_immigrant_attract = -0.15
+	global_immigrant_attract = -0.6
 
 }
 
@@ -87,7 +87,7 @@ populationsize_1M = {
 	}
 	icon = 5
 	research_points = -0.25
-	global_immigrant_attract = -0.1
+	global_immigrant_attract = -0.4
 }
 
 populationsize_3M = {
@@ -98,7 +98,7 @@ populationsize_3M = {
 		}
 	}
 	icon = 5
-	global_immigrant_attract = -0.05
+	global_immigrant_attract = -0.2
 }
 
 populationsize_10M = {
@@ -121,6 +121,7 @@ populationsize_30M = {
 	}
 	icon = 5
 	research_points = 0.5
+	global_immigrant_attract = 0.3
 }
 
 populationsize_100M = {
@@ -132,6 +133,7 @@ populationsize_100M = {
 	}
 	icon = 5
 	research_points = 0.75
+	global_immigrant_attract = 0.6
 }
 
 populationsize_300M = {
@@ -140,6 +142,7 @@ populationsize_300M = {
 	}
 	icon = 5
 	research_points = 1
+	global_immigrant_attract = 0.9
 }
 
 grand_navy = {
@@ -235,23 +238,12 @@ sectarian_divide = {
 		OR = {
 			colonial_nation = yes
 			ruling_party_ideology = populist
-			AND = { 
-				capital_scope = { is_primary_culture = yes }
-				average_militancy = 4
-				average_consciousness = 4
-			}
+			ruling_party_ideology = nationalist
+			ruling_party_ideology = islamist
+			capital_scope = { is_primary_culture = no }
 		}
 	}
 	icon = 10
 }
 
-end_sectarian_divide = {
-	trigger = {
-		capital_scope = {
-			is_primary_culture = no
-		}
-		NOT = { ruling_party_ideology = populist }
-		NOT = { ruling_party_ideology = islamist }
-	}
-	icon = 9
-}
+
