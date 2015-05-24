@@ -118,6 +118,10 @@ islamist_rebels = {
 			pop_majority_ideology = islamist
 		}
 		modifier = {
+			factor = 1.3
+			OR = { religion = sunni religion = shiite }
+		}		
+		modifier = {
 			factor = 1.015
 			country = { plurality = 10 }
 		}
