@@ -83,18 +83,8 @@ islamist_rebels = {
 	
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
-		factor = 1.02
+		factor = 1.52
 		
-		modifier = {
-			factor = 0
-			country = { civilized = no }
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				is_ideology_enabled = islamist
-			}
-		}
 		modifier = {
 			factor = 0
 			government = islamist_dictatorship
@@ -258,7 +248,7 @@ populist_rebels = {
 	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
 	will_rise = 
 	{
-		factor = 0.5
+		factor = 1.02
 		
 		modifier = {
 			war = yes
@@ -521,7 +511,7 @@ communist_rebels = {
 	
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
-		factor = 1.02
+		factor = 0.5
 		
 		modifier = {
 			factor = 0
