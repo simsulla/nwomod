@@ -83,67 +83,82 @@ islamist_rebels = {
 	
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
-		factor = 1.52
-		
+		factor = 2
+		modifier = {
+			factor = 0.01
+			NOT = { islamist = 10 }
+		}
 		modifier = {
 			factor = 0
-			government = islamist_dictatorship
-		}
-		modifier = {
-			factor = 1.015
-			NOT = { political_reform_want = 0.05 }
-		}
-		modifier = {
-			factor = 1.15
-			social_reform_want = 0.15 
-			NOT = { political_reform_want = 0.15 
+			OR = {
+				 social_movement = yes
+				 political_movement = yes
 			}
 		}
 		modifier = {
-			factor = 0.01
-			NOT = { pop_majority_ideology = islamist }
+			factor = 5
+			islamist = 10
+			NOT = { islamist = 20 }
 		}
 		modifier = {
-			factor = 1.3
+			factor = 10
+			islamist = 20
+			NOT = { islamist = 30 }
+		}
+		modifier = {
+			factor = 15
+			islamist = 30
+			NOT = { islamist = 40 }
+		}
+		modifier = {
+			factor = 20
+			islamist = 40
+			NOT = { islamist = 50 }
+		}
+		modifier = {
+			factor = 25
+			islamist = 50
+		}
+		modifier = {
+			factor = 5
 			pop_majority_ideology = islamist
 		}
 		modifier = {
-			factor = 1.3
-			OR = { religion = sunni religion = shiite }
-		}		
-		modifier = {
-			factor = 1.015
-			country = { plurality = 10 }
-		}
-		modifier = {
-			factor = 1.03
-			country = {
-				any_neighbor_country = {
-					government = proletarian_dictatorship
-				}
-			}
-		}
-		modifier = {
-			factor = 1.05
-			country = {
-				average_militancy = 6
-			}
-		}
-		modifier = {
-			factor = 1.05
-			country = {
-				average_consciousness = 6
-			}
-		}
-		modifier = {
 			factor = 0
-			location = {
-				is_colonial = yes
-			}
-		}	
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 5
+			NOT = { literacy = 0.30 }
+		}
+		modifier = {
+			factor = 0.5
+			literacy = 0.50
+			NOT = { pop_majority_ideology = islamist }
+		}
+		modifier = {
+			factor = 3
+			NOT = { consciousness = 1 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { consciousness = 2 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { consciousness = 3 }
+		}
 		modifier = {
 			factor = 0
 			NOT = { OR = { religion = sunni religion = shiite } }
+		}
+		modifier = {
+			factor = 0
+			country = { government = islamic_dictatorship}
+		}
+		modifier = {
+			factor = 1.5
+			country = { plurality = 10 }
 		}
 	}
  
@@ -153,10 +168,12 @@ islamist_rebels = {
 		modifier = {
 			factor = 0.1
 			units_in_province = 1
+			NOT = { is_capital = yes }
 		}
 		modifier = {
 			factor = 0.001
 			controlled_by = REB
+			NOT = { is_capital = yes }
 		}
 		modifier = {
 			factor = 1.5
@@ -171,11 +188,11 @@ islamist_rebels = {
 			average_militancy = 8
 		}
 		modifier = {
-			factor = 2.0
+			factor = 5.0
 			is_capital = yes
 		}
 	}
-	
+		
 	# Country scope
 	demands_enforced_trigger = {
 		capital_scope = {
