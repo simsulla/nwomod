@@ -6,7 +6,9 @@ political_decisions = {
 	xcc_ambition = {
 		picture = "xcc_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { OR = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM } }
+			has_country_flag = trade_block_ambition 
+			OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR }
+			NOT = { OR = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM tag = XNA } }
 			NOT = { has_country_flag = xcc_ambition has_country_flag = in_trade_block tag = XCC }
 		}
 		allow = {
@@ -85,7 +87,7 @@ political_decisions = {
 	xcc_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { OR = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM } }
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { OR = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM tag = XNA } }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -113,7 +115,7 @@ political_decisions = {
 	xcc_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM }
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM tag = XNA }
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -147,7 +149,7 @@ political_decisions = {
 	xcc_political_union = {
 		picture = "xcc_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { OR = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM } }
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { OR = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM tag = XNA } }
 			NOT = { capital_scope = { is_core = XCC } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -180,7 +182,7 @@ political_decisions = {
 	xcc_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM }
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM tag = XNA }
 			is_vassal = no
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 		}
@@ -209,7 +211,7 @@ political_decisions = {
 	xcc_form_union = {
 		picture = "xcc_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { OR = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM } }
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = north_america } tag = GUY tag = SUR } NOT = { OR = { tag = CAN tag = USA tag = MEX tag = GUA tag = ELS tag = HON tag = NIC tag = COS tag = PNM tag = XNA } }
 			has_country_flag = xcc_ambition
 			XCC = { exists = no }
 		}

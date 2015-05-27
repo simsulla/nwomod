@@ -884,7 +884,7 @@ assimilation_chance =
 		country = { religious_policy = secularized }
 	}
 	modifier = {
-    	factor = -20
+    	factor = -100
 		location = {
        		any_core = { is_primary_culture = THIS }
     	}
@@ -907,11 +907,11 @@ assimilation_chance =
 	}
 	# assimilation via irreligion
 	modifier = {
-		factor = -20
+		factor = -100
 		not = { religion = this }
 	}
 	modifier = {
-		factor = -20
+		factor = -100
 		not = { religion = irreligion }
 	}
 	# TODO easier to assimilate into "open linguistic cultures" like for africans to become black_anglo.
