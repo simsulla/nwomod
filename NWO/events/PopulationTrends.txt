@@ -21,7 +21,6 @@ country_event = { # one_point_five_children
 	picture = "pre_demographic_transition"
 	
 	trigger = {
-		NOT = { literacy = 0.2 }
 		literacy = 0.6
 		NOT = { has_country_modifier = one_point_five_children }
 	}
@@ -47,7 +46,6 @@ country_event = { # two_children
 	picture = "pre_demographic_transition"
 	
 	trigger = {
-		NOT = { literacy = 0.1 }
 		literacy = 0.20
 		NOT = { literacy = 0.6 }
 		NOT = { has_country_modifier = two_children }
@@ -125,11 +123,10 @@ country_event = { # family_values
 	
 	trigger = {
 		NOT = { has_country_modifier = demographics_culture }
+       	NOT = {	pop_majority_religion = irreligion }
 		any_owned_province = {
-			NOT = {
-				has_province_modifier = family_values
-           		pop_majority_religion = irreligion
-			}
+			NOT = { has_province_modifier = family_values }
+			NOT = { literacy =  0.2 }
        	}
 	}
 	
@@ -137,18 +134,27 @@ country_event = { # family_values
 		name = EVTOPTA2260610
 		add_country_modifier = {
 			name = demographics_culture
-			duration = 3500
+			duration = 3600
 		}
 		any_owned = {
 			limit = {
-				NOT = {
-					has_province_modifier = family_values
-					pop_majority_religion = irreligion
-				}
+				NOT = { has_province_modifier = family_values }
+				literacy =  0.05
+				NOT = { literacy =  0.2 }
 			}
 			add_province_modifier = {
 				name = family_values
 				duration = 1750
+			}
+		}
+		any_owned = {
+			limit = {
+				NOT = { has_province_modifier = family_values }
+				NOT = { literacy =  0.05 }
+			}
+			add_province_modifier = {
+				name = family_values
+				duration = 3500
 			}
 		}
 	}
@@ -162,18 +168,19 @@ country_event = { # pre_demographic_transition
 	picture = "pre_demographic_transition"
 	
 	trigger = {
-		NOT = { year = 1990 } 
-		year = 1997 # ugly make the event not overlap family_values 
 		NOT = { has_country_modifier = demographics }
 		any_owned_province = {
 			NOT = { has_province_modifier = pre_demographic_transition }
-			NOT = { pop_majority_religion = irreligion }
 			OR = {
 				AND = { NOT = { year = 2000 } pop_majority_religion = sunni }
-				AND = { NOT = { year = 2020 } continent = africa owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
+				AND = { NOT = { year = 2020 } NOT = { pop_majority_religion = irreligion } continent = africa owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
 				AND = { NOT = { year = 2050 } continent = africa pop_majority_religion = sunni owner = {  NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
       		}
        	}
+	}
+	
+	mean_time_to_happen = {
+        months = 1
 	}
 	
 	option = {
@@ -188,7 +195,8 @@ country_event = { # pre_demographic_transition
 			NOT = { pop_majority_religion = irreligion }
 			OR = {
 				AND = { NOT = { year = 2000 } pop_majority_religion = sunni }
-				AND = { NOT = { year = 2010 } continent = africa owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
+				AND = { NOT = { year = 2010 } NOT = { pop_majority_religion = irreligion } 
+				continent = africa owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
 				AND = { NOT = { year = 2020 } continent = africa pop_majority_religion = sunni owner = {  NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
 			}
 			}
