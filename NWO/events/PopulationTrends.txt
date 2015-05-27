@@ -57,6 +57,7 @@ country_event = { # two_children
 		remove_country_modifier = two_children 
 		remove_country_modifier = two_point_five_children
 		remove_country_modifier = three_children
+		remove_country_modifier = four_children
 		add_country_modifier = {
 			name = two_children 
 			duration = 3500
@@ -72,7 +73,7 @@ country_event = { # two_point_five_children
 	picture = "pre_demographic_transition"
 	
 	trigger = {
-		literacy = 0.10
+		literacy = 0.15
 		NOT = { literacy = 0.2 }
 		NOT = { has_country_modifier = two_point_five_children }
 	}
@@ -83,6 +84,7 @@ country_event = { # two_point_five_children
 		remove_country_modifier = two_children 
 		remove_country_modifier = two_point_five_children
 		remove_country_modifier = three_children
+		remove_country_modifier = four_children
 		add_country_modifier = {
 			name = two_point_five_children
 			duration = 3500
@@ -97,7 +99,8 @@ country_event = { # three_children
 	picture = "pre_demographic_transition"
 	
 	trigger = {
-		NOT = { literacy = 0.1 }
+		literacy = 0.1
+		NOT = { literacy = 0.15 }
 		NOT = { has_country_modifier = three_children }
 	}
 	
@@ -107,8 +110,34 @@ country_event = { # three_children
 		remove_country_modifier = two_children 
 		remove_country_modifier = two_point_five_children
 		remove_country_modifier = three_children
+		remove_country_modifier = four_children
 		add_country_modifier = {
 			name = three_children
+			duration = 3500
+		}
+	}
+}
+
+country_event = { # three_children
+	id = 2260607
+	title = EVTNAME226067 # "Birth Rate High!"
+	desc = EVTDESC226067
+	picture = "pre_demographic_transition"
+	
+	trigger = {
+		NOT = { literacy = 0.1 }
+		NOT = { has_country_modifier = four_children }
+	}
+	
+	option = {
+		name = EVTOPTA226066
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		add_country_modifier = {
+			name = four_children
 			duration = 3500
 		}
 	}
