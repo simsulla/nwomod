@@ -18,7 +18,7 @@ country_event = { # one_point_five_children
 	id = 2260603
 	title = EVTNAME226063 # "Birth Rate Low!"
 	desc = EVTDESC226063
-	picture = "pre_demographic_transition"
+	picture = "one_point_five_children"
 	
 	trigger = {
 		literacy = 0.6
@@ -43,7 +43,7 @@ country_event = { # two_children
 	id = 2260604
 	title = EVTNAME226064 # "Birth Rate Stable!"
 	desc = EVTDESC226064
-	picture = "pre_demographic_transition"
+	picture = "one_point_five_children"
 	
 	trigger = {
 		literacy = 0.20
@@ -245,6 +245,57 @@ country_event = { # pre_demographic_transition
 				name = pre_demographic_transition
 				duration = 1750
 			}
+		}
+	}
+}
+
+
+province_event = { # haredim_jewish
+	id = 2260612
+	title = EVT_2260612_NAME 
+	desc = EVT_2260612_DESC
+	picture = "haredim_jewish"
+	
+	trigger = {
+		any_pop = { 
+			culture = haredim_jewish
+		}
+	}
+	
+	mean_time_to_happen = {
+        months = 240
+	}
+	
+	option = {
+		name = EVT_2260612_OPTA
+		any_pop = { 
+			limit = { culture = haredim_jewish }
+			reduce_pop = 1.35
+		}
+	}
+}
+
+province_event = { # mennonites
+	id = 2260613
+	title = EVT_2260613_NAME 
+	desc = EVT_2260613_DESC
+	picture = "family_values"
+	
+	trigger = {
+		any_pop = { 
+			culture = haredim_jewish
+		}
+	}
+	
+	mean_time_to_happen = {
+        months = 240
+	}
+	
+	option = {
+		name = EVT_2260613_OPTA
+		any_pop = { 
+			limit = { culture = mennonites }
+			reduce_pop = 1.35
 		}
 	}
 }
