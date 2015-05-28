@@ -201,9 +201,21 @@ country_event = { # pre_demographic_transition
 		any_owned_province = {
 			NOT = { has_province_modifier = pre_demographic_transition }
 			OR = {
-				AND = { NOT = { year = 2000 } pop_majority_religion = sunni }
-				AND = { NOT = { year = 2020 } NOT = { pop_majority_religion = irreligion } continent = africa owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
-				AND = { NOT = { year = 2050 } continent = africa pop_majority_religion = sunni owner = {  NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
+				AND = { 
+					NOT = { year = 2000 } pop_majority_religion = sunni 
+				}
+				AND = { 
+					NOT = { year = 2018 } 
+					NOT = { pop_majority_religion = irreligion } 
+					continent = africa 
+					owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } 
+				}
+				AND = { 
+					NOT = { year = 2028 } 
+					continent = africa 
+					pop_majority_religion = sunni 
+					owner = {  NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } 
+				}
       		}
        	}
 	}
