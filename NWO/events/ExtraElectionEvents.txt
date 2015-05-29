@@ -2577,8 +2577,8 @@ country_event = {
 				trade_goods = coal
 				trade_goods = precious_metals
 				trade_goods = other_minerals
-				#trade_goods = lead
-				#trade_goods = copper
+				trade_goods = bauxite
+				trade_goods = copper
 			}
 		}
 		NOT = {
@@ -2858,10 +2858,19 @@ country_event = {
 	}
 	option = { #Added by GAGA
 		name = "EVTOPTB140701"
-		clergymen = {
+		any_pop = {
+			limit = { type = clergymen NOT = { OR = { religion = sunni religion = shiite } } }
 			militancy = 4
 			ideology = {
 				value = populist
+				factor = 0.15
+			}
+		}
+		any_pop = {
+			limit = { type = clergymen OR = { religion = sunni religion = shiite } }
+			militancy = 4
+			ideology = {
+				value = islamist
 				factor = 0.15
 			}
 		}
@@ -4404,11 +4413,6 @@ country_event = {
 		has_country_flag = election_initialized
 		election = yes
 		not = { has_country_modifier = election_cooldown }
-		not = { is_ideology_enabled = populist }
-		not = { is_ideology_enabled = socialist }
-		not = { is_ideology_enabled = communist }
-		not = { is_ideology_enabled = islamist }
-		
 	}
 	
 	mean_time_to_happen = {
@@ -4453,1033 +4457,6 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = -4
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = populist
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = liberal
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = liberal
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = liberal
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTD999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		plurality = 1
-		ai_chance = {
-			factor = 25
-		}
-	}
-}
-
-# 999011 - Political Parties Campaign A
-country_event = {
-	id = 999011
-	title = "EVTNAME999010"
-	desc = "EVTDESC999010"
-	picture = "election"
-	
-	trigger = {
-		has_country_flag = election_initialized
-		election = yes
-		not = { has_country_modifier = election_cooldown }
-		is_ideology_enabled = populist
-		not = { is_ideology_enabled = socialist }
-		not = { is_ideology_enabled = communist }
-		not = { is_ideology_enabled = islamist }
-		
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-		modifier = {
-			factor = 3
-			has_country_flag = parties_campaign
-		}
-	}
-	
-	immediate = {
-		set_country_flag = parties_campaign 
-	}
-	
-	option = {
-		name = "EVTOPTA999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = conservative
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = conservative
-				factor = -2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = conservative
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = -4
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = populist
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = liberal
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = liberal
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = liberal
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTE999011"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTD999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		plurality = 1
-		ai_chance = {
-			factor = 25
-		}
-	}
-}
-
-# 999012 - Political Parties Campaign S
-country_event = {
-	id = 999012
-	title = "EVTNAME999010"
-	desc = "EVTDESC999010"
-	picture = "election"
-	
-	trigger = {
-		has_country_flag = election_initialized
-		election = yes
-		not = { has_country_modifier = election_cooldown }
-		not = { is_ideology_enabled = populist }
-		is_ideology_enabled = socialist
-		not = { is_ideology_enabled = communist }
-		not = { is_ideology_enabled = islamist }
-		
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-		modifier = {
-			factor = 3
-			has_country_flag = parties_campaign
-		}
-	}
-	
-	immediate = {
-		set_country_flag = parties_campaign
-	}
-	
-	option = {
-		name = "EVTOPTA999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = conservative
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = conservative
-				factor = -2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = conservative
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = -4
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = populist
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = liberal
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = liberal
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = liberal
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTF999012"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = socialist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = socialist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = socialist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTD999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		plurality = 1
-		ai_chance = {
-			factor = 25
-		}
-	}
-}
-
-# 999013 - Political Parties Campaign AS
-country_event = {
-	id = 999013
-	title = "EVTNAME999010"
-	desc = "EVTDESC999010"
-	picture = "election"
-	
-	trigger = {
-		has_country_flag = election_initialized
-		election = yes
-		not = { has_country_modifier = election_cooldown }
-		is_ideology_enabled = populist
-		is_ideology_enabled = socialist
-		not = { is_ideology_enabled = communist }
-		not = { is_ideology_enabled = islamist }
-		
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-		modifier = {
-			factor = 3
-			has_country_flag = parties_campaign
-		}
-	}
-	
-	immediate = {
-		set_country_flag = parties_campaign 
-	}
-	
-	option = {
-		name = "EVTOPTA999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = conservative
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = conservative
-				factor = -2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = conservative
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = -4
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = populist
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = liberal
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = liberal
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = liberal
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTE999011"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTF999012"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = socialist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = socialist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = socialist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTD999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		plurality = 1
-		ai_chance = {
-			factor = 25
-		}
-	}
-}
-
-# 999014 - Political Parties Campaign ASC
-country_event = {
-	id = 999014
-	title = "EVTNAME999010"
-	desc = "EVTDESC999010"
-	picture = "election"
-	
-	trigger = {
-		has_country_flag = election_initialized
-		election = yes
-		not = { has_country_modifier = election_cooldown }
-		is_ideology_enabled = populist
-		is_ideology_enabled = socialist
-		is_ideology_enabled = communist
-		not = { is_ideology_enabled = islamist }
-		
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-		modifier = {
-			factor = 3
-			has_country_flag = parties_campaign
-		}
-	}
-	
-	immediate = {
-		set_country_flag = parties_campaign
-	}
-	
-	option = {
-		name = "EVTOPTA999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = conservative
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = conservative
-				factor = -2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = conservative
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = -4
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = populist
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = liberal
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = liberal
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = liberal
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTE999011"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTF999012"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = socialist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = socialist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = socialist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTG999014"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = communist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = communist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				ruling_party_ideology = communist
-			}
-			modifier = {
-				factor = 2
-				ruling_party_ideology = socialist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTD999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		plurality = 1
-		ai_chance = {
-			factor = 25
-		}
-	}
-}
-
-# 999015 - Political Parties Campaign ASCF
-country_event = {
-	id = 999015
-	title = "EVTNAME999010"
-	desc = "EVTDESC999010"
-	picture = "election"
-	
-	trigger = {
-		has_country_flag = election_initialized
-		election = yes
-		not = { has_country_modifier = election_cooldown }
-		is_ideology_enabled = populist
-		is_ideology_enabled = socialist
-		is_ideology_enabled = communist
-		is_ideology_enabled = islamist
-		
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-		modifier = {
-			factor = 3
-			has_country_flag = parties_campaign
-		}
-	}
-	
-	immediate = {
-		set_country_flag = parties_campaign 
-	}
-	
-	option = {
-		name = "EVTOPTA999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = conservative
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = conservative
-				factor = -2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = conservative
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = -4
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = populist
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = liberal
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = liberal
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = liberal
-			}
-			modifier = {
-				factor = 0.5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTE999011"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				ruling_party_ideology = populist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTF999012"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = socialist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = socialist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = socialist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTG999014"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = communist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = communist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				ruling_party_ideology = communist
-			}
-			modifier = {
-				factor = 2
-				ruling_party_ideology = socialist
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTH999015"
 		add_country_modifier = {
 			name = election_cooldown
 			duration = 30 
@@ -5494,113 +4471,6 @@ country_event = {
 			}
 			scaled_consciousness = {
 				ideology = islamist
-				factor = 2
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				ruling_party_ideology = islamist
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					ruling_party_ideology = liberal
-					ruling_party_ideology = communist
-					ruling_party_ideology = conservative
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTD999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		plurality = 1
-		ai_chance = {
-			factor = 25
-		}
-	}
-}
-
-# 999016 - Political Parties Campaign SC
-country_event = {
-	id = 999016
-	title = "EVTNAME999010"
-	desc = "EVTDESC999010"
-	picture = "election"
-	
-	trigger = {
-		has_country_flag = election_initialized
-		election = yes
-		not = { has_country_modifier = election_cooldown }
-		not = { is_ideology_enabled = populist }
-		is_ideology_enabled = socialist
-		is_ideology_enabled = communist
-		not = { is_ideology_enabled = islamist }
-		
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-		modifier = {
-			factor = 3
-			has_country_flag = parties_campaign
-		}
-	}
-	
-	immediate = {
-		set_country_flag = parties_campaign
-	}
-	
-	option = {
-		name = "EVTOPTA999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = conservative
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = conservative
-				factor = -2
-			}
-		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 2
-				ruling_party_ideology = conservative
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB999010"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
 				factor = -4
 			}
 		}
@@ -5608,7 +4478,7 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 2
-				ruling_party_ideology = populist
+				ruling_party_ideology = islamist
 			}
 			modifier = {
 				factor = 0.5
@@ -5644,13 +4514,13 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				ruling_party_ideology = populist
+				OR = { ruling_party_ideology = populist ruling_party_ideology = islamist }
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTF999012"
+		name = "EVTOPTE999010"
 		add_country_modifier = {
 			name = election_cooldown
 			duration = 30 
@@ -5660,11 +4530,11 @@ country_event = {
 				location = { is_colonial = no }
 			}
 			ideology = {
-				value = socialist
+				value = populist
 				factor = 0.05
 			}
 			scaled_consciousness = {
-				ideology = socialist
+				ideology = populist
 				factor = 2
 			}
 		}
@@ -5672,13 +4542,17 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 2
-				ruling_party_ideology = socialist
+				ruling_party_ideology = populist
+			}
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = liberal
 			}
 		}
 	}
-	
+
 	option = {
-		name = "EVTOPTG999014"
+		name = "EVTOPTF999010"
 		add_country_modifier = {
 			name = election_cooldown
 			duration = 30 
@@ -5688,23 +4562,23 @@ country_event = {
 				location = { is_colonial = no }
 			}
 			ideology = {
-				value = communist
+				value = progressive
 				factor = 0.05
 			}
 			scaled_consciousness = {
-				ideology = communist
+				ideology = progressive
 				factor = 2
 			}
 		}
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				ruling_party_ideology = communist
-			}
+			factor = 25
 			modifier = {
 				factor = 2
-				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+			}
+			modifier = {
+				factor = 0.5
+				OR = { ruling_party_ideology = populist ruling_party_ideology = islamist }
 			}
 		}
 	}
@@ -5820,7 +4694,7 @@ country_event = {
 		} 
 		capital_scope = {
 			any_pop = {
-				reduce_pop = 0.99
+				reduce_pop = 0.998
 				militancy = 4
 			}
 		}
@@ -5928,16 +4802,6 @@ country_event = {
 			factor = 0.8
 			social_reform_want = 0.3
 		}
-		
-		modifier = {
-			factor = 1.25
-			is_ideology_enabled = communist
-		}
-		
-		modifier = {
-			factor = 0.9
-			not = { is_ideology_enabled = communist }
-		}
 	}
 	
 	immediate = {
@@ -6000,26 +4864,6 @@ country_event = {
 			has_country_flag = communist_surge
 		}
 		modifier = {
-			factor = 1.2
-			not = { average_militancy = 1 }
-		}
-		
-		modifier = {
-			factor = 1.2
-			not = { average_militancy = 0.5 }
-		}
-				
-		modifier = {
-			factor = 1.5
-			not = { average_consciousness = 5 }
-		}
-		
-		modifier = {
-			factor = 1.5
-			not = { unemployment = 0.1 }
-		}
-		
-		modifier = {
 			factor = 0.9
 			invention = vangaurd_party
 		}
@@ -6058,16 +4902,6 @@ country_event = {
 			factor = 0.8
 			social_reform_want = 0.3
 		}
-		
-		modifier = {
-			factor = 1.25
-			is_ideology_enabled = islamist
-		}
-		
-		modifier = {
-			factor = 0.9
-			not = { is_ideology_enabled = islamist }
-		}
 	}
 	
 	immediate = {
@@ -6096,7 +4930,7 @@ country_event = {
 	}
 }
 
-# 999032 - Surge Of Fascism	
+# 999032 - Surge Of Populism	
 country_event = {
 	id = 999032
 	title = "EVTNAME999032"
@@ -6106,14 +4940,21 @@ country_event = {
 	trigger = {
 		has_country_flag = election_initialized
 		election = yes
-		islamist = 5
-		NOT = { ruling_party_ideology = islamist }
+		populist = 5
+		NOT = { ruling_party_ideology = populist }
 		NOT = { has_country_modifier = election_cooldown }
-		is_ideology_enabled = islamist
+		is_ideology_enabled = populist
 	}
 	
 	mean_time_to_happen = {
 		months = 2
+		modifier = {
+			factor = 0.1
+			OR = { 
+				pop_majority_religion = sunni
+				pop_majority_religion = shiite
+			}
+		}
 		modifier = {
 			factor = 0.8
 			has_country_modifier = wartime_elections
@@ -6124,7 +4965,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 2
-			has_country_flag = islamist_surge
+			has_country_flag = populist_surge
 		}
 		modifier = {
 			factor = 1.2
@@ -6187,7 +5028,7 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = islamist_surge
+		set_country_flag = populist_surge
 	}
 	
 	option = {
@@ -6319,114 +5160,7 @@ country_event = {
 	}
 }
 
-# 999034 - Surge Of Anarcho-Liberalism
-country_event = {
-	id = 999034
-	title = "EVTNAME999034"
-	desc = "EVTDESC999034"
-	picture = "AnarchoLiberals"
-	
-	trigger = {
-		has_country_flag = election_initialized
-		election = yes
-		OR = {
-			populist = 5
-			liberal = 30
-		}
-		literacy = 0.5
-		NOT = { ruling_party_ideology = populist }
-		NOT = { has_country_modifier = election_cooldown }
-		NOT = { has_country_flag = populist_surge }
-		is_ideology_enabled = populist
-	}
-	
-	mean_time_to_happen = {
-		months = 2
-		modifier = {
-			factor = 0.8
-			has_country_modifier = wartime_elections
-		}
-		modifier = {
-			factor = 0.8
-			has_country_modifier = violent_elections
-		}
-		modifier = {
-			factor = 1.2
-			not = { average_militancy = 1 }
-		}
-		
-		modifier = {
-			factor = 1.2
-			not = { average_militancy = 0.5 }
-		}
-				
-		modifier = {
-			factor = 1.5
-			not = { average_consciousness = 5 }
-		}
-		
-		modifier = {
-			factor = 1.1
-			not = { unemployment = 0.05 }
-		}
-		
-		modifier = {
-			factor = 0.9
-			invention = individualism
-		}
-		
-		modifier = {
-			factor = 0.9
-			invention = social_conscience
-		}
-		
-		modifier = {
-			factor = 0.8
-			unemployment = 0.1
-		}
-		
-		modifier = {
-			factor = 1.2
-			unemployment = 0.3
-		}
-				
-		modifier = {
-			factor = 0.75
-			or = {
-				has_country_modifier = springtime_of_nations
-				has_country_modifier = global_liberal_agitation
-			}
-		}
-	}
-	
-	immediate = {
-		set_country_flag = populist_surge 
-	}
-	
-	option = {
-		name = "EVTOPTA999031"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		}
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-				literacy = 0.5
-			}
-			ideology = {
-				value = populist
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = populist
-				factor = 3
-			}
-		}
-	}
-}
-
-# 999035 - Surge Of Social Liberalism
+# 999035 - Surge Of Progressive
 country_event = {
 	id = 999035
 	title = "EVTNAME999035"
@@ -6516,12 +5250,12 @@ country_event = {
 	}
 }
 
-# 999036 - Reactionary Surge
+# 999036 - Islamist Surge
 country_event = {
 	id = 999036
 	title = "EVTNAME999036"
 	desc = "EVTDESC999036"
-	picture = "finepeople"
+	picture = "islamist"
 	
 	trigger = {
 		has_country_flag = election_initialized
@@ -6529,16 +5263,25 @@ country_event = {
 		OR = {
 			socialist = 30
 			liberal = 30
-			populist = 5
+			islamist = 5
 		}
-		NOT = { ruling_party_ideology = populist }
+		NOT = { ruling_party_ideology = islamist }
 		NOT = { has_country_modifier = election_cooldown }
-		NOT = { has_country_flag = populist_surge }
+		NOT = { has_country_flag = islamist_surge }
 		NOT = { is_ideology_enabled = islamist }
 	}
 	
 	mean_time_to_happen = {
 		months = 2
+		modifier = {
+			factor = 0.1
+			NOT = { 
+				OR = { 
+					pop_majority_religion = sunni
+					pop_majority_religion = shiite
+				}
+			}
+		}
 		modifier = {
 			factor = 0.8
 			has_country_modifier = wartime_elections
@@ -6576,28 +5319,10 @@ country_event = {
 			factor = 1.5
 			invention = social_conscience
 		}
-		
-		modifier = {
-			factor = 0.8
-			unemployment = 0.1
-		}
-		
-		modifier = {
-			factor = 0.8
-			unemployment = 0.3
-		}
-				
-		modifier = {
-			factor = 0.75
-			or = {
-				has_country_modifier = springtime_of_nations
-				has_country_modifier = global_liberal_agitation
-			}
-		}
 	}
 	
 	immediate = {
-		set_country_flag = populist_surge
+		set_country_flag = islamist_surge
 	}
 	
 	option = {
@@ -6612,11 +5337,11 @@ country_event = {
 				is_primary_culture = yes
 			}
 			ideology = {
-				value = populist
+				value = islamist
 				factor = 0.15
 			}
 			scaled_consciousness = {
-				ideology = populist
+				ideology = islamist
 				factor = -6
 			}
 		}
@@ -6630,11 +5355,11 @@ country_event = {
 				is_primary_culture = yes
 			}
 			ideology = {
-				value = populist
+				value = islamist
 				factor = 0.05
 			}
 			scaled_consciousness = {
-				ideology = populist
+				ideology = islamist
 				factor = -3
 			}
 		}
@@ -7382,6 +6107,7 @@ country_event = {
 		any_pop = { 
 			limit = {
 				location = { is_colonial = no }
+				NOT = { OR = { religion = sunni religion = shiite } } 
 			}
 			scaled_militancy = { 
 				factor = 3 
@@ -7390,6 +6116,20 @@ country_event = {
 			scaled_consciousness = { 
 				factor = 3
 				ideology = populist 
+			}
+		}		
+		any_pop = { 
+			limit = {
+				location = { is_colonial = no }
+				OR = { religion = sunni religion = shiite } 
+			}
+			scaled_militancy = { 
+				factor = 3 
+				ideology = islamist
+			}				
+			scaled_consciousness = { 
+				factor = 3
+				ideology = islamist 
 			}
 		}		
 		any_pop = { 
@@ -7524,6 +6264,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				location = { is_colonial = no }
+				NOT = { OR = { religion = sunni religion = shiite }  }
 			}		
 			scaled_militancy = { 
 				factor = 3
@@ -7533,6 +6274,21 @@ country_event = {
 			scaled_consciousness = { 
 				factor = 3
 				ideology = populist
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+				OR = { religion = sunni religion = shiite } 
+			}		
+			scaled_militancy = { 
+				factor = 3
+				ideology = islamist
+			}	
+			
+			scaled_consciousness = { 
+				factor = 3
+				ideology = islamist
 			}
 		}
 		any_pop = { 
@@ -7667,6 +6423,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				location = { is_colonial = no }
+				NOT = { OR = { religion = sunni religion = shiite }  }
 			}		
 			scaled_militancy = { 
 				factor = 3
@@ -7676,6 +6433,21 @@ country_event = {
 			scaled_consciousness = { 
 				factor = 3
 				ideology = populist
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+				OR = { religion = sunni religion = shiite } 
+			}
+			scaled_militancy = { 
+				factor = 3
+				ideology = islamist
+			}	
+			
+			scaled_consciousness = { 
+				factor = 3
+				ideology = islamist
 			}
 		}
 		any_pop = { 
@@ -7744,7 +6516,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.2
-			is_ideology_enabled = communist
+			is_ideology_enabled = populist
 		}
 		
 		modifier = {
@@ -7910,8 +6682,6 @@ country_event = {
 		election = yes
 		not = { has_country_modifier = election_cooldown }
 		unemployment = 0.1
-		is_ideology_enabled = communist
-		is_ideology_enabled = islamist
 	}
 	
 	mean_time_to_happen = {
@@ -8002,12 +6772,12 @@ country_event = {
 				location = { is_colonial = no }
 			}
 			ideology = {
-				value = communist
+				value = progressive
 				factor = 0.05
 			}		
 			scaled_consciousness = { 
 				factor = 3
-				ideology = communist 
+				ideology = progressive 
 			}
 		}
 	}
@@ -8022,6 +6792,22 @@ country_event = {
 			limit = {
 				unemployment = 0.1
 				location = { is_colonial = no }
+				NOT = { OR = { religion = sunni religion = shiite } }
+			}
+			ideology = {
+				value = populist
+				factor = 0.05
+			}		
+			scaled_consciousness = { 
+				factor = 3
+				ideology = populist
+			}
+		}
+		any_pop = {
+			limit = {
+				unemployment = 0.1
+				location = { is_colonial = no }
+				OR = { religion = sunni religion = shiite }
 			}
 			ideology = {
 				value = islamist
@@ -8055,11 +6841,11 @@ country_event = {
 			}
 			scaled_militancy = { 
 				factor = 3
-				ideology = islamist
+				ideology = populist
 			}
 			scaled_militancy = { 
 				factor = 3
-				ideology = communist
+				ideology = islamist
 			}
 		}
 	}
@@ -8076,11 +6862,11 @@ country_event = {
 				location = { is_colonial = no }
 			}
 			ideology = {
-				value = communist
+				value = progressive
 				factor = 0.025
 			}
 			ideology = {
-				value = islamist
+				value = populist
 				factor = 0.025
 			}
 		}
@@ -8183,6 +6969,7 @@ country_event = {
 					strata = rich
 					strata = middle
 				}
+				NOT = { OR = { religion = sunni religion = shiite } }
 			}
 			dominant_issue = {
 				factor = 0.10
@@ -8190,6 +6977,24 @@ country_event = {
 			}
 			ideology = {
 				value = populist
+				factor = 0.05
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+				OR = {
+					strata = rich
+					strata = middle
+				}
+				OR = { religion = sunni religion = shiite }
+			}
+			dominant_issue = {
+				factor = 0.10
+				value = no_child_care
+			}
+			ideology = {
+				value = islamist
 				factor = 0.05
 			}
 		}
@@ -8381,6 +7186,7 @@ country_event = {
 					strata = rich
 					strata = middle
 				}
+				NOT = { OR = { religion = sunni religion = shiite } }
 			}
 			dominant_issue = {
 				factor = 0.10
@@ -8388,6 +7194,25 @@ country_event = {
 			}
 			ideology = {
 				value = populist
+				factor = 0.05
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+				is_primary_culture = yes
+				OR = {
+					strata = rich
+					strata = middle
+				}
+				OR = { religion = sunni religion = shiite }
+			}
+			dominant_issue = {
+				factor = 0.10
+				value = minorities_oppression
+			}
+			ideology = {
+				value = islamist
 				factor = 0.05
 			}
 		}
@@ -8494,9 +7319,21 @@ country_event = {
 			limit = {
 				location = { is_colonial = no }
 				is_primary_culture = yes
+				NOT = { OR = { religion = sunni religion = shiite } }
 			}
 			ideology = {
 				value = populist
+				factor = 0.10
+			}
+		}
+		rich_strata = {
+			limit = {
+				location = { is_colonial = no }
+				is_primary_culture = yes
+				OR = { religion = sunni religion = shiite }
+			}
+			ideology = {
+				value = islamist
 				factor = 0.10
 			}
 		}
@@ -8504,10 +7341,22 @@ country_event = {
 			limit = {
 				location = { is_colonial = no }
 				is_primary_culture = yes
+				NOT = { OR = { religion = sunni religion = shiite } }
 			}
 			scaled_militancy = { 
 				factor = 3
 				ideology = populist
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+				is_primary_culture = yes
+				OR = { religion = sunni religion = shiite }
+			}
+			scaled_militancy = { 
+				factor = 3
+				ideology = islamist
 			}
 		}
 	}
@@ -8617,6 +7466,7 @@ country_event = {
 					strata = rich
 					strata = middle
 				}
+				NOT = { OR = { religion = sunni religion = shiite } }
 			}
 			dominant_issue = {
 				factor = 0.10
@@ -8624,6 +7474,25 @@ country_event = {
 			}
 			ideology = {
 				value = populist
+				factor = 0.05
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+				is_primary_culture = yes
+				OR = {
+					strata = rich
+					strata = middle
+				}
+				OR = { religion = sunni religion = shiite }
+			}
+			dominant_issue = {
+				factor = 0.10
+				value = quota_immigration
+			}
+			ideology = {
+				value = islamist
 				factor = 0.05
 			}
 		}
@@ -8701,6 +7570,7 @@ country_event = {
 			limit = {
 				location = { is_colonial = no }
 				is_primary_culture = yes
+				NOT = { OR = { religion = sunni religion = shiite } }
 			}
 			ideology = {
 				value = populist
@@ -8711,10 +7581,33 @@ country_event = {
 			limit = {
 				location = { is_colonial = no }
 				is_primary_culture = yes
+				NOT = { OR = { religion = sunni religion = shiite } }
 			}
 			scaled_militancy = { 
 				factor = 3
 				ideology = populist
+			}
+		}
+		rich_strata = {
+			limit = {
+				location = { is_colonial = no }
+				is_primary_culture = yes
+				OR = { religion = sunni religion = shiite } 
+			}
+			ideology = {
+				value = islamist
+				factor = 0.10
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+				is_primary_culture = yes
+				OR = { religion = sunni religion = shiite }
+			}
+			scaled_militancy = { 
+				factor = 3
+				ideology = islamist
 			}
 		}
 	}
