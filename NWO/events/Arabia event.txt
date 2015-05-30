@@ -205,8 +205,8 @@ country_event = {
 		name = "EVT_111011933_OPTA"
 		ai_chance = { factor = 100 }
 		any_pop = { 
-			limit = { ideology = islamist }
-			militancy = 8
+			limit = { religion = sunni }
+			militancy = 5
 			dominant_issue = {
 				value = moralism
 				factor = 0.1
@@ -215,6 +215,38 @@ country_event = {
 		any_pop = { 
 			scaled_militancy = { factor = 0.5 ideology = progressive } 
 			scaled_militancy = { factor = 0.5 ideology = liberal } 
+		}
+	}
+}
+
+country_event = {
+	id = 111011934
+	title = "wahhabism"
+	desc = "wahhabism_desc"
+	picture = "wahhabism"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "wahhabism_opta"
+		any_pop = { 
+			limit = { religion = sunni }
+			dominant_issue = {
+				value = moralism
+				factor = 0.1
+			}
+			ideology = { factor = 0.1 value = islamist }
+		}
+	}
+	option = {
+		name = "wahhabism_optb"
+		limit = { religion = sunni }
+		any_pop = { 
+			dominant_issue = {
+				value = moralism
+				factor = 0.1
+			}
+			scaled_militancy = { factor = 0.5 ideology = islamist } 
 		}
 	}
 }

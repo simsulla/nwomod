@@ -1,0 +1,101 @@
+country_event = {
+	id = 8014800
+
+	title = EVT_8014800_NAME
+	desc = EVT_8014800_DESC
+	picture = "isis"
+
+	trigger = {
+		year = 2011
+		war = no
+		has_country_flag = arabic_spring
+		SAA = { has_country_modifier = wahhabism } 
+		ISI = { exists = no }
+		OR = { 
+			AND = { tag = SYR government = nationalist_dictatorship 907 = { owned_by = SYR controlled_by_rebels = yes } } 
+			AND = { tag = IRQ NOT = { government = nationalist_dictatorship } OR = { 923 = { owned_by = IRQ controlled_by_rebels = yes } 927 = { owned_by = IRQ controlled_by_rebels = yes } } }
+		}
+	}
+	
+	immediate = { 
+		any_owned = { limit = { OR = { controlled_by_rebels = yes province_id = 907 } } add_core = ISI }
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = EVT_8014800_OPTA
+		release = ISI
+		casus_belli = {
+			target = ISI
+			type = acquire_core_state
+			months = 12
+		}
+		casus_belli = {
+			target = ISI
+			type = annex_core_country
+			months = 24
+		}
+		ISI = { badboy = 25 money = 2000  }
+	}
+}
+
+country_event = {
+	id = 8014801
+
+	title = EVT_8014801_NAME
+	desc = EVT_8014800_DESC
+	picture = "isis"
+
+	trigger = {
+		ISI = { exists = yes }
+		year = 2011
+		war = no
+		has_country_flag = arabic_spring
+		SAA = { has_country_modifier = wahhabism } 
+		any_owned_province = { controlled_by_rebels = yes }
+	}
+	
+	immediate = { 
+		any_owned = { limit = { controlled_by_rebels = yes } add_core = ISI }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = EVT_8014801_OPTA
+		any_owned = { limit = { controlled_by_rebels = yes } secede_province = ISI }
+		casus_belli = {
+			target = ISI
+			type = acquire_core_state
+			months = 12
+		}
+		war = {
+			target = ISI
+			attacker_goal = {
+				casus_belli = acquire_core_state
+			}
+			defender_goal = {
+				casus_belli = acquire_core_state
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = EVT_8014801_OPTB
+		any_owned = { limit = { controlled_by_rebels = yes } secede_province = ISI }
+		casus_belli = {
+			target = ISI
+			type = acquire_core_state
+			months = 12
+		}
+		ai_chance = { factor = 0 }
+	}
+	
+}
+

@@ -1,0 +1,28 @@
+political_decisions = {
+
+	wahhabism = {
+		picture = "wahhabism"
+		potential = {
+			pop_majority_religion = sunni
+			NOT = { has_country_modifier = wahhabism }
+		}
+
+		allow = {
+			1151 = { owned_by = THIS } 
+			is_vassal = no
+			money = 1000
+		}
+
+		ai_will_do = { factor = 1 }
+
+		effect = {
+			add_country_modifier = { duration = 1500 name = wahhabism }
+			money = -1000
+			prestige_factor = 0.2
+			any_country = { 
+				limit = { pop_majority_religion = sunni NOT = { OR = { government = absolute_monarchy government = islamist_dictatorship } } }
+				country_event = 111011934
+			}
+		}
+	}
+}
