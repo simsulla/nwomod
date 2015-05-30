@@ -139,3 +139,57 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	id = 8008604
+
+	title = EVT_8008604_NAME
+	desc = EVT_8008604_DESC
+	picture = "arab_spring"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		TRI = { has_country_flag = arab_spring }
+		exists = TRI
+		war = no
+	}
+
+	option = {
+		name = EVT_8008604_OPTA
+		ai_chance = { factor = 100 }
+		TRI = { badboy = 20 }
+		random_country = {
+			limit = { tag = EGY in_sphere = THIS ai = yes }
+			create_alliance = THIS
+		}
+		casus_belli = {
+			target = TRI
+			type = install_democracy
+			months = 12
+		}
+		casus_belli = {
+			target = TRI
+			type = add_to_sphere
+			months = 12
+		}
+		war = {
+			target = TRI
+			attacker_goal = {
+				casus_belli = install_democracy
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}
+		badboy = 5
+	}
+	option = {
+		name = EVT_8008604_OPTB
+		ai_chance = { factor = 0 }
+	}
+	
+
+}

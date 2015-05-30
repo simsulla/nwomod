@@ -56,18 +56,30 @@ country_event = {
 	trigger = {
 		tag = USA
 		war = no
-		AFG = { government = islamist_dictatorship }
+		AFG = { OR = { government = islamist_dictatorship government = nationalist_dictatorship } }
 	}
+	
+	immediate = { AFG = { badboy = 35 } }
 
 	mean_time_to_happen = {
 		months = 120
-		modifier = { factor = 0.8 AFG = { government = islamist_dictatorship } }
+		modifier = { factor = 0.5 AFG = { government = islamist_dictatorship } }
 	}
 
 	option = {
 		name = EVT_8015802_A 
 		ai_chance = { factor = 100 }
 		any_country = { relation = { who = AFG value = -200 } }
+		add_casus_belli = {
+			target = AFG
+			type = install_democracy
+			months = 60
+		}
+		add_casus_belli = {
+			target = AFG
+			type = add_to_sphere
+			months = 60
+		}		
 		war = {
 			target = AFG
 			attacker_goal = { casus_belli = install_democracy }

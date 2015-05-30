@@ -175,3 +175,44 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 111011933
+	title = "EVT_111011933_NAME"
+	desc = "EVT_111011933_DESC"
+	picture = "arab_spring"
+
+	trigger = {
+		year = 2010
+		OR = { primary_culture = sunni_arab primary_culture = shia_arab }
+		NOT = { has_country_flag = arabic_spring }
+	}
+	
+	immediate = { set_country_flag = arabic_spring }
+	
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			pop_militancy = 10
+			factor = 0.5
+		}
+		modifier = {
+			pop_militancy = 5
+			factor = 0.5
+		}
+	}
+	
+	option = {
+		name = "EVT_111011933_OPTA"
+		ai_chance = { factor = 100 }
+		any_pop = { 
+			limit = { NOT = { government = islamist_dictatorship } }
+			scaled_militancy = { factor = 0.5 ideology = islamist } 
+		}
+		any_pop = { 
+			limit = { NOT = { OR = { government = democracy government = hms_government } } }
+			scaled_militancy = { factor = 0.5 ideology = progressive } 
+			scaled_militancy = { factor = 0.5 ideology = liberal } 
+		}
+	}
+}
+
