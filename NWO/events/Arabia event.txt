@@ -205,11 +205,14 @@ country_event = {
 		name = "EVT_111011933_OPTA"
 		ai_chance = { factor = 100 }
 		any_pop = { 
-			limit = { NOT = { government = islamist_dictatorship } }
-			scaled_militancy = { factor = 0.5 ideology = islamist } 
+			limit = { ideology = islamist }
+			militancy = 8
+			dominant_issue = {
+				value = moralism
+				factor = 0.1
+			}
 		}
 		any_pop = { 
-			limit = { NOT = { OR = { government = democracy government = hms_government } } }
 			scaled_militancy = { factor = 0.5 ideology = progressive } 
 			scaled_militancy = { factor = 0.5 ideology = liberal } 
 		}
