@@ -79,7 +79,7 @@ political_decisions = {
 		}
 		allow = {
 			ENG = { 
-				OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy } 
+				OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy has_country_flag = end_of_the_city } 
 				has_country_modifier = special_drawing_rights 
 				capital_scope = { trade_goods = credit } 
 			}

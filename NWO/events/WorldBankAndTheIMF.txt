@@ -176,3 +176,30 @@ country_event = {
 	}
 
 }
+
+
+country_event = {
+	id = 15608
+	title = EVT_15608_NAME
+	desc = EVT_15608_DESC
+	picture = "dev_bank"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		capital_scope = { trade_goods = credit }
+		tag = ENG
+		CHI = { rank = 1 }
+		NOT = { has_country_flag = world_bank has_country_flag = the_imf }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVT_15608_OPTA
+		set_country_flag = end_of_the_city
+		capital_scope = { trade_goods = coal }
+	}
+}
