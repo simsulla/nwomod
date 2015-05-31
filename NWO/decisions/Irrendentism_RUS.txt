@@ -91,7 +91,48 @@ political_decisions = {
 
         }
 
+        claim_greater_novorossiya = {
+				picture = "claim_greater_russia"
+                potential = {
+                        tag = NRO
+                        NOT = { has_country_flag = claim_greater_novorossiya }
+                }
+				
+				ai_will_do = { factor = 1 }
 
+                allow = {
+                       tag = NRO
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_novorossiya
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_novorossiya
+                        678 = { add_core = NRO }
+                        965 = { add_core = NRO }
+                        968 = { add_core = NRO }
+                        969 = { add_core = NRO }
+                        970 = { add_core = NRO }
+                        971 = { add_core = NRO }
+                        972 = { add_core = NRO }
+                        973 = { add_core = NRO }
+                        974 = { add_core = NRO }
+                }
+
+        }
 
 }
 
