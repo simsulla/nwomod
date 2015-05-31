@@ -1037,11 +1037,11 @@ install_democracy = {
 				war_policy = pacifism
 			}
 		}
-               OR = {                        
-                        NOT = { relation = { who = THIS value = -50 } }
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
+		OR = {                        
+				NOT = { relation = { who = THIS value = -50 } }
+				FROM = { involved_in_crisis = yes }
+				THIS = { ai = no }
+		}
 	}
 	
 	po_remove_prestige = yes

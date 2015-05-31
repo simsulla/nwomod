@@ -6,7 +6,13 @@ political_decisions = {
 	xum_ambition = {
 		picture = "xum_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
+			has_country_flag = trade_block_ambition 
+			OR = { 
+				pop_majority_religion = shiite 
+				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
+				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
+				AND = { government = nationalist_dictatorship primary_culture = hazara } 
+			}
 			NOT = { has_country_flag = xum_ambition has_country_flag = in_trade_block tag = XUM }
 		}
 		allow = {
@@ -43,7 +49,7 @@ political_decisions = {
 	}
 
 	end_xum_ambition = {
-		picture = "xca_parlament"
+		picture = "xum_parlament"
 		potential = {
 			has_country_flag = xum_ambition
 			NOT = {
@@ -82,10 +88,15 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	xca_single_market= {
+	xum_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
+			OR = { 
+				pop_majority_religion = shiite 
+				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
+				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
+				AND = { government = nationalist_dictatorship primary_culture = hazara } 
+			}
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -110,10 +121,15 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	xca_currency_union = {
+	xum_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
+			OR = { 
+				pop_majority_religion = shiite 
+				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
+				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
+				AND = { government = nationalist_dictatorship primary_culture = hazara } 
+			}
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -144,10 +160,15 @@ political_decisions = {
 		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
 	}
 
-	xca_political_union = {
+	xum_political_union = {
 		picture = "xum_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
+			OR = { 
+				pop_majority_religion = shiite 
+				AND = { government = nationalist_dictatorship primary_culture = shia_arab } 
+				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
+				AND = { government = nationalist_dictatorship primary_culture = hazara } 
+			}
 			NOT = { capital_scope = { is_core = XUM } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -177,10 +198,15 @@ political_decisions = {
 #
 # Leader Decision: Political Union
 #
-	xca_defence_union = {
+	xum_defence_union = {
 		picture = "defence_union"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
+			OR = { 
+				pop_majority_religion = shiite 
+				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
+				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
+				AND = { government = nationalist_dictatorship primary_culture = hazara } 
+			}
 			is_vassal = no
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 		}
@@ -206,10 +232,15 @@ political_decisions = {
 		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
 	}
 
-	xca_form_union = {
-		picture = "xca_parlament"
+	xum_form_union = {
+		picture = "xum_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = PER tag = AFG tag = PAK tag = TAJ tag = NCY }
+			OR = { 
+				pop_majority_religion = shiite 
+				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
+				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
+				AND = { government = nationalist_dictatorship primary_culture = hazara } 
+			}
 			has_country_flag = xum_ambition
 			XUM = { exists = no }
 		}
@@ -244,8 +275,11 @@ political_decisions = {
 			}
 			change_tag = XUM
 			primary_culture = persian
-			add_accepted_culture = indian_muslim
-			add_accepted_culture = turkish
+			add_accepted_culture = indian_shia
+			add_accepted_culture = shia_arab
+			add_accepted_culture = hazara
+			add_accepted_culture = aimat
+			add_accepted_culture = azerbaijani
 			clr_country_flag = in_trade_block
 		}
 		ai_will_do = {
@@ -253,7 +287,7 @@ political_decisions = {
 		}
 	}
 	
-	xca_enlarge_union = {
+	xum_enlarge_union = {
 		picture = "xum_ambition"
 		potential = {
 			has_country_flag = trade_block_ambition 
