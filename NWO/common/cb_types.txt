@@ -46,6 +46,7 @@ status_quo
 gunboat 
 free_peoples
 liberate_country
+install_sectarian_regime
 install_communist_gov_cb
 uninstall_communist_gov_cb
 acquire_core_state 
@@ -1072,6 +1073,117 @@ install_democracy = {
 			}
 		}
 		country_event = 96085
+	}
+}
+
+install_populist_regime = {
+	sprite_index = 13
+	is_triggered_only = yes
+	months = 12
+	construction_speed = 1.5
+	crisis = no
+
+	badboy_factor = 3
+	prestige_factor = 5
+	peace_cost_factor = 50
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		is_vassal = no
+		civilized = yes
+		NOT = { government = populist_dictatorship }
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			NOT = {
+				war_policy = pacifism
+			}
+		}
+		OR = {                        
+			NOT = { relation = { who = THIS value = -50 } }
+			FROM = { involved_in_crisis = yes }
+		}
+	}
+	
+	po_remove_prestige = yes
+
+	war_name = WAR_NAME
+	
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism 
+			to = pro_military
+			value = 0.05
+		}
+	}
+	
+	on_po_accepted = {
+		THIS = { set_country_flag = friendly_sectarian_regime }
+		country_event = 96088
+	}
+}
+
+install_sectarian_regime = {
+	sprite_index = 13
+	is_triggered_only = yes
+	months = 12
+	construction_speed = 1.5
+	crisis = no
+
+	badboy_factor = 3
+	prestige_factor = 5
+	peace_cost_factor = 50
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		is_vassal = no
+		civilized = yes
+		OR = { tag = AFG tag = BYE tag = BRN tag = IRQ tag = NGX tag = SAR tag = SAL tag = SAF tag = SSU tag = YEM tag = SYR tag = TRI tag = UKR }
+		NOT = { government = nationalist_dictatorship }
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			NOT = {
+				war_policy = pacifism
+			}
+		}
+		OR = {                        
+			NOT = { relation = { who = THIS value = -50 } }
+			FROM = { involved_in_crisis = yes }
+		}
+	}
+	
+	po_remove_prestige = yes
+
+	war_name = WAR_NAME
+	
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism 
+			to = pro_military
+			value = 0.05
+		}
+	}
+	
+	on_po_accepted = {
+		THIS = { set_country_flag = friendly_sectarian_regime }
+		country_event = 96089
 	}
 }
 

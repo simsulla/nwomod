@@ -1246,3 +1246,117 @@ country_event = {
 		end_war = FROM
 	}
 }
+
+country_event = {
+	id = 96088
+	title = "EVT_96088_NAME" #Populist Regime
+	desc = "EVT_96088_DESC"
+	picture = "unite"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_96088_OPTA"
+		government = populist_dictatorship
+		ruling_party_ideology = populist
+		clr_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		clr_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		clr_country_flag = islamist_election_win
+		set_country_flag = populist_election_win
+		clr_country_flag = nationalist_election_win
+		clr_country_flag = progressive_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_sectarian_regime }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_sectarian_regime
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 100 }
+			create_alliance = THIS
+			clr_country_flag = friendly_sectarian_regime
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = islamist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 1
+			}
+			scaled_militancy = {
+				ideology = populist
+				factor = -4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 96089
+	title = "EVT_96089_NAME" #Nationalist Regime
+	desc = "EVT_96089_DESC"
+	picture = "unite"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_96089_OPTA"
+		government = nationalist_dictatorship
+		ruling_party_ideology = populist
+		clr_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		clr_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		clr_country_flag = islamist_election_win
+		set_country_flag = populist_election_win
+		clr_country_flag = nationalist_election_win
+		clr_country_flag = progressive_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_sectarian_regime }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_sectarian_regime
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 100 }
+			create_alliance = THIS
+			clr_country_flag = friendly_sectarian_regime
+		}
+		any_pop = {
+			dominant_issue = {
+				value = sectarianism_minority
+				factor = 0.3
+			}
+			scaled_militancy = {
+				ideology = islamist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 1
+			}
+			scaled_militancy = {
+				ideology = populist
+				factor = -4
+			}
+		}
+	}
+}
