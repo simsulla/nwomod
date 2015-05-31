@@ -1,5 +1,18 @@
 political_decisions = {
-  cpcn_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = pashtun government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = tajik } ai_will_do = { factor = 1 } }
-  cpc_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = tajik NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = pashtun } ai_will_do = { factor = 1 } }
-
+	cpcn_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = pashtun government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = tajik  add_accepted_culture = uzbek } ai_will_do = { factor = 1 } }
+	cpc_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = tajik NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = pashtun  remove_accepted_culture = uzbek } ai_will_do = { factor = 1 } }
+	cpcn_BYE = { picture = cpc alert = no potential = { tag = BYE primary_culture = byelorussian government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = russian  } ai_will_do = { factor = 1 } }
+	cpc_BYE = { picture = cpc alert = no potential = { tag = BYE primary_culture = russian NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = byelorussian  } ai_will_do = { factor = 1 } }
+	cpcn_BRN = { picture = cpc alert = no potential = { tag = BRN primary_culture = hutu government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = tutsi  } ai_will_do = { factor = 1 } }
+	cpc_BRN = { picture = cpc alert = no potential = { tag = BRN primary_culture = tutsi NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = hutu  } ai_will_do = { factor = 1 } }
+	cpcn_IRQ = { picture = cpc alert = no potential = { tag = IRQ primary_culture = shia_arab government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = sunni_arab  } ai_will_do = { factor = 1 } }
+	cpc_IRQ = { picture = cpc alert = no potential = { tag = IRQ primary_culture = sunni_arab NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = shia_arab  } ai_will_do = { factor = 1 } }
+	cpcn_SAF = { picture = cpc alert = no potential = { tag = SAF primary_culture = black_anglo government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = afrikaaner  add_accepted_culture = white_anglo } ai_will_do = { factor = 1 } }
+	cpc_SAF = { picture = cpc alert = no potential = { tag = SAF primary_culture = afrikaaner NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = black_anglo  remove_accepted_culture = white_anglo } ai_will_do = { factor = 1 } }
+	cpcn_SYR = { picture = cpc alert = no potential = { tag = SYR primary_culture = sunni_arab government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = shia_arab  } ai_will_do = { factor = 1 } }
+	cpc_SYR = { picture = cpc alert = no potential = { tag = SYR primary_culture = shia_arab NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = sunni_arab  } ai_will_do = { factor = 1 } }
+	cpcn_TRI = { picture = cpc alert = no potential = { tag = TRI primary_culture = sunni_arab government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = berber  } ai_will_do = { factor = 1 } }
+	cpc_TRI = { picture = cpc alert = no potential = { tag = TRI primary_culture = berber NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = sunni_arab  } ai_will_do = { factor = 1 } }
+	cpcn_UKR = { picture = cpc alert = no potential = { tag = UKR primary_culture = ukrainian government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = russian  } ai_will_do = { factor = 1 } }
+	cpc_UKR = { picture = cpc alert = no potential = { tag = UKR primary_culture = russian NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = ukrainian  } ai_will_do = { factor = 1 } }
  }
