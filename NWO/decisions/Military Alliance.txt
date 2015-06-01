@@ -345,7 +345,7 @@ political_decisions = {
                 }
 
                 allow = {
-					has_unclaimed_cores = no
+					OR = { has_unclaimed_cores = no tag = RUS }
                     NOT =  {
 						capital_scope = { has_province_modifier = csto_alliance }
 						capital_scope = { has_province_modifier = leave_csto_alliance }
