@@ -21,6 +21,7 @@ country_event = { # one_point_five_children
 	picture = "one_point_five_children"
 	
 	trigger = {
+		OR = { literacy = 0.6 AND = { literacy = 0.20 pop_majority_religion = irreligion NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
 		NOT = { has_country_modifier = one_point_five_children }
 	}
 	
@@ -46,6 +47,7 @@ country_event = { # two_children
 	
 	trigger = {
 		literacy = 0.20
+		NOT = { OR = { literacy = 0.6 pop_majority_religion = irreligion NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
 		NOT = { has_country_modifier = two_children }
 	}
 	
