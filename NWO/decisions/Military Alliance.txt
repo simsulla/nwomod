@@ -333,10 +333,14 @@ political_decisions = {
 					OR = {
 						tag = RUS
 						tag = BYE
-						AND = {
-							OR = { is_greater_power = yes part_of_sphere = yes }
-							continent = asia
-						}
+						tag = ARM
+						tag = GEO
+						tag = UKR
+						tag = AZB
+						tag = SOT
+						tag = TRD
+						tag = ABK
+						capital_scope = { continent = asia }
 					}
 					OR = {
 						RUS = { capital_scope = { has_province_modifier = csto_alliance } }
@@ -346,30 +350,9 @@ political_decisions = {
 
                 allow = {
 					OR = { has_unclaimed_cores = no tag = RUS }
-                    NOT =  {
-						capital_scope = { has_province_modifier = csto_alliance }
-						capital_scope = { has_province_modifier = leave_csto_alliance }
-					}
-					OR = {
-						tag = RUS
-						tag = BYE
-						continent = asia
-					}
-					OR = {
-						tag = RUS
-						tag = BYE
-						AND = {
-							OR = { is_greater_power = yes part_of_sphere = yes }
-							continent = asia
-						}
-					}
-					OR = {
-						AND = { 
-							is_greater_power = yes
-							OR = { tag = RUS  relation = { who = RUS value = 50 } }
-						}
-						sphere_owner = {  capital_scope = { has_province_modifier = csto_alliance } }
-					}
+					OR = { in_sphere = RUS tag = RUS }
+					OR = { tag = RUS  relation = { who = RUS value = 50 } }
+					RUS = {  capital_scope = { has_province_modifier = csto_alliance } }
 					NOT = { government = proletarian_dictatorship }
                 }
 
