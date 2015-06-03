@@ -1,4 +1,4 @@
-#Anti-ship missile
+#Sea Control Ship
 dreadnought = {
 	icon = 12
 	naval_icon = 9
@@ -17,7 +17,7 @@ dreadnought = {
 	#Core Abilities
 	priority = 60
 	max_strength = 100
-	default_organisation = 30
+	default_organisation = 35
 	maximum_speed = 15
 	weighted_value = 100.0
 
@@ -28,26 +28,24 @@ dreadnought = {
 		ships = 400
 		weaponry = 50
 		canned_food = 20
-		#telephones = 10
 		fuel = 50
 		aeroplanes = 360
 	}
 	min_port_level = 5
-	limit_per_port = -1
-	supply_consumption_score = 30
+	limit_per_port = 1
+	supply_consumption_score = 45
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		ships = 1.6
-		weaponry = 0.4
-		canned_food = 0.4
-		fuel = 1.2
-		aeroplanes = 1.5
+		ships = 4.0
+		weaponry = 1.0
+		fuel = 2.5
+		aeroplanes = 2.5
 	}
 	
 	#Naval Abilties
-	hull = 40
-	gun_power = 50
-	fire_range = 0.9
+	hull = 90
+	gun_power = 100
+	fire_range = 1.0
 	evasion = 0
 }
