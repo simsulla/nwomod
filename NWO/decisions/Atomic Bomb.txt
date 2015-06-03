@@ -3,6 +3,7 @@ political_decisions = {
         non_proliferation_treaty = {
 				picture = "non_proliferation_treaty"
                 potential = {
+					has_global_flag = initial_atomb_bomb_setup
 					year = 1968
 					NOT = { has_country_modifier = non_proliferation_treaty }
 					NOT = { OR = { is_greater_power = yes is_secondary_power = yes } }
@@ -150,7 +151,7 @@ political_decisions = {
                 effect = {
 					add_country_modifier = {
                         name = nuclear_weapon_power
-						duration = 5475
+						duration = -1
 	                }
                 }
         }

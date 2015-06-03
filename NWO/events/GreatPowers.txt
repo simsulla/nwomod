@@ -1031,7 +1031,6 @@ country_event = {
 	}
 
 	option = {
-		set_global_flag = initial_atomb_bomb_setup
 		name = "EVTOPTA19379"
 		USA = {
 			set_country_flag = has_the_atomic_bomb
@@ -1056,6 +1055,7 @@ country_event = {
             }
 		}
 		any_country = { set_country_flag = recognized_government }
+		set_global_flag = initial_atomb_bomb_setup
 	}
 }
 
@@ -1078,13 +1078,11 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19379"
-		set_global_flag = initial_atomb_bomb_setup
 		any_greater_power = {
 			limit = {
 				OR = { 
 					tag = USA
 					tag = RUS
-					tag = CHI
 					tag = ENG
 					tag = FRA
 				}
@@ -1093,7 +1091,15 @@ country_event = {
 			set_country_flag = develop_atomic_bomb
 			add_country_modifier = {
 				name = nuclear_weapon_power
-				duration = 5475
+				duration = -1
+            }
+		}
+		CHI = {
+			set_country_flag = has_the_atomic_bomb
+			set_country_flag = develop_atomic_bomb
+			add_country_modifier = {
+				name = nuclear_weapon_power
+				duration = -1
             }
 		}
 		any_country = {
@@ -1112,6 +1118,7 @@ country_event = {
             }
 		}
 		any_country = { set_country_flag = recognized_government }
+		set_global_flag = initial_atomb_bomb_setup
 	}
 }
 
