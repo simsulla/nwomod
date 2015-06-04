@@ -18,14 +18,8 @@ political_decisions = {
 		}
 		allow = {
 			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
-			OR = {
-				government = democracy
-				government = hms_government
+				ruling_party_ideology = islamist
+				ruling_party_ideology = populist
 			}
 			bank_for_international_settlements = 1
 			election = no
@@ -53,18 +47,17 @@ political_decisions = {
 		picture = "xum_parlament"
 		potential = {
 			has_country_flag = xum_ambition
-			NOT = {
-				OR = {
-					government = democracy
-					government = hms_government
-				}
+			OR = { 
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xum_ambition } } }
+				NOT = { OR = { government = democracy government = hms_government } }
+				has_country_modifier = in_bankrupcy
 			}
 		}
 		allow = {
 			OR = {
 				ruling_party_ideology = communist
-				ruling_party_ideology = populist
-				ruling_party_ideology = islamist
+				has_country_modifier = in_bankrupcy
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xum_ambition } } }
 			}
 			war = no
 		}

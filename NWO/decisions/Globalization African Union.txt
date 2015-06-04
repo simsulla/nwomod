@@ -45,18 +45,20 @@ political_decisions = {
 		picture = "xau_parlament"
 		potential = {
 			capital_scope = { has_province_modifier = single_market }
-			NOT = {
-				OR = {
-					government = democracy
-					government = hms_government
-				}
+			has_country_flag = xau_ambition
+			OR = { 
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xau_ambition } } }
+				NOT = { OR = { government = democracy government = hms_government } }
+				has_country_modifier = in_bankrupcy
 			}
 		}
 		allow = {
-			has_country_modifier = in_bankrupcy
 			OR = {
 				ruling_party_ideology = populist
+				ruling_party_ideology = communist
 				ruling_party_ideology = islamist
+				has_country_modifier = in_bankrupcy
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xau_ambition } } }
 			}
 			war = no
 		}

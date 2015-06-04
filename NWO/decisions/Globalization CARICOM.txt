@@ -48,11 +48,10 @@ political_decisions = {
 		picture = "xcc_parlament"
 		potential = {
 			has_country_flag = xcc_ambition
-			NOT = {
-				OR = {
-					government = democracy
-					government = hms_government
-				}
+			OR = { 
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xcc_ambition } } }
+				NOT = { OR = { government = democracy government = hms_government } }
+				has_country_modifier = in_bankrupcy
 			}
 		}
 		allow = {
@@ -60,6 +59,8 @@ political_decisions = {
 				ruling_party_ideology = communist
 				ruling_party_ideology = populist
 				ruling_party_ideology = islamist
+				has_country_modifier = in_bankrupcy
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xcc_ambition } } }
 			}
 			war = no
 		}
