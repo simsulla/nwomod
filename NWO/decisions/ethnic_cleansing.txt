@@ -6,12 +6,14 @@ political_decisions = {
 			potential = {
 				government = populist_dictatorship
 				NOT = { has_country_flag = ethnic_cleansing }
+				OR = { NOT = { tag = RWA } year = 1996 }
 			}
 
 			allow = {
-				OR = { NOT = { tag = RWA } year = 1996 }
+				OR = { ai = no AND = { jingoism = 24 wars_of_national_liberation = 1 } }
 				NOT = { badboy = 1 }
 				war = no
+				
 			}
 
 			effect = {
