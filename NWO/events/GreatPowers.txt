@@ -533,13 +533,14 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 1
+		days = 5 
 	}
 
 	option = {
 		name = "EVTOPTA19355"
 		great_wars_enabled = yes
 		set_global_flag = great_wars_enabled
+		set_global_flag = NWO_0_9_4
 		any_country = { 
 			limit = { 
 				government = proletarian_dictatorship
@@ -560,12 +561,6 @@ country_event = {
 		}
 		
 		ENG = { relation = { who = THIS value = 200 } }
-		# need to put this somewere
-		enable_canal = 1
-		enable_canal = 2
-		enable_canal = 3
-		enable_canal = 4	
-
 	}
 }
 
