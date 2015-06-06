@@ -1,6 +1,67 @@
 political_decisions = {
-	### MAM REMOVED ###
-	#build_kiel_canal = {}
-	#build_suez_canal = {}
-	#build_panama_canal = {}	
+	build_kiel_canal = {
+		potential = {
+			NOT = { is_canal_enabled = 1 }
+			owns = 369
+			is_greater_power = yes
+		}
+		allow = {
+		}
+		effect = {
+			enable_canal = 1
+			369 = { set_province_flag = kiel_canal }
+			prestige = 5
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+	
+	build_suez_canal = {
+		picture = suezcanal
+		potential = {
+			NOT = { is_canal_enabled = 2 }
+			owns = 1755
+		}
+		allow = {
+		}
+		effect = {
+			enable_canal = 2
+			prestige = 10
+			set_global_flag = suez_canal_built
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+
+	build_panama_canal = {
+		potential = {
+			NOT = { is_canal_enabled = 3 }
+			is_greater_power = yes
+			owns = 1723
+		}
+		allow = {
+		}
+		effect = {
+			enable_canal = 3
+			1723 = { set_province_flag = panama_canal }
+			prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}	
 }
