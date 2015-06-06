@@ -6,6 +6,7 @@ political_decisions = {
 	xsu_ambition = {
 		picture = "xsu_ambition"
 		potential = {
+			OR = { XMS = { exists = yes } XAC = { exists = yes } }
 			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			NOT = { has_country_flag = xsu_ambition has_country_flag = in_trade_block tag = XSU }
 		}
@@ -87,6 +88,7 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
+			has_country_flag = xsu_ambition
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -115,6 +117,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
+			has_country_flag = xsu_ambition
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -149,6 +152,7 @@ political_decisions = {
 		picture = "xsu_ambition"
 		potential = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
+			has_country_flag = xsu_ambition
 			NOT = { capital_scope = { is_core = XSU } }
 			OR = {
 				ruling_party_ideology = socialist
@@ -182,6 +186,7 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
+			has_country_flag = xsu_ambition
 			is_vassal = no
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 		}

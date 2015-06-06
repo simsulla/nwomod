@@ -6,6 +6,8 @@ political_decisions = {
 	xau_ambition = {
 		picture = "xau_ambition"
 		potential = {
+			OR = { tag = ETH tag = SUD tag = EGY tag = ERI tag = SOM tag = DJI XEC = { exists = yes } 
+				XEW = { exists = yes } XSA = { exists = yes } XMU = { exists = yes } XEF = { exists = yes } } 
 			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			NOT = { has_country_flag = xau_ambition has_country_flag = in_trade_block tag = XAU }
 		}
@@ -87,6 +89,7 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
+			has_country_flag = xau_ambition
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -115,6 +118,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
+			has_country_flag = xau_ambition
 			OR = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -149,6 +153,7 @@ political_decisions = {
 		picture = "xau_ambition"
 		potential = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
+			has_country_flag = xau_ambition
 			NOT = { capital_scope = { is_core = XAU } }
 			OR = {
 				ruling_party_ideology = socialist
