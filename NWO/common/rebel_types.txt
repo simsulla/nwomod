@@ -82,7 +82,7 @@ islamist_rebels = {
 		
 		modifier = {
 			factor = 0
-			NOT = { pop_majority_religion = sunni }
+			country = { NOT = { pop_majority_religion = sunni } }
 		}		
 		modifier = {
 			factor = 0.01
@@ -245,7 +245,7 @@ populist_rebels = {
 	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
 	will_rise = 
 	{
-		factor = 0.5
+		factor = 1.0
 		
 		modifier = {
 			war = yes
@@ -257,12 +257,12 @@ populist_rebels = {
 			factor = 0.95
 		}
 		
-		modifier = {
-			factor = 0.5
-			country = {
-				has_unclaimed_cores = yes
-			}
-		}
+		#modifier = {
+		#	factor = 0.5
+		#	country = {
+		#		has_unclaimed_cores = yes
+		#	}
+		#}
 		
 		modifier = {
 			war_exhaustion = 6
@@ -294,11 +294,7 @@ populist_rebels = {
 		}
 		modifier = {
 			factor = 0.01
-			NOT = {
-				OR = {
-					pop_majority_ideology = populist
-				}
-			}
+			NOT = { pop_majority_ideology = populist }
 		}
 		modifier = {
 			factor = 1.5
@@ -836,10 +832,14 @@ separatist_rebels = {
 	}
 	demands_enforced_effect = {
 		release_vassal = REB
-		modify_relation = {
-			tag = REB
-			relation = -150
+		relation = {
+			who = REB
+			value = -150
 		}
+		#modify_relation = {
+		#	tag = REB
+		#	relation = -150
+		#}
 	}
 }
 
@@ -907,18 +907,18 @@ liberal_rebels = {
 			war_exhaustion = 8
 			factor = 0.95
 		}
-		modifier = {
-			factor = 0.4
-			country = {
-				has_country_modifier = springtime_of_nations
-			}
-		}
-		modifier = {
-			factor = 1.5
-			country = {
-				has_country_modifier = global_liberal_agitation
-			}
-		}
+		#modifier = {
+		#	factor = 0.4
+		#	country = {
+		#		has_country_modifier = springtime_of_nations
+		#	}
+		#}
+		#modifier = {
+		#	factor = 1.5
+		#	country = {
+		#		has_country_modifier = global_liberal_agitation
+		#	}
+		#}
 	}
 	
 	# The rebel type with the highest modifier for this pop gets picked
