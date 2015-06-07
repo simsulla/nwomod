@@ -69,8 +69,8 @@ gunboat = {
 	crisis = no
 	
 	can_use = {
-		OR =
-		{
+		THIS = { part_of_sphere = no }
+		OR = {
 			has_country_modifier = in_bankrupcy
 			has_country_modifier = generalised_debt_default
 		}
@@ -149,19 +149,17 @@ conquest = {
 	crisis = no
 	
 	can_use = {
-		NOT = { is_our_vassal = THIS }
+		THIS = { part_of_sphere = no }
 		NOT = { number_of_states = 2 }
 		is_independant = yes
-                NOT = { is_our_vassal = THIS }
-                is_vassal = no
-                NOT = { relation = { who = THIS value = -50 } }
-                OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        war_with = THIS
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
+		NOT = { relation = { who = THIS value = -50 } }
+		OR = {
+			THIS = { government = populist_dictatorship }
+			THIS = { government = islamist_dictatorship }
+			war_with = THIS
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
+		}
 	}
 
 	badboy_factor = 2.2
@@ -215,21 +213,11 @@ add_to_sphere = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		NOT = { is_our_vassal = THIS }
 		THIS = { is_greater_power = yes }
 		is_greater_power = no
 		is_independant = yes
 		part_of_sphere = no
-                NOT = { is_our_vassal = THIS }
-                is_vassal = no
-                NOT = { relation = { who = THIS value = -50 } }
-                OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        war_with = THIS
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
+		NOT = { relation = { who = THIS value = 0 } }
 	}
 	
 	is_valid = {
@@ -270,19 +258,14 @@ take_from_sphere = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		NOT = { is_our_vassal = THIS }
 		THIS = { is_greater_power = yes }
 		is_greater_power = yes
-                NOT = { is_our_vassal = THIS }
-                is_vassal = no
-                NOT = { relation = { who = THIS value = -50 } }
-                OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        war_with = THIS
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
+		OR = {
+			NOT = { relation = { who = THIS value = -100 } }
+			war_with = THIS
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
+		}
 	}
 
 	
@@ -337,16 +320,14 @@ acquire_core_state = {
 		any_owned_province = {
 			is_core = THIS
 		}
-                NOT = { is_our_vassal = THIS }
-                is_vassal = no
-                NOT = { relation = { who = THIS value = -50 } }
-                OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        war_with = THIS
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
+		NOT = { is_our_vassal = THIS }
+		is_vassal = no
+		OR = {
+			NOT = { relation = { who = THIS value = -50 } }
+			war_with = THIS
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
+		}
 	}
 	
 	allowed_states = {
@@ -404,13 +385,11 @@ annex_core_country = {
 		}
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
-		NOT = { relation = { who = THIS value = -50 } }
 		OR = {
-				THIS = { government = populist_dictatorship }
-				THIS = { government = islamist_dictatorship }
-				war_with = THIS
-				FROM = { involved_in_crisis = yes }
-				THIS = { ai = no }
+			NOT = { relation = { who = THIS value = -50 } }
+			war_with = THIS
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
 		}
 	}
 
@@ -449,21 +428,18 @@ acquire_state = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
+		THIS = { part_of_sphere = no }
 		number_of_states = 2 # annex if you want their last state
 		any_owned_province = {
 			NOT = { is_core = THIS }
 		}
 		is_independant = yes
 		part_of_sphere = no
-        NOT = { is_our_vassal = THIS }
-        is_vassal = no
-		NOT = { relation = { who = THIS value = -50 } }
+		NOT = { relation = { who = THIS value = -100 } }
 		OR = {
-				THIS = { government = populist_dictatorship }
-				THIS = { government = islamist_dictatorship }
-				war_with = THIS
-				FROM = { involved_in_crisis = yes }
-				THIS = { ai = no }
+			THIS = { government = populist_dictatorship }
+			THIS = { government = islamist_dictatorship }
+			THIS = { ai = no }
 		}
 	}
 	
@@ -522,19 +498,15 @@ cut_down_to_size = {
 	war_name = WAR_NAME
 	
 	can_use = {
+		THIS = { part_of_sphere = no }
 		is_disarmed = no
+		is_independant = yes
 		part_of_sphere = no
-        NOT = { is_our_vassal = THIS }
-        is_vassal = no
 		OR = {
-				THIS = { government = populist_dictatorship }
-				THIS = { government = nationalist_dictatorship }
-				THIS = { government = islamist_dictatorship }
-				THIS = { government = proletarian_dictatorship }
-				war_with = THIS
-				NOT = { relation = { who = THIS value = -50 } }
-				FROM = { involved_in_crisis = yes }
-				THIS = { ai = no }
+			war_with = THIS
+			NOT = { relation = { who = THIS value = -50 } }
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
 		}
 	}
 	
@@ -569,20 +541,13 @@ free_peoples = {
 	
 	
 	can_use = {
-		NOT = { is_our_vassal = THIS }
-                NOT = { is_our_vassal = THIS }
-                is_vassal = no
-                OR = {
-                        NOT = { relation = { who = THIS value = -50 } }
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
-                OR = {
-                        war_with = THIS
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        THIS = { ai = no }
-                }
+		THIS = { part_of_sphere = no }
+		is_independant = yes
+		OR = {
+			NOT = { relation = { who = THIS value = -50 } }
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
+		}
 	}
 
 	# THIS - us
@@ -654,19 +619,14 @@ liberate_country = {
 	
 	
 	can_use = {
+		THIS = { part_of_sphere = no }
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
-                OR = {
-                        NOT = { relation = { who = THIS value = -50 } }
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
-                OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        THIS = { ai = no }
-                        war_with = THIS
-                }
+		OR = {
+			NOT = { relation = { who = THIS value = -50 } }
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
+		}
 	}
 
 	# THIS - us
@@ -738,17 +698,13 @@ release_puppet = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		num_of_vassals_no_substates = 1
-                is_vassal = no
-                OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = nationalist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        THIS = { government = proletarian_dictatorship }
-                        war_with = THIS
-                        NOT = { relation = { who = THIS value = -50 } }
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
+		is_vassal = no
+		OR = {
+			war_with = THIS
+			NOT = { relation = { who = THIS value = -50 } }
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
+		}
 	}
 	
 	# THIS - us
@@ -795,20 +751,22 @@ make_puppet = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
+		THIS = { part_of_sphere = no }
 		NOT = { is_our_vassal = THIS }
 		NOT = { number_of_states = 4 }
+		part_of_sphere = no
 		is_greater_power = no
 		is_vassal = no
-                OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = nationalist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        THIS = { government = proletarian_dictatorship }
-                        war_with = THIS
-                        NOT = { relation = { who = THIS value = -50 } }
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
+		OR = {
+			THIS = { government = populist_dictatorship }
+			THIS = { government = nationalist_dictatorship }
+			THIS = { government = islamist_dictatorship }
+			THIS = { government = proletarian_dictatorship }
+			war_with = THIS
+			NOT = { relation = { who = THIS value = -100 } }
+			FROM = { involved_in_crisis = yes }
+			THIS = { ai = no }
+		}
 	}
 	
 	# THIS - us
@@ -919,18 +877,11 @@ humiliate = {
 
 	can_use = {
 		NOT = { is_our_vassal = THIS }
+		is_vassal = no
+		part_of_sphere = no
 		has_recently_lost_war = no
-               OR = {
-                        THIS = { government = populist_dictatorship }
-                        THIS = { government = nationalist_dictatorship }
-                        THIS = { government = islamist_dictatorship }
-                        THIS = { government = proletarian_dictatorship }
-                        war_with = THIS
-                        NOT = { relation = { who = THIS value = -50 } }
-                        FROM = { involved_in_crisis = yes }
-                        THIS = { ai = no }
-                }
-	}	
+		NOT = { relation = { who = THIS value = -50 } }
+ 	}	
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
@@ -1208,6 +1159,8 @@ install_communist_gov_cb = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
+		is_vassal = no
+		part_of_sphere = no
 		THIS = {
 			# If actor is a great power
 			is_greater_power = yes
