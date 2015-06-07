@@ -8,6 +8,7 @@ political_decisions = {
 		potential = {
 			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
 			NOT = { has_country_flag = xeu_ambition has_country_flag = in_trade_block tag = XEU }
+			NOT = { has_country_modifier = in_bankrupcy } 
 		}
 		allow = {
 			OR = {

@@ -8,6 +8,7 @@ political_decisions = {
 		potential = {
 			has_country_flag = trade_block_ambition OR = { tag = CAN tag = USA tag = MEX }
 			NOT = { has_country_flag = xna_ambition has_country_flag = in_trade_block tag = XNA }
+			NOT = { has_country_modifier = in_bankrupcy } 
 		}
 		allow = {
 			OR = {

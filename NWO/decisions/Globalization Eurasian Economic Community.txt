@@ -8,6 +8,7 @@ political_decisions = {
 		potential = {
 			has_country_flag = trade_block_ambition OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = TRK tag = AZB tag = UZB }
 			NOT = { has_country_flag = xea_ambition has_country_flag = in_trade_block tag = XEA }
+			NOT = { has_country_modifier = in_bankrupcy } 
 		}
 		allow = {
 			OR = {

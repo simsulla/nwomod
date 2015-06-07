@@ -9,6 +9,7 @@ political_decisions = {
 			OR = { XMS = { exists = yes } XAC = { exists = yes } }
 			has_country_flag = trade_block_ambition capital_scope = { continent = south_america }
 			NOT = { has_country_flag = xsu_ambition has_country_flag = in_trade_block tag = XSU }
+			NOT = { has_country_modifier = in_bankrupcy } 
 		}
 		allow = {
 			OR = {

@@ -8,6 +8,7 @@ political_decisions = {
 		potential = {
 			has_country_flag = trade_block_ambition OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			NOT = { has_country_flag = xec_ambition has_country_flag = in_trade_block tag = XEC }
+			NOT = { has_country_modifier = in_bankrupcy } 
 		}
 		allow = {
 			OR = {
