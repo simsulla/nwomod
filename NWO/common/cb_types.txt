@@ -40,7 +40,8 @@
 # Order that CBs are executed in a peace treaty
 peace_order = { 
 acquire_core_state 
-acquire_state 
+annex_core_country
+free_allied_cores
 install_democracy
 add_to_sphere 
 take_from_sphere 
@@ -51,7 +52,7 @@ liberate_country
 install_sectarian_regime
 install_communist_gov_cb
 uninstall_communist_gov_cb
-annex_core_country
+acquire_state 
 conquest 
 cut_down_to_size 
 release_puppet
@@ -314,19 +315,11 @@ acquire_core_state = {
 	good_relation_infamy_factor = 1
 	good_relation_militancy_factor = 1
 
-	can_use = { 
+	can_use = {
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2 # annex if you want their last state
 		any_owned_province = {
 			is_core = THIS
-		}
-		NOT = { is_our_vassal = THIS }
-		is_vassal = no
-		OR = {
-			NOT = { relation = { who = THIS value = -50 } }
-			war_with = THIS
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
 		}
 	}
 	
@@ -373,6 +366,7 @@ annex_core_country = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
+		NOT = { is_our_vassal = THIS }
 		any_owned_province = {
 			is_core = THIS
 		}
@@ -382,14 +376,6 @@ annex_core_country = {
 					is_core = THIS
 				}
 			}
-		}
-		NOT = { is_our_vassal = THIS }
-		is_vassal = no
-		OR = {
-			NOT = { relation = { who = THIS value = -50 } }
-			war_with = THIS
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
 		}
 	}
 
@@ -434,7 +420,6 @@ acquire_state = {
 			NOT = { is_core = THIS }
 		}
 		is_independant = yes
-		part_of_sphere = no
 		NOT = { relation = { who = THIS value = -100 } }
 		OR = {
 			THIS = { government = populist_dictatorship }
@@ -501,7 +486,6 @@ cut_down_to_size = {
 		THIS = { part_of_sphere = no }
 		is_disarmed = no
 		is_independant = yes
-		part_of_sphere = no
 		OR = {
 			war_with = THIS
 			NOT = { relation = { who = THIS value = -50 } }
@@ -516,6 +500,90 @@ cut_down_to_size = {
 			to = pro_military
 			value = 0.25
 		}
+	}
+}
+
+free_allied_cores = {
+	sprite_index = 9
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.75
+
+	badboy_factor = 1.0
+	prestige_factor = 2
+	peace_cost_factor = 0.8
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		is_vassal = no
+		number_of_states = 2
+		OR = {
+			war_with = THIS
+			NOT = { relation = { who = THIS value = 0 } }
+			THIS = { ai = no }
+		}
+	}
+
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		any_owned_province = { is_core = FROM }
+		NOT = {
+			tag = FROM
+			is_our_vassal = FROM
+		}
+		OR = {
+			NOT = { alliance_with = FROM }
+			war_with = THIS
+		}
+		OR = {
+			FROM = { alliance_with = THIS }
+			war_with = THIS
+		}
+		FROM = {
+			exists = yes
+			in_sphere = THIS
+			NOT = {
+				any_core = { owned_by = THIS }
+			}
+		}
+	}
+
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal's state
+	allowed_states = {
+		#NOT = { any_owned_province = { is_capital = yes } }
+		NOT = { any_owned_province = { is_core = THIS } }
+		any_owned_province = { is_core = FROM }
+	}
+
+	po_transfer_provinces = yes
+
+	war_name = WAR_FREE_ALLIED_CORE_NAME
+
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		country_event =	2651	# Territorial Loss event
 	}
 }
 
