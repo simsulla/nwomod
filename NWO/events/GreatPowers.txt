@@ -1077,11 +1077,18 @@ country_event = {
 			limit = {
 				OR = { 
 					tag = USA
-					tag = RUS
 					tag = ENG
 					tag = FRA
 				}
 			}
+			set_country_flag = has_the_atomic_bomb
+			set_country_flag = develop_atomic_bomb
+			add_country_modifier = {
+				name = nuclear_weapon_power
+				duration = -1
+            }
+		}
+		RUS = {
 			set_country_flag = has_the_atomic_bomb
 			set_country_flag = develop_atomic_bomb
 			add_country_modifier = {
