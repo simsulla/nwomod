@@ -1,33 +1,35 @@
-province_event = {
+country_event = {
 	id = 15500
 	title = "EVTNAME15500" # demand_autonomy
 	desc = "EVTDESC15500"
 	picture = "demand_autonomy"
 	
 	trigger = {
-		is_primary_culture = no
-		is_accepted_culture = no
-		controlled_by = owner
-		OR = {
-			owner = { has_country_modifier = sectarian_divide }
-			minorities_reform = minorities_promotive
+		any_owned_province = { 
+			is_primary_culture = no
+			is_accepted_culture = no
+			controlled_by = owner
+			OR = {
+				owner = { has_country_modifier = sectarian_divide }
+				minorities_reform = minorities_promotive
+			}
+			has_national_minority = yes
+			any_core = { NOT = { tag = THIS } }
 		}
-		has_national_minority = yes
-		any_core = { NOT = { tag = THIS } }
 	}
 	
 	mean_time_to_happen = {
 		months = 240
 		modifier = {
-			factor = 0.1
-			any_neighbor_province = {
+			factor = 0.5
+			any_owned_province = {
 				has_province_modifier = promised_autonomy
 			}
 		}
 		modifier = {
-			factor = 0.5
-			state_scope = {
-				flashpoint_tension  = 20
+			factor = 0.8
+			any_owned_province = {
+				state_scope = { flashpoint_tension  = 20 }
 			}
 		}
 		# a dominating primary culture makes us more likely to request autonomy
@@ -38,10 +40,10 @@ province_event = {
 			}
 		}
 		# a dominating majority primary culture makes us even more likely to request autonomy
-		modifier = {
-			factor = 0.5
-			is_primary_culture = no
-		}
+		#modifier = {
+		#	factor = 0.5
+		#	is_primary_culture = no
+		#}
 		modifier = {
 			factor = 0.9
 			average_militancy = 5
@@ -61,42 +63,56 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			NOT = {
-				owner = {
-					age_of_protests = 1
-				}
-			}
+			NOT = { age_of_protests = 1 }
 		}
 		modifier = {
 			factor = 4
-			NOT = {
-				owner = {
-					minorities_reform = minorities_promotive
-				}
-			}
+			NOT = { minorities_reform = minorities_promotive }
 		}
 	}
 	
 	option = {
 		name = "EVTOPTA15500"		#Deny Autonomy
-		state_scope = {
+		any_owned = { 
+			limit = {
+				is_primary_culture = no
+				is_accepted_culture = no
+				controlled_by = owner
+				OR = {
+					owner = { has_country_modifier = sectarian_divide }
+					minorities_reform = minorities_promotive
+				}
+				has_national_minority = yes
+				any_core = { NOT = { tag = THIS } }
+			}
 			any_pop = {
 				militancy = 5
 				consciousness = 5
 			}
 		}
-		owner = { add_country_modifier = { name = denied_independence duration = 1080 } }
+		add_country_modifier = { name = denied_independence duration = 1080 }
 		ai_chance = { factor = 1 modifier = { minorities_reform = minorities_promotive factor = 0 } }
 	}
 	option = {
 		name = "EVTOPTB15500"		# Promised autonomy
-		state_scope = {
+		any_owned = { 
+			limit = {
+				is_primary_culture = no
+				is_accepted_culture = no
+				controlled_by = owner
+				OR = {
+					owner = { has_country_modifier = sectarian_divide }
+					minorities_reform = minorities_promotive
+				}
+				has_national_minority = yes
+				any_core = { NOT = { tag = THIS } }
+			}
 			any_pop = {
 				militancy = -2
 				consciousness = 2
 			}
+			add_province_modifier = { name = promised_autonomy duration = 1800 }
 		}
-		add_province_modifier = { name = promised_autonomy duration = 1800 }
 		ai_chance = { factor = 1 modifier = { NOT = { minorities_reform = minorities_promotive } factor = 0  } }
 	}
 }
