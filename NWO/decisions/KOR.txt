@@ -1,17 +1,19 @@
 political_decisions = {
 
-	form_korea = {
+	allow_form_korea = {
 		picture = "claim_greater_korea"
 		potential = {
 			OR = {
-				tag = SKO
-				tag = NKO
+				is_sphere_leader_of = SKO
+				is_sphere_leader_of = NKO
 			}
 			NOT = { exists = KOR }
-			NOT = { has_global_flag = form_korea }
+			NOT = { has_country_flag = allow_form_korea }
 		}
 		allow = {
+			war = no
 			NKO = {
+				NOT = { is_vassal = yes NOT = { vassal_of = THIS } }
 				all_core = {
 					owner = {
 						OR = {
@@ -22,6 +24,55 @@ political_decisions = {
 					}
 				}
 			}		
+			SKO = {
+				NOT = { is_vassal = yes NOT = { vassal_of = THIS } }
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = allow_form_korea
+			prestige = 20
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_korea = {
+		picture = "claim_greater_korea"
+		potential = {
+			OR = {
+				sphere_owner = { has_country_flag = allow_form_korea }
+				tag = SKO
+				tag = NKO
+			}
+			NOT = { exists = KOR }
+			NOT = { has_global_flag = form_korea }
+		}
+		allow = {
+			war = no
+			OR = { 
+				sphere_owner = { has_country_flag = allow_form_korea }
+				NKO = {
+					all_core = {
+						owner = {
+							OR = {
+								tag = THIS
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}		
+			}
 			SKO = {
 				all_core = {
 					owner = {
