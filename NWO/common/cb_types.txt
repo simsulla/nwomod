@@ -327,6 +327,10 @@ acquire_core_state = {
 		any_owned_province = {
 			is_core = THIS
 		}
+		OR = {
+			NOT = { relation = { who = THIS value = 0 } }
+			THIS = { ai = no }
+		}		
 		not = { any_owned_province = { is_capital = yes } }
 	}
 
