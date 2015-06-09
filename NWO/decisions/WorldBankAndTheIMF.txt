@@ -7,7 +7,7 @@ political_decisions = {
 		potential = {
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			NOT = { has_country_modifier = special_drawing_rights }
-			NOT = { has_country_flag = the_imf has_country_flag = world_bank has_country_flag = dev_bank  capital_scope = { trade_goods = credit } }
+			NOT = { AND = { has_country_flag = world_bank OR = { has_country_flag = the_imf  has_country_flag = dev_bank } } }
 			year = 1968
 		}
 		allow = {
