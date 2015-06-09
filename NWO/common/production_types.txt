@@ -913,12 +913,12 @@ jewellery_factory = {
 	template = modern_factory_template
 	input_goods = {    
 		optics = 3
-		precious_metals = 18	
+		gold_silver = 18	
 	}
 	output_goods = jewellery 
 	value = 9
 	bonus = {
-		trigger = { trade_goods_in_state = precious_metals }
+		trigger = { trade_goods_in_state = gold_silver }
 		value = 0.125
 	}
 	bonus = {
@@ -1307,7 +1307,7 @@ rubber_lodge = {
 
 precious_metal_mine = {
 	template = RGO_template_labourers
-	output_goods = precious_metals
+	output_goods = gold_silver
 	value = 2.0
 	mine = yes
 }
