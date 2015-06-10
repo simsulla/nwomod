@@ -352,7 +352,7 @@ political_decisions = {
 					OR = { has_unclaimed_cores = no tag = RUS }
 					OR = { in_sphere = RUS tag = RUS }
 					OR = { tag = RUS  relation = { who = RUS value = 50 } }
-					RUS = {  capital_scope = { has_province_modifier = csto_alliance } }
+					OR = { tag = RUS RUS = {  capital_scope = { has_province_modifier = csto_alliance } } }
 					NOT = { government = proletarian_dictatorship }
                 }
 
