@@ -272,4 +272,32 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	end_of_money = {
+		picture = "end_of_money"
+		potential = {
+			NOT = { has_global_flag = end_of_money }
+			OR = { 
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		allow = {
+			end_of_money = 1
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		effect = {
+			set_global_flag = end_of_money
+			any_country = { 
+				limit = { 
+					capital_scope = { trade_goods = credit }
+				}
+				country_event = 15602 
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
