@@ -87,6 +87,7 @@ political_decisions = {
 	xtc_single_market= {
 		picture = "single_market"
 		potential = {
+			has_country_flag = xtc_ambition
 			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
 			NOT = { capital_scope = { has_province_modifier = single_market } }
 		}
@@ -109,6 +110,7 @@ political_decisions = {
 	xtc_currency_union = {
 		picture = "currency_union"
 		potential = {
+			has_country_flag = xtc_ambition
 			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
 			NOT = { has_country_modifier = currency_union }
 		}
@@ -137,6 +139,7 @@ political_decisions = {
 	xtc_political_union = {
 		picture = "xtc_ambition"
 		potential = {
+			has_country_flag = xtc_ambition
 			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
 			NOT = { capital_scope = { is_core = XTC } }
 		}
@@ -164,6 +167,7 @@ political_decisions = {
 	xtc_defence_union = {
 		picture = "defence_union"
 		potential = {
+			has_country_flag = xtc_ambition
 			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
 			is_vassal = no
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -193,6 +197,7 @@ political_decisions = {
 	xtc_form_union = {
 		picture = "xtc_parlament"
 		potential = {
+			has_country_flag = xtc_ambition
 			has_country_flag = trade_block_ambition OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
 			has_country_flag = xtc_ambition
 			XTC = { exists = no }
@@ -243,6 +248,7 @@ political_decisions = {
 	xtc_enlarge_union = {
 		picture = "xtc_ambition"
 		potential = {
+			has_country_flag = xtc_ambition
 			has_country_flag = trade_block_ambition
 			has_country_flag = xtc_ambition
 			tag = XTC

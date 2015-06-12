@@ -7,7 +7,7 @@ political_decisions = {
 		picture = "xeu_ambition"
 		potential = {
 			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
-			NOT = { has_country_flag = xeu_ambition has_country_flag = in_trade_block tag = XEU }
+			NOT = { has_country_flag = xeu_ambition } NOT = { has_country_flag = in_trade_block } NOT = { tag = XEU }
 			NOT = { has_country_modifier = in_bankrupcy } 
 		}
 		allow = {
@@ -87,6 +87,7 @@ political_decisions = {
 	xeu_single_market= {
 		picture = "single_market"
 		potential = {
+			has_country_flag = xeu_ambition
 			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
 			OR = {
 				ruling_party_ideology = socialist
@@ -115,6 +116,7 @@ political_decisions = {
 	xeu_currency_union = {
 		picture = "currency_union"
 		potential = {
+			has_country_flag = xeu_ambition
 			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
 			OR = {
 				ruling_party_ideology = socialist
@@ -149,6 +151,7 @@ political_decisions = {
 	xeu_political_union = {
 		picture = "xeu_ambition"
 		potential = {
+			has_country_flag = xeu_ambition
 			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
 			NOT = { capital_scope = { is_core = XEU } }
 			OR = {
@@ -183,6 +186,7 @@ political_decisions = {
 	xeu_defence_union = {
 		picture = "defence_union"
 		potential = {
+			has_country_flag = xeu_ambition
 			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
 			is_vassal = no
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
