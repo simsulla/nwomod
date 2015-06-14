@@ -844,15 +844,16 @@ assimilation_chance =
 		has_pop_religion = jewish
 	}
 	modifier = {
-		factor = -1
+		factor = -10
 		has_pop_religion = mennonite
 	}
 	modifier = {
+		factor = 1
+		strata = middle
+	}
+	modifier = {
 		factor = 5
-		OR = { 
-			strata = rich
-			strata = middle
-		}
+		strata = rich
 	}
 	modifier = {
 		factor = -10
@@ -865,21 +866,17 @@ assimilation_chance =
 		is_primary_culture = no
 	}
 	modifier = {
-		factor = 2
+		factor = 1
 		country = { citizenship_policy = limited_citizenship }
 		is_accepted_culture = yes
 	}
 	modifier = {
-		factor = 5
+		factor = 2
 		country = { citizenship_policy = full_citizenship }
 	}
 	modifier = {
 		factor = 3
-		country = { religious_policy = pro_atheism }
-	}
-	modifier = {
-		factor = 2
-		country = { religious_policy = secularized }
+		has_pop_religion = irreligion
 	}
 	modifier = {
     	factor = -100
