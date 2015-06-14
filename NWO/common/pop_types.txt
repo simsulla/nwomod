@@ -558,7 +558,7 @@ colonialmigration_chance = {
 #general emigration chance
 emigration_chance = 
 {
-	factor = 0.02
+	factor = 0.04
 	group = {
 		modifier = {
 			factor = 0.25
@@ -592,10 +592,6 @@ emigration_chance =
 		}
 	}
 	modifier = { 
-		factor = 10
-		country = { tag = MEX }
-	}
-	modifier = { 
 		factor = 2
 		OR = { culture  = mestizo culture  = white_spanish culture  = sunni_arab culture  = somali culture  = turkish culture  = black_anglo culture  = black_french culture  = black_portuguese } 
 	}
@@ -606,25 +602,24 @@ emigration_chance =
 	}
 	# roundabout way to mod that mostly refugees emigrate
 	modifier = { 
-		factor = 0.2
-		country = { 
-			NOT = { 
-				OR = {
-					government = absolute_monarchy
-					government = hms_government
-					government = democracy
-					government = proletarian_dictatorship
-				}
+		factor = -1.8
+		country = {
+			NOT = { tag = MEX }
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = democracy
+				government = proletarian_dictatorship
 			}
 		}
-	}
+	} 
 	modifier = { 
 		factor = -0.4
 		country = { immigration_policy = nobody_gets_out }
 	}	
 	modifier = { # roundabout way to mod that only people with money can emigrate
-		factor = -1
-		NOT = { country = {  tag = MEX } }
+		factor = -0.1
+		country = {  NOT = { tag = MEX } }
 		strata = poor
 	}
 	modifier = {
