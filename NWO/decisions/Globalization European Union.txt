@@ -9,6 +9,7 @@ political_decisions = {
 			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
 			NOT = { has_country_flag = xeu_ambition } NOT = { has_country_flag = in_trade_block } NOT = { tag = XEU }
 			NOT = { has_country_modifier = in_bankrupcy } 
+			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
 		}
 		allow = {
 			OR = {

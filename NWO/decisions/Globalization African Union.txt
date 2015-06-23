@@ -11,6 +11,7 @@ political_decisions = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = africa }
 			NOT = { has_country_flag = xau_ambition has_country_flag = in_trade_block tag = XAU }
 			NOT = { has_country_modifier = in_bankrupcy } 
+			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xau_ambition } } } }
 		}
 		allow = {
 			OR = {

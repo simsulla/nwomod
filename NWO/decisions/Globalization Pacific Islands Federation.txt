@@ -7,8 +7,11 @@ political_decisions = {
 		picture = "xpi_ambition"
 		potential = {
 			has_country_flag = trade_block_ambition capital_scope = { continent = oceania }
-			NOT = { has_country_flag = xpi_ambition has_country_flag = in_trade_block tag = XPI }
+			NOT = { has_country_flag = xpi_ambition } 
+			NOT = { has_country_flag = in_trade_block }
+			NOT = { tag = XPI }
 			NOT = { has_country_modifier = in_bankrupcy } 
+			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xpi_ambition } } } }
 		}
 		allow = {
 			OR = {
