@@ -14,8 +14,8 @@ country_event = {
 			NOT = { tag = CHI }
 		}
 		OR = { 
-			AND = { tag = TAI NOT = { has_global_flag = china_united_nations_security_council } }
-			NOT = { tag = TAI }
+			AND = { tag = KMT NOT = { has_global_flag = china_united_nations_security_council } }
+			NOT = { tag = KMT }
 		}
 		war = no
 		year = 1947
@@ -42,7 +42,7 @@ country_event = {
 				THIS = { 
 					OR = { 
 						AND = { tag = CHI year = 1971 }
-						AND = { tag = TAI NOT = { year = 1971 } }
+						AND = { tag = KMT NOT = { year = 1971 } }
 						tag = ENG
 						tag = USA
 						tag = FRA
@@ -54,8 +54,8 @@ country_event = {
 				# same list as in  united_nations.txt decition
 				OR = { 
 					AND = { tag = CHI year = 1971 }
-					AND = { tag = TAI NOT = { year = 1971 } }
-					tag = TAI
+					AND = { tag = KMT NOT = { year = 1971 } }
+					tag = KMT
 					tag = ENG
 					tag = USA
 					tag = FRA

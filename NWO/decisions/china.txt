@@ -60,7 +60,7 @@ political_decisions = {
 	the_return_of_hong_kong = {
 		picture = "the_return_of_hong_kong"
 		potential = {
-			OR = { tag = CHI tag = TAI }
+			OR = { tag = CHI tag = KMT }
 			NOT = { has_country_flag = the_return_of_hong_kong }
 			OR = {
 				1496 = { owned_by = ENG } 
@@ -86,7 +86,7 @@ political_decisions = {
 		}
 
 		effect = {
-			TAI = { set_country_flag = the_return_of_hong_kong }
+			KMT = { set_country_flag = the_return_of_hong_kong }
 			CHI = { set_country_flag = the_return_of_hong_kong }
 			ENG = { country_event = 8002801 }
 		}
@@ -100,7 +100,7 @@ political_decisions = {
 	the_return_of_macao = {
 		picture = "the_return_of_macao"
 		potential = {
-			OR = { tag = CHI tag = TAI }
+			OR = { tag = CHI tag = KMT }
 			NOT = { has_country_flag = the_return_of_macao }
 			OR = { 1498 = { owned_by = POR } MCA = { vassal_of = POR } }
 			OR = {
@@ -126,7 +126,7 @@ political_decisions = {
 		}
 
 		effect = {
-			TAI = { set_country_flag = the_return_of_macao }
+			KMT = { set_country_flag = the_return_of_macao }
 			CHI = { set_country_flag = the_return_of_macao }
 			POR = { country_event = 8002802 }
 		}
@@ -140,13 +140,13 @@ political_decisions = {
 		picture = "chinese_reunification"
 		potential = {
 			OR = {
-				tag = TAI
+				tag = KMT
 				tag = CHI
 			}
 			NOT = { has_global_flag = chinese_reunification }
 		}
 		allow = {
-			TAI = {
+			KMT = {
 				all_core = {
 					owner = {
 						OR = {
@@ -169,8 +169,8 @@ political_decisions = {
 				}
 			}
 			OR = { 
-				AND = { CHI = { government = proletarian_dictatorship } TAI = { government = proletarian_dictatorship} } 
-				AND = { CHI = { government = democracy } TAI = { government = democracy} } 
+				AND = { CHI = { government = proletarian_dictatorship } KMT = { government = proletarian_dictatorship} } 
+				AND = { CHI = { government = democracy } KMT = { government = democracy} } 
 			}
 		}
 		effect = {
@@ -196,7 +196,7 @@ political_decisions = {
 	lesser_taiwan = {
 			picture = "lesser_taiwan"
 			potential = {
-					tag = TAI
+					tag = KMT
 					OR = {
 							government = democracy
 							government = hms_government
@@ -227,9 +227,9 @@ political_decisions = {
 					set_country_flag = lesser_taiwan
 					all_core = { 
 						limit = { NOT = { owned_by = THIS } }
-						remove_core = TAI
+						remove_core = KMT
 					}
-					2576 = { remove_core = TAI }
+					2576 = { remove_core = KMT }
 					relation = { who = JAP value = 50 }
 					relation = { who = IDO value = 50 }
 					relation = { who = PHI value = 50 }
