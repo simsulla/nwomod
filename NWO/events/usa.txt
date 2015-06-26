@@ -60,7 +60,11 @@ country_event = {
 		AFG = { OR = { government = islamist_dictatorship government = nationalist_dictatorship } }
 	}
 	
-	immediate = { AFG = { badboy = 35 } }
+	immediate = { 
+		AFG = { badboy = 25 } 
+		any_country = { limit = { NOT = { ruling_party_ideology = islamist } } relation = { who = AFG value = -100 } } 
+		military_access = PAK
+	}
 
 	mean_time_to_happen = {
 		months = 120
@@ -84,7 +88,6 @@ country_event = {
 		war = {
 			target = AFG
 			attacker_goal = { casus_belli = install_democracy }
-			call_ally = yes
 		}
 		prestige = 20
 		badboy = 0.5
