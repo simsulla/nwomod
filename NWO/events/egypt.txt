@@ -1,8 +1,8 @@
 #
 country_event = {
-	id = 8004901
-	title = "EVT_8004901_NAME"
-	desc = "EVT_8004901_DESC"
+	id = 1004901
+	title = "EVT_1004901_NAME"
+	desc = "EVT_1004901_DESC"
 	picture = "nasser_revolution"
 
 	fire_only_once = yes
@@ -18,7 +18,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8004901_A"
+		name = "EVT_1004901_A"
 		government = presidential_dictatorship
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
@@ -28,7 +28,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8004901_B"
+		name = "EVT_1004901_B"
 		any_pop = {
 			limit = {
 				culture = sunni_arab
@@ -41,9 +41,9 @@ country_event = {
 }
 
 country_event = {
-	id = 8004902
-	title = "EVT_8004902_NAME"
-	desc = "EVT_8004902_DESC"
+	id = 1004902
+	title = "EVT_1004902_NAME"
+	desc = "EVT_1004902_DESC"
 	picture = "sudan_independence"
 
 	fire_only_once = yes
@@ -59,13 +59,13 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8004902_A"
+		name = "EVT_1004902_A"
 		ai_chance = { factor = 100 }
-		ENG = { country_event = 8004903 }
+		ENG = { country_event = 1004903 }
 	}
 	
 	option = {
-		name = "EVT_8004902_B"
+		name = "EVT_1004902_B"
 		any_pop = {
 			limit = {
 				culture = sunni_arab
@@ -77,22 +77,22 @@ country_event = {
 }
 
 country_event = {
-	id = 8004903
+	id = 1004903
 
-	title = EVT_8004903_NAME
-	desc = EVT_8004903_DESC
+	title = EVT_1004903_NAME
+	desc = EVT_1004903_DESC
 	picture = "sudan_independence"
 
 	is_triggered_only = yes
 
 	option = {
-		name = EVT_8004903_A 
+		name = EVT_1004903_A 
 		ai_chance = { factor = 100 }
 		release = SUD
 	}
 	
 	option = {
-		name = EVT_8004903_B
+		name = EVT_1004903_B
 		ai_chance = { factor = 0 }
 		badboy = 4.0
 		any_pop = {

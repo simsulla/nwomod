@@ -1,9 +1,9 @@
 
 country_event = {
-	id = 8015801
+	id = 1015801
 
-	title = EVT_8015801_NAME
-	desc = EVT_8015801_DESC
+	title = EVT_1015801_NAME
+	desc = EVT_1015801_DESC
 	picture = "us_congress"
 
 	trigger = {
@@ -17,14 +17,14 @@ country_event = {
 	}
 
 	option = {
-		name = EVT_8015801_A 
+		name = EVT_1015801_A 
 		ai_chance = { factor = 100 }
 		release_vassal = PUR
 		prestige = 2
 	}
 	
 	option = {
-		name = EVT_8015801_B 
+		name = EVT_1015801_B 
 		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {
@@ -45,10 +45,10 @@ country_event = {
 }
 
 country_event = {
-	id = 8015802
+	id = 1015802
 
-	title = EVT_8015802_NAME
-	desc = EVT_8015802_DESC
+	title = EVT_1015802_NAME
+	desc = EVT_1015802_DESC
 	picture = "911"
 
 	fire_only_once = yes
@@ -72,7 +72,7 @@ country_event = {
 	}
 
 	option = {
-		name = EVT_8015802_A 
+		name = EVT_1015802_A 
 		ai_chance = { factor = 100 }
 		any_country = { relation = { who = AFG value = -200 } }
 		add_casus_belli = {
@@ -94,7 +94,7 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8015802_B 
+		name = EVT_1015802_B 
 		ai_chance = { factor = 0 }
 		any_country = { relation = { who = AFG value = -200 } }
 		add_casus_belli = {

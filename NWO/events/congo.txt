@@ -1,13 +1,13 @@
 country_event = {
-	id = 8003301
-	title = "EVT_8003301_NAME" # first Congo war
-	desc = "EVT_8003301_DESC"
+	id = 1003301
+	title = "EVT_1003301_NAME" # first Congo war
+	desc = "EVT_1003301_DESC"
 	picture = "congo_war" 
 	
 	is_triggered_only = yes # Rwanda supports rebels 8029501
 	
 	option = {
-		name = "EVT_8003301_A" # face the rebels
+		name = "EVT_1003301_A" # face the rebels
 		any_pop = {
 			limit = {
 				OR = { culture = tutsi culture = nyakole culture = african_minor }
@@ -19,7 +19,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8003301_B" # war with Rwanda
+		name = "EVT_1003301_B" # war with Rwanda
 		badboy = 10
 		war = { target = RWA attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = install_democracy } }
 		ai_chance = { factor = 0 }
@@ -28,9 +28,9 @@ country_event = {
 }
 
 country_event = {
-	id = 8003302
-	title = "EVT_8003302_NAME" # second Congo war
-	desc = "EVT_8003302_DESC"
+	id = 1003302
+	title = "EVT_1003302_NAME" # second Congo war
+	desc = "EVT_1003302_DESC"
 	picture = "congo_war" 
 	
 	is_triggered_only = yes # Uganda supports rebels 8027003
@@ -41,7 +41,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8003302_A" # gather an alliance
+		name = "EVT_1003302_A" # gather an alliance
 		casus_belli ={
 			target = ITU
 			type = annex_core_country
@@ -54,14 +54,14 @@ country_event = {
 		}
 		any_country = {
 			limit = { OR = { tag = NAM tag = ANG tag = ZIM } }
-			country_event = 8003303 # request alliance
+			country_event = 1003303 # request alliance
 		}
 		relation = { who = ITU value = -200 }
 		ai_chance = { factor = 100 }
 	}
 	
 	option = {
-		name = "EVT_8003302_B" # war with Ituri
+		name = "EVT_1003302_B" # war with Ituri
 		war = { target = ITU attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 		ai_chance = { factor = 0 }
 	}
@@ -69,15 +69,15 @@ country_event = {
 }
 
 country_event = {
-	id = 8003303
-	title = "EVT_8003303_NAME" # Alliance with ..
-	desc = "EVT_8003303_DESC"
+	id = 1003303
+	title = "EVT_1003303_NAME" # Alliance with ..
+	desc = "EVT_1003303_DESC"
 	picture = "congo_war" 
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVT_8003303_A" # accept
+		name = "EVT_1003303_A" # accept
 		FROM = { relation = { who = THIS value = 100 } }
 		relation = { who = ITU value = -200 }
 		create_alliance = FROM
@@ -85,7 +85,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8003303_B"
+		name = "EVT_1003303_B"
 		prestige = -5
 		ai_chance = { factor = 0 }
 	}

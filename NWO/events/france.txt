@@ -1,14 +1,14 @@
 country_event = {
-	id = 8005701
+	id = 1005701
 
-	title = EVT_8005701_NAME
-	desc = EVT_8005701_DESC
+	title = EVT_1005701_NAME
+	desc = EVT_1005701_DESC
 	picture = "pondicherry"
 
 	is_triggered_only = yes
 	
 	option = {
-		name = EVT_8005701_A 
+		name = EVT_1005701_A 
 		ai_chance = { factor = 100 }
 		FROM = {
 			relation = { who = THIS value = 100 }
@@ -18,7 +18,7 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8005701_B 
+		name = EVT_1005701_B 
 		ai_chance = { factor = 0 }
 		FROM = {
 			add_casus_belli = {
@@ -33,7 +33,7 @@ country_event = {
 }
 
 country_event = {
-	id = 8005702
+	id = 1005702
 
 	title = end_international_authority_over_ruhr_title
 	desc = end_international_authority_over_ruhr_desc
@@ -42,7 +42,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVT_8005702_A 
+		name = EVT_1005702_A 
 		ai_chance = { factor = 100 }
 		any_owned = {
 			limit = { is_core = GER NOT = { is_core = FRA } }
@@ -54,7 +54,7 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8005702_B 
+		name = EVT_1005702_B 
 		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {

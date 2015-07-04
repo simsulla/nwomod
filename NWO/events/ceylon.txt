@@ -1,9 +1,9 @@
 # Sri Lanka
 country_event = {
-	id = 8028301
+	id = 1028301
 
-	title = EVT_8028301_NAME
-	desc = EVT_8028301_DESC
+	title = EVT_1028301_NAME
+	desc = EVT_1028301_DESC
 	picture = "independence_of_india"
 
 	trigger = {
@@ -18,13 +18,13 @@ country_event = {
 	}
 
 	option = {
-		name = EVT_8028301_A # Outline the future for Sri Lanka as a British Dominion
+		name = EVT_1028301_A # Outline the future for Sri Lanka as a British Dominion
 		ai_chance = { factor = 100 }
-		country_event = { id = 8028302 days = 365 } 
+		country_event = { id = 1028302 days = 365 } 
 	}
 
 	option = {
-		name = EVT_8028301_B
+		name = EVT_1028301_B
 		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {
@@ -40,16 +40,16 @@ country_event = {
 }
 
 country_event = {
-	id = 8028302
+	id = 1028302
 
-	title = EVT_8028302_NAME
-	desc = EVT_8028302_DESC
+	title = EVT_1028302_NAME
+	desc = EVT_1028302_DESC
 	picture = "independence_of_india"
 
 	is_triggered_only = yes
 
 	option = {
-		name = EVT_8028302_A #  Dominion
+		name = EVT_1028302_A #  Dominion
 		ai_chance = { factor = 100 }
 		prestige = -2 
 		any_pop = {
@@ -67,7 +67,7 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8028302_B # Go back on our promise
+		name = EVT_1028302_B # Go back on our promise
 		ai_chance = { factor = 0 }
 		badboy = 0.1
 		any_pop = {

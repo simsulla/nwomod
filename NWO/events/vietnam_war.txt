@@ -1,9 +1,9 @@
 # South Vietnam 
 country_event = {
-	id = 8228001
+	id = 1228001
 
-	title = EVT_8228001_NAME
-	desc = EVT_8228001_DESC
+	title = EVT_1228001_NAME
+	desc = EVT_1228001_DESC
 	picture = "french_vietnam"
 
 	fire_only_once = yes
@@ -22,7 +22,7 @@ country_event = {
 	}
 
 	option = {
-		name = EVT_8228001_A # South Vietnam Independence
+		name = EVT_1228001_A # South Vietnam Independence
 		ai_chance = { factor = 0 }
 		prestige = -20 
 		release = SVI
@@ -31,15 +31,15 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8228001_B # Leave Vietnam to it's faith
+		name = EVT_1228001_B # Leave Vietnam to it's faith
 		ai_chance = { factor = 100 }
-		USA = { country_event = 8228002 }
+		USA = { country_event = 1228002 }
 		release_vassal = CAM diplomatic_influence = { who = CAM value = -100 }
 		release_vassal = LUA diplomatic_influence = { who = LUA value = -100 }
 	}
 
 	option = {
-		name = EVT_8228001_C
+		name = EVT_1228001_C
 		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {
@@ -55,16 +55,16 @@ country_event = {
 }
 
 country_event = {
-	id = 8228002
+	id = 1228002
 
-	title = EVT_8228002_NAME
-	desc = EVT_8228002_DESC
+	title = EVT_1228002_NAME
+	desc = EVT_1228002_DESC
 	picture = "french_vietnam"
 
 	is_triggered_only = yes
 
 	option = {
-		name = EVT_8228002_A # South Vietnam Independence
+		name = EVT_1228002_A # South Vietnam Independence
 		ai_chance = { factor = 100 }
 		FRA = { release = SVI }
 		diplomatic_influence = {
@@ -82,7 +82,7 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8228002_B # Leave Vietnam to it's faith
+		name = EVT_1228002_B # Leave Vietnam to it's faith
 		ai_chance = { factor = 0 }
 		FRA = { release = DAI }
 	}
@@ -91,10 +91,10 @@ country_event = {
 
 # French won Vietnam war
 country_event = {
-	id = 8228003
+	id = 1228003
 
-	title = EVT_8228003_NAME
-	desc = EVT_8228003_DESC
+	title = EVT_1228003_NAME
+	desc = EVT_1228003_DESC
 	picture = "french_vietnam"
 
 	trigger = {
@@ -111,7 +111,7 @@ country_event = {
 	}
 
 	option = {
-		name = EVT_8228003_A # Vietnam Independence
+		name = EVT_1228003_A # Vietnam Independence
 		ai_chance = { factor = 0 }
 		prestige = -2
 		release_vassal = DAI
@@ -119,7 +119,7 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8228003_B
+		name = EVT_1228003_B
 		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {

@@ -1,8 +1,8 @@
 country_event = {
-	id = 8002621
+	id = 1002621
 
-	title = EVT_8002621_NAME
-	desc = EVT_8002621_DESC
+	title = EVT_1002621_NAME
+	desc = EVT_1002621_DESC
 	picture = "newfoundland"
 
 	fire_only_once = yes
@@ -20,20 +20,20 @@ country_event = {
 	}
 
 	option = {
-		name = EVT_8002621_A # Newfoundland Responsible government
+		name = EVT_1002621_A # Newfoundland Responsible government
 		ai_chance = { factor = 0 }
 		prestige = 5
 		release_vassal = NFL
 	}
 	
 	option = {
-		name = EVT_8002621_B # Integrate with Canada
+		name = EVT_1002621_B # Integrate with Canada
 		ai_chance = { factor = 100 }
 		release = CAN
 	}
 
 	option = {
-		name = EVT_8002621_C # stay integrated part of the empire
+		name = EVT_1002621_C # stay integrated part of the empire
 		ai_chance = { factor = 0 }
 		prestige = -5
 		74 = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }

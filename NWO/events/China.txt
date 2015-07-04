@@ -86,25 +86,25 @@ country_event = {
 
 # Hong Kong / Macao
 country_event = {
-	id = 8002801
-	title = "EVT_8002801_NAME"
-	desc = "EVT_8002801_DESC"
+	id = 1002801
+	title = "EVT_1002801_NAME"
+	desc = "EVT_1002801_DESC"
 	picture = "chinese_hongkong"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVT_8002801_A"
+		name = "EVT_1002801_A"
 		ai_chance = {
 			factor = 100
 		}
 		prestige = -2
 		release = HKG
-		FROM = { country_event = 8002803 }
+		FROM = { country_event = 1002803 }
 	}
 
 	option = {
-		name = "EVT_8002801_B"
+		name = "EVT_1002801_B"
 		ai_chance = {
 			factor = 0
 		}
@@ -114,31 +114,31 @@ country_event = {
 			value = -200
 		}
 		leave_alliance = FROM
-		FROM = { country_event = 8002804 }
+		FROM = { country_event = 1002804 }
 	}
 
 }
 
 country_event = {
-	id = 8002802
-	title = "EVT_8002802_NAME"
-	desc = "EVT_8002802_DESC"
+	id = 1002802
+	title = "EVT_1002802_NAME"
+	desc = "EVT_1002802_DESC"
 	picture = "macao"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVT_8002802_A"
+		name = "EVT_1002802_A"
 		ai_chance = {
 			factor = 100
 		}
 		prestige = -2
 		release = MCA
-		FROM = { country_event = 8002803 } # accept autonomy
+		FROM = { country_event = 1002803 } # accept autonomy
 	}
 
 	option = {
-		name = "EVT_8002802_B"
+		name = "EVT_1002802_B"
 		ai_chance = {
 			factor = 0
 		}
@@ -148,21 +148,21 @@ country_event = {
 			value = -200
 		}
 		leave_alliance = FROM
-		FROM = { country_event = 8002804 } # refuse
+		FROM = { country_event = 1002804 } # refuse
 	}
 
 }
 
 country_event = {
-	id = 8002803
-	title = "EVT_8002803_NAME"
-	desc = "EVT_8002803_DESC"
+	id = 1002803
+	title = "EVT_1002803_NAME"
+	desc = "EVT_1002803_DESC"
 	picture = "chinese_hongkong"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVT_8002803_A"
+		name = "EVT_1002803_A"
 		create_vassal = HKG 
 		create_vassal = MCA
 		relation = {
@@ -174,15 +174,15 @@ country_event = {
 }
 
 country_event = {
-	id = 8002804
-	title = "EVT_8002804_NAME"
-	desc = "EVT_8002804_DESC"
+	id = 1002804
+	title = "EVT_1002804_NAME"
+	desc = "EVT_1002804_DESC"
 	picture = "chinese_intervention_in_korea"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVT_8002804_A" # demand unconditional return
+		name = "EVT_1002804_A" # demand unconditional return
 		leave_alliance = FROM
 		add_casus_belli = {
 			target = FROM

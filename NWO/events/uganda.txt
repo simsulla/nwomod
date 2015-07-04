@@ -1,7 +1,7 @@
 country_event = {
-	id = 8027001
-	title = "EVT_8027001_NAME" 
-	desc = "EVT_8027001_DESC"
+	id = 1027001
+	title = "EVT_1027001_NAME" 
+	desc = "EVT_1027001_DESC"
 	picture = "rwanda_genocide" 
 	
 	fire_only_once = yes
@@ -16,13 +16,13 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8027001_A" # intervene
+		name = "EVT_1027001_A" # intervene
 		war = { target = RWA attacker_goal = { casus_belli = install_democracy } defender_goal = { casus_belli  = status_quo } } 
 		ai_chance = { factor = 100 }
 	}
 	
 	option = {
-		name = "EVT_8027001_B" # never mind
+		name = "EVT_1027001_B" # never mind
 		badboy = 2
 		ai_chance = { factor = 0 }
 	}
@@ -30,15 +30,15 @@ country_event = {
 }
 
 country_event = {
-	id = 8027002
-	title = "EVT_8027002_NAME" # Alliance with Rwanda
-	desc = "EVT_8027002_DESC"
+	id = 1027002
+	title = "EVT_1027002_NAME" # Alliance with Rwanda
+	desc = "EVT_1027002_DESC"
 	picture = "congo_war" 
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVT_8027002_A" # accept
+		name = "EVT_1027002_A" # accept
 		relation = { who = FROM value = 100 }
 		relation = { who = CNG value = -200 }
 		create_alliance = FROM
@@ -46,16 +46,16 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8027002_B"
+		name = "EVT_1027002_B"
 		prestige = -5
 		ai_chance = { factor = 0 }
 	}
 }
 
 country_event = {
-	id = 8027003
-	title = "EVT_8027003_NAME" 
-	desc = "EVT_8027003_DESC"
+	id = 1027003
+	title = "EVT_1027003_NAME" 
+	desc = "EVT_1027003_DESC"
 	picture = "congo_war" 
 	
 	fire_only_once = yes
@@ -70,14 +70,14 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_8027003_A" 
-		RWA = { country_event = 8029502 } # alliance with Rwanda
-		CNG = { country_event = 8003302 } # support Ituri rebellion
+		name = "EVT_1027003_A" 
+		RWA = { country_event = 1029502 } # alliance with Rwanda
+		CNG = { country_event = 1003302 } # support Ituri rebellion
 		ai_chance = { factor = 100 }
 	}
 	
 	option = {
-		name = "EVT_8027003_B" # never mind
+		name = "EVT_1027003_B" # never mind
 		ai_chance = { factor = 0 }
 	}
 	

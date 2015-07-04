@@ -1,9 +1,9 @@
 # Burma
 country_event = {
-	id = 8214001
+	id = 1214001
 
-	title = EVT_8214001_NAME
-	desc = EVT_8214001_DESC
+	title = EVT_1214001_NAME
+	desc = EVT_1214001_DESC
 	picture = "independence_of_burma"
 
 	trigger = {
@@ -18,14 +18,14 @@ country_event = {
 	}
 
 	option = {
-		name = EVT_8214001_A # Promise Burmese Independence
+		name = EVT_1214001_A # Promise Burmese Independence
 		ai_chance = { factor = 100 }
 		prestige = -2 
-		country_event = { id = 8214002 days = 365 } 
+		country_event = { id = 1214002 days = 365 } 
 	}
 	
 	option = {
-		name = EVT_8214001_B # Outline the future for Burma as a British Dominion
+		name = EVT_1214001_B # Outline the future for Burma as a British Dominion
 		any_pop = {
 			limit = {
 				culture = burmese
@@ -36,11 +36,11 @@ country_event = {
 			militancy = 2
 		}
 		ai_chance = { factor = 0 }
-		country_event = { id = 8214003 days = 365 } 
+		country_event = { id = 1214003 days = 365 } 
 	}
 
 	option = {
-		name = EVT_8214001_C
+		name = EVT_1214001_C
 		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {
@@ -56,16 +56,16 @@ country_event = {
 }
 
 country_event = {
-	id = 8214002
+	id = 1214002
 
-	title = EVT_8214002_NAME
-	desc = EVT_8214002_DESC
+	title = EVT_1214002_NAME
+	desc = EVT_1214002_DESC
 	picture = "independence_of_burma"
 
 	is_triggered_only = yes
 
 	option = {
-		name = EVT_8214002_A # Burmese Independence
+		name = EVT_1214002_A # Burmese Independence
 		ai_chance = { factor = 100 }
 		prestige = -20 
 		release = BUR
@@ -74,7 +74,7 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8214002_B # Go back on our promise
+		name = EVT_1214002_B # Go back on our promise
 		ai_chance = { factor = 0 }
 		badboy = 1.0
 		any_pop = {
@@ -91,16 +91,16 @@ country_event = {
 }
 
 country_event = {
-	id = 8214003
+	id = 1214003
 
-	title = EVT_8214003_NAME
-	desc = EVT_8214003_DESC
+	title = EVT_1214003_NAME
+	desc = EVT_1214003_DESC
 	picture = "independence_of_burma"
 
 	is_triggered_only = yes
 
 	option = {
-		name = EVT_8214003_A # Burmese Dominion
+		name = EVT_1214003_A # Burmese Dominion
 		ai_chance = { factor = 100 }
 		prestige = -2 
 		any_pop = {
@@ -118,7 +118,7 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_8214003_B # Go back on our promise
+		name = EVT_1214003_B # Go back on our promise
 		ai_chance = { factor = 0 }
 		badboy = 0.1
 		any_pop = {
