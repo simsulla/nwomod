@@ -8,22 +8,12 @@ populist_group = {
 		date = 1905.1.1
 		
 		add_political_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = populist }
-			}
+			base = 0
 		}
-	
 	
 		remove_political_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = populist }
-			}
 		}
-	
 	
 		add_social_reform = {
 			base = 1
@@ -31,8 +21,72 @@ populist_group = {
 				factor = -1
 				NOT = { ruling_party_ideology = populist }
 			}
+			group = {
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 1
+						social_movement_strength = 0.1
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 2
+						social_movement_strength = 0.2
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 3
+						social_movement_strength = 0.3
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 4
+						social_movement_strength = 0.4
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 5
+						social_movement_strength = 0.5
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 6
+						social_movement_strength = 0.6
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 7
+						social_movement_strength = 0.7
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 8
+						social_movement_strength = 0.8
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 9
+						social_movement_strength = 0.9
+					}
+				}
+			}			
 		}
-	
 	
 		remove_social_reform = {
 			base = 1
@@ -61,19 +115,11 @@ religious_group = {
 		
 		add_political_reform = {
 			base = 0
-			modifier = {
-				factor = 1
-				ruling_party_ideology = islamist
-			}
 		}
 	
 	
 		remove_political_reform = {
-			base = 0
-			modifier = {
-				factor = 1
-				ruling_party_ideology = islamist 
-			}
+			base = 1
 		}
 
 		add_social_reform = {
@@ -148,6 +194,13 @@ religious_group = {
 		}
 		remove_social_reform = {
 			base = 0
+			modifier = {
+				factor = 1
+				NOT = { 
+					militancy = 1
+					social_movement_strength = 0.1
+				}
+			}
 		}
 		
 		add_military_reform = {
