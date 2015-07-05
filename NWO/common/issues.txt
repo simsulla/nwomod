@@ -232,6 +232,7 @@ political_reforms = {
 
 
 	political_opinions = { # upper_house_composition
+		next_step_only = yes
 		administrative = yes
 		ruling_party_opinion = { # party_appointed
 			rules = { same_as_ruling_party = yes }
@@ -257,6 +258,7 @@ political_reforms = {
 	}
 
 	religious_rights = { # voting_system TODO
+		next_step_only = yes
 		state_religion = { # first_past_the_post
 #			rules = { largest_share = yes }
 #			allow = {
@@ -278,6 +280,7 @@ political_reforms = {
 	}
 
 	internet_infrastructure = { # public_meetings
+		next_step_only = yes
 		quality_of_service = { # no_meeting 	
 			suppression_points_modifier = 0.25
 		}
@@ -370,6 +373,7 @@ political_reforms = {
 	}
 
 	immigration_policy = {
+		next_step_only = yes
 		
 		nobody_gets_out = {
 			global_immigrant_attract = -1.0
@@ -561,21 +565,27 @@ social_reforms = {
 			factory_throughput = 0.05
 		}
 		limited_child_care = { # child_labor_restricted
+			global_population_growth = 0.001
 			factory_throughput = -0.05
 			global_immigrant_attract = 0.05
+			tax_efficiency = -0.02
 		}
 		supported_child_care = { # child_labor_illegal
-			global_population_growth = 0.0005
+			global_population_growth = 0.001
 			factory_throughput = -0.05
 			global_immigrant_attract = 0.1
+			tax_efficiency = -0.04
 		}
 		parental_leave_child_care = { # 
+			global_population_growth = 0.001
 			factory_throughput = -0.10
 			global_immigrant_attract = 0.1
+			tax_efficiency = -0.10
 		}
 		state_provided_child_care = { # 
-			global_population_growth = 0.0005
+			global_population_growth = 0.001
 			global_immigrant_attract = 0.1
+			tax_efficiency = -0.20
 		}
 	}
 	
