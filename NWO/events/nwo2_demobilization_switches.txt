@@ -1,0 +1,918 @@
+country_event = {
+  id = 8970280
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = cold_war_pacific
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970280 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970281
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    OR = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = cold_war_pacific
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970281 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970820
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KUR
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970820 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970821
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KUR
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970821 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970730
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war_pacific
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970730 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970731
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1963
+    has_global_flag = cold_war_pacific
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970731 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8972050
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war_pacific
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8972050 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8972051
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1963
+    has_global_flag = cold_war_pacific
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8972051 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970760
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970760 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970761
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970761 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970762
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970762 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970763
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970763 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970870
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LEB
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970870 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970871
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LEB
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970871 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970790
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JOR
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970790 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970791
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JOR
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970791 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8971470
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYR
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8971470 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8971471
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYR
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8971471 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970490
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970490 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970491
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970491 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970492
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970492 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970493
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970493 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970750
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IRQ
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970750 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970751
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IRQ
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970751 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970720
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970720 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970721
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970721 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8971100
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAK
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8971100 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8971101
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAK
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8971101 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970620
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970620 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970621
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970621 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8972330
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8972330 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8972331
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8972331 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8971190
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war_pacific
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8971190 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8971191
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+    year = 1963
+    has_global_flag = cold_war_pacific
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8971191 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970810
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war_pacific
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8970810 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8970811
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1963
+    has_global_flag = cold_war_pacific
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8970811 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8971110
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAL
+    year = 1963
+    NOT = {
+    has_country_flag  = block_demobilization
+    }
+    has_global_flag = cold_war
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8971110 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+set_country_flag = block_demobilization 
+  }
+}
+country_event = {
+  id = 8971111
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAL
+    year = 1963
+    has_global_flag = cold_war
+    ai = yes
+    has_country_flag  = block_demobilization
+  }
+  immediate = { set_global_flag = event_fired_8971111 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+clr_country_flag = block_demobilization 
+  }
+}

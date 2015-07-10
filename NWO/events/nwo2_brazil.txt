@@ -1,0 +1,423 @@
+country_event = {
+  id = 8002001
+  title = "EVT_8002001_NAME"
+  desc = "EVT_8002001_DESC"
+  picture = "nwo2_vargas_estado_novo"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1945
+  }
+  immediate = { set_global_flag = event_fired_8002001 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "do Nascimento Lins" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8002002
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1950
+  }
+  immediate = { set_global_flag = event_fired_8002002 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "da Gama Leirós" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Costa é Silva" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8002003
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1953
+  }
+  immediate = { set_global_flag = event_fired_8002003 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -1.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Dilermando de Assis" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8002004
+  title = "EVT_8002004_NAME"
+  desc = "EVT_8002004_DESC"
+  picture = "nwo2_getulio_vargas"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1955
+  }
+  immediate = { set_global_flag = event_fired_8002004 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8002004_A"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+}
+country_event = {
+  id = 8002005
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1960
+  }
+  immediate = { set_global_flag = event_fired_8002005 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8002006
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8002006 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -1.0 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8002007
+  title = "EVT_8002007_NAME"
+  desc = "EVT_8002007_DESC"
+  picture = "nwo2_janio_quadros_resignation"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8002007 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8002007_A"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+  }
+}
+country_event = {
+  id = 8002008
+  title = EVT_8002008_NAME
+  desc = EVT_8002008_DESC
+  picture = "nwo2_castelo_branco"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1966
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002008 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002008_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8002009
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1968
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002009 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8002010
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1973
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002010 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8002011
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1978
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002011 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8002012
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1984
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002012 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8002013
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1989
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002013 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.8 }
+  }
+}
+country_event = {
+  id = 8002014
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8002014 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8002015
+  title = "EVT_8002015_NAME"
+  desc = "EVT_8002015_DESC"
+  picture = "nwo2_plano_de_metas"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1960
+  }
+  immediate = { set_global_flag = event_fired_8002015 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8002015_A"
+money = -5000 
+  }
+
+  option = {
+    name = "EVT_8002015_B"
+any_pop = { militancy = -0.3 }money = 1000 
+  }
+}
+country_event = {
+  id = 8002016
+  title = "EVT_8002016_NAME"
+  desc = "EVT_8002016_DESC"
+  picture = "nwo2_building_brasilia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1959
+  }
+  immediate = { set_global_flag = event_fired_8002016 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8002016_A"
+money = -5000 
+  }
+
+  option = {
+    name = "EVT_8002016_B"
+any_pop = { militancy = -0.3 }money = 1000 country_event =  { id = 8002011 days = 1 } 
+  }
+}
+country_event = {
+  id = 8002017
+  title = "EVT_8002017_NAME"
+  desc = "EVT_8002017_DESC"
+  picture = "nwo2_brasilia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1960
+    has_global_flag = event_fired_8002010
+  }
+  immediate = { set_global_flag = event_fired_8002017 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8002017_A"
+any_pop = { militancy = -0.2 }capital = 2244 
+  }
+}

@@ -1,0 +1,894 @@
+country_event = {
+  id = 8350000
+  title = EVT_8350000_NAME
+  desc = EVT_8350000_DESC
+  picture = "nwo2_pearl_harbor_american_flag"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    OR = {
+    USA = { war_with = GER }
+    USA = { war_with = JAP }
+    }
+    OR = {
+    AND = {
+    ENG = { war_with = GER }
+    RUS = { war_with = GER }
+    USA = { lost_national = 0.75 }
+    }
+    AND = {
+    NOT = {
+    RUS = { war_with = GER }
+    }
+    ENG = { war_with = GER }
+    USA = { lost_national = 0.65 }
+    }
+    AND = {
+    NOT = {
+    ENG = { war_with = GER }
+    }
+    RUS = { war_with = GER }
+    USA = { lost_national = 0.55 }
+    }
+    AND = {
+    NOT = {
+    ENG = { war_with = GER }
+    }
+    NOT = {
+    RUS = { war_with = GER }
+    }
+    USA = { lost_national = 0.45 }
+    }
+    }
+    NOT = {
+    any_owned_province = { province_id = 1042 }    any_owned_province = { province_id = 1753 }    any_owned_province = { province_id = 155 }    any_owned_province = { province_id = 1339 }    }
+    NOT = {
+    has_global_flag = the_lost_hope
+    }
+    NOT = {
+    has_global_flag = event_fired_8351004
+    }
+  }
+  immediate = { set_global_flag = event_fired_8350000 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8350000_A
+any_pop = { militancy = -0.5 }set_global_flag = the_lost_hope country_event = 8351000 
+  }
+
+  option = {
+    name = EVT_8350000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      average_militancy  = 30
+#      }
+#    }
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8351000
+  title = EVT_8351000_NAME
+  desc = EVT_8351000_DESC
+  picture = "nwo2_liberty_statue_in_fog"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8351000 }
+
+  option = {
+    name = EVT_8351000_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      OR = {
+#      AND = {
+#      NOT = {
+#      USA_243 = { owned_by = GER } 
+#      }
+#      NOT = {
+#      USA_200 = { owned_by = GER } 
+#      }
+#      USA_116 = { owned_by = JAP } 
+#      MEX_85 = { owned_by = JAP } 
+#      }
+#      AND = {
+#      NOT = {
+#      }
+#      }
+#      AND = {
+#      NOT = {
+#      GER = { war_with = USA }
+#      }
+#      JAP = { war_with = USA }
+#      }
+#      any_owned_province = { province_id = 1042 }#      }
+#      }
+#      GER = { war_with = USA }
+#    }
+set_global_flag = german_victory_over_usa 2186 = { secede_province = GER } 2187 = { secede_province = GER } 2188 = { secede_province = GER } 2189 = { secede_province = GER } 2190 = { secede_province = GER } release_vassal = LIB 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          MEX = { war_with = USA }
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          JAP = { war_with = USA }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          GER = { war_with = USA }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          JAP = { war_with = USA }
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          JAP = { war_with = USA }
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          GER = { war_with = USA }
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          GER = { war_with = USA }
+          }
+
+        }
+
+      }
+country_event = 8351004 
+  }
+
+  option = {
+    name = EVT_8351000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      AND = {
+#      NOT = {
+#      USA_243 = { owned_by = GER } 
+#      }
+#      NOT = {
+#      USA_200 = { owned_by = GER } 
+#      }
+#      USA_116 = { owned_by = JAP } 
+#      MEX_85 = { owned_by = JAP } 
+#      }
+#      AND = {
+#      NOT = {
+#      }
+#      }
+#      AND = {
+#      NOT = {
+#      GER = { war_with = USA }
+#      }
+#      JAP = { war_with = USA }
+#      }
+#      any_owned_province = { province_id = 1042 }#      }
+#    }
+set_global_flag = japanese_victory_over_usa 610 = { secede_province = JAP } 2579 = { secede_province = JAP } 2519 = { secede_province = JAP } 2518 = { secede_province = JAP } 2522 = { secede_province = JAP } 658 = { secede_province = JAP } 2524 = { secede_province = JAP } 2526 = { secede_province = JAP } 2623 = { secede_province = JAP } 686 = { secede_province = JAP } 2534 = { secede_province = JAP } 2536 = { secede_province = JAP } 2539 = { secede_province = JAP } 1097 = { secede_province = JAP } 2535 = { secede_province = JAP } 2186 = { secede_province = JAP } 2187 = { secede_province = JAP } 2188 = { secede_province = JAP } 2189 = { secede_province = JAP } 2190 = { secede_province = JAP } 1452 = { secede_province = GER } 1453 = { secede_province = GER } 1454 = { secede_province = GER } 1560 = { secede_province = GER } 203 = { secede_province = GER } 2219 = { secede_province = GER } 2217 = { secede_province = GER } 2218 = { secede_province = GER } 2220 = { secede_province = GER } 251 = { secede_province = GER } 252 = { secede_province = GER } 253 = { secede_province = GER } 3246 = { secede_province = GER } release_vassal = PHI release_vassal = CUB 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          MEX = { war_with = USA }
+          }
+
+        }
+country_event =  { id = 8352001 days = 1 } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          JAP = { war_with = USA }
+
+        }
+country_event = 8351001 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          GER = { war_with = USA }
+
+        }
+country_event = 8351002 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          JAP = { war_with = USA }
+          }
+
+        }
+country_event =  { id = 8352002 days = 1 } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          JAP = { war_with = USA }
+          }
+
+        }
+country_event =  { id = 8352003 days = 1 } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          GER = { war_with = USA }
+          }
+
+        }
+country_event =  { id = 8352004 days = 1 } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          GER = { war_with = USA }
+          }
+
+        }
+country_event =  { id = 8352005 days = 1 } 
+      }
+country_event = 8351003 
+  }
+}
+country_event = {
+  id = 8351001
+  title = EVT_8351001_NAME
+  desc = EVT_8351001_DESC
+  picture = "nwo2_pearl_harbor_american_flag"
+
+  trigger = {
+    tag = JAP
+  }
+  immediate = { set_global_flag = event_fired_8351001 }
+
+  option = {
+    name = EVT_8351001_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      USA_116 = { owned_by = JAP } 
+#      MEX_85 = { owned_by = JAP } 
+#      }
+#    }
+any_pop = { militancy = -0.5 }country_event =  { id = 8352003 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8351001_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      OR = {
+#      USA_116 = { owned_by = JAP } 
+#      MEX_85 = { owned_by = JAP } 
+#      }
+#      }
+#    }
+any_pop = { militancy = -0.3 }country_event =  { id = 8352002 days = 1 } 
+  }
+}
+country_event = {
+  id = 8351002
+  title = EVT_8351002_NAME
+  desc = EVT_8351002_DESC
+  picture = "nwo2_pearl_harbor_american_flag"
+
+  trigger = {
+    tag = GER
+  }
+  immediate = { set_global_flag = event_fired_8351002 }
+
+  option = {
+    name = EVT_8351002_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      USA_243 = { owned_by = GER } 
+#      USA_200 = { owned_by = GER } 
+#      }
+#    }
+any_pop = { militancy = -0.5 }country_event =  { id = 8352005 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8351002_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      OR = {
+#      USA_243 = { owned_by = GER } 
+#      USA_200 = { owned_by = GER } 
+#      }
+#      }
+#    }
+any_pop = { militancy = -0.3 }country_event =  { id = 8352004 days = 1 } 
+  }
+}
+country_event = {
+  id = 8351003
+  title = EVT_8351003_NAME
+  desc = EVT_8351003_DESC
+  picture = "nwo2_japanese_military_parade"
+
+  trigger = {
+    tag = JAP
+  }
+  immediate = { set_global_flag = event_fired_8351003 }
+
+  option = {
+    name = EVT_8351003_A
+any_pop = { militancy = 0.5 }set_global_flag = isolation_of_usa 
+  }
+
+  option = {
+    name = EVT_8351003_B
+any_pop = { militancy = -0.3 }badboy = 5 set_global_flag = dissolution_of_usa 
+  }
+
+  option = {
+    name = EVT_8351003_C
+badboy = 25 set_global_flag = annexation_of_usa 
+  }
+
+  option = {
+    name = EVT_8351003_D
+any_pop = { militancy = 2.5 }clr_global_flag = the_lost_hope 
+  }
+}
+country_event = {
+  id = 8351004
+  title = EVT_8351004_NAME
+  desc = EVT_8351004_DESC
+  picture = "nwo2_hitler_dows_usa"
+
+  trigger = {
+    tag = GER
+  }
+  immediate = { set_global_flag = event_fired_8351004 }
+
+  option = {
+    name = EVT_8351004_A
+any_pop = { militancy = 0.5 }set_global_flag = isolation_of_usa 
+  }
+
+  option = {
+    name = EVT_8351004_B
+any_pop = { militancy = -0.3 }badboy = 5 set_global_flag = dissolution_of_usa 
+  }
+
+  option = {
+    name = EVT_8351004_C
+badboy = 25 set_global_flag = annexation_of_usa 
+  }
+
+  option = {
+    name = EVT_8351004_D
+any_pop = { militancy = 2.5 }clr_global_flag = the_lost_hope 
+  }
+}
+country_event = {
+  id = 8352000
+  title = EVT_8352000_NAME
+  desc = EVT_8352000_DESC
+  picture = "nwo2_capitol_in_fog"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = the_lost_hope
+     has_global_flag = event_fired_8351000
+  }
+  immediate = { set_global_flag = event_fired_8352000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8352000_A
+capital = 695 end_war = GER end_war = JAP set_global_flag = the_lost_hope 
+  }
+}
+country_event = {
+  id = 8352001
+  title = EVT_8352001_NAME
+  desc = EVT_8352001_DESC
+  picture = "nwo2_alta_california"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = the_lost_hope
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8352001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8352001_A
+100 = { secede_province = MEX } 101 = { secede_province = MEX } 102 = { secede_province = MEX } 103 = { secede_province = MEX } 104 = { secede_province = MEX } 105 = { secede_province = MEX } 1298 = { secede_province = MEX } 1922 = { secede_province = MEX } 1923 = { secede_province = MEX } 1925 = { secede_province = MEX } 1926 = { secede_province = MEX } 658 = { secede_province = MEX } 
+  }
+}
+country_event = {
+  id = 8352002
+  title = EVT_8352002_NAME
+  desc = EVT_8352002_DESC
+  picture = "nwo2_japanese_victory"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = the_lost_hope
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8352002 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8352002_A
+78 = { secede_province = JAP } 79 = { secede_province = JAP } 80 = { secede_province = JAP } 81 = { secede_province = JAP } 82 = { secede_province = JAP } 83 = { secede_province = JAP } 91 = { secede_province = JAP } 92 = { secede_province = JAP } 93 = { secede_province = JAP } 96 = { secede_province = JAP } 94 = { secede_province = JAP } 95 = { secede_province = JAP } 84 = { secede_province = JAP } 85 = { secede_province = JAP } 86 = { secede_province = JAP } 87 = { secede_province = JAP } 88 = { secede_province = JAP } 89 = { secede_province = JAP } 90 = { secede_province = JAP } 1 = { secede_province = JAP } 2 = { secede_province = JAP } 3 = { secede_province = JAP } 4 = { secede_province = JAP } 5 = { secede_province = JAP } 2630 = { secede_province = JAP } 
+  }
+}
+country_event = {
+  id = 8352003
+  title = EVT_8352003_NAME
+  desc = EVT_8352003_DESC
+  picture = "nwo2_japanese_victory"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = the_lost_hope
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8352003 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8352003_A
+1883 = { secede_province = JAP } 1298 = { secede_province = JAP } 1879 = { secede_province = JAP } 169 = { secede_province = JAP } 1339 = { secede_province = JAP } 
+  }
+}
+country_event = {
+  id = 8352004
+  title = EVT_8352004_NAME
+  desc = EVT_8352004_DESC
+  picture = "nwo2_nazi_victory_parade"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = the_lost_hope
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8352004 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8352004_A
+243 = { secede_province = GER } 244 = { secede_province = GER } 245 = { secede_province = GER } 241 = { secede_province = GER } 242 = { secede_province = GER } 247 = { secede_province = GER } 246 = { secede_province = GER } 248 = { secede_province = GER } 249 = { secede_province = GER } 250 = { secede_province = GER } 231 = { secede_province = GER } 229 = { secede_province = GER } 230 = { secede_province = GER } 232 = { secede_province = GER } 233 = { secede_province = GER } 234 = { secede_province = GER } 235 = { secede_province = GER } 236 = { secede_province = GER } 237 = { secede_province = GER } 238 = { secede_province = GER } 239 = { secede_province = GER } 240 = { secede_province = GER } 223 = { secede_province = GER } 224 = { secede_province = GER } 225 = { secede_province = GER } 226 = { secede_province = GER } 227 = { secede_province = GER } 228 = { secede_province = GER } 220 = { secede_province = GER } 219 = { secede_province = GER } 222 = { secede_province = GER } 221 = { secede_province = GER } 218 = { secede_province = GER } 217 = { secede_province = GER } 211 = { secede_province = GER } 212 = { secede_province = GER } 213 = { secede_province = GER } 214 = { secede_province = GER } 215 = { secede_province = GER } 216 = { secede_province = GER } 209 = { secede_province = GER } 207 = { secede_province = GER } 208 = { secede_province = GER } 210 = { secede_province = GER } 2556 = { secede_province = GER } 205 = { secede_province = GER } 206 = { secede_province = GER } 201 = { secede_province = GER } 202 = { secede_province = GER } 204 = { secede_province = GER } 2555 = { secede_province = GER } 200 = { secede_province = GER } 199 = { secede_province = GER } 198 = { secede_province = GER } 
+  }
+}
+country_event = {
+  id = 8352005
+  title = EVT_8352005_NAME
+  desc = EVT_8352005_DESC
+  picture = "nwo2_nazi_victory_parade"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = the_lost_hope
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8352005 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8352005_A
+243 = { secede_province = GER } 244 = { secede_province = GER } 245 = { secede_province = GER } 241 = { secede_province = GER } 242 = { secede_province = GER } 232 = { secede_province = GER } 233 = { secede_province = GER } 234 = { secede_province = GER } 235 = { secede_province = GER } 236 = { secede_province = GER } 237 = { secede_province = GER } 238 = { secede_province = GER } 239 = { secede_province = GER } 240 = { secede_province = GER } 231 = { secede_province = GER } 229 = { secede_province = GER } 230 = { secede_province = GER } 220 = { secede_province = GER } 219 = { secede_province = GER } 222 = { secede_province = GER } 221 = { secede_province = GER } 917 = { secede_province = GER } 913 = { secede_province = GER } 1801 = { secede_province = GER } 1805 = { secede_province = GER } 1151 = { secede_province = GER } 1813 = { secede_province = GER } 1814 = { secede_province = GER } 1961 = { secede_province = GER } 1963 = { secede_province = GER } 
+  }
+}
+country_event = {
+  id = 8353000
+  title = EVT_8353000_NAME
+  desc = EVT_8353000_DESC
+  picture = "nwo2_us_congress"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1963
+    has_global_flag = german_victory_over_usa
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8353000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8353000_A
+relation = { who = USA value = 50 } country_event = 8353002 
+  }
+
+  option = {
+    name = EVT_8353000_B
+badboy = 25 relation = { who = USA value = 100 } country_event = 8353003 
+  }
+
+  option = {
+    name = EVT_8353000_C
+relation = { who = USA value = -100 } country_event = 8353004 
+  }
+}
+country_event = {
+  id = 8353001
+  title = EVT_8353001_NAME
+  desc = EVT_8353001_DESC
+  picture = "nwo2_us_congress"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    has_global_flag = japanese_victory_over_usa
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8353001 }
+
+  mean_time_to_happen = { days = 5 }
+
+  option = {
+    name = EVT_8353000_A
+relation = { who = USA value = 50 } country_event = 8353002 
+  }
+
+  option = {
+    name = EVT_8353000_C
+relation = { who = USA value = -100 } country_event = 8353004 
+  }
+}
+country_event = {
+  id = 8353002
+  title = EVT_8353002_NAME
+  desc = EVT_8353002_DESC
+  picture = "nwo2_america_first"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8353002 }
+
+  option = {
+    name = EVT_8353002_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.5 } } }define_general = { name = "Evans  C." personality = energetic background = no_background }define_general = { name = "Evans  V." personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8353003
+  title = EVT_8353003_NAME
+  desc = EVT_8353003_DESC
+  picture = "nwo2_german_american_bund"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8353003 }
+
+  option = {
+    name = EVT_8353003_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.5 } } }define_general = { name = "Arrowsmith" personality = energetic background = no_background }define_general = { name = "Eisenhower" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8353004
+  title = EVT_8353004_NAME
+  desc = EVT_8353004_DESC
+  picture = "nwo2_dixiecrats"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8353004 }
+
+  option = {
+    name = EVT_8353004_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.5 } } }define_general = { name = "Harrold" personality = energetic background = no_background }define_general = { name = "Bash" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8353010
+  title = EVT_8353010_NAME
+  desc = EVT_8353010_DESC
+  picture = "nwo2_usa_divided"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = dissolution_of_usa
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8353010 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8353010_A
+release = TEX release = CSA release = USA 132 = { secede_province = TEX } 133 = { secede_province = TEX } 134 = { secede_province = TEX } 135 = { secede_province = TEX } 136 = { secede_province = TEX } 137 = { secede_province = TEX } 138 = { secede_province = TEX } 103 = { secede_province = TEX } 104 = { secede_province = TEX } 105 = { secede_province = TEX } 129 = { secede_province = TEX } 130 = { secede_province = TEX } 131 = { secede_province = TEX } 126 = { secede_province = TEX } 127 = { secede_province = TEX } 128 = { secede_province = TEX } 106 = { secede_province = TEX } 107 = { secede_province = TEX } 108 = { secede_province = TEX } 109 = { secede_province = TEX } 200 = { secede_province = CSA } 199 = { secede_province = CSA } 198 = { secede_province = CSA } 139 = { secede_province = CSA } 140 = { secede_province = CSA } 141 = { secede_province = CSA } 142 = { secede_province = CSA } 143 = { secede_province = CSA } 144 = { secede_province = CSA } 145 = { secede_province = CSA } 146 = { secede_province = CSA } 148 = { secede_province = CSA } 147 = { secede_province = CSA } 149 = { secede_province = CSA } 150 = { secede_province = CSA } 184 = { secede_province = CSA } 185 = { secede_province = CSA } 186 = { secede_province = CSA } 187 = { secede_province = CSA } 211 = { secede_province = CSA } 212 = { secede_province = CSA } 213 = { secede_province = CSA } 214 = { secede_province = CSA } 215 = { secede_province = CSA } 216 = { secede_province = CSA } 218 = { secede_province = CSA } 217 = { secede_province = CSA } 220 = { secede_province = CSA } 219 = { secede_province = CSA } 222 = { secede_province = CSA } 221 = { secede_province = CSA } 223 = { secede_province = CSA } 224 = { secede_province = CSA } 225 = { secede_province = CSA } 226 = { secede_province = CSA } 227 = { secede_province = CSA } 228 = { secede_province = CSA } 231 = { secede_province = CSA } 229 = { secede_province = CSA } 230 = { secede_province = CSA } 151 = { secede_province = CSA } 152 = { secede_province = CSA } 153 = { secede_province = CSA } 154 = { secede_province = CSA } 123 = { secede_province = CSA } 124 = { secede_province = CSA } 125 = { secede_province = CSA } 110 = { secede_province = CSA } 111 = { secede_province = CSA } 112 = { secede_province = CSA } 84 = { secede_province = USA } 85 = { secede_province = USA } 86 = { secede_province = USA } 87 = { secede_province = USA } 88 = { secede_province = USA } 89 = { secede_province = USA } 90 = { secede_province = USA } 116 = { secede_province = USA } 115 = { secede_province = USA } 114 = { secede_province = USA } 113 = { secede_province = USA } country_event = 8353003 
+  }
+}
+country_event = {
+  id = 8353020
+  title = EVT_8353020_NAME
+  desc = EVT_8353020_DESC
+  picture = "nwo2_liberty_statue_in_fog"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1963
+    has_global_flag = german_victory_over_usa
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8353020 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8353020_A
+inherit = USA country_event = 8353022 
+  }
+}
+country_event = {
+  id = 8353021
+  title = EVT_8353021_NAME
+  desc = EVT_8353021_DESC
+  picture = "nwo2_liberty_statue_in_fog"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    has_global_flag = japanese_victory_over_usa
+     has_global_flag = event_fired_8352000
+  }
+  immediate = { set_global_flag = event_fired_8353021 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8353021_A
+inherit = USA country_event = 8353022 
+  }
+}
+country_event = {
+  id = 8353022
+  title = EVT_8353022_NAME
+  desc = EVT_8353022_DESC
+  picture = "nwo2_independence_of_texas"
+
+  trigger = {
+    OR = { tag = GER tag = JAP }
+  }
+  immediate = { set_global_flag = event_fired_8353022 }
+
+  option = {
+    name = EVT_8353022_A
+release = TEX 132 = { secede_province = TEX } 133 = { secede_province = TEX } 134 = { secede_province = TEX } 135 = { secede_province = TEX } 136 = { secede_province = TEX } 137 = { secede_province = TEX } 138 = { secede_province = TEX } 103 = { secede_province = TEX } 104 = { secede_province = TEX } 105 = { secede_province = TEX } 129 = { secede_province = TEX } 130 = { secede_province = TEX } 131 = { secede_province = TEX } 126 = { secede_province = TEX } 127 = { secede_province = TEX } 128 = { secede_province = TEX } 106 = { secede_province = TEX } 107 = { secede_province = TEX } 108 = { secede_province = TEX } 109 = { secede_province = TEX } 
+  }
+}
+country_event = {
+  id = 8354000
+  title = EVT_8354000_NAME
+  desc = EVT_8354000_DESC
+  picture = "nwo2_japanese_final_victory"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8353000
+     has_global_flag = event_fired_8353001
+     has_global_flag = event_fired_8353010
+     has_global_flag = event_fired_8353020
+     has_global_flag = event_fired_8353021
+    }
+    }
+    has_global_flag = japanese_victory_over_usa
+  }
+  immediate = { set_global_flag = event_fired_8354000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8354000_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = dissolution_of_usa
+
+        }
+
+      }
+create_vassal = CSA create_alliance = CSA create_vassal = TEX create_alliance = TEX create_vassal = USA create_alliance = USA 
+  }
+}
+country_event = {
+  id = 8354001
+  title = EVT_8354001_NAME
+  desc = EVT_8354001_DESC
+  picture = "nwo2_hitler_final_victory"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8353000
+     has_global_flag = event_fired_8353001
+     has_global_flag = event_fired_8353010
+     has_global_flag = event_fired_8353020
+     has_global_flag = event_fired_8353021
+    }
+    }
+    has_global_flag = german_victory_over_usa
+  }
+  immediate = { set_global_flag = event_fired_8354001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8354001_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = dissolution_of_usa
+
+        }
+
+      }
+create_vassal = CSA create_alliance = CSA create_vassal = TEX create_alliance = TEX create_vassal = USA create_alliance = USA 
+  }
+}
+country_event = {
+  id = 8355000
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_empty"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8354000
+     has_global_flag = event_fired_8354001
+    }
+    }
+    has_global_flag = the_lost_hope
+  }
+  immediate = { set_global_flag = event_fired_8355000 }
+
+  mean_time_to_happen = { days = 5 }
+
+  option = {
+    name = OK
+clr_global_flag = the_lost_hope 
+  }
+}

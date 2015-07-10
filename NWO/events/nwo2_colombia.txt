@@ -1,0 +1,390 @@
+country_event = {
+  id = 8003201
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1949
+  }
+  immediate = { set_global_flag = event_fired_8003201 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }define_general = { name = "Quinones" personality = energetic background = no_background }define_general = { name = "Monsado Urribe" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Ruiz Mares" personality = energetic background = no_background }define_general = { name = "Trevisor Mendez" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8003202
+  title = "EVT_8003202_NAME"
+  desc = "EVT_8003202_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1950
+  }
+  immediate = { set_global_flag = event_fired_8003202 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8003202_A"
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Rojas Mercado" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_8003202_B"
+any_pop = { militancy = 1.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+}
+country_event = {
+  id = 8003203
+  title = "EVT_8003203_NAME"
+  desc = "EVT_8003203_DESC"
+  picture = "nwo2_la_violencia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1952
+  }
+  immediate = { set_global_flag = event_fired_8003203 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8003203_A"
+
+  }
+}
+country_event = {
+  id = 8003204
+  title = "EVT_8003204_NAME"
+  desc = "EVT_8003204_DESC"
+  picture = "nwo2_pinilla_coup"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1956
+  }
+  immediate = { set_global_flag = event_fired_8003204 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8003204_A"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }define_general = { name = "Trevisor Mendez" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8003205
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1957
+  }
+  immediate = { set_global_flag = event_fired_8003205 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+
+  }
+}
+country_event = {
+  id = 8003206
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1961
+  }
+  immediate = { set_global_flag = event_fired_8003206 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Moutis Harquer" personality = energetic background = no_background }define_general = { name = "Acevedo" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8003207
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1965
+  }
+  immediate = { set_global_flag = event_fired_8003207 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8003208
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1969
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8003208 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+}
+country_event = {
+  id = 8003209
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1973
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8003209 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+  }
+}
+country_event = {
+  id = 8003210
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1977
+  }
+  immediate = { set_global_flag = event_fired_8003210 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8003211
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1981
+  }
+  immediate = { set_global_flag = event_fired_8003211 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8003212
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1985
+  }
+  immediate = { set_global_flag = event_fired_8003212 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8003213
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1989
+  }
+  immediate = { set_global_flag = event_fired_8003213 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8003214
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8003214 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8003215
+  title = EVT_8003215_NAME
+  desc = EVT_8003215_DESC
+  picture = "nwo2_medellin_cartel"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CLM
+    year = 1990
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8003215 }
+
+  mean_time_to_happen = { days = 1080 }
+
+  option = {
+    name = EVT_8003215_A
+any_pop = { militancy = 1.0 }
+  }
+}

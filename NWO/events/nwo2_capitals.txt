@@ -1,0 +1,823 @@
+country_event = {
+  id = 8205002
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ALB
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 795 }  }
+  immediate = { set_global_flag = event_fired_8205002 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 1649 
+  }
+}
+country_event = {
+  id = 8205011
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AUS
+    year = 2099
+    OR = {
+    AND = {
+    NOT = {
+       }
+    any_owned_province = { province_id = 512 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 512 }    }
+    any_owned_province = { province_id = 1914 }    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8205011 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1914 }
+        }
+capital = 1003 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 512 }
+        }
+capital = 349 
+      }
+
+  }
+}
+country_event = {
+  id = 8205014
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 1 }  }
+  immediate = { set_global_flag = event_fired_8205014 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 1912 
+  }
+}
+country_event = {
+  id = 8205022
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 1896 }  }
+  immediate = { set_global_flag = event_fired_8205022 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 425 
+  }
+}
+country_event = {
+  id = 8205042
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CZH
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 425 }  }
+  immediate = { set_global_flag = event_fired_8205042 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 360 
+  }
+}
+country_event = {
+  id = 8205043
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = DDR tag = GER tag = IAR }
+    year = 2099
+    OR = {
+    AND = {
+    NOT = {
+       }
+    any_owned_province = { province_id = 155 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 155 }    }
+    any_owned_province = { province_id = 1298 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 155 }    }
+    NOT = {
+    any_owned_province = { province_id = 1298 }    }
+    any_owned_province = { province_id = 1713 }    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8205043 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1713 }
+        }
+capital = 1013 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1298 }
+        }
+capital = 1886 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 155 }
+        }
+capital = 695 
+      }
+
+  }
+}
+country_event = {
+  id = 8205044
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DEN
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 603 }  }
+  immediate = { set_global_flag = event_fired_8205044 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 372 
+  }
+}
+country_event = {
+  id = 8205055
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FIN
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 1298 }  }
+  immediate = { set_global_flag = event_fired_8205055 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 1595 
+  }
+}
+country_event = {
+  id = 8205057
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 2099
+    OR = {
+    AND = {
+    NOT = {
+       }
+    any_owned_province = { province_id = 1896 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 1896 }    }
+    any_owned_province = { province_id = 1 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 1 }    }
+    NOT = {
+    any_owned_province = { province_id = 1896 }    }
+    any_owned_province = { province_id = 1896 }    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8205057 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1896 }
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1 }
+        }
+capital = 1915 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1896 }
+        }
+capital = 425 
+      }
+
+  }
+}
+country_event = {
+  id = 8205062
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 169 }  }
+  immediate = { set_global_flag = event_fired_8205062 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 619 
+  }
+}
+country_event = {
+  id = 8205067
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 1886 }  }
+  immediate = { set_global_flag = event_fired_8205067 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 318 
+  }
+}
+country_event = {
+  id = 8205069
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 1151 }  }
+  immediate = { set_global_flag = event_fired_8205069 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 1025 
+  }
+}
+country_event = {
+  id = 8205075
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IRE
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 1896 }  }
+  immediate = { set_global_flag = event_fired_8205075 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 425 
+  }
+}
+country_event = {
+  id = 8205077
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 2099
+    OR = {
+    AND = {
+    NOT = {
+       }
+    any_owned_province = { province_id = 203 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 203 }    }
+    any_owned_province = { province_id = 1758 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 1758 }    }
+    NOT = {
+    any_owned_province = { province_id = 203 }    }
+    any_owned_province = { province_id = 203 }    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8205077 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 203 }
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1758 }
+        }
+capital = 908 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 203 }
+        }
+capital = 809 
+      }
+
+  }
+}
+country_event = {
+  id = 8205106
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NOR
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 2297 }  }
+  immediate = { set_global_flag = event_fired_8205106 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 2572 
+  }
+}
+country_event = {
+  id = 8205116
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+    year = 2099
+    OR = {
+    AND = {
+    NOT = {
+       }
+    any_owned_province = { province_id = 1912 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 1912 }    }
+    any_owned_province = { province_id = 1775 }    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8205116 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1775 }
+        }
+capital = 973 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1912 }
+        }
+capital = 798 
+      }
+
+  }
+}
+country_event = {
+  id = 8205117
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POR
+    year = 2099
+    OR = {
+    AND = {
+    NOT = {
+       }
+    any_owned_province = { province_id = 211 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 211 }    }
+    any_owned_province = { province_id = 2297 }    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8205117 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 2297 }
+        }
+capital = 2572 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 211 }
+        }
+capital = 633 
+      }
+
+  }
+}
+country_event = {
+  id = 8205123
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ROM
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 1896 }  }
+  immediate = { set_global_flag = event_fired_8205123 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 425 
+  }
+}
+country_event = {
+  id = 8205131
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SWI
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 2324 }  }
+  immediate = { set_global_flag = event_fired_8205131 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 860 
+  }
+}
+country_event = {
+  id = 8205143
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+    year = 2099
+    OR = {
+    AND = {
+    NOT = {
+       }
+    any_owned_province = { province_id = 169 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 169 }    }
+    any_owned_province = { province_id = 1595 }    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8205143 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1595 }
+        }
+capital = 880 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 169 }
+        }
+capital = 619 
+      }
+
+  }
+}
+country_event = {
+  id = 8205146
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SWE
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 1619 }  }
+  immediate = { set_global_flag = event_fired_8205146 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 1393 
+  }
+}
+country_event = {
+  id = 8205155
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TUR
+    year = 2099
+    OR = {
+    AND = {
+    NOT = {
+       }
+    any_owned_province = { province_id = 686 }    }
+    AND = {
+    NOT = {
+       }
+    NOT = {
+    any_owned_province = { province_id = 686 }    }
+    any_owned_province = { province_id = 1298 }    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8205155 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1298 }
+        }
+capital = 1886 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 686 }
+        }
+capital = 1956 
+      }
+
+  }
+}
+country_event = {
+  id = 8205183
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+    year = 2099
+    NOT = {
+       }
+    any_owned_province = { province_id = 843 }  }
+  immediate = { set_global_flag = event_fired_8205183 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 396 
+  }
+}
+country_event = {
+  id = 8205073
+  title = EVT_CAPITALMOVE_NAME
+  desc = EVT_CAPITALMOVE_DESC
+  picture = "nwo2_capital_city"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 2099
+    NOT = {
+       }
+    war = no
+    any_owned_province = { province_id = 1912 }  }
+  immediate = { set_global_flag = event_fired_8205073 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+capital = 795 
+  }
+}

@@ -1,0 +1,563 @@
+country_event = {
+  id = 8001401
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1945
+  }
+  immediate = { set_global_flag = event_fired_8001401 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }define_general = { name = "Nuyten" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8001402
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1948
+  }
+  immediate = { set_global_flag = event_fired_8001402 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Gerard" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Pire" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8001403
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1949
+  }
+  immediate = { set_global_flag = event_fired_8001403 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Pire" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Gerard" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8001404
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1951
+  }
+  immediate = { set_global_flag = event_fired_8001404 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Cuvelier" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Gerard" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8001405
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1953
+  }
+  immediate = { set_global_flag = event_fired_8001405 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Dejaiffe" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Gerard" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8001406
+  title = "EVT_8001406_NAME"
+  desc = "EVT_8001406_DESC"
+  picture = "nwo2_koningskwestie"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1953
+    OR = {
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8001406 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8001406_A"
+any_pop = { militancy = 0.5 }define_general = { name = "Cumont" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_8001406_B"
+any_pop = { militancy = 3.0 }define_general = { name = "Maes" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_8001406_C"
+any_pop = { militancy = 1.5 }define_general = { name = "Drubbel" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8001407
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1957
+  }
+  immediate = { set_global_flag = event_fired_8001407 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Nuyten" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Dejaiffe" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8001408
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1960
+  }
+  immediate = { set_global_flag = event_fired_8001408 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Pire" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Gerard" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8001409
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1964
+  }
+  immediate = { set_global_flag = event_fired_8001409 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Gerard" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8001410
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1965
+  }
+  immediate = { set_global_flag = event_fired_8001410 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.8 }
+  }
+}
+country_event = {
+  id = 8001411
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1967
+  }
+  immediate = { set_global_flag = event_fired_8001411 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8001412
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1970
+  }
+  immediate = { set_global_flag = event_fired_8001412 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Pire" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8001413
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1972
+  }
+  immediate = { set_global_flag = event_fired_8001413 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Pire" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8001414
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1973
+  }
+  immediate = { set_global_flag = event_fired_8001414 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8001415
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1978
+  }
+  immediate = { set_global_flag = event_fired_8001415 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+  }
+}
+country_event = {
+  id = 8001416
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1980
+  }
+  immediate = { set_global_flag = event_fired_8001416 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8001417
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1984
+  }
+  immediate = { set_global_flag = event_fired_8001417 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8001418
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1986
+  }
+  immediate = { set_global_flag = event_fired_8001418 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8001419
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1990
+  }
+  immediate = { set_global_flag = event_fired_8001419 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8001420
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8001420 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}

@@ -1,0 +1,184 @@
+country_event = {
+  id = 8002201
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1989
+  }
+  immediate = { set_global_flag = event_fired_8002201 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Ganev  T." personality = energetic background = no_background }define_general = { name = "Lukash" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8002202
+  title = EVT_8002202_NAME
+  desc = EVT_8002202_DESC
+  picture = "nwo2_bulgarian_royal_palace"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1980
+    OR = {
+    }
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002202 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002202_A
+
+  }
+}
+country_event = {
+  id = 8002203
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1990
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002203 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8002202
+          }
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8002202
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8002202
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8002202
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.8 }
+  }
+}
+country_event = {
+  id = 8002204
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8002204 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8002202
+          }
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8002202
+          }
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}

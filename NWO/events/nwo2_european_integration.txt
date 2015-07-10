@@ -1,0 +1,814 @@
+country_event = {
+  id = 8232000
+  title = EVT_8232000_NAME
+  desc = EVT_8232000_DESC
+  picture = "nwo2_schuman_declaration"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1951
+    OR = {
+    exists = LUX
+    }
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232000 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8232000_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
+  }
+
+  option = {
+    name = EVT_8232000_B
+relation = { who = GER value = 50 } relation = { who = ITA value = 50 } relation = { who = BEL value = 50 } relation = { who = NET value = 50 } relation = { who = LUX value = 50 } 
+  }
+
+  option = {
+    name = EVT_8232000_C
+country_event =  { id = 8232001 days = 1 } country_event =  { id = 8232002 days = 1 } country_event =  { id = 8232003 days = 1 } country_event =  { id = 8232004 days = 1 } country_event =  { id = 8232005 days = 1 } country_event =  { id = 8232010 days = 1 } country_event =  { id = 8232011 days = 1 } country_event =  { id = 8232040 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8232001
+  title = EVT_8232001_NAME
+  desc = EVT_8232001_DESC
+  picture = "nwo2_schuman_declaration"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1950
+    has_global_flag = event_fired_8232000
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232001 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232001_A
+
+  }
+
+  option = {
+    name = EVT_8232001_B
+relation = { who = FRA value = 50 } relation = { who = ITA value = 50 } relation = { who = BEL value = 50 } relation = { who = NET value = 50 } relation = { who = LUX value = 50 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
+  }
+
+  option = {
+    name = EVT_8232001_C
+country_event =  { id = 8232010 days = 1 } country_event =  { id = 8232011 days = 1 } country_event =  { id = 8232041 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8232002
+  title = EVT_8232002_NAME
+  desc = EVT_8232002_DESC
+  picture = "nwo2_schuman_declaration"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1950
+    has_global_flag = event_fired_8232000
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232002 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232002_A
+
+  }
+
+  option = {
+    name = EVT_8232002_B
+relation = { who = FRA value = 50 } relation = { who = GER value = 50 } relation = { who = BEL value = 50 } relation = { who = NET value = 50 } relation = { who = LUX value = 50 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
+  }
+
+  option = {
+    name = EVT_8232002_C
+country_event =  { id = 8232010 days = 1 } country_event =  { id = 8232011 days = 1 } country_event =  { id = 8232042 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8232003
+  title = EVT_8232003_NAME
+  desc = EVT_8232003_DESC
+  picture = "nwo2_schuman_declaration"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1950
+    has_global_flag = event_fired_8232000
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232003 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232003_A
+
+  }
+
+  option = {
+    name = EVT_8232003_B
+relation = { who = FRA value = 50 } relation = { who = ITA value = 50 } relation = { who = GER value = 50 } relation = { who = NET value = 50 } relation = { who = LUX value = 50 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
+  }
+
+  option = {
+    name = EVT_8232003_C
+country_event =  { id = 8232010 days = 1 } country_event =  { id = 8232011 days = 1 } country_event =  { id = 8232043 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8232004
+  title = EVT_8232004_NAME
+  desc = EVT_8232004_DESC
+  picture = "nwo2_schuman_declaration"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1950
+    has_global_flag = event_fired_8232000
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232004 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232004_A
+
+  }
+
+  option = {
+    name = EVT_8232004_B
+relation = { who = FRA value = 50 } relation = { who = ITA value = 50 } relation = { who = BEL value = 50 } relation = { who = GER value = 50 } relation = { who = LUX value = 50 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
+  }
+
+  option = {
+    name = EVT_8232004_C
+country_event =  { id = 8232010 days = 1 } country_event =  { id = 8232011 days = 1 } country_event =  { id = 8232044 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8232005
+  title = EVT_8232005_NAME
+  desc = EVT_8232005_DESC
+  picture = "nwo2_schuman_declaration"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LUX
+    year = 1950
+    has_global_flag = event_fired_8232000
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232005 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232005_A
+
+  }
+
+  option = {
+    name = EVT_8232005_B
+relation = { who = FRA value = 50 } relation = { who = ITA value = 50 } relation = { who = BEL value = 50 } relation = { who = GER value = 50 } relation = { who = LUX value = 50 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
+  }
+
+  option = {
+    name = EVT_8232005_C
+country_event =  { id = 8232044 days = 1 } country_event =  { id = 8232021 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8232010
+  title = EVT_8232010_NAME
+  desc = EVT_8232010_DESC
+  picture = "nwo2_european_federation"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1951
+    has_global_flag = event_fired_8232004
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232010 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8232010_A
+relation = { who = ITA value = 100 } relation = { who = BEL value = 100 } relation = { who = GER value = 100 } create_vassal = ITA create_vassal = BEL create_vassal = GER country_event =  { id = 8232040 days = 1 } country_event = 8232051 country_event = 8232052 country_event = 8232053 country_event = 8232054 country_event = 8232055 
+  }
+}
+country_event = {
+  id = 8232011
+  title = EVT_8232011_NAME
+  desc = EVT_8232011_DESC
+  picture = "nwo2_european_federation"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1951
+    has_global_flag = event_fired_8232005
+    has_global_flag = cold_war
+    LUX = { ai = yes }
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232011 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8232011_A
+relation = { who = LUX value = 100 } create_vassal = LUX country_event = 8232056 
+  }
+}
+country_event = {
+  id = 8232020
+  title = EVT_8232020_NAME
+  desc = EVT_8232020_DESC
+  picture = "nwo2_united_states_of_europe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1956
+    has_global_flag = event_fired_8232010
+    exists = NET
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232020 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8232020_A
+relation = { who = GER value = 50 } relation = { who = ITA value = 50 } relation = { who = BEL value = 50 } relation = { who = NET value = 50 } relation = { who = LUX value = 50 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
+  }
+
+  option = {
+    name = EVT_8232020_B
+
+  }
+
+  option = {
+    name = EVT_8232020_C
+release_vassal = GER release_vassal = ITA release_vassal = BEL release_vassal = NET release_vassal = LUX relation = { who = GER value = -100 } relation = { who = ITA value = -100 } relation = { who = BEL value = -100 } relation = { who = NET value = -100 } relation = { who = LUX value = -100 } country_event =  { id = 8232021 days = 1 } country_event =  { id = 8232022 days = 1 } country_event =  { id = 8232023 days = 1 } country_event =  { id = 8232024 days = 1 } country_event =  { id = 8232025 days = 1 } country_event =  { id = 8232030 days = 1 } country_event =  { id = 8232031 days = 1 } country_event =  { id = 8232032 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 2.5 }
+  }
+}
+country_event = {
+  id = 8232021
+  title = EVT_8232021_NAME
+  desc = EVT_8232021_DESC
+  picture = "nwo2_united_states_of_europe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1956
+    has_global_flag = event_fired_8232020
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232021 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8232021_A
+relation = { who = FRA value = 50 } relation = { who = ITA value = 50 } relation = { who = BEL value = 50 } relation = { who = NET value = 50 } relation = { who = LUX value = 50 } 
+  }
+
+  option = {
+    name = EVT_8232021_B
+
+  }
+
+  option = {
+    name = EVT_8232021_C
+overlord = { release_vassal = THIS } country_event =  { id = 8232022 days = 1 } country_event =  { id = 8232023 days = 1 } country_event =  { id = 8232024 days = 1 } country_event =  { id = 8232025 days = 1 } country_event =  { id = 8232030 days = 1 } country_event =  { id = 8232031 days = 1 } country_event =  { id = 8232032 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 2.5 }
+  }
+}
+country_event = {
+  id = 8232022
+  title = EVT_8232022_NAME
+  desc = EVT_8232022_DESC
+  picture = "nwo2_united_states_of_europe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1956
+    has_global_flag = event_fired_8232020
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232022 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8232022_A
+relation = { who = FRA value = 50 } relation = { who = GER value = 50 } relation = { who = BEL value = 50 } relation = { who = NET value = 50 } relation = { who = LUX value = 50 } 
+  }
+
+  option = {
+    name = EVT_8232022_B
+
+  }
+
+  option = {
+    name = EVT_8232022_C
+overlord = { release_vassal = THIS } country_event =  { id = 8232021 days = 1 } country_event =  { id = 8232023 days = 1 } country_event =  { id = 8232024 days = 1 } country_event =  { id = 8232025 days = 1 } country_event =  { id = 8232030 days = 1 } country_event =  { id = 8232031 days = 1 } country_event =  { id = 8232032 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 2.5 }
+  }
+}
+country_event = {
+  id = 8232023
+  title = EVT_8232023_NAME
+  desc = EVT_8232023_DESC
+  picture = "nwo2_united_states_of_europe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1956
+    has_global_flag = event_fired_8232020
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232023 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8232023_A
+relation = { who = FRA value = 50 } relation = { who = ITA value = 50 } relation = { who = GER value = 50 } relation = { who = NET value = 50 } relation = { who = LUX value = 50 } 
+  }
+
+  option = {
+    name = EVT_8232023_B
+
+  }
+
+  option = {
+    name = EVT_8232023_C
+overlord = { release_vassal = THIS } country_event =  { id = 8232022 days = 1 } country_event =  { id = 8232021 days = 1 } country_event =  { id = 8232024 days = 1 } country_event =  { id = 8232025 days = 1 } country_event =  { id = 8232030 days = 1 } country_event =  { id = 8232031 days = 1 } country_event =  { id = 8232032 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 2.5 }
+  }
+}
+country_event = {
+  id = 8232024
+  title = EVT_8232024_NAME
+  desc = EVT_8232024_DESC
+  picture = "nwo2_united_states_of_europe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1956
+    has_global_flag = event_fired_8232020
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232024 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8232024_A
+relation = { who = FRA value = 50 } relation = { who = ITA value = 50 } relation = { who = BEL value = 50 } relation = { who = GER value = 50 } relation = { who = LUX value = 50 } 
+  }
+
+  option = {
+    name = EVT_8232024_B
+
+  }
+
+  option = {
+    name = EVT_8232024_C
+overlord = { release_vassal = THIS } country_event =  { id = 8232022 days = 1 } country_event =  { id = 8232023 days = 1 } country_event =  { id = 8232021 days = 1 } country_event =  { id = 8232025 days = 1 } country_event =  { id = 8232030 days = 1 } country_event =  { id = 8232031 days = 1 } country_event =  { id = 8232032 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 2.5 }
+  }
+}
+country_event = {
+  id = 8232025
+  title = EVT_8232025_NAME
+  desc = EVT_8232025_DESC
+  picture = "nwo2_united_states_of_europe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LUX
+    year = 1956
+    has_global_flag = event_fired_8232020
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8232025 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8232025_A
+relation = { who = FRA value = 50 } relation = { who = ITA value = 50 } relation = { who = BEL value = 50 } relation = { who = NET value = 50 } relation = { who = GER value = 50 } 
+  }
+
+  option = {
+    name = EVT_8232025_B
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8232025_C
+overlord = { release_vassal = THIS } country_event =  { id = 8232031 days = 1 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8232030
+  title = EVT_8232030_NAME
+  desc = EVT_8232030_DESC
+  picture = "nwo2_united_states_of_europe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1956
+    has_global_flag = event_fired_8232025
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8232030 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8232030_A
+inherit = GER inherit = ITA inherit = BEL inherit = NET 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          FRA = { vassal_of = LUX }
+
+        }
+inherit = LUX 
+      }
+country_event = 8232031 
+  }
+}
+country_event = {
+  id = 8232031
+  title = EVT_8232031_NAME
+  desc = EVT_8232031_NAME
+  picture = "nwo2_united_states_of_europe"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8232031 }
+
+  option = {
+    name = EVT_8232031_A
+change_tag = XEU 
+  }
+}
+country_event = {
+  id = 8232040
+  title = EVT_8232040_NAME
+  desc = EVT_8232040_DESC
+  picture = "nwo2_european_coal_and_steel_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1952
+    OR = {
+    exists = LUX
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8232040 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8232040_A
+add_country_modifier = { name = dh_energypool duration = 365 }add_country_modifier = { name = dh_metalpool duration = 365 }
+  }
+
+  option = {
+    name = EVT_8232040_B
+relation = { who = GER value = -50 } relation = { who = ITA value = -50 } relation = { who = BEL value = -50 } relation = { who = NET value = -50 } relation = { who = LUX value = -50 } country_event =  { id = 8232050 days = 1 } 
+  }
+}
+country_event = {
+  id = 8232041
+  title = EVT_8232041_NAME
+  desc = EVT_8232041_DESC
+  picture = "nwo2_european_coal_and_steel_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1952
+    has_global_flag = event_fired_8232040
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8232041 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232041_A
+add_country_modifier = { name = dh_energypool duration = 365 }add_country_modifier = { name = dh_metalpool duration = 365 }
+  }
+
+  option = {
+    name = EVT_8232041_B
+relation = { who = FRA value = -50 } relation = { who = ITA value = -50 } relation = { who = BEL value = -50 } relation = { who = NET value = -50 } relation = { who = GER value = -50 } country_event =  { id = 8232050 days = 1 } 
+  }
+}
+country_event = {
+  id = 8232042
+  title = EVT_8232042_NAME
+  desc = EVT_8232042_DESC
+  picture = "nwo2_european_coal_and_steel_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1952
+    has_global_flag = event_fired_8232040
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8232042 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232042_A
+add_country_modifier = { name = dh_energypool duration = 365 }add_country_modifier = { name = dh_metalpool duration = 365 }
+  }
+
+  option = {
+    name = EVT_8232042_B
+relation = { who = FRA value = -50 } relation = { who = GER value = -50 } relation = { who = BEL value = -50 } relation = { who = NET value = -50 } relation = { who = LUX value = -50 } country_event =  { id = 8232050 days = 1 } 
+  }
+}
+country_event = {
+  id = 8232043
+  title = EVT_8232043_NAME
+  desc = EVT_8232043_DESC
+  picture = "nwo2_european_coal_and_steel_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1952
+    has_global_flag = event_fired_8232040
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8232043 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232043_A
+add_country_modifier = { name = dh_energypool duration = 365 }add_country_modifier = { name = dh_metalpool duration = 365 }
+  }
+
+  option = {
+    name = EVT_8232043_B
+relation = { who = FRA value = -50 } relation = { who = ITA value = -50 } relation = { who = GER value = -50 } relation = { who = NET value = -50 } relation = { who = LUX value = -50 } country_event =  { id = 8232050 days = 1 } 
+  }
+}
+country_event = {
+  id = 8232044
+  title = EVT_8232044_NAME
+  desc = EVT_8232044_DESC
+  picture = "nwo2_european_coal_and_steel_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1952
+    has_global_flag = event_fired_8232040
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8232044 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232044_A
+add_country_modifier = { name = dh_energypool duration = 365 }add_country_modifier = { name = dh_metalpool duration = 365 }
+  }
+
+  option = {
+    name = EVT_8232044_B
+relation = { who = FRA value = -50 } relation = { who = ITA value = -50 } relation = { who = BEL value = -50 } relation = { who = GER value = -50 } relation = { who = LUX value = -50 } country_event =  { id = 8232050 days = 1 } 
+  }
+}
+country_event = {
+  id = 8232045
+  title = EVT_8232045_NAME
+  desc = EVT_8232045_DESC
+  picture = "nwo2_european_coal_and_steel_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LUX
+    year = 1952
+    has_global_flag = event_fired_8232040
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8232045 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232045_A
+add_country_modifier = { name = dh_energypool duration = 365 }add_country_modifier = { name = dh_metalpool duration = 365 }
+  }
+
+  option = {
+    name = EVT_8232045_B
+relation = { who = FRA value = -50 } relation = { who = ITA value = -50 } relation = { who = BEL value = -50 } relation = { who = NET value = -50 } relation = { who = GER value = -50 } 
+  }
+}
+country_event = {
+  id = 8232050
+  title = EVT_8232050_NAME
+  desc = EVT_8232050_DESC
+  picture = "nwo2_european_economic_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1957
+    OR = {
+    exists = LUX
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8232050 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8232050_A
+relation = { who = GER value = 200 } relation = { who = ITA value = 200 } relation = { who = BEL value = 200 } relation = { who = NET value = 200 } relation = { who = LUX value = 200 } 
+  }
+
+  option = {
+    name = EVT_8232050_B
+relation = { who = GER value = -50 } relation = { who = ITA value = -50 } relation = { who = BEL value = -50 } relation = { who = NET value = -50 } relation = { who = LUX value = -50 } country_event =  { id = 8232051 days = 1 } country_event =  { id = 8232052 days = 1 } country_event =  { id = 8232053 days = 1 } country_event =  { id = 8232054 days = 1 } country_event =  { id = 8232055 days = 1 } country_event =  { id = 8232056 days = 1 } 
+  }
+}
+country_event = {
+  id = 8232051
+  title = EVT_8232051_NAME
+  desc = EVT_8232051_DESC
+  picture = "nwo2_european_economic_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1957
+    has_global_flag = event_fired_8232050
+  }
+  immediate = { set_global_flag = event_fired_8232051 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232051_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8232052
+  title = EVT_8232052_NAME
+  desc = EVT_8232052_DESC
+  picture = "nwo2_european_economic_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1957
+    has_global_flag = event_fired_8232050
+  }
+  immediate = { set_global_flag = event_fired_8232052 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232052_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8232053
+  title = EVT_8232053_NAME
+  desc = EVT_8232053_DESC
+  picture = "nwo2_european_economic_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1957
+    has_global_flag = event_fired_8232050
+  }
+  immediate = { set_global_flag = event_fired_8232053 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232053_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8232054
+  title = EVT_8232054_NAME
+  desc = EVT_8232054_DESC
+  picture = "nwo2_european_economic_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1957
+    has_global_flag = event_fired_8232050
+  }
+  immediate = { set_global_flag = event_fired_8232054 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232054_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8232055
+  title = EVT_8232055_NAME
+  desc = EVT_8232055_DESC
+  picture = "nwo2_european_economic_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1957
+    has_global_flag = event_fired_8232050
+  }
+  immediate = { set_global_flag = event_fired_8232055 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232055_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8232056
+  title = EVT_8232056_NAME
+  desc = EVT_8232056_DESC
+  picture = "nwo2_european_economic_community"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LUX
+    year = 1957
+    has_global_flag = event_fired_8232050
+  }
+  immediate = { set_global_flag = event_fired_8232056 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8232056_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}

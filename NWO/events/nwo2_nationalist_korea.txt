@@ -1,0 +1,524 @@
+country_event = {
+  id = 8008101
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1949
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008101 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Chae Byong Duk" personality = energetic background = no_background }define_general = { name = "Ri Jae Sun" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008102
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1951
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008102 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Chae Byong Duk" personality = energetic background = no_background }define_general = { name = "Emperor Gojong" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008103
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1953
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008103 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }define_general = { name = "Chae Byong Duk" personality = energetic background = no_background }define_general = { name = "Ji Cheong Cheon" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Hwang Hak Soo" personality = energetic background = no_background }define_general = { name = "Kim Dong Sham" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8008104
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1955
+  }
+  immediate = { set_global_flag = event_fired_8008104 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Kim Gyu Myeon" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008105
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1959
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008105 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Chae Byong Duk" personality = energetic background = no_background }define_general = { name = "Kim Gyu Myeon" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Hwang Hak Soo" personality = energetic background = no_background }define_general = { name = "Kim Dong Sham" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8008106
+  title = EVT_8008106_NAME
+  desc = EVT_8008106_DESC
+  picture = "nwo2_korean_april_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1960
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008106 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008106_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }define_general = { name = "Kim Gyung Cheon" personality = energetic background = no_background }define_general = { name = "Emperor Gojong" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008107
+  title = EVT_8008107_NAME
+  desc = EVT_8008107_DESC
+  picture = "nwo2_korean_5_16_coup"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1961
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008107 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008107_A
+any_pop = { militancy = 1.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Kim Gyung Cheon" personality = energetic background = no_background }define_general = { name = "Lee Jhang Nyeong" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008108
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1963
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008108 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Lee Shang Jeong" personality = energetic background = no_background }define_general = { name = "Oh Ha Mook" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008109
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1970
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008109 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Hong Sa Ik" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008110
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1975
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008110 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Kim Seok Won" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008111
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1979
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008111 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Ahn Chang Nham" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008112
+  title = EVT_8008112_NAME
+  desc = EVT_8008112_DESC
+  picture = "nwo2_republic_of_korea_authoritarianism"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1980
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008112 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8008112_A
+any_pop = { militancy = 0.7 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }define_general = { name = "Seo Whal Bo" personality = energetic background = no_background }define_general = { name = "Shin Yong Wook" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008113
+  title = EVT_8008113_NAME
+  desc = EVT_8008113_DESC
+  picture = "nwo2_republic_of_korea_authoritarianism"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1981
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008113 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8008113_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Choi Yong Deok" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008114
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1982
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008114 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Lee Young Moo" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008115
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1983
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008115 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Shin Soon Seong" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008116
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1984
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008116 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Min Hyung Sik" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008117
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1986
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008117 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Yang Se Bong" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008118
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1987
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008118 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Lee Bong Eui" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008119
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1989
+  }
+  immediate = { set_global_flag = event_fired_8008119 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }define_general = { name = "Shin Seong Mo" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8008120
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1990
+  }
+  immediate = { set_global_flag = event_fired_8008120 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8008121
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8008121 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8008122
+  title = EVT_8008122_NAME
+  desc = EVT_8008122_DESC
+  picture = "nwo2_republic_of_korea_authoritarianism"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1972
+  }
+  immediate = { set_global_flag = event_fired_8008122 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008122_A
+any_pop = { militancy = -1.0 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
+  }
+}
+country_event = {
+  id = 8008123
+  title = EVT_8008123_NAME
+  desc = EVT_8008123_DESC
+  picture = "nwo2_republic_of_korea_democracy"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1987
+  }
+  immediate = { set_global_flag = event_fired_8008123 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008123_A
+any_pop = { militancy = -1.0 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.35 } } }
+  }
+}

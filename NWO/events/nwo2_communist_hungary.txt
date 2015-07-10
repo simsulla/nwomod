@@ -1,0 +1,428 @@
+country_event = {
+  id = 8021301
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1945
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021301 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021302
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1947
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021302 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Babics" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8021303
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1951
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021303 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Baumann" personality = energetic background = no_background }define_general = { name = "Szurmay" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8021304
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1952
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021304 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Baumann" personality = energetic background = no_background }define_general = { name = "Bor" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8021305
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1954
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021305 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = OK
+define_general = { name = "Debrцdy" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8021306
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1955
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021306 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021307
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1956
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021307 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Debrцdy" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8021308
+  title = EVT_8021308_NAME
+  desc = EVT_8021308_DESC
+  picture = "nwo2_hungarian_revolution_1956_victory"
+
+  trigger = {
+    tag = HUN
+  }
+  immediate = { set_global_flag = event_fired_8021308 }
+
+  option = {
+    name = EVT_8021308_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_8021308_B
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }set_global_flag = lower_soviet_bloc_coherence country_event = 8225001 
+  }
+}
+country_event = {
+  id = 8021309
+  title = EVT_8021309_NAME
+  desc = EVT_8021309_DESC
+  picture = "nwo2_hungarian_revolution_1956_aftermath"
+
+  trigger = {
+    tag = HUN
+  }
+  immediate = { set_global_flag = event_fired_8021309 }
+
+  option = {
+    name = EVT_8021309_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }set_global_flag = raise_soviet_bloc_coherence country_event = 8225000 
+  }
+}
+country_event = {
+  id = 8021310
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1960
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021310 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021311
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1964
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021311 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021312
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1966
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021312 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021313
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1974
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021313 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021314
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1986
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021314 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021315
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1987
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021315 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021316
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1999
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021316 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8021317
+  title = EVT_8021317_NAME
+  desc = EVT_8021317_DESC
+  picture = "nwo2_hungarian_communist_party"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1950
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021317 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8021317_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.65 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.65 } } }
+  }
+}
+country_event = {
+  id = 8021318
+  title = EVT_8021318_NAME
+  desc = EVT_8021318_DESC
+  picture = "nwo2_rajk_trial"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1949
+    OR = {
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8021318 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8021318_A
+any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8021319
+  title = EVT_8021319_NAME
+  desc = EVT_8021319_DESC
+  picture = "nwo2_hungarian_round_table"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1991
+    has_global_flag = autumn_of_nations
+  }
+  immediate = { set_global_flag = event_fired_8021319 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8021319_A
+any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.25 } } }
+  }
+
+  option = {
+    name = EVT_8021319_B
+any_pop = { militancy = 2.5 }country_event =  { id = 8021320 days = 1 } 
+  }
+}
+country_event = {
+  id = 8021320
+  title = EVT_8021320_NAME
+  desc = EVT_8021320_DESC
+  picture = "nwo2_hungary_1989"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1991
+    has_global_flag = event_fired_8021319
+    has_global_flag = autumn_of_nations
+  }
+  immediate = { set_global_flag = event_fired_8021320 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8021320_A
+change_tag = HUN country_event = 8006905 
+  }
+
+  option = {
+    name = EVT_8021320_B
+any_pop = { militancy = 2.5 }overlord = { release_vassal = THIS } 
+  }
+}

@@ -1,0 +1,163 @@
+country_event = {
+  id = 8018201
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YEM
+    year = 1961
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8018201 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	define_general = { name = "Ahmad al Hamid" personality = "energetic" background = "no_background" }
+	government = presidential_dictatorship
+  }
+}
+country_event = {
+  id = 8018202
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YEM
+    year = 1962
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8018202 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	define_general = { name = "Muhammad al-Badr" personality = "energetic" background = "no_background" }
+	government = presidential_dictatorship
+  }
+}
+country_event = {
+  id = 8018203
+  title = EVT_8018203_NAME
+  desc = EVT_8018203_DESC
+  picture = "nwo2_abdullah_al_sallal"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YEM
+    year = 1966
+  }
+  immediate = { set_global_flag = event_fired_8018203 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8018203_A
+	define_general = { name = "Abdullah al-Sallal" personality = "energetic" background = "no_background" }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+	government = nationalist_dictatorship
+  }
+}
+country_event = {
+  id = 8018204
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YEM
+    year = 1973
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8018204 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	define_general = { name = "Abdul Rahman al-Iryani" personality = "energetic" background = "no_background" }
+
+  }
+}
+country_event = {
+  id = 8018205
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YEM
+    year = 1976
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8018205 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	define_general = { name = "Ibrahim al-Hamdi" personality = "energetic" background = "no_background" }
+
+  }
+}
+country_event = {
+  id = 8018206
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YEM
+    year = 1977
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8018206 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	define_general = { name = "Ahmad al-Ghashm" personality = "energetic" background = "no_background" }
+
+  }
+}
+country_event = {
+  id = 8018207
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YEM
+    year = 1978
+    NOT = {
+		government = democracy
+		government = hms_government
+		government = proletarian_dictatorship
+    }
+  }
+  immediate = { set_global_flag = event_fired_8018207 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+}

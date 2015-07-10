@@ -1,0 +1,108 @@
+country_event = {
+  id = 8012901
+  title = EVT_8012901_NAME
+  desc = EVT_8012901_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAA
+    year = 1963
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8012901 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_DEATH
+
+  }
+}
+country_event = {
+  id = 8012902
+  title = EVT_DEATH_NAME
+  desc = EVT_DEATH_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAA
+    year = 1974
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8012902 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_DEATH
+
+  }
+}
+country_event = {
+  id = 8012903
+  title = EVT_DEATH_NAME
+  desc = EVT_DEATH_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAA
+    year = 1981
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8012903 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_DEATH
+
+  }
+}
+country_event = {
+  id = 8012904
+  title = EVT_DEATH_NAME
+  desc = EVT_DEATH_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAA
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8012904 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_DEATH
+
+  }
+}
+country_event = {
+  id = 8012905
+  title = EVT_8012905_NAME
+  desc = EVT_8012905_DESC
+  picture = "nwo2_king_saud"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAA
+    year = 1963
+  }
+  immediate = { set_global_flag = event_fired_8012905 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8012905_A
+any_pop = { militancy = 1.5 }
+  }
+}

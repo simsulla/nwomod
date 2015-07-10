@@ -1,0 +1,2199 @@
+country_event = {
+  id = 8320000
+  title = EVT_8320000_NAME
+  desc = EVT_8320000_DESC
+  picture = "nwo2_okinawa"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    OR = {
+    JAP = { war_with = USA }
+    JAP = { war_with = RUS }
+    JAP = { war_with = CHI }
+    }
+    NOT = {
+    AND = {
+    any_owned_province = { province_id = 1956 }    any_owned_province = { province_id = 1785 }    any_owned_province = { province_id = 2024 }    }
+    }
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    }
+  }
+  immediate = { set_global_flag = event_fired_8320000 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8320000_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320000_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+any_pop = { militancy = 0.3 }
+  }
+
+  option = {
+    name = EVT_8320000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+set_global_flag = the_jewel_voice 
+  }
+}
+country_event = {
+  id = 8320001
+  title = EVT_8320001_NAME
+  desc = EVT_8320001_DESC
+  picture = "nwo2_atomic_bomb"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    OR = {
+    JAP = { war_with = USA }
+    JAP = { war_with = RUS }
+    JAP = { war_with = CHI }
+    }
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    has_global_flag = event_fired_8233103
+    }
+    has_global_flag = event_fired_8233101
+    }
+    }
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    }
+  }
+  immediate = { set_global_flag = event_fired_8320001 }
+
+  mean_time_to_happen = { days = 5 }
+
+  option = {
+    name = EVT_8320001_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320001_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+any_pop = { militancy = 0.7 }
+  }
+
+  option = {
+    name = EVT_8320001_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320001_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+set_global_flag = the_jewel_voice 
+  }
+}
+country_event = {
+  id = 8320002
+  title = EVT_8320002_NAME
+  desc = EVT_8320002_DESC
+  picture = "nwo2_atomic_bomb"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    OR = {
+    JAP = { war_with = USA }
+    JAP = { war_with = RUS }
+    JAP = { war_with = CHI }
+    }
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    has_global_flag = event_fired_8233105
+    }
+    has_global_flag = event_fired_8233103
+    }
+    }
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    }
+  }
+  immediate = { set_global_flag = event_fired_8320002 }
+
+  mean_time_to_happen = { days = 5 }
+
+  option = {
+    name = EVT_8320002_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320002_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+any_pop = { militancy = 1.0 }
+  }
+
+  option = {
+    name = EVT_8320002_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320002_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+set_global_flag = the_jewel_voice 
+  }
+}
+country_event = {
+  id = 8320003
+  title = EVT_8320003_NAME
+  desc = EVT_8320003_DESC
+  picture = "nwo2_atomic_bomb"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    OR = {
+    JAP = { war_with = USA }
+    JAP = { war_with = RUS }
+    JAP = { war_with = CHI }
+    }
+    OR = {
+    AND = {
+    }
+    AND = {
+    has_global_flag = event_fired_8233105
+    }
+    }
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    }
+  }
+  immediate = { set_global_flag = event_fired_8320003 }
+
+  mean_time_to_happen = { days = 5 }
+
+  option = {
+    name = EVT_8320003_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320003_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+any_pop = { militancy = 1.6 }
+  }
+
+  option = {
+    name = EVT_8320003_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320003_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+set_global_flag = the_jewel_voice 
+  }
+}
+country_event = {
+  id = 8320004
+  title = EVT_8320004_NAME
+  desc = EVT_8320004_DESC
+  picture = "nwo2_invasion_of_japan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    NOT = {
+    JAP_1649 = { owned_by = THIS } 
+    }
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    }
+  }
+  immediate = { set_global_flag = event_fired_8320004 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8320004_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320004_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+any_pop = { militancy = 2.0 }
+  }
+
+  option = {
+    name = EVT_8320004_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      JAP = { war_with = RUS }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8320004_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#    }
+set_global_flag = the_jewel_voice 
+  }
+}
+country_event = {
+  id = 8320005
+  title = EVT_8320005_NAME
+  desc = EVT_8320005_DESC
+  picture = "nwo2_invasion_of_japan"
+  fire_only_once = yes
+
+  trigger = {
+    year = 1963
+    NOT = {
+    exists = JAP
+    }
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    }
+    any_owned_province = { province_id = 2019 }  }
+  immediate = { set_global_flag = event_fired_8320005 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8320005_A
+set_global_flag = the_jewel_voice 
+  }
+}
+country_event = {
+  id = 8320010
+  title = EVT_8320010_NAME
+  desc = EVT_8320010_DESC
+  picture = "nwo2_ketsugo"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    OR = {
+    has_global_flag = event_fired_8320004
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    }
+  }
+  immediate = { set_global_flag = event_fired_8320010 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8320010_A
+
+  }
+
+  option = {
+    name = EVT_8320010_B
+
+  }
+}
+country_event = {
+  id = 8320011
+  title = EVT_8320011_NAME
+  desc = EVT_8320011_DESC
+  picture = "nwo2_kyujo_incident"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    OR = {
+    has_global_flag = event_fired_8320004
+    }
+    has_global_flag = the_jewel_voice
+  }
+  immediate = { set_global_flag = event_fired_8320011 }
+
+  mean_time_to_happen = { days = 2 }
+
+  option = {
+    name = EVT_8320011_A
+any_pop = { militancy = -0.1 }
+  }
+
+  option = {
+    name = EVT_8320011_B
+clr_global_flag = the_jewel_voice any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }define_general = { name = "Abe" personality = energetic background = no_background }define_general = { name = "Okuyama" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8320030
+  title = EVT_8320030_NAME
+  desc = EVT_8320030_DESC
+  picture = "nwo2_invasion_of_manchuria"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    RUS = { war_with = GER }
+    RUS = { war_with = JAP }
+    RUS = { war_with = ENG }
+    RUS = { war_with = USA }
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8320030 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8320030_A
+
+  }
+
+  option = {
+    name = EVT_8320030_B
+relation = { who = JAP value = 100 } country_event =  { id = 8320031 days = 1 } 
+  }
+}
+country_event = {
+  id = 8320031
+  title = EVT_8320031_NAME
+  desc = EVT_8320031_DESC
+  picture = "nwo2_invasion_of_manchuria"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = the_jewel_voice
+    RUS = { war_with = JAP }
+    RUS = { war_with = ENG }
+    RUS = { war_with = USA }
+    }
+    has_global_flag = cold_war
+     has_global_flag = event_fired_8320030
+  }
+  immediate = { set_global_flag = event_fired_8320031 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8320031_A
+war = JAP 
+  }
+
+  option = {
+    name = EVT_8320031_B
+any_pop = { militancy = 0.8 }country_event =  { id = 8320032 days = 1 } 
+  }
+}
+country_event = {
+  id = 8320032
+  title = EVT_8320032_NAME
+  desc = EVT_8320032_DESC
+  picture = "nwo2_invasion_of_manchuria"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    OR = {
+    any_owned_province = { province_id = 610 }    any_owned_province = { province_id = 1077 }    }
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    has_global_flag = event_fired_8320031
+    IMN = { ai = yes }
+    RUS = { war_with = JAP }
+  }
+  immediate = { set_global_flag = event_fired_8320032 }
+
+  mean_time_to_happen = { days = 2 }
+
+  option = {
+    name = EVT_8320032_A
+inherit = MCK inherit = IMN 
+  }
+}
+country_event = {
+  id = 8321000
+  title = EVT_8321000_NAME
+  desc = EVT_8321000_DESC
+  picture = "nwo2_anti_japanese"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8320000
+     has_global_flag = event_fired_8320001
+     has_global_flag = event_fired_8320002
+     has_global_flag = event_fired_8320003
+     has_global_flag = event_fired_8320004
+     has_global_flag = event_fired_8320005
+    }
+    }
+    has_global_flag = the_jewel_voice
+  }
+  immediate = { set_global_flag = event_fired_8321000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8321000_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          MCK = { ai = yes }
+
+        }
+inherit = MCK 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          IMN = { ai = yes }
+
+        }
+inherit = IMN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          QNG = { ai = yes }
+
+        }
+inherit = QNG 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          KMT = { ai = yes }
+
+        }
+inherit = KMT 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          THI = { ai = yes }
+
+        }
+inherit = THI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          CHI = { ai = yes }
+          CHI = { vassal_of = JAP }
+
+        }
+inherit = CHI 
+      }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Abe" personality = energetic background = no_background }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = CHI
+          }
+          CHI_1616 = { owned_by = THIS } 
+
+        }
+release = CHI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          any_owned_province = { province_id = 1547 }          any_owned_province = { province_id = 926 }          }
+          NOT = {
+          exists = SVI
+          }
+
+        }
+release = SVI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = LUA
+          }
+          any_owned_province = { province_id = ERROR }
+        }
+release = LUA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = CAM
+          }
+          any_owned_province = { province_id = 1339 }
+        }
+release = CAM 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = THI
+          }
+          SIA_1392 = { owned_by = THIS } 
+
+        }
+release = THI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = MSY
+          }
+          ENG_1384 = { owned_by = THIS } 
+
+        }
+release = MSY 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SAR
+          }
+          any_owned_province = { province_id = 890 }
+        }
+release = SAR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SNG
+          }
+          any_owned_province = { province_id = 1077 }
+        }
+release = SNG 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = IDO
+          }
+          NET_1413 = { owned_by = THIS } 
+
+        }
+release = IDO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = AST
+          }
+          EGY_921 = { owned_by = THIS } 
+
+        }
+release = AST 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = HND
+          }
+          ENG_1236 = { owned_by = THIS } 
+
+        }
+release = HND 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SRL
+          }
+          ENG_1321 = { owned_by = THIS } 
+
+        }
+release = SRL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = BUR
+          }
+          AND = {
+          BUR_1330 = { owned_by = THIS } 
+          BUR_1334 = { owned_by = THIS } 
+          }
+
+        }
+release = BUR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          RUS_2590 = { owned_by = THIS } 
+          PAN_1227 = { owned_by = THIS } 
+          }
+          NOT = {
+          exists = PAK
+          }
+
+        }
+release = PAK 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = PHI
+          }
+          SPA_1455 = { owned_by = THIS } 
+
+        }
+release = PHI 
+      }
+1380 = { secede_province = THIS } 1382 = { secede_province = THIS } 1383 = { secede_province = THIS } 1381 = { secede_province = THIS } Korea = { secede_province = THIS } 
+  }
+}
+country_event = {
+  id = 8321001
+  title = EVT_8321001_NAME
+  desc = EVT_8321001_DESC
+  picture = "nwo2_anzac"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = PHI tag = NZL tag = AST tag = SAF tag = ENG }
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8321000
+  }
+  immediate = { set_global_flag = event_fired_8321001 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8321001_A
+1228 = { secede_province = ENG } 1231 = { secede_province = ENG } 1230 = { secede_province = ENG } 1232 = { secede_province = ENG } 2673 = { secede_province = ENG } 1264 = { secede_province = ENG } 1265 = { secede_province = ENG } 1266 = { secede_province = ENG } 1267 = { secede_province = ENG } 1268 = { secede_province = ENG } 1269 = { secede_province = ENG } 2656 = { secede_province = ENG } 2701 = { secede_province = ENG } 1291 = { secede_province = ENG } 1296 = { secede_province = ENG } 1294 = { secede_province = ENG } 1295 = { secede_province = ENG } 1292 = { secede_province = ENG } 1293 = { secede_province = ENG } 2694 = { secede_province = ENG } 1236 = { secede_province = ENG } 1237 = { secede_province = ENG } 2651 = { secede_province = ENG } 1326 = { secede_province = ENG } 1327 = { secede_province = ENG } 1591 = { secede_province = ENG } 1592 = { secede_province = ENG } 1589 = { secede_province = ENG } 1238 = { secede_province = ENG } 1328 = { secede_province = ENG } 12801281 = { secede_province = ENG } 1282 = { secede_province = ENG } 1279 = { secede_province = ENG } 1261 = { secede_province = ENG } 1262 = { secede_province = ENG } 1263 = { secede_province = ENG } Deccar = { secede_province = ENG } 1297 = { secede_province = ENG } 1299 = { secede_province = ENG } 1300 = { secede_province = ENG } 1301 = { secede_province = ENG } 1303 = { secede_province = ENG } 2655 = { secede_province = ENG } Western_Ghat = { secede_province = ENG } 2666 = { secede_province = ENG } 1070 = { secede_province = ENG } 1254 = { secede_province = ENG } 2637 = { secede_province = ENG } 1298 = { secede_province = ENG } 1380 = { secede_province = ENG } 1321 = { secede_province = ENG } 1322 = { secede_province = ENG } 1323 = { secede_province = ENG } 1324 = { secede_province = ENG } 1325 = { secede_province = ENG } 2128 = { secede_province = ENG } 1339 = { secede_province = ENG } 1342 = { secede_province = ENG } 1346 = { secede_province = USA } 1353 = { secede_province = USA } 1347 = { secede_province = USA } 1351 = { secede_province = USA } 1348 = { secede_province = USA } 1349 = { secede_province = USA } Kra_Peninsula = { secede_province = USA } 1547 = { secede_province = USA } 2639 = { secede_province = USA } 1619 = { secede_province = USA } 1380 = { secede_province = USA } 157 = { secede_province = USA } 1823 = { secede_province = USA } 1547 = { secede_province = ENG } 1823 = { secede_province = ENG } 1438 = { secede_province = ENG } 1398 = { secede_province = USA } 1404 = { secede_province = USA } 1403 = { secede_province = USA } 1410 = { secede_province = USA } 1399 = { secede_province = USA } West_Java = { secede_province = USA } East_Java = { secede_province = USA } 1430 = { secede_province = USA } 1431 = { secede_province = USA } 1432 = { secede_province = USA } 1435 = { secede_province = USA } 1434 = { secede_province = USA } 1433 = { secede_province = USA } 1436 = { secede_province = USA } 1437 = { secede_province = USA } 1447 = { secede_province = USA } 1450 = { secede_province = USA } 1449 = { secede_province = USA } 1451 = { secede_province = USA } 1448 = { secede_province = USA } 1438 = { secede_province = USA } 1442 = { secede_province = USA } 1440 = { secede_province = USA } 1441 = { secede_province = USA } Flores_Timor = { secede_province = USA } 1426 = { secede_province = USA } 1427 = { secede_province = USA } 1428 = { secede_province = USA } Babo = { secede_province = USA } Sarmi = { secede_province = USA } Agats = { secede_province = USA } 1298 = { secede_province = USA } 1334 = { secede_province = USA } 610 = { secede_province = ENG } 610 = { secede_province = USA } Philippines = { secede_province = USA } 
+  }
+}
+country_event = {
+  id = 8321002
+  title = EVT_8321002_NAME
+  desc = EVT_8321002_DESC
+  picture = "nwo2_japan_end_of_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8321000
+  }
+  immediate = { set_global_flag = event_fired_8321002 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8321002_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      JAP = { war_with = USA }
+#      any_owned_province = { province_id = 2019 }#      }
+#      NOT = {
+#      OR = {
+#      AND = {
+#      NOT = {
+#      }
+#      }
+#      AND = {
+#      NOT = {
+#      JAP = { war_with = USA }
+#      }
+#      JAP = { war_with = RUS }
+#      }
+#      JAP_1649 = { owned_by = RUS } 
+#      any_owned_province = { province_id = 2019 }#      }
+#      }
+#      NOT = {
+#      OR = {
+#      AND = {
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#      }
+#      AND = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#      NOT = {
+#      JAP = { war_with = USA }
+#      }
+#      JAP = { war_with = CHI }
+#      }
+#      JAP_1649 = { owned_by = CHI } 
+#      any_owned_province = { province_id = 2019 }#      }
+#      }
+#    }
+2491 = { secede_province = USA } 2492 = { secede_province = USA } 2493 = { secede_province = USA } 2494 = { secede_province = USA } 2495 = { secede_province = USA } 2496 = { secede_province = USA } 1452 = { secede_province = USA } 1453 = { secede_province = USA } 1454 = { secede_province = USA } 1560 = { secede_province = USA } Indonesia = { secede_province = USA } 610 = { secede_province = USA } 2579 = { secede_province = USA } 2519 = { secede_province = USA } 2518 = { secede_province = USA } 2522 = { secede_province = USA } Philippines = { secede_province = USA } 169 = { secede_province = USA } 170 = { secede_province = USA } 172 = { secede_province = USA } 171 = { secede_province = USA } Korea = { secede_province = USA } 1380 = { secede_province = USA } 1382 = { secede_province = USA } 1383 = { secede_province = USA } 1381 = { secede_province = USA } country_event = 8321004 
+  }
+
+  option = {
+    name = EVT_8321002_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      AND = {
+#      NOT = {
+#      }
+#      }
+#      AND = {
+#      NOT = {
+#      JAP = { war_with = USA }
+#      }
+#      JAP = { war_with = RUS }
+#      }
+#      JAP_1649 = { owned_by = RUS } 
+#      any_owned_province = { province_id = 2019 }#      }
+#      NOT = {
+#      OR = {
+#      AND = {
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#      }
+#      AND = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#      NOT = {
+#      JAP = { war_with = USA }
+#      }
+#      JAP = { war_with = CHI }
+#      }
+#      JAP_1649 = { owned_by = CHI } 
+#      any_owned_province = { province_id = 2019 }#      }
+#      }
+#    }
+2491 = { secede_province = RUS } 2492 = { secede_province = RUS } 2493 = { secede_province = RUS } 2494 = { secede_province = RUS } 2495 = { secede_province = RUS } 2496 = { secede_province = RUS } 1452 = { secede_province = RUS } 1453 = { secede_province = RUS } 1454 = { secede_province = RUS } 1560 = { secede_province = RUS } Indonesia = { secede_province = RUS } 610 = { secede_province = RUS } 2579 = { secede_province = RUS } 2519 = { secede_province = RUS } 2518 = { secede_province = RUS } 2522 = { secede_province = RUS } Philippines = { secede_province = RUS } 169 = { secede_province = RUS } 170 = { secede_province = RUS } 172 = { secede_province = RUS } 171 = { secede_province = RUS } Korea = { secede_province = RUS } 1380 = { secede_province = RUS } 1382 = { secede_province = RUS } 1383 = { secede_province = RUS } 1381 = { secede_province = RUS } country_event = 8321005 
+  }
+
+  option = {
+    name = EVT_8321002_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      AND = {
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#      }
+#      AND = {
+#      NOT = {
+#      JAP = { war_with = RUS }
+#      }
+#      NOT = {
+#      JAP = { war_with = USA }
+#      }
+#      JAP = { war_with = CHI }
+#      }
+#      JAP_1649 = { owned_by = CHI } 
+#      any_owned_province = { province_id = 2019 }#      }
+#    }
+end_war = CHI end_war = RUS end_war = USA end_war = ENG end_war = FRA end_war = NET end_war = AST end_war = NZL end_war = LEB end_war = SYR end_war = OMA end_war = YEM end_war = YUG end_war = POL end_war = PHI define_general = { name = "Cho" personality = energetic background = no_background }define_general = { name = "Honjo" personality = energetic background = no_background }define_general = { name = "Kakuta" personality = energetic background = no_background }define_general = { name = "Koizumi" personality = energetic background = no_background }define_general = { name = "Komatsubara" personality = energetic background = no_background }define_general = { name = "Nagumo" personality = energetic background = no_background }define_general = { name = "Ogawa" personality = energetic background = no_background }define_general = { name = "Sugiyama" personality = energetic background = no_background }define_general = { name = "Tanaka  Shizuichi" personality = energetic background = no_background }define_general = { name = "Onishi" personality = energetic background = no_background }2491 = { secede_province = CHI } 2492 = { secede_province = CHI } 2493 = { secede_province = CHI } 2494 = { secede_province = CHI } 2495 = { secede_province = CHI } 2496 = { secede_province = CHI } 1452 = { secede_province = CHI } 1453 = { secede_province = CHI } 1454 = { secede_province = CHI } 1560 = { secede_province = CHI } Indonesia = { secede_province = CHI } 610 = { secede_province = CHI } 2579 = { secede_province = CHI } 2519 = { secede_province = CHI } 2518 = { secede_province = CHI } 2522 = { secede_province = CHI } Philippines = { secede_province = CHI } 169 = { secede_province = CHI } 170 = { secede_province = CHI } 172 = { secede_province = CHI } 171 = { secede_province = CHI } Korea = { secede_province = CHI } 1380 = { secede_province = CHI } 1382 = { secede_province = CHI } 1383 = { secede_province = CHI } 1381 = { secede_province = CHI } country_event = 8321006 
+  }
+}
+country_event = {
+  id = 8321004
+  title = EVT_8321004_NAME
+  desc = EVT_8321004_DESC
+  picture = "nwo2_surrender_japanese_representatives"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8321004 }
+
+  option = {
+    name = EVT_8321004_A
+create_vassal = JAP 
+  }
+}
+country_event = {
+  id = 8321005
+  title = EVT_8321005_NAME
+  desc = EVT_8321005_DESC
+  picture = "nwo2_surrender_japanese_representatives"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8321005 }
+
+  option = {
+    name = EVT_8321005_A
+create_vassal = JAP 
+  }
+}
+country_event = {
+  id = 8321006
+  title = EVT_8321006_NAME
+  desc = EVT_8321006_DESC
+  picture = "nwo2_surrender_japanese_representatives"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8321006 }
+
+  option = {
+    name = EVT_8321006_A
+create_vassal = JAP 
+  }
+}
+country_event = {
+  id = 8322000
+  title = EVT_8322000_NAME
+  desc = EVT_8322000_DESC
+  picture = "nwo2_japanese_surrender"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAP
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8321000
+  }
+  immediate = { set_global_flag = event_fired_8322000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8322000_A
+610 = { secede_province = USA } 2579 = { secede_province = USA } 2519 = { secede_province = USA } 2518 = { secede_province = USA } 2522 = { secede_province = USA } 658 = { secede_province = USA } 2524 = { secede_province = USA } 2526 = { secede_province = USA } 2623 = { secede_province = USA } 686 = { secede_province = USA } 2534 = { secede_province = USA } 2536 = { secede_province = USA } 2539 = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8321002
+
+        }
+Ryukyusland = { secede_province = USA } 
+      }
+1064 = { secede_province = RUS } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8321003
+
+        }
+Hokkaido = { secede_province = RUS } 
+      }
+Taiwan = { secede_province = CHI } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8321004
+
+        }
+Ryukyusland = { secede_province = CHI } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8321003
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8321003
+          }
+
+        }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8321003
+          }
+
+        }
+
+      }
+1585 = { remove_core =  THIS }2572 = { remove_core =  THIS }1915 = { remove_core =  THIS }1510 = { remove_core =  THIS }117 = { remove_core =  THIS }1452 = { remove_core =  THIS }639 = { remove_core =  THIS }2528 = { remove_core =  THIS }2539 = { remove_core =  THIS }2532535 = { remove_core =  THIS }1060 = { remove_core =  THIS }1438 = { remove_core =  THIS }1430 = { remove_core =  THIS }1447 = { remove_core =  THIS }795 = { remove_core =  THIS }1439 = { remove_core =  THIS }1886 = { remove_core =  THIS }2534 = { remove_core =  THIS }1654 = { remove_core =  THIS }1064 = { remove_core =  THIS }1298 = { remove_core =  THIS }1334 = { remove_core =  THIS }774 = { remove_core =  THIS }1380 = { remove_core =  THIS }1042 = { remove_core =  THIS }1061182 = { remove_core =  THIS }1189 = { remove_core =  THIS }1 = { remove_core =  THIS }2648 = { remove_core =  THIS }1077 = { remove_core =  THIS }1075 = { remove_core =  THIS }1547 = { remove_core =  THIS }1823 = { remove_core =  THIS }610 = { remove_core =  THIS }
+  }
+}
+country_event = {
+  id = 8322001
+  title = EVT_8322001_NAME
+  desc = EVT_8322001_DESC
+  picture = "nwo2_liberation_of_asia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8321000
+  }
+  immediate = { set_global_flag = event_fired_8322001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8322001_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = CHI
+          }
+          CHI_1616 = { owned_by = THIS } 
+
+        }
+release = CHI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = THI
+          }
+          any_owned_province = { province_id = 1915 }
+        }
+release = THI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = IDO
+          }
+          NET_1413 = { owned_by = THIS } 
+
+        }
+release = IDO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = AST
+          }
+          EGY_921 = { owned_by = THIS } 
+
+        }
+release = AST 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = RAJ
+          }
+          ENG_1236 = { owned_by = THIS } 
+
+        }
+release = RAJ 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = PHI
+          }
+          SPA_1455 = { owned_by = THIS } 
+
+        }
+release = PHI 
+      }
+
+  }
+}
+country_event = {
+  id = 8322002
+  title = EVT_8322002_NAME
+  desc = EVT_8322002_DESC
+  picture = "nwo2_liberation_of_asia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8321000
+  }
+  immediate = { set_global_flag = event_fired_8322002 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8322002_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = CHI
+          }
+          CHI_1616 = { owned_by = THIS } 
+
+        }
+release = CHI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          any_owned_province = { province_id = 1547 }          any_owned_province = { province_id = 926 }          }
+          NOT = {
+          exists = SVI
+          }
+
+        }
+release = SVI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = LUA
+          }
+          any_owned_province = { province_id = ERROR }
+        }
+release = LUA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = CAM
+          }
+          any_owned_province = { province_id = 1339 }
+        }
+release = CAM 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = THI
+          }
+          SIA_1392 = { owned_by = THIS } 
+
+        }
+release = THI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SAR
+          }
+          any_owned_province = { province_id = 890 }
+        }
+release = SAR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = BRU
+          }
+          any_owned_province = { province_id = 890 }
+        }
+release = BRU 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SNG
+          }
+          any_owned_province = { province_id = 1077 }
+        }
+release = SNG 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = MSY
+          }
+          ENG_1384 = { owned_by = THIS } 
+
+        }
+release = MSY 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = IDO
+          }
+          NET_1413 = { owned_by = THIS } 
+
+        }
+release = IDO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = AST
+          }
+          EGY_921 = { owned_by = THIS } 
+
+        }
+release = AST 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = HND
+          }
+          ENG_1236 = { owned_by = THIS } 
+
+        }
+release = HND 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SRL
+          }
+          ENG_1321 = { owned_by = THIS } 
+
+        }
+release = SRL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = BUR
+          }
+          AND = {
+          BUR_1330 = { owned_by = THIS } 
+          BUR_1334 = { owned_by = THIS } 
+          }
+
+        }
+release = BUR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          RUS_2590 = { owned_by = THIS } 
+          PAN_1227 = { owned_by = THIS } 
+          }
+          NOT = {
+          exists = PAK
+          }
+
+        }
+release = PAK 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = PHI
+          }
+          SPA_1455 = { owned_by = THIS } 
+
+        }
+release = PHI 
+      }
+
+  }
+}
+country_event = {
+  id = 8322003
+  title = EVT_8322003_NAME
+  desc = EVT_8322003_DESC
+  picture = "nwo2_liberation_of_asia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8321000
+  }
+  immediate = { set_global_flag = event_fired_8322003 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8322003_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          any_owned_province = { province_id = 1547 }          any_owned_province = { province_id = 926 }          }
+          NOT = {
+          exists = DAI
+          }
+
+        }
+release = DAI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = LUA
+          }
+          any_owned_province = { province_id = ERROR }
+        }
+release = LUA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = CAM
+          }
+          any_owned_province = { province_id = 1339 }
+        }
+release = CAM 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = THI
+          }
+          SIA_1392 = { owned_by = THIS } 
+
+        }
+release = THI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SAR
+          }
+          any_owned_province = { province_id = 890 }
+        }
+release = SAR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = BRU
+          }
+          any_owned_province = { province_id = 890 }
+        }
+release = BRU 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SNG
+          }
+          any_owned_province = { province_id = 1077 }
+        }
+release = SNG 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = MSY
+          }
+          ENG_1384 = { owned_by = THIS } 
+
+        }
+release = MSY 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = IDO
+          }
+          NET_1413 = { owned_by = THIS } 
+
+        }
+release = IDO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = AST
+          }
+          EGY_921 = { owned_by = THIS } 
+
+        }
+release = AST 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = HND
+          }
+          ENG_1236 = { owned_by = THIS } 
+
+        }
+release = HND 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = SRL
+          }
+          ENG_1321 = { owned_by = THIS } 
+
+        }
+release = SRL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = BUR
+          }
+          AND = {
+          BUR_1330 = { owned_by = THIS } 
+          BUR_1334 = { owned_by = THIS } 
+          }
+
+        }
+release = BUR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          RUS_2590 = { owned_by = THIS } 
+          PAN_1227 = { owned_by = THIS } 
+          }
+          NOT = {
+          exists = PAK
+          }
+
+        }
+release = PAK 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = PHI
+          }
+          SPA_1455 = { owned_by = THIS } 
+
+        }
+release = PHI 
+      }
+
+  }
+}
+country_event = {
+  id = 8322004
+  title = EVT_8322004_NAME
+  desc = EVT_8322004_DESC
+  picture = "nwo2_macarthur_with_hirohito"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = event_fired_8321004
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8322000
+  }
+  immediate = { set_global_flag = event_fired_8322004 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8322004_A
+relation = { who = JAP value = 100 } 
+  }
+
+  option = {
+    name = EVT_8322004_B
+relation = { who = JAP value = -200 } country_event = 8322007 
+  }
+}
+country_event = {
+  id = 8322005
+  title = EVT_8322005_NAME
+  desc = EVT_8322005_DESC
+  picture = "nwo2_macarthur_with_hirohito"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    has_global_flag = event_fired_8321005
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8322000
+  }
+  immediate = { set_global_flag = event_fired_8322005 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8322005_A
+relation = { who = JAP value = -200 } country_event = 8322008 
+  }
+
+  option = {
+    name = EVT_8322005_B
+relation = { who = JAP value = 100 } 
+  }
+}
+country_event = {
+  id = 8322006
+  title = EVT_8322006_NAME
+  desc = EVT_8322006_DESC
+  picture = "nwo2_macarthur_with_hirohito"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    has_global_flag = event_fired_8321006
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8322000
+  }
+  immediate = { set_global_flag = event_fired_8322006 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8322006_A
+relation = { who = JAP value = -50 } country_event = 8322009 
+  }
+
+  option = {
+    name = EVT_8322006_B
+relation = { who = JAP value = 100 } 
+  }
+}
+country_event = {
+  id = 8322007
+  title = EVT_8322007_NAME
+  desc = EVT_8322007_DESC
+  picture = "nwo2_kijuro_shidehara"
+
+  trigger = {
+    tag = JAP
+  }
+  immediate = { set_global_flag = event_fired_8322007 }
+
+  option = {
+    name = EVT_8322007_A
+any_pop = { militancy = 1.5 }define_general = { name = "Osawa" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8322008
+  title = EVT_8322008_NAME
+  desc = EVT_8322008_DESC
+  picture = "nwo2_sanzo_nosaka"
+
+  trigger = {
+    tag = JAP
+  }
+  immediate = { set_global_flag = event_fired_8322008 }
+
+  option = {
+    name = EVT_8322008_A
+any_pop = { militancy = 2.5 }define_general = { name = "Aotsu" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8322009
+  title = EVT_8322009_NAME
+  desc = EVT_8322009_DESC
+  picture = "nwo2_prince_takamatsu"
+
+  trigger = {
+    tag = JAP
+  }
+  immediate = { set_global_flag = event_fired_8322009 }
+
+  option = {
+    name = EVT_8322009_A
+any_pop = { militancy = 0.5 }define_general = { name = "Oshima H." personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8323000
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8322000
+  }
+  immediate = { set_global_flag = event_fired_8323000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+country_event = 8323001 country_event = 8323002 country_event = 8323003 
+  }
+}
+country_event = {
+  id = 8323001
+  title = EVT_8323001_NAME
+  desc = EVT_8323001_DESC
+  picture = "nwo2_map_of_asia"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8323001 }
+
+  option = {
+    name = EVT_8323001_A
+1228 = { secede_province = RAJ } 1231 = { secede_province = RAJ } 1230 = { secede_province = RAJ } 1232 = { secede_province = RAJ } 2673 = { secede_province = RAJ } 1228 = { secede_province = PAK } 1231 = { secede_province = PAK } 1230 = { secede_province = PAK } 1232 = { secede_province = PAK } 2673 = { secede_province = PAK } 1228 = { secede_province = HND } 1231 = { secede_province = HND } 1230 = { secede_province = HND } 1232 = { secede_province = HND } 2673 = { secede_province = HND } 1228 = { secede_province = ENG } 1231 = { secede_province = ENG } 1230 = { secede_province = ENG } 1232 = { secede_province = ENG } 2673 = { secede_province = ENG } 1264 = { secede_province = RAJ } 1265 = { secede_province = RAJ } 1266 = { secede_province = RAJ } 1267 = { secede_province = RAJ } 1268 = { secede_province = RAJ } 1269 = { secede_province = RAJ } 2656 = { secede_province = RAJ } 2701 = { secede_province = RAJ } 1264 = { secede_province = HND } 1265 = { secede_province = HND } 1266 = { secede_province = HND } 1267 = { secede_province = HND } 1268 = { secede_province = HND } 1269 = { secede_province = HND } 2656 = { secede_province = HND } 2701 = { secede_province = HND } 1264 = { secede_province = ENG } 1265 = { secede_province = ENG } 1266 = { secede_province = ENG } 1267 = { secede_province = ENG } 1268 = { secede_province = ENG } 1269 = { secede_province = ENG } 2656 = { secede_province = ENG } 2701 = { secede_province = ENG } 1291 = { secede_province = RAJ } 1296 = { secede_province = RAJ } 1294 = { secede_province = RAJ } 1295 = { secede_province = RAJ } 1292 = { secede_province = RAJ } 1293 = { secede_province = RAJ } 2694 = { secede_province = RAJ } 1291 = { secede_province = HND } 1296 = { secede_province = HND } 1294 = { secede_province = HND } 1295 = { secede_province = HND } 1292 = { secede_province = HND } 1293 = { secede_province = HND } 2694 = { secede_province = HND } 1291 = { secede_province = ENG } 1296 = { secede_province = ENG } 1294 = { secede_province = ENG } 1295 = { secede_province = ENG } 1292 = { secede_province = ENG } 1293 = { secede_province = ENG } 2694 = { secede_province = ENG } 1236 = { secede_province = RAJ } 1237 = { secede_province = RAJ } 2651 = { secede_province = RAJ } 1236 = { secede_province = HND } 1237 = { secede_province = HND } 2651 = { secede_province = HND } 1236 = { secede_province = ENG } 1237 = { secede_province = ENG } 2651 = { secede_province = ENG } 1326 = { secede_province = RAJ } 1327 = { secede_province = RAJ } 1591 = { secede_province = RAJ } 1592 = { secede_province = RAJ } 1589 = { secede_province = RAJ } 1238 = { secede_province = RAJ } 1328 = { secede_province = RAJ } 1326 = { secede_province = HND } 1327 = { secede_province = HND } 1591 = { secede_province = HND } 1592 = { secede_province = HND } 1589 = { secede_province = HND } 1238 = { secede_province = HND } 1328 = { secede_province = HND } 1326 = { secede_province = ENG } 1327 = { secede_province = ENG } 1591 = { secede_province = ENG } 1592 = { secede_province = ENG } 1589 = { secede_province = ENG } 1238 = { secede_province = ENG } 1328 = { secede_province = ENG } 12801281 = { secede_province = RAJ } 1282 = { secede_province = RAJ } 1279 = { secede_province = RAJ } 12801281 = { secede_province = HND } 1282 = { secede_province = HND } 1279 = { secede_province = HND } 12801281 = { secede_province = ENG } 1282 = { secede_province = ENG } 1279 = { secede_province = ENG } 1261 = { secede_province = RAJ } 1262 = { secede_province = RAJ } 1263 = { secede_province = RAJ } 1261 = { secede_province = HND } 1262 = { secede_province = HND } 1263 = { secede_province = HND } 1261 = { secede_province = ENG } 1262 = { secede_province = ENG } 1263 = { secede_province = ENG } Deccar = { secede_province = RAJ } Deccar = { secede_province = HND } Deccar = { secede_province = ENG } 1297 = { secede_province = RAJ } 1299 = { secede_province = RAJ } 1300 = { secede_province = RAJ } 1301 = { secede_province = RAJ } 1303 = { secede_province = RAJ } 2655 = { secede_province = RAJ } 1297 = { secede_province = HND } 1299 = { secede_province = HND } 1300 = { secede_province = HND } 1301 = { secede_province = HND } 1303 = { secede_province = HND } 2655 = { secede_province = HND } 1297 = { secede_province = ENG } 1299 = { secede_province = ENG } 1300 = { secede_province = ENG } 1301 = { secede_province = ENG } 1303 = { secede_province = ENG } 2655 = { secede_province = ENG } Western_Ghat = { secede_province = RAJ } Western_Ghat = { secede_province = HND } Western_Ghat = { secede_province = ENG } 2666 = { secede_province = RAJ } 1070 = { secede_province = RAJ } 1254 = { secede_province = RAJ } 2637 = { secede_province = RAJ } 2666 = { secede_province = HND } 1070 = { secede_province = HND } 1254 = { secede_province = HND } 2637 = { secede_province = HND } 2666 = { secede_province = ENG } 1070 = { secede_province = ENG } 1254 = { secede_province = ENG } 2637 = { secede_province = ENG } 1547 = { secede_province = RAJ } 1547 = { secede_province = PAK } 1547 = { secede_province = HND } 1298 = { secede_province = RAJ } 1298 = { secede_province = PAK } 1298 = { secede_province = HND } 1298 = { secede_province = ENG } 1380 = { secede_province = RAJ } 1380 = { secede_province = PAK } 1380 = { secede_province = HND } 1380 = { secede_province = ENG } 1321 = { secede_province = SRL } 1322 = { secede_province = SRL } 1323 = { secede_province = SRL } 1324 = { secede_province = SRL } 1325 = { secede_province = SRL } 2128 = { secede_province = SRL } 1321 = { secede_province = RAJ } 1322 = { secede_province = RAJ } 1323 = { secede_province = RAJ } 1324 = { secede_province = RAJ } 1325 = { secede_province = RAJ } 2128 = { secede_province = RAJ } 1321 = { secede_province = HND } 1322 = { secede_province = HND } 1323 = { secede_province = HND } 1324 = { secede_province = HND } 1325 = { secede_province = HND } 2128 = { secede_province = HND } 1321 = { secede_province = ENG } 1322 = { secede_province = ENG } 1323 = { secede_province = ENG } 1324 = { secede_province = ENG } 1325 = { secede_province = ENG } 2128 = { secede_province = ENG } 1380 = { secede_province = CHI } 1382 = { secede_province = CHI } 1383 = { secede_province = CHI } 1381 = { secede_province = CHI } 1339 = { secede_province = ENG } 1342 = { secede_province = ENG } 1346 = { secede_province = THI } 1353 = { secede_province = THI } 1347 = { secede_province = THI } 1351 = { secede_province = THI } 1348 = { secede_province = THI } 1349 = { secede_province = THI } Kra_Peninsula = { secede_province = THI } 1547 = { secede_province = THI } 1823 = { secede_province = THI } 1380 = { secede_province = CAM } 1298 = { secede_province = CAM } 1619 = { secede_province = LUA } 1380 = { secede_province = LUA } 1823 = { secede_province = LUA } 2639 = { secede_province = LUA } 2639 = { secede_province = FRA } 1619 = { secede_province = DAI } 1619 = { secede_province = FRA } 1380 = { secede_province = DAI } 1380 = { secede_province = FRA } 157 = { secede_province = DAI } 157 = { secede_province = FRA } 1823 = { secede_province = DAI } 1823 = { secede_province = FRA } 1298 = { secede_province = DAI } 1298 = { secede_province = FRA } 1547 = { secede_province = MSY } 1823 = { secede_province = MSY } 1547 = { secede_province = ENG } 1823 = { secede_province = ENG } 1438 = { secede_province = ENG } 1398 = { secede_province = NET } 1404 = { secede_province = NET } 1403 = { secede_province = NET } 1410 = { secede_province = NET } 1399 = { secede_province = NET } 1398 = { secede_province = IDO } 1404 = { secede_province = IDO } 1403 = { secede_province = IDO } 1410 = { secede_province = IDO } 1399 = { secede_province = IDO } West_Java = { secede_province = NET } West_Java = { secede_province = IDO } East_Java = { secede_province = NET } East_Java = { secede_province = IDO } 1430 = { secede_province = NET } 1431 = { secede_province = NET } 1432 = { secede_province = NET } 1435 = { secede_province = NET } 1434 = { secede_province = NET } 1433 = { secede_province = NET } 1436 = { secede_province = NET } 1437 = { secede_province = NET } 1430 = { secede_province = IDO } 1431 = { secede_province = IDO } 1432 = { secede_province = IDO } 1435 = { secede_province = IDO } 1434 = { secede_province = IDO } 1433 = { secede_province = IDO } 1436 = { secede_province = IDO } 1437 = { secede_province = IDO } 1447 = { secede_province = NET } 1450 = { secede_province = NET } 1449 = { secede_province = NET } 1451 = { secede_province = NET } 1448 = { secede_province = NET } 1447 = { secede_province = IDO } 1450 = { secede_province = IDO } 1449 = { secede_province = IDO } 1451 = { secede_province = IDO } 1448 = { secede_province = IDO } 1438 = { secede_province = NET } 1442 = { secede_province = NET } 1440 = { secede_province = NET } 1441 = { secede_province = NET } 1438 = { secede_province = IDO } 1442 = { secede_province = IDO } 1440 = { secede_province = IDO } 1441 = { secede_province = IDO } Flores_Timor = { secede_province = NET } Flores_Timor = { secede_province = IDO } 1426 = { secede_province = NET } 1427 = { secede_province = NET } 1428 = { secede_province = NET } 1426 = { secede_province = IDO } 1427 = { secede_province = IDO } 1428 = { secede_province = IDO } Babo = { secede_province = NET } Babo = { secede_province = IDO } Sarmi = { secede_province = NET } Sarmi = { secede_province = IDO } Agats = { secede_province = NET } Agats = { secede_province = IDO } 1298 = { secede_province = NET } 1298 = { secede_province = IDO } 610 = { secede_province = NET } 610 = { secede_province = IDO } 1334 = { secede_province = NET } 1334 = { secede_province = IDO } 610 = { secede_province = SAR } 610 = { secede_province = ENG } Philippines = { secede_province = PHI } 
+  }
+}
+country_event = {
+  id = 8323002
+  title = EVT_8323002_NAME
+  desc = EVT_8323002_DESC
+  picture = "nwo2_map_of_asia"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8323002 }
+
+  option = {
+    name = EVT_8323002_A
+1228 = { secede_province = PAK } 1231 = { secede_province = PAK } 1230 = { secede_province = PAK } 1232 = { secede_province = PAK } 2673 = { secede_province = PAK } 1228 = { secede_province = HND } 1231 = { secede_province = HND } 1230 = { secede_province = HND } 1232 = { secede_province = HND } 2673 = { secede_province = HND } 1264 = { secede_province = HND } 1265 = { secede_province = HND } 1266 = { secede_province = HND } 1267 = { secede_province = HND } 1268 = { secede_province = HND } 1269 = { secede_province = HND } 2656 = { secede_province = HND } 2701 = { secede_province = HND } 1291 = { secede_province = HND } 1296 = { secede_province = HND } 1294 = { secede_province = HND } 1295 = { secede_province = HND } 1292 = { secede_province = HND } 1293 = { secede_province = HND } 2694 = { secede_province = HND } 1236 = { secede_province = HND } 1237 = { secede_province = HND } 2651 = { secede_province = HND } 1326 = { secede_province = HND } 1327 = { secede_province = HND } 1591 = { secede_province = HND } 1592 = { secede_province = HND } 1589 = { secede_province = HND } 1238 = { secede_province = HND } 1328 = { secede_province = HND } 12801281 = { secede_province = HND } 1282 = { secede_province = HND } 1279 = { secede_province = HND } 1261 = { secede_province = HND } 1262 = { secede_province = HND } 1263 = { secede_province = HND } Deccar = { secede_province = HND } 1297 = { secede_province = HND } 1299 = { secede_province = HND } 1300 = { secede_province = HND } 1301 = { secede_province = HND } 1303 = { secede_province = HND } 2655 = { secede_province = HND } Western_Ghat = { secede_province = HND } 2666 = { secede_province = HND } 1070 = { secede_province = HND } 1254 = { secede_province = HND } 2637 = { secede_province = HND } 1547 = { secede_province = PAK } 1547 = { secede_province = HND } 1298 = { secede_province = PAK } 1298 = { secede_province = HND } 1380 = { secede_province = PAK } 1380 = { secede_province = HND } 1321 = { secede_province = SRL } 1322 = { secede_province = SRL } 1323 = { secede_province = SRL } 1324 = { secede_province = SRL } 1325 = { secede_province = SRL } 2128 = { secede_province = SRL } 1321 = { secede_province = HND } 1322 = { secede_province = HND } 1323 = { secede_province = HND } 1324 = { secede_province = HND } 1325 = { secede_province = HND } 2128 = { secede_province = HND } 1380 = { secede_province = CHI } 1382 = { secede_province = CHI } 1383 = { secede_province = CHI } 1381 = { secede_province = CHI } 1339 = { secede_province = BUR } 1342 = { secede_province = BUR } 1346 = { secede_province = THI } 1353 = { secede_province = THI } 1347 = { secede_province = THI } 1351 = { secede_province = THI } 1348 = { secede_province = THI } 1349 = { secede_province = THI } Kra_Peninsula = { secede_province = THI } 1547 = { secede_province = THI } 1823 = { secede_province = THI } 1380 = { secede_province = CAM } 1298 = { secede_province = CAM } 1619 = { secede_province = LUA } 1380 = { secede_province = LUA } 1823 = { secede_province = LUA } 2639 = { secede_province = LUA } 1619 = { secede_province = SVI } 1619 = { secede_province = DAI } 1380 = { secede_province = SVI } 1380 = { secede_province = DAI } 157 = { secede_province = SVI } 157 = { secede_province = DAI } 1823 = { secede_province = SVI } 1823 = { secede_province = DAI } 1298 = { secede_province = SVI } 1298 = { secede_province = DAI } 1547 = { secede_province = MSY } 1823 = { secede_province = MSY } 1438 = { secede_province = SNG } 1398 = { secede_province = IDO } 1404 = { secede_province = IDO } 1403 = { secede_province = IDO } 1410 = { secede_province = IDO } 1399 = { secede_province = IDO } West_Java = { secede_province = IDO } East_Java = { secede_province = IDO } 1430 = { secede_province = IDO } 1431 = { secede_province = IDO } 1432 = { secede_province = IDO } 1435 = { secede_province = IDO } 1434 = { secede_province = IDO } 1433 = { secede_province = IDO } 1436 = { secede_province = IDO } 1437 = { secede_province = IDO } 1447 = { secede_province = IDO } 1450 = { secede_province = IDO } 1449 = { secede_province = IDO } 1451 = { secede_province = IDO } 1448 = { secede_province = IDO } 1438 = { secede_province = IDO } 1442 = { secede_province = IDO } 1440 = { secede_province = IDO } 1441 = { secede_province = IDO } Flores_Timor = { secede_province = IDO } 1426 = { secede_province = IDO } 1427 = { secede_province = IDO } 1428 = { secede_province = IDO } Babo = { secede_province = IDO } Sarmi = { secede_province = IDO } Agats = { secede_province = IDO } 1298 = { secede_province = IDO } 610 = { secede_province = IDO } 1334 = { secede_province = IDO } 610 = { secede_province = SAR } 610 = { secede_province = BRU } Philippines = { secede_province = PHI } 
+  }
+}
+country_event = {
+  id = 8323003
+  title = EVT_8323003_NAME
+  desc = EVT_8323003_DESC
+  picture = "nwo2_map_of_asia"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8323003 }
+
+  option = {
+    name = EVT_8323003_A
+1228 = { secede_province = RAJ } 1231 = { secede_province = RAJ } 1230 = { secede_province = RAJ } 1232 = { secede_province = RAJ } 2673 = { secede_province = RAJ } 1228 = { secede_province = PAK } 1231 = { secede_province = PAK } 1230 = { secede_province = PAK } 1232 = { secede_province = PAK } 2673 = { secede_province = PAK } 1228 = { secede_province = HND } 1231 = { secede_province = HND } 1230 = { secede_province = HND } 1232 = { secede_province = HND } 2673 = { secede_province = HND } 1228 = { secede_province = ENG } 1231 = { secede_province = ENG } 1230 = { secede_province = ENG } 1232 = { secede_province = ENG } 2673 = { secede_province = ENG } 1264 = { secede_province = RAJ } 1265 = { secede_province = RAJ } 1266 = { secede_province = RAJ } 1267 = { secede_province = RAJ } 1268 = { secede_province = RAJ } 1269 = { secede_province = RAJ } 2656 = { secede_province = RAJ } 2701 = { secede_province = RAJ } 1264 = { secede_province = HND } 1265 = { secede_province = HND } 1266 = { secede_province = HND } 1267 = { secede_province = HND } 1268 = { secede_province = HND } 1269 = { secede_province = HND } 2656 = { secede_province = HND } 2701 = { secede_province = HND } 1264 = { secede_province = ENG } 1265 = { secede_province = ENG } 1266 = { secede_province = ENG } 1267 = { secede_province = ENG } 1268 = { secede_province = ENG } 1269 = { secede_province = ENG } 2656 = { secede_province = ENG } 2701 = { secede_province = ENG } 1291 = { secede_province = RAJ } 1296 = { secede_province = RAJ } 1294 = { secede_province = RAJ } 1295 = { secede_province = RAJ } 1292 = { secede_province = RAJ } 1293 = { secede_province = RAJ } 2694 = { secede_province = RAJ } 1291 = { secede_province = HND } 1296 = { secede_province = HND } 1294 = { secede_province = HND } 1295 = { secede_province = HND } 1292 = { secede_province = HND } 1293 = { secede_province = HND } 2694 = { secede_province = HND } 1291 = { secede_province = ENG } 1296 = { secede_province = ENG } 1294 = { secede_province = ENG } 1295 = { secede_province = ENG } 1292 = { secede_province = ENG } 1293 = { secede_province = ENG } 2694 = { secede_province = ENG } 1236 = { secede_province = RAJ } 1237 = { secede_province = RAJ } 2651 = { secede_province = RAJ } 1236 = { secede_province = HND } 1237 = { secede_province = HND } 2651 = { secede_province = HND } 1236 = { secede_province = ENG } 1237 = { secede_province = ENG } 2651 = { secede_province = ENG } 1326 = { secede_province = RAJ } 1327 = { secede_province = RAJ } 1591 = { secede_province = RAJ } 1592 = { secede_province = RAJ } 1589 = { secede_province = RAJ } 1238 = { secede_province = RAJ } 1328 = { secede_province = RAJ } 1326 = { secede_province = HND } 1327 = { secede_province = HND } 1591 = { secede_province = HND } 1592 = { secede_province = HND } 1589 = { secede_province = HND } 1238 = { secede_province = HND } 1328 = { secede_province = HND } 1326 = { secede_province = ENG } 1327 = { secede_province = ENG } 1591 = { secede_province = ENG } 1592 = { secede_province = ENG } 1589 = { secede_province = ENG } 1238 = { secede_province = ENG } 1328 = { secede_province = ENG } 12801281 = { secede_province = RAJ } 1282 = { secede_province = RAJ } 1279 = { secede_province = RAJ } 12801281 = { secede_province = HND } 1282 = { secede_province = HND } 1279 = { secede_province = HND } 12801281 = { secede_province = ENG } 1282 = { secede_province = ENG } 1279 = { secede_province = ENG } 1261 = { secede_province = RAJ } 1262 = { secede_province = RAJ } 1263 = { secede_province = RAJ } 1261 = { secede_province = HND } 1262 = { secede_province = HND } 1263 = { secede_province = HND } 1261 = { secede_province = ENG } 1262 = { secede_province = ENG } 1263 = { secede_province = ENG } Deccar = { secede_province = RAJ } Deccar = { secede_province = HND } Deccar = { secede_province = ENG } 1297 = { secede_province = RAJ } 1299 = { secede_province = RAJ } 1300 = { secede_province = RAJ } 1301 = { secede_province = RAJ } 1303 = { secede_province = RAJ } 2655 = { secede_province = RAJ } 1297 = { secede_province = HND } 1299 = { secede_province = HND } 1300 = { secede_province = HND } 1301 = { secede_province = HND } 1303 = { secede_province = HND } 2655 = { secede_province = HND } 1297 = { secede_province = ENG } 1299 = { secede_province = ENG } 1300 = { secede_province = ENG } 1301 = { secede_province = ENG } 1303 = { secede_province = ENG } 2655 = { secede_province = ENG } Western_Ghat = { secede_province = RAJ } Western_Ghat = { secede_province = HND } Western_Ghat = { secede_province = ENG } 2666 = { secede_province = RAJ } 1070 = { secede_province = RAJ } 1254 = { secede_province = RAJ } 2637 = { secede_province = RAJ } 2666 = { secede_province = HND } 1070 = { secede_province = HND } 1254 = { secede_province = HND } 2637 = { secede_province = HND } 2666 = { secede_province = ENG } 1070 = { secede_province = ENG } 1254 = { secede_province = ENG } 2637 = { secede_province = ENG } 1547 = { secede_province = RAJ } 1547 = { secede_province = PAK } 1547 = { secede_province = HND } 1298 = { secede_province = RAJ } 1298 = { secede_province = PAK } 1298 = { secede_province = HND } 1298 = { secede_province = ENG } 1380 = { secede_province = RAJ } 1380 = { secede_province = PAK } 1380 = { secede_province = HND } 1380 = { secede_province = ENG } 1321 = { secede_province = SRL } 1322 = { secede_province = SRL } 1323 = { secede_province = SRL } 1324 = { secede_province = SRL } 1325 = { secede_province = SRL } 2128 = { secede_province = SRL } 1321 = { secede_province = RAJ } 1322 = { secede_province = RAJ } 1323 = { secede_province = RAJ } 1324 = { secede_province = RAJ } 1325 = { secede_province = RAJ } 2128 = { secede_province = RAJ } 1321 = { secede_province = HND } 1322 = { secede_province = HND } 1323 = { secede_province = HND } 1324 = { secede_province = HND } 1325 = { secede_province = HND } 2128 = { secede_province = HND } 1321 = { secede_province = ENG } 1322 = { secede_province = ENG } 1323 = { secede_province = ENG } 1324 = { secede_province = ENG } 1325 = { secede_province = ENG } 2128 = { secede_province = ENG } 1339 = { secede_province = BUR } 1342 = { secede_province = BUR } 1339 = { secede_province = RAJ } 1342 = { secede_province = RAJ } 1339 = { secede_province = ENG } 1342 = { secede_province = ENG } 1346 = { secede_province = THI } 1353 = { secede_province = THI } 1347 = { secede_province = THI } 1351 = { secede_province = THI } 1348 = { secede_province = THI } 1349 = { secede_province = THI } Kra_Peninsula = { secede_province = THI } 1547 = { secede_province = THI } 1823 = { secede_province = THI } 1380 = { secede_province = CAM } 1298 = { secede_province = CAM } 1619 = { secede_province = LUA } 1380 = { secede_province = LUA } 1823 = { secede_province = LUA } 2639 = { secede_province = FRA } 2639 = { secede_province = LUA } 1619 = { secede_province = FRA } 1619 = { secede_province = DAI } 1380 = { secede_province = FRA } 1380 = { secede_province = DAI } 157 = { secede_province = FRA } 157 = { secede_province = DAI } 1823 = { secede_province = FRA } 1823 = { secede_province = DAI } 1298 = { secede_province = FRA } 1298 = { secede_province = DAI } 1547 = { secede_province = ENG } 1823 = { secede_province = ENG } 1547 = { secede_province = MSY } 1823 = { secede_province = MSY } 1438 = { secede_province = ENG } 1438 = { secede_province = SNG } 1398 = { secede_province = NET } 1404 = { secede_province = NET } 1403 = { secede_province = NET } 1410 = { secede_province = NET } 1399 = { secede_province = NET } 1398 = { secede_province = IDO } 1404 = { secede_province = IDO } 1403 = { secede_province = IDO } 1410 = { secede_province = IDO } 1399 = { secede_province = IDO } West_Java = { secede_province = NET } West_Java = { secede_province = IDO } East_Java = { secede_province = NET } East_Java = { secede_province = IDO } 1430 = { secede_province = NET } 1431 = { secede_province = NET } 1432 = { secede_province = NET } 1435 = { secede_province = NET } 1434 = { secede_province = NET } 1433 = { secede_province = NET } 1436 = { secede_province = NET } 1437 = { secede_province = NET } 1430 = { secede_province = IDO } 1431 = { secede_province = IDO } 1432 = { secede_province = IDO } 1435 = { secede_province = IDO } 1434 = { secede_province = IDO } 1433 = { secede_province = IDO } 1436 = { secede_province = IDO } 1437 = { secede_province = IDO } 1447 = { secede_province = NET } 1450 = { secede_province = NET } 1449 = { secede_province = NET } 1451 = { secede_province = NET } 1448 = { secede_province = NET } 1447 = { secede_province = IDO } 1450 = { secede_province = IDO } 1449 = { secede_province = IDO } 1451 = { secede_province = IDO } 1448 = { secede_province = IDO } 1438 = { secede_province = NET } 1442 = { secede_province = NET } 1440 = { secede_province = NET } 1441 = { secede_province = NET } 1438 = { secede_province = IDO } 1442 = { secede_province = IDO } 1440 = { secede_province = IDO } 1441 = { secede_province = IDO } Flores_Timor = { secede_province = NET } Flores_Timor = { secede_province = IDO } 1426 = { secede_province = NET } 1427 = { secede_province = NET } 1428 = { secede_province = NET } 1426 = { secede_province = IDO } 1427 = { secede_province = IDO } 1428 = { secede_province = IDO } Babo = { secede_province = NET } Babo = { secede_province = IDO } Sarmi = { secede_province = NET } Sarmi = { secede_province = IDO } Agats = { secede_province = NET } Agats = { secede_province = IDO } 1298 = { secede_province = NET } 1298 = { secede_province = IDO } 610 = { secede_province = NET } 610 = { secede_province = IDO } 1334 = { secede_province = NET } 1334 = { secede_province = IDO } 610 = { secede_province = SAR } 610 = { secede_province = ENG } 610 = { secede_province = BRU } Philippines = { secede_province = PHI } 
+  }
+}
+country_event = {
+  id = 8323004
+  title = EVT_8323004_NAME
+  desc = EVT_8323004_DESC
+  picture = "nwo2_australian_new_guinea"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8323000
+    AST_2528 = { owned_by = THIS } 
+  }
+  immediate = { set_global_flag = event_fired_8323004 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8323004_A
+1452 = { secede_province = AST } 1453 = { secede_province = AST } 1454 = { secede_province = AST } 1560 = { secede_province = AST } 
+  }
+}
+country_event = {
+  id = 8323005
+  title = EVT_8323005_NAME
+  desc = EVT_8323005_DESC
+  picture = "nwo2_dutch_east_india"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1963
+    OR = {
+    NET_1413 = { owned_by = THIS } 
+    AST_2528 = { owned_by = THIS } 
+    }
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8323000
+  }
+  immediate = { set_global_flag = event_fired_8323005 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8323005_A
+release = IDO 1452 = { secede_province = IDO } 1453 = { secede_province = IDO } 1454 = { secede_province = IDO } 1560 = { secede_province = IDO } Indonesia = { secede_province = IDO } 
+  }
+}
+country_event = {
+  id = 8323006
+  title = EVT_8323006_NAME
+  desc = EVT_8323006_DESC
+  picture = "nwo2_indochina"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1963
+    exists = ICU
+    has_global_flag = the_jewel_voice
+    ICU = { ai = yes }
+     has_global_flag = event_fired_8323000
+  }
+  immediate = { set_global_flag = event_fired_8323006 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8323006_A
+inherit = ICU 
+  }
+}
+country_event = {
+  id = 8324000
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8323000
+  }
+  immediate = { set_global_flag = event_fired_8324000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+money = 1 
+  }
+}
+country_event = {
+  id = 8324001
+  title = EVT_8324001_NAME
+  desc = EVT_8324001_DESC
+  picture = "nwo2_postwar_normalization"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = PHI tag = MSY tag = NKO tag = THI tag = IDO tag = SAR tag = SVI tag = LUA tag = DAI tag = BUR tag = KOR }
+    year = 1963
+    NOT = {
+    has_country_flag  = event_8324001
+    }
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8324000
+  }
+  immediate = { set_global_flag = event_fired_8324001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8324001_A
+set_country_flag = event_8324001 any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.7 } } }add_country_modifier = { name = dh_oilpool duration = 365 }add_country_modifier = { name = dh_metalpool duration = 365 }add_country_modifier = { name = dh_energypool duration = 365 }money = 100 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8008101 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8011901 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8018005 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8008401 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8013401 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8002301 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8007303 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8009701 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8012801 
+      }
+
+  }
+}
+country_event = {
+  id = 8325000
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    has_global_flag = the_jewel_voice
+     has_global_flag = event_fired_8324000
+  }
+  immediate = { set_global_flag = event_fired_8325000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+clr_global_flag = the_jewel_voice set_global_flag = cold_war_pacific 
+  }
+}

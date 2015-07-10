@@ -1,0 +1,226 @@
+country_event = {
+  id = 8214001
+  title = EVT_8020210_NAME
+  desc = EVT_8020210_DESC
+  picture = "nwo2_independence_of_burma"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RAJ
+    year = 1950
+    has_global_flag = cold_war_pacific
+    war = no
+    BUR_1334 = { owned_by = THIS } 
+    BUR_1330 = { owned_by = THIS } 
+  }
+  immediate = { set_global_flag = event_fired_8214001 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8020210_A
+release = BUR country_event = 8214002 
+  }
+
+  option = {
+    name = EVT_8020210_B
+any_pop = { militancy = 0.3 }badboy = 10 
+  }
+}
+country_event = {
+  id = 8214002
+  title = EVT_8020211_NAME
+  desc = EVT_8020211_DESC
+  picture = "nwo2_independence_of_burma"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8214002 }
+
+  option = {
+    name = EVT_8020211_A
+create_vassal = BUR country_event = 8214003 
+  }
+}
+country_event = {
+  id = 8214003
+  title = EVT_MILACCESS_NAME
+  desc = EVT_MILACCESS_DESC
+  picture = "nwo2_independence_of_burma"
+
+  trigger = {
+    tag = BUR
+  }
+  immediate = { set_global_flag = event_fired_8214003 }
+
+  option = {
+    name = EVT_MILACCESS_A
+ENG = { military_access = THIS } 
+  }
+}
+country_event = {
+  id = 8214004
+  title = EVT_8020212_NAME
+  desc = EVT_8020212_DESC
+  picture = "nwo2_independence_of_burma"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1999
+    NOT = {
+    has_global_flag = event_8214004
+    }
+    BUR = { vassal_of = ENG }
+  }
+  immediate = { set_global_flag = event_fired_8214004 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8020212_A
+country_event = 8214005 
+  }
+
+  option = {
+    name = EVT_8020212_B
+any_pop = { militancy = 0.5 }badboy = 7 
+  }
+
+  option = {
+    name = EVT_8020212_C
+set_global_flag = event_8214004 any_pop = { militancy = 1.0 }badboy = 15 
+  }
+}
+country_event = {
+  id = 8214005
+  title = EVT_8020213_NAME
+  desc = EVT_8020213_DESC
+  picture = "nwo2_independence_of_burma"
+
+  trigger = {
+    tag = BUR
+  }
+  immediate = { set_global_flag = event_fired_8214005 }
+
+  option = {
+    name = EVT_8020213_A
+overlord = { release_vassal = THIS } 
+  }
+}
+country_event = {
+  id = 8214010
+  title = EVT_8020214_NAME
+  desc = EVT_8020214_DESC
+  picture = "nwo2_ali_jinnah_negotiating"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1999
+    NOT = {
+    exists = HND
+    }
+    exists = RAJ
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8214010 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8020214_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = BUR
+          }
+
+        }
+country_event = 8214001 
+      }
+country_event = 8214011 
+  }
+
+  option = {
+    name = EVT_8020214_B
+country_event = 8214012 
+  }
+
+  option = {
+    name = EVT_8020214_C
+any_pop = { militancy = 0.2 }
+  }
+}
+country_event = {
+  id = 8214011
+  title = EVT_8020215_NAME
+  desc = EVT_8020215_DESC
+  picture = "nwo2_independence_of_india"
+
+  trigger = {
+    tag = RAJ
+  }
+  immediate = { set_global_flag = event_fired_8214011 }
+
+  option = {
+    name = EVT_8020215_A
+release = JAK release = PAK 1077 = { secede_province = PAK } 1298 = { secede_province = PAK } 1547 = { secede_province = PAK } 1380 = { secede_province = PAK } 1491 = { secede_province = PAK } change_tag = HND 
+  }
+}
+country_event = {
+  id = 8214012
+  title = EVT_8020220_NAME
+  desc = EVT_8020220_DESC
+  picture = "nwo2_independence_of_india"
+
+  trigger = {
+    tag = RAJ
+  }
+  immediate = { set_global_flag = event_fired_8214012 }
+
+  option = {
+    name = EVT_8020220_A
+change_tag = HND any_pop = { militancy = 4.0 }1538 = { any_pop = { militancy = 3.0 } }1533 = { any_pop = { militancy = 3.0 } }1532 = { any_pop = { militancy = 3.0 } }1534 = { any_pop = { militancy = 3.0 } }1537 = { any_pop = { militancy = 3.0 } }1530 = { any_pop = { militancy = 3.0 } }1529 = { any_pop = { militancy = 3.0 } }1536 = { any_pop = { militancy = 3.0 } }1539 = { any_pop = { militancy = 3.0 } }1444 = { any_pop = { militancy = 3.0 } }1449 = { any_pop = { militancy = 3.0 } }1439 = { any_pop = { militancy = 3.0 } }1445 = { any_pop = { militancy = 3.0 } }1450 = { any_pop = { militancy = 3.0 } }1540 = { any_pop = { militancy = 3.0 } }1442 = { any_pop = { militancy = 3.0 } }1411 = { any_pop = { militancy = 3.0 } }1406 = { any_pop = { militancy = 3.0 } }1407 = { any_pop = { militancy = 3.0 } }1408 = { any_pop = { militancy = 3.0 } }1409 = { any_pop = { militancy = 3.0 } }1420 = { any_pop = { militancy = 3.0 } }1419 = { any_pop = { militancy = 3.0 } }1415 = { any_pop = { militancy = 3.0 } }1410 = { any_pop = { militancy = 3.0 } }1417 = { any_pop = { militancy = 3.0 } }1416 = { any_pop = { militancy = 3.0 } }1412 = { any_pop = { militancy = 3.0 } }1413 = { any_pop = { militancy = 3.0 } }1418 = { any_pop = { militancy = 3.0 } }1443 = { any_pop = { militancy = 3.0 } }1421 = { any_pop = { militancy = 3.0 } }1458 = { any_pop = { militancy = 3.0 } }1455 = { any_pop = { militancy = 3.0 } }1414 = { any_pop = { militancy = 3.0 } }1440 = { any_pop = { militancy = 3.0 } }1441 = { any_pop = { militancy = 3.0 } }
+  }
+}
+country_event = {
+  id = 8214020
+  title = EVT_8214020_NAME
+  desc = EVT_8214020_DESC
+  picture = "nwo2_independence_of_india"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RAJ
+    year = 1999
+    OR = {
+    NOT = {
+    exists = HND
+    }
+    NOT = {
+    exists = BUR
+    }
+    }
+    has_global_flag = event_fired_8214010
+    exists = RAJ
+  }
+  immediate = { set_global_flag = event_fired_8214020 }
+
+  mean_time_to_happen = { days = 1000 }
+
+  option = {
+    name = EVT_8214020_A
+release = BUR country_event = 8214011 
+  }
+
+  option = {
+    name = EVT_8214020_B
+any_pop = { militancy = 1.0 }badboy = 20 
+  }
+}

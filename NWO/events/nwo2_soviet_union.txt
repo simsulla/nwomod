@@ -1,0 +1,1563 @@
+country_event = {
+  id = 8014200
+  title = EVT_8014200_NAME
+  desc = EVT_8014200_DESC
+  picture = "nwo2_news_paper"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1941
+  }
+  immediate = { set_global_flag = event_fired_8014200 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014200_A
+define_general = { name = "Shtern" personality = energetic background = no_background }define_general = { name = "Loktionov" personality = energetic background = no_background }define_general = { name = "Smuschkevich" personality = energetic background = no_background }define_general = { name = "Rychagov" personality = energetic background = no_background }define_general = { name = "Proskurov" personality = energetic background = no_background }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS = { war_with = GER }
+
+        }
+define_general = { name = "Oborin" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS = { war_with = GER }
+
+        }
+define_general = { name = "Pavlov  D.G." personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS = { war_with = GER }
+
+        }
+define_general = { name = "Klimovskih" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS = { war_with = GER }
+
+        }
+define_general = { name = "Korobkov" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS = { war_with = GER }
+
+        }
+define_general = { name = "Kachanov" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS = { war_with = GER }
+
+        }
+define_general = { name = "Gaj" personality = energetic background = no_background }
+      }
+define_general = { name = "Berzarin" personality = energetic background = no_background }define_general = { name = "Karmanov" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014201
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1945
+  }
+  immediate = { set_global_flag = event_fired_8014201 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Anisimov" personality = energetic background = no_background }define_general = { name = "Afanasiev" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014202
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1948
+  }
+  immediate = { set_global_flag = event_fired_8014202 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8014203
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1950
+  }
+  immediate = { set_global_flag = event_fired_8014203 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8014204
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1952
+  }
+  immediate = { set_global_flag = event_fired_8014204 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8014205
+  title = EVT_8014205_NAME
+  desc = EVT_8014205_DESC
+  picture = "nwo2_death_of_stalin"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1953
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8014205 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8014205_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }define_general = { name = "Karpon" personality = energetic background = no_background }define_general = { name = "Deev" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014250
+  title = EVT_8014250_NAME
+  desc = EVT_8014250_DESC
+  picture = "nwo2_succession_of_stalin"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1953
+    has_global_flag = event_fired_8014205
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014250 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8014250_A
+define_general = { name = "Kashuba" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_8014250_B
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }define_general = { name = "Anikushkin" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_8014250_C
+random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.30000000000000004 } } }define_general = { name = "Karpon" personality = energetic background = no_background }country_event =  { id = 8014206 days = 1 } country_event =  { id = 8014251 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8014250_D
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.44999999999999996 } } }define_general = { name = "Klyuchko" personality = energetic background = no_background }define_general = { name = "Deev" personality = energetic background = no_background }country_event =  { id = 8014252 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014251
+  title = EVT_8014251_NAME
+  desc = EVT_8014251_DESC
+  picture = "nwo2_succession_of_stalin_dissent"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1953
+    has_global_flag = event_fired_8014250
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014251 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014251_A
+any_pop = { militancy = 1.0 }country_event =  { id = 8014253 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8014251_B
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8014252
+  title = EVT_8014252_NAME
+  desc = EVT_8014252_DESC
+  picture = "nwo2_succession_of_stalin_dissent"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1953
+    has_global_flag = event_fired_8014250
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014252 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014252_A
+any_pop = { militancy = 1.0 }country_event =  { id = 8014253 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8014252_B
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8014253
+  title = EVT_8014253_NAME
+  desc = EVT_8014253_DESC
+  picture = "nwo2_soviet_republics"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1953
+    OR = {
+    has_global_flag = event_fired_8014252
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014253 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014253_A
+any_pop = { militancy = 1.0 }
+  }
+
+  option = {
+    name = EVT_8014253_B
+set_global_flag = breakup_of_ussr country_event =  { id = 8014206 days = 1 } release = LIT release = LAT release = EST release = BYE release = UKR release = KAZ 1185 = { secede_province = KAZ } 1186 = { secede_province = KAZ } 1187 = { secede_province = KAZ } 1188 = { secede_province = KAZ } 2606 = { secede_province = KAZ } release = TRK release = UZB release = KYR release = TAJ release = FER release = FRA release = ENG release = HUN release = ITA release = POR release = AUS release = BEL release = LUX release = NOR release = FIN release = SWE release = DEN release = SAL release = IAR release = DDR release = SWI release = YUG release = ALB release = BUL release = ROM release = CZH release = POL release = GRE 
+  }
+}
+country_event = {
+  id = 8014254
+  title = EVT_8014254_NAME
+  desc = EVT_8014254_DESC
+  picture = "nwo2_beria_rules_ussr"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1953
+    has_global_flag = event_fired_8014250
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014254 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014254_A
+any_pop = { militancy = -0.5 }define_general = { name = "Chernyak" personality = energetic background = no_background }define_general = { name = "Deev" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_8014254_B
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8014255
+  title = EVT_8014255_NAME
+  desc = EVT_8014255_DESC
+  picture = "nwo2_united_germany"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1954
+    has_global_flag = event_fired_8014254
+    exists = DDR
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014255 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8014255_A
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }country_event = 8014256 country_event = 8014257 country_event = 8014258 country_event = 8014259 country_event = 8014260 
+  }
+
+  option = {
+    name = EVT_8014255_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 
+  }
+}
+country_event = {
+  id = 8014256
+  title = EVT_8014256_NAME
+  desc = EVT_8014256_DESC
+  picture = "nwo2_united_germany"
+
+  trigger = {
+    tag = GER
+  }
+  immediate = { set_global_flag = event_fired_8014256 }
+
+  option = {
+    name = EVT_8014256_A
+any_pop = { militancy = 0.5 }relation = { who = DDR value = 100 } relation = { who = RUS value = 50 } 
+  }
+
+  option = {
+    name = EVT_8014256_B
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }country_event =  { id = 8014261 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014257
+  title = EVT_8014257_NAME
+  desc = EVT_8014257_DESC
+  picture = "nwo2_united_germany"
+
+  trigger = {
+    tag = DDR
+  }
+  immediate = { set_global_flag = event_fired_8014257 }
+
+  option = {
+    name = EVT_8014257_A
+any_pop = { militancy = 0.5 }relation = { who = GER value = 100 } relation = { who = RUS value = 50 } 
+  }
+
+  option = {
+    name = EVT_8014257_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      DDR = { vassal_of = RUS }
+#      }
+#    }
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }country_event =  { id = 8014261 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014258
+  title = EVT_8014258_NAME
+  desc = EVT_8014258_DESC
+  picture = "nwo2_united_germany"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8014258 }
+
+  option = {
+    name = EVT_8014258_A
+relation = { who = RUS value = 100 } 
+  }
+
+  option = {
+    name = EVT_8014258_B
+relation = { who = RUS value = -50 } country_event =  { id = 8014261 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014259
+  title = EVT_8014259_NAME
+  desc = EVT_8014259_DESC
+  picture = "nwo2_united_germany"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8014259 }
+
+  option = {
+    name = EVT_8014259_A
+relation = { who = RUS value = 100 } 
+  }
+
+  option = {
+    name = EVT_8014259_B
+relation = { who = RUS value = -50 } country_event =  { id = 8014261 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014260
+  title = EVT_8014260_NAME
+  desc = EVT_8014260_DESC
+  picture = "nwo2_united_germany"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8014260 }
+
+  option = {
+    name = EVT_8014260_A
+relation = { who = RUS value = 100 } 
+  }
+
+  option = {
+    name = EVT_8014260_B
+relation = { who = RUS value = -50 } country_event =  { id = 8014261 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014261
+  title = EVT_8014261_NAME
+  desc = EVT_8014261_DESC
+  picture = "nwo2_united_germany"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = DDR tag = GER }
+    year = 1954
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8014258
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8014259
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8014260
+    }
+    has_global_flag = event_fired_8014257
+    exists = DDR
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014261 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8014261_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+inherit = GER 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+inherit = DDR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+change_tag = GER 
+      }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.15000000000000002 } } }overlord = { release_vassal = THIS } USA = { end_military_access = THIS } RUS = { end_military_access = THIS } ENG = { end_military_access = THIS } FRA = { end_military_access = THIS } set_global_flag = lower_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8014262
+  title = EVT_8014262_NAME
+  desc = EVT_8014262_DESC
+  picture = "nwo2_soviet_economy"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    has_global_flag = event_fired_8014261
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014262 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014262_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8014206
+  title = EVT_8014206_NAME
+  desc = EVT_8014206_DESC
+  picture = "nwo2_lavrentiy_beria"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1953
+  }
+  immediate = { set_global_flag = event_fired_8014206 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8014206_A
+any_pop = { militancy = 0.3 }
+  }
+
+  option = {
+    name = EVT_8014206_B
+country_event =  { id = 8014213 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014207
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1955
+  }
+  immediate = { set_global_flag = event_fired_8014207 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Dement'ev" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014208
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1956
+  }
+  immediate = { set_global_flag = event_fired_8014208 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8014209
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1957
+  }
+  immediate = { set_global_flag = event_fired_8014209 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8014210
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1958
+  }
+  immediate = { set_global_flag = event_fired_8014210 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Cherokmanov" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014211
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1960
+  }
+  immediate = { set_global_flag = event_fired_8014211 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8014212
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+  }
+  immediate = { set_global_flag = event_fired_8014212 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8014213
+  title = EVT_8014213_NAME
+  desc = EVT_8014213_DESC
+  picture = "nwo2_lavrentiy_beria"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1954
+    has_global_flag = event_fired_8014206
+  }
+  immediate = { set_global_flag = event_fired_8014213 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8014213_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }
+  }
+}
+country_event = {
+  id = 8014214
+  title = EVT_8014214_NAME
+  desc = EVT_8014214_DESC
+  picture = "nwo2_cominform"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1956
+  }
+  immediate = { set_global_flag = event_fired_8014214 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014214_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }relation = { who = NET value = 50 } relation = { who = FRA value = 50 } relation = { who = ENG value = 50 } relation = { who = HUN value = 50 } relation = { who = ITA value = 50 } relation = { who = POR value = 50 } relation = { who = AUS value = 50 } relation = { who = BEL value = 50 } relation = { who = LUX value = 50 } relation = { who = NOR value = 50 } relation = { who = FIN value = 50 } relation = { who = SWE value = 50 } relation = { who = DEN value = 50 } relation = { who = DDR value = 50 } relation = { who = SWI value = 50 } relation = { who = YUG value = 50 } relation = { who = ALB value = 50 } relation = { who = BUL value = 50 } relation = { who = ROM value = 50 } relation = { who = CZH value = 50 } relation = { who = POL value = 50 } relation = { who = GRE value = 50 } relation = { who = TUR value = 50 } relation = { who = SPA value = 50 } 
+  }
+}
+country_event = {
+  id = 8014215
+  title = EVT_8014215_NAME
+  desc = EVT_8014215_DESC
+  picture = "nwo2_virgin_lands_campaign"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1960
+  }
+  immediate = { set_global_flag = event_fired_8014215 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014215_A
+any_pop = { militancy = 0.7 }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.6 } } }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8014216
+  title = EVT_8014216_NAME
+  desc = EVT_8014216_DESC
+  picture = "nwo2_cpsu_congress_1956"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1960
+  }
+  immediate = { set_global_flag = event_fired_8014216 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8014216_A
+any_pop = { militancy = 1.0 }set_global_flag = lower_soviet_bloc_coherence 
+  }
+
+  option = {
+    name = EVT_8014216_B
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }country_event =  { id = 8014217 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014217
+  title = EVT_8014217_NAME
+  desc = EVT_8014217_DESC
+  picture = "nwo2_tomb_of_stalin"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1960
+    OR = {
+    has_global_flag = event_fired_8014228
+    }
+  }
+  immediate = { set_global_flag = event_fired_8014217 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014217_A
+any_pop = { militancy = -1.5 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }
+  }
+}
+country_event = {
+  id = 8014220
+  title = EVT_8014220_NAME
+  desc = EVT_8014220_DESC
+  picture = "nwo2_leningrad_monument"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1951
+    NOT = {
+    political_reform_want = 0.2
+    }
+    average_militancy  = 3
+  }
+  immediate = { set_global_flag = event_fired_8014220 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014220_A
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8014220_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 10 
+  }
+}
+country_event = {
+  id = 8014221
+  title = EVT_8014221_NAME
+  desc = EVT_8014221_DESC
+  picture = "nwo2_jewish_antifacist_committee"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1952
+    NOT = {
+    political_reform_want = 0.2
+    }
+    average_militancy  = 3
+  }
+  immediate = { set_global_flag = event_fired_8014221 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014221_A
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8014221_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 10 country_event =  { id = 8014227 days = 1 } 
+  }
+}
+country_event = {
+  id = 8014222
+  title = EVT_8014222_NAME
+  desc = EVT_8014222_DESC
+  picture = "nwo2_u2_flights"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1960
+    has_global_flag = cold_war
+    relation = { who=PAK value = 50 }
+  }
+  immediate = { set_global_flag = event_fired_8014222 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8014222_A
+money = -500 
+  }
+
+  option = {
+    name = EVT_8014222_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 10 
+  }
+}
+country_event = {
+  id = 8014223
+  title = EVT_8014223_NAME
+  desc = EVT_8014223_DESC
+  picture = "nwo2_u2_incident"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1960
+    has_global_flag = event_fired_8014222
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014223 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8014220_A
+any_pop = { militancy = 0.5 }relation = { who = RUS value = -100 } country_event = 8014224 
+  }
+}
+country_event = {
+  id = 8014224
+  title = EVT_8014224_NAME
+  desc = EVT_8014224_DESC
+  picture = "nwo2_u2_incident"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8014224 }
+
+  option = {
+    name = EVT_8014224_A
+any_pop = { militancy = -0.3 }
+  }
+}
+country_event = {
+  id = 8014225
+  title = EVT_8014225_NAME
+  desc = EVT_8014225_DESC
+  picture = "nwo2_catalina_affair"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SWE
+    year = 1952
+    NOT = {
+    relation = { who=RUS value = -50 }
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8014225 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014225_A
+any_pop = { militancy = 0.5 }relation = { who = RUS value = -100 } 
+  }
+}
+country_event = {
+  id = 8014226
+  title = EVT_8014226_NAME
+  desc = EVT_8014226_DESC
+  picture = "nwo2_internal_troops"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1952
+    NOT = {
+    average_militancy  = 20
+    }
+    has_global_flag = cold_war
+    average_militancy  = 10
+  }
+  immediate = { set_global_flag = event_fired_8014226 }
+
+  mean_time_to_happen = { days = 1080 }
+
+  option = {
+    name = EVT_8014226_A
+any_pop = { militancy = -0.7 }
+  }
+
+  option = {
+    name = EVT_8014226_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 10 
+  }
+}
+country_event = {
+  id = 8014227
+  title = EVT_8014227_NAME
+  desc = EVT_8014227_DESC
+  picture = "nwo2_doctors_plot"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1953
+    NOT = {
+    political_reform_want = 0.2
+    }
+    has_global_flag = event_fired_8014221
+    average_militancy  = 3
+  }
+  immediate = { set_global_flag = event_fired_8014227 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8014227_A
+any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8014227_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 10 
+  }
+}
+country_event = {
+  id = 8014228
+  title = EVT_8014228_NAME
+  desc = EVT_8014228_DESC
+  picture = "nwo2_cpsu_congress_1956"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1960
+    NOT = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8014228 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8014228_B
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }country_event =  { id = 8014217 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8014228_A
+any_pop = { militancy = 1.0 }set_global_flag = lower_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8014233
+  title = EVT_8014233_NAME
+  desc = EVT_8014233_DESC
+  picture = "nwo2_leonid_brezhnev"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1979
+  }
+  immediate = { set_global_flag = event_fired_8014233 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014233_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Nazarov" personality = energetic background = no_background }define_general = { name = "Nedelin" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014234
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1981
+  }
+  immediate = { set_global_flag = event_fired_8014234 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Navrocki" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014235
+  title = EVT_8014235_NAME
+  desc = EVT_8014235_DESC
+  picture = "nwo2_death_of_brezkhnev"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1984
+  }
+  immediate = { set_global_flag = event_fired_8014235 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014235_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Nedvigin" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014236
+  title = EVT_8014236_NAME
+  desc = EVT_8014236_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1984
+  }
+  immediate = { set_global_flag = event_fired_8014236 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014216_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Mironov  F.K." personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014237
+  title = EVT_8014237_NAME
+  desc = EVT_8014237_DESC
+  picture = "nwo2_mikhail_gorbachev"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1990
+  }
+  immediate = { set_global_flag = event_fired_8014237 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014237_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Netreba" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_8014237_B
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Nikitin  I.S." personality = energetic background = no_background }define_general = { name = "Nikishin" personality = energetic background = no_background }add_country_modifier = { name = dh_industrial_modifier duration = 365 }any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8014238
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1991
+  }
+  immediate = { set_global_flag = event_fired_8014238 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Netreba" personality = energetic background = no_background }define_general = { name = "Nikitin  A.G." personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014239
+  title = EVT_8014239_NAME
+  desc = EVT_8014239_DESC
+  picture = "nwo2_august_coup"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = autumn_of_nations
+  }
+  immediate = { set_global_flag = event_fired_8014239 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8014239_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Netreba" personality = energetic background = no_background }define_general = { name = "Nikitin  N.A." personality = energetic background = no_background }country_event =  { id = 8014248 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8014239_B
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Nikitin  I.S." personality = energetic background = no_background }define_general = { name = "Nikitin  A.G." personality = energetic background = no_background }any_pop = { militancy = 2.0 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }clr_global_flag = autumn_of_nations 
+  }
+}
+country_event = {
+  id = 8014240
+  title = EVT_8014240_NAME
+  desc = EVT_8014240_DESC
+  picture = "nwo2_perestroika"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1987
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8014240 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014240_A
+any_pop = { militancy = 0.3 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.35 } } }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8014241
+  title = EVT_8014241_NAME
+  desc = EVT_8014241_DESC
+  picture = "nwo2_chernobyl"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1986
+    any_owned_province = { province_id = 1 }  }
+  immediate = { set_global_flag = event_fired_8014241 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014241_A
+any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8014242
+  title = EVT_8014242_NAME
+  desc = EVT_8014242_DESC
+  picture = "nwo2_perestroika"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1988
+    has_global_flag = event_fired_8014240
+  }
+  immediate = { set_global_flag = event_fired_8014242 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014242_A
+any_pop = { militancy = 0.5 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8014243
+  title = EVT_8014243_NAME
+  desc = EVT_8014243_DESC
+  picture = "nwo2_usa_ussr_thaw"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1988
+    OR = {
+    AND = {
+    OR = {
+    has_global_flag = soviet_control_cee_6
+    }
+    has_global_flag = event_fired_8014240
+    }
+    AND = {
+    OR = {
+    has_global_flag = soviet_control_cee_6
+    }
+    NOT = {
+    has_global_flag = event_fired_8014240
+    }
+    }
+    AND = {
+    OR = {
+    has_global_flag = soviet_control_cee_6
+    }
+    NOT = {
+    }
+    }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8014243 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8014243_A
+set_global_flag = autumn_of_nations any_pop = { militancy = -0.5 }badboy = -100 relation = { who = USA value = 150 } relation = { who = ENG value = 100 } relation = { who = FRA value = 100 } relation = { who = GER value = 100 } 
+  }
+
+  option = {
+    name = EVT_8014243_B
+any_pop = { militancy = 1.0 }badboy = 20 
+  }
+}
+country_event = {
+  id = 8014244
+  title = EVT_8014244_NAME
+  desc = EVT_8014244_DESC
+  picture = "nwo2_ussr_protests"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1991
+    NOT = {
+    has_global_flag = autumn_of_nations
+    }
+    NOT = {
+    has_global_flag = soviet_control_cee_1
+    }
+    has_global_flag = event_fired_8014243
+  }
+  immediate = { set_global_flag = event_fired_8014244 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014244_A
+any_pop = { militancy = 2.0 }relation = { who = USA value = -50 } relation = { who = ENG value = -20 } relation = { who = FRA value = -20 } relation = { who = GER value = -20 } 
+  }
+
+  option = {
+    name = EVT_8014244_B
+set_global_flag = raise_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8014245
+  title = EVT_8014245_NAME
+  desc = EVT_8014245_DESC
+  picture = "nwo2_ussr_protests"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1991
+    NOT = {
+    has_global_flag = autumn_of_nations
+    }
+    average_militancy  = 50
+  }
+  immediate = { set_global_flag = event_fired_8014245 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014245_A
+define_general = { name = "Netreba" personality = energetic background = no_background }set_global_flag = autumn_of_nations any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8014246
+  title = EVT_8014246_NAME
+  desc = EVT_8014246_DESC
+  picture = "nwo2_baltic_way"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1990
+    OR = {
+    any_owned_province = { province_id = 1798 }    any_owned_province = { province_id = 1151 }    any_owned_province = { province_id = 1853 }    }
+    has_global_flag = autumn_of_nations
+  }
+  immediate = { set_global_flag = event_fired_8014246 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014246_A
+release = LIT create_vassal = LIT 979 = { remove_core =  THIS }1037 = { remove_core =  THIS }1025 = { remove_core =  THIS }release = LAT create_vassal = LAT 1048 = { remove_core =  THIS }695 = { remove_core =  THIS }release = EST create_vassal = EST 
+  }
+}
+country_event = {
+  id = 8014247
+  title = EVT_8014247_NAME
+  desc = EVT_8014247_DESC
+  picture = "nwo2_wind_of_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1990
+    has_global_flag = autumn_of_nations
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8014247 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014247_A
+any_pop = { militancy = 1.0 }release_vassal = LIT release_vassal = LAT release_vassal = EST 
+  }
+}
+country_event = {
+  id = 8014248
+  title = EVT_8014248_NAME
+  desc = EVT_8014248_DESC
+  picture = "nwo2_august_coup"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1991
+    NOT = {
+    has_global_flag = autumn_of_nations
+    }
+    has_global_flag = event_fired_8014239
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8014248 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8014248_A
+any_pop = { militancy = 4.0 }
+  }
+
+  option = {
+    name = EVT_8014248_B
+any_pop = { militancy = 1.0 }set_global_flag = autumn_of_nations 
+  }
+}
+country_event = {
+  id = 8014249
+  title = EVT_8014249_NAME
+  desc = EVT_8014249_DESC
+  picture = "nwo2_belavezha_accords"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1991
+    has_global_flag = autumn_of_nations
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8014249 }
+
+  mean_time_to_happen = { days = 12 }
+
+  option = {
+    name = EVT_8014249_A
+any_pop = { militancy = -2.5 }release = UKR release = BYE release = GEO release = ARM release = AZB release = TRK release = UZB release = KYR release = TAJ release = KAZ release = RUS create_alliance = RUS 
+  }
+}
+country_event = {
+  id = 8014271
+  title = EVT_8014271_NAME
+  desc = EVT_8014271_DESC
+  picture = "nwo2_end_of_ussr"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1991
+    exists = RUS
+    has_global_flag = autumn_of_nations
+  }
+  immediate = { set_global_flag = event_fired_8014271 }
+
+  mean_time_to_happen = { days = 6 }
+
+  option = {
+    name = EVT_8014271_A
+any_pop = { militancy = -2.5 }inherit = RUS 
+  }
+}
+country_event = {
+  id = 8014270
+  title = EVT_8014270_NAME
+  desc = EVT_8014270_DESC
+  picture = "nwo2_forest_brothers"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1956
+    any_owned_province = { province_id = 155 }    any_owned_province = { province_id = 1798 }    any_owned_province = { province_id = 1868 }  }
+  immediate = { set_global_flag = event_fired_8014270 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8014270_A
+any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8014272
+  title = EVT_8014272_NAME
+  desc = EVT_8014272_DESC
+  picture = "nwo2_empty"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1960
+    exists = HND
+  }
+  immediate = { set_global_flag = event_fired_8014272 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8014272_A
+country_event = 8007275 
+  }
+}

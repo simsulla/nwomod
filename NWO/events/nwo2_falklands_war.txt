@@ -1,0 +1,483 @@
+country_event = {
+  id = 8234000
+  title = EVT_8234000_NAME
+  desc = EVT_8234000_DESC
+  picture = "nwo2_falklands"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1982
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8234000 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8234000_A
+any_pop = { militancy = -1.0 }badboy = 15 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }1162 = { secede_province = ARG } relation = { who = ENG value = -200 } 
+  }
+
+  option = {
+    name = EVT_8234000_B
+any_pop = { militancy = 0.3 }badboy = -5 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }country_event =  { id = 8234001 days = 1 } 
+  }
+}
+country_event = {
+  id = 8234001
+  title = EVT_8234001_NAME
+  desc = EVT_8234001_DESC
+  picture = "nwo2_falklands_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1982
+    has_global_flag = event_fired_8234000
+  }
+  immediate = { set_global_flag = event_fired_8234001 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8234001_A
+any_pop = { militancy = -0.3 }money = -5000 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }relation = { who = ARG value = -100 } 
+  }
+
+  option = {
+    name = EVT_8234001_B
+any_pop = { militancy = 0.1 }relation = { who = ARG value = 50 } 
+  }
+
+  option = {
+    name = EVT_8234001_C
+any_pop = { militancy = 0.8 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }relation = { who = ARG value = 100 } country_event =  { id = 8510901 days = 1 } 
+  }
+}
+country_event = {
+  id = 8234002
+  title = EVT_8234002_NAME
+  desc = EVT_8234002_DESC
+  picture = "nwo2_falklands_war_airforce"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1982
+  }
+  immediate = { set_global_flag = event_fired_8234002 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8234002_A
+any_pop = { militancy = -0.3 }country_event = 8234003 
+  }
+
+  option = {
+    name = EVT_8234002_B
+any_pop = { militancy = 0.2 }country_event = 8234004 
+  }
+}
+country_event = {
+  id = 8234003
+  title = EVT_8234003_NAME
+  desc = EVT_8234003_DESC
+  picture = "nwo2_falklands_war_airforce"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234003 }
+
+  option = {
+    name = EVT_8234003_A
+any_pop = { militancy = 0.2 }
+  }
+}
+country_event = {
+  id = 8234004
+  title = EVT_8234004_NAME
+  desc = EVT_8234004_DESC
+  picture = "nwo2_falklands_war_airforce"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234004 }
+
+  option = {
+    name = EVT_8234004_B
+any_pop = { militancy = -0.2 }
+  }
+}
+country_event = {
+  id = 8234005
+  title = EVT_8234005_NAME
+  desc = EVT_8234005_DESC
+  picture = "nwo2_falklands_war_belgrano"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1982
+  }
+  immediate = { set_global_flag = event_fired_8234005 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8234005_A
+any_pop = { militancy = -0.3 }country_event = 8234006 
+  }
+
+  option = {
+    name = EVT_8234005_B
+any_pop = { militancy = -0.6 }country_event = 8234007 
+  }
+
+  option = {
+    name = EVT_8234005_C
+any_pop = { militancy = 0.5 }country_event = 8234008 
+  }
+}
+country_event = {
+  id = 8234006
+  title = EVT_8234006_NAME
+  desc = EVT_8234006_DESC
+  picture = "nwo2_falklands_war_belgrano"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234006 }
+
+  option = {
+    name = EVT_8234006_A
+any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8234007
+  title = EVT_8234007_NAME
+  desc = EVT_8234007_DESC
+  picture = "nwo2_falklands_war_belgrano"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234007 }
+
+  option = {
+    name = EVT_8234007_A
+any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8234008
+  title = EVT_8234008_NAME
+  desc = EVT_8234008_DESC
+  picture = "nwo2_falklands_war_belgrano"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234008 }
+
+  option = {
+    name = EVT_8234008_A
+any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8234009
+  title = EVT_8234009_NAME
+  desc = EVT_8234009_DESC
+  picture = "nwo2_falklands_war_sas"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1982
+  }
+  immediate = { set_global_flag = event_fired_8234009 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8234009_A
+any_pop = { militancy = -0.3 }country_event = 8234010 
+  }
+
+  option = {
+    name = EVT_8234009_B
+any_pop = { militancy = -0.6 }country_event = 8234011 
+  }
+
+  option = {
+    name = EVT_8234009_C
+country_event = 8234012 
+  }
+}
+country_event = {
+  id = 8234010
+  title = EVT_8234010_NAME
+  desc = EVT_8234010_DESC
+  picture = "nwo2_falklands_war_sas"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234010 }
+
+  option = {
+    name = EVT_8234010_A
+any_pop = { militancy = 0.1 }
+  }
+}
+country_event = {
+  id = 8234011
+  title = EVT_8234011_NAME
+  desc = EVT_8234011_DESC
+  picture = "nwo2_falklands_war_sas"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234011 }
+
+  option = {
+    name = EVT_8234011_A
+any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8234012
+  title = EVT_8234012_NAME
+  desc = EVT_8234012_DESC
+  picture = "nwo2_falklands_war_sas"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234012 }
+
+  option = {
+    name = EVT_8234012_A
+any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8234020
+  title = EVT_8234020_NAME
+  desc = EVT_8234020_DESC
+  picture = "nwo2_invasion_of_falklands"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1982
+    NOT = {
+    ARG = { war_with = ENG }
+    }
+    has_global_flag = event_fired_8234009
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8234020 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8234020_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8234011
+#    }
+
+  }
+
+  option = {
+    name = EVT_8234020_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      AND = {
+#      has_global_flag = event_fired_8234011
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234011
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234010
+#      }
+#      }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8234020_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      AND = {
+#      has_global_flag = event_fired_8234012
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234011
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234010
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234012
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234011
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234010
+#      }
+#      }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8234020_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      AND = {
+#      has_global_flag = event_fired_8234012
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234012
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234012
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234012
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234009
+#      }
+#      }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8234020_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      AND = {
+#      has_global_flag = event_fired_8234012
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234012
+#      }
+#      AND = {
+#      has_global_flag = event_fired_8234010
+#      }
+#      }
+#    }
+
+  }
+
+  option = {
+    name = EVT_8234020_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8234012
+#    }
+any_pop = { militancy = -1.0 }1162 = { secede_province = ENG } country_event =  { id = 8234022 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8234020_B
+any_pop = { militancy = 2.0 }country_event =  { id = 8234021 days = 1 } 
+  }
+}
+country_event = {
+  id = 8234021
+  title = EVT_8234021_NAME
+  desc = EVT_8234021_DESC
+  picture = "nwo2_falklands_argentine_defeat"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1982
+    has_global_flag = event_fired_8234020
+  }
+  immediate = { set_global_flag = event_fired_8234021 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8234021_A
+any_pop = { militancy = 2.5 }
+  }
+
+  option = {
+    name = EVT_8234021_B
+any_pop = { militancy = 4.0 }war = ENG 
+  }
+}
+country_event = {
+  id = 8234022
+  title = EVT_8234022_NAME
+  desc = EVT_8234022_DESC
+  picture = "nwo2_falklands_british_defeat"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1982
+    has_global_flag = event_fired_8234020
+  }
+  immediate = { set_global_flag = event_fired_8234022 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8234022_A
+any_pop = { militancy = 0.2 }
+  }
+
+  option = {
+    name = EVT_8234022_B
+any_pop = { militancy = 2.0 }relation = { who = USA value = -200 } relation = { who = FRA value = -150 } relation = { who = GER value = -150 } war = ARG 
+  }
+}
+country_event = {
+  id = 8234030
+  title = EVT_8234030_NAME
+  desc = EVT_8234030_DESC
+  picture = "nwo2_united_nations_intervention"
+
+  trigger = {
+    tag = ARG
+  }
+  immediate = { set_global_flag = event_fired_8234030 }
+
+  option = {
+    name = EVT_8234030_A
+any_pop = { militancy = 1.5 }1162 = { secede_province = ENG } 
+  }
+
+  option = {
+    name = EVT_8234030_B
+any_pop = { militancy = 4.0 }war = USA war = ENG 
+  }
+}

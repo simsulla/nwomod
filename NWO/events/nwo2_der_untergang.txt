@@ -1,0 +1,3497 @@
+country_event = {
+  id = 8310000
+  title = EVT_8310000_NAME
+  desc = EVT_8310000_DESC
+  picture = "nwo2_fall_of_third_reich"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1963
+    OR = {
+		GER = { war_with = USA }
+		GER = { war_with = ENG }
+		GER = { war_with = FRA }
+    }
+    NOT = {
+		controls = 155
+		controls = 1298
+		controls = 1713
+		controls = 521
+		controls = 512
+		controls = 46
+		controls = 1896 
+	}
+    NOT = { has_global_flag = cold_war }
+    NOT = { has_global_flag = ww3 }
+    NOT = { USA = { war_with = RUS } }
+    GER = { war_with = RUS } # Germany must be at war with USSR, otherwise there's another peace event chain
+    lost_national = 0.30
+  }
+  immediate = { set_global_flag = event_fired_8310000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310000_A # Apply for unconditional surrender
+	set_global_flag = der_untergang 
+	country_event =  { id = 8360001 days = 1 } 
+	any_pop = { militancy = 3.0 }
+
+	any_owned = { 
+		limit = { NOT = { is_core = THIS } }
+		secede_province = USA
+	}
+	# Hitler's suicide
+	country_event =  { id = 8310001 days = 1 } country_event = 8310004 
+    random_country = {
+        limit = {
+          tag = THIS
+		  alliance_with = ITA
+          NOT = { has_global_flag = event_fired_2006014 }
+          ITA = { ai = yes } 
+		}
+		country_event = 2006014 
+    }
+    random_country = {
+        limit = {
+			tag = THIS
+			NOT = { has_global_flag = event_fired_8005520 }
+			RUS = { war_with = FIN }
+        }
+		country_event = 8005520 
+    }
+
+  }
+}
+#	German is annexed before it surrenders
+country_event = {
+  id = 8310001
+  title = EVT_8310001_NAME
+  desc = EVT_8310001_DESC
+  picture = "nwo2_fall_of_third_reich"
+  fire_only_once = yes
+
+  trigger = {
+    year = 1963
+    NOT = {
+    exists = GER
+    }
+    NOT = {
+    has_global_flag = cold_war
+    }
+    NOT = {
+    has_global_flag = ww3
+    }
+    NOT = {
+    USA = { war_with = RUS }
+    }
+    any_owned_province = { province_id = 155 }  } # Berlin
+	immediate = { set_global_flag = event_fired_8310001 }
+
+	mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310001_A # "The fascist beast is dead"
+	set_global_flag = der_untergang country_event =  { id = 8310000 days = 1 } 
+    random_country = {
+        limit = {
+          tag = THIS
+		  alliance_with = ITA
+          NOT = { has_global_flag = event_fired_2006014 }
+          ITA = { ai = yes } 
+		}
+		country_event = 2006014 
+    }
+    random_country = {
+        limit = {
+			tag = THIS
+			NOT = { has_global_flag = event_fired_8005520 }
+			RUS = { war_with = FIN }
+        }
+		country_event = 8005520 
+    }
+
+  }
+}
+country_event = {
+  id = 8310002
+  title = EVT_8310002_NAME
+  desc = EVT_8310002_DESC
+  picture = "nwo2_allied_day_of_victory"
+  fire_only_once = yes
+
+  trigger = {
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8310000
+     has_global_flag = event_fired_8310001
+    }
+    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = cold_war
+    }
+    NOT = {
+    has_global_flag = ww3
+    }
+    NOT = {
+    USA = { war_with = RUS }
+    }
+    has_global_flag = der_untergang
+    any_owned_province = { province_id = 155 }  }
+  immediate = { set_global_flag = event_fired_8310002 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310002_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = GER
+
+        }
+inherit = GER 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ITA
+          ITA = { ai = yes }
+
+        }
+country_event = 8310010 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+          FRA = { ai = yes }
+
+        }
+country_event = 8310011 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = ITA
+          }
+          ITA = { ai = yes }
+          war_with = ITA
+
+        }
+inherit = ITA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = FRA
+          }
+          NOT = {
+          }
+          FRA = { ai = yes }
+          war_with = FRA
+
+        }
+inherit = FRA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          CRO = { ai = yes }
+          war_with = CRO
+
+        }
+inherit = CRO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          FIN = { ai = yes }
+          war_with = FIN
+
+        }
+inherit = FIN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          TUR = { ai = yes }
+          war_with = TUR
+
+        }
+inherit = TUR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          GRE = { ai = yes }
+          war_with = GRE
+
+        }
+inherit = GRE 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          ALB = { ai = yes }
+          war_with = ALB
+
+        }
+inherit = ALB 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          BUL = { ai = yes }
+          war_with = BUL
+
+        }
+inherit = BUL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          ROM = { ai = yes }
+          war_with = ROM
+
+        }
+inherit = ROM 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          POR = { ai = yes }
+          war_with = POR
+
+        }
+inherit = POR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SPA = { ai = yes }
+          war_with = SPA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SPA = { ai = yes }
+          war_with = SPA
+
+        }
+inherit = SPA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWI = { ai = yes }
+          war_with = SWI
+
+        }
+inherit = SWI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          HUN = { ai = yes }
+          war_with = HUN
+
+        }
+inherit = HUN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SLO = { ai = yes }
+          war_with = SLO
+
+        }
+inherit = SLO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          YUG = { ai = yes }
+          war_with = YUG
+
+        }
+inherit = YUG 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          CZH = { ai = yes }
+          war_with = CZH
+
+        }
+inherit = CZH 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          POL = { ai = yes }
+          war_with = POL
+
+        }
+inherit = POL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOR = { ai = yes }
+          war_with = NOR
+
+        }
+inherit = NOR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWE = { ai = yes }
+          war_with = SWE
+
+        }
+inherit = SWE 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          DEN = { ai = yes }
+          war_with = DEN
+
+        }
+inherit = DEN 
+      }
+
+  }
+}
+country_event = {
+  id = 8310003
+  title = EVT_8310002_NAME
+  desc = EVT_8310002_DESC
+  picture = "nwo2_soviet_day_of_victory"
+  fire_only_once = yes
+
+  trigger = {
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8310000
+     has_global_flag = event_fired_8310001
+    }
+    }
+    has_global_flag = der_untergang
+    any_owned_province = { province_id = 155 }  }
+  immediate = { set_global_flag = event_fired_8310003 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310002_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = GER
+
+        }
+inherit = GER 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ITA
+          ITA = { ai = yes }
+
+        }
+country_event = 8310010 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+          FRA = { ai = yes }
+
+        }
+country_event = 8310011 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = ITA
+          }
+          ITA = { ai = yes }
+          war_with = ITA
+
+        }
+inherit = ITA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = FRA
+          }
+          NOT = {
+          }
+          FRA = { ai = yes }
+          war_with = FRA
+
+        }
+inherit = FRA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          CRO = { ai = yes }
+          war_with = CRO
+
+        }
+inherit = CRO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          FIN = { ai = yes }
+          war_with = FIN
+
+        }
+inherit = FIN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          TUR = { ai = yes }
+          war_with = TUR
+
+        }
+inherit = TUR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          GRE = { ai = yes }
+          war_with = GRE
+
+        }
+inherit = GRE 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          ALB = { ai = yes }
+          war_with = ALB
+
+        }
+inherit = ALB 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          BUL = { ai = yes }
+          war_with = BUL
+
+        }
+inherit = BUL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          ROM = { ai = yes }
+          war_with = ROM
+
+        }
+inherit = ROM 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          POR = { ai = yes }
+          war_with = POR
+
+        }
+inherit = POR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SPA = { ai = yes }
+          war_with = SPA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SPA = { ai = yes }
+          war_with = SPA
+
+        }
+inherit = SPA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWI = { ai = yes }
+          war_with = SWI
+
+        }
+inherit = SWI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          HUN = { ai = yes }
+          war_with = HUN
+
+        }
+inherit = HUN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SLO = { ai = yes }
+          war_with = SLO
+
+        }
+inherit = SLO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          YUG = { ai = yes }
+          war_with = YUG
+
+        }
+inherit = YUG 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          CZH = { ai = yes }
+          war_with = CZH
+
+        }
+inherit = CZH 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          POL = { ai = yes }
+          war_with = POL
+
+        }
+inherit = POL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOR = { ai = yes }
+          war_with = NOR
+
+        }
+inherit = NOR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWE = { ai = yes }
+          war_with = SWE
+
+        }
+inherit = SWE 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          DEN = { ai = yes }
+          war_with = DEN
+
+        }
+inherit = DEN 
+      }
+
+  }
+}
+country_event = {
+  id = 8310004
+  title = EVT_8310004_NAME
+  desc = EVT_8310004_DESC
+  picture = "nwo2_hitler_suicide"
+
+  is_triggered_only = yes
+  immediate = { set_global_flag = event_fired_8310004 }
+
+  option = {
+    name = EVT_8310004_A
+any_pop = { militancy = 1.5 }define_general = { name = "Behlendorff" personality = energetic background = no_background }define_general = { name = "Buck" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8310010
+  title = EVT_8310010_NAME
+  desc = EVT_8310010_DESC
+  picture = "nwo2_fall_of_mussolini"
+
+  trigger = {
+    tag = ITA
+  }
+  immediate = { set_global_flag = event_fired_8310010 }
+
+  option = {
+    name = EVT_8310010_A
+inherit = ITA 
+  }
+}
+country_event = {
+  id = 8310011
+  title = EVT_8310011_NAME
+  desc = EVT_8310011_DESC
+  picture = "nwo2_fall_of_petain"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8310011 }
+
+  option = {
+    name = EVT_8310011_A
+inherit = FRA 
+  }
+}
+country_event = {
+  id = 8310020
+  title = EVT_8310020_NAME
+  desc = EVT_8310020_DESC
+  picture = "nwo2_out_of_war"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = HUN tag = SWE tag = SWI tag = SPA tag = BEL tag = IRQ tag = DEN tag = LUX tag = TUR tag = CZH tag = NOR tag = ROM tag = POR tag = FRA tag = ITA tag = ALB tag = BUL tag = GRE tag = NET tag = PER tag = AUS }
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8310000
+     has_global_flag = event_fired_8310001
+    }
+    }
+    NOT = {
+    has_country_flag  = event_8310020
+    }
+    has_global_flag = der_untergang
+  }
+  immediate = { set_global_flag = event_fired_8310020 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310020_A
+set_country_flag = event_8310020 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+set_country_flag = out_of_war 
+      }
+
+  }
+}
+country_event = {
+  id = 8310021
+  title = EVT_8310020_NAME
+  desc = EVT_8310020_DESC
+  picture = "nwo2_out_of_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FIN
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8310000
+     has_global_flag = event_fired_8310001
+    }
+    }
+    NOT = {
+    NOT = {
+    has_global_flag = event_fired_8005520
+    }
+    }
+    has_global_flag = der_untergang
+  }
+  immediate = { set_global_flag = event_fired_8310021 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310020_A
+set_country_flag = out_of_war 
+  }
+}
+country_event = {
+  id = 8310022
+  title = EVT_8310020_NAME
+  desc = EVT_8310020_DESC
+  picture = "nwo2_out_of_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8310000
+     has_global_flag = event_fired_8310001
+    }
+    }
+    NOT = {
+    has_country_flag  = warsaw_uprising
+    }
+    has_global_flag = der_untergang
+  }
+  immediate = { set_global_flag = event_fired_8310022 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310020_A
+set_country_flag = out_of_war 
+  }
+}
+country_event = {
+  id = 8310023
+  title = EVT_8310020_NAME
+  desc = EVT_8310020_DESC
+  picture = "nwo2_out_of_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8310000
+     has_global_flag = event_fired_8310001
+    }
+    }
+    NOT = {
+    has_country_flag  = tito_uprising
+    }
+    has_global_flag = der_untergang
+  }
+  immediate = { set_global_flag = event_fired_8310023 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310020_A
+set_country_flag = out_of_war 
+  }
+}
+country_event = {
+  id = 8310100
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8310002
+     has_global_flag = event_fired_8310003
+    }
+    }
+    has_global_flag = der_untergang
+  }
+  immediate = { set_global_flag = event_fired_8310100 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+money = 1 
+  }
+}
+country_event = {
+  id = 8310101
+  title = EVT_8310101_NAME
+  desc = EVT_8310101_DESC
+  picture = "nwo2_allies_in_ww2"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = HUN tag = NZL tag = AST tag = YUG tag = POL tag = CZH tag = CAN tag = ROM tag = FRA tag = ITA tag = BUL tag = SAF tag = ENG }
+    year = 1963
+    OR = {
+    }
+    NOT = {
+    has_country_flag  = event_8310101
+    }
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310100
+  }
+  immediate = { set_global_flag = event_fired_8310101 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310101_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      }
+#    }
+880 = { secede_province = USA } 881 = { secede_province = USA } 883 = { secede_province = USA } 619 = { secede_province = USA } 620 = { secede_province = USA } 621 = { secede_province = USA } 622 = { secede_province = USA } 624 = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+Balkan = { secede_province = USA } 
+      }
+BalticStates = { secede_province = USA } Benelux = { secede_province = USA } Belarus = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+Czechoslovakia = { secede_province = USA } 
+      }
+336 = { secede_province = USA } 337 = { secede_province = USA } 338 = { secede_province = USA } 342 = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+425 = { secede_province = USA } 426 = { secede_province = USA } 427 = { secede_province = USA } 
+      }
+Germany = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+641 = { secede_province = USA } 645 = { secede_province = USA } 646 = { secede_province = USA } 648 = { secede_province = USA } 649 = { secede_province = USA } 650 = { secede_province = USA } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+726 = { secede_province = USA } 727 = { secede_province = USA } 728 = { secede_province = USA } 
+      }
+Kaukasus = { secede_province = USA } NorthernRussia = { secede_province = USA } 308 = { secede_province = USA } 305 = { secede_province = USA } 306 = { secede_province = USA } 307 = { secede_province = USA } 1148 = { secede_province = USA } 1147 = { secede_province = USA } 1150 = { secede_province = USA } 1149 = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+Poland = { secede_province = USA } 
+      }
+521 = { secede_province = USA } 522 = { secede_province = USA } 523 = { secede_province = USA } 524 = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+664 = { secede_province = USA } 665 = { secede_province = USA } 666 = { secede_province = USA } 668 = { secede_province = USA } 667 = { secede_province = USA } 669 = { secede_province = USA } 
+      }
+695 = { secede_province = USA } 696 = { secede_province = USA } 697 = { secede_province = USA } 698 = { secede_province = USA } 693 = { secede_province = USA } SouthernRussia = { secede_province = USA } Spain = { secede_province = USA } Sweden = { secede_province = USA } 603 = { secede_province = USA } 606 = { secede_province = USA } 611 = { secede_province = USA } 2568 = { secede_province = USA } Ukraine = { secede_province = USA } WhiteSeaTundra = { secede_province = USA } WesternRussia = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = FRA
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = FRA
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = FRA
+          }
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_8310101_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#    }
+set_country_flag = event_8310101 880 = { secede_province = RUS } 881 = { secede_province = RUS } 883 = { secede_province = RUS } 619 = { secede_province = RUS } 620 = { secede_province = RUS } 621 = { secede_province = RUS } 622 = { secede_province = RUS } 624 = { secede_province = RUS } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+Balkan = { secede_province = RUS } 
+      }
+BalticStates = { secede_province = RUS } Benelux = { secede_province = RUS } Belarus = { secede_province = RUS } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+Czechoslovakia = { secede_province = RUS } 
+      }
+336 = { secede_province = RUS } 337 = { secede_province = RUS } 338 = { secede_province = RUS } 342 = { secede_province = RUS } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+425 = { secede_province = RUS } 426 = { secede_province = RUS } 427 = { secede_province = RUS } 
+      }
+Germany = { secede_province = RUS } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+641 = { secede_province = RUS } 645 = { secede_province = RUS } 646 = { secede_province = RUS } 648 = { secede_province = RUS } 649 = { secede_province = RUS } 650 = { secede_province = RUS } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+726 = { secede_province = RUS } 727 = { secede_province = RUS } 728 = { secede_province = RUS } 
+      }
+Kaukasus = { secede_province = RUS } NorthernRussia = { secede_province = RUS } 308 = { secede_province = RUS } 305 = { secede_province = RUS } 306 = { secede_province = RUS } 307 = { secede_province = RUS } 1148 = { secede_province = RUS } 1147 = { secede_province = RUS } 1150 = { secede_province = RUS } 1149 = { secede_province = RUS } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+Poland = { secede_province = RUS } 
+      }
+521 = { secede_province = RUS } 522 = { secede_province = RUS } 523 = { secede_province = RUS } 524 = { secede_province = RUS } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+664 = { secede_province = RUS } 665 = { secede_province = RUS } 666 = { secede_province = RUS } 668 = { secede_province = RUS } 667 = { secede_province = RUS } 669 = { secede_province = RUS } 
+      }
+695 = { secede_province = RUS } 696 = { secede_province = RUS } 697 = { secede_province = RUS } 698 = { secede_province = RUS } 693 = { secede_province = RUS } SouthernRussia = { secede_province = RUS } Spain = { secede_province = RUS } Sweden = { secede_province = RUS } 603 = { secede_province = RUS } 606 = { secede_province = RUS } 611 = { secede_province = RUS } 2568 = { secede_province = RUS } Ukraine = { secede_province = RUS } WhiteSeaTundra = { secede_province = RUS } WesternRussia = { secede_province = RUS } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = FRA
+          }
+
+        }
+1696 = { secede_province = FRA } 1773 = { secede_province = FRA } 1774 = { secede_province = FRA } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = FRA
+          }
+
+        }
+1713 = { secede_province = FRA } 1715 = { secede_province = FRA } 1711 = { secede_province = FRA } 1712 = { secede_province = FRA } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = FRA
+          }
+
+        }
+1725 = { secede_province = FRA } 1726 = { secede_province = FRA } 1727 = { secede_province = FRA } 1728 = { secede_province = FRA } 1729 = { secede_province = FRA } 1730 = { secede_province = FRA } 
+      }
+
+  }
+}
+country_event = {
+  id = 8310110
+  title = EVT_8310110_NAME
+  desc = EVT_8310110_DESC
+  picture = "nwo2_communists_march"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1963
+    NOT = {
+    OR = {
+    BEL_387 = { owned_by = THIS } 
+    BEL_394 = { owned_by = THIS } 
+    }
+    }
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310100
+  }
+  immediate = { set_global_flag = event_fired_8310110 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310110_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = CNG
+          }
+
+        }
+change_tag = CNG 
+      }
+
+  }
+
+  option = {
+    name = EVT_8310110_B
+end_war = JAP end_war = MCK end_war = IMN random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+}
+country_event = {
+  id = 8310111
+  title = EVT_8310111_NAME
+  desc = EVT_8310111_DESC
+  picture = "nwo2_communists_march"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1963
+    NOT = {
+    NET_375 = { owned_by = THIS } 
+    }
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310100
+  }
+  immediate = { set_global_flag = event_fired_8310111 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310111_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = IDO
+
+        }
+inherit = IDO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = IDO
+          }
+
+        }
+change_tag = IDO 
+      }
+
+  }
+
+  option = {
+    name = EVT_8310111_B
+end_war = JAP end_war = MCK end_war = IMN random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+}
+country_event = {
+  id = 8310112
+  title = EVT_8310112_NAME
+  desc = EVT_8310112_DESC
+  picture = "nwo2_communists_march"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1963
+    NOT = {
+    FRA_425 = { owned_by = THIS } 
+    }
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310100
+  }
+  immediate = { set_global_flag = event_fired_8310112 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310112_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+          exists = FRA
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+          exists = FRA
+
+        }
+inherit = FRA 
+      }
+release = LEB release = SYR release = MOR release = TUN release = MAD release = CNG release = GAB release = CAR release = CHA release = NIG release = TOG release = GUI release = IVC release = BUF release = BEN release = SEN release = MAU release = MAL release = LUA release = CAM release = DAI 2641 = { secede_province = USA } 203 = { secede_province = USA } 1868 = { secede_province = ENG } 1689 = { secede_province = USA } 1690 = { secede_province = USA } 1688 = { secede_province = USA } 2535 = { secede_province = USA } 658 = { secede_province = USA } 2117 = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = ALG
+          }
+
+        }
+change_tag = ALG 
+      }
+
+  }
+
+  option = {
+    name = EVT_8310112_B
+end_war = JAP end_war = MCK end_war = IMN random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+}
+country_event = {
+  id = 8310200
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310100
+  }
+  immediate = { set_global_flag = event_fired_8310200 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+country_event = 8310201 country_event = 8310202 
+  }
+}
+country_event = {
+  id = 8310201
+  title = EVT_8310201_NAME
+  desc = EVT_8310201_DESC
+  picture = "nwo2_allied_liberation_of_europe"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8310201 }
+
+  option = {
+    name = EVT_8310201_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          FRA_425 = { owned_by = THIS } 
+
+        }
+release = FRA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          PAP_741 = { owned_by = THIS } 
+
+        }
+release = ITA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS_343 = { owned_by = THIS } 
+
+        }
+release = FIN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          TUR_876 = { owned_by = THIS } 
+
+        }
+release = TUR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          TUR_860 = { owned_by = THIS } 
+          GRE_837 = { owned_by = THIS } 
+          }
+
+        }
+release = GRE 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          TUR_853 = { owned_by = THIS } 
+
+        }
+release = ALB 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          TUR_810 = { owned_by = THIS } 
+
+        }
+release = BUL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          WAL_665 = { owned_by = THIS } 
+          MOL_673 = { owned_by = THIS } 
+          MOL_676 = { owned_by = THIS } 
+          }
+
+        }
+release = ROM 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          POR_525 = { owned_by = THIS } 
+
+        }
+release = POR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SPA_477 = { owned_by = THIS } 
+
+        }
+release = SPA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWI_603 = { owned_by = THIS } 
+
+        }
+release = SWI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          AUS_641 = { owned_by = THIS } 
+
+        }
+release = HUN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          AUS_625 = { owned_by = THIS } 
+
+        }
+release = CZH 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS_715 = { owned_by = THIS } 
+
+        }
+release = POL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWE_313 = { owned_by = THIS } 
+
+        }
+release = NOR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWE_322 = { owned_by = THIS } 
+
+        }
+release = SWE 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          DEN_372 = { owned_by = THIS } 
+
+        }
+release = DEN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          BEL_387 = { owned_by = THIS } 
+          BEL_394 = { owned_by = THIS } 
+          }
+
+        }
+release = BEL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NET_375 = { owned_by = THIS } 
+
+        }
+release = NET 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1 }
+        }
+release = LUX 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS_360 = { owned_by = THIS } 
+
+        }
+release = LIT 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS_354 = { owned_by = THIS } 
+
+        }
+release = LAT 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS_349 = { owned_by = THIS } 
+
+        }
+release = EST 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          AND = {
+          TUR_803 = { owned_by = THIS } 
+          SER_794 = { owned_by = THIS } 
+          TUR_788 = { owned_by = THIS } 
+          AUS_771 = { owned_by = THIS } 
+          }
+
+        }
+release = YUG 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = SER 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = MON 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = BOS 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = CRO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = SLV 
+      }
+
+  }
+}
+country_event = {
+  id = 8310202
+  title = EVT_8310202_NAME
+  desc = EVT_8310202_DESC
+  picture = "nwo2_soviet_liberation_of_europe"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8310202 }
+
+  option = {
+    name = EVT_8310202_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          FRA_425 = { owned_by = THIS } 
+
+        }
+release = FRA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          PAP_741 = { owned_by = THIS } 
+
+        }
+release = ITA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS_343 = { owned_by = THIS } 
+
+        }
+release = FIN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          TUR_876 = { owned_by = THIS } 
+
+        }
+release = TUR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          TUR_860 = { owned_by = THIS } 
+          GRE_837 = { owned_by = THIS } 
+          }
+
+        }
+release = GRE 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          TUR_853 = { owned_by = THIS } 
+
+        }
+release = ALB 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          TUR_810 = { owned_by = THIS } 
+
+        }
+release = BUL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          WAL_665 = { owned_by = THIS } 
+          MOL_673 = { owned_by = THIS } 
+          MOL_676 = { owned_by = THIS } 
+          }
+
+        }
+release = ROM 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          POR_525 = { owned_by = THIS } 
+
+        }
+release = POR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SPA_477 = { owned_by = THIS } 
+
+        }
+release = SPA 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWI_603 = { owned_by = THIS } 
+
+        }
+release = SWI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          AUS_641 = { owned_by = THIS } 
+
+        }
+release = HUN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          AUS_625 = { owned_by = THIS } 
+
+        }
+release = CZH 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          RUS_715 = { owned_by = THIS } 
+
+        }
+release = POL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWE_313 = { owned_by = THIS } 
+
+        }
+release = NOR 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          SWE_322 = { owned_by = THIS } 
+
+        }
+release = SWE 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          DEN_372 = { owned_by = THIS } 
+
+        }
+release = DEN 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          BEL_387 = { owned_by = THIS } 
+          BEL_394 = { owned_by = THIS } 
+          }
+
+        }
+release = BEL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NET_375 = { owned_by = THIS } 
+
+        }
+release = NET 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1 }
+        }
+release = LUX 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          AND = {
+          TUR_803 = { owned_by = THIS } 
+          SER_794 = { owned_by = THIS } 
+          TUR_788 = { owned_by = THIS } 
+          AUS_771 = { owned_by = THIS } 
+          }
+
+        }
+release = YUG 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = SER 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = MON 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = BOS 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = CRO 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = YUG
+          }
+
+        }
+release = SLV 
+      }
+create_vassal = NET create_vassal = FRA create_vassal = ENG create_vassal = HUN create_vassal = ITA create_vassal = POR create_vassal = AUS create_vassal = BEL create_vassal = LUX create_vassal = NOR create_vassal = FIN create_vassal = SWE create_vassal = DEN create_vassal = SWI 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = tito_uprising_successful
+          }
+
+        }
+create_vassal = YUG 
+      }
+create_vassal = ALB create_vassal = BUL create_vassal = ROM create_vassal = CZH create_vassal = POL create_vassal = GRE create_vassal = TUR create_vassal = SPA set_global_flag = soviet_control_cee_0 
+  }
+
+  option = {
+    name = EVT_8310202_B
+any_pop = { militancy = 5.0 }badboy = 300 country_event =  { id = 8204001 days = 1 } country_event =  { id = 8204003 days = 1 } 
+  }
+}
+country_event = {
+  id = 8310203
+  title = EVT_8310203_NAME
+  desc = EVT_8310203_DESC
+  picture = "nwo2_greenland"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    OR = {
+    NOT = {
+    exists = ICL
+    }
+    AND = {
+    exists = DEN
+    any_owned_province = { province_id = 1151 }    }
+    }
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310200
+  }
+  immediate = { set_global_flag = event_fired_8310203 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310203_A
+251 = { secede_province = DEN } release = ICL 
+  }
+}
+country_event = {
+  id = 8310204
+  title = EVT_8310204_NAME
+  desc = EVT_8310204_DESC
+  picture = "nwo2_territorial_exchanges"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    NOT = {
+    exists = POL
+    }
+    exists = POL
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310200
+  }
+  immediate = { set_global_flag = event_fired_8310204 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310204_A
+relation = { who = POL value = 100 } 
+  }
+
+  option = {
+    name = EVT_8310204_B
+set_country_flag = poland_west_moregains 
+  }
+
+  option = {
+    name = EVT_8310204_B
+set_country_flag = poland_west_littlegains 
+  }
+
+  option = {
+    name = EVT_8310204_B
+relation = { who = POL value = -100 } set_country_flag = poland_west_hugegains 
+  }
+}
+country_event = {
+  id = 8310300
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310200
+  }
+  immediate = { set_global_flag = event_fired_8310300 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+country_event = 8310301 country_event = 8310302 
+  }
+}
+country_event = {
+  id = 8310301
+  title = EVT_8310301_NAME
+  desc = EVT_8310301_DESC
+  picture = "nwo2_territorial_exchanges"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8310301 }
+
+  option = {
+    name = EVT_8310301_A
+425 = { secede_province = FRA } 426 = { secede_province = FRA } 427 = { secede_province = FRA } 726 = { secede_province = ITA } 727 = { secede_province = ITA } 728 = { secede_province = ITA } Oesterbotten = { secede_province = FIN } SouthFinland = { secede_province = FIN } CentralFinland = { secede_province = FIN } 360 = { secede_province = FIN } 726 = { secede_province = FIN } 880 = { secede_province = TUR } 881 = { secede_province = TUR } 883 = { secede_province = TUR } 860 = { secede_province = GRE } 828 = { secede_province = GRE } 858 = { secede_province = GRE } 859 = { secede_province = GRE } 834 = { secede_province = GRE } 837 = { secede_province = GRE } 836 = { secede_province = GRE } 835 = { secede_province = GRE } 838 = { secede_province = GRE } 849 = { secede_province = ALB } 853 = { secede_province = ALB } 852 = { secede_province = ALB } 851 = { secede_province = ALB } 850 = { secede_province = ALB } 809 = { secede_province = BUL } 810 = { secede_province = BUL } 811 = { secede_province = BUL } 812 = { secede_province = BUL } 813 = { secede_province = BUL } 814 = { secede_province = BUL } 664 = { secede_province = ROM } 665 = { secede_province = ROM } 666 = { secede_province = ROM } 668 = { secede_province = ROM } 667 = { secede_province = ROM } 669 = { secede_province = ROM } 673 = { secede_province = ROM } 672 = { secede_province = ROM } 670 = { secede_province = ROM } 671 = { secede_province = ROM } 663 = { secede_province = ROM } 662 = { secede_province = ROM } Bessarabia = { secede_province = ROM } 521 = { secede_province = POR } 522 = { secede_province = POR } 523 = { secede_province = POR } 524 = { secede_province = POR } Spain = { secede_province = SPA } 603 = { secede_province = SWI } 606 = { secede_province = SWI } 611 = { secede_province = SWI } 2568 = { secede_province = SWI } 641 = { secede_province = HUN } 645 = { secede_province = HUN } 646 = { secede_province = HUN } 648 = { secede_province = HUN } 649 = { secede_province = HUN } 650 = { secede_province = HUN } Czechoslovakia = { secede_province = CZH } Poland = { secede_province = POL } 1008 = { secede_province = POL } 695 = { secede_province = POL } 1003 = { secede_province = POL } 718 = { secede_province = POL } 979 = { secede_province = POL } 308 = { secede_province = NOR } 305 = { secede_province = NOR } 306 = { secede_province = NOR } 307 = { secede_province = NOR } Sweden = { secede_province = SWE } 372 = { secede_province = DEN } 373 = { secede_province = DEN } 374 = { secede_province = DEN } 387 = { secede_province = BEL } 388 = { secede_province = BEL } 389 = { secede_province = BEL } 390 = { secede_province = BEL } 391 = { secede_province = BEL } 394 = { secede_province = BEL } 392 = { secede_province = BEL } 393 = { secede_province = BEL } 395 = { secede_province = BEL } 396 = { secede_province = BEL } 398 = { secede_province = BEL } Netherlands = { secede_province = NET } 1912 = { secede_province = LUX } 360 = { secede_province = LIT } 361 = { secede_province = LIT } 362 = { secede_province = LIT } 363 = { secede_province = LIT } 364 = { secede_province = LIT } 365 = { secede_province = LIT } 354 = { secede_province = LAT } 355 = { secede_province = LAT } 356 = { secede_province = LAT } 357 = { secede_province = LAT } 358 = { secede_province = LAT } 359 = { secede_province = LAT } 349 = { secede_province = EST } 350 = { secede_province = EST } 351 = { secede_province = EST } 352 = { secede_province = EST } 353 = { secede_province = EST } 803 = { secede_province = YUG } 804 = { secede_province = YUG } 798 = { secede_province = YUG } 802 = { secede_province = YUG } 799 = { secede_province = YUG } 794 = { secede_province = YUG } 797 = { secede_province = YUG } 795 = { secede_province = YUG } 796 = { secede_province = YUG } 783 = { secede_province = YUG } 787 = { secede_province = YUG } 789 = { secede_province = YUG } 788 = { secede_province = YUG } 786 = { secede_province = YUG } 785 = { secede_province = YUG } 784 = { secede_province = YUG } 2688 = { secede_province = YUG } 771 = { secede_province = YUG } 772 = { secede_province = YUG } 773 = { secede_province = YUG } 774 = { secede_province = YUG } 775 = { secede_province = YUG } 776 = { secede_province = YUG } 525 = { secede_province = MON } 521 = { secede_province = MON } 794 = { secede_province = SER } 797 = { secede_province = SER } 795 = { secede_province = SER } 796 = { secede_province = SER } 803 = { secede_province = SER } 804 = { secede_province = SER } 798 = { secede_province = SER } 802 = { secede_province = SER } 799 = { secede_province = SER } 783 = { secede_province = BOS } 787 = { secede_province = BOS } 789 = { secede_province = BOS } 788 = { secede_province = BOS } 786 = { secede_province = BOS } 785 = { secede_province = BOS } 784 = { secede_province = BOS } 2688 = { secede_province = BOS } 512 = { secede_province = SLV } 860 = { secede_province = SLV } 771 = { secede_province = CRO } 772 = { secede_province = CRO } 773 = { secede_province = CRO } 774 = { secede_province = CRO } 775 = { secede_province = CRO } 776 = { secede_province = CRO } 917 = { secede_province = CRO } 
+  }
+}
+country_event = {
+  id = 8310302
+  title = EVT_8310302_NAME
+  desc = EVT_8310302_DESC
+  picture = "nwo2_territorial_exchanges"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8310302 }
+
+  option = {
+    name = EVT_8310302_A
+425 = { secede_province = FRA } 426 = { secede_province = FRA } 427 = { secede_province = FRA } 726 = { secede_province = ITA } 727 = { secede_province = ITA } 728 = { secede_province = ITA } Oesterbotten = { secede_province = FIN } SouthFinland = { secede_province = FIN } CentralFinland = { secede_province = FIN } 360 = { secede_province = FIN } 726 = { secede_province = FIN } 880 = { secede_province = TUR } 881 = { secede_province = TUR } 883 = { secede_province = TUR } 860 = { secede_province = GRE } 828 = { secede_province = GRE } 858 = { secede_province = GRE } 859 = { secede_province = GRE } 834 = { secede_province = GRE } 837 = { secede_province = GRE } 836 = { secede_province = GRE } 835 = { secede_province = GRE } 838 = { secede_province = GRE } 849 = { secede_province = ALB } 853 = { secede_province = ALB } 852 = { secede_province = ALB } 851 = { secede_province = ALB } 850 = { secede_province = ALB } 809 = { secede_province = BUL } 810 = { secede_province = BUL } 811 = { secede_province = BUL } 812 = { secede_province = BUL } 813 = { secede_province = BUL } 814 = { secede_province = BUL } 664 = { secede_province = ROM } 665 = { secede_province = ROM } 666 = { secede_province = ROM } 668 = { secede_province = ROM } 667 = { secede_province = ROM } 669 = { secede_province = ROM } 673 = { secede_province = ROM } 672 = { secede_province = ROM } 670 = { secede_province = ROM } 671 = { secede_province = ROM } 663 = { secede_province = ROM } 662 = { secede_province = ROM } Bessarabia = { secede_province = ROM } 521 = { secede_province = POR } 522 = { secede_province = POR } 523 = { secede_province = POR } 524 = { secede_province = POR } Spain = { secede_province = SPA } 603 = { secede_province = SWI } 606 = { secede_province = SWI } 611 = { secede_province = SWI } 2568 = { secede_province = SWI } 641 = { secede_province = HUN } 645 = { secede_province = HUN } 646 = { secede_province = HUN } 648 = { secede_province = HUN } 649 = { secede_province = HUN } 650 = { secede_province = HUN } Czechoslovakia = { secede_province = CZH } Poznan = { secede_province = POL } Warsaw = { secede_province = POL } Krakow = { secede_province = POL } 958 = { secede_province = POL } 978 = { secede_province = POL } 967 = { secede_province = POL } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_country_flag  = poland_west_littlegains
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_country_flag  = poland_west_littlegains
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_country_flag  = poland_west_littlegains
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_country_flag  = poland_west_littlegains
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_country_flag  = poland_west_moregains
+          }
+
+        }
+1021 = { secede_province = POL } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_country_flag  = poland_west_moregains
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_country_flag  = poland_west_moregains
+          }
+
+        }
+981 = { secede_province = POL } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_country_flag  = poland_west_hugegains
+
+        }
+
+      }
+Poland = { secede_province = POL } 1008 = { secede_province = POL } 695 = { secede_province = POL } 1003 = { secede_province = POL } 718 = { secede_province = POL } 979 = { secede_province = POL } 308 = { secede_province = NOR } 305 = { secede_province = NOR } 306 = { secede_province = NOR } 307 = { secede_province = NOR } Sweden = { secede_province = SWE } 372 = { secede_province = DEN } 373 = { secede_province = DEN } 374 = { secede_province = DEN } 387 = { secede_province = BEL } 388 = { secede_province = BEL } 389 = { secede_province = BEL } 390 = { secede_province = BEL } 391 = { secede_province = BEL } 394 = { secede_province = BEL } 392 = { secede_province = BEL } 393 = { secede_province = BEL } 395 = { secede_province = BEL } 396 = { secede_province = BEL } 398 = { secede_province = BEL } Netherlands = { secede_province = NET } 1912 = { secede_province = LUX } 803 = { secede_province = YUG } 804 = { secede_province = YUG } 798 = { secede_province = YUG } 802 = { secede_province = YUG } 799 = { secede_province = YUG } 794 = { secede_province = YUG } 797 = { secede_province = YUG } 795 = { secede_province = YUG } 796 = { secede_province = YUG } 783 = { secede_province = YUG } 787 = { secede_province = YUG } 789 = { secede_province = YUG } 788 = { secede_province = YUG } 786 = { secede_province = YUG } 785 = { secede_province = YUG } 784 = { secede_province = YUG } 2688 = { secede_province = YUG } 771 = { secede_province = YUG } 772 = { secede_province = YUG } 773 = { secede_province = YUG } 774 = { secede_province = YUG } 775 = { secede_province = YUG } 776 = { secede_province = YUG } 525 = { secede_province = MON } 521 = { secede_province = MON } 794 = { secede_province = SER } 797 = { secede_province = SER } 795 = { secede_province = SER } 796 = { secede_province = SER } 803 = { secede_province = SER } 804 = { secede_province = SER } 798 = { secede_province = SER } 802 = { secede_province = SER } 799 = { secede_province = SER } 783 = { secede_province = BOS } 787 = { secede_province = BOS } 789 = { secede_province = BOS } 788 = { secede_province = BOS } 786 = { secede_province = BOS } 785 = { secede_province = BOS } 784 = { secede_province = BOS } 2688 = { secede_province = BOS } 512 = { secede_province = SLV } 860 = { secede_province = SLV } 771 = { secede_province = CRO } 772 = { secede_province = CRO } 773 = { secede_province = CRO } 774 = { secede_province = CRO } 775 = { secede_province = CRO } 776 = { secede_province = CRO } 917 = { secede_province = CRO } 979 = { add_core =  THIS }1048 = { add_core =  THIS }968 = { add_core =  THIS }967 = { add_core =  THIS }1037 = { add_core =  THIS }1008 = { add_core =  THIS }695 = { add_core =  THIS }978 = { add_core =  THIS }973 = { add_core =  THIS }977 = { add_core =  THIS }958 = { add_core =  THIS }1064 = { add_core =  THIS }2431 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8310303
+  title = EVT_8310303_NAME
+  desc = EVT_8310303_DESC
+  picture = "nwo2_bessarabia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ROM
+    year = 1963
+    NOT = {
+    exists = UKR
+    }
+    has_global_flag = der_untergang
+    MOL_676 = { owned_by = THIS } 
+     has_global_flag = event_fired_8310300
+  }
+  immediate = { set_global_flag = event_fired_8310303 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310303_A
+549 = { secede_province = RUS } 695 = { secede_province = RUS } 2572 = { secede_province = RUS } country_event = 8310304 
+  }
+}
+country_event = {
+  id = 8310304
+  title = EVT_8310304_NAME
+  desc = EVT_8310304_DESC
+  picture = "nwo2_bessarabia"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8310304 }
+
+  option = {
+    name = EVT_8310304_A
+549 = { add_core =  THIS }695 = { add_core =  THIS }2572 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8310305
+  title = EVT_8310305_NAME
+  desc = EVT_8310305_DESC
+  picture = "nwo2_transcarpathia"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = HUN tag = CZH }
+    year = 1963
+    OR = {
+    any_owned_province = { province_id = 1713 }    any_owned_province = { province_id = 1914 }    }
+    NOT = {
+    exists = UKR
+    }
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310300
+  }
+  immediate = { set_global_flag = event_fired_8310305 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310305_A
+946 = { secede_province = RUS } 1003 = { secede_province = RUS } country_event = 8310306 
+  }
+}
+country_event = {
+  id = 8310306
+  title = EVT_8310306_NAME
+  desc = EVT_8310306_DESC
+  picture = "nwo2_transcarpathia"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8310306 }
+
+  option = {
+    name = EVT_8310306_A
+946 = { add_core =  THIS }1003 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8310400
+  title = EVT_8310400_NAME
+  desc = EVT_8310400_DESC
+  picture = "nwo2_postwar_normalization"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = SPA tag = BYE tag = BUL tag = AUS tag = HUN tag = SWE tag = SWI tag = EST tag = BEL tag = AZB tag = FIN tag = YUG tag = POL tag = DEN tag = LUX tag = TUR tag = CZH tag = NOR tag = GEO tag = ROM tag = POR tag = FRA tag = LIT tag = ITA tag = ALB tag = GRE tag = NET tag = ARM tag = UKR tag = LAT }
+    year = 1963
+    NOT = {
+    has_country_flag  = event_8310400
+    }
+    NOT = {
+    has_country_flag  = out_of_war
+    }
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310300
+  }
+  immediate = { set_global_flag = event_fired_8310400 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8310400_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = cold_war
+          }
+
+        }
+set_global_flag = cold_war 
+      }
+set_country_flag = event_8310400 any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.7 } } }add_country_modifier = { name = dh_oilpool duration = 365 }add_country_modifier = { name = dh_metalpool duration = 365 }add_country_modifier = { name = dh_energypool duration = 365 }money = 100 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8005701 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8007701 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8005501 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8015501 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8006201 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8000201 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8002201 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8012301 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8011701 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8013101 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8006901 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8018301 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8004201 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8011601 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8010601 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8014601 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8004401 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8001401 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8006701 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8009001 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8008901 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8008502 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8005202 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8001702 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8015601 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8005902 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8005903 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8000902 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8000903 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8001301 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8001302 
+      }
+
+  }
+}
+country_event = {
+  id = 8310500
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    has_global_flag = der_untergang
+     has_global_flag = event_fired_8310400
+  }
+  immediate = { set_global_flag = event_fired_8310500 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+clr_global_flag = der_untergang 
+  }
+}

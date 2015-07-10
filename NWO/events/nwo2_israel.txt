@@ -1,0 +1,1854 @@
+country_event = {
+  id = 8007601
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1948
+  }
+  immediate = { set_global_flag = event_fired_8007601 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Allon" personality = energetic background = no_background }define_general = { name = "Boyharin" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007602
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1950
+  }
+  immediate = { set_global_flag = event_fired_8007602 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Boyharin" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Allon" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007603
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1951
+  }
+  immediate = { set_global_flag = event_fired_8007603 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Boyharin" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Allon" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8007604
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1962
+    NOT = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007604 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8007605
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1954
+  }
+  immediate = { set_global_flag = event_fired_8007605 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8007606
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1958
+  }
+  immediate = { set_global_flag = event_fired_8007606 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Boyharin" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007607
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1960
+  }
+  immediate = { set_global_flag = event_fired_8007607 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Boyharin" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8007608
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1962
+  }
+  immediate = { set_global_flag = event_fired_8007608 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Boyharin" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8007609
+  title = EVT_8007609_NAME
+  desc = EVT_8007609_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1964
+  }
+  immediate = { set_global_flag = event_fired_8007609 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_DEATH
+
+  }
+}
+country_event = {
+  id = 8007610
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1968
+  }
+  immediate = { set_global_flag = event_fired_8007610 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8007611
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1972
+  }
+  immediate = { set_global_flag = event_fired_8007611 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8007612
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1973
+  }
+  immediate = { set_global_flag = event_fired_8007612 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8007613
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1976
+  }
+  immediate = { set_global_flag = event_fired_8007613 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007614
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1977
+  }
+  immediate = { set_global_flag = event_fired_8007614 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8007615
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1980
+  }
+  immediate = { set_global_flag = event_fired_8007615 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8007616
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1982
+  }
+  immediate = { set_global_flag = event_fired_8007616 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8007617
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1983
+  }
+  immediate = { set_global_flag = event_fired_8007617 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8007618
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8007618 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8007619
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1985
+  }
+  immediate = { set_global_flag = event_fired_8007619 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007620
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1987
+  }
+  immediate = { set_global_flag = event_fired_8007620 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+}
+country_event = {
+  id = 8007621
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8007621 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8007622
+  title = EVT_8007622_NAME
+  desc = EVT_8007622_DESC
+  picture = "nwo2_british_mandate_for_palestine"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1999
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8007622 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8007622_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = JOR
+          }
+
+        }
+release = JOR 
+      }
+1914 = { secede_province = EGY } 1923 = { secede_province = EGY } 908 = { secede_province = JOR } 910 = { secede_province = JOR } 911 = { secede_province = JOR } 922 = { secede_province = JOR } 909 = { secede_province = JOR } 1740 = { secede_province = LEB } 1758 = { secede_province = LEB } 913 = { secede_province = SYR } 915 = { secede_province = SYR } 912 = { secede_province = SYR } 914 = { secede_province = SYR } 1008 = { any_pop = { militancy = 2.0 } }1009 = { any_pop = { militancy = 2.0 } }1010 = { any_pop = { militancy = 2.0 } }1011 = { any_pop = { militancy = 2.0 } }1013 = { any_pop = { militancy = 2.0 } }1172 = { any_pop = { militancy = 2.0 } }
+  }
+}
+country_event = {
+  id = 8007623
+  title = EVT_8007623_NAME
+  desc = EVT_8007623_DESC
+  picture = "nwo2_un_parition_of_palestine"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1963
+    NOT = {
+    exists = PAL
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007623 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8007623_A
+1008 = { any_pop = { militancy = -2.0 } }1009 = { any_pop = { militancy = -2.0 } }1010 = { any_pop = { militancy = -2.0 } }1011 = { any_pop = { militancy = -2.0 } }1013 = { any_pop = { militancy = -2.0 } }1172 = { any_pop = { militancy = -2.0 } }
+  }
+
+  option = {
+    name = EVT_8007623_B
+country_event = 8007624 country_event = 8007627 
+  }
+
+  option = {
+    name = EVT_8007623_C
+any_pop = { militancy = 1.2 }badboy = 15 release = ISR release = PAL 1008 = { any_pop = { militancy = -1.0 } }1009 = { any_pop = { militancy = -1.0 } }1010 = { any_pop = { militancy = -1.0 } }1011 = { any_pop = { militancy = -1.0 } }1013 = { any_pop = { militancy = -1.0 } }1172 = { any_pop = { militancy = -1.0 } }country_event = 8007625 country_event = 8007626 
+  }
+
+  option = {
+    name = EVT_8007623_D
+any_pop = { militancy = 2.4 }badboy = 30 1008 = { any_pop = { militancy = 2.0 } }1009 = { any_pop = { militancy = 2.0 } }1010 = { any_pop = { militancy = 2.0 } }1011 = { any_pop = { militancy = 2.0 } }1013 = { any_pop = { militancy = 2.0 } }1172 = { any_pop = { militancy = 2.0 } }
+  }
+}
+country_event = {
+  id = 8007624
+  title = EVT_8007624_NAME
+  desc = EVT_8007624_DESC
+  picture = "nwo2_independence_of_israel"
+
+  trigger = {
+    tag = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007624 }
+
+  option = {
+    name = "OK"
+any_pop = { militancy = -1.0 }country_event = 8007601 1713 = { secede_province = PAL } 1923 = { add_core =  THIS }1938 = { add_core =  THIS }1713 = { add_core =  THIS }2639 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007625
+  title = EVT_8007625_NAME
+  desc = EVT_8007625_DESC
+  picture = "nwo2_independence_of_israel"
+
+  trigger = {
+    tag = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007625 }
+
+  option = {
+    name = "OK"
+any_pop = { militancy = 1.0 }country_event = 8007601 1923 = { add_core =  THIS }1938 = { add_core =  THIS }1713 = { add_core =  THIS }2639 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007626
+  title = EVT_8007626_NAME
+  desc = EVT_8007626_DESC
+  picture = "nwo2_independence_of_palestine"
+
+  trigger = {
+    tag = PAL
+  }
+  immediate = { set_global_flag = event_fired_8007626 }
+
+  option = {
+    name = "OK"
+any_pop = { militancy = -0.3 }1923 = { add_core =  THIS }1938 = { add_core =  THIS }1713 = { add_core =  THIS }2639 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007627
+  title = EVT_8007627_NAME
+  desc = EVT_8007627_DESC
+  picture = "nwo2_independence_of_palestine"
+
+  trigger = {
+    tag = PAL
+  }
+  immediate = { set_global_flag = event_fired_8007627 }
+
+  option = {
+    name = "OK"
+any_pop = { militancy = 2.0 }1923 = { add_core =  THIS }1938 = { add_core =  THIS }1713 = { add_core =  THIS }2639 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007640
+  title = EVT_8007640_NAME
+  desc = EVT_8007640_DESC
+  picture = "nwo2_palestine_civil_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8007624
+     has_global_flag = event_fired_8007625
+    }
+    }
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8007626
+     has_global_flag = event_fired_8007627
+    }
+    }
+    exists = PAL
+  }
+  immediate = { set_global_flag = event_fired_8007640 }
+
+  mean_time_to_happen = { days = 150 }
+
+  option = {
+    name = EVT_8007640_A
+war = PAL country_event =  { id = 8007641 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8007640_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 2.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.7 } } }
+  }
+}
+country_event = {
+  id = 8007641
+  title = EVT_8007641_NAME
+  desc = EVT_8007641_DESC
+  picture = "nwo2_palestine_civil_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAL
+    year = 1963
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8007624
+     has_global_flag = event_fired_8007625
+    }
+    }
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8007626
+     has_global_flag = event_fired_8007627
+    }
+    }
+    exists = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007641 }
+
+  mean_time_to_happen = { days = 150 }
+
+  option = {
+    name = EVT_8007641_A
+war = ISR country_event =  { id = 8007640 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8007641_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 2.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.7 } } }
+  }
+}
+country_event = {
+  id = 8007649
+  title = EVT_8007649_NAME
+  desc = EVT_8007649_DESC
+  picture = "nwo2_independence_of_israel"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+  }
+  immediate = { set_global_flag = event_fired_8007649 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007649_A
+add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8007650
+  title = EVT_8007650_NAME
+  desc = EVT_8007650_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    OR = {
+    has_global_flag = event_fired_8007641
+    }
+    exists = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007650 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8007650_A
+overlord = { release_vassal = THIS } war = ISR set_global_flag = arab_israeli_war_1948 
+  }
+
+  option = {
+    name = EVT_8007650_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8007651
+  title = EVT_8007651_NAME
+  desc = EVT_8007651_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JOR
+    year = 1963
+    has_global_flag = event_fired_8007650
+    EGY = { war_with = ISR }
+  }
+  immediate = { set_global_flag = event_fired_8007651 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007651_A
+create_alliance = EGY 
+  }
+
+  option = {
+    name = EVT_8007651_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8007652
+  title = EVT_8007651_NAME
+  desc = EVT_8007651_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYR
+    year = 1963
+    has_global_flag = event_fired_8007650
+    EGY = { war_with = ISR }
+  }
+  immediate = { set_global_flag = event_fired_8007652 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007651_A
+create_alliance = EGY 
+  }
+
+  option = {
+    name = EVT_8007651_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 0.7 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8007653
+  title = EVT_8007651_NAME
+  desc = EVT_8007651_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LEB
+    year = 1963
+    has_global_flag = event_fired_8007650
+    EGY = { war_with = ISR }
+  }
+  immediate = { set_global_flag = event_fired_8007653 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007651_A
+create_alliance = EGY 
+  }
+
+  option = {
+    name = EVT_8007651_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 0.7 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8007654
+  title = EVT_8007651_NAME
+  desc = EVT_8007651_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IRQ
+    year = 1963
+    has_global_flag = event_fired_8007650
+    EGY = { war_with = ISR }
+  }
+  immediate = { set_global_flag = event_fired_8007654 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007651_A
+create_alliance = EGY 
+  }
+
+  option = {
+    name = EVT_8007651_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8007657
+  title = EVT_8007651_NAME
+  desc = EVT_8007651_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAA
+    year = 1963
+    has_global_flag = event_fired_8007650
+    EGY = { war_with = ISR }
+  }
+  immediate = { set_global_flag = event_fired_8007657 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007651_A
+create_alliance = EGY 
+  }
+
+  option = {
+    name = EVT_8007651_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 
+  }
+}
+country_event = {
+  id = 8007655
+  title = EVT_8007655_NAME
+  desc = EVT_8007655_DESC
+  picture = "nwo2_king_abdullah"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JOR
+    year = 1950
+    OR = {
+    exists = PAL
+    JOR = { war_with = ISR }
+    }
+    NOT = {
+    has_global_flag = event_fired_8007656
+    }
+    PAL = { ai = yes }
+    ISR = { war_with = PAL }
+  }
+  immediate = { set_global_flag = event_fired_8007655 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8007655_A
+inherit = PAL 2639 = { add_core =  THIS }1713 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007656
+  title = EVT_8007655_NAME
+  desc = EVT_8007655_DESC
+  picture = "nwo2_king_abdullah"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JOR
+    year = 1950
+    OR = {
+    has_global_flag = event_fired_8007662
+    }
+    NOT = {
+    exists = PAL
+    }
+    NOT = {
+    has_global_flag = event_fired_8007655
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007656 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8007655_A
+inherit = PAL 2639 = { add_core =  THIS }1713 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007660
+  title = EVT_8007660_NAME
+  desc = EVT_8007660_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = EGY tag = LEB tag = IRQ tag = JOR tag = SYR }
+    year = 1963
+    NOT = {
+    exists = ISR
+    }
+    has_global_flag = arab_israeli_war_1948
+    any_owned_province = { province_id = ERROR }  }
+  immediate = { set_global_flag = event_fired_8007660 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007660_A
+release = PAL 2639 = { secede_province = PAL } 1938 = { secede_province = PAL } 1713 = { secede_province = PAL } 1923 = { secede_province = PAL } 
+  }
+
+  option = {
+    name = EVT_8007660_B
+any_pop = { militancy = 1.0 }badboy = 20 clr_global_flag = arab_israeli_war_1948 
+  }
+}
+country_event = {
+  id = 8007661
+  title = EVT_8007661_NAME
+  desc = EVT_8007661_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+    OR = {
+    NOT = {
+    any_owned_province = { province_id = 1923 }    }
+    NOT = {
+    any_owned_province = { province_id = 2497 }    }
+    }
+    has_global_flag = arab_israeli_war_1948
+     has_global_flag = event_fired_8007650
+  }
+  immediate = { set_global_flag = event_fired_8007661 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8007661_A
+any_pop = { militancy = 1.0 }end_war = EGY end_war = JOR end_war = SYR end_war = LEB end_war = IRQ release = EGY release = JOR release = SYR release = LEB release = IRQ 2639 = { secede_province = JOR } 1713 = { secede_province = JOR } 1938 = { secede_province = EGY } clr_global_flag = arab_israeli_war_1948 add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8007662
+  title = EVT_8007662_NAME
+  desc = EVT_8007662_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+    NOT = {
+    any_owned_province = { province_id = 890 }    }
+    has_global_flag = arab_israeli_war_1948
+     has_global_flag = event_fired_8007650
+    any_owned_province = { province_id = 1923 }  }
+  immediate = { set_global_flag = event_fired_8007662 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8007662_A
+end_war = EGY end_war = JOR end_war = SYR end_war = LEB end_war = IRQ release = EGY release = JOR release = SYR release = LEB release = IRQ 2639 = { secede_province = JOR } 1713 = { secede_province = ISR } 1938 = { secede_province = EGY } add_country_modifier = { name = dh_industrial_modifier duration = 365 }clr_global_flag = arab_israeli_war_1948 add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8007663
+  title = EVT_8007663_NAME
+  desc = EVT_8007663_DESC
+  picture = "nwo2_arab_israeli_war_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1963
+    has_global_flag = arab_israeli_war_1948
+    EGY_921 = { owned_by = THIS } 
+    any_owned_province = { province_id = 1923 }    any_owned_province = { province_id = 890 }  }
+  immediate = { set_global_flag = event_fired_8007663 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007663_A
+end_war = SYR end_war = LEB 
+  }
+
+  option = {
+    name = EVT_8007663_B
+any_pop = { militancy = 1.0 }badboy = 20 end_war = EGY end_war = JOR end_war = IRQ release = EGY release = JOR release = SYR release = LEB release = IRQ 2639 = { secede_province = ISR } 1713 = { secede_province = ISR } 1938 = { secede_province = ISR } add_country_modifier = { name = dh_industrial_modifier duration = 365 }clr_global_flag = arab_israeli_war_1948 1758 = { add_core =  THIS }1740 = { add_core =  THIS }1914 = { add_core =  THIS }1923 = { add_core =  THIS }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8007670
+  title = EVT_8007670_NAME
+  desc = EVT_8007670_DESC
+  picture = "nwo2_law_of_return"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1999
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8007670 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007670_A
+add_country_modifier = { name = dh_province_manpower duration = 365 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8007671
+  title = EVT_8007671_NAME
+  desc = EVT_8007671_DESC
+  picture = "nwo2_six_day_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1967
+    exists = ISR
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8007671 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8007671_A
+any_pop = { militancy = -0.5 }badboy = 10 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }country_event = 8007672 
+  }
+
+  option = {
+    name = EVT_8007671_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 
+  }
+}
+country_event = {
+  id = 8007672
+  title = EVT_8007672_NAME
+  desc = EVT_8007672_DESC
+  picture = "nwo2_six_day_war"
+
+  trigger = {
+    tag = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007672 }
+
+  option = {
+    name = EVT_8007672_A
+war = EGY war = SYR war = JOR any_pop = { militancy = -0.5 }badboy = 10 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8007672_B
+any_pop = { militancy = 1.5 }country_event = 8007673 
+  }
+}
+country_event = {
+  id = 8007673
+  title = EVT_8007673_NAME
+  desc = EVT_8007673_DESC
+  picture = "nwo2_six_day_war"
+
+  trigger = {
+    tag = EGY
+  }
+  immediate = { set_global_flag = event_fired_8007673 }
+
+  option = {
+    name = EVT_8007673_A
+war = ISR create_alliance = EGY any_pop = { militancy = -1.0 }badboy = 15 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }country_event = 8007674 country_event = 8007675 
+  }
+
+  option = {
+    name = EVT_8007673_B
+any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }
+  }
+}
+country_event = {
+  id = 8007674
+  title = EVT_8007674_NAME
+  desc = EVT_8007674_DESC
+  picture = "nwo2_six_day_war"
+
+  trigger = {
+    tag = SYR
+  }
+  immediate = { set_global_flag = event_fired_8007674 }
+
+  option = {
+    name = EVT_8007674_A
+war = ISR create_alliance = EGY any_pop = { militancy = -1.0 }badboy = 15 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8007674_B
+any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8007675
+  title = EVT_8007675_NAME
+  desc = EVT_8007675_DESC
+  picture = "nwo2_six_day_war"
+
+  trigger = {
+    tag = JOR
+  }
+  immediate = { set_global_flag = event_fired_8007675 }
+
+  option = {
+    name = EVT_8007675_A
+war = ISR create_alliance = EGY any_pop = { militancy = -1.0 }badboy = 15 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8007675_B
+any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8007676
+  title = EVT_8007676_NAME
+  desc = EVT_8007676_DESC
+  picture = "nwo2_six_day_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1970
+    OR = {
+    NOT = {
+    war_with = JOR
+    }
+    any_owned_province = { province_id = ERROR }    }
+    has_global_flag = event_fired_8007671
+    ISR = { war_with = EGY }
+    any_owned_province = { province_id = 1 }    any_owned_province = { province_id = 1923 }  }
+  immediate = { set_global_flag = event_fired_8007676 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007676_A
+any_pop = { militancy = -2.5 }country_event = 8007677 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          war_with = SYR
+
+        }
+country_event = 8007678 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          war_with = JOR
+
+        }
+country_event = 8007679 
+      }
+end_war = EGY end_war = SYR end_war = JOR release = EGY release = SYR release = JOR 1758 = { add_core =  THIS }2639 = { add_core =  THIS }1938 = { add_core =  THIS }1914 = { add_core =  THIS }1923 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007677
+  title = EVT_8007677_NAME
+  desc = EVT_8007677_DESC
+  picture = "nwo2_six_day_war"
+
+  trigger = {
+    tag = EGY
+  }
+  immediate = { set_global_flag = event_fired_8007677 }
+
+  option = {
+    name = EVT_8007677_A
+any_pop = { militancy = 1.5 }1938 = { secede_province = ISR } 1914 = { secede_province = ISR } 1923 = { secede_province = ISR } 
+  }
+}
+country_event = {
+  id = 8007678
+  title = EVT_8007678_NAME
+  desc = EVT_8007678_DESC
+  picture = "nwo2_six_day_war"
+
+  trigger = {
+    tag = SYR
+  }
+  immediate = { set_global_flag = event_fired_8007678 }
+
+  option = {
+    name = EVT_8007678_A
+any_pop = { militancy = 1.0 }1758 = { secede_province = ISR } 
+  }
+}
+country_event = {
+  id = 8007679
+  title = EVT_8007679_NAME
+  desc = EVT_8007679_DESC
+  picture = "nwo2_six_day_war"
+
+  trigger = {
+    tag = JOR
+  }
+  immediate = { set_global_flag = event_fired_8007679 }
+
+  option = {
+    name = EVT_8007679_A
+any_pop = { militancy = 1.5 }2639 = { secede_province = ISR } 
+  }
+}
+country_event = {
+  id = 8007680
+  title = EVT_8007680_NAME
+  desc = EVT_8007680_DESC
+  picture = "nwo2_six_day_war"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = EGY tag = JOR tag = SYR }
+    year = 1970
+    OR = {
+    AND = {
+    any_owned_province = { province_id = 1923 }    }
+    AND = {
+    any_owned_province = { province_id = 1923 }    }
+    AND = {
+    any_owned_province = { province_id = 1923 }    }
+    AND = {
+    any_owned_province = { province_id = 1923 }    }
+    }
+    OR = {
+    NOT = {
+    exists = ISR
+    }
+    ISR = { war_with = EGY }
+    }
+    NOT = {
+    any_owned_province = { province_id = 1923 }    any_owned_province = { province_id = 1 }    any_owned_province = { province_id = 658 }    }
+    has_global_flag = event_fired_8007671
+  }
+  immediate = { set_global_flag = event_fired_8007680 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007680_A
+any_pop = { militancy = -1.5 }end_war = ISR 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = PAL
+          }
+          NOT = {
+          exists = ISR
+          }
+
+        }
+release = PAL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ISR
+
+        }
+country_event = 8007681 
+      }
+
+  }
+}
+country_event = {
+  id = 8007681
+  title = EVT_8007681_NAME
+  desc = EVT_8007681_DESC
+  picture = "nwo2_six_day_war"
+
+  trigger = {
+    tag = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007681 }
+
+  option = {
+    name = EVT_8007680_A
+any_pop = { militancy = 5.0 }release = PAL 1923 = { secede_province = ISR } 2639 = { secede_province = PAL } 1713 = { secede_province = PAL } 1923 = { secede_province = PAL } 1938 = { secede_province = PAL } 1758 = { secede_province = SYR } 1914 = { secede_province = EGY } 1923 = { secede_province = EGY } 
+  }
+}
+country_event = {
+  id = 8007682
+  title = EVT_8007682_NAME
+  desc = EVT_8007682_DESC
+  picture = "nwo2_jewish_immigrants"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1968
+    has_global_flag = event_fired_8007676
+    exists = POL
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8007682 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007682_A
+
+  }
+}
+country_event = {
+  id = 8007683
+  title = EVT_8007683_NAME
+  desc = EVT_8007683_DESC
+  picture = "nwo2_yom_kippur_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1973
+    exists = ISR
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8007683 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8007683_A
+war = ISR any_pop = { militancy = -0.5 }badboy = 5 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }country_event = 8007684 country_event = 8007685 
+  }
+
+  option = {
+    name = EVT_8007683_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 
+  }
+}
+country_event = {
+  id = 8007684
+  title = EVT_8007684_NAME
+  desc = EVT_8007684_DESC
+  picture = "nwo2_yom_kippur_war"
+
+  trigger = {
+    tag = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007684 }
+
+  option = {
+    name = EVT_8007684_A
+any_pop = { militancy = 5.0 }country_event = 8007686 
+  }
+}
+country_event = {
+  id = 8007685
+  title = EVT_8007685_NAME
+  desc = EVT_8007685_DESC
+  picture = "nwo2_yom_kippur_war"
+
+  trigger = {
+    tag = SYR
+  }
+  immediate = { set_global_flag = event_fired_8007685 }
+
+  option = {
+    name = EVT_8007685_A
+war = ISR create_alliance = EGY any_pop = { militancy = -0.5 }badboy = 5 
+  }
+
+  option = {
+    name = EVT_8007685_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = EGY value = -100 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+}
+country_event = {
+  id = 8007686
+  title = EVT_8007686_NAME
+  desc = EVT_8007686_DESC
+  picture = "nwo2_yom_kippur_war"
+
+  trigger = {
+    tag = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007686 }
+
+  option = {
+    name = EVT_8007686_A
+any_pop = { militancy = -4.0 }
+  }
+}
+country_event = {
+  id = 8007687
+  title = EVT_8007687_NAME
+  desc = EVT_8007687_DESC
+  picture = "nwo2_yom_kippur_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1973
+    has_global_flag = event_fired_8007683
+    ISR = { war_with = EGY }
+    any_owned_province = { province_id = 339 }    any_owned_province = { province_id = 658 }    any_owned_province = { province_id = 1923 }  }
+  immediate = { set_global_flag = event_fired_8007687 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007687_A
+end_war = EGY end_war = SYR any_pop = { militancy = -1.5 }country_event = 8007689 1914 = { add_core =  THIS }1923 = { add_core =  THIS }1758 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007689
+  title = EVT_8007689_NAME
+  desc = EVT_8007689_DESC
+  picture = "nwo2_yom_kippur_war"
+
+  trigger = {
+    tag = EGY
+  }
+  immediate = { set_global_flag = event_fired_8007689 }
+
+  option = {
+    name = EVT_8007689_A
+any_pop = { militancy = 2.5 }1914 = { remove_core =  THIS }1923 = { remove_core =  THIS }1758 = { secede_province = ISR } 
+  }
+}
+country_event = {
+  id = 8007690
+  title = EVT_8007690_NAME
+  desc = EVT_8007690_DESC
+  picture = "nwo2_yom_kippur_war"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = EGY tag = JOR tag = SYR }
+    year = 1973
+    OR = {
+    AND = {
+    any_owned_province = { province_id = 1923 }    }
+    AND = {
+    any_owned_province = { province_id = 1923 }    }
+    AND = {
+    any_owned_province = { province_id = 1923 }    }
+    AND = {
+    any_owned_province = { province_id = 1923 }    }
+    }
+    OR = {
+    NOT = {
+    exists = ISR
+    }
+    ISR = { war_with = EGY }
+    }
+    NOT = {
+    any_owned_province = { province_id = 2497 }    any_owned_province = { province_id = 1923 }    any_owned_province = { province_id = ERROR }    }
+    has_global_flag = event_fired_8007683
+  }
+  immediate = { set_global_flag = event_fired_8007690 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007690_A
+any_pop = { militancy = -2.5 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = PAL
+          }
+          NOT = {
+          exists = ISR
+          }
+
+        }
+release = PAL 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = PAL
+
+        }
+country_event = 8007691 
+      }
+1914 = { add_core =  THIS }1923 = { add_core =  THIS }1938 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8007691
+  title = EVT_8007691_NAME
+  desc = EVT_8007691_DESC
+  picture = "nwo2_yom_kippur_war"
+
+  trigger = {
+    tag = ISR
+  }
+  immediate = { set_global_flag = event_fired_8007691 }
+
+  option = {
+    name = EVT_8007691_A
+end_war = EGY end_war = SYR any_pop = { militancy = 2.5 }1914 = { remove_core =  THIS }1923 = { remove_core =  THIS }1914 = { secede_province = EGY } 1923 = { secede_province = EGY } 1938 = { secede_province = EGY } 1758 = { secede_province = SYR } release = PAL 2639 = { secede_province = PAL } 1938 = { secede_province = PAL } 1713 = { secede_province = ISR } 1923 = { secede_province = ISR } 
+  }
+}
+country_event = {
+  id = 8007692
+  title = EVT_8007692_NAME
+  desc = EVT_8007692_DESC
+  picture = "nwo2_yom_kippur_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1973
+    NOT = {
+    has_global_flag = event_fired_8007690
+    }
+    has_global_flag = event_fired_8007683
+    ISR = { war_with = EGY }
+  }
+  immediate = { set_global_flag = event_fired_8007692 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007692_A
+country_event = 8007693 
+  }
+
+  option = {
+    name = EVT_8007692_B
+any_pop = { militancy = 1.5 }country_event =  { id = 8007695 days = 1 } 
+  }
+}
+country_event = {
+  id = 8007693
+  title = EVT_8007693_NAME
+  desc = EVT_8007693_DESC
+  picture = "nwo2_yom_kippur_war"
+
+  trigger = {
+    tag = EGY
+  }
+  immediate = { set_global_flag = event_fired_8007693 }
+
+  option = {
+    name = EVT_8007693_A
+end_war = ISR country_event = 8007694 
+  }
+
+  option = {
+    name = EVT_8007693_B
+any_pop = { militancy = 1.5 }country_event =  { id = 8007695 days = 1 } 
+  }
+}
+country_event = {
+  id = 8007694
+  title = EVT_8007694_NAME
+  desc = EVT_8007694_DESC
+  picture = "nwo2_yom_kippur_war"
+
+  trigger = {
+    tag = SYR
+  }
+  immediate = { set_global_flag = event_fired_8007694 }
+
+  option = {
+    name = EVT_8007694_A
+end_war = ISR 
+  }
+
+  option = {
+    name = EVT_8007694_B
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8007695
+  title = EVT_8007695_NAME
+  desc = EVT_8007695_DESC
+  picture = "nwo2_camp_david_accords"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1978
+    has_global_flag = event_fired_8007692
+    exists = EGY
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8007695 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007695_A
+country_event = 8007696 
+  }
+}
+country_event = {
+  id = 8007696
+  title = EVT_8007696_NAME
+  desc = EVT_8007696_DESC
+  picture = "nwo2_camp_david_accords"
+
+  trigger = {
+    tag = EGY
+  }
+  immediate = { set_global_flag = event_fired_8007696 }
+
+  option = {
+    name = EVT_8007696_A
+country_event = 8007693 
+  }
+}
+country_event = {
+  id = 8007697
+  title = EVT_8007697_NAME
+  desc = EVT_8007697_DESC
+  picture = "nwo2_camp_david_accords"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1991
+    NOT = {
+    exists = PAL
+    }
+    has_global_flag = event_fired_8007695
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8007697 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007697_A
+any_pop = { militancy = 2.0 }
+  }
+
+  option = {
+    name = EVT_8007697_A
+any_pop = { militancy = 0.5 }release = PAL 2639 = { secede_province = PAL } 1938 = { secede_province = PAL } 1713 = { secede_province = ISR } 1923 = { secede_province = ISR } 
+  }
+}
+country_event = {
+  id = 8007699
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+
+  trigger = {
+    OR = { tag = LEB tag = IRQ tag = JOR tag = SYR }
+    NOT = {
+    war_with = ISR
+    }
+    ai = yes
+  }
+  immediate = { set_global_flag = event_fired_8007699 }
+
+  option = {
+    name = OK
+
+  }
+}

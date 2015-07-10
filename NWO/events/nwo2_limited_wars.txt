@@ -1,0 +1,41 @@
+country_event = {
+  id = 8940010
+  title = EVT_LIMITEDWAR_NAME
+  desc = EVT_LIMITEDWAR_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = GRE
+  }
+  immediate = { set_global_flag = event_fired_8940010 }
+
+  option = {
+    name = OK
+war = GRE 
+  }
+}
+country_event = {
+  id = 8940011
+  title = EVT_8940011_NAME
+  desc = EVT_8940011_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    NOT = {
+    war_with = GRE
+    }
+    has_global_flag = event_fired_8940010
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8940011 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = OK
+create_alliance = USA 
+  }
+}

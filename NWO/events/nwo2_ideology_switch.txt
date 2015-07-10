@@ -1,0 +1,1446 @@
+country_event = {
+  id = 8208101
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1963
+    NOT = {
+    exists = NET
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208101 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = NET 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208102
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = NET
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208102 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = NET 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208111
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1963
+    NOT = {
+    exists = FRA
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208111 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = FRA 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208112
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = FRA
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208112 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = FRA 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208121
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1963
+    NOT = {
+    exists = ENG
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208121 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = ENG 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208122
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = ENG
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208122 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = ENG 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208131
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1963
+    NOT = {
+    exists = HUN
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208131 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = HUN 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208132
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = HUN
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208132 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = HUN 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208141
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1963
+    NOT = {
+    exists = ITA
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208141 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = ITA 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208142
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = ITA
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208142 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = ITA 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208151
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POR
+    year = 1963
+    NOT = {
+    exists = POR
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208151 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = POR 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208152
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POR
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = POR
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208152 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = POR 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208161
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AUS
+    year = 1963
+    NOT = {
+    exists = AUS
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208161 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = AUS 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208162
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AUS
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = AUS
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208162 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = AUS 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208171
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1963
+    NOT = {
+    exists = BEL
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208171 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = BEL 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208172
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = BEL
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208172 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = BEL 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208181
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LUX
+    year = 1963
+    NOT = {
+    exists = LUX
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208181 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = LUX 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208182
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LUX
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = LUX
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208182 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = LUX 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208191
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NOR
+    year = 1963
+    NOT = {
+    exists = NOR
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208191 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = NOR 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208192
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NOR
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = NOR
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208192 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = NOR 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208201
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FIN
+    year = 1963
+    NOT = {
+    exists = FIN
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208201 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = FIN 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208202
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FIN
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = FIN
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208202 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = FIN 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208211
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SWE
+    year = 1963
+    NOT = {
+    exists = SWE
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208211 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = SWE 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208212
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SWE
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = SWE
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208212 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = SWE 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208221
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DEN
+    year = 1963
+    NOT = {
+    exists = DEN
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208221 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = DEN 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208222
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DEN
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = DEN
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208222 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = DEN 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208261
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SWI
+    year = 1963
+    NOT = {
+    exists = SWI
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208261 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = SWI 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208262
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SWI
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = SWI
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208262 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = SWI 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208271
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+    year = 1963
+    NOT = {
+    exists = YUG
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208271 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = YUG 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208272
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = YUG
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208272 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = YUG 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208281
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ALB
+    year = 1963
+    NOT = {
+    exists = ALB
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208281 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = ALB 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208282
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ALB
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = ALB
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208282 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = ALB 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208291
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1963
+    NOT = {
+    exists = BUL
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208291 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = BUL 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208292
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = BUL
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208292 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = BUL 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208301
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ROM
+    year = 1963
+    NOT = {
+    exists = ROM
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208301 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = ROM 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208302
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ROM
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = ROM
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208302 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = ROM 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208311
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CZH
+    year = 1963
+    NOT = {
+    exists = CZH
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208311 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = CZH 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208312
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CZH
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = CZH
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208312 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = CZH 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208321
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+    year = 1963
+    NOT = {
+    exists = POL
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208321 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = POL 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208322
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = POL
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208322 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = POL 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208331
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    NOT = {
+    exists = GRE
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208331 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = GRE 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208332
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = GRE
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208332 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = GRE 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208341
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TUR
+    year = 1963
+    NOT = {
+    exists = TUR
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208341 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = TUR 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208342
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TUR
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = TUR
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208342 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = TUR 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208351
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+    year = 1963
+    NOT = {
+    exists = SPA
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208351 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = SPA 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208352
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = SPA
+    has_country_flag  = block_ideology_switch
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208352 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = SPA 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208361
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+    year = 1985
+    NOT = {
+    exists = DDR
+    has_country_flag  = block_ideology_switch
+    }
+    NOT = {
+    has_global_flag = event_fired_8004309
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208361 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+change_tag = DDR 
+  }
+
+  option = {
+    name = EVT_COMMIESWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}
+country_event = {
+  id = 8208362
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DDR
+    year = 1963
+    NOT = {
+    }
+    NOT = {
+    exists = GER
+    has_country_flag  = block_ideology_switch
+    }
+    NOT = {
+    has_global_flag = event_fired_8004309
+    }
+  }
+  immediate = { set_global_flag = event_fired_8208362 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+change_tag = GER 
+  }
+
+  option = {
+    name = EVT_DEMOSWITCH_REJECT
+set_country_flag = reject_unification 
+  }
+}

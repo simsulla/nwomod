@@ -1,0 +1,4547 @@
+country_event = {
+  id = 8510100
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1950
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    RUS = { war_with = CHI }
+    }
+    NOT = {
+    USA = { war_with = CHI }
+    }
+    has_global_flag = cold_war
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8510100 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510101 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8510102 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510103 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510108 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510105 
+      }
+
+  }
+}
+country_event = {
+  id = 8510101
+  title = EVT_85101XX_NAME
+  desc = EVT_85101XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510101 }
+
+  option = {
+    name = EVT_85101XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_ccw_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85101XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_ccw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85101XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_ccw_totalveto 
+  }
+}
+country_event = {
+  id = 8510102
+  title = EVT_85101XX_NAME
+  desc = EVT_85101XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8510102 }
+
+  option = {
+    name = EVT_85101XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_ccw_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85101XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_ccw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85101XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_ccw_totalveto 
+  }
+}
+country_event = {
+  id = 8510103
+  title = EVT_85101XX_NAME
+  desc = EVT_85101XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510103 }
+
+  option = {
+    name = EVT_85101XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_ccw_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85101XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_ccw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85101XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_ccw_totalveto 
+  }
+}
+country_event = {
+  id = 8510108
+  title = EVT_85101XX_NAME
+  desc = EVT_85101XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510108 }
+
+  option = {
+    name = EVT_85101XX_C
+set_global_flag = un_ccw_totalveto 
+  }
+}
+country_event = {
+  id = 8510105
+  title = EVT_85101XX_NAME
+  desc = EVT_85101XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510105 }
+
+  option = {
+    name = EVT_85101XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_ccw_totalveto 
+  }
+
+  option = {
+    name = EVT_85101XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_ccw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85101XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_ccw_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510106
+  title = EVT_8510106_NAME
+  desc = EVT_8510106_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1950
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510101
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510102
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510103
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510107
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510105
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_ccw_totalveto
+    }
+    NOT = {
+    has_global_flag = un_ccw_interventionveto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510106 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510106_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510107
+  title = EVT_8510107_NAME
+  desc = EVT_8510107_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1950
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510101
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510102
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510103
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510107
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510105
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_ccw_totalveto
+    }
+    has_global_flag = un_ccw_interventionveto
+  }
+  immediate = { set_global_flag = event_fired_8510107 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510107_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510200
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1957
+    NOT = {
+    RUS = { war_with = ISR }
+    }
+    NOT = {
+    USA = { war_with = EGY }
+    }
+    has_global_flag = event_fired_8500305
+    has_global_flag = cold_war
+    EGY = { war_with = ISR }
+  }
+  immediate = { set_global_flag = event_fired_8510200 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510201 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8510202 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510203 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHC_in_UNSC
+          }
+          exists = CHI
+
+        }
+country_event = 8510204 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510208 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510205 
+      }
+
+  }
+}
+country_event = {
+  id = 8510201
+  title = EVT_85102XX_NAME
+  desc = EVT_85102XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510201 }
+
+  option = {
+    name = EVT_85102XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_interventionveto 
+  }
+
+  option = {
+    name = EVT_85102XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_totalveto 
+  }
+
+  option = {
+    name = EVT_85102XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_suez_interventionveto
+#      }
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510202
+  title = EVT_85102XX_NAME
+  desc = EVT_85102XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8510202 }
+
+  option = {
+    name = EVT_85102XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_totalveto 
+  }
+
+  option = {
+    name = EVT_85102XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_suez_interventionveto
+#      }
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85102XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_interventionveto 
+  }
+}
+country_event = {
+  id = 8510203
+  title = EVT_85102XX_NAME
+  desc = EVT_85102XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510203 }
+
+  option = {
+    name = EVT_85102XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_totalveto 
+  }
+
+  option = {
+    name = EVT_85102XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_suez_interventionveto
+#      }
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85102XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_interventionveto 
+  }
+}
+country_event = {
+  id = 8510204
+  title = EVT_85102XX_NAME
+  desc = EVT_85102XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510204 }
+
+  option = {
+    name = EVT_85102XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_suez_interventionveto
+#      }
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85102XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_interventionveto 
+  }
+
+  option = {
+    name = EVT_85102XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_totalveto 
+  }
+}
+country_event = {
+  id = 8510208
+  title = EVT_85102XX_NAME
+  desc = EVT_85102XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510208 }
+
+  option = {
+    name = EVT_85102XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_suez_interventionveto
+#      }
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85102XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_interventionveto 
+  }
+
+  option = {
+    name = EVT_85102XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_totalveto 
+  }
+}
+country_event = {
+  id = 8510205
+  title = EVT_85102XX_NAME
+  desc = EVT_85102XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510205 }
+
+  option = {
+    name = EVT_85102XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_suez_interventionveto
+#      }
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85102XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = EGY
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_interventionveto 
+  }
+
+  option = {
+    name = EVT_85102XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_suez_totalveto 
+  }
+}
+country_event = {
+  id = 8510206
+  title = EVT_8510206_NAME
+  desc = EVT_8510206_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1957
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510201
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510202
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510203
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510204
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510208
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510205
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_suez_totalveto
+    }
+    NOT = {
+    has_global_flag = un_suez_interventionveto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510206 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510206_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510207
+  title = EVT_8510207_NAME
+  desc = EVT_8510207_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1957
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510201
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510202
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510203
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510204
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510208
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510205
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_suez_totalveto
+    }
+    has_global_flag = un_suez_interventionveto
+  }
+  immediate = { set_global_flag = event_fired_8510207 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510207_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510300
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1960
+    NOT = {
+    RUS = { war_with = CHI }
+    }
+    NOT = {
+    USA = { war_with = CHI }
+    }
+    has_global_flag = cold_war
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8510300 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510301 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8510302 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510303 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510308 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510305 
+      }
+
+  }
+}
+country_event = {
+  id = 8510301
+  title = EVT_85103XX_NAME
+  desc = EVT_85103XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510301 }
+
+  option = {
+    name = EVT_85103XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_taiwan_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85103XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_taiwan_interventionveto 
+  }
+
+  option = {
+    name = EVT_85103XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_taiwan_totalveto 
+  }
+}
+country_event = {
+  id = 8510302
+  title = EVT_85103XX_NAME
+  desc = EVT_85103XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8510302 }
+
+  option = {
+    name = EVT_85103XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_taiwan_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85103XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_taiwan_interventionveto 
+  }
+
+  option = {
+    name = EVT_85103XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_taiwan_totalveto 
+  }
+}
+country_event = {
+  id = 8510303
+  title = EVT_85103XX_NAME
+  desc = EVT_85103XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510303 }
+
+  option = {
+    name = EVT_85103XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_taiwan_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85103XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_taiwan_interventionveto 
+  }
+
+  option = {
+    name = EVT_85103XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_taiwan_totalveto 
+  }
+}
+country_event = {
+  id = 8510308
+  title = EVT_85103XX_NAME
+  desc = EVT_85103XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510308 }
+
+  option = {
+    name = EVT_85103XX_C
+set_global_flag = un_taiwan_totalveto 
+  }
+}
+country_event = {
+  id = 8510305
+  title = EVT_85103XX_NAME
+  desc = EVT_85103XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510305 }
+
+  option = {
+    name = EVT_85103XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_taiwan_totalveto 
+  }
+
+  option = {
+    name = EVT_85103XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_taiwan_interventionveto 
+  }
+
+  option = {
+    name = EVT_85103XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_taiwan_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510306
+  title = EVT_8510306_NAME
+  desc = EVT_8510306_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1960
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510301
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510302
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510303
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510308
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510305
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_taiwan_totalveto
+    }
+    NOT = {
+    has_global_flag = un_taiwan_interventionveto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510306 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510306_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510307
+  title = EVT_8510307_NAME
+  desc = EVT_8510307_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1960
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510301
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510302
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510303
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510308
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510305
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_taiwan_totalveto
+    }
+    has_global_flag = un_taiwan_interventionveto
+  }
+  immediate = { set_global_flag = event_fired_8510307 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510307_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510400
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1950
+    NOT = {
+    RUS = { war_with = GRE }
+    }
+    NOT = {
+    USA = { war_with = GRE }
+    }
+    has_global_flag = cold_war
+    GRE = { war_with = GRE }
+  }
+  immediate = { set_global_flag = event_fired_8510400 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510401 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8510402 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510403 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHC_in_UNSC
+          }
+          exists = CHI
+
+        }
+country_event = 8510404 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510408 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510405 
+      }
+
+  }
+}
+country_event = {
+  id = 8510401
+  title = EVT_85104XX_NAME
+  desc = EVT_85104XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510401 }
+
+  option = {
+    name = EVT_85104XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85104XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = CHI
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85104XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_totalveto 
+  }
+}
+country_event = {
+  id = 8510402
+  title = EVT_85104XX_NAME
+  desc = EVT_85104XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8510402 }
+
+  option = {
+    name = EVT_85104XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85104XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85104XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_totalveto 
+  }
+}
+country_event = {
+  id = 8510403
+  title = EVT_85104XX_NAME
+  desc = EVT_85104XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510403 }
+
+  option = {
+    name = EVT_85104XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85104XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85104XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_totalveto 
+  }
+}
+country_event = {
+  id = 8510404
+  title = EVT_85104XX_NAME
+  desc = EVT_85104XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510404 }
+
+  option = {
+    name = EVT_85104XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85104XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85104XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_totalveto 
+  }
+}
+country_event = {
+  id = 8510408
+  title = EVT_85104XX_NAME
+  desc = EVT_85104XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510408 }
+
+  option = {
+    name = EVT_85104XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_totalveto 
+  }
+
+  option = {
+    name = EVT_85104XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85104XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510405
+  title = EVT_85104XX_NAME
+  desc = EVT_85104XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510405 }
+
+  option = {
+    name = EVT_85104XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_totalveto 
+  }
+
+  option = {
+    name = EVT_85104XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_gcw_interventionveto 
+  }
+
+  option = {
+    name = EVT_85104XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_gcw_interventionveto
+#      }
+#      NOT = {
+#      war_with = GRE
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510406
+  title = EVT_8510406_NAME
+  desc = EVT_8510406_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1950
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510401
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510402
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510403
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510404
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510408
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510405
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_gcw_totalveto
+    }
+    NOT = {
+    has_global_flag = un_gcw_interventionveto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510406 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510406_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510407
+  title = EVT_8510407_NAME
+  desc = EVT_8510407_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1950
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510401
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510402
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510403
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510404
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510408
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510405
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_gcw_totalveto
+    }
+    has_global_flag = un_gcw_interventionveto
+  }
+  immediate = { set_global_flag = event_fired_8510407 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510407_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510500
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    NOT = {
+    any_owned_province = { province_id = 2003 }    }
+    has_global_flag = event_fired_8005310
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8510500 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510501 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8510502 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510503 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHC_in_UNSC
+          }
+          exists = CHI
+
+        }
+country_event = 8510504 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510508 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510505 
+      }
+
+  }
+}
+country_event = {
+  id = 8510501
+  title = EVT_85105XX_NAME
+  desc = EVT_85105XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510501 }
+
+  option = {
+    name = EVT_85105XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = ETH
+#      }
+#    }
+money = -1 relation = { who = ETH value = 50 } 
+  }
+
+  option = {
+    name = EVT_85105XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_eritrea_veto relation = { who = ETH value = -100 } 
+  }
+}
+country_event = {
+  id = 8510502
+  title = EVT_85105XX_NAME
+  desc = EVT_85105XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8510502 }
+
+  option = {
+    name = EVT_85105XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = ETH
+#      }
+#    }
+money = -1 relation = { who = ETH value = 50 } 
+  }
+
+  option = {
+    name = EVT_85105XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_eritrea_veto relation = { who = ETH value = -100 } 
+  }
+}
+country_event = {
+  id = 8510503
+  title = EVT_85105XX_NAME
+  desc = EVT_85105XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510503 }
+
+  option = {
+    name = EVT_85105XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = ETH
+#      }
+#    }
+money = -1 relation = { who = ETH value = 50 } 
+  }
+
+  option = {
+    name = EVT_85105XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_eritrea_veto relation = { who = ETH value = -100 } 
+  }
+}
+country_event = {
+  id = 8510504
+  title = EVT_85105XX_NAME
+  desc = EVT_85105XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510504 }
+
+  option = {
+    name = EVT_85105XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = ETH
+#      }
+#    }
+money = -1 relation = { who = ETH value = 50 } 
+  }
+
+  option = {
+    name = EVT_85105XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_eritrea_veto relation = { who = ETH value = -100 } 
+  }
+}
+country_event = {
+  id = 8510508
+  title = EVT_85105XX_NAME
+  desc = EVT_85105XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510508 }
+
+  option = {
+    name = EVT_85105XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = ETH
+#      }
+#    }
+money = -1 relation = { who = ETH value = 50 } 
+  }
+
+  option = {
+    name = EVT_85105XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_eritrea_veto relation = { who = ETH value = -100 } 
+  }
+}
+country_event = {
+  id = 8510505
+  title = EVT_85105XX_NAME
+  desc = EVT_85105XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510505 }
+
+  option = {
+    name = EVT_85105XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = ETH
+#      }
+#    }
+money = -1 relation = { who = ETH value = 50 } 
+  }
+
+  option = {
+    name = EVT_85105XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_eritrea_veto relation = { who = ETH value = -100 } 
+  }
+}
+country_event = {
+  id = 8510506
+  title = EVT_8510506_NAME
+  desc = EVT_8510506_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1953
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510501
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510502
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510503
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510504
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510508
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510505
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_eritrea_veto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510506 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510506_A
+country_event = 8005311 
+  }
+}
+country_event = {
+  id = 8510600
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1950
+    has_global_flag = cold_war_pacific
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8510600 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510601 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8510602 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510603 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHC_in_UNSC
+          }
+          exists = CHI
+
+        }
+country_event = 8510604 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510608 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510605 
+      }
+
+  }
+}
+country_event = {
+  id = 8510601
+  title = EVT_85106XX_NAME
+  desc = EVT_85106XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510601 }
+
+  option = {
+    name = EVT_85106XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = IDO
+#      }
+#    }
+set_global_flag = un_indonesia_interventionveto 
+  }
+
+  option = {
+    name = EVT_85106XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_indonesia_interventionveto
+#      }
+#      NOT = {
+#      war_with = IDO
+#      }
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85106XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_indonesia_totalveto 
+  }
+}
+country_event = {
+  id = 8510602
+  title = EVT_85106XX_NAME
+  desc = EVT_85106XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8510602 }
+
+  option = {
+    name = EVT_85106XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = IDO
+#      }
+#    }
+set_global_flag = un_indonesia_interventionveto 
+  }
+
+  option = {
+    name = EVT_85106XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_indonesia_totalveto 
+  }
+
+  option = {
+    name = EVT_85106XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_indonesia_interventionveto
+#      }
+#      NOT = {
+#      war_with = IDO
+#      }
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510603
+  title = EVT_85106XX_NAME
+  desc = EVT_85106XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510603 }
+
+  option = {
+    name = EVT_85106XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = IDO
+#      }
+#    }
+set_global_flag = un_indonesia_interventionveto 
+  }
+
+  option = {
+    name = EVT_85106XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_indonesia_totalveto 
+  }
+
+  option = {
+    name = EVT_85106XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_indonesia_interventionveto
+#      }
+#      NOT = {
+#      war_with = IDO
+#      }
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510604
+  title = EVT_85106XX_NAME
+  desc = EVT_85106XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510604 }
+
+  option = {
+    name = EVT_85106XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = IDO
+#      }
+#    }
+set_global_flag = un_indonesia_interventionveto 
+  }
+
+  option = {
+    name = EVT_85106XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_indonesia_totalveto 
+  }
+
+  option = {
+    name = EVT_85106XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_indonesia_interventionveto
+#      }
+#      NOT = {
+#      war_with = IDO
+#      }
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510608
+  title = EVT_85106XX_NAME
+  desc = EVT_85106XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510608 }
+
+  option = {
+    name = EVT_85106XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_indonesia_interventionveto
+#      }
+#      NOT = {
+#      war_with = IDO
+#      }
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85106XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = IDO
+#      }
+#    }
+set_global_flag = un_indonesia_interventionveto 
+  }
+
+  option = {
+    name = EVT_85106XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_indonesia_totalveto 
+  }
+}
+country_event = {
+  id = 8510605
+  title = EVT_85106XX_NAME
+  desc = EVT_85106XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510605 }
+
+  option = {
+    name = EVT_85106XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_indonesia_interventionveto
+#      }
+#      NOT = {
+#      war_with = IDO
+#      }
+#      NOT = {
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85106XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = IDO
+#      }
+#    }
+set_global_flag = un_indonesia_interventionveto 
+  }
+
+  option = {
+    name = EVT_85106XX_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_indonesia_totalveto 
+  }
+}
+country_event = {
+  id = 8510606
+  title = EVT_8510606_NAME
+  desc = EVT_8510606_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1950
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510601
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510602
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510603
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510604
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510608
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510605
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_indonesia_totalveto
+    }
+    NOT = {
+    has_global_flag = un_indonesia_interventionveto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510606 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510606_A
+money = 1500 
+  }
+}
+country_event = {
+  id = 8510607
+  title = EVT_8510607_NAME
+  desc = EVT_8510607_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1950
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510601
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510602
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510603
+    }
+    OR = {
+    AND = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    exists = CHI
+    }
+    }
+    has_global_flag = event_fired_8510604
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510605
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_indonesia_totalveto
+    }
+    has_global_flag = un_indonesia_interventionveto
+  }
+  immediate = { set_global_flag = event_fired_8510607 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510607_A
+any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8510700
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1953
+    NOT = {
+    RUS = { war_with = KOR }
+    }
+    NOT = {
+    USA = { war_with = NKO }
+    }
+    has_global_flag = cold_war
+    KOR = { war_with = NKO }
+  }
+  immediate = { set_global_flag = event_fired_8510700 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510701 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8510702 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510703 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHC_in_UNSC
+          }
+          exists = CHI
+
+        }
+country_event = 8510704 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510708 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510705 
+      }
+
+  }
+}
+country_event = {
+  id = 8510701
+  title = EVT_85107XX_NAME
+  desc = EVT_85107XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510701 }
+
+  option = {
+    name = EVT_85107XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_korea_interventionveto
+#      }
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85107XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_korea_interventionveto
+#      }
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_korea_interventionveto 
+  }
+
+  option = {
+    name = EVT_85107XX_C
+set_global_flag = un_korea_totalveto 
+  }
+}
+country_event = {
+  id = 8510702
+  title = EVT_85107XX_NAME
+  desc = EVT_85107XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8510702 }
+
+  option = {
+    name = EVT_85107XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_korea_interventionveto
+#      }
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85107XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_korea_interventionveto 
+  }
+
+  option = {
+    name = EVT_85107XX_C
+set_global_flag = un_korea_totalveto 
+  }
+}
+country_event = {
+  id = 8510703
+  title = EVT_85107XX_NAME
+  desc = EVT_85107XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510703 }
+
+  option = {
+    name = EVT_85107XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_korea_interventionveto
+#      }
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85107XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_korea_interventionveto 
+  }
+
+  option = {
+    name = EVT_85107XX_C
+set_global_flag = un_korea_totalveto 
+  }
+}
+country_event = {
+  id = 8510704
+  title = EVT_85107XX_NAME
+  desc = EVT_85107XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510704 }
+
+  option = {
+    name = EVT_85107XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_korea_interventionveto
+#      }
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85107XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_korea_interventionveto 
+  }
+
+  option = {
+    name = EVT_85107XX_C
+set_global_flag = un_korea_totalveto 
+  }
+}
+country_event = {
+  id = 8510708
+  title = EVT_85107XX_NAME
+  desc = EVT_85107XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510708 }
+
+  option = {
+    name = EVT_85107XX_C
+set_global_flag = un_korea_totalveto 
+  }
+
+  option = {
+    name = EVT_85107XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_korea_interventionveto 
+  }
+
+  option = {
+    name = EVT_85107XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_korea_interventionveto
+#      }
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510705
+  title = EVT_85107XX_NAME
+  desc = EVT_85107XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510705 }
+
+  option = {
+    name = EVT_85107XX_C
+set_global_flag = un_korea_totalveto 
+  }
+
+  option = {
+    name = EVT_85107XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_korea_interventionveto 
+  }
+
+  option = {
+    name = EVT_85107XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_korea_interventionveto
+#      }
+#      NOT = {
+#      war_with = KOR
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510706
+  title = EVT_8510706_NAME
+  desc = EVT_8510706_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1953
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510701
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510702
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510703
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510704
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510708
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510705
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_korea_totalveto
+    }
+    NOT = {
+    has_global_flag = un_korea_interventionveto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510706 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510706_A
+any_pop = { militancy = -1.0 }money = 2500 add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8510707
+  title = EVT_8510707_NAME
+  desc = EVT_8510707_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KOR
+    year = 1953
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510701
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510702
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510703
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510704
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510708
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510705
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_korea_totalveto
+    }
+    has_global_flag = un_korea_interventionveto
+  }
+  immediate = { set_global_flag = event_fired_8510707 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510707_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510800
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1956
+    has_global_flag = event_fired_8501103
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8510800 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510801 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8510802 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510803 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHC_in_UNSC
+          }
+          exists = CHI
+
+        }
+country_event = 8510804 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510808 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510805 
+      }
+
+  }
+}
+country_event = {
+  id = 8510801
+  title = EVT_85108XX_NAME
+  desc = EVT_85108XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510801 }
+
+  option = {
+    name = EVT_85108XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_hungary_interventionveto
+#      }
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85108XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_hungary_interventionveto
+#      }
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_hungary_interventionveto 
+  }
+
+  option = {
+    name = EVT_85108XX_C
+set_global_flag = un_hungary_totalveto 
+  }
+}
+country_event = {
+  id = 8510802
+  title = EVT_85108XX_NAME
+  desc = EVT_85108XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8510802 }
+
+  option = {
+    name = EVT_85108XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_hungary_interventionveto
+#      }
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85108XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_hungary_interventionveto 
+  }
+
+  option = {
+    name = EVT_85108XX_C
+set_global_flag = un_hungary_totalveto 
+  }
+}
+country_event = {
+  id = 8510803
+  title = EVT_85108XX_NAME
+  desc = EVT_85108XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510803 }
+
+  option = {
+    name = EVT_85108XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_hungary_interventionveto
+#      }
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85108XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_hungary_interventionveto 
+  }
+
+  option = {
+    name = EVT_85108XX_C
+set_global_flag = un_hungary_totalveto 
+  }
+}
+country_event = {
+  id = 8510804
+  title = EVT_85108XX_NAME
+  desc = EVT_85108XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510804 }
+
+  option = {
+    name = EVT_85108XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_hungary_interventionveto
+#      }
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85108XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_hungary_interventionveto 
+  }
+
+  option = {
+    name = EVT_85108XX_C
+set_global_flag = un_hungary_totalveto 
+  }
+}
+country_event = {
+  id = 8510808
+  title = EVT_85108XX_NAME
+  desc = EVT_85108XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510808 }
+
+  option = {
+    name = EVT_85108XX_C
+set_global_flag = un_hungary_totalveto 
+  }
+
+  option = {
+    name = EVT_85108XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_hungary_interventionveto 
+  }
+
+  option = {
+    name = EVT_85108XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_hungary_interventionveto
+#      }
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510805
+  title = EVT_85108XX_NAME
+  desc = EVT_85108XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510805 }
+
+  option = {
+    name = EVT_85108XX_C
+set_global_flag = un_hungary_totalveto 
+  }
+
+  option = {
+    name = EVT_85108XX_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+set_global_flag = un_hungary_interventionveto 
+  }
+
+  option = {
+    name = EVT_85108XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_hungary_interventionveto
+#      }
+#      NOT = {
+#      war_with = HUN
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510806
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1956
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510801
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510802
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510803
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510804
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510808
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510805
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_hungary_totalveto
+    }
+    NOT = {
+    has_global_flag = un_hungary_interventionveto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510806 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = AI_EVENT
+country_event = 8501110 
+  }
+}
+country_event = {
+  id = 8510807
+  title = EVT_8510807_NAME
+  desc = EVT_8510807_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1956
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510801
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510802
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510803
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510804
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510808
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510805
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_hungary_totalveto
+    }
+    has_global_flag = un_hungary_interventionveto
+  }
+  immediate = { set_global_flag = event_fired_8510807 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8510807_A
+money = 2500 
+  }
+}
+country_event = {
+  id = 8510900
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1982
+    has_global_flag = event_fired_8234001
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8510900 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8510901 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8510903 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHC_in_UNSC
+          }
+          exists = CHI
+
+        }
+country_event = 8510904 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8510908 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8510905 
+      }
+
+  }
+}
+country_event = {
+  id = 8510901
+  title = EVT_85109XX_NAME
+  desc = EVT_85109XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8510901 }
+
+  option = {
+    name = EVT_85109XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_falklands_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85109XX_B
+set_global_flag = un_falklands_veto 
+  }
+}
+country_event = {
+  id = 8510903
+  title = EVT_85109XX_NAME
+  desc = EVT_85109XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8510903 }
+
+  option = {
+    name = EVT_85109XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_falklands_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85109XX_B
+set_global_flag = un_falklands_veto 
+  }
+}
+country_event = {
+  id = 8510904
+  title = EVT_85109XX_NAME
+  desc = EVT_85109XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510904 }
+
+  option = {
+    name = EVT_85109XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_falklands_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85109XX_B
+set_global_flag = un_falklands_veto 
+  }
+}
+country_event = {
+  id = 8510908
+  title = EVT_85109XX_NAME
+  desc = EVT_85109XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8510908 }
+
+  option = {
+    name = EVT_85109XX_B
+set_global_flag = un_falklands_veto 
+  }
+
+  option = {
+    name = EVT_85109XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_falklands_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510905
+  title = EVT_85109XX_NAME
+  desc = EVT_85109XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8510905 }
+
+  option = {
+    name = EVT_85109XX_B
+set_global_flag = un_falklands_veto 
+  }
+
+  option = {
+    name = EVT_85109XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_falklands_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+}
+country_event = {
+  id = 8510906
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1982
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510901
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510903
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510904
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510908
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510905
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_falklands_veto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8510906 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = AI_EVENT
+country_event = 8234030 
+  }
+}
+country_event = {
+  id = 8511000
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1991
+    has_global_flag = event_fired_8007551
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8511000 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = OK
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = USA
+
+        }
+country_event = 8511001 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = ENG
+
+        }
+country_event = 8511002 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = FRA
+
+        }
+country_event = 8511003 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHC_in_UNSC
+          }
+          exists = CHI
+
+        }
+country_event = 8511004 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          exists = CHI
+          has_global_flag = CHC_in_UNSC
+
+        }
+country_event = 8511008 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = un_soviet_boycott
+          }
+          exists = RUS
+
+        }
+country_event = 8511005 
+      }
+
+  }
+}
+country_event = {
+  id = 8511001
+  title = EVT_85110XX_NAME
+  desc = EVT_85110XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8511001 }
+
+  option = {
+    name = EVT_85110XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_desertstorm_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85110XX_B
+set_global_flag = un_desertstorm_veto 
+  }
+}
+country_event = {
+  id = 8511002
+  title = EVT_85110XX_NAME
+  desc = EVT_85110XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = ENG
+  }
+  immediate = { set_global_flag = event_fired_8511002 }
+
+  option = {
+    name = EVT_85110XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_desertstorm_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85110XX_B
+set_global_flag = un_desertstorm_veto 
+  }
+}
+country_event = {
+  id = 8511003
+  title = EVT_85110XX_NAME
+  desc = EVT_85110XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = FRA
+  }
+  immediate = { set_global_flag = event_fired_8511003 }
+
+  option = {
+    name = EVT_85110XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_desertstorm_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85110XX_B
+set_global_flag = un_desertstorm_veto 
+  }
+}
+country_event = {
+  id = 8511004
+  title = EVT_85110XX_NAME
+  desc = EVT_85110XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8511004 }
+
+  option = {
+    name = EVT_85110XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_desertstorm_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85110XX_B
+set_global_flag = un_desertstorm_veto 
+  }
+}
+country_event = {
+  id = 8511008
+  title = EVT_85110XX_NAME
+  desc = EVT_85110XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8511008 }
+
+  option = {
+    name = EVT_85110XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_desertstorm_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85110XX_B
+set_global_flag = un_desertstorm_veto 
+  }
+}
+country_event = {
+  id = 8511005
+  title = EVT_85110XX_NAME
+  desc = EVT_85110XX_DESC
+  picture = "nwo2_un_security_council"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8511005 }
+
+  option = {
+    name = EVT_85110XX_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = un_desertstorm_veto
+#      }
+#      NOT = {
+#      }
+#    }
+money = -1 
+  }
+
+  option = {
+    name = EVT_85110XX_B
+set_global_flag = un_desertstorm_veto 
+  }
+}
+country_event = {
+  id = 8511006
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1991
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8511001
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8511002
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8511003
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8511004
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8511008
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8511005
+    has_global_flag = un_soviet_boycott
+    }
+    NOT = {
+    has_global_flag = un_desertstorm_veto
+    }
+  }
+  immediate = { set_global_flag = event_fired_8511006 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = AI_EVENT
+country_event = 8007560 
+  }
+}

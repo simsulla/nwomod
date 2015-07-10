@@ -1,0 +1,277 @@
+country_event = {
+  id = 8501001
+  title = EVT_8501001_NAME
+  desc = EVT_8501001_DESC
+  picture = "nwo2_mohammed_mossadegh"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PER
+    year = 1952
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8501001 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8501001_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }relation = { who = ENG value = -100 } 
+  }
+
+  option = {
+    name = EVT_8501001_B
+any_pop = { militancy = 1.5 }country_event =  { id = 8501002 days = 1 } 
+  }
+}
+country_event = {
+  id = 8501002
+  title = EVT_8501002_NAME
+  desc = EVT_8501002_DESC
+  picture = "nwo2_abadan_crisis"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1953
+    has_global_flag = event_fired_8501001
+  }
+  immediate = { set_global_flag = event_fired_8501002 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8501002_A
+badboy = 10 relation = { who = PER value = -100 } 
+  }
+
+  option = {
+    name = EVT_8501002_B
+any_pop = { militancy = 1.0 }relation = { who = PER value = 100 } country_event =  { id = 8501003 days = 1 } 
+  }
+}
+country_event = {
+  id = 8501003
+  title = EVT_8501003_NAME
+  desc = EVT_8501003_DESC
+  picture = "nwo2_abadan_crisis"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PER
+    year = 1953
+    has_global_flag = event_fired_8501002
+  }
+  immediate = { set_global_flag = event_fired_8501003 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8501003_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }any_pop = { militancy = 1.5 }
+  }
+
+  option = {
+    name = EVT_8501003_B
+any_pop = { militancy = 1.0 }country_event =  { id = 8501004 days = 1 } country_event =  { id = 8501020 days = 1 } 
+  }
+}
+country_event = {
+  id = 8501004
+  title = EVT_8501004_NAME
+  desc = EVT_8501004_DESC
+  picture = "nwo2_abadan_crisis"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PER
+    year = 1953
+    has_global_flag = event_fired_8501003
+  }
+  immediate = { set_global_flag = event_fired_8501004 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8501004_A
+any_pop = { militancy = 1.5 }
+  }
+
+  option = {
+    name = EVT_8501004_B
+country_event = 8501005 
+  }
+}
+country_event = {
+  id = 8501005
+  title = EVT_8501005_NAME
+  desc = EVT_8501005_DESC
+  picture = "nwo2_abadan_crisis"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8501005 }
+
+  option = {
+    name = EVT_8501005_A
+relation = { who = PER value = 50 } country_event = 8501006 
+  }
+
+  option = {
+    name = EVT_8501005_B
+relation = { who = PER value = -50 } 
+  }
+}
+country_event = {
+  id = 8501006
+  title = EVT_8501006_NAME
+  desc = EVT_8501006_DESC
+  picture = "nwo2_abadan_crisis"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8501006 }
+
+  option = {
+    name = EVT_8501006_A
+relation = { who = PER value = -50 } country_event = 8501007 
+  }
+
+  option = {
+    name = EVT_8501006_B
+country_event = 8501010 relation = { who = ENG value = -150 } 
+  }
+}
+country_event = {
+  id = 8501007
+  title = EVT_8501007_NAME
+  desc = EVT_8501007_DESC
+  picture = "nwo2_abadan_crisis"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8501007 }
+
+  option = {
+    name = EVT_8501007_A
+relation = { who = PER value = -50 } 
+  }
+
+  option = {
+    name = EVT_8501007_B
+country_event = 8501010 country_event = 8501008 
+  }
+}
+country_event = {
+  id = 8501008
+  title = EVT_8501008_NAME
+  desc = EVT_8501008_DESC
+  picture = "nwo2_abadan_crisis"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8501008 }
+
+  option = {
+    name = EVT_8501008_A
+war = RUS any_pop = { militancy = 0.5 }
+  }
+
+  option = {
+    name = EVT_8501008_B
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8501010
+  title = EVT_8501010_NAME
+  desc = EVT_8501010_DESC
+  picture = "nwo2_abadan_crisis"
+
+  trigger = {
+    tag = PER
+  }
+  immediate = { set_global_flag = event_fired_8501010 }
+
+  option = {
+    name = EVT_8501010_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }any_pop = { militancy = -2.0 }
+  }
+}
+country_event = {
+  id = 8501020
+  title = EVT_8501020_NAME
+  desc = EVT_8501020_DESC
+  picture = "nwo2_operation_ajax"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PER
+    year = 1953
+    NOT = {
+    has_global_flag = event_fired_8501010
+    }
+    has_global_flag = event_fired_8501004
+  }
+  immediate = { set_global_flag = event_fired_8501020 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8501020_A
+any_pop = { militancy = 1.0 }country_event =  { id = 8501022 days = 1 } country_event = 8011407 
+  }
+
+  option = {
+    name = EVT_8501020_B
+any_pop = { militancy = -1.0 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }country_event =  { id = 8011407 days = 1 } country_event =  { id = 8501021 days = 1 } 
+  }
+}
+country_event = {
+  id = 8501021
+  title = EVT_8501021_NAME
+  desc = EVT_8501021_DESC
+  picture = "nwo2_abadan_crisis"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1954
+    has_global_flag = event_fired_8501002
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8501021 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8501021_A
+any_pop = { militancy = -0.3 }
+  }
+}
+country_event = {
+  id = 8501022
+  title = EVT_8501022_NAME
+  desc = EVT_8501022_DESC
+  picture = "nwo2_abadan_crisis"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1954
+    has_global_flag = event_fired_8501002
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8501022 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8501022_A
+any_pop = { militancy = 0.8 }
+  }
+}

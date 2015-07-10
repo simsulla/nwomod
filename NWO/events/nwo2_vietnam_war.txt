@@ -1,0 +1,1880 @@
+country_event = {
+  id = 8228001
+  title = EVT_8228001_NAME
+  desc = EVT_8228001_DESC
+  picture = "nwo2_french_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1955
+    exists = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228001 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8228001_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      relation = { who=USA value = 100 }
+#      }
+#    }
+any_pop = { militancy = 0.3 }country_event = 8228002 
+  }
+
+  option = {
+    name = EVT_8228001_B
+any_pop = { militancy = 1.0 }set_global_flag = french_full_support_in_vietnam money = -500 
+  }
+
+  option = {
+    name = EVT_8228001_B
+any_pop = { militancy = 1.4 }set_global_flag = french_limited_support_in_vietnam money = -200 any_pop = { militancy = 0.2 }
+  }
+
+  option = {
+    name = EVT_8228001_C
+any_pop = { militancy = 2.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }release_vassal = ICU release_vassal = DAI release_vassal = CAM release_vassal = LUA release = CAM release = LUA release = DAI end_war = SVI 
+  }
+}
+country_event = {
+  id = 8228002
+  title = EVT_8228002_NAME
+  desc = EVT_8228002_DESC
+  picture = "nwo2_french_vietnam"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8228002 }
+
+  option = {
+    name = EVT_8228002_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = CHC_won_civil_war
+#      }
+#      relation = { who=CHI value = 50 }
+#    }
+relation = { who = CHI value = 10 } relation = { who = FRA value = -100 } country_event = 8228003 
+  }
+
+  option = {
+    name = EVT_8228002_B
+relation = { who = FRA value = -50 } 
+  }
+
+  option = {
+    name = EVT_8228001_C
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }relation = { who = FRA value = 100 } money = -500 country_event = 8228005 
+  }
+}
+country_event = {
+  id = 8228003
+  title = EVT_8228003_NAME
+  desc = EVT_8228003_DESC
+  picture = "nwo2_chinese_vietnam"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8228003 }
+
+  option = {
+    name = EVT_8228003_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8228003_B
+war = SVI war = DAI any_pop = { militancy = 2.0 }badboy = 50 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }relation = { who = FRA value = -150 } 
+  }
+}
+country_event = {
+  id = 8228005
+  title = EVT_8228005_NAME
+  desc = EVT_8228005_DESC
+  picture = "nwo2_american_support_for_vietnam"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228005 }
+
+  option = {
+    name = EVT_8228005_A
+any_pop = { militancy = -1.5 }relation = { who = USA value = 100 } 
+  }
+}
+country_event = {
+  id = 8228010
+  title = EVT_8228010_NAME
+  desc = EVT_8228010_DESC
+  picture = "nwo2_first_indochina_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1954
+    NOT = {
+    SVI = { war_with = DAI }
+    }
+    exists = DAI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8228010 }
+
+  mean_time_to_happen = { days = 120 }
+
+  option = {
+    name = EVT_8228010_A
+war = DAI 
+  }
+
+  option = {
+    name = EVT_8228010_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = DAI value = 1 } 
+  }
+}
+country_event = {
+  id = 8228011
+  title = EVT_8228011_NAME
+  desc = EVT_8228011_DESC
+  picture = "nwo2_first_indochina_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1954
+    NOT = {
+    SVI = { war_with = DAI }
+    }
+    exists = SVI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8228011 }
+
+  mean_time_to_happen = { days = 120 }
+
+  option = {
+    name = EVT_8228011_A
+war = SVI 
+  }
+
+  option = {
+    name = EVT_8228011_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = SVI value = 1 } 
+  }
+}
+country_event = {
+  id = 8228020
+  title = EVT_8228020_NAME
+  desc = EVT_8228020_DESC
+  picture = "nwo2_north_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1955
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228020 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8228020_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = CHI_won_civil_war
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_8228020_B
+
+  }
+}
+country_event = {
+  id = 8228021
+  title = EVT_8228021_NAME
+  desc = EVT_8228021_DESC
+  picture = "nwo2_south_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1955
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228021 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8228021_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          has_global_flag = french_limited_support_in_vietnam
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_full_support_in_vietnam
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_8228021_B
+
+  }
+}
+country_event = {
+  id = 8228022
+  title = EVT_8228022_NAME
+  desc = EVT_8228022_DESC
+  picture = "nwo2_french_in_south_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1955
+    OR = {
+    has_global_flag = french_limited_support_in_vietnam
+    }
+    SVI = { war_with = DAI }
+    DAI = { vassal_of = FRA }
+  }
+  immediate = { set_global_flag = event_fired_8228022 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8228022_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = french_limited_support_in_vietnam
+#    }
+set_global_flag = french_full_support_in_vietnam money = -500 any_pop = { militancy = 0.2 }
+  }
+
+  option = {
+    name = EVT_8228022_B
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_full_support_in_vietnam
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_full_support_in_vietnam
+
+        }
+set_global_flag = french_limited_support_in_vietnam 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_full_support_in_vietnam
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_full_support_in_vietnam
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_full_support_in_vietnam
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_full_support_in_vietnam
+
+        }
+any_pop = { militancy = -0.2 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_limited_support_in_vietnam
+
+        }
+clr_global_flag = french_full_support_in_vietnam 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_limited_support_in_vietnam
+
+        }
+clr_global_flag = french_limited_support_in_vietnam 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_limited_support_in_vietnam
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_limited_support_in_vietnam
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_limited_support_in_vietnam
+
+        }
+money = 100 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_limited_support_in_vietnam
+
+        }
+release_vassal = DAI 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = french_limited_support_in_vietnam
+
+        }
+any_pop = { militancy = 1.2 }
+      }
+
+  }
+
+  option = {
+    name = EVT_8228022_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 
+  }
+}
+country_event = {
+  id = 8228030
+  title = EVT_8228030_NAME
+  desc = EVT_8228030_DESC
+  picture = "nwo2_south_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1955
+    SVI = { war_with = DAI }
+    DAI = { vassal_of = FRA }
+  }
+  immediate = { set_global_flag = event_fired_8228030 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8228030_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+any_pop = { militancy = -0.7 }
+  }
+}
+country_event = {
+  id = 8228031
+  title = EVT_8228031_NAME
+  desc = EVT_8228031_DESC
+  picture = "nwo2_south_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1952
+    SVI = { war_with = DAI }
+    DAI = { vassal_of = FRA }
+  }
+  immediate = { set_global_flag = event_fired_8228031 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8228031_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1547 }
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 1021 }
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          any_owned_province = { province_id = 926 }
+        }
+
+      }
+any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8228032
+  title = EVT_8228032_NAME
+  desc = EVT_8228032_DESC
+  picture = "nwo2_north_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1955
+    has_global_flag = CHC_won_civil_war
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228032 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8228032_A
+any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8228033
+  title = EVT_8228033_NAME
+  desc = EVT_8228033_DESC
+  picture = "nwo2_dien_bien_phu"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1955
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228033 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8228033_A
+any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8228034
+  title = EVT_8228034_NAME
+  desc = EVT_8228034_DESC
+  picture = "nwo2_south_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1955
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228034 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8228034_A
+any_pop = { militancy = 0.5 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8228033
+
+        }
+any_pop = { militancy = 1.0 }
+      }
+
+  }
+}
+country_event = {
+  id = 8228040
+  title = EVT_8228040_NAME
+  desc = EVT_8228040_DESC
+  picture = "nwo2_geneva_conference"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    year = 1963
+    SVI = { war_with = DAI }
+    DAI = { vassal_of = FRA }
+  }
+  immediate = { set_global_flag = event_fired_8228040 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8228040_A
+any_pop = { militancy = 0.5 }badboy = 15 
+  }
+
+  option = {
+    name = EVT_8228040_B
+random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }country_event = 8228041 country_event = 8228042 
+  }
+}
+country_event = {
+  id = 8228041
+  title = EVT_8228041_NAME
+  desc = EVT_8228041_DESC
+  picture = "nwo2_geneva_conference"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228041 }
+
+  option = {
+    name = EVT_8228041_A
+any_pop = { militancy = -0.3 }
+  }
+
+  option = {
+    name = EVT_8228041_B
+any_pop = { militancy = 1.5 }country_event =  { id = 8228043 days = 1 } 
+  }
+}
+country_event = {
+  id = 8228042
+  title = EVT_8228042_NAME
+  desc = EVT_8228042_DESC
+  picture = "nwo2_geneva_conference"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228042 }
+
+  option = {
+    name = EVT_8228042_A
+any_pop = { militancy = -0.3 }
+  }
+
+  option = {
+    name = EVT_8228042_B
+any_pop = { militancy = 1.5 }country_event =  { id = 8228043 days = 1 } 
+  }
+}
+country_event = {
+  id = 8228043
+  title = EVT_8228043_NAME
+  desc = EVT_8228043_DESC
+  picture = "nwo2_geneva_conference"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228043 }
+
+  option = {
+    name = EVT_8228043_A
+end_war = SVI 
+  }
+}
+country_event = {
+  id = 8228050
+  title = EVT_8228050_NAME
+  desc = EVT_8228050_DESC
+  picture = "nwo2_vietnam_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1963
+    NOT = {
+    SVI = { war_with = DAI }
+    }
+    has_global_flag = event_fired_8228043
+    exists = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228050 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8228050_A
+any_pop = { militancy = -0.3 }country_event = 8228051 
+  }
+
+  option = {
+    name = EVT_8228050_B
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8228051
+  title = EVT_8228051_NAME
+  desc = EVT_8228051_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228051 }
+
+  option = {
+    name = EVT_8228051_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }any_pop = { militancy = 1.0 }
+  }
+
+  option = {
+    name = EVT_8228051_B
+any_pop = { militancy = -0.3 }country_event = 8228052 
+  }
+}
+country_event = {
+  id = 8228052
+  title = EVT_8228052_NAME
+  desc = EVT_8228052_DESC
+  picture = "nwo2_vietnam_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1963
+    NOT = {
+    SVI = { war_with = DAI }
+    }
+    has_global_flag = event_fired_8228051
+    exists = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228052 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8228052_A
+any_pop = { militancy = 0.5 }set_global_flag = vietnamese_elections_rigged_by_U72 
+  }
+
+  option = {
+    name = EVT_8228052_B
+any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8228053
+  title = EVT_8228053_NAME
+  desc = EVT_8228053_DESC
+  picture = "nwo2_vietnam_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1963
+    NOT = {
+    SVI = { war_with = DAI }
+    }
+    has_global_flag = event_fired_8228051
+    exists = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228053 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8228053_A
+any_pop = { militancy = 0.5 }set_global_flag = vietnamese_elections_rigged_by_VIE 
+  }
+
+  option = {
+    name = EVT_8228053_B
+any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8228054
+  title = EVT_8228054_NAME
+  desc = EVT_8228054_DESC
+  picture = "nwo2_vietnam_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    NOT = {
+    SVI = { war_with = DAI }
+    }
+    has_global_flag = event_fired_8228053
+    exists = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228054 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8228054_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = vietnamese_elections_rigged_by_VIE
+#    }
+country_event = 8228060 
+  }
+
+  option = {
+    name = EVT_8228054_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = vietnamese_elections_rigged_by_VIE
+#    }
+country_event = 8228062 
+  }
+
+  option = {
+    name = EVT_8228054_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = vietnamese_elections_rigged_by_VIE
+#      }
+#      has_global_flag = vietnamese_elections_rigged_by_U72
+#    }
+country_event = 8228064 
+  }
+
+  option = {
+    name = EVT_8228054_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = vietnamese_elections_rigged_by_VIE
+#      }
+#      has_global_flag = vietnamese_elections_rigged_by_U72
+#    }
+country_event = 8228066 
+  }
+
+  option = {
+    name = EVT_8228054_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = vietnamese_elections_rigged_by_U72
+#      }
+#      has_global_flag = vietnamese_elections_rigged_by_VIE
+#    }
+country_event = 8228068 
+  }
+
+  option = {
+    name = EVT_8228054_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = vietnamese_elections_rigged_by_U72
+#      }
+#      has_global_flag = vietnamese_elections_rigged_by_VIE
+#    }
+country_event = 8228070 
+  }
+
+  option = {
+    name = EVT_8228054_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = vietnamese_elections_rigged_by_U72
+#      }
+#      NOT = {
+#      has_global_flag = vietnamese_elections_rigged_by_VIE
+#      }
+#    }
+country_event = 8228072 
+  }
+
+  option = {
+    name = EVT_8228054_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = vietnamese_elections_rigged_by_U72
+#      }
+#      NOT = {
+#      has_global_flag = vietnamese_elections_rigged_by_VIE
+#      }
+#    }
+country_event = 8228074 
+  }
+}
+country_event = {
+  id = 8228060
+  title = EVT_8228060_NAME
+  desc = EVT_8228060_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228060 }
+
+  option = {
+    name = EVT_8228060_A
+war = SVI any_pop = { militancy = 1.2 }
+  }
+
+  option = {
+    name = EVT_8228060_B
+country_event = 8228061 
+  }
+}
+country_event = {
+  id = 8228061
+  title = EVT_8228061_NAME
+  desc = EVT_8228061_DESC
+  picture = "nwo2_united_vietnam_under_hanoi"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228061 }
+
+  option = {
+    name = EVT_8228061_A
+inherit = DAI 
+  }
+}
+country_event = {
+  id = 8228062
+  title = EVT_8228062_NAME
+  desc = EVT_8228062_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228062 }
+
+  option = {
+    name = EVT_8228060_A
+war = DAI any_pop = { militancy = 1.5 }
+  }
+
+  option = {
+    name = EVT_8228062_B
+country_event = 8228063 
+  }
+}
+country_event = {
+  id = 8228063
+  title = EVT_8228063_NAME
+  desc = EVT_8228063_DESC
+  picture = "nwo2_united_vietnam_under_saigon"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228063 }
+
+  option = {
+    name = EVT_8228063_A
+inherit = SVI 
+  }
+}
+country_event = {
+  id = 8228064
+  title = EVT_8228064_NAME
+  desc = EVT_8228064_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228064 }
+
+  option = {
+    name = EVT_8228064_A
+war = SVI any_pop = { militancy = 0.8 }
+  }
+
+  option = {
+    name = EVT_8228060_B
+country_event = 8228065 
+  }
+}
+country_event = {
+  id = 8228065
+  title = EVT_8228065_NAME
+  desc = EVT_8228065_DESC
+  picture = "nwo2_united_vietnam_under_hanoi"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228065 }
+
+  option = {
+    name = EVT_8228065_A
+inherit = DAI 
+  }
+}
+country_event = {
+  id = 8228066
+  title = EVT_8228066_NAME
+  desc = EVT_8228066_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228066 }
+
+  option = {
+    name = EVT_8228066_A
+war = DAI any_pop = { militancy = 2.5 }
+  }
+
+  option = {
+    name = EVT_8228066_B
+country_event = 8228067 
+  }
+}
+country_event = {
+  id = 8228067
+  title = EVT_8228067_NAME
+  desc = EVT_8228067_DESC
+  picture = "nwo2_united_vietnam_under_saigon"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228067 }
+
+  option = {
+    name = EVT_8228067_A
+inherit = SVI 
+  }
+}
+country_event = {
+  id = 8228068
+  title = EVT_8228068_NAME
+  desc = EVT_8228068_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228068 }
+
+  option = {
+    name = EVT_8228068_A
+war = SVI any_pop = { militancy = 2.5 }
+  }
+
+  option = {
+    name = EVT_8228068_B
+country_event = 8228069 
+  }
+}
+country_event = {
+  id = 8228069
+  title = EVT_8228069_NAME
+  desc = EVT_8228069_DESC
+  picture = "nwo2_united_vietnam_under_hanoi"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228069 }
+
+  option = {
+    name = EVT_8228069_A
+inherit = DAI 
+  }
+}
+country_event = {
+  id = 8228070
+  title = EVT_8228070_NAME
+  desc = EVT_8228070_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228070 }
+
+  option = {
+    name = EVT_8228066_A
+war = DAI any_pop = { militancy = 0.8 }
+  }
+
+  option = {
+    name = EVT_8228066_B
+country_event = 8228071 
+  }
+}
+country_event = {
+  id = 8228071
+  title = EVT_8228071_NAME
+  desc = EVT_8228071_DESC
+  picture = "nwo2_united_vietnam_under_saigon"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228071 }
+
+  option = {
+    name = EVT_8228071_A
+inherit = SVI 
+  }
+}
+country_event = {
+  id = 8228072
+  title = EVT_8228072_NAME
+  desc = EVT_8228072_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228072 }
+
+  option = {
+    name = EVT_8228072_A
+war = SVI any_pop = { militancy = 3.0 }
+  }
+
+  option = {
+    name = EVT_8228072_B
+country_event = 8228073 
+  }
+}
+country_event = {
+  id = 8228073
+  title = EVT_8228073_NAME
+  desc = EVT_8228073_DESC
+  picture = "nwo2_united_vietnam_under_hanoi"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228073 }
+
+  option = {
+    name = EVT_8228073_A
+inherit = DAI 
+  }
+}
+country_event = {
+  id = 8228074
+  title = EVT_8228074_NAME
+  desc = EVT_8228074_DESC
+  picture = "nwo2_vietnam_elections"
+
+  trigger = {
+    tag = SVI
+  }
+  immediate = { set_global_flag = event_fired_8228074 }
+
+  option = {
+    name = EVT_8228074_A
+war = DAI any_pop = { militancy = 3.0 }
+  }
+
+  option = {
+    name = EVT_8228074_B
+country_event = 8228075 
+  }
+}
+country_event = {
+  id = 8228075
+  title = EVT_8228075_NAME
+  desc = EVT_8228075_DESC
+  picture = "nwo2_united_vietnam_under_saigon"
+
+  trigger = {
+    tag = DAI
+  }
+  immediate = { set_global_flag = event_fired_8228075 }
+
+  option = {
+    name = EVT_8228075_A
+inherit = SVI 
+  }
+}
+country_event = {
+  id = 8228100
+  title = EVT_8228100_NAME
+  desc = EVT_8228100_DESC
+  picture = "nwo2_second_indochina_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1963
+    NOT = {
+    SVI = { war_with = DAI }
+    }
+    exists = DAI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8228100 }
+
+  mean_time_to_happen = { days = 120 }
+
+  option = {
+    name = EVT_8228100_A
+war = DAI 
+  }
+
+  option = {
+    name = EVT_8228100_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = DAI value = 1 } 
+  }
+}
+country_event = {
+  id = 8228101
+  title = EVT_8228101_NAME
+  desc = EVT_8228101_DESC
+  picture = "nwo2_second_indochina_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1963
+    NOT = {
+    SVI = { war_with = DAI }
+    }
+    exists = SVI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8228101 }
+
+  mean_time_to_happen = { days = 120 }
+
+  option = {
+    name = EVT_8228101_A
+war = SVI 
+  }
+
+  option = {
+    name = EVT_8228101_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = SVI value = 1 } 
+  }
+}
+country_event = {
+  id = 8228110
+  title = EVT_8228110_NAME
+  desc = EVT_8228110_DESC
+  picture = "nwo2_vietcong"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1975
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228110 }
+
+  mean_time_to_happen = { days = 240 }
+
+  option = {
+    name = EVT_8228110_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_8228110_B
+
+  }
+}
+country_event = {
+  id = 8228111
+  title = EVT_8228111_NAME
+  desc = EVT_8228111_DESC
+  picture = "nwo2_americans_in_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1975
+    has_global_flag = vietnam_war_limited_usa_assistance
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228111 }
+
+  mean_time_to_happen = { days = 240 }
+
+  option = {
+    name = EVT_8228111_A
+any_pop = { militancy = -0.1 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_8228111_B
+
+  }
+}
+country_event = {
+  id = 8228112
+  title = EVT_8228112_NAME
+  desc = EVT_8228112_DESC
+  picture = "nwo2_americans_in_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1963
+    has_global_flag = vietnam_war_total_usa_assistance
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228112 }
+
+  mean_time_to_happen = { days = 120 }
+
+  option = {
+    name = EVT_8228111_A
+any_pop = { militancy = -0.3 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_8228111_B
+
+  }
+}
+country_event = {
+  id = 8228120
+  title = EVT_8228120_NAME
+  desc = EVT_8228120_DESC
+  picture = "nwo2_vietnam_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228120 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8228120_A
+relation = { who = DAI value = 150 } relation = { who = SVI value = -150 } any_pop = { militancy = -0.5 }set_global_flag = vietnam_war_limited_usa_assistance 
+  }
+
+  option = {
+    name = EVT_8228120_B
+relation = { who = DAI value = 300 } relation = { who = SVI value = -300 } any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }set_global_flag = vietnam_war_total_usa_assistance 
+  }
+
+  option = {
+    name = EVT_8228120_C
+any_pop = { militancy = 0.8 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8228130
+  title = EVT_8228130_NAME
+  desc = EVT_8228130_DESC
+  picture = "nwo2_strategic_hamlet_program"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1963
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228130 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8228130_A
+random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8228130_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 200 
+  }
+}
+country_event = {
+  id = 8228131
+  title = EVT_8228131_NAME
+  desc = EVT_8228131_DESC
+  picture = "nwo2_le_duan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1963
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228131 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8228131_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8228131_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.44999999999999996 } } }
+  }
+}
+country_event = {
+  id = 8228132
+  title = EVT_8228132_NAME
+  desc = EVT_8228132_DESC
+  picture = "nwo2_ngo_dinh_diem_dead"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1963
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228132 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8228132_A
+any_pop = { militancy = 1.0 }
+  }
+
+  option = {
+    name = EVT_8228132_B
+any_pop = { militancy = 2.0 }
+  }
+}
+country_event = {
+  id = 8228140
+  title = EVT_8228140_NAME
+  desc = EVT_8228140_DESC
+  picture = "nwo2_vietcong_attacks"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1999
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228140 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8228140_A
+any_pop = { militancy = 0.4 }
+  }
+}
+country_event = {
+  id = 8228150
+  title = EVT_8228150_NAME
+  desc = EVT_8228150_DESC
+  picture = "nwo2_vietnam_war_protests"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    OR = {
+    has_global_flag = vietnam_war_total_usa_assistance
+    }
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228150 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8228150_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = vietnam_war_limited_usa_assistance
+
+        }
+any_pop = { militancy = 0.3 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = vietnam_war_total_usa_assistance
+
+        }
+any_pop = { militancy = 0.5 }
+      }
+
+  }
+}
+country_event = {
+  id = 8228151
+  title = EVT_8228151_NAME
+  desc = EVT_8228151_DESC
+  picture = "nwo2_vietnam_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    OR = {
+    has_global_flag = vietnam_war_total_usa_assistance
+    }
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228151 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8228151_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = vietnam_war_limited_usa_assistance
+#    }
+set_global_flag = vietnam_war_total_usa_assistance any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8228151_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = vietnam_war_total_usa_assistance
+#    }
+set_global_flag = vietnam_war_limited_usa_assistance any_pop = { militancy = 0.5 }
+  }
+
+  option = {
+    name = EVT_8228151_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = vietnam_war_limited_usa_assistance
+#    }
+clr_global_flag = vietnam_war_limited_usa_assistance clr_global_flag = vietnam_war_total_usa_assistance any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8228151_D
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 
+  }
+}
+country_event = {
+  id = 8228198
+  title = EVT_8228198_NAME
+  desc = EVT_8228198_DESC
+  picture = "nwo2_north_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1963
+  }
+  immediate = { set_global_flag = event_fired_8228198 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8228198_A
+
+  }
+}
+country_event = {
+  id = 8228199
+  title = EVT_8228199_NAME
+  desc = EVT_8228199_DESC
+  picture = "nwo2_south_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DAI
+    year = 1963
+  }
+  immediate = { set_global_flag = event_fired_8228199 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8228199_A
+
+  }
+}
+country_event = {
+  id = 8228200
+  title = EVT_8228200_NAME
+  desc = EVT_8228200_DESC
+  picture = "nwo2_ho_chi_minh_trail"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1963
+    NOT = {
+    war_with = LUA
+    }
+    exists = LUA
+    SVI = { war_with = DAI }
+  }
+  immediate = { set_global_flag = event_fired_8228200 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8228200_A
+country_event = 8228201 
+  }
+
+  option = {
+    name = EVT_8228200_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 
+  }
+}
+country_event = {
+  id = 8228201
+  title = EVT_8228201_NAME
+  desc = EVT_8228201_DESC
+  picture = "nwo2_ho_chi_minh_trail"
+
+  trigger = {
+    tag = LUA
+  }
+  immediate = { set_global_flag = event_fired_8228201 }
+
+  option = {
+    name = EVT_8228201_A
+SVI = { military_access = THIS } 
+  }
+}

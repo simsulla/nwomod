@@ -1,0 +1,477 @@
+country_event = {
+  id = 8218000
+  title = EVT_8218000_NAME
+  desc = EVT_8218000_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    NOT = {
+    war_with = SYR
+    }
+    has_global_flag = event_fired_8004906
+    exists = SYR
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218000 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8218000_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8218000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 0.1 }country_event =  { id = 8218001 days = 1 } 
+  }
+}
+country_event = {
+  id = 8218001
+  title = EVT_8218001_NAME
+  desc = EVT_8218001_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYR
+    year = 1963
+    has_global_flag = event_fired_8218000
+    exists = EGY
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218001 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8218001_A
+relation = { who = EGY value = 200 } country_event = 8218002 
+  }
+
+  option = {
+    name = EVT_8218001_B
+relation = { who = EGY value = -100 } any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8218002
+  title = EVT_8218002_NAME
+  desc = EVT_8218002_DESC
+  picture = "nwo2_united_arab_republic"
+
+  trigger = {
+    tag = EGY
+  }
+  immediate = { set_global_flag = event_fired_8218002 }
+
+  option = {
+    name = EVT_8218002_A
+any_pop = { militancy = -0.5 }inherit = SYR 1758 = { add_core =  THIS }1713 = { add_core =  THIS }1740 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8218003
+  title = EVT_8218003_NAME
+  desc = EVT_8218003_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    NOT = {
+    war_with = IRQ
+    }
+    has_global_flag = event_fired_8218002
+    exists = IRQ
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218003 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218003_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8218003_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 0.1 }country_event =  { id = 8218004 days = 1 } 
+  }
+}
+country_event = {
+  id = 8218004
+  title = EVT_8218004_NAME
+  desc = EVT_8218004_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IRQ
+    year = 1963
+    has_global_flag = event_fired_8218003
+    exists = EGY
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218004 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8218004_A
+relation = { who = EGY value = -100 } any_pop = { militancy = -0.2 }
+  }
+
+  option = {
+    name = EVT_8218004_B
+relation = { who = EGY value = 200 } country_event = 8218005 
+  }
+}
+country_event = {
+  id = 8218005
+  title = EVT_8218005_NAME
+  desc = EVT_8218005_DESC
+  picture = "nwo2_united_arab_republic"
+
+  trigger = {
+    tag = EGY
+  }
+  immediate = { set_global_flag = event_fired_8218005 }
+
+  option = {
+    name = EVT_8218005_A
+any_pop = { militancy = -0.5 }inherit = IRQ 1758 = { add_core =  THIS }1868 = { add_core =  THIS }1151 = { add_core =  THIS }1827 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8218006
+  title = EVT_8218006_NAME
+  desc = EVT_8218006_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    NOT = {
+    war_with = JOR
+    }
+    has_global_flag = event_fired_8218005
+    exists = JOR
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218006 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218006_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8218006_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 0.1 }country_event =  { id = 8218007 days = 1 } 
+  }
+}
+country_event = {
+  id = 8218007
+  title = EVT_8218007_NAME
+  desc = EVT_8218007_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JOR
+    year = 1963
+    has_global_flag = event_fired_8218006
+    exists = EGY
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218007 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8218007_A
+relation = { who = EGY value = 200 } country_event = 8218008 
+  }
+
+  option = {
+    name = EVT_8218007_B
+relation = { who = EGY value = -100 } any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8218008
+  title = EVT_8218008_NAME
+  desc = EVT_8218008_DESC
+  picture = "nwo2_united_arab_republic"
+
+  trigger = {
+    tag = EGY
+  }
+  immediate = { set_global_flag = event_fired_8218008 }
+
+  option = {
+    name = EVT_8218008_A
+any_pop = { militancy = -0.5 }inherit = JOR 1151 = { add_core =  THIS }1758 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8218010
+  title = EVT_8218010_NAME
+  desc = EVT_8218010_DESC
+  picture = "nwo2_nasser_diplomacy"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    has_global_flag = event_fired_8004928
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218010 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8218010_A
+any_pop = { militancy = -0.5 }change_tag = UAR define_general = { name = "Obeid" personality = energetic background = no_background }define_general = { name = "al-Shishakli" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_8218010_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+any_pop = { militancy = 0.1 }
+  }
+}
+country_event = {
+  id = 8218011
+  title = EVT_8218011_NAME
+  desc = EVT_8218011_DESC
+  picture = "nwo2_egypt"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1963
+    has_global_flag = event_fired_8218002
+  }
+  immediate = { set_global_flag = event_fired_8218011 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8218011_A
+any_pop = { militancy = 0.5 }release = SYR release = JOR release = IRQ 1713 = { remove_core =  THIS }1740 = { remove_core =  THIS }1868 = { remove_core =  THIS }1827 = { remove_core =  THIS }1151 = { remove_core =  THIS }1758 = { remove_core =  THIS }
+  }
+}
+country_event = {
+  id = 8218020
+  title = EVT_8218020_NAME
+  desc = EVT_8218020_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+    year = 1963
+    NOT = {
+    war_with = JOR
+    }
+    exists = JOR
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218020 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218020_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8218020_B
+any_pop = { militancy = 0.3 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }country_event =  { id = 8218021 days = 1 } 
+  }
+}
+country_event = {
+  id = 8218021
+  title = EVT_8218021_NAME
+  desc = EVT_8218021_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LEB
+    year = 1963
+    has_global_flag = event_fired_8218020
+    exists = UAR
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218021 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8218021_A
+relation = { who = UAR value = 200 } country_event = 8218008 
+  }
+
+  option = {
+    name = EVT_8218021_B
+relation = { who = UAR value = -100 } any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8218022
+  title = EVT_8218022_NAME
+  desc = EVT_8218022_DESC
+  picture = "nwo2_united_arab_republic"
+
+  trigger = {
+    tag = UAR
+  }
+  immediate = { set_global_flag = event_fired_8218022 }
+
+  option = {
+    name = EVT_8218022_A
+any_pop = { militancy = -0.5 }inherit = LEB 1740 = { add_core =  THIS }1758 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8218023
+  title = EVT_8218023_NAME
+  desc = EVT_8218023_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+    year = 1963
+    NOT = {
+    war_with = PAL
+    }
+    exists = PAL
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218023 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218023_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8218023_B
+any_pop = { militancy = 0.3 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }country_event =  { id = 8218024 days = 1 } 
+  }
+}
+country_event = {
+  id = 8218024
+  title = EVT_8218024_NAME
+  desc = EVT_8218024_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAL
+    year = 1963
+    has_global_flag = event_fired_8218023
+    exists = UAR
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8218024 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8218024_A
+relation = { who = UAR value = 200 } country_event = 8218008 
+  }
+
+  option = {
+    name = EVT_8218024_B
+relation = { who = UAR value = -100 } any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8218025
+  title = EVT_8218025_NAME
+  desc = EVT_8218025_DESC
+  picture = "nwo2_united_arab_republic"
+
+  trigger = {
+    tag = UAR
+  }
+  immediate = { set_global_flag = event_fired_8218025 }
+
+  option = {
+    name = EVT_8218025_A
+any_pop = { militancy = -0.5 }inherit = PAL 2639 = { add_core =  THIS }1923 = { add_core =  THIS }1713 = { add_core =  THIS }country_event =  { id = 8218030 days = 1 } 
+  }
+}
+country_event = {
+  id = 8218030
+  title = EVT_8218030_NAME
+  desc = EVT_8218030_DESC
+  picture = "nwo2_dome_of_the_rock"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+    year = 1963
+    NOT = {
+    exists = ISR
+    }
+    has_global_flag = cold_war
+    war = no
+    any_owned_province = { province_id = 1923 }  }
+  immediate = { set_global_flag = event_fired_8218030 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218030_A
+any_pop = { militancy = -0.5 }2639 = { add_core =  THIS }1923 = { add_core =  THIS }1713 = { add_core =  THIS }
+  }
+}

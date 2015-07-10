@@ -1,0 +1,202 @@
+country_event = {
+  id = 8230001
+  title = EVT_8230001_NAME
+  desc = EVT_8230001_DESC
+  picture = "nwo2_difangjun"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1948
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    war_with = JAP
+  }
+  immediate = { set_global_flag = event_fired_8230001 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8230001_A
+add_country_modifier = { name = dh_defensiveness duration = 365 }country_event = 8230010 country_event = 8230011 country_event = 8230012 country_event = 8230013 any_pop = { militancy = 0.3 }relation = { who = YNN value = -25 } relation = { who = NGX value = -25 } relation = { who = FUJ value = -25 } relation = { who = SIK value = -25 } relation = { who = CHI value = 75 } relation = { who = USA value = 25 } relation = { who = ENG value = 25 } 
+  }
+
+  option = {
+    name = EVT_8230001_B
+country_event = 8230020 country_event = 8230021 country_event = 8230022 country_event = 8230023 country_event = 8230030 relation = { who = YNN value = 25 } relation = { who = NGX value = 25 } relation = { who = FUJ value = 25 } relation = { who = SIK value = 25 } relation = { who = CHI value = -75 } relation = { who = GGX value = -75 } relation = { who = USA value = -25 } relation = { who = ENG value = -25 } 
+  }
+
+  option = {
+    name = EVT_8230001_C
+any_pop = { militancy = 0.5 }relation = { who = YNN value = 150 } relation = { who = NGX value = 150 } relation = { who = FUJ value = 150 } relation = { who = SIK value = -75 } relation = { who = CHI value = 25 } relation = { who = GGX value = 75 } money = -100 set_country_flag = CHI_leadership_struggle 
+  }
+}
+country_event = {
+  id = 8230011
+  title = EVT_8230011_NAME
+  desc = EVT_8230011_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8230011 }
+
+  option = {
+    name = EVT_8230011_A
+
+  }
+}
+country_event = {
+  id = 8230012
+  title = EVT_8230012_NAME
+  desc = EVT_8230012_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8230012 }
+
+  option = {
+    name = EVT_8230012_A
+
+  }
+}
+country_event = {
+  id = 8230013
+  title = EVT_8230013_NAME
+  desc = EVT_8230013_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8230013 }
+
+  option = {
+    name = EVT_8230013_A
+
+  }
+}
+country_event = {
+  id = 8230014
+  title = EVT_8230014_NAME
+  desc = EVT_8230014_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8230014 }
+
+  option = {
+    name = EVT_8230014_A
+
+  }
+}
+country_event = {
+  id = 8230021
+  title = EVT_8230021_NAME
+  desc = EVT_8230021_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = YNN
+  }
+  immediate = { set_global_flag = event_fired_8230021 }
+
+  option = {
+    name = EVT_8230021_A
+
+  }
+}
+country_event = {
+  id = 8230022
+  title = EVT_8230022_NAME
+  desc = EVT_8230022_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = NGX
+  }
+  immediate = { set_global_flag = event_fired_8230022 }
+
+  option = {
+    name = EVT_8230022_A
+
+  }
+}
+country_event = {
+  id = 8230023
+  title = EVT_8230023_NAME
+  desc = EVT_8230023_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = FUJ
+  }
+  immediate = { set_global_flag = event_fired_8230023 }
+
+  option = {
+    name = EVT_8230023_A
+
+  }
+}
+country_event = {
+  id = 8230024
+  title = EVT_8230024_NAME
+  desc = EVT_8230024_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = SIK
+  }
+  immediate = { set_global_flag = event_fired_8230024 }
+
+  option = {
+    name = EVT_8230024_A
+
+  }
+}
+country_event = {
+  id = 8230030
+  title = EVT_8230030_NAME
+  desc = EVT_8230030_DESC
+  picture = "nwo2_difangjun"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8230030 }
+
+  option = {
+    name = EVT_8230030_A
+any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8230031
+  title = EVT_8230031_NAME
+  desc = EVT_8230031_DESC
+  picture = "nwo2_warlords"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1948
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_country_flag  = CHI_leadership_struggle
+  }
+  immediate = { set_global_flag = event_fired_8230031 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8230031_A
+any_pop = { militancy = 0.5 }
+  }
+}

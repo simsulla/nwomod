@@ -1,0 +1,785 @@
+country_event = {
+  id = 8500501
+  title = EVT_8500501_NAME
+  desc = EVT_8500501_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1950
+    exists = GRE
+    has_global_flag = cold_war
+    GRE = { war_with = GRE }
+  }
+  immediate = { set_global_flag = event_fired_8500501 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8500501_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      exists = YUG
+#    }
+
+  }
+
+  option = {
+    name = EVT_8500501_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      exists = YUG
+#      }
+#    }
+country_event = 8500503 
+  }
+
+  option = {
+    name = EVT_8500501_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      exists = YUG
+#    }
+country_event = 8500502 
+  }
+
+  option = {
+    name = EVT_8500501_C
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.6 } } }
+  }
+}
+country_event = {
+  id = 8500502
+  title = EVT_8500502_NAME
+  desc = EVT_8500502_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = YUG
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500502 }
+
+  option = {
+    name = EVT_8500502_A
+country_event = 8500520 
+  }
+
+  option = {
+    name = EVT_8500502_B
+relation = { who = GRE value = 20 } relation = { who = GRE value = -100 } 
+  }
+}
+country_event = {
+  id = 8500503
+  title = EVT_8500503_NAME
+  desc = EVT_8500503_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = RUS
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500503 }
+
+  option = {
+    name = EVT_8500503_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = tito_soviet_split
+#    }
+
+  }
+
+  option = {
+    name = EVT_8500503_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = tito_soviet_split
+#    }
+
+  }
+
+  option = {
+    name = EVT_8500503_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = tito_soviet_split
+#    }
+
+  }
+
+  option = {
+    name = EVT_8500503_D
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = tito_soviet_split
+#    }
+
+  }
+
+  option = {
+    name = EVT_8500503_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = tito_soviet_split
+#      }
+#    }
+relation = { who = GRE value = 20 } country_event =  { id = 8500523 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8500503_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = tito_soviet_split
+#      }
+#    }
+country_event = 8500520 
+  }
+
+  option = {
+    name = EVT_8500503_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = tito_soviet_split
+#      }
+#    }
+country_event =  { id = 8500504 days = 1 } country_event =  { id = 8500522 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8500503_D
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = tito_soviet_split
+#      }
+#    }
+country_event = 8500521 any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8500504
+  title = EVT_8500504_NAME
+  desc = EVT_8500504_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1950
+    has_global_flag = event_fired_8500503
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500504 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500504_A
+country_event = 8500505 
+  }
+
+  option = {
+    name = EVT_8500504_B
+country_event = 8500509 any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8500505
+  title = EVT_8500505_NAME
+  desc = EVT_8500505_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8500505 }
+
+  option = {
+    name = EVT_8500505_A
+any_pop = { militancy = 0.2 }country_event =  { id = 8500522 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8500505_B
+any_pop = { militancy = 1.0 }country_event = 8500506 
+  }
+}
+country_event = {
+  id = 8500506
+  title = EVT_8500506_NAME
+  desc = EVT_8500506_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8500506 }
+
+  option = {
+    name = EVT_8500506_A
+create_alliance = GRE war = RUS 
+  }
+
+  option = {
+    name = EVT_8500506_B
+any_pop = { militancy = 2.5 }country_event = 8500509 
+  }
+}
+country_event = {
+  id = 8500509
+  title = EVT_8500509_NAME
+  desc = EVT_8500509_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = GRE
+  }
+  immediate = { set_global_flag = event_fired_8500509 }
+
+  option = {
+    name = EVT_8500509_A
+any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8500510
+  title = EVT_8500510_NAME
+  desc = EVT_8500510_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    NOT = {
+    GRE = { war_with = GRE }
+    }
+    NOT = {
+    USA = { alliance_with = GRE }
+    }
+    NOT = {
+    RUS = { alliance_with = GRE }
+    }
+    NOT = {
+    GRE = { alliance_with = GRE }
+    }
+    NOT = {
+    has_global_flag = event_fired_8500541
+    }
+    exists = GRE
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500510 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8500510_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          USA = { alliance_with = GRE }
+
+        }
+country_event = 8940010 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          USA = { alliance_with = GRE }
+          }
+
+        }
+war = GRE 
+      }
+
+  }
+
+  option = {
+    name = EVT_8500510_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = GRE value = 1 } 
+  }
+}
+country_event = {
+  id = 8500511
+  title = EVT_8500511_NAME
+  desc = EVT_8500511_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    NOT = {
+    GRE = { war_with = GRE }
+    }
+    NOT = {
+    USA = { alliance_with = GRE }
+    }
+    NOT = {
+    RUS = { alliance_with = GRE }
+    }
+    NOT = {
+    GRE = { alliance_with = GRE }
+    }
+    NOT = {
+    has_global_flag = event_fired_8500541
+    }
+    exists = GRE
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500511 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8500511_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          USA = { alliance_with = GRE }
+
+        }
+country_event = 8940010 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          USA = { alliance_with = GRE }
+          }
+
+        }
+war = GRE 
+      }
+
+  }
+
+  option = {
+    name = EVT_8500511_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = GRE value = 1 } 
+  }
+}
+country_event = {
+  id = 8500520
+  title = EVT_8500520_NAME
+  desc = EVT_8500520_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = GRE
+  }
+  immediate = { set_global_flag = event_fired_8500520 }
+
+  option = {
+    name = EVT_8500520_A
+any_pop = { militancy = -0.3 }money = 100 
+  }
+}
+country_event = {
+  id = 8500521
+  title = EVT_8500521_NAME
+  desc = EVT_8500521_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = GRE
+  }
+  immediate = { set_global_flag = event_fired_8500521 }
+
+  option = {
+    name = EVT_8500521_A
+any_pop = { militancy = -0.6 }money = 250 
+  }
+}
+country_event = {
+  id = 8500522
+  title = EVT_8500522_NAME
+  desc = EVT_8500522_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1950
+    has_global_flag = event_fired_8500509
+  }
+  immediate = { set_global_flag = event_fired_8500522 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500522_A
+create_alliance = RUS any_pop = { militancy = -0.6 }relation = { who = RUS value = 100 } 
+  }
+
+  option = {
+    name = EVT_8500522_B
+any_pop = { militancy = 0.3 }relation = { who = RUS value = -150 } 
+  }
+}
+country_event = {
+  id = 8500523
+  title = EVT_8500523_NAME
+  desc = EVT_8500523_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1950
+    OR = {
+    has_global_flag = event_fired_8500521
+    }
+    NOT = {
+    GRE = { war_with = RUS }
+    }
+    NOT = {
+    GRE = { war_with = USA }
+    }
+    NOT = {
+    has_global_flag = event_fired_8500509
+    }
+    GRE = { war_with = GRE }
+    war_policy = jingoism
+  }
+  immediate = { set_global_flag = event_fired_8500523 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8500523_A
+country_event = 8500524 any_pop = { militancy = -0.3 }relation = { who = RUS value = -100 } 
+  }
+
+  option = {
+    name = EVT_8500523_B
+any_pop = { militancy = 0.3 }relation = { who = RUS value = 50 } 
+  }
+}
+country_event = {
+  id = 8500524
+  title = EVT_8500524_NAME
+  desc = EVT_8500524_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = GRE
+  }
+  immediate = { set_global_flag = event_fired_8500524 }
+
+  option = {
+    name = EVT_8500524_A
+any_pop = { militancy = -0.4 }money = 250 
+  }
+}
+country_event = {
+  id = 8500530
+  title = "EVT_8500530_NAME"
+  desc = "EVT_8500530_DESC"
+  picture = "nwo2_kke_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    }
+    GRE = { war_with = GRE }
+  }
+  immediate = { set_global_flag = event_fired_8500530 }
+
+  mean_time_to_happen = { days = 120 }
+
+  option = {
+    name = "EVT_8500530_A"
+
+  }
+
+  option = {
+    name = "EVT_8500530_B"
+
+  }
+}
+country_event = {
+  id = 8500540
+  title = EVT_8500540_NAME
+  desc = EVT_8500540_DESC
+  picture = "nwo2_kke_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1955
+    NOT = {
+    OR = {
+    TUR_860 = { owned_by = GRE } 
+    GRE_837 = { owned_by = GRE } 
+    }
+    }
+    has_global_flag = cold_war
+    GRE = { war_with = GRE }
+  }
+  immediate = { set_global_flag = event_fired_8500540 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8500540_A
+any_pop = { militancy = 0.3 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          GRE = { ai = yes }
+
+        }
+country_event = 8500543 
+      }
+
+  }
+}
+country_event = {
+  id = 8500541
+  title = EVT_8500541_NAME
+  desc = EVT_8500541_DESC
+  picture = "nwo2_kke_victory"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+    year = 1963
+    OR = {
+    AND = {
+    any_owned_province = { province_id = 1915 }    }
+    any_owned_province = { province_id = 1915 }    }
+    GRE = { war_with = GRE }
+    TUR_860 = { owned_by = THIS } 
+    GRE_837 = { owned_by = THIS } 
+    any_owned_province = { province_id = 169 }  }
+  immediate = { set_global_flag = event_fired_8500541 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8500541_A
+any_pop = { militancy = -2.5 }end_war = GRE country_event = 8500542 set_global_flag = raise_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8500542
+  title = EVT_8500542_NAME
+  desc = EVT_8500542_DESC
+  picture = "nwo2_kke_victory"
+
+  trigger = {
+    tag = GRE
+  }
+  immediate = { set_global_flag = event_fired_8500542 }
+
+  option = {
+    name = EVT_8500542_A
+any_pop = { militancy = 2.0 }860 = { secede_province = GRE } 828 = { secede_province = GRE } 858 = { secede_province = GRE } 859 = { secede_province = GRE } 834 = { secede_province = GRE } 837 = { secede_province = GRE } 836 = { secede_province = GRE } 835 = { secede_province = GRE } 838 = { secede_province = GRE } 
+  }
+}
+country_event = {
+  id = 8500550
+  title = EVT_8500550_NAME
+  desc = EVT_8500550_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1950
+    NOT = {
+    USA = { war_with = GRE }
+    GRE = { alliance_with = USA }
+    }
+    GRE = { war_with = GRE }
+    RUS = { war_with = GRE }
+  }
+  immediate = { set_global_flag = event_fired_8500550 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500550_A
+country_event = 8500551 
+  }
+
+  option = {
+    name = EVT_8500550_B
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+  }
+}
+country_event = {
+  id = 8500551
+  title = EVT_8500551_NAME
+  desc = EVT_8500551_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8500551 }
+
+  option = {
+    name = EVT_8500551_A
+any_pop = { militancy = 0.2 }end_war = GRE 
+  }
+
+  option = {
+    name = EVT_8500551_B
+any_pop = { militancy = 1.0 }country_event = 8500552 
+  }
+}
+country_event = {
+  id = 8500552
+  title = EVT_8500552_NAME
+  desc = EVT_8500552_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8500552 }
+
+  option = {
+    name = EVT_8500552_A
+create_alliance = GRE war = RUS 
+  }
+
+  option = {
+    name = EVT_8500552_B
+any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8500553
+  title = EVT_8500553_NAME
+  desc = EVT_8500553_DESC
+  picture = "nwo2_greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1950
+    NOT = {
+    RUS = { war_with = GRE }
+    GRE = { alliance_with = RUS }
+    }
+    GRE = { war_with = GRE }
+    USA = { war_with = GRE }
+  }
+  immediate = { set_global_flag = event_fired_8500553 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500553_A
+country_event = 8500554 
+  }
+
+  option = {
+    name = EVT_8500553_B
+any_pop = { militancy = -0.2 }
+  }
+}
+country_event = {
+  id = 8500554
+  title = EVT_8500554_NAME
+  desc = EVT_8500554_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8500554 }
+
+  option = {
+    name = EVT_8500554_A
+any_pop = { militancy = 0.2 }end_war = GRE 
+  }
+
+  option = {
+    name = EVT_8500554_B
+any_pop = { militancy = 0.5 }country_event = 8500555 
+  }
+}
+country_event = {
+  id = 8500555
+  title = EVT_8500555_NAME
+  desc = EVT_8500555_DESC
+  picture = "nwo2_greek_civil_war"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8500555 }
+
+  option = {
+    name = EVT_8500555_B
+any_pop = { militancy = 0.4 }
+  }
+
+  option = {
+    name = EVT_8500555_A
+create_alliance = GRE war = USA 
+  }
+}

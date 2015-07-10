@@ -1,0 +1,377 @@
+country_event = {
+  id = 8015101
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TIB
+    year = 1950
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8015101 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Sampo Tsewang Rigzin" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8015102
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TIB
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8015102 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8015103
+  title = EVT_8015103_NAME
+  desc = EVT_8015103_DESC
+  picture = "nwo2_dalai_lama_with_mao"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    vassal_of = TIB
+    }
+    exists = TIB
+    has_global_flag = CHC_won_civil_war
+  }
+  immediate = { set_global_flag = event_fired_8015103 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8015103_A
+badboy = 5 169 = { add_core =  THIS }
+  }
+
+  option = {
+    name = EVT_8015103_B
+country_event =  { id = 8015104 days = 1 } badboy = -10 any_pop = { militancy = 0.5 }1380 = { remove_core =  THIS }169 = { remove_core =  THIS }2572 = { remove_core =  THIS }1339 = { remove_core =  THIS }
+  }
+}
+country_event = {
+  id = 8015104
+  title = EVT_8015104_NAME
+  desc = EVT_8015104_DESC
+  picture = "nwo2_dalai_lama_with_mao"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TIB
+    year = 1963
+    NOT = {
+    vassal_of = TIB
+    }
+    has_global_flag = event_fired_8015103
+    exists = CHI
+  }
+  immediate = { set_global_flag = event_fired_8015104 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8015104_A
+any_pop = { militancy = 0.5 }relation = { who = CHI value = 100 } CHI = { military_access = THIS } 
+  }
+
+  option = {
+    name = EVT_8015104_B
+war = CHI country_event =  { id = 8015105 days = 1 } 
+  }
+}
+country_event = {
+  id = 8015105
+  title = EVT_8015105_NAME
+  desc = EVT_8015105_DESC
+  picture = "nwo2_seventeen_points_for_tibet"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    has_global_flag = event_fired_8015104
+    exists = TIB
+  }
+  immediate = { set_global_flag = event_fired_8015105 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+any_pop = { militancy = -0.5 }create_vassal = TIB 1380 = { secede_province = TIB } 169 = { secede_province = TIB } 2572 = { secede_province = TIB } 1339 = { secede_province = TIB } 
+  }
+}
+country_event = {
+  id = 8015106
+  title = EVT_8015106_NAME
+  desc = EVT_8015106_DESC
+  picture = "nwo2_tibetan_rebellion"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TIB
+    year = 1963
+    OR = {
+    has_global_flag = event_fired_8015105
+    TIB = { vassal_of = CHI }
+    }
+  }
+  immediate = { set_global_flag = event_fired_8015106 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8015106_A
+overlord = { release_vassal = THIS } war = CHI 
+  }
+
+  option = {
+    name = EVT_8015106_B
+any_pop = { militancy = 5.0 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }country_event = 8015107 
+  }
+}
+country_event = {
+  id = 8015107
+  title = EVT_8015107_NAME
+  desc = EVT_8015107_DESC
+  picture = "nwo2_no_unhealthy_thoughts"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8015107 }
+
+  option = {
+    name = EVT_8015107_A
+inherit = TIB 
+  }
+
+  option = {
+    name = EVT_8015107_B
+2572 = { remove_core =  THIS }1585 = { remove_core =  THIS }169 = { remove_core =  THIS }1915 = { remove_core =  THIS }1339 = { remove_core =  THIS }create_vassal = TIB 1339 = { secede_province = TIB } 
+  }
+}
+country_event = {
+  id = 8015108
+  title = EVT_8015108_NAME
+  desc = EVT_8015108_DESC
+  picture = "nwo2_destroyed_temple"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TIB
+    year = 1963
+    has_global_flag = event_fired_8015107
+  }
+  immediate = { set_global_flag = event_fired_8015108 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8015108_A
+random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8015109
+  title = EVT_8015109_NAME
+  desc = EVT_8015109_DESC
+  picture = "nwo2_camp_hale"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1963
+    CHI = { war_with = TIB }
+  }
+  immediate = { set_global_flag = event_fired_8015109 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8015109_A
+relation = { who = TIB value = 300 } relation = { who = CHI value = -100 } money = -100 
+  }
+
+  option = {
+    name = EVT_8015109_B
+money = 10 country_event =  { id = 8015110 days = 1 } 
+  }
+}
+country_event = {
+  id = 8015110
+  title = EVT_8015110_NAME
+  desc = EVT_8015110_DESC
+  picture = "nwo2_camp_hale"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TIB
+    year = 1963
+    has_global_flag = event_fired_8015109
+    CHI = { war_with = TIB }
+  }
+  immediate = { set_global_flag = event_fired_8015110 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8015110_A
+
+  }
+}
+country_event = {
+  id = 8015111
+  title = EVT_8015111_NAME
+  desc = EVT_8015111_DESC
+  picture = "nwo2_dalai_lama"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TIB
+    year = 1963
+    CHI = { war_with = TIB }
+     has_global_flag = event_fired_8015106
+    any_owned_province = { province_id = 1380 }  }
+  immediate = { set_global_flag = event_fired_8015111 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8015111_A
+end_war = CHI any_pop = { militancy = -2.5 }
+  }
+}
+country_event = {
+  id = 8015120
+  title = EVT_8015120_NAME
+  desc = EVT_8015120_DESC
+  picture = "nwo2_tibet"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    exists = TIB
+    has_global_flag = CHI_won_civil_war
+  }
+  immediate = { set_global_flag = event_fired_8015120 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8015120_A
+country_event = 8015121 
+  }
+
+  option = {
+    name = EVT_8015120_B
+any_pop = { militancy = 0.8 }1380 = { remove_core =  THIS }169 = { remove_core =  THIS }2572 = { remove_core =  THIS }1339 = { remove_core =  THIS }
+  }
+}
+country_event = {
+  id = 8015121
+  title = EVT_8015121_NAME
+  desc = EVT_8015121_DESC
+  picture = "nwo2_tibet"
+
+  trigger = {
+    tag = TIB
+  }
+  immediate = { set_global_flag = event_fired_8015121 }
+
+  option = {
+    name = EVT_8015121_A
+war = CHI 
+  }
+
+  option = {
+    name = EVT_8015121_B
+country_event = 8015122 
+  }
+}
+country_event = {
+  id = 8015122
+  title = EVT_8015122_NAME
+  desc = EVT_8015122_DESC
+  picture = "nwo2_tibet"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8015122 }
+
+  option = {
+    name = EVT_8015122_A
+inherit = TIB 
+  }
+}
+country_event = {
+  id = 8015123
+  title = EVT_8015123_NAME
+  desc = EVT_8015123_DESC
+  picture = "nwo2_dalai_lama"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TIB
+    year = 1963
+    CHI = { war_with = TIB }
+     has_global_flag = event_fired_8015121
+    any_owned_province = { province_id = 1380 }  }
+  immediate = { set_global_flag = event_fired_8015123 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+end_war = CHI any_pop = { militancy = -2.5 }
+  }
+}
+country_event = {
+  id = 8015124
+  title = EVT_8015124_NAME
+  desc = EVT_8015124_DESC
+  picture = "nwo2_no_unhealthy_thoughts"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    exists = TIB
+    }
+    has_global_flag = event_fired_8015103
+  }
+  immediate = { set_global_flag = event_fired_8015124 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8015124_A
+1380 = { add_core =  THIS }169 = { add_core =  THIS }2572 = { add_core =  THIS }1339 = { add_core =  THIS }
+  }
+}

@@ -1,0 +1,46 @@
+country_event = {
+  id = 8224000
+  title = EVT_8224000_NAME
+  desc = EVT_8224000_DESC
+  picture = "nwo2_polish_lands"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+    year = 1963
+    NOT = {
+    has_country_flag  = cores_returned
+    }
+  }
+  immediate = { set_global_flag = event_fired_8224000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8224000_A
+set_country_flag = cores_returned 1008 = { add_core =  THIS }1298 = { add_core =  THIS }664 = { add_core =  THIS }798 = { add_core =  THIS }1021 = { add_core =  THIS }695 = { add_core =  THIS }718 = { add_core =  THIS }360 = { add_core =  THIS }1003 = { add_core =  THIS }981 = { add_core =  THIS }958 = { add_core =  THIS }973 = { add_core =  THIS }977 = { add_core =  THIS }978 = { add_core =  THIS }968 = { add_core =  THIS }967 = { add_core =  THIS }1048 = { add_core =  THIS }979 = { add_core =  THIS }890 = { add_core =  THIS }173 = { add_core =  THIS }
+  }
+}
+country_event = {
+  id = 8224001
+  title = EVT_8224001_NAME
+  desc = EVT_8224001_DESC
+  picture = "nwo2_yugoslav_lands"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+    year = 1963
+    NOT = {
+    has_country_flag  = cores_returned
+    }
+  }
+  immediate = { set_global_flag = event_fired_8224001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8224001_A
+set_country_flag = cores_returned 890 = { add_core =  THIS }525 = { add_core =  THIS }512 = { add_core =  THIS }498 = { add_core =  THIS }1649 = { add_core =  THIS }513 = { add_core =  THIS }425 = { add_core =  THIS }521 = { add_core =  THIS }396 = { add_core =  THIS }860 = { add_core =  THIS }917 = { add_core =  THIS }
+  }
+}

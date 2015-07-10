@@ -1,0 +1,292 @@
+country_event = {
+  id = 8005301
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1956
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8005301 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+define_general = { name = "Hapte Mikael" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8005302
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1959
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8005302 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+
+  }
+}
+country_event = {
+  id = 8005303
+  title = EVT_8005303_NAME
+  desc = EVT_8005303_DESC
+  picture = "nwo2_haile_selassie_old"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1960
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8005303 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8005303_A
+any_pop = { militancy = 0.5 }
+  }
+
+  option = {
+    name = EVT_8005303_B
+define_general = { name = "Hapte Mariam" personality = energetic background = no_background }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8005304
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1973
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8005304 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+
+  }
+}
+country_event = {
+  id = 8005305
+  title = EVT_8005305_NAME
+  desc = EVT_8005305_DESC
+  picture = "nwo2_derg"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1974
+  }
+  immediate = { set_global_flag = event_fired_8005305 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8005305_A
+random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_8005305_B
+any_pop = { militancy = 3.0 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }country_event =  { id = 8005306 days = 1 } country_event =  { id = 8005307 days = 1 } country_event =  { id = 8005308 days = 1 } country_event =  { id = 8005309 days = 1 } 
+  }
+}
+country_event = {
+  id = 8005306
+  title = EVT_8005306_NAME
+  desc = EVT_8005306_DESC
+  picture = "nwo2_derg"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1986
+  }
+  immediate = { set_global_flag = event_fired_8005306 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8005306_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }relation = { who = USA value = -150 } relation = { who = ENG value = -150 } relation = { who = RUS value = 150 } 
+  }
+}
+country_event = {
+  id = 8005307
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1988
+  }
+  immediate = { set_global_flag = event_fired_8005307 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8005308
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1990
+  }
+  immediate = { set_global_flag = event_fired_8005308 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8005309
+  title = EVT_8005309_NAME
+  desc = EVT_8005309_DESC
+  picture = "nwo2_fall_of_derg"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8005309 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8005309_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_8005309_B
+any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8005310
+  title = EVT_8005310_NAME
+  desc = EVT_8005310_DESC
+  picture = "nwo2_eritrea"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = RUS tag = USA tag = FRA tag = EGY tag = ITA tag = ENG }
+    year = 1963
+    exists = ETH
+    has_global_flag = cold_war
+    any_owned_province = { province_id = 2003 }  }
+  immediate = { set_global_flag = event_fired_8005310 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8005310_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      AND = {
+#      ai = yes
+#      }
+#      ai = no
+#      }
+#    }
+relation = { who = ETH value = 100 } 
+  }
+
+  option = {
+    name = EVT_8005310_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      NOT = {
+#      }
+#      ai = no
+#      }
+#    }
+badboy = 5 any_pop = { militancy = 0.1 }relation = { who = ETH value = -100 } country_event =  { id = 8510501 days = 1 } country_event =  { id = 8510502 days = 1 } country_event =  { id = 8510503 days = 1 } country_event =  { id = 8510504 days = 1 } country_event =  { id = 8510505 days = 1 } 
+  }
+}
+country_event = {
+  id = 8005311
+  title = EVT_8005311_NAME
+  desc = EVT_8005311_DESC
+  picture = "nwo2_eritrea"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = RUS tag = USA tag = FRA tag = EGY tag = ITA tag = ENG }
+    year = 1963
+    has_global_flag = event_fired_8510506
+    exists = ETH
+    has_global_flag = cold_war
+    any_owned_province = { province_id = 2003 }  }
+  immediate = { set_global_flag = event_fired_8005311 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8005311_A
+2286 = { secede_province = ETH } 2059 = { secede_province = ETH } 
+  }
+}
+country_event = {
+  id = 8005312
+  title = EVT_8005312_NAME
+  desc = EVT_8005312_DESC
+  picture = "nwo2_eritrea"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ETH
+    year = 1963
+    any_owned_province = { province_id = 2003 }  }
+  immediate = { set_global_flag = event_fired_8005312 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8005312_A
+817 = { any_pop = { militancy = 1.5 } }815 = { any_pop = { militancy = 1.5 } }816 = { any_pop = { militancy = 1.5 } }
+  }
+}

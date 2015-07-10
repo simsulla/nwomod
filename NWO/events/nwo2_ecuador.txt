@@ -1,0 +1,376 @@
+country_event = {
+  id = 8004801
+  title = "EVT_8004801_NAME"
+  desc = "EVT_8004801_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1947
+  }
+  immediate = { set_global_flag = event_fired_8004801 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8004801_A"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }define_general = { name = "Oliva Ojeda" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8004802
+  title = EVT_8004802_NAME
+  desc = EVT_8004802_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1951
+  }
+  immediate = { set_global_flag = event_fired_8004802 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8004802_A
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_8004802_B
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Larrea Alba" personality = energetic background = no_background }define_general = { name = "Gandara Enriquez" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8004803
+  title = "EVT_ELECTIONS_NAME"
+  desc = "EVT_ELECTIONS_DESC"
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1955
+  }
+  immediate = { set_global_flag = event_fired_8004803 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_ELECTIONS_LEFT"
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Ibañez y Ydigaras" personality = energetic background = no_background }define_general = { name = "Castro Jíjon" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_RIGHT"
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
+  }
+
+  option = {
+    name = "EVT_ELECTIONS_NOCHANGE"
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8004804
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1959
+  }
+  immediate = { set_global_flag = event_fired_8004804 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }define_general = { name = "Larrea Alba" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8004805
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1960
+  }
+  immediate = { set_global_flag = event_fired_8004805 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Ibañez y Ydigaras" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8004806
+  title = "EVT_8004806_NAME"
+  desc = "EVT_8004806_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1962
+  }
+  immediate = { set_global_flag = event_fired_8004806 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8004806_A"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+  }
+}
+country_event = {
+  id = 8004807
+  title = "EVT_8004807_NAME"
+  desc = "EVT_8004807_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1964
+  }
+  immediate = { set_global_flag = event_fired_8004807 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_8004807_A"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
+  }
+}
+country_event = {
+  id = 8004808
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1967
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8004808 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8004809
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1971
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8004809 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Ibañez y Ydigaras" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8004810
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1975
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8004810 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8004811
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1978
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8004811 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8004812
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1980
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8004812 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8004813
+  title = EVT_DEATH_NAME
+  desc = EVT_DEATH_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1983
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8004813 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_DEATH
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+  }
+}
+country_event = {
+  id = 8004814
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1987
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8004814 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8004815
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ECU
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8004815 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}

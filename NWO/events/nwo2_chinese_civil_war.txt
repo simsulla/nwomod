@@ -1,0 +1,3920 @@
+country_event = {
+  id = 8200000
+  title = "EVT_8200000_NAME"
+  desc = "EVT_8200000_DESC"
+  picture = "nwo2_manchurian_offensive"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    OR = {
+    CHI_1470 = { owned_by = THIS } 
+    CHI_1552 = { owned_by = THIS } 
+    CHI_1490 = { owned_by = THIS } 
+    RUS_2668 = { owned_by = THIS } 
+    CHI_1504 = { owned_by = THIS } 
+    CHI_1505 = { owned_by = THIS } 
+    CHI_1552 = { owned_by = THIS } 
+    CHI_1519 = { owned_by = THIS } 
+    CHI_1508 = { owned_by = THIS } 
+    CHI_1519 = { owned_by = THIS } 
+    CHI_1524 = { owned_by = THIS } 
+    CHI_2221 = { owned_by = THIS } 
+    CHI_1545 = { owned_by = THIS } 
+    CHI_1557 = { owned_by = THIS } 
+    CHI_1479 = { owned_by = THIS } 
+    CHI_1557 = { owned_by = THIS } 
+    CHI_1616 = { owned_by = THIS } 
+    CHI_1559 = { owned_by = THIS } 
+    CHI_1563 = { owned_by = THIS } 
+    CHI_1572 = { owned_by = THIS } 
+    CHI_1578 = { owned_by = THIS } 
+    CHI_1594 = { owned_by = THIS } 
+    RUS_1065 = { owned_by = THIS } 
+    CHI_1604 = { owned_by = THIS } 
+    CHI_1482 = { owned_by = THIS } 
+    RUS_1065 = { owned_by = THIS } 
+    CHI_1601 = { owned_by = THIS } 
+    }
+    NOT = {
+    RUS = { war_with = CHI }
+    }
+    NOT = {
+    exists = MCK
+    }
+    NOT = {
+    exists = IMN
+    }
+    exists = CHI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200000 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200000_A"
+relation = { who = CHI value = 150 } 1470 = { secede_province = CHI } 1471 = { secede_province = CHI } 1473 = { secede_province = CHI } 1475 = { secede_province = CHI } 1490 = { secede_province = CHI } 1488 = { secede_province = CHI } 1489 = { secede_province = CHI } 1491 = { secede_province = CHI } 1492 = { secede_province = CHI } 2681 = { secede_province = CHI } 1494 = { secede_province = CHI } 1496 = { secede_province = CHI } 1497 = { secede_province = CHI } 2690 = { secede_province = CHI } 1502 = { secede_province = CHI } 1503 = { secede_province = CHI } 1504 = { secede_province = CHI } 2682 = { secede_province = CHI } 1505 = { secede_province = CHI } 1506 = { secede_province = CHI } 1507 = { secede_province = CHI } 1552 = { secede_province = CHI } 1553 = { secede_province = CHI } 1554 = { secede_province = CHI } 44 = { secede_province = CHI } 1508 = { secede_province = CHI } 1509 = { secede_province = CHI } 1512 = { secede_province = CHI } 1514 = { secede_province = CHI } 1062 = { secede_province = CHI } 2685 = { secede_province = CHI } 1519 = { secede_province = CHI } 1520 = { secede_province = CHI } 1521 = { secede_province = CHI } 1523 = { secede_province = CHI } 1524 = { secede_province = CHI } 1525 = { secede_province = CHI } 1528 = { secede_province = CHI } 1529 = { secede_province = CHI } 2221 = { secede_province = CHI } 1538 = { secede_province = CHI } 1537 = { secede_province = CHI } 1539 = { secede_province = CHI } 1544 = { secede_province = CHI } 2632 = { secede_province = CHI } 1545 = { secede_province = CHI } 1546 = { secede_province = CHI } 1549 = { secede_province = CHI } 1551 = { secede_province = CHI } 43 = { secede_province = CHI } 1555 = { secede_province = CHI } 1085 = { secede_province = CHI } 45 = { secede_province = CHI } 1479 = { secede_province = CHI } 1480 = { secede_province = CHI } 1481 = { secede_province = CHI } 2613 = { secede_province = CHI } 1557 = { secede_province = CHI } 1558 = { secede_province = CHI } 1556 = { secede_province = CHI } 1616 = { secede_province = CHI } 17 = { secede_province = CHI } 1615 = { secede_province = CHI } 1618 = { secede_province = CHI } 1559 = { secede_province = CHI } 12 = { secede_province = CHI } 1561 = { secede_province = CHI } 1562 = { secede_province = CHI } 2062 = { secede_province = CHI } 1563 = { secede_province = CHI } 1564 = { secede_province = CHI } 1568 = { secede_province = CHI } 1571 = { secede_province = CHI } 2598 = { secede_province = CHI } 9 = { secede_province = CHI } 1572 = { secede_province = CHI } 1573 = { secede_province = CHI } 1574 = { secede_province = CHI } 1575 = { secede_province = CHI } 1576 = { secede_province = CHI } 1579 = { secede_province = CHI } 1583 = { secede_province = CHI } 7 = { secede_province = CHI } 8 = { secede_province = CHI } 1578 = { secede_province = CHI } 1580 = { secede_province = CHI } 1582 = { secede_province = CHI } 1584 = { secede_province = CHI } 2599 = { secede_province = CHI } 1594 = { secede_province = CHI } 1597 = { secede_province = CHI } 1598 = { secede_province = CHI } 2607 = { secede_province = CHI } 1208 = { secede_province = CHI } 1604 = { secede_province = CHI } 1605 = { secede_province = CHI } 1606 = { secede_province = CHI } 1608 = { secede_province = CHI } 1609 = { secede_province = CHI } 1482 = { secede_province = CHI } 1483 = { secede_province = CHI } 1484 = { secede_province = CHI } 1486 = { secede_province = CHI } 1487 = { secede_province = CHI } 1585 = { secede_province = CHI } 1586 = { secede_province = CHI } 1601 = { secede_province = CHI } 1602 = { secede_province = CHI } 1603 = { secede_province = CHI } 1341 = { secede_province = CHI } 2631 = { secede_province = CHI } country_event = 8200005 
+  }
+
+  option = {
+    name = "EVT_8200000_B"
+relation = { who = CHI value = -100 } badboy = 30 any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8200001
+  title = "EVT_8200001_NAME"
+  desc = "EVT_8200001_DESC"
+  picture = "nwo2_manchurian_offensive"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    OR = {
+    CHI_1470 = { owned_by = THIS } 
+    CHI_1552 = { owned_by = THIS } 
+    CHI_1490 = { owned_by = THIS } 
+    RUS_2668 = { owned_by = THIS } 
+    CHI_1504 = { owned_by = THIS } 
+    CHI_1505 = { owned_by = THIS } 
+    CHI_1552 = { owned_by = THIS } 
+    CHI_1519 = { owned_by = THIS } 
+    CHI_1508 = { owned_by = THIS } 
+    CHI_1519 = { owned_by = THIS } 
+    CHI_1524 = { owned_by = THIS } 
+    CHI_2221 = { owned_by = THIS } 
+    CHI_1545 = { owned_by = THIS } 
+    CHI_1557 = { owned_by = THIS } 
+    CHI_1479 = { owned_by = THIS } 
+    CHI_1557 = { owned_by = THIS } 
+    CHI_1616 = { owned_by = THIS } 
+    CHI_1559 = { owned_by = THIS } 
+    CHI_1563 = { owned_by = THIS } 
+    CHI_1572 = { owned_by = THIS } 
+    CHI_1578 = { owned_by = THIS } 
+    CHI_1594 = { owned_by = THIS } 
+    RUS_1065 = { owned_by = THIS } 
+    CHI_1604 = { owned_by = THIS } 
+    CHI_1482 = { owned_by = THIS } 
+    RUS_1065 = { owned_by = THIS } 
+    CHI_1601 = { owned_by = THIS } 
+    }
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    RUS = { war_with = CHI }
+    }
+    NOT = {
+    exists = MCK
+    }
+    NOT = {
+    exists = IMN
+    }
+    exists = CHI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200001 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200001_A"
+relation = { who = CHI value = 150 } 1470 = { secede_province = CHI } 1471 = { secede_province = CHI } 1473 = { secede_province = CHI } 1475 = { secede_province = CHI } 1490 = { secede_province = CHI } 1488 = { secede_province = CHI } 1489 = { secede_province = CHI } 1491 = { secede_province = CHI } 1492 = { secede_province = CHI } 2681 = { secede_province = CHI } 1494 = { secede_province = CHI } 1496 = { secede_province = CHI } 1497 = { secede_province = CHI } 2690 = { secede_province = CHI } 1502 = { secede_province = CHI } 1503 = { secede_province = CHI } 1504 = { secede_province = CHI } 2682 = { secede_province = CHI } 1505 = { secede_province = CHI } 1506 = { secede_province = CHI } 1507 = { secede_province = CHI } 1552 = { secede_province = CHI } 1553 = { secede_province = CHI } 1554 = { secede_province = CHI } 44 = { secede_province = CHI } 1508 = { secede_province = CHI } 1509 = { secede_province = CHI } 1512 = { secede_province = CHI } 1514 = { secede_province = CHI } 1062 = { secede_province = CHI } 2685 = { secede_province = CHI } 1519 = { secede_province = CHI } 1520 = { secede_province = CHI } 1521 = { secede_province = CHI } 1523 = { secede_province = CHI } 1524 = { secede_province = CHI } 1525 = { secede_province = CHI } 1528 = { secede_province = CHI } 1529 = { secede_province = CHI } 2221 = { secede_province = CHI } 1538 = { secede_province = CHI } 1537 = { secede_province = CHI } 1539 = { secede_province = CHI } 1544 = { secede_province = CHI } 2632 = { secede_province = CHI } 1545 = { secede_province = CHI } 1546 = { secede_province = CHI } 1549 = { secede_province = CHI } 1551 = { secede_province = CHI } 43 = { secede_province = CHI } 1555 = { secede_province = CHI } 1085 = { secede_province = CHI } 45 = { secede_province = CHI } 1479 = { secede_province = CHI } 1480 = { secede_province = CHI } 1481 = { secede_province = CHI } 2613 = { secede_province = CHI } 1557 = { secede_province = CHI } 1558 = { secede_province = CHI } 1556 = { secede_province = CHI } 1616 = { secede_province = CHI } 17 = { secede_province = CHI } 1615 = { secede_province = CHI } 1618 = { secede_province = CHI } 1559 = { secede_province = CHI } 12 = { secede_province = CHI } 1561 = { secede_province = CHI } 1562 = { secede_province = CHI } 2062 = { secede_province = CHI } 1563 = { secede_province = CHI } 1564 = { secede_province = CHI } 1568 = { secede_province = CHI } 1571 = { secede_province = CHI } 2598 = { secede_province = CHI } 9 = { secede_province = CHI } 1572 = { secede_province = CHI } 1573 = { secede_province = CHI } 1574 = { secede_province = CHI } 1575 = { secede_province = CHI } 1576 = { secede_province = CHI } 1579 = { secede_province = CHI } 1583 = { secede_province = CHI } 7 = { secede_province = CHI } 8 = { secede_province = CHI } 1578 = { secede_province = CHI } 1580 = { secede_province = CHI } 1582 = { secede_province = CHI } 1584 = { secede_province = CHI } 2599 = { secede_province = CHI } 1594 = { secede_province = CHI } 1597 = { secede_province = CHI } 1598 = { secede_province = CHI } 2607 = { secede_province = CHI } 1208 = { secede_province = CHI } 1604 = { secede_province = CHI } 1605 = { secede_province = CHI } 1606 = { secede_province = CHI } 1608 = { secede_province = CHI } 1609 = { secede_province = CHI } 1482 = { secede_province = CHI } 1483 = { secede_province = CHI } 1484 = { secede_province = CHI } 1486 = { secede_province = CHI } 1487 = { secede_province = CHI } 1585 = { secede_province = CHI } 1586 = { secede_province = CHI } 1601 = { secede_province = CHI } 1602 = { secede_province = CHI } 1603 = { secede_province = CHI } 1341 = { secede_province = CHI } 2631 = { secede_province = CHI } 
+  }
+
+  option = {
+    name = "EVT_8200001_B"
+relation = { who = CHI value = -100 } badboy = 30 any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8200002
+  title = "EVT_8200002_NAME"
+  desc = "EVT_8200002_DESC"
+  picture = "nwo2_manchurian_offensive"
+  fire_only_once = yes
+
+  trigger = {
+    tag = MON
+    year = 1963
+    OR = {
+    CHI_1470 = { owned_by = THIS } 
+    CHI_1552 = { owned_by = THIS } 
+    CHI_1490 = { owned_by = THIS } 
+    RUS_2668 = { owned_by = THIS } 
+    CHI_1504 = { owned_by = THIS } 
+    CHI_1505 = { owned_by = THIS } 
+    CHI_1552 = { owned_by = THIS } 
+    CHI_1519 = { owned_by = THIS } 
+    CHI_1508 = { owned_by = THIS } 
+    CHI_1519 = { owned_by = THIS } 
+    CHI_1524 = { owned_by = THIS } 
+    CHI_2221 = { owned_by = THIS } 
+    CHI_1545 = { owned_by = THIS } 
+    CHI_1557 = { owned_by = THIS } 
+    CHI_1479 = { owned_by = THIS } 
+    CHI_1557 = { owned_by = THIS } 
+    CHI_1616 = { owned_by = THIS } 
+    CHI_1559 = { owned_by = THIS } 
+    CHI_1563 = { owned_by = THIS } 
+    CHI_1572 = { owned_by = THIS } 
+    CHI_1578 = { owned_by = THIS } 
+    CHI_1594 = { owned_by = THIS } 
+    RUS_1065 = { owned_by = THIS } 
+    CHI_1604 = { owned_by = THIS } 
+    CHI_1482 = { owned_by = THIS } 
+    RUS_1065 = { owned_by = THIS } 
+    CHI_1601 = { owned_by = THIS } 
+    }
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    MON = { war_with = CHI }
+    }
+    NOT = {
+    exists = MCK
+    }
+    NOT = {
+    exists = IMN
+    }
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200002 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200002_A"
+relation = { who = CHI value = 150 } 1470 = { secede_province = CHI } 1471 = { secede_province = CHI } 1473 = { secede_province = CHI } 1475 = { secede_province = CHI } 1490 = { secede_province = CHI } 1488 = { secede_province = CHI } 1489 = { secede_province = CHI } 1491 = { secede_province = CHI } 1492 = { secede_province = CHI } 2681 = { secede_province = CHI } 1494 = { secede_province = CHI } 1496 = { secede_province = CHI } 1497 = { secede_province = CHI } 2690 = { secede_province = CHI } 1502 = { secede_province = CHI } 1503 = { secede_province = CHI } 1504 = { secede_province = CHI } 2682 = { secede_province = CHI } 1505 = { secede_province = CHI } 1506 = { secede_province = CHI } 1507 = { secede_province = CHI } 1552 = { secede_province = CHI } 1553 = { secede_province = CHI } 1554 = { secede_province = CHI } 44 = { secede_province = CHI } 1508 = { secede_province = CHI } 1509 = { secede_province = CHI } 1512 = { secede_province = CHI } 1514 = { secede_province = CHI } 1062 = { secede_province = CHI } 2685 = { secede_province = CHI } 1519 = { secede_province = CHI } 1520 = { secede_province = CHI } 1521 = { secede_province = CHI } 1523 = { secede_province = CHI } 1524 = { secede_province = CHI } 1525 = { secede_province = CHI } 1528 = { secede_province = CHI } 1529 = { secede_province = CHI } 2221 = { secede_province = CHI } 1538 = { secede_province = CHI } 1537 = { secede_province = CHI } 1539 = { secede_province = CHI } 1544 = { secede_province = CHI } 2632 = { secede_province = CHI } 1545 = { secede_province = CHI } 1546 = { secede_province = CHI } 1549 = { secede_province = CHI } 1551 = { secede_province = CHI } 43 = { secede_province = CHI } 1555 = { secede_province = CHI } 1085 = { secede_province = CHI } 45 = { secede_province = CHI } 1479 = { secede_province = CHI } 1480 = { secede_province = CHI } 1481 = { secede_province = CHI } 2613 = { secede_province = CHI } 1557 = { secede_province = CHI } 1558 = { secede_province = CHI } 1556 = { secede_province = CHI } 1616 = { secede_province = CHI } 17 = { secede_province = CHI } 1615 = { secede_province = CHI } 1618 = { secede_province = CHI } 1559 = { secede_province = CHI } 12 = { secede_province = CHI } 1561 = { secede_province = CHI } 1562 = { secede_province = CHI } 2062 = { secede_province = CHI } 1563 = { secede_province = CHI } 1564 = { secede_province = CHI } 1568 = { secede_province = CHI } 1571 = { secede_province = CHI } 2598 = { secede_province = CHI } 9 = { secede_province = CHI } 1572 = { secede_province = CHI } 1573 = { secede_province = CHI } 1574 = { secede_province = CHI } 1575 = { secede_province = CHI } 1576 = { secede_province = CHI } 1579 = { secede_province = CHI } 1583 = { secede_province = CHI } 7 = { secede_province = CHI } 8 = { secede_province = CHI } 1578 = { secede_province = CHI } 1580 = { secede_province = CHI } 1582 = { secede_province = CHI } 1584 = { secede_province = CHI } 2599 = { secede_province = CHI } 1594 = { secede_province = CHI } 1597 = { secede_province = CHI } 1598 = { secede_province = CHI } 2607 = { secede_province = CHI } 1208 = { secede_province = CHI } 1604 = { secede_province = CHI } 1605 = { secede_province = CHI } 1606 = { secede_province = CHI } 1608 = { secede_province = CHI } 1609 = { secede_province = CHI } 1482 = { secede_province = CHI } 1483 = { secede_province = CHI } 1484 = { secede_province = CHI } 1486 = { secede_province = CHI } 1487 = { secede_province = CHI } 1585 = { secede_province = CHI } 1586 = { secede_province = CHI } 1601 = { secede_province = CHI } 1602 = { secede_province = CHI } 1603 = { secede_province = CHI } 1341 = { secede_province = CHI } 2631 = { secede_province = CHI } 
+  }
+
+  option = {
+    name = "EVT_8200002_B"
+relation = { who = CHI value = -100 } badboy = 30 any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8200003
+  title = "EVT_8200003_NAME"
+  desc = "EVT_8200003_DESC"
+  picture = "nwo2_manchurian_offensive"
+  fire_only_once = yes
+
+  trigger = {
+    tag = MON
+    year = 1963
+    OR = {
+    CHI_1470 = { owned_by = THIS } 
+    CHI_1552 = { owned_by = THIS } 
+    CHI_1490 = { owned_by = THIS } 
+    RUS_2668 = { owned_by = THIS } 
+    CHI_1504 = { owned_by = THIS } 
+    CHI_1505 = { owned_by = THIS } 
+    CHI_1552 = { owned_by = THIS } 
+    CHI_1519 = { owned_by = THIS } 
+    CHI_1508 = { owned_by = THIS } 
+    CHI_1519 = { owned_by = THIS } 
+    CHI_1524 = { owned_by = THIS } 
+    CHI_2221 = { owned_by = THIS } 
+    CHI_1545 = { owned_by = THIS } 
+    CHI_1557 = { owned_by = THIS } 
+    CHI_1479 = { owned_by = THIS } 
+    CHI_1557 = { owned_by = THIS } 
+    CHI_1616 = { owned_by = THIS } 
+    CHI_1559 = { owned_by = THIS } 
+    CHI_1563 = { owned_by = THIS } 
+    CHI_1572 = { owned_by = THIS } 
+    CHI_1578 = { owned_by = THIS } 
+    CHI_1594 = { owned_by = THIS } 
+    RUS_1065 = { owned_by = THIS } 
+    CHI_1604 = { owned_by = THIS } 
+    CHI_1482 = { owned_by = THIS } 
+    RUS_1065 = { owned_by = THIS } 
+    CHI_1601 = { owned_by = THIS } 
+    }
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    MON = { war_with = CHI }
+    }
+    NOT = {
+    exists = MCK
+    }
+    NOT = {
+    exists = IMN
+    }
+    exists = CHI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200003 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200003_A"
+relation = { who = CHI value = 150 } 1470 = { secede_province = CHI } 1471 = { secede_province = CHI } 1473 = { secede_province = CHI } 1475 = { secede_province = CHI } 1490 = { secede_province = CHI } 1488 = { secede_province = CHI } 1489 = { secede_province = CHI } 1491 = { secede_province = CHI } 1492 = { secede_province = CHI } 2681 = { secede_province = CHI } 1494 = { secede_province = CHI } 1496 = { secede_province = CHI } 1497 = { secede_province = CHI } 2690 = { secede_province = CHI } 1502 = { secede_province = CHI } 1503 = { secede_province = CHI } 1504 = { secede_province = CHI } 2682 = { secede_province = CHI } 1505 = { secede_province = CHI } 1506 = { secede_province = CHI } 1507 = { secede_province = CHI } 1552 = { secede_province = CHI } 1553 = { secede_province = CHI } 1554 = { secede_province = CHI } 44 = { secede_province = CHI } 1508 = { secede_province = CHI } 1509 = { secede_province = CHI } 1512 = { secede_province = CHI } 1514 = { secede_province = CHI } 1062 = { secede_province = CHI } 2685 = { secede_province = CHI } 1519 = { secede_province = CHI } 1520 = { secede_province = CHI } 1521 = { secede_province = CHI } 1523 = { secede_province = CHI } 1524 = { secede_province = CHI } 1525 = { secede_province = CHI } 1528 = { secede_province = CHI } 1529 = { secede_province = CHI } 2221 = { secede_province = CHI } 1538 = { secede_province = CHI } 1537 = { secede_province = CHI } 1539 = { secede_province = CHI } 1544 = { secede_province = CHI } 2632 = { secede_province = CHI } 1545 = { secede_province = CHI } 1546 = { secede_province = CHI } 1549 = { secede_province = CHI } 1551 = { secede_province = CHI } 43 = { secede_province = CHI } 1555 = { secede_province = CHI } 1085 = { secede_province = CHI } 45 = { secede_province = CHI } 1479 = { secede_province = CHI } 1480 = { secede_province = CHI } 1481 = { secede_province = CHI } 2613 = { secede_province = CHI } 1557 = { secede_province = CHI } 1558 = { secede_province = CHI } 1556 = { secede_province = CHI } 1616 = { secede_province = CHI } 17 = { secede_province = CHI } 1615 = { secede_province = CHI } 1618 = { secede_province = CHI } 1559 = { secede_province = CHI } 12 = { secede_province = CHI } 1561 = { secede_province = CHI } 1562 = { secede_province = CHI } 2062 = { secede_province = CHI } 1563 = { secede_province = CHI } 1564 = { secede_province = CHI } 1568 = { secede_province = CHI } 1571 = { secede_province = CHI } 2598 = { secede_province = CHI } 9 = { secede_province = CHI } 1572 = { secede_province = CHI } 1573 = { secede_province = CHI } 1574 = { secede_province = CHI } 1575 = { secede_province = CHI } 1576 = { secede_province = CHI } 1579 = { secede_province = CHI } 1583 = { secede_province = CHI } 7 = { secede_province = CHI } 8 = { secede_province = CHI } 1578 = { secede_province = CHI } 1580 = { secede_province = CHI } 1582 = { secede_province = CHI } 1584 = { secede_province = CHI } 2599 = { secede_province = CHI } 1594 = { secede_province = CHI } 1597 = { secede_province = CHI } 1598 = { secede_province = CHI } 2607 = { secede_province = CHI } 1208 = { secede_province = CHI } 1604 = { secede_province = CHI } 1605 = { secede_province = CHI } 1606 = { secede_province = CHI } 1608 = { secede_province = CHI } 1609 = { secede_province = CHI } 1482 = { secede_province = CHI } 1483 = { secede_province = CHI } 1484 = { secede_province = CHI } 1486 = { secede_province = CHI } 1487 = { secede_province = CHI } 1585 = { secede_province = CHI } 1586 = { secede_province = CHI } 1601 = { secede_province = CHI } 1602 = { secede_province = CHI } 1603 = { secede_province = CHI } 1341 = { secede_province = CHI } 2631 = { secede_province = CHI } 
+  }
+
+  option = {
+    name = "EVT_8200003_B"
+relation = { who = CHI value = -100 } badboy = 30 any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8200004
+  title = "EVT_8200004_NAME"
+  desc = "EVT_8200004_DESC"
+  picture = "nwo2_manchurian_offensive"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200004 }
+
+  option = {
+    name = "OK"
+relation = { who = RUS value = 50 } relation = { who = MON value = 25 } add_country_modifier = { name = dh_oilpool duration = 365 }
+  }
+}
+country_event = {
+  id = 8200005
+  title = "EVT_8200005_NAME"
+  desc = "EVT_8200005_DESC"
+  picture = "nwo2_manchurian_offensive"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200005 }
+
+  option = {
+    name = "OK"
+relation = { who = RUS value = 50 } relation = { who = MON value = 25 } 
+  }
+}
+country_event = {
+  id = 8200006
+  title = "EVT_8200006_NAME"
+  desc = "EVT_8200006_DESC"
+  picture = "nwo2_mao_with_stalin"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = cold_war_pacific
+    CHI = { war_with = CHI }
+    war_policy = jingoism
+  }
+  immediate = { set_global_flag = event_fired_8200006 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200006_A"
+relation = { who = CHI value = 50 } money = -200 country_event = 8200007 
+  }
+
+  option = {
+    name = "EVT_8200006_B"
+relation = { who = CHI value = -100 } 
+  }
+
+  option = {
+    name = "EVT_8200006_C"
+relation = { who = CHI value = 100 } badboy = 10 any_pop = { militancy = 0.3 }country_event = 8200008 
+  }
+
+  option = {
+    name = "EVT_8200006_D"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = ccw_soviet_nonintervention
+#      }
+#    }
+relation = { who = CHI value = 150 } add_country_modifier = { name = dh_oilpool duration = 365 }money = -1000 badboy = 40 any_pop = { militancy = 1.5 }country_event = 8200009 
+  }
+}
+country_event = {
+  id = 8200007
+  title = "EVT_8200007_NAME"
+  desc = "EVT_8200007_DESC"
+  picture = "nwo2_soviets_in_ccw"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200007 }
+
+  option = {
+    name = "EVT_8200007_A"
+add_country_modifier = { name = dh_oilpool duration = 365 }money = 100 
+  }
+}
+country_event = {
+  id = 8200008
+  title = "EVT_8200008_NAME"
+  desc = "EVT_8200008_DESC"
+  picture = "nwo2_soviets_in_ccw"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200008 }
+
+  option = {
+    name = "EVT_8200008_A"
+add_country_modifier = { name = dh_oilpool duration = 365 }money = 500 
+  }
+}
+country_event = {
+  id = 8200009
+  title = "EVT_8200009_NAME"
+  desc = "EVT_8200009_DESC"
+  picture = "nwo2_mao_with_stalin_poster"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200009 }
+
+  option = {
+    name = "EVT_8200009_A"
+country_event = 8500101 
+  }
+
+  option = {
+    name = "EVT_8200009_B"
+add_country_modifier = { name = dh_oilpool duration = 365 }money = 500 country_event =  { id = 8200121 days = 1 } 
+  }
+}
+country_event = {
+  id = 8200010
+  title = "EVT_8200010_NAME"
+  desc = "EVT_8200010_DESC"
+  picture = "nwo2_marshall_mission"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1946
+    OR = {
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    AND = {
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    CHI_1559 = { owned_by = CHI } 
+    }
+    NOT = {
+    CHI_1552 = { owned_by = CHI } 
+    }
+    NOT = {
+    CHI_1557 = { owned_by = CHI } 
+    }
+    NOT = {
+    CHI_2221 = { owned_by = CHI } 
+    }
+    NOT = {
+    RUS_1065 = { owned_by = CHI } 
+    }
+    NOT = {
+    RUS_2668 = { owned_by = CHI } 
+    }
+    has_global_flag = cold_war_pacific
+    CHI = { war_with = CHI }
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    exists = CHI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200010 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200010_A"
+relation = { who = CHI value = 50 } relation = { who = CHI value = 150 } 
+  }
+
+  option = {
+    name = "EVT_8200010_B"
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }any_pop = { militancy = 0.5 }country_event =  { id = 8200011 days = 1 } country_event =  { id = 8200012 days = 1 } 
+  }
+}
+country_event = {
+  id = 8200011
+  title = "EVT_8200011_NAME"
+  desc = "EVT_8200011_DESC"
+  picture = "nwo2_marshall_mission"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1946
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = event_fired_8200010
+    exists = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200011 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = "EVT_8200011_A"
+any_pop = { militancy = -1.0 }
+  }
+
+  option = {
+    name = "EVT_8200011_B"
+any_pop = { militancy = 0.5 }country_event =  { id = 8200012 days = 1 } country_event =  { id = 8200013 days = 1 } set_country_flag = block_army_limiting 
+  }
+}
+country_event = {
+  id = 8200012
+  title = "EVT_8200012_NAME"
+  desc = "EVT_8200012_DESC"
+  picture = "nwo2_marshall_mission"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1946
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = event_fired_8200010
+    exists = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200012 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = "EVT_8200011_A"
+any_pop = { militancy = -0.1 }
+  }
+
+  option = {
+    name = "EVT_8200011_B"
+any_pop = { militancy = 3.0 }badboy = 30 country_event =  { id = 8200011 days = 1 } country_event =  { id = 8200013 days = 1 } country_event =  { id = 8200044 days = 1 } set_country_flag = block_army_limiting 
+  }
+}
+country_event = {
+  id = 8200013
+  title = "EVT_8200013_NAME"
+  desc = "EVT_8200013_DESC"
+  picture = "nwo2_marshall_mission"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1946
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = event_fired_8200012
+    exists = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200013 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200013_A"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          war_with = CHI
+
+        }
+end_war = CHI 
+      }
+1470 = { secede_province = THIS } 1471 = { secede_province = THIS } 1473 = { secede_province = THIS } 1475 = { secede_province = THIS } 1490 = { secede_province = THIS } 1488 = { secede_province = THIS } 1489 = { secede_province = THIS } 1491 = { secede_province = THIS } 1492 = { secede_province = THIS } 2681 = { secede_province = THIS } 1494 = { secede_province = THIS } 1496 = { secede_province = THIS } 1497 = { secede_province = THIS } 2690 = { secede_province = THIS } 1502 = { secede_province = THIS } 1503 = { secede_province = THIS } 1504 = { secede_province = THIS } 2682 = { secede_province = THIS } 1505 = { secede_province = THIS } 1506 = { secede_province = THIS } 1507 = { secede_province = THIS } 1552 = { secede_province = THIS } 1553 = { secede_province = THIS } 1554 = { secede_province = THIS } 44 = { secede_province = THIS } 1508 = { secede_province = THIS } 1509 = { secede_province = THIS } 1512 = { secede_province = THIS } 1514 = { secede_province = THIS } 1062 = { secede_province = THIS } 2685 = { secede_province = THIS } 1519 = { secede_province = THIS } 1520 = { secede_province = THIS } 1521 = { secede_province = THIS } 1523 = { secede_province = THIS } 1524 = { secede_province = THIS } 1525 = { secede_province = THIS } 1528 = { secede_province = THIS } 1529 = { secede_province = THIS } 2221 = { secede_province = THIS } 1538 = { secede_province = THIS } 1537 = { secede_province = THIS } 1539 = { secede_province = THIS } 1544 = { secede_province = THIS } 2632 = { secede_province = THIS } 1545 = { secede_province = THIS } 1546 = { secede_province = THIS } 1549 = { secede_province = THIS } 1551 = { secede_province = THIS } 43 = { secede_province = THIS } 1555 = { secede_province = THIS } 1085 = { secede_province = THIS } 45 = { secede_province = THIS } 1479 = { secede_province = THIS } 1480 = { secede_province = THIS } 1481 = { secede_province = THIS } 2613 = { secede_province = THIS } 1557 = { secede_province = THIS } 1558 = { secede_province = THIS } 1556 = { secede_province = THIS } 1616 = { secede_province = THIS } 17 = { secede_province = THIS } 1615 = { secede_province = THIS } 1618 = { secede_province = THIS } 1559 = { secede_province = THIS } 12 = { secede_province = THIS } 1561 = { secede_province = THIS } 1562 = { secede_province = THIS } 2062 = { secede_province = THIS } 1563 = { secede_province = THIS } 1564 = { secede_province = THIS } 1568 = { secede_province = THIS } 1571 = { secede_province = THIS } 2598 = { secede_province = THIS } 9 = { secede_province = THIS } 1572 = { secede_province = THIS } 1573 = { secede_province = THIS } 1574 = { secede_province = THIS } 1575 = { secede_province = THIS } 1576 = { secede_province = THIS } 1579 = { secede_province = THIS } 1583 = { secede_province = THIS } 7 = { secede_province = THIS } 8 = { secede_province = THIS } 1578 = { secede_province = THIS } 1580 = { secede_province = THIS } 1582 = { secede_province = THIS } 1584 = { secede_province = THIS } 2599 = { secede_province = THIS } 1594 = { secede_province = THIS } 1597 = { secede_province = THIS } 1598 = { secede_province = THIS } 2607 = { secede_province = THIS } 1208 = { secede_province = THIS } 1604 = { secede_province = THIS } 1605 = { secede_province = THIS } 1606 = { secede_province = THIS } 1608 = { secede_province = THIS } 1609 = { secede_province = THIS } 1482 = { secede_province = THIS } 1483 = { secede_province = THIS } 1484 = { secede_province = THIS } 1486 = { secede_province = THIS } 1487 = { secede_province = THIS } 1585 = { secede_province = THIS } 1586 = { secede_province = THIS } 1601 = { secede_province = THIS } 1602 = { secede_province = THIS } 1603 = { secede_province = THIS } 1341 = { secede_province = THIS } 2631 = { secede_province = THIS } money = -1000 add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8200014
+  title = "EVT_8200014_NAME"
+  desc = "EVT_8200014_DESC"
+  picture = "nwo2_marshall_mission_ends"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    has_global_flag = chinese_unity_govt
+    }
+     has_global_flag = event_fired_8200013
+  }
+  immediate = { set_global_flag = event_fired_8200014 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200014_A"
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }any_pop = { militancy = 2.0 }
+  }
+}
+country_event = {
+  id = 8200020
+  title = "EVT_8200020_NAME"
+  desc = "EVT_8200020_DESC"
+  picture = "nwo2_marshall_mission"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1947
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    CHI = { war_with = CHI }
+    war_with = CHI
+    war_with = CHI
+    }
+    war_policy = jingoism
+  }
+  immediate = { set_global_flag = event_fired_8200020 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = "EVT_8200020_A"
+relation = { who = CHI value = 20 } money = -1500 
+  }
+
+  option = {
+    name = "EVT_8200020_B"
+relation = { who = CHI value = -20 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }any_pop = { militancy = 0.5 }country_event =  { id = 8200021 days = 1 } country_event =  { id = 8200022 days = 1 } 
+  }
+}
+country_event = {
+  id = 8200021
+  title = "EVT_8200021_NAME"
+  desc = "EVT_8200021_DESC"
+  picture = "nwo2_mao_with_chiang"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1947
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = event_fired_8200020
+  }
+  immediate = { set_global_flag = event_fired_8200021 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = "EVT_8200021_A"
+relation = { who = CHI value = -50 } country_event =  { id = 8200022 days = 1 } country_event =  { id = 8200023 days = 1 } country_event =  { id = 8200024 days = 1 } 
+  }
+
+  option = {
+    name = "EVT_8200021_B"
+relation = { who = CHI value = 20 } any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8200022
+  title = "EVT_8200022_NAME"
+  desc = "EVT_8200022_DESC"
+  picture = "nwo2_mao_with_chiang"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1947
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = event_fired_8200020
+  }
+  immediate = { set_global_flag = event_fired_8200022 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = "EVT_8200022_A"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = event_fired_8230024
+#      }
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#    }
+
+  }
+
+  option = {
+    name = "EVT_8200022_A"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      has_global_flag = event_fired_8230024
+#      }
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#    }
+
+  }
+
+  option = {
+    name = "EVT_8200022_A"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      has_global_flag = event_fired_8230024
+#      }
+#      NOT = {
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#      }
+#    }
+
+  }
+
+  option = {
+    name = "EVT_8200022_A"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#      }
+#      NOT = {
+#      has_global_flag = event_fired_8230024
+#      }
+#    }
+relation = { who = CHI value = -50 } country_event =  { id = 8200021 days = 1 } country_event =  { id = 8200023 days = 1 } country_event =  { id = 8200024 days = 1 } 
+  }
+
+  option = {
+    name = "EVT_8200022_B"
+relation = { who = CHI value = 20 } any_pop = { militancy = 2.0 }
+  }
+}
+country_event = {
+  id = 8200023
+  title = "EVT_8200023_NAME"
+  desc = "EVT_8200023_DESC"
+  picture = "nwo2_mao_with_chiang_toast"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1947
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = event_fired_8200022
+  }
+  immediate = { set_global_flag = event_fired_8200023 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = "EVT_8200023_A"
+set_global_flag = chinese_unity_govt relation = { who = CHI value = 100 } any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Zhang Xuezhong" personality = energetic background = no_background }define_general = { name = "Dong Zongshan" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8200024
+  title = "EVT_8200024_NAME"
+  desc = "EVT_8200024_DESC"
+  picture = "nwo2_chiang_address"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1947
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = chinese_unity_govt
+  }
+  immediate = { set_global_flag = event_fired_8200024 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = "EVT_8200024_A"
+relation = { who = CHI value = -100 } 
+  }
+
+  option = {
+    name = "EVT_8200024_B"
+relation = { who = CHI value = 20 } any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8200025
+  title = "EVT_8200025_NAME"
+  desc = "EVT_8200025_DESC"
+  picture = "nwo2_chiang_address"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1948
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = event_fired_8200024
+    has_global_flag = chinese_unity_govt
+  }
+  immediate = { set_global_flag = event_fired_8200025 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200025_A"
+war = CHI 
+  }
+
+  option = {
+    name = "EVT_8200025_B"
+clr_global_flag = chinese_unity_govt relation = { who = CHI value = -150 } country_event =  { id = 8200027 days = 1 } country_event = 8200028 
+  }
+
+  option = {
+    name = "EVT_8200025_C"
+
+  }
+}
+country_event = {
+  id = 8200026
+  title = "EVT_8200026_NAME"
+  desc = "EVT_8200026_DESC"
+  picture = "nwo2_chiang_address"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1948
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = event_fired_8200024
+    has_global_flag = chinese_unity_govt
+  }
+  immediate = { set_global_flag = event_fired_8200026 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200026_A"
+clr_global_flag = chinese_unity_govt relation = { who = CHI value = -150 } country_event =  { id = 8200027 days = 1 } country_event = 8200028 
+  }
+
+  option = {
+    name = "EVT_8200026_B"
+
+  }
+}
+country_event = {
+  id = 8200027
+  title = "EVT_8200027_NAME"
+  desc = "EVT_8200027_DESC"
+  picture = "nwo2_chiang_smiling"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    has_global_flag = event_fired_8200026
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = chinese_unity_govt
+  }
+  immediate = { set_global_flag = event_fired_8200027 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = "EVT_8200026_A"
+inherit = CHI capital = 1547 any_pop = { militancy = 3.0 }change_tag = KMT 
+  }
+}
+country_event = {
+  id = 8200028
+  title = "EVT_8200028_NAME"
+  desc = "EVT_8200028_DESC"
+  picture = "nwo2_chiang_thinking"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200028 }
+
+  option = {
+    name = "OK"
+any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.65 } } }define_general = { name = "Zhang Xuezhong" personality = energetic background = no_background }define_general = { name = "Zhang Zhen" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8200029
+  title = "AI_EVENT"
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+    year = 1963
+  }
+  immediate = { set_global_flag = event_fired_8200029 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "OK"
+
+  }
+}
+country_event = {
+  id = 8200030
+  title = "EVT_8200030_NAME"
+  desc = "EVT_8200030_DESC"
+  picture = "nwo2_chinese_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = chinese_unity_govt
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    exists = CHI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200030 }
+
+  mean_time_to_happen = { days = 40 }
+
+  option = {
+    name = "EVT_8200030_A"
+war = CHI 
+  }
+
+  option = {
+    name = "EVT_8200030_B"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = CHI value = 1 } CHI = { end_military_access = THIS } 
+  }
+}
+country_event = {
+  id = 8200031
+  title = "EVT_8200031_NAME"
+  desc = "EVT_8200031_DESC"
+  picture = "nwo2_chinese_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = chinese_unity_govt
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    CHI_1552 = { owned_by = CHI } 
+    }
+    NOT = {
+    CHI_1557 = { owned_by = CHI } 
+    }
+    exists = CHI
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200031 }
+
+  mean_time_to_happen = { days = 40 }
+
+  option = {
+    name = "EVT_8200030_A"
+war = CHI 
+  }
+
+  option = {
+    name = "EVT_8200030_B"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = CHI value = 1 } CHI = { end_military_access = THIS } 
+  }
+}
+country_event = {
+  id = 8200032
+  title = "EVT_8200032_NAME"
+  desc = "EVT_8200032_DESC"
+  picture = "nwo2_chinese_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = chinese_unity_govt
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    exists = CHI
+    has_global_flag = cold_war_pacific
+    CHI_1552 = { owned_by = CHI } 
+    CHI_1557 = { owned_by = CHI } 
+  }
+  immediate = { set_global_flag = event_fired_8200032 }
+
+  mean_time_to_happen = { days = 40 }
+
+  option = {
+    name = "EVT_8200030_A"
+war = CHI 
+  }
+
+  option = {
+    name = "EVT_8200030_B"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+relation = { who = CHI value = 1 } CHI = { end_military_access = THIS } 
+  }
+}
+country_event = {
+  id = 8200033
+  title = "EVT_8200033_NAME"
+  desc = "EVT_8200033_DESC"
+  picture = "nwo2_manchurian_offensive"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = cold_war_pacific
+    CHI_1552 = { owned_by = CHI } 
+    CHI_1479 = { owned_by = CHI } 
+    CHI_1557 = { owned_by = CHI } 
+  }
+  immediate = { set_global_flag = event_fired_8200033 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = "EVT_8200033_A"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#    }
+
+  }
+
+  option = {
+    name = "EVT_8200033_B"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#      }
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#    }
+
+  }
+
+  option = {
+    name = "EVT_8200033_C"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#      }
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#    }
+
+  }
+}
+country_event = {
+  id = 8200034
+  title = "EVT_8200034_NAME"
+  desc = "EVT_8200034_DESC"
+  picture = "nwo2_manchurian_offensive"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200034 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = "EVT_8200034_A"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#    }
+
+  }
+
+  option = {
+    name = "EVT_8200034_B"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#      }
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#    }
+
+  }
+
+  option = {
+    name = "EVT_8200034_C"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#      }
+#      CHI_1552 = { owned_by = CHI } 
+#      CHI_1479 = { owned_by = CHI } 
+#      CHI_1557 = { owned_by = CHI } 
+#    }
+
+  }
+}
+country_event = {
+  id = 8200035
+  title = EVT_8200035_NAME
+  desc = EVT_8200035_DESC
+  picture = "nwo2_ija_withdrawal"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    exists = CHI
+    has_global_flag = cold_war_pacific
+    CHI_1552 = { owned_by = CHI } 
+    CHI_1557 = { owned_by = CHI } 
+  }
+  immediate = { set_global_flag = event_fired_8200035 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200035_A"
+any_pop = { militancy = 0.7 }
+  }
+
+  option = {
+    name = "EVT_8200035_B"
+any_pop = { militancy = -0.7 }1555 = { secede_province = CHI } 1085 = { secede_province = CHI } 45 = { secede_province = CHI } 1552 = { secede_province = CHI } 1553 = { secede_province = CHI } 1554 = { secede_province = CHI } 44 = { secede_province = CHI } 
+  }
+}
+country_event = {
+  id = 8200036
+  title = EVT_8200036_NAME
+  desc = EVT_8200036_DESC
+  picture = "nwo2_ija_withdrawal"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1949
+    NOT = {
+    has_global_flag = event_fired_8200039
+    }
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = event_fired_8200035
+    exists = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200036 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200036_A"
+any_pop = { militancy = 0.3 }
+  }
+
+  option = {
+    name = "EVT_8200036_B"
+country_event = 8200039 
+  }
+}
+country_event = {
+  id = 8200037
+  title = EVT_8200037_NAME
+  desc = EVT_8200037_DESC
+  picture = "nwo2_ija_withdrawal"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1949
+    NOT = {
+    has_global_flag = event_fired_8200039
+    }
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = event_fired_8200035
+    exists = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200037 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200037_A"
+any_pop = { militancy = 0.3 }
+  }
+
+  option = {
+    name = "EVT_8200037_B"
+country_event = 8200039 
+  }
+}
+country_event = {
+  id = 8200038
+  title = EVT_8200038_NAME
+  desc = EVT_8200038_DESC
+  picture = "nwo2_ija_withdrawal"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1949
+    NOT = {
+    has_global_flag = event_fired_8200039
+    }
+    NOT = {
+    CHI = { war_with = CHI }
+    }
+    has_global_flag = event_fired_8200035
+    exists = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200038 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200038_B"
+country_event = 8200039 
+  }
+
+  option = {
+    name = "EVT_8200038_A"
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8200039
+  title = EVT_8200039_NAME
+  desc = EVT_8200039_DESC
+  picture = "nwo2_ija_withdrawal"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200039 }
+
+  option = {
+    name = "EVT_8200039_A"
+any_pop = { militancy = 0.3 }1555 = { secede_province = CHI } 1085 = { secede_province = CHI } 45 = { secede_province = CHI } 1552 = { secede_province = CHI } 1553 = { secede_province = CHI } 1554 = { secede_province = CHI } 44 = { secede_province = CHI } 
+  }
+}
+country_event = {
+  id = 8200040
+  title = "EVT_8200040_NAME"
+  desc = "EVT_8200040_DESC"
+  picture = "nwo2_mao_leads"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    has_global_flag = event_fired_8200032
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = cold_war_pacific
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200040 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200040_A"
+any_pop = { militancy = -0.3 }add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200041
+  title = "EVT_8200041_NAME"
+  desc = "EVT_8200041_DESC"
+  picture = "nwo2_mao_leads"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    has_global_flag = event_fired_8200040
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8200041 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200040_A"
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200042
+  title = "EVT_8200042_NAME"
+  desc = "EVT_8200042_DESC"
+  picture = "nwo2_chiang_radio"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    has_global_flag = event_fired_8200032
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = cold_war_pacific
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200042 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200042_A"
+add_country_modifier = { name = dh_oilpool duration = 365 }
+  }
+}
+country_event = {
+  id = 8200043
+  title = "EVT_8200043_NAME"
+  desc = "EVT_8200043_DESC"
+  picture = "nwo2_kmt_white_terror"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200043 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = "EVT_8200043_A"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+any_pop = { militancy = 0.4 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+any_pop = { militancy = 0.8 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+any_pop = { militancy = 1.2 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+any_pop = { militancy = 1.6 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+any_pop = { militancy = 2.0 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+
+      }
+
+  }
+}
+country_event = {
+  id = 8200044
+  title = "EVT_8200044_NAME"
+  desc = "EVT_8200044_DESC"
+  picture = "nwo2_kmt_troops_in_shermans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1947
+    NOT = {
+    war_with = CHI
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+    war_policy = jingoism
+  }
+  immediate = { set_global_flag = event_fired_8200044 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = "EVT_8200044_A"
+relation = { who = CHI value = 100 } relation = { who = CHI value = -150 } country_event = 8200046 
+  }
+
+  option = {
+    name = "EVT_8200044_B"
+relation = { who = CHI value = -20 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }any_pop = { militancy = 0.2 }
+  }
+
+  option = {
+    name = "EVT_8200044_C"
+relation = { who = CHI value = 20 } relation = { who = CHI value = -50 } money = -300 country_event = 8200045 
+  }
+
+  option = {
+    name = "EVT_8200044_D"
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = ccw_american_nonintervention
+#      }
+#    }
+relation = { who = CHI value = 150 } relation = { who = CHI value = -200 } add_country_modifier = { name = dh_oilpool duration = 365 }money = -1500 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }any_pop = { militancy = 1.5 }country_event = 8200047 
+  }
+}
+country_event = {
+  id = 8200045
+  title = "EVT_8200045_NAME"
+  desc = "EVT_8200045_DESC"
+  picture = "nwo2_kmt_troops_in_shermans"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200045 }
+
+  option = {
+    name = "EVT_8200045_A"
+add_country_modifier = { name = dh_oilpool duration = 365 }money = 100 any_pop = { militancy = -0.6 }
+  }
+}
+country_event = {
+  id = 8200046
+  title = "EVT_8200046_NAME"
+  desc = "EVT_8200046_DESC"
+  picture = "nwo2_kmt_troops_in_shermans"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200046 }
+
+  option = {
+    name = "EVT_8200046_A"
+add_country_modifier = { name = dh_oilpool duration = 365 }money = 1000 any_pop = { militancy = -1.2 }
+  }
+}
+country_event = {
+  id = 8200047
+  title = "EVT_8200047_NAME"
+  desc = "EVT_8200047_DESC"
+  picture = "nwo2_chiang_with_stilwell"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200047 }
+
+  option = {
+    name = "EVT_8200047_A"
+country_event = 8500111 
+  }
+
+  option = {
+    name = "EVT_8200047_B"
+add_country_modifier = { name = dh_oilpool duration = 365 }money = 1000 country_event =  { id = 8200120 days = 1 } any_pop = { militancy = -1.2 }
+  }
+}
+country_event = {
+  id = 8200050
+  title = "EVT_8200050_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 1547 }    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = event_fired_8200152
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200050 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200050_A"
+
+  }
+
+  option = {
+    name = "EVT_8200050_B"
+
+  }
+}
+country_event = {
+  id = 8200051
+  title = "EVT_8200051_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 1380 }    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = event_fired_8200152
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200051 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200050_A"
+
+  }
+
+  option = {
+    name = "EVT_8200050_B"
+
+  }
+}
+country_event = {
+  id = 8200052
+  title = "EVT_8200052_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 1380 }    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = event_fired_8200152
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200052 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200050_A"
+
+  }
+
+  option = {
+    name = "EVT_8200050_B"
+
+  }
+}
+country_event = {
+  id = 8200053
+  title = "EVT_8200053_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 1380 }    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = event_fired_8200152
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200053 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200050_A"
+
+  }
+
+  option = {
+    name = "EVT_8200050_B"
+
+  }
+}
+country_event = {
+  id = 8200054
+  title = "EVT_8200054_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 1077 }    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = event_fired_8200152
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200054 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200050_A"
+
+  }
+
+  option = {
+    name = "EVT_8200050_B"
+
+  }
+}
+country_event = {
+  id = 8200055
+  title = "EVT_8200055_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = ERROR }    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = event_fired_8200152
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200055 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200050_A"
+
+  }
+
+  option = {
+    name = "EVT_8200050_B"
+
+  }
+}
+country_event = {
+  id = 8200056
+  title = "EVT_8200056_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 95 }    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = event_fired_8200152
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200056 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200050_A"
+
+  }
+
+  option = {
+    name = "EVT_8200050_B"
+
+  }
+}
+country_event = {
+  id = 8200057
+  title = "EVT_8200057_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1949
+    OR = {
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    NOT = {
+    }
+    }
+    AND = {
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 1547 }    }
+    NOT = {
+    }
+    NOT = {
+    has_global_flag = event_fired_8200152
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200057 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200050_A"
+
+  }
+
+  option = {
+    name = "EVT_8200050_B"
+
+  }
+}
+country_event = {
+  id = 8200100
+  title = "EVT_8200100_NAME"
+  desc = "EVT_8200100_DESC"
+  picture = "nwo2_chiang_smiling"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8200100 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = "EVT_8200100_A"
+any_pop = { militancy = -0.5 }capital = 1547 set_global_flag = CHI_won_civil_war 
+  }
+}
+country_event = {
+  id = 8200101
+  title = "EVT_8200101_NAME"
+  desc = "EVT_8200101_DESC"
+  picture = "nwo2_kmt_flees_to_taiwan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 1077 }    any_owned_province = { province_id = 1547 }    any_owned_province = { province_id = 1380 }    any_owned_province = { province_id = 1380 }    any_owned_province = { province_id = 2024 }    any_owned_province = { province_id = 1547 }    }
+    CHI = { war_with = CHI }
+    CHI_1485 = { owned_by = THIS } 
+    any_owned_province = { province_id = 2297 }  }
+  immediate = { set_global_flag = event_fired_8200101 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = "EVT_8200101_A"
+any_pop = { militancy = -5.0 }capital = 2572 1470 = { secede_province = CHI } 1471 = { secede_province = CHI } 1473 = { secede_province = CHI } 1475 = { secede_province = CHI } 1490 = { secede_province = CHI } 1488 = { secede_province = CHI } 1489 = { secede_province = CHI } 1491 = { secede_province = CHI } 1492 = { secede_province = CHI } 2681 = { secede_province = CHI } 1494 = { secede_province = CHI } 1496 = { secede_province = CHI } 1497 = { secede_province = CHI } 2690 = { secede_province = CHI } 1502 = { secede_province = CHI } 1503 = { secede_province = CHI } 1504 = { secede_province = CHI } 2682 = { secede_province = CHI } 1505 = { secede_province = CHI } 1506 = { secede_province = CHI } 1507 = { secede_province = CHI } 1552 = { secede_province = CHI } 1553 = { secede_province = CHI } 1554 = { secede_province = CHI } 44 = { secede_province = CHI } 1508 = { secede_province = CHI } 1509 = { secede_province = CHI } 1512 = { secede_province = CHI } 1514 = { secede_province = CHI } 1062 = { secede_province = CHI } 2685 = { secede_province = CHI } 1519 = { secede_province = CHI } 1520 = { secede_province = CHI } 1521 = { secede_province = CHI } 1523 = { secede_province = CHI } 1524 = { secede_province = CHI } 1525 = { secede_province = CHI } 1528 = { secede_province = CHI } 1529 = { secede_province = CHI } 2221 = { secede_province = CHI } 1538 = { secede_province = CHI } 1537 = { secede_province = CHI } 1539 = { secede_province = CHI } 1544 = { secede_province = CHI } 2632 = { secede_province = CHI } 1545 = { secede_province = CHI } 1546 = { secede_province = CHI } 1549 = { secede_province = CHI } 1551 = { secede_province = CHI } 43 = { secede_province = CHI } 1555 = { secede_province = CHI } 1085 = { secede_province = CHI } 45 = { secede_province = CHI } 1479 = { secede_province = CHI } 1480 = { secede_province = CHI } 1481 = { secede_province = CHI } 2613 = { secede_province = CHI } 1557 = { secede_province = CHI } 1558 = { secede_province = CHI } 1556 = { secede_province = CHI } 1616 = { secede_province = CHI } 17 = { secede_province = CHI } 1615 = { secede_province = CHI } 1618 = { secede_province = CHI } 1559 = { secede_province = CHI } 12 = { secede_province = CHI } 1561 = { secede_province = CHI } 1562 = { secede_province = CHI } 2062 = { secede_province = CHI } 1563 = { secede_province = CHI } 1564 = { secede_province = CHI } 1568 = { secede_province = CHI } 1571 = { secede_province = CHI } 2598 = { secede_province = CHI } 9 = { secede_province = CHI } 1572 = { secede_province = CHI } 1573 = { secede_province = CHI } 1574 = { secede_province = CHI } 1575 = { secede_province = CHI } 1576 = { secede_province = CHI } 1579 = { secede_province = CHI } 1583 = { secede_province = CHI } 7 = { secede_province = CHI } 8 = { secede_province = CHI } 1578 = { secede_province = CHI } 1580 = { secede_province = CHI } 1582 = { secede_province = CHI } 1584 = { secede_province = CHI } 2599 = { secede_province = CHI } 1594 = { secede_province = CHI } 1597 = { secede_province = CHI } 1598 = { secede_province = CHI } 2607 = { secede_province = CHI } 1208 = { secede_province = CHI } 1604 = { secede_province = CHI } 1605 = { secede_province = CHI } 1606 = { secede_province = CHI } 1608 = { secede_province = CHI } 1609 = { secede_province = CHI } 1482 = { secede_province = CHI } 1483 = { secede_province = CHI } 1484 = { secede_province = CHI } 1486 = { secede_province = CHI } 1487 = { secede_province = CHI } 1585 = { secede_province = CHI } 1586 = { secede_province = CHI } 1601 = { secede_province = CHI } 1602 = { secede_province = CHI } 1603 = { secede_province = CHI } 1341 = { secede_province = CHI } 2631 = { secede_province = CHI } country_event = 8200105 
+  }
+
+  option = {
+    name = "EVT_8200101_B"
+any_pop = { militancy = 0.4 }
+  }
+}
+country_event = {
+  id = 8200102
+  title = "EVT_8200102_NAME"
+  desc = "EVT_8200102_DESC"
+  picture = "nwo2_chiang_crying"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    any_owned_province = { province_id = 1547 }    any_owned_province = { province_id = 1077 }    any_owned_province = { province_id = 1191 }    any_owned_province = { province_id = 1191 }    any_owned_province = { province_id = ERROR }    any_owned_province = { province_id = 1077 }    }
+    NOT = {
+    CHI_1485 = { owned_by = THIS } 
+    any_owned_province = { province_id = 2297 }    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200102 }
+
+  mean_time_to_happen = { days = 12 }
+
+  option = {
+    name = "EVT_8200102_A"
+country_event = 8200106 country_event = 8200104 
+  }
+
+  option = {
+    name = EVT_8200102_B
+any_pop = { militancy = 2.0 }
+  }
+}
+country_event = {
+  id = 8200103
+  title = "EVT_8200103_NAME"
+  desc = "EVT_8200103_DESC"
+  picture = "nwo2_mao_announces_prc"
+
+  trigger = {
+    tag = CHI
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    NOT = {
+    exists = CHI
+    }
+  }
+  immediate = { set_global_flag = event_fired_8200103 }
+
+  option = {
+    name = "EVT_8200103_A"
+set_global_flag = CHC_won_civil_war capital = 1547 any_pop = { militancy = -1.0 }set_global_flag = raise_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8200104
+  title = "EVT_8200104_NAME"
+  desc = "EVT_8200104_DESC"
+  picture = "nwo2_mao_announces_prc"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200104 }
+
+  option = {
+    name = "EVT_8200104_A"
+set_global_flag = CHC_won_civil_war inherit = CHI capital = 1547 any_pop = { militancy = -1.0 }set_global_flag = raise_soviet_bloc_coherence 
+  }
+
+  option = {
+    name = "EVT_8200104_B"
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8200105
+  title = "EVT_8200105_NAME"
+  desc = "EVT_8200105_DESC"
+  picture = "nwo2_mao_announces_prc"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200105 }
+
+  option = {
+    name = "EVT_8200105_A"
+set_global_flag = CHC_won_civil_war end_war = CHI any_pop = { militancy = -0.5 }set_global_flag = raise_soviet_bloc_coherence 
+  }
+
+  option = {
+    name = "EVT_8200105_B"
+capital = 1547 any_pop = { militancy = 3.0 }
+  }
+}
+country_event = {
+  id = 8200110
+  title = "EVT_8200110_NAME"
+  desc = "EVT_8200110_DESC"
+  picture = "nwo2_united_china"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    OR = {
+    AND = {
+    NOT = {
+    war_with = FUJ
+    }
+    exists = FUJ
+    FUJ = { ai = yes }
+    }
+    AND = {
+    NOT = {
+    war_with = NGX
+    }
+    exists = NGX
+    NGX = { ai = yes }
+    }
+    AND = {
+    NOT = {
+    war_with = GGX
+    }
+    exists = GGX
+    GGX = { ai = yes }
+    }
+    AND = {
+    NOT = {
+    war_with = YNN
+    }
+    exists = YNN
+    YNN = { ai = yes }
+    }
+    }
+    has_global_flag = CHI_won_civil_war
+  }
+  immediate = { set_global_flag = event_fired_8200110 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200110_A"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          war_with = FUJ
+          }
+          exists = FUJ
+          FUJ = { ai = yes }
+
+        }
+inherit = FUJ 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          war_with = NGX
+          }
+          exists = NGX
+          NGX = { ai = yes }
+
+        }
+inherit = NGX 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          war_with = GGX
+          }
+          exists = GGX
+          FUJ = { ai = yes }
+
+        }
+inherit = GGX 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          war_with = YNN
+          }
+          exists = YNN
+          FUJ = { ai = yes }
+
+        }
+inherit = YNN 
+      }
+
+  }
+}
+country_event = {
+  id = 8200111
+  title = "EVT_8200111_NAME"
+  desc = "EVT_8200111_DESC"
+  picture = "nwo2_united_china"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    OR = {
+    AND = {
+    NOT = {
+    war_with = FUJ
+    }
+    exists = FUJ
+    FUJ = { ai = yes }
+    }
+    AND = {
+    NOT = {
+    war_with = NGX
+    }
+    exists = NGX
+    NGX = { ai = yes }
+    }
+    AND = {
+    NOT = {
+    war_with = GGX
+    }
+    exists = GGX
+    GGX = { ai = yes }
+    }
+    AND = {
+    NOT = {
+    war_with = YNN
+    }
+    exists = YNN
+    YNN = { ai = yes }
+    }
+    }
+    has_global_flag = CHC_won_civil_war
+  }
+  immediate = { set_global_flag = event_fired_8200111 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "EVT_8200111_A"
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          war_with = FUJ
+          }
+          exists = FUJ
+          FUJ = { ai = yes }
+
+        }
+inherit = FUJ 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          war_with = NGX
+          }
+          exists = NGX
+          NGX = { ai = yes }
+
+        }
+inherit = NGX 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          war_with = GGX
+          }
+          exists = GGX
+          FUJ = { ai = yes }
+
+        }
+inherit = GGX 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          war_with = YNN
+          }
+          exists = YNN
+          FUJ = { ai = yes }
+
+        }
+inherit = YNN 
+      }
+
+  }
+}
+country_event = {
+  id = 8200130
+  title = "EVT_8200130_NAME"
+  desc = "EVT_8200130_DESC"
+  picture = "nwo2_soldiers_return_home"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    OR = {
+    has_global_flag = CHC_won_civil_war
+    }
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8200130 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "EVT_8200130_A"
+
+  }
+
+  option = {
+    name = "EVT_8200130_B"
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8200131
+  title = "EVT_8200131_NAME"
+  desc = "EVT_8200131_DESC"
+  picture = "nwo2_soldiers_return_home"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    OR = {
+    has_global_flag = CHC_won_civil_war
+    }
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8200131 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "EVT_8200131_A"
+
+  }
+
+  option = {
+    name = "EVT_8200131_B"
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8200140
+  title = "EVT_8200140_NAME"
+  desc = "EVT_8200140_DESC"
+  picture = "nwo2_mao_with_stalin"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    has_global_flag = cold_war_pacific
+    CHI = { vassal_of = RUS }
+  }
+  immediate = { set_global_flag = event_fired_8200140 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8200140_A
+country_event = 8200141 any_pop = { militancy = -0.5 }badboy = -15 relation = { who = CHI value = 150 } 
+  }
+
+  option = {
+    name = EVT_8200140_B
+any_pop = { militancy = 0.5 }badboy = 15 relation = { who = CHI value = -100 } 
+  }
+}
+country_event = {
+  id = 8200141
+  title = "EVT_8200141_NAME"
+  desc = "EVT_8200141_DESC"
+  picture = "nwo2_mao_with_stalin"
+
+  trigger = {
+    tag = CHI
+  }
+  immediate = { set_global_flag = event_fired_8200141 }
+
+  option = {
+    name = EVT_8200141_A
+overlord = { release_vassal = THIS } 
+  }
+}
+country_event = {
+  id = 8200150
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1963
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200150 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = AI_EVENT
+country_event = 8200151 country_event = 8200161 country_event = 8200152 country_event = 8200162 country_event = 8200153 country_event = 8200163 country_event = 8200154 country_event = 8200164 country_event = 8200155 country_event = 8200165 country_event = 8200156 country_event = 8200166 
+  }
+}
+country_event = {
+  id = 8200151
+  title = EVT_8200151_NAME
+  desc = EVT_8200151_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200151 }
+
+  option = {
+    name = EVT_8200151_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200161
+  title = EVT_8200151_NAME
+  desc = EVT_8200151_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200161 }
+
+  option = {
+    name = EVT_8200151_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200152
+  title = EVT_8200152_NAME
+  desc = EVT_8200152_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200152 }
+
+  option = {
+    name = EVT_8200152_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200162
+  title = EVT_8200152_NAME
+  desc = EVT_8200152_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200162 }
+
+  option = {
+    name = EVT_8200152_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200153
+  title = EVT_8200153_NAME
+  desc = EVT_8200153_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200153 }
+
+  option = {
+    name = EVT_8200153_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200163
+  title = EVT_8200153_NAME
+  desc = EVT_8200153_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200163 }
+
+  option = {
+    name = EVT_8200153_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200154
+  title = EVT_8200154_NAME
+  desc = EVT_8200154_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200154 }
+
+  option = {
+    name = EVT_8200154_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200164
+  title = EVT_8200154_NAME
+  desc = EVT_8200154_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200164 }
+
+  option = {
+    name = EVT_8200154_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200155
+  title = EVT_8200155_NAME
+  desc = EVT_8200155_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200155 }
+
+  option = {
+    name = EVT_8200155_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200165
+  title = EVT_8200155_NAME
+  desc = EVT_8200155_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    AND = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200165 }
+
+  option = {
+    name = EVT_8200155_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200156
+  title = EVT_8200156_NAME
+  desc = EVT_8200156_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200156 }
+
+  option = {
+    name = EVT_8200156_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200166
+  title = EVT_8200156_NAME
+  desc = EVT_8200156_DESC
+  picture = "nwo2_null"
+
+  trigger = {
+    tag = CHI
+    OR = {
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    AND = {
+    NOT = {
+    CHI_1616 = { owned_by = THIS } 
+    }
+    }
+    }
+    NOT = {
+    has_global_flag = CHI_won_civil_war
+    }
+    CHI = { war_with = CHI }
+  }
+  immediate = { set_global_flag = event_fired_8200166 }
+
+  option = {
+    name = EVT_8200156_A
+add_country_modifier = { name = dh_max_organization duration = 365 }add_country_modifier = { name = dh_morale duration = 365 }
+  }
+}
+country_event = {
+  id = 8200170
+  title = EVT_8200160_NAME
+  desc = EVT_8200160_DESC
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    OR = {
+    has_global_flag = CHI_won_civil_war
+    }
+    OR = {
+    has_global_flag = event_fired_8200156
+    }
+  }
+  immediate = { set_global_flag = event_fired_8200170 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8200160_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200151
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200151
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200151
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200151
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200151
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200151
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200152
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200152
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200152
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200152
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200152
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200152
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200153
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200153
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200153
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200153
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200153
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200153
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200154
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200154
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200154
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200154
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200154
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200154
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200155
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200155
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200155
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200155
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200155
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200155
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200156
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200156
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200156
+
+        }
+add_country_modifier = { name = dh_max_organization duration = 365 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200156
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200156
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200156
+
+        }
+add_country_modifier = { name = dh_morale duration = 365 }
+      }
+clr_country_flag = block_army_limiting 
+  }
+}
+country_event = {
+  id = 8200171
+  title = EVT_8200161_NAME
+  desc = EVT_8200161_DESC
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1963
+    OR = {
+    has_global_flag = CHI_won_civil_war
+    }
+    OR = {
+    has_global_flag = event_fired_8200166
+    }
+  }
+  immediate = { set_global_flag = event_fired_8200171 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8200161_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200161
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200161
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200161
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200161
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200161
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200161
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200162
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200162
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200162
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200162
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200162
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200162
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200163
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200163
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200163
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200163
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200163
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200163
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200164
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200164
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200164
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200164
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200164
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200164
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200165
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200165
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200165
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200165
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200165
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200165
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200166
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200166
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200166
+
+        }
+add_country_modifier = { name = dh_max_organization duration = 365 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200166
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200166
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8200166
+
+        }
+add_country_modifier = { name = dh_morale duration = 365 }
+      }
+clr_country_flag = block_army_limiting 
+  }
+}

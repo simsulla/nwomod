@@ -1,0 +1,256 @@
+country_event = {
+  id = 8000101
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1952
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8000101 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Shah Ghazi" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8000102
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8000102 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+}
+country_event = {
+  id = 8000103
+  title = "EVT_BIRTHDAY_NAME"
+  desc = "EVT_BIRTHDAY_DESC"
+  picture = "nwo2_birthday"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1972
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8000103 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_HAPPYBIRTHDAY"
+define_general = { name = "Sergente" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8000104
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1964
+  }
+  immediate = { set_global_flag = event_fired_8000104 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8000105
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1966
+  }
+  immediate = { set_global_flag = event_fired_8000105 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8000106
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1970
+  }
+  immediate = { set_global_flag = event_fired_8000106 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8000107
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1971
+  }
+  immediate = { set_global_flag = event_fired_8000107 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8000108
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1972
+  }
+  immediate = { set_global_flag = event_fired_8000108 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8000109
+  title = EVT_8000109_NAME
+  desc = EVT_8000109_DESC
+  picture = "nwo2_afghani_coup_1973"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1977
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8000109 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8000109_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+
+  option = {
+    name = EVT_8000109_B
+any_pop = { militancy = 2.0 }country_event =  { id = 8000110 days = 1 } country_event =  { id = 8000111 days = 1 } country_event =  { id = 8000112 days = 1 } country_event =  { id = 8176110 days = 1 } 
+  }
+}
+country_event = {
+  id = 8000110
+  title = EVT_8000110_NAME
+  desc = EVT_8000110_DESC
+  picture = "nwo2_saur_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1978
+    OR = {
+    }
+    has_global_flag = event_fired_8176110
+  }
+  immediate = { set_global_flag = event_fired_8000110 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8000110_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+}
+country_event = {
+  id = 8000111
+  title = EVT_8000111_NAME
+  desc = EVT_8000111_DESC
+  picture = "nwo2_soviet_intervention_in_afghanistan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1990
+  }
+  immediate = { set_global_flag = event_fired_8000111 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8000111_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }release = AFG 
+  }
+}
+country_event = {
+  id = 8000112
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8000112 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }
+  }
+}

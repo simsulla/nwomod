@@ -1,0 +1,223 @@
+country_event = {
+  id = 8370001
+  title = EVT_8370001_NAME
+  desc = EVT_8370001_DESC
+  picture = "nwo2_british_raj_surrender"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RAJ
+    year = 1963
+    OR = {
+    has_global_flag = annexation_of_uk
+    }
+    OR = {
+    war_with = GER
+    war_with = JAP
+    }
+  }
+  immediate = { set_global_flag = event_fired_8370001 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8370001_A
+
+  }
+
+  option = {
+    name = EVT_8370001_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ENG_1236 = { owned_by = JAP } 
+#    }
+country_event = 8370002 
+  }
+
+  option = {
+    name = EVT_8370001_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ENG_1236 = { owned_by = GER } 
+#    }
+any_pop = { militancy = 0.5 }change_tag = HND release = PAK release = JAK release = BUR country_event = 8370003 
+  }
+}
+country_event = {
+  id = 8370002
+  title = EVT_8370002_NAME
+  desc = EVT_8370002_DESC
+  picture = "nwo2_british_raj_surrender"
+
+  trigger = {
+    tag = JAP
+  }
+  immediate = { set_global_flag = event_fired_8370002 }
+
+  option = {
+    name = EVT_8370002_A
+end_create_vassal = HND end_create_vassal = PAK end_create_vassal = JAK 
+  }
+
+  option = {
+    name = EVT_8370002_B
+war = HND war = PAK war = JAK 
+  }
+}
+country_event = {
+  id = 8370003
+  title = EVT_8370003_NAME
+  desc = EVT_8370003_DESC
+  picture = "nwo2_british_raj_surrender"
+
+  trigger = {
+    tag = GER
+  }
+  immediate = { set_global_flag = event_fired_8370003 }
+
+  option = {
+    name = EVT_8370003_A
+end_create_vassal = HND end_create_vassal = PAK end_create_vassal = JAK 
+  }
+
+  option = {
+    name = EVT_8370003_B
+war = HND war = PAK war = JAK 
+  }
+}
+country_event = {
+  id = 8370010
+  title = EVT_8370010_NAME
+  desc = EVT_8370010_DESC
+  picture = "nwo2_british_dominions"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = CAN tag = AST tag = SAF }
+    year = 1963
+    OR = {
+    has_global_flag = annexation_of_uk
+    }
+    NOT = {
+    has_country_flag  = event_8370010
+    }
+    NOT = {
+    has_global_flag = cold_war
+    }
+    NOT = {
+    has_global_flag = cold_war_pacific
+    }
+    NOT = {
+    has_global_flag = ww3
+    }
+    war_with = GER
+  }
+  immediate = { set_global_flag = event_fired_8370010 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8370010_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8370011 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8370012 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+country_event = 8370013 
+      }
+
+  }
+
+  option = {
+    name = EVT_8370010_B
+set_country_flag = event_8370010 any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8370011
+  title = EVT_8370011_NAME
+  desc = EVT_8370011_DESC
+  picture = "nwo2_british_dominions"
+
+  trigger = {
+    tag = GER
+  }
+  immediate = { set_global_flag = event_fired_8370011 }
+
+  option = {
+    name = EVT_8370011_A
+end_war = SAF 
+  }
+
+  option = {
+    name = EVT_8370011_B
+any_pop = { militancy = 0.3 }badboy = 10 
+  }
+}
+country_event = {
+  id = 8370012
+  title = EVT_8370012_NAME
+  desc = EVT_8370012_DESC
+  picture = "nwo2_british_dominions"
+
+  trigger = {
+    tag = GER
+  }
+  immediate = { set_global_flag = event_fired_8370012 }
+
+  option = {
+    name = EVT_8370012_A
+end_war = CAN 
+  }
+
+  option = {
+    name = EVT_8370012_B
+any_pop = { militancy = 0.3 }badboy = 10 
+  }
+}
+country_event = {
+  id = 8370013
+  title = EVT_8370013_NAME
+  desc = EVT_8370013_DESC
+  picture = "nwo2_british_dominions"
+
+  trigger = {
+    tag = GER
+  }
+  immediate = { set_global_flag = event_fired_8370013 }
+
+  option = {
+    name = EVT_8370013_A
+end_war = AST 
+  }
+
+  option = {
+    name = EVT_8370013_B
+any_pop = { militancy = 0.3 }badboy = 10 
+  }
+}

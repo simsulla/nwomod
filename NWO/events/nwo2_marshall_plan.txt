@@ -1,0 +1,249 @@
+country_event = {
+  id = 8202001
+  title = EVT_8202001_NAME
+  desc = EVT_8202001_DESC
+  picture = "nwo2_marshall_plan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1950
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8202001 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8202001_A
+relation = { who = RUS value = 50 } money = -2000 
+  }
+
+  option = {
+    name = EVT_8202001_B
+relation = { who = FRA value = 150 } relation = { who = ENG value = 150 } any_pop = { militancy = 0.5 }set_global_flag = marshall_plan_west_only 
+  }
+
+  option = {
+    name = EVT_8202001_C
+relation = { who = FRA value = -150 } relation = { who = ENG value = -150 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.7 } } }any_pop = { militancy = 1.5 }country_event =  { id = 8202002 days = 1 } country_event =  { id = 8202003 days = 1 } country_event =  { id = 8202004 days = 1 } country_event =  { id = 8202020 days = 1 } country_event =  { id = 8202021 days = 1 } 
+  }
+}
+country_event = {
+  id = 8202002
+  title = EVT_8202002_NAME
+  desc = EVT_8202002_DESC
+  picture = "nwo2_marshall_plan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1951
+    has_global_flag = event_fired_8616000
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8202002 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8202002_A
+relation = { who = USA value = -50 } any_pop = { militancy = 1.0 }set_global_flag = marshall_plan_west_only 
+  }
+
+  option = {
+    name = EVT_8202002_B
+relation = { who = USA value = 50 } set_global_flag = marshall_plan_west_plus_two any_pop = { militancy = 0.5 }set_global_flag = lower_soviet_bloc_coherence 
+  }
+
+  option = {
+    name = EVT_8202002_C
+relation = { who = USA value = 150 } set_global_flag = marshall_plan_for_all set_global_flag = lower_soviet_bloc_coherence_2 
+  }
+}
+country_event = {
+  id = 8202003
+  title = EVT_8202003_NAME
+  desc = EVT_8202003_DESC
+  picture = "nwo2_marshall_plan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1952
+    OR = {
+    has_global_flag = marshall_plan_for_all
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8202003 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8202003_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = marshall_plan_west_only
+#    }
+
+  }
+
+  option = {
+    name = EVT_8202003_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = marshall_plan_west_plus_two
+#    }
+
+  }
+
+  option = {
+    name = EVT_8202003_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = marshall_plan_for_all
+#    }
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}
+country_event = {
+  id = 8202020
+  title = EVT_820202X_NAME
+  desc = EVT_820202X_DESC
+  picture = "nwo2_marshall_plan"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = SPA tag = BYE tag = BUL tag = AUS tag = SWE tag = HUN tag = SWI tag = EST tag = BEL tag = YUG tag = DEN tag = POL tag = LUX tag = NOR tag = TUR tag = CZH tag = ROM tag = POR tag = ICL tag = FRA tag = LIT tag = ITA tag = GRE tag = NET tag = IRE tag = UKR tag = LAT tag = ENG }
+    year = 1952
+    OR = {
+    has_global_flag = marshall_plan_for_all
+    }
+    NOT = {
+    has_country_flag  = marshall_plan
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8202020 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_820202X_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }relation = { who = USA value = 100 } random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.44999999999999996 } } }set_country_flag = marshall_plan 
+  }
+}
+country_event = {
+  id = 8202021
+  title = EVT_820202X_NAME
+  desc = EVT_820202X_DESC
+  picture = "nwo2_marshall_plan"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = SWE tag = HUN tag = SWI tag = SPA tag = BEL tag = YUG tag = FIN tag = DEN tag = POL tag = LUX tag = NOR tag = TUR tag = CZH tag = ROM tag = POR tag = FRA tag = ITA tag = BUL tag = GRE tag = NET tag = AUS tag = ENG }
+    year = 1952
+    OR = {
+    AND = {
+    has_global_flag = marshall_plan_west_plus_two
+    }
+    AND = {
+    has_global_flag = marshall_plan_west_plus_two
+    }
+    has_global_flag = marshall_plan_for_all
+    }
+    NOT = {
+    has_country_flag  = marshall_plan
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8202021 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_820202X_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }relation = { who = USA value = 200 } relation = { who = RUS value = -50 } set_country_flag = marshall_plan 
+  }
+}
+country_event = {
+  id = 8202030
+  title = EVT_820202X_NAME
+  desc = EVT_820202X_DESC
+  picture = "nwo2_marshall_plan"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = GER tag = IAR }
+    year = 1952
+    OR = {
+    has_global_flag = marshall_plan_for_all
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8202030 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_820202X_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }relation = { who = USA value = 100 } random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8202031
+  title = EVT_820202X_NAME
+  desc = EVT_820202X_DESC
+  picture = "nwo2_marshall_plan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DDR
+    year = 1952
+    has_global_flag = marshall_plan_for_all
+  }
+  immediate = { set_global_flag = event_fired_8202031 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_820202X_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }relation = { who = USA value = 100 } random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8202032
+  title = EVT_820202X_NAME
+  desc = EVT_820202X_DESC
+  picture = "nwo2_marshall_plan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FIN
+    year = 1952
+    OR = {
+    AND = {
+    OR = {
+    has_global_flag = marshall_plan_west_plus_two
+    }
+    NOT = {
+    has_global_flag = event_fired_8005511
+    }
+    }
+    has_global_flag = marshall_plan_for_all
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8202032 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = "OK"
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }relation = { who = USA value = 100 } random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }
+  }
+}

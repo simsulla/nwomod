@@ -1,0 +1,1718 @@
+country_event = {
+  id = 8007701
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1944
+  }
+  immediate = { set_global_flag = event_fired_8007701 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Barbasetti di Prun" personality = energetic background = no_background }define_general = { name = "Bignani" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007702
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1945
+  }
+  immediate = { set_global_flag = event_fired_8007702 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Barbasetti di Prun" personality = energetic background = no_background }define_general = { name = "Borghese" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007703
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1947
+  }
+  immediate = { set_global_flag = event_fired_8007703 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Bianchi" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Brusati" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007704
+  title = EVT_8007704_NAME
+  desc = EVT_8007704_DESC
+  picture = "nwo2_italian_constitutional_referendum"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1946
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8007704 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007704_A
+define_general = { name = "Basso" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_8007704_B
+random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }define_general = { name = "Balocco" personality = energetic background = no_background }any_pop = { militancy = 0.5 }country_event =  { id = 8007706 days = 1 } country_event =  { id = 8007709 days = 1 } country_event =  { id = 8007715 days = 1 } 
+  }
+}
+country_event = {
+  id = 8007705
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1952
+  }
+  immediate = { set_global_flag = event_fired_8007705 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.6 }clr_country_flag = block_ideology_switch random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Bianchi" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = event_fired_8007731
+#      }
+#    }
+random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8007730
+#    }
+random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8007720
+          }
+
+        }
+define_general = { name = "Badoglio" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8007720
+
+        }
+define_general = { name = "Brunetti" personality = energetic background = no_background }
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8007731
+#    }
+any_pop = { militancy = -0.2 }set_country_flag = block_ideology_switch random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }define_general = { name = "Borghese" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8007706
+  title = EVT_DEATH_NAME
+  desc = EVT_DEATH_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1954
+  }
+  immediate = { set_global_flag = event_fired_8007706 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_DEATH
+define_general = { name = "Scattini" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007707
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1953
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007707 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Soddu" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = event_fired_8007731
+#      }
+#    }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8007720
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8007720
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8007730
+#    }
+set_country_flag = block_ideology_switch random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8007720
+          }
+
+        }
+define_general = { name = "Badoglio" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8007720
+
+        }
+define_general = { name = "Brunetti" personality = energetic background = no_background }
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8007731
+#    }
+any_pop = { militancy = -0.6 }clr_country_flag = block_ideology_switch random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Borghese" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8007708
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1954
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007708 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Basso" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007709
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1961
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007709 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Bernezzo" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007710
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1956
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007710 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Bertotti" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007711
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1957
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007711 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Bonaldi" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007712
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1958
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007712 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }clr_country_flag = block_ideology_switch define_general = { name = "Bongiovanni" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = event_fired_8007731
+#      }
+#    }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8007720
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8007720
+
+        }
+
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8007730
+#    }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8007720
+          }
+
+        }
+define_general = { name = "Badoglio" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8007720
+
+        }
+define_general = { name = "Brunetti" personality = energetic background = no_background }
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8007731
+#    }
+any_pop = { militancy = -0.1 }set_country_flag = block_ideology_switch random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }define_general = { name = "Borghese" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007713
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1959
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007713 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Bertotti" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007714
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1961
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007714 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Bongiovanni" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007715
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1962
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007715 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "de Bono" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007716
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1964
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007716 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }clr_country_flag = block_ideology_switch define_general = { name = "Briccola" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = event_fired_8007731
+#      }
+#    }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8007720
+          }
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8007720
+
+        }
+define_general = { name = "Caneva" personality = energetic background = no_background }
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8007730
+#    }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8007720
+          }
+
+        }
+define_general = { name = "Badoglio" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8007720
+
+        }
+define_general = { name = "Brunetti" personality = energetic background = no_background }
+      }
+
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8007731
+#    }
+any_pop = { militancy = -0.1 }set_country_flag = block_ideology_switch random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }define_general = { name = "Borghese" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007717
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1967
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007717 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Castiglioni" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007718
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1969
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007718 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Capello" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }define_general = { name = "Caviglia" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.9 }
+  }
+}
+country_event = {
+  id = 8007719
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1970
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007719 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Douhet" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007720
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1971
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007720 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Fadini" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007721
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1972
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007721 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Ferrari" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }define_general = { name = "Caneva" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007722
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1973
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007722 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Capello" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007723
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1975
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007723 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Ferrero" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007724
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1977
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007724 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Ferrari" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }define_general = { name = "Caneva" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8007725
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1978
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007725 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Di Giorgio" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007726
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1979
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007726 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Frugoni" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }define_general = { name = "Caneva" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007727
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1980
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007727 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Gandolfo" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007728
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1982
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007728 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }define_general = { name = "Garioni" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007729
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1984
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007729 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Giovani" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Gatti" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8007730
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1986
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007730 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Ghersi" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007731
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1987
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007731 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }define_general = { name = "Giovani" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Giardino" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 0.6 }
+  }
+}
+country_event = {
+  id = 8007732
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1988
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007732 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Gatti" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007733
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007733 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Ferrari" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8007734
+  title = EVT_8007734_NAME
+  desc = EVT_8007734_DESC
+  picture = "nwo2_italian_communist_party"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1946
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007734 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007734_A
+any_pop = { militancy = -0.3 }set_country_flag = moderate_ICP 
+  }
+
+  option = {
+    name = EVT_8007734_B
+any_pop = { militancy = 1.0 }set_country_flag = radical_ICP 
+  }
+}
+country_event = {
+  id = 8007735
+  title = EVT_8007735_NAME
+  desc = EVT_8007735_DESC
+  picture = "nwo2_italian_popular_front"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1949
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007735 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007735_A
+any_pop = { militancy = -0.3 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_country_flag  = moderate_ICP
+
+        }
+set_country_flag = very_moderate_ICP 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_country_flag  = radical_ICP
+
+        }
+set_country_flag = moderate_ICP 
+      }
+
+  }
+
+  option = {
+    name = EVT_8007735_B
+any_pop = { militancy = 0.5 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_country_flag  = moderate_ICP
+
+        }
+set_country_flag = radical_ICP 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_country_flag  = radical_ICP
+
+        }
+set_country_flag = very_radical_ICP 
+      }
+
+  }
+}
+country_event = {
+  id = 8007736
+  title = EVT_8007736_NAME
+  desc = EVT_8007736_DESC
+  picture = "nwo2_palmiro_togliatti"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1949
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007736 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007736_A
+any_pop = { militancy = -0.1 }
+  }
+
+  option = {
+    name = EVT_8007736_B
+any_pop = { militancy = -0.3 }country_event = 8007742 
+  }
+
+  option = {
+    name = EVT_8007736_C
+any_pop = { militancy = 0.5 }country_event = 8007737 
+  }
+}
+country_event = {
+  id = 8007737
+  title = EVT_DEATH_NAME
+  desc = EVT_DEATH_DESC
+  picture = "nwo2_death"
+
+  trigger = {
+    tag = ITA
+  }
+  immediate = { set_global_flag = event_fired_8007737 }
+
+  option = {
+    name = EVT_DEATH
+
+  }
+}
+country_event = {
+  id = 8007738
+  title = EVT_8007738_NAME
+  desc = EVT_8007738_DESC
+  picture = "nwo2_italian_communist_party"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1952
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007738 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007738_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = radical_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = radical_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = radical_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007738_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_radical_ICP
+#    }
+any_pop = { militancy = -0.3 }
+  }
+
+  option = {
+    name = EVT_8007738_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_radical_ICP
+#    }
+any_pop = { militancy = 0.5 }country_event = 8007741 
+  }
+
+  option = {
+    name = EVT_8007738_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_radical_ICP
+#    }
+any_pop = { militancy = -0.5 }country_event = 8007742 
+  }
+}
+country_event = {
+  id = 8007739
+  title = EVT_8007739_NAME
+  desc = EVT_8007739_DESC
+  picture = "nwo2_italian_communist_party"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1962
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8007739 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007739_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = moderate_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = radical_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = radical_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = radical_ICP
+#    }
+
+  }
+
+  option = {
+    name = EVT_8007739_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_radical_ICP
+#    }
+any_pop = { militancy = -0.3 }
+  }
+
+  option = {
+    name = EVT_8007739_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_radical_ICP
+#    }
+any_pop = { militancy = 0.5 }country_event = 8007741 
+  }
+
+  option = {
+    name = EVT_8007739_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_country_flag  = very_radical_ICP
+#    }
+any_pop = { militancy = -0.5 }country_event = 8007742 
+  }
+}
+country_event = {
+  id = 8007740
+  title = EVT_8007740_NAME
+  desc = EVT_8007740_DESC
+  picture = "nwo2_italian_communist_party"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1980
+    NOT = {
+    }
+    has_global_flag = event_fired_8007730
+  }
+  immediate = { set_global_flag = event_fired_8007740 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8007740_A
+any_pop = { militancy = 2.0 }relation = { who = USA value = 100 } country_event = 8007742 
+  }
+}
+country_event = {
+  id = 8007741
+  title = EVT_8007741_NAME
+  desc = EVT_8007741_DESC
+  picture = "nwo2_italian_communist_party"
+
+  trigger = {
+    tag = ITA
+  }
+  immediate = { set_global_flag = event_fired_8007741 }
+
+  option = {
+    name = EVT_8007741_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8007742
+  title = EVT_8007742_NAME
+  desc = EVT_8007742_DESC
+  picture = "nwo2_italian_communist_party"
+
+  trigger = {
+    tag = ITA
+  }
+  immediate = { set_global_flag = event_fired_8007742 }
+
+  option = {
+    name = EVT_8007742_A
+random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }
+  }
+}
+country_event = {
+  id = 8007743
+  title = EVT_8007743_NAME
+  desc = EVT_8007743_DESC
+  picture = "nwo2_italian_communist_party"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1999
+    has_global_flag = event_fired_8007741
+  }
+  immediate = { set_global_flag = event_fired_8007743 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8007743_A
+country_event = 8007744 
+  }
+}
+country_event = {
+  id = 8007744
+  title = EVT_8007744_NAME
+  desc = EVT_8007744_DESC
+  picture = "nwo2_italian_communist_party"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8007744 }
+
+  option = {
+    name = EVT_8007744_A
+country_event = 8007745 
+  }
+
+  option = {
+    name = EVT_8007744_B
+any_pop = { militancy = 0.7 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }country_event = 8007747 
+  }
+}
+country_event = {
+  id = 8007745
+  title = EVT_8007745_NAME
+  desc = EVT_8007745_DESC
+  picture = "nwo2_italian_communist_party"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8007745 }
+
+  option = {
+    name = EVT_8007745_A
+country_event = 8007746 country_event = 8007747 
+  }
+
+  option = {
+    name = EVT_8007734_B
+any_pop = { militancy = 0.7 }country_event = 8007748 
+  }
+}
+country_event = {
+  id = 8007746
+  title = EVT_8007746_NAME
+  desc = EVT_8007746_DESC
+  picture = "nwo2_italian_communist_party"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8007746 }
+
+  option = {
+    name = EVT_8007746_A
+war = RUS any_pop = { militancy = 0.5 }
+  }
+
+  option = {
+    name = EVT_8007746_B
+any_pop = { militancy = 0.7 }
+  }
+}
+country_event = {
+  id = 8007747
+  title = EVT_8007747_NAME
+  desc = EVT_8007747_DESC
+  picture = "nwo2_italian_union"
+
+  trigger = {
+    tag = ITA
+  }
+  immediate = { set_global_flag = event_fired_8007747 }
+
+  option = {
+    name = EVT_8007747_A
+any_pop = { militancy = 1.0 }change_tag = ITA create_alliance = RUS RUS = { military_access = THIS } random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }clr_country_flag = block_ideology_switch country_event = 8225000 
+  }
+}
+country_event = {
+  id = 8007748
+  title = EVT_8007748_NAME
+  desc = EVT_8007748_DESC
+  picture = "nwo2_italian_christian_democracy"
+
+  trigger = {
+    tag = ITA
+  }
+  immediate = { set_global_flag = event_fired_8007748 }
+
+  option = {
+    name = EVT_8007748_A
+any_pop = { militancy = 2.5 }create_alliance = USA USA = { military_access = THIS } random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.8 } } }clr_country_flag = block_ideology_switch set_global_flag = lower_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8007750
+  title = EVT_8007750_NAME
+  desc = EVT_8007750_DESC
+  picture = "nwo2_aldo_moro"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ITA
+    year = 1978
+  }
+  immediate = { set_global_flag = event_fired_8007750 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007750_A
+any_pop = { militancy = 0.5 }
+  }
+}

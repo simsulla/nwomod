@@ -1,0 +1,355 @@
+country_event = {
+  id = 8501101
+  title = EVT_8501101_NAME
+  desc = EVT_8501101_DESC
+  picture = "nwo2_hungarian_revolution_1956"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1956
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8501101 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8501101_A
+any_pop = { militancy = 0.5 }relation = { who = RUS value = -200 } random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }set_country_flag = block_ideology_switch define_general = { name = "Debrцdy" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_8501101_B
+any_pop = { militancy = 3.0 }country_event =  { id = 8501102 days = 1 } 
+  }
+}
+country_event = {
+  id = 8501102
+  title = EVT_8501102_NAME
+  desc = EVT_8501102_DESC
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HUN
+    year = 1956
+    has_global_flag = event_fired_8501101
+    has_global_flag = cold_war
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8501102 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8501102_A
+overlord = { release_vassal = THIS } RUS = { end_military_access = THIS } 
+  }
+
+  option = {
+    name = EVT_8501102_B
+any_pop = { militancy = 2.0 }country_event =  { id = 8501103 days = 1 } 
+  }
+}
+country_event = {
+  id = 8501103
+  title = EVT_8501103_NAME
+  desc = EVT_8501103_DESC
+  picture = "nwo2_hungarian_revolution_1956"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1956
+    has_global_flag = event_fired_8501102
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8501103 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8501103_A
+any_pop = { militancy = -0.2 }
+  }
+
+  option = {
+    name = EVT_8501103_B
+any_pop = { militancy = 1.0 }country_event = 8501104 country_event =  { id = 8501114 days = 1 } country_event =  { id = 8510800 days = 1 } 
+  }
+}
+country_event = {
+  id = 8501114
+  title = EVT_8501113_NAME
+  desc = EVT_8501113_DESC
+  picture = "nwo2_allied_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1956
+    NOT = {
+    has_global_flag = event_fired_8501115
+    }
+    has_global_flag = event_fired_8501103
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8501114 }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = OK
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = event_fired_8510807
+#      }
+#    }
+
+  }
+
+  option = {
+    name = OK
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = event_fired_8510807
+#      }
+#    }
+
+  }
+
+  option = {
+    name = OK
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      has_global_flag = event_fired_8510807
+#      }
+#    }
+country_event = 8501105 country_event = 8501106 
+  }
+
+  option = {
+    name = OK
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      has_global_flag = event_fired_8510807
+#      }
+#    }
+country_event = 8501104 country_event = 8501115 
+  }
+}
+country_event = {
+  id = 8501104
+  title = EVT_8501104_NAME
+  desc = EVT_8501104_DESC
+  picture = "nwo2_hungarian_revolution_1956_victory"
+
+  trigger = {
+    tag = HUN
+  }
+  immediate = { set_global_flag = event_fired_8501104 }
+
+  option = {
+    name = EVT_8501104_A
+relation = { who = RUS value = -100 } country_event = 8021308 clr_country_flag = block_ideology_switch 
+  }
+}
+country_event = {
+  id = 8501115
+  title = EVT_8501115_NAME
+  desc = EVT_8501115_DESC
+  picture = "nwo2_hungarian_revolution_1956_victory"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8501115 }
+
+  option = {
+    name = EVT_8501115_A
+any_pop = { militancy = 1.0 }set_global_flag = lower_soviet_bloc_coherence_3 
+  }
+}
+country_event = {
+  id = 8501105
+  title = EVT_8501105_NAME
+  desc = EVT_8501105_DESC
+  picture = "nwo2_hungarian_revolution_1956_defeat"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8501105 }
+
+  option = {
+    name = EVT_8501105_A
+create_vassal = HUN set_global_flag = raise_soviet_bloc_coherence_2 
+  }
+}
+country_event = {
+  id = 8501106
+  title = EVT_8501106_NAME
+  desc = EVT_8501106_DESC
+  picture = "nwo2_hungarian_revolution_1956_defeat"
+
+  trigger = {
+    tag = HUN
+  }
+  immediate = { set_global_flag = event_fired_8501106 }
+
+  option = {
+    name = EVT_8501106_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }relation = { who = RUS value = 50 } country_event = 8021309 clr_country_flag = block_ideology_switch 
+  }
+}
+country_event = {
+  id = 8501110
+  title = EVT_8501110_NAME
+  desc = EVT_8501110_DESC
+  picture = "nwo2_united_nations"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1956
+    has_global_flag = event_fired_8510806
+    has_global_flag = cold_war
+    RUS = { war_with = HUN }
+  }
+  immediate = { set_global_flag = event_fired_8501110 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8501110_A
+any_pop = { militancy = 1.0 }country_event = 8501104 country_event = 8501115 
+  }
+
+  option = {
+    name = EVT_8501110_B
+any_pop = { militancy = 5.0 }country_event = 8501111 
+  }
+}
+country_event = {
+  id = 8501111
+  title = EVT_8501111_NAME
+  desc = EVT_8501111_DESC
+  picture = "nwo2_united_nations"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8501111 }
+
+  option = {
+    name = EVT_8501111_A
+any_pop = { militancy = -0.5 }war = RUS 
+  }
+
+  option = {
+    name = EVT_8501111_B
+any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8501112
+  title = EVT_8501112_NAME
+  desc = EVT_8501112_DESC
+  picture = "nwo2_allied_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1956
+    OR = {
+    NOT = {
+    exists = USA
+    }
+    has_global_flag = event_fired_8510801
+    }
+    OR = {
+    NOT = {
+    exists = ENG
+    }
+    has_global_flag = event_fired_8510802
+    }
+    OR = {
+    NOT = {
+    exists = FRA
+    }
+    has_global_flag = event_fired_8510803
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    has_global_flag = event_fired_8510804
+    has_global_flag = CHC_in_UNSC
+    }
+    OR = {
+    NOT = {
+    exists = CHI
+    }
+    NOT = {
+    has_global_flag = CHC_in_UNSC
+    }
+    has_global_flag = event_fired_8510808
+    }
+    OR = {
+    NOT = {
+    exists = RUS
+    }
+    has_global_flag = event_fired_8510805
+    has_global_flag = un_soviet_boycott
+    }
+    OR = {
+    has_global_flag = un_hungary_totalveto
+    }
+    has_global_flag = cold_war
+    RUS = { war_with = HUN }
+  }
+  immediate = { set_global_flag = event_fired_8501112 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8501112_A
+any_pop = { militancy = 0.3 }
+  }
+
+  option = {
+    name = EVT_8501112_B
+any_pop = { militancy = 3.5 }country_event = 8501113 
+  }
+}
+country_event = {
+  id = 8501113
+  title = EVT_8501113_NAME
+  desc = EVT_8501113_DESC
+  picture = "nwo2_allied_intervention"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8501113 }
+
+  option = {
+    name = EVT_8501113_A
+war = USA any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8501113_B
+any_pop = { militancy = 1.5 }country_event = 8501104 country_event = 8501115 
+  }
+}

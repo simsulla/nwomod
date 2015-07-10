@@ -1,0 +1,443 @@
+country_event = {
+  id = 8390000
+  title = EVT_8390000_NAME
+  desc = EVT_8390000_DESC
+  picture = "nwo2_soviet_troops_mcdonalds"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    NOT = {
+    any_owned_province = { province_id = 1042 }    any_owned_province = { province_id = 1753 }    any_owned_province = { province_id = 155 }    any_owned_province = { province_id = 1339 }    }
+    NOT = {
+    war_with = GER
+    }
+    NOT = {
+    has_global_flag = the_red_dusk
+    }
+    NOT = {
+    has_global_flag = event_fired_8391000
+    }
+    USA = { war_with = RUS }
+    USA = { lost_national = 0.45 }
+  }
+  immediate = { set_global_flag = event_fired_8390000 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8390000_A
+any_pop = { militancy = -0.5 }set_global_flag = the_red_dusk 
+  }
+
+  option = {
+    name = EVT_8390000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      average_militancy  = 30
+#      }
+#    }
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8391000
+  title = EVT_8391000_NAME
+  desc = EVT_8391000_DESC
+  picture = "nwo2_fate_of_soviet_usa"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = the_red_dusk
+  }
+  immediate = { set_global_flag = event_fired_8391000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8391000_A
+badboy = 30 any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8391000_B
+badboy = -10 country_event =  { id = 8393002 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8391000_C
+badboy = 50 any_pop = { militancy = 0.5 }country_event =  { id = 8393000 days = 1 } country_event =  { id = 8393001 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8391000_D
+badboy = 100 any_pop = { militancy = 2.5 }country_event =  { id = 8392002 days = 1 } clr_global_flag = the_red_dusk 
+  }
+}
+country_event = {
+  id = 8391001
+  title = EVT_8391001_NAME
+  desc = EVT_8391001_DESC
+  picture = "nwo2_mexican_communists"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = the_red_dusk
+     has_global_flag = event_fired_8391000
+  }
+  immediate = { set_global_flag = event_fired_8391001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8391001_A
+relation = { who = MEX value = 150 } country_event = 8391002 
+  }
+
+  option = {
+    name = EVT_8391001_B
+relation = { who = MEX value = -50 } country_event =  { id = 8392001 days = 1 } 
+  }
+}
+country_event = {
+  id = 8391002
+  title = EVT_8391002_NAME
+  desc = EVT_8391002_DESC
+  picture = "nwo2_alta_california"
+
+  trigger = {
+    tag = MEX
+  }
+  immediate = { set_global_flag = event_fired_8391002 }
+
+  option = {
+    name = EVT_8391002_A
+relation = { who = MEX value = 150 } random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }create_alliance = RUS 
+  }
+
+  option = {
+    name = EVT_8391002_B
+relation = { who = RUS value = -50 } random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }country_event =  { id = 8392001 days = 1 } 
+  }
+}
+country_event = {
+  id = 8392000
+  title = EVT_8392000_NAME
+  desc = EVT_8392000_DESC
+  picture = "nwo2_soviet_victory_over_usa"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    has_global_flag = the_red_dusk
+     has_global_flag = event_fired_8391000
+  }
+  immediate = { set_global_flag = event_fired_8392000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8392000_A
+capital = 695 end_war = RUS 610 = { secede_province = JAP } 2579 = { secede_province = JAP } 2519 = { secede_province = JAP } 2518 = { secede_province = JAP } 2522 = { secede_province = JAP } 658 = { secede_province = JAP } 2524 = { secede_province = JAP } 2526 = { secede_province = JAP } 2623 = { secede_province = JAP } 686 = { secede_province = JAP } 2534 = { secede_province = JAP } 2536 = { secede_province = JAP } 2539 = { secede_province = JAP } 1097 = { secede_province = JAP } 2535 = { secede_province = JAP } 2186 = { secede_province = RUS } 2187 = { secede_province = RUS } 2188 = { secede_province = RUS } 2189 = { secede_province = RUS } 2190 = { secede_province = RUS } 1452 = { secede_province = ENG } 1453 = { secede_province = ENG } 1454 = { secede_province = ENG } 1560 = { secede_province = ENG } 203 = { secede_province = ENG } 2219 = { secede_province = ENG } 2217 = { secede_province = ENG } 2218 = { secede_province = ENG } 2220 = { secede_province = ENG } 251 = { secede_province = RUS } 252 = { secede_province = RUS } 253 = { secede_province = RUS } 3246 = { secede_province = RUS } 1 = { secede_province = RUS } 2 = { secede_province = RUS } 3 = { secede_province = RUS } 4 = { secede_province = RUS } 5 = { secede_province = RUS } 2630 = { secede_province = RUS } release_vassal = PHI release_vassal = CUB release_vassal = JAP set_global_flag = raise_soviet_bloc_coherence country_event = 8225000 
+  }
+}
+country_event = {
+  id = 8392001
+  title = EVT_8392001_NAME
+  desc = EVT_8392001_DESC
+  picture = "nwo2_alta_california"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    has_global_flag = the_red_dusk
+     has_global_flag = event_fired_8392000
+  }
+  immediate = { set_global_flag = event_fired_8392001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8392001_A
+100 = { secede_province = MEX } 101 = { secede_province = MEX } 102 = { secede_province = MEX } 103 = { secede_province = MEX } 104 = { secede_province = MEX } 105 = { secede_province = MEX } 1298 = { secede_province = MEX } 1922 = { secede_province = MEX } 1923 = { secede_province = MEX } 1925 = { secede_province = MEX } 1926 = { secede_province = MEX } 658 = { secede_province = MEX } 
+  }
+}
+country_event = {
+  id = 8392002
+  title = EVT_8392002_NAME
+  desc = EVT_8392002_DESC
+  picture = "nwo2_invasion_of_usa"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    has_global_flag = the_red_dusk
+     has_global_flag = event_fired_8392000
+  }
+  immediate = { set_global_flag = event_fired_8392002 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8392002_A
+78 = { secede_province = RUS } 79 = { secede_province = RUS } 80 = { secede_province = RUS } 81 = { secede_province = RUS } 82 = { secede_province = RUS } 83 = { secede_province = RUS } 91 = { secede_province = RUS } 92 = { secede_province = RUS } 93 = { secede_province = RUS } 96 = { secede_province = RUS } 94 = { secede_province = RUS } 95 = { secede_province = RUS } 84 = { secede_province = RUS } 85 = { secede_province = RUS } 86 = { secede_province = RUS } 87 = { secede_province = RUS } 88 = { secede_province = RUS } 89 = { secede_province = RUS } 90 = { secede_province = RUS } 243 = { secede_province = RUS } 244 = { secede_province = RUS } 245 = { secede_province = RUS } 241 = { secede_province = RUS } 242 = { secede_province = RUS } 247 = { secede_province = RUS } 246 = { secede_province = RUS } 248 = { secede_province = RUS } 249 = { secede_province = RUS } 250 = { secede_province = RUS } 231 = { secede_province = RUS } 229 = { secede_province = RUS } 230 = { secede_province = RUS } 232 = { secede_province = RUS } 233 = { secede_province = RUS } 234 = { secede_province = RUS } 235 = { secede_province = RUS } 236 = { secede_province = RUS } 237 = { secede_province = RUS } 238 = { secede_province = RUS } 239 = { secede_province = RUS } 240 = { secede_province = RUS } 223 = { secede_province = RUS } 224 = { secede_province = RUS } 225 = { secede_province = RUS } 226 = { secede_province = RUS } 227 = { secede_province = RUS } 228 = { secede_province = RUS } 220 = { secede_province = RUS } 219 = { secede_province = RUS } 222 = { secede_province = RUS } 221 = { secede_province = RUS } 218 = { secede_province = RUS } 217 = { secede_province = RUS } 211 = { secede_province = RUS } 212 = { secede_province = RUS } 213 = { secede_province = RUS } 214 = { secede_province = RUS } 215 = { secede_province = RUS } 216 = { secede_province = RUS } 209 = { secede_province = RUS } 207 = { secede_province = RUS } 208 = { secede_province = RUS } 210 = { secede_province = RUS } 2556 = { secede_province = RUS } 205 = { secede_province = RUS } 206 = { secede_province = RUS } 201 = { secede_province = RUS } 202 = { secede_province = RUS } 204 = { secede_province = RUS } 2555 = { secede_province = RUS } 200 = { secede_province = RUS } 199 = { secede_province = RUS } 198 = { secede_province = RUS } 926 = { secede_province = RUS } 1298 = { secede_province = RUS } 
+  }
+}
+country_event = {
+  id = 8393000
+  title = EVT_8393000_NAME
+  desc = EVT_8393000_DESC
+  picture = "nwo2_united_soviet_socialist_states_of_america"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = the_red_dusk
+     has_global_flag = event_fired_8392000
+  }
+  immediate = { set_global_flag = event_fired_8393000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8393000_A
+badboy = 25 relation = { who = USA value = 50 } country_event = 8393003 
+  }
+
+  option = {
+    name = EVT_8393000_B
+badboy = 10 relation = { who = USA value = 100 } country_event = 8393004 
+  }
+}
+country_event = {
+  id = 8393001
+  title = EVT_8393001_NAME
+  desc = EVT_8393001_DESC
+  picture = "nwo2_socialist_usa"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = the_red_dusk
+     has_global_flag = event_fired_8392000
+  }
+  immediate = { set_global_flag = event_fired_8393001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8393001_A
+badboy = 10 relation = { who = USA value = 50 } country_event = 8393004 
+  }
+
+  option = {
+    name = EVT_8393001_B
+badboy = -15 relation = { who = USA value = 100 } country_event = 8393005 
+  }
+}
+country_event = {
+  id = 8393002
+  title = EVT_8393002_NAME
+  desc = EVT_8393002_DESC
+  picture = "nwo2_russian_american_friendship"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = the_red_dusk
+     has_global_flag = event_fired_8392000
+  }
+  immediate = { set_global_flag = event_fired_8393002 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8393002_A
+badboy = 25 relation = { who = USA value = 50 } country_event = 8393006 
+  }
+}
+country_event = {
+  id = 8393003
+  title = EVT_8393003_NAME
+  desc = EVT_8393003_DESC
+  picture = "nwo2_communist_party_of_usa"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8393003 }
+
+  option = {
+    name = EVT_8393003_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8393000
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8393000
+
+        }
+
+      }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.25 } } }define_general = { name = "Baehr" personality = energetic background = no_background }define_general = { name = "Durgin" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8393004
+  title = EVT_8393004_NAME
+  desc = EVT_8393004_DESC
+  picture = "nwo2_socialist_usa"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8393004 }
+
+  option = {
+    name = EVT_8393004_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8393000
+
+        }
+
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = event_fired_8393000
+
+        }
+
+      }
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.35 } } }define_general = { name = "Baird" personality = energetic background = no_background }define_general = { name = "Beightler" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8393005
+  title = EVT_8393005_NAME
+  desc = EVT_8393005_DESC
+  picture = "nwo2_russian_american_friendship"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8393005 }
+
+  option = {
+    name = EVT_8393005_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.5 } } }define_general = { name = "Anderson J.B." personality = energetic background = no_background }define_general = { name = "Barker" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8393006
+  title = EVT_8393006_NAME
+  desc = EVT_8393006_DESC
+  picture = "nwo2_usa_divided"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8393006 }
+
+  option = {
+    name = EVT_8393006_A
+release = TEX release = CSA release = USA 132 = { secede_province = TEX } 133 = { secede_province = TEX } 134 = { secede_province = TEX } 135 = { secede_province = TEX } 136 = { secede_province = TEX } 137 = { secede_province = TEX } 138 = { secede_province = TEX } 103 = { secede_province = TEX } 104 = { secede_province = TEX } 105 = { secede_province = TEX } 129 = { secede_province = TEX } 130 = { secede_province = TEX } 131 = { secede_province = TEX } 126 = { secede_province = TEX } 127 = { secede_province = TEX } 128 = { secede_province = TEX } 106 = { secede_province = TEX } 107 = { secede_province = TEX } 108 = { secede_province = TEX } 109 = { secede_province = TEX } 200 = { secede_province = CSA } 199 = { secede_province = CSA } 198 = { secede_province = CSA } 139 = { secede_province = CSA } 140 = { secede_province = CSA } 141 = { secede_province = CSA } 142 = { secede_province = CSA } 143 = { secede_province = CSA } 144 = { secede_province = CSA } 145 = { secede_province = CSA } 146 = { secede_province = CSA } 148 = { secede_province = CSA } 147 = { secede_province = CSA } 149 = { secede_province = CSA } 150 = { secede_province = CSA } 184 = { secede_province = CSA } 185 = { secede_province = CSA } 186 = { secede_province = CSA } 187 = { secede_province = CSA } 211 = { secede_province = CSA } 212 = { secede_province = CSA } 213 = { secede_province = CSA } 214 = { secede_province = CSA } 215 = { secede_province = CSA } 216 = { secede_province = CSA } 218 = { secede_province = CSA } 217 = { secede_province = CSA } 220 = { secede_province = CSA } 219 = { secede_province = CSA } 222 = { secede_province = CSA } 221 = { secede_province = CSA } 223 = { secede_province = CSA } 224 = { secede_province = CSA } 225 = { secede_province = CSA } 226 = { secede_province = CSA } 227 = { secede_province = CSA } 228 = { secede_province = CSA } 231 = { secede_province = CSA } 229 = { secede_province = CSA } 230 = { secede_province = CSA } 151 = { secede_province = CSA } 152 = { secede_province = CSA } 153 = { secede_province = CSA } 154 = { secede_province = CSA } 123 = { secede_province = CSA } 124 = { secede_province = CSA } 125 = { secede_province = CSA } 110 = { secede_province = CSA } 111 = { secede_province = CSA } 112 = { secede_province = CSA } 84 = { secede_province = USA } 85 = { secede_province = USA } 86 = { secede_province = USA } 87 = { secede_province = USA } 88 = { secede_province = USA } 89 = { secede_province = USA } 90 = { secede_province = USA } 116 = { secede_province = USA } 115 = { secede_province = USA } 114 = { secede_province = USA } 113 = { secede_province = USA } country_event = 8393003 
+  }
+}
+country_event = {
+  id = 8394000
+  title = EVT_8394000_NAME
+  desc = EVT_8394000_DESC
+  picture = "nwo2_khrushchev_in_usa"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8393001
+     has_global_flag = event_fired_8393002
+     has_global_flag = event_fired_8393003
+     has_global_flag = event_fired_8393006
+    }
+    }
+    has_global_flag = the_red_dusk
+  }
+  immediate = { set_global_flag = event_fired_8394000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8394000_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = event_fired_8393001
+          }
+
+        }
+
+      }
+create_vassal = CSA create_alliance = CSA create_vassal = TEX create_alliance = TEX create_vassal = USA create_alliance = USA 
+  }
+}
+country_event = {
+  id = 8395000
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_empty"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1999
+    has_global_flag = the_red_dusk
+     has_global_flag = event_fired_8394000
+  }
+  immediate = { set_global_flag = event_fired_8395000 }
+
+  mean_time_to_happen = { days = 5 }
+
+  option = {
+    name = OK
+clr_global_flag = the_red_dusk 
+  }
+}

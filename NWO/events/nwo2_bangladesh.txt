@@ -1,0 +1,203 @@
+country_event = {
+  id = 8017040
+  title = EVT_8017040_NAME
+  desc = EVT_8017040_DESC
+  picture = "nwo2_bangladesh"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAK
+    year = 1972
+    NOT = {
+    has_global_flag = event_fired_8007240
+    }
+    NOT = {
+    exists = BNG
+    }
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8017040 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8017040_A
+any_pop = { militancy = 2.5 }
+  }
+
+  option = {
+    name = EVT_8017040_B
+any_pop = { militancy = 1.0 }country_event =  { id = 8017050 days = 1 } 
+  }
+}
+country_event = {
+  id = 8017050
+  title = EVT_8017050_NAME
+  desc = EVT_8017050_DESC
+  picture = "nwo2_indo_pakistani_war_1971"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1972
+    NOT = {
+    exists = BNG
+    }
+    has_global_flag = event_fired_8017040
+    war = no
+  }
+  immediate = { set_global_flag = event_fired_8017050 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8017050_A
+war = PAK any_pop = { militancy = -1.0 }
+  }
+
+  option = {
+    name = EVT_8017050_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 
+  }
+}
+country_event = {
+  id = 8017051
+  title = EVT_8017051_NAME
+  desc = EVT_8017051_DESC
+  picture = "nwo2_indo_pakistani_war_1971"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAK
+    year = 1972
+    OR = {
+    OR = {
+    ENG_1291 = { owned_by = PAK } 
+    ENG_1264 = { owned_by = PAK } 
+    ENG_1236 = { owned_by = PAK } 
+    any_owned_province = { province_id = 1003 }    }
+    NOT = {
+    exists = HND
+    }
+    }
+    has_global_flag = event_fired_8017050
+    war_with = HND
+  }
+  immediate = { set_global_flag = event_fired_8017051 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8017051_A
+any_pop = { militancy = -1.5 }end_war = HND 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = HND
+          }
+
+        }
+release = HND 
+      }
+inherit = BNG country_event = 8017052 country_event =  { id = 8017053 days = 1 } country_event =  { id = 8017054 days = 1 } 
+  }
+}
+country_event = {
+  id = 8017052
+  title = EVT_8017052_NAME
+  desc = EVT_8017052_DESC
+  picture = "nwo2_indo_pakistani_war_1971"
+
+  trigger = {
+    tag = HND
+  }
+  immediate = { set_global_flag = event_fired_8017052 }
+
+  option = {
+    name = EVT_8017052_A
+any_pop = { militancy = 1.5 }1547 = { secede_province = PAK } 1488 = { secede_province = PAK } 1380 = { secede_province = PAK } 
+  }
+}
+country_event = {
+  id = 8017053
+  title = EVT_8017053_NAME
+  desc = EVT_8017053_DESC
+  picture = "nwo2_indo_pakistani_war_1971"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAK
+    year = 1972
+    has_global_flag = event_fired_8017050
+    war_with = HND
+  }
+  immediate = { set_global_flag = event_fired_8017053 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8017053_A
+end_war = PAK end_war = BNG country_event =  { id = 8017051 days = 1 } country_event =  { id = 8017054 days = 1 } 
+  }
+}
+country_event = {
+  id = 8017054
+  title = EVT_8017054_NAME
+  desc = EVT_8017054_DESC
+  picture = "nwo2_indo_pakistani_war_1971"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1972
+    OR = {
+    any_owned_province = { province_id = 1956 }    any_owned_province = { province_id = 1077 }    any_owned_province = { province_id = 1956 }    any_owned_province = { province_id = 1956 }    }
+    has_global_flag = event_fired_8017050
+    war_with = PAK
+  }
+  immediate = { set_global_flag = event_fired_8017054 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8017054_A
+end_war = PAK country_event = 8017055 country_event =  { id = 8017051 days = 1 } country_event =  { id = 8017053 days = 1 } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          exists = PAK
+          }
+
+        }
+release = PAK 
+      }
+
+  }
+}
+country_event = {
+  id = 8017055
+  title = EVT_8017055_NAME
+  desc = EVT_8017055_DESC
+  picture = "nwo2_indo_pakistani_war_1971"
+
+  trigger = {
+    tag = PAK
+  }
+  immediate = { set_global_flag = event_fired_8017055 }
+
+  option = {
+    name = EVT_8017055_A
+any_pop = { militancy = 1.5 }release = BNG end_war = BNG 
+  }
+}

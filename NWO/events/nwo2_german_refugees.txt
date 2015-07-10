@@ -1,0 +1,644 @@
+country_event = {
+  id = 8231000
+  title = EVT_8231000_NAME
+  desc = EVT_8231000_DESC
+  picture = "nwo2_german_refugees"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1999
+    NOT = {
+    social_reform_want = 0.5
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8231000 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231000_A
+badboy = 5 random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8231000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+country_event =  { id = 8231010 days = 1 } country_event =  { id = 8231011 days = 1 } country_event =  { id = 8231012 days = 1 } country_event =  { id = 8231013 days = 1 } country_event =  { id = 8231014 days = 1 } country_event =  { id = 8231015 days = 1 } country_event =  { id = 8231016 days = 1 } 
+  }
+}
+country_event = {
+  id = 8231001
+  title = EVT_8231001_NAME
+  desc = EVT_8231001_DESC
+  picture = "nwo2_german_refugees"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+    year = 1999
+    NOT = {
+    social_reform_want = 0.5
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8231001 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231001_A
+badboy = 5 random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8231001_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+country_event =  { id = 8231020 days = 1 } country_event =  { id = 8231021 days = 1 } 
+  }
+}
+country_event = {
+  id = 8231002
+  title = EVT_8231002_NAME
+  desc = EVT_8231002_DESC
+  picture = "nwo2_german_refugees"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1999
+    NOT = {
+    social_reform_want = 0.5
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8231002 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231002_A
+badboy = 5 random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8231002_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+country_event =  { id = 8231030 days = 1 } 
+  }
+}
+country_event = {
+  id = 8231003
+  title = EVT_8231003_NAME
+  desc = EVT_8231003_DESC
+  picture = "nwo2_german_refugees"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1999
+    NOT = {
+    social_reform_want = 0.5
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8231003 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231003_A
+badboy = 5 random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8231003_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+country_event =  { id = 8231040 days = 1 } country_event =  { id = 8231041 days = 1 } country_event =  { id = 8231042 days = 1 } country_event =  { id = 8231043 days = 1 } country_event =  { id = 8231044 days = 1 } 
+  }
+}
+country_event = {
+  id = 8231004
+  title = EVT_8231004_NAME
+  desc = EVT_8231004_DESC
+  picture = "nwo2_german_refugees"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1999
+    NOT = {
+    social_reform_want = 0.5
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8231004 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231004_A
+badboy = 5 random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+  }
+
+  option = {
+    name = EVT_8231004_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+country_event =  { id = 8231050 days = 1 } 
+  }
+}
+country_event = {
+  id = 8231010
+  title = EVT_8231010_NAME
+  desc = EVT_8231010_DESC
+  picture = "nwo2_emile_dewoitine"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1999
+    has_global_flag = event_fired_8231000
+  }
+  immediate = { set_global_flag = event_fired_8231010 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231010_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231011
+  title = EVT_8231011_NAME
+  desc = EVT_8231011_DESC
+  picture = "nwo2_cesare_pallavicino"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1999
+    has_global_flag = event_fired_8231000
+  }
+  immediate = { set_global_flag = event_fired_8231011 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231011_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231012
+  title = EVT_8231012_NAME
+  desc = EVT_8231012_DESC
+  picture = "nwo2_ronald_richter"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1999
+    has_global_flag = event_fired_8231000
+  }
+  immediate = { set_global_flag = event_fired_8231012 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231012_A
+money = -500 
+  }
+}
+country_event = {
+  id = 8231013
+  title = EVT_8231013_NAME
+  desc = EVT_8231013_DESC
+  picture = "nwo2_kurt_tank"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1999
+    has_global_flag = event_fired_8231000
+  }
+  immediate = { set_global_flag = event_fired_8231013 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231013_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231014
+  title = EVT_8231014_NAME
+  desc = EVT_8231014_DESC
+  picture = "nwo2_hans_ulrich_rudel"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1999
+    has_global_flag = event_fired_8231000
+  }
+  immediate = { set_global_flag = event_fired_8231014 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231014_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231015
+  title = EVT_8231015_NAME
+  desc = EVT_8231015_DESC
+  picture = "nwo2_reimar_horten"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1999
+    has_global_flag = event_fired_8231000
+  }
+  immediate = { set_global_flag = event_fired_8231015 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231015_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231016
+  title = EVT_8231016_NAME
+  desc = EVT_8231016_DESC
+  picture = "nwo2_hans_guido_mutke"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+    year = 1999
+    has_global_flag = event_fired_8231000
+  }
+  immediate = { set_global_flag = event_fired_8231016 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231016_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231020
+  title = EVT_8231020_NAME
+  desc = EVT_8231020_DESC
+  picture = "nwo2_emile_dewoitine"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+    year = 1999
+    has_global_flag = event_fired_8231001
+  }
+  immediate = { set_global_flag = event_fired_8231020 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231020_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231021
+  title = EVT_8231021_NAME
+  desc = EVT_8231021_DESC
+  picture = "nwo2_willy_messerschmitt"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+    year = 1999
+    has_global_flag = event_fired_8231001
+  }
+  immediate = { set_global_flag = event_fired_8231021 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231021_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231030
+  title = EVT_8231030_NAME
+  desc = EVT_8231030_DESC
+  picture = "nwo2_kurt_tank"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1999
+    has_global_flag = event_fired_8231002
+  }
+  immediate = { set_global_flag = event_fired_8231030 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231030_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231040
+  title = EVT_8231040_NAME
+  desc = EVT_8231040_DESC
+  picture = "nwo2_wilhelm_voss"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1999
+    has_global_flag = event_fired_8231003
+  }
+  immediate = { set_global_flag = event_fired_8231040 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231040_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231041
+  title = EVT_8231041_NAME
+  desc = EVT_8231041_DESC
+  picture = "nwo2_rolf_engel"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1999
+    has_global_flag = event_fired_8231003
+  }
+  immediate = { set_global_flag = event_fired_8231041 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231041_A
+money = -200 
+  }
+}
+country_event = {
+  id = 8231042
+  title = EVT_8231042_NAME
+  desc = EVT_8231042_DESC
+  picture = "nwo2_wilhelm_fahrmbacher"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1999
+    has_global_flag = event_fired_8231003
+  }
+  immediate = { set_global_flag = event_fired_8231042 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231042_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231043
+  title = EVT_8231043_NAME
+  desc = EVT_8231043_DESC
+  picture = "nwo2_ferdinand_brandner"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1999
+    has_global_flag = event_fired_8231003
+  }
+  immediate = { set_global_flag = event_fired_8231043 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231043_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231044
+  title = EVT_8231044_NAME
+  desc = EVT_8231044_DESC
+  picture = "nwo2_willy_messerschmitt"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1999
+    has_global_flag = event_fired_8231003
+  }
+  immediate = { set_global_flag = event_fired_8231044 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231044_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231050
+  title = EVT_8231050_NAME
+  desc = EVT_8231050_DESC
+  picture = "nwo2_heinrich_focke"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+    year = 1999
+    has_global_flag = event_fired_8231004
+  }
+  immediate = { set_global_flag = event_fired_8231050 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231050_A
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231100
+  title = EVT_8231100_NAME
+  desc = EVT_8231100_DESC
+  picture = "nwo2_operation_paperclip"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    OR = {
+    has_global_flag = event_fired_8211002
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8231100 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231100_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8211001
+#    }
+
+  }
+
+  option = {
+    name = EVT_8231100_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8211002
+#    }
+
+  }
+
+  option = {
+    name = EVT_8231100_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8211000
+#    }
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231101
+  title = EVT_8231101_NAME
+  desc = EVT_8231101_DESC
+  picture = "nwo2_operation_ossovioakhim"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    OR = {
+    has_global_flag = event_fired_8211002
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8231101 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231101_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8211000
+#    }
+
+  }
+
+  option = {
+    name = EVT_8231101_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8211002
+#    }
+
+  }
+
+  option = {
+    name = EVT_8231101_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8211001
+#    }
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}
+country_event = {
+  id = 8231102
+  title = EVT_8231102_NAME
+  desc = EVT_8231102_DESC
+  picture = "nwo2_operation_backfire"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1999
+    OR = {
+    has_global_flag = event_fired_8211001
+    }
+    has_global_flag = cold_war
+    ENG = { alliance_with = USA }
+  }
+  immediate = { set_global_flag = event_fired_8231102 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8231102_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8211001
+#    }
+
+  }
+
+  option = {
+    name = EVT_8231102_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = event_fired_8211002
+#    }
+add_country_modifier = { name = dh_research_mod duration = 365 }
+  }
+}

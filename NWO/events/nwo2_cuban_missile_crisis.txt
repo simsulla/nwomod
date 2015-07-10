@@ -1,0 +1,552 @@
+country_event = {
+  id = 8500201
+  title = EVT_8500201_NAME
+  desc = EVT_8500201_DESC
+  picture = "nwo2_castro_with_khrushchev"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1962
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500201 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500201_A
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }
+  }
+
+  option = {
+    name = EVT_8500201_B
+random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }country_event =  { id = 8500202 days = 1 } 
+  }
+}
+country_event = {
+  id = 8500202
+  title = EVT_8500202_NAME
+  desc = EVT_8500202_DESC
+  picture = "nwo2_castro_with_khrushchev"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CUB
+    year = 1962
+    has_global_flag = event_fired_8500201
+    has_global_flag = castro_rules
+  }
+  immediate = { set_global_flag = event_fired_8500202 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500202_A
+add_country_modifier = { name = dh_industrial_modifier duration = 365 }set_global_flag = missiles_in_cuba 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = american_nuclear_advantage
+          }
+
+        }
+set_global_flag = soviet_nuclear_advantage 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = american_nuclear_advantage
+
+        }
+clr_global_flag = american_nuclear_advantage 
+      }
+
+  }
+
+  option = {
+    name = EVT_8500202_B
+relation = { who = RUS value = -200 } random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.8 } } }
+  }
+}
+country_event = {
+  id = 8500203
+  title = EVT_8500203_NAME
+  desc = EVT_8500203_DESC
+  picture = "nwo2_cuban_missile_site"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1962
+    has_global_flag = event_fired_8500202
+    has_global_flag = missiles_in_cuba
+  }
+  immediate = { set_global_flag = event_fired_8500203 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500203_A
+country_event = 8500204 
+  }
+
+  option = {
+    name = EVT_8500203_B
+any_pop = { militancy = 1.0 }set_global_flag = raise_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8500204
+  title = EVT_8500204_NAME
+  desc = EVT_8500204_DESC
+  picture = "nwo2_cuban_missile_crisis_discussion"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8500204 }
+
+  option = {
+    name = EVT_8500204_A
+any_pop = { militancy = 0.5 }relation = { who = RUS value = -50 } country_event = 8500207 
+  }
+
+  option = {
+    name = EVT_8500204_B
+any_pop = { militancy = 2.0 }relation = { who = RUS value = 100 } random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.65 } } }set_global_flag = raise_soviet_bloc_coherence 
+  }
+
+  option = {
+    name = EVT_8500204_C
+any_pop = { militancy = 1.5 }relation = { who = RUS value = -10 } country_event = 8500205 
+  }
+
+  option = {
+    name = EVT_8500204_D
+war = CUB relation = { who = RUS value = -200 } any_pop = { militancy = 1.0 }country_event = 8500206 
+  }
+}
+country_event = {
+  id = 8500205
+  title = EVT_8500205_NAME
+  desc = EVT_8500205_DESC
+  picture = "nwo2_cuban_missile_crisis_stevenson"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8500205 }
+
+  option = {
+    name = EVT_8500205_A
+badboy = 10 relation = { who = USA value = -50 } 
+  }
+
+  option = {
+    name = EVT_8500205_B
+any_pop = { militancy = 0.3 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = soviet_nuclear_advantage
+          }
+
+        }
+set_global_flag = american_nuclear_advantage 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = soviet_nuclear_advantage
+
+        }
+clr_global_flag = soviet_nuclear_advantage 
+      }
+clr_global_flag = missiles_in_cuba set_global_flag = lower_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8500206
+  title = EVT_8500206_NAME
+  desc = EVT_8500206_DESC
+  picture = "nwo2_cuban_missile_crisis_attack"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8500206 }
+
+  option = {
+    name = EVT_8500206_A
+badboy = 10 any_pop = { militancy = 0.5 }war = USA 
+  }
+
+  option = {
+    name = EVT_8500206_B
+any_pop = { militancy = 1.5 }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = soviet_nuclear_advantage
+          }
+
+        }
+set_global_flag = american_nuclear_advantage 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = soviet_nuclear_advantage
+
+        }
+clr_global_flag = soviet_nuclear_advantage 
+      }
+clr_global_flag = missiles_in_cuba set_global_flag = lower_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8500207
+  title = EVT_8500207_NAME
+  desc = EVT_8500207_DESC
+  picture = "nwo2_cuban_missile_crisis_quarantine"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8500207 }
+
+  option = {
+    name = EVT_8500207_A
+badboy = 10 relation = { who = USA value = -100 } 
+  }
+
+  option = {
+    name = EVT_8500207_B
+badboy = -20 relation = { who = USA value = 100 } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = soviet_nuclear_advantage
+          }
+
+        }
+set_global_flag = american_nuclear_advantage 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = soviet_nuclear_advantage
+
+        }
+clr_global_flag = soviet_nuclear_advantage 
+      }
+clr_global_flag = missiles_in_cuba set_global_flag = lower_soviet_bloc_coherence 
+  }
+
+  option = {
+    name = EVT_8500207_C
+war = USA any_pop = { militancy = 1.5 }country_event =  { id = 8500208 days = 1 } 
+  }
+}
+country_event = {
+  id = 8500208
+  title = EVT_8500208_NAME
+  desc = EVT_8500208_DESC
+  picture = "nwo2_cuban_missile_crisis_danger"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1962
+    has_global_flag = event_fired_8500207
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500208 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500208_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      has_global_flag = event_fired_8500209
+#      }
+#    }
+relation = { who = RUS value = 10 } country_event = 8500209 
+  }
+
+  option = {
+    name = EVT_8500208_B
+badboy = -20 relation = { who = RUS value = 100 } set_global_flag = raise_soviet_bloc_coherence 
+  }
+
+  option = {
+    name = EVT_8500208_C
+war = RUS any_pop = { militancy = 1.2 }
+  }
+}
+country_event = {
+  id = 8500209
+  title = EVT_8500209_NAME
+  desc = EVT_8500209_DESC
+  picture = "nwo2_kennedy_khrushchev"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8500209 }
+
+  option = {
+    name = EVT_8500209_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      has_global_flag = missiles_in_turkey
+#    }
+relation = { who = USA value = -10 } country_event = 8500212 
+  }
+
+  option = {
+    name = EVT_8500209_B
+badboy = -20 relation = { who = USA value = 50 } country_event = 8500210 
+  }
+
+  option = {
+    name = EVT_8500209_C
+
+# TODO this needs to be separate events
+#    trigger = {
+#      exists = GER
+#    }
+relation = { who = USA value = -100 } country_event = 8500211 
+  }
+
+  option = {
+    name = EVT_8500209_D
+relation = { who = USA value = -200 } any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8500210
+  title = EVT_8500210_NAME
+  desc = EVT_8500210_DESC
+  picture = "nwo2_kennedy_khrushchev"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8500210 }
+
+  option = {
+    name = EVT_8500210_A
+money = -5000 relation = { who = RUS value = 50 } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = soviet_nuclear_advantage
+          }
+
+        }
+set_global_flag = american_nuclear_advantage 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = soviet_nuclear_advantage
+
+        }
+clr_global_flag = soviet_nuclear_advantage 
+      }
+
+  }
+
+  option = {
+    name = EVT_8500210_B
+any_pop = { militancy = 1.0 }country_event =  { id = 8500213 days = 1 } country_event =  { id = 8500214 days = 1 } 
+  }
+}
+country_event = {
+  id = 8500211
+  title = EVT_8500211_NAME
+  desc = EVT_8500211_DESC
+  picture = "nwo2_kennedy_khrushchev"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8500211 }
+
+  option = {
+    name = EVT_8500211_A
+clr_global_flag = divided_berlin 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          has_global_flag = soviet_nuclear_advantage
+          }
+
+        }
+set_global_flag = american_nuclear_advantage 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          has_global_flag = soviet_nuclear_advantage
+
+        }
+clr_global_flag = soviet_nuclear_advantage 
+      }
+clr_global_flag = missiles_in_cuba set_global_flag = raise_soviet_bloc_coherence 
+  }
+
+  option = {
+    name = EVT_8500211_B
+relation = { who = RUS value = 100 } any_pop = { militancy = 1.0 }
+  }
+
+  option = {
+    name = EVT_8500211_C
+war = RUS any_pop = { militancy = 0.4 }country_event =  { id = 8500213 days = 1 } country_event =  { id = 8500214 days = 1 } 
+  }
+}
+country_event = {
+  id = 8500212
+  title = EVT_8500212_NAME
+  desc = EVT_8500212_DESC
+  picture = "nwo2_kennedy_khrushchev"
+
+  trigger = {
+    tag = USA
+  }
+  immediate = { set_global_flag = event_fired_8500212 }
+
+  option = {
+    name = EVT_8500212_A
+relation = { who = RUS value = 100 } clr_global_flag = american_nuclear_advantage clr_global_flag = missiles_in_cuba 
+  }
+
+  option = {
+    name = EVT_8500212_B
+war = RUS any_pop = { militancy = 1.2 }country_event =  { id = 8500213 days = 1 } country_event =  { id = 8500214 days = 1 } 
+  }
+}
+country_event = {
+  id = 8500213
+  title = EVT_8500213_NAME
+  desc = EVT_8500213_DESC
+  picture = "nwo2_cuban_missile_crisis_aftermath"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    OR = {
+    has_global_flag = event_fired_8500212
+    }
+    NOT = {
+    has_global_flag = missiles_in_cuba
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500213 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8500213_A
+any_pop = { militancy = 0.5 }set_global_flag = lower_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8500214
+  title = EVT_8500214_NAME
+  desc = EVT_8500214_DESC
+  picture = "nwo2_cuban_missile_crisis_aftermath"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1963
+    OR = {
+    has_global_flag = event_fired_8500212
+    }
+    NOT = {
+    has_global_flag = missiles_in_cuba
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500214 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8500214_A
+any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8500215
+  title = EVT_8500215_NAME
+  desc = EVT_8500215_DESC
+  picture = "nwo2_cuban_missile_crisis_aftermath"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CUB
+    year = 1963
+    OR = {
+    has_global_flag = event_fired_8500212
+    }
+    NOT = {
+    has_global_flag = missiles_in_cuba
+    }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8500215 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8500215_A
+any_pop = { militancy = 1.0 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+  }
+}

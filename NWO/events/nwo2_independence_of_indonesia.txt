@@ -1,0 +1,918 @@
+country_event = {
+  id = 8206001
+  title = EVT_8206001_NAME
+  desc = EVT_8206001_DESC
+  picture = "nwo2_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1999
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8206001 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8206001_A
+
+  }
+}
+country_event = {
+  id = 8206002
+  title = EVT_8206002_NAME
+  desc = EVT_8206002_DESC
+  picture = "nwo2_dutch_east_india"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1999
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8206002 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8206002_A
+
+  }
+}
+country_event = {
+  id = 8206003
+  title = EVT_8206003_NAME
+  desc = EVT_8206003_DESC
+  picture = "nwo2_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1999
+    OR = {
+    NOT = {
+    IDO = { vassal_of = NET }
+    }
+    has_global_flag = event_fired_8206050
+    }
+    NOT = {
+    IDO = { war_with = IDO }
+    }
+    exists = IDO
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8206003 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8206003_A
+any_pop = { militancy = 1.0 }war = IDO 
+  }
+
+  option = {
+    name = EVT_8206003_B
+country_event = 8206004 
+  }
+}
+country_event = {
+  id = 8206004
+  title = EVT_8206004_NAME
+  desc = EVT_8206004_DESC
+  picture = "nwo2_dutch_east_india"
+
+  trigger = {
+    tag = IDO
+  }
+  immediate = { set_global_flag = event_fired_8206004 }
+
+  option = {
+    name = EVT_8206004_A
+inherit = IDO 1648 = { any_pop = { militancy = 3.0 } }1650 = { any_pop = { militancy = 3.0 } }1652 = { any_pop = { militancy = 3.0 } }1653 = { any_pop = { militancy = 3.0 } }1654 = { any_pop = { militancy = 3.0 } }1655 = { any_pop = { militancy = 3.0 } }1656 = { any_pop = { militancy = 3.0 } }
+  }
+}
+country_event = {
+  id = 8206005
+  title = EVT_8206005_NAME
+  desc = EVT_8206005_DESC
+  picture = "nwo2_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1945
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206005 }
+
+  mean_time_to_happen = { days = 10 }
+
+  option = {
+    name = EVT_8206005_A
+badboy = -5 relation = { who = IDO value = 20 } 
+  }
+
+  option = {
+    name = EVT_8206005_B
+country_event =  { id = 8206007 days = 1 } 
+  }
+}
+country_event = {
+  id = 8206006
+  title = EVT_8206006_NAME
+  desc = EVT_8206006_DESC
+  picture = "nwo2_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1945
+    has_global_flag = event_fired_8206005
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206006 }
+
+  mean_time_to_happen = { days = 10 }
+
+  option = {
+    name = EVT_8206006_A
+any_pop = { militancy = -0.3 }country_event =  { id = 8206007 days = 1 } country_event =  { id = 8206008 days = 1 } country_event =  { id = 8206009 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8206006_B
+any_pop = { militancy = -1.0 }end_war = IDO 1398 = { secede_province = THIS } 1404 = { secede_province = THIS } 1403 = { secede_province = THIS } 1410 = { secede_province = THIS } 1399 = { secede_province = THIS } WestJava = { secede_province = THIS } EastJava = { secede_province = THIS } 
+  }
+}
+country_event = {
+  id = 8206007
+  title = EVT_8206007_NAME
+  desc = EVT_8206007_DESC
+  picture = "nwo2_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1945
+    has_global_flag = event_fired_8206006
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206007 }
+
+  mean_time_to_happen = { days = 10 }
+
+  option = {
+    name = EVT_8206007_A
+any_pop = { militancy = -0.3 }
+  }
+
+  option = {
+    name = EVT_8206007_B
+any_pop = { militancy = 0.3 }war = IDO country_event =  { id = 8206008 days = 1 } 
+  }
+}
+country_event = {
+  id = 8206008
+  title = EVT_8206008_NAME
+  desc = EVT_8206008_DESC
+  picture = "nwo2_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1946
+    NOT = {
+    IDO = { war_with = IDO }
+    }
+    has_global_flag = event_fired_8206007
+  }
+  immediate = { set_global_flag = event_fired_8206008 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8206008_A
+country_event = 8206009 
+  }
+
+  option = {
+    name = EVT_8206008_B
+country_event = 8206030 set_global_flag = federated_indonesia 
+  }
+}
+country_event = {
+  id = 8206009
+  title = EVT_8206009_NAME
+  desc = EVT_8206009_DESC
+  picture = "nwo2_indonesian_national_revolution"
+
+  trigger = {
+    tag = IDO
+  }
+  immediate = { set_global_flag = event_fired_8206009 }
+
+  option = {
+    name = EVT_8206009_A
+war = IDO 
+  }
+}
+country_event = {
+  id = 8206010
+  title = EVT_8206030_NAME
+  desc = EVT_8206030_DESC
+  picture = "nwo2_battle_of_surabaya"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1946
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206010 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8206030_A
+any_pop = { militancy = -0.6 }
+  }
+}
+country_event = {
+  id = 8206011
+  title = EVT_8206031_NAME
+  desc = EVT_8206031_DESC
+  picture = "nwo2_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1946
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206011 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8206031_A
+
+  }
+
+  option = {
+    name = EVT_8206031_B
+
+  }
+
+  option = {
+    name = EVT_8206031_C
+
+  }
+}
+country_event = {
+  id = 8206012
+  title = EVT_8206032_NAME
+  desc = EVT_8206032_DESC
+  picture = "nwo2_linggajati_agreement"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1946
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206012 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8206032_A
+relation = { who = IDO value = 20 } badboy = -5 
+  }
+
+  option = {
+    name = EVT_8206032_B
+any_pop = { militancy = 2.5 }badboy = 25 country_event =  { id = 8206013 days = 1 } country_event =  { id = 8206014 days = 1 } country_event = 8206015 
+  }
+}
+country_event = {
+  id = 8206013
+  title = EVT_8206033_NAME
+  desc = EVT_8206033_DESC
+  picture = "nwo2_linggajati_agreement"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1947
+    has_global_flag = event_fired_8206012
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206013 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8206033_A
+any_pop = { militancy = 0.7 }
+  }
+
+  option = {
+    name = EVT_8206033_B
+any_pop = { militancy = 1.5 }country_event =  { id = 8206014 days = 1 } country_event = 8206015 
+  }
+}
+country_event = {
+  id = 8206014
+  title = EVT_8206034_NAME
+  desc = EVT_8206034_DESC
+  picture = "nwo2_linggajati_agreement"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1947
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206014 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8206034_A
+country_event = 8206015 
+  }
+
+  option = {
+    name = EVT_8206034_B
+country_event = 8206030 set_global_flag = federated_indonesia 
+  }
+}
+country_event = {
+  id = 8206015
+  title = EVT_8206035_NAME
+  desc = EVT_8206035_DESC
+  picture = "nwo2_indonesian_police_actions"
+
+  trigger = {
+    tag = IDO
+  }
+  immediate = { set_global_flag = event_fired_8206015 }
+
+  option = {
+    name = EVT_8206035_A
+any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8206016
+  title = EVT_8206036_NAME
+  desc = EVT_8206036_DESC
+  picture = "nwo2_indonesian_police_actions"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1948
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206016 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8206036_A
+country_event = 8206017 
+  }
+
+  option = {
+    name = EVT_8206036_B
+badboy = -2 relation = { who = IDO value = 20 } 
+  }
+}
+country_event = {
+  id = 8206017
+  title = EVT_8206037_NAME
+  desc = EVT_8206037_DESC
+  picture = "nwo2_indonesian_police_actions"
+
+  trigger = {
+    tag = IDO
+  }
+  immediate = { set_global_flag = event_fired_8206017 }
+
+  option = {
+    name = EVT_8206037_A
+any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8206022
+  title = EVT_8206062_NAME
+  desc = EVT_8206062_DESC
+  picture = "nwo2_indonesia_prolonged_fight"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = IDO tag = NET }
+    year = 1949
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206022 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8206060_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+any_pop = { militancy = 0.2 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+any_pop = { militancy = 0.1 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+badboy = 3 
+      }
+
+  }
+}
+country_event = {
+  id = 8206023
+  title = EVT_8206063_NAME
+  desc = EVT_8206063_DESC
+  picture = "nwo2_indonesia_prolonged_fight"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = IDO tag = NET }
+    year = 1999
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206023 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8206060_A
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          has_global_flag = event_fired_8510606
+          }
+
+        }
+any_pop = { militancy = 0.3 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          has_global_flag = event_fired_8510606
+          }
+
+        }
+any_pop = { militancy = 0.2 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+any_pop = { militancy = 0.1 }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+badboy = 4 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          has_global_flag = event_fired_8510606
+          }
+
+        }
+badboy = 8 
+      }
+
+  }
+}
+country_event = {
+  id = 8206025
+  title = EVT_8206065_NAME
+  desc = EVT_8206065_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = IDO tag = NET }
+    year = 1947
+    ai = no
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206025 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8206065_A
+country_event = 8206030 any_pop = { militancy = -0.3 }
+  }
+}
+country_event = {
+  id = 8206026
+  title = EVT_8206066_NAME
+  desc = EVT_8206066_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = IDO tag = NET }
+    year = 1948
+    OR = {
+    AND = {
+    IDO = { ai = yes }
+    }
+    ai = no
+    }
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206026 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8206066_A
+country_event = 8206030 any_pop = { militancy = -0.3 }
+  }
+
+  option = {
+    name = EVT_8206066_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+badboy = 1 
+  }
+}
+country_event = {
+  id = 8206027
+  title = EVT_8206067_NAME
+  desc = EVT_8206067_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = IDO tag = NET }
+    year = 1999
+    OR = {
+    AND = {
+    IDO = { ai = yes }
+    }
+    ai = no
+    }
+    NOT = {
+    has_global_flag = event_fired_8510607
+    }
+    NOT = {
+    has_global_flag = event_fired_8510606
+    }
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206027 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8206067_A
+country_event = 8206030 any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8206067_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+badboy = 1 
+  }
+}
+country_event = {
+  id = 8206028
+  title = EVT_8206068_NAME
+  desc = EVT_8206068_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = IDO tag = NET }
+    year = 1999
+    OR = {
+    AND = {
+    IDO = { ai = yes }
+    }
+    ai = no
+    }
+    OR = {
+    has_global_flag = event_fired_8510606
+    }
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206028 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8206068_A
+country_event = 8206030 any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8206068_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+badboy = 1 
+  }
+}
+country_event = {
+  id = 8206029
+  title = EVT_8206069_NAME
+  desc = EVT_8206069_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1999
+    average_militancy  = 20
+    IDO = { war_with = IDO }
+  }
+  immediate = { set_global_flag = event_fired_8206029 }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_8206069_A
+country_event = 8206030 any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8206030
+  title = EVT_8206070_NAME
+  desc = EVT_8206070_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+
+  trigger = {
+    tag = IDO
+  }
+  immediate = { set_global_flag = event_fired_8206030 }
+
+  option = {
+    name = EVT_8206070_A
+Indonesia = { secede_province = -2 } Indonesia = { secede_province = IDO } end_war = IDO capital = 1064 any_pop = { militancy = -1.0 }2534 = { remove_core =  THIS }1298 = { remove_core =  THIS }610 = { remove_core =  THIS }1334 = { remove_core =  THIS }1438 = { remove_core =  THIS }795 = { remove_core =  THIS }1430 = { remove_core =  THIS }1447 = { remove_core =  THIS }1439 = { remove_core =  THIS }1886 = { remove_core =  THIS }
+  }
+}
+country_event = {
+  id = 8206031
+  title = EVT_8206071_NAME
+  desc = EVT_8206071_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1999
+    NOT = {
+    IDO = { war_with = IDO }
+    }
+    has_global_flag = event_fired_8206030
+  }
+  immediate = { set_global_flag = event_fired_8206031 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8206071_A
+any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8206032
+  title = EVT_8206072_NAME
+  desc = EVT_8206072_DESC
+  picture = "nwo2_federated_indonesia"
+
+  trigger = {
+    tag = IDO
+    has_global_flag = event_fired_8206031
+    has_global_flag = federated_indonesia
+  }
+  immediate = { set_global_flag = event_fired_8206032 }
+
+  option = {
+    name = EVT_8206072_A
+create_vassal = IDO 1398 = { secede_province = IDO } 1404 = { secede_province = IDO } 1403 = { secede_province = IDO } 1410 = { secede_province = IDO } 1399 = { secede_province = IDO } WestJava = { secede_province = IDO } EastJava = { secede_province = IDO } 
+  }
+}
+country_event = {
+  id = 8206040
+  title = EVT_8206080_NAME
+  desc = EVT_8206080_DESC
+  picture = "nwo2_dutch_west_guinea"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1999
+    NOT = {
+    has_global_flag = federated_indonesia
+    }
+    has_global_flag = event_fired_8206030
+    IDO = { ai = yes }
+  }
+  immediate = { set_global_flag = event_fired_8206040 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8206080_A
+country_event = 8206042 
+  }
+
+  option = {
+    name = EVT_8206080_B
+country_event = 8206041 any_pop = { militancy = 1.5 }badboy = 25 
+  }
+}
+country_event = {
+  id = 8206041
+  title = EVT_8206081_NAME
+  desc = EVT_8206081_DESC
+  picture = "nwo2_dutch_west_guinea"
+
+  trigger = {
+    tag = IDO
+  }
+  immediate = { set_global_flag = event_fired_8206041 }
+
+  option = {
+    name = EVT_8206081_A
+
+# TODO this needs to be separate events
+#    trigger = {
+#      OR = {
+#      NOT = {
+#      IDO = { alliance_with = USA }
+#      }
+#      NOT = {
+#      IDO = { alliance_with = ENG }
+#      }
+#      ai = no
+#      }
+#    }
+war = IDO 
+  }
+
+  option = {
+    name = EVT_8206081_B
+any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.65 } } }
+  }
+}
+country_event = {
+  id = 8206042
+  title = EVT_8206082_NAME
+  desc = EVT_8206082_DESC
+  picture = "nwo2_dutch_west_guinea"
+
+  trigger = {
+    tag = IDO
+  }
+  immediate = { set_global_flag = event_fired_8206042 }
+
+  option = {
+    name = EVT_8206082_A
+inherit = IDO 
+  }
+}
+country_event = {
+  id = 8206050
+  title = EVT_8206050_NAME
+  desc = EVT_8206050_DESC
+  picture = "nwo2_dutch_east_india"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1955
+    NOT = {
+    has_global_flag = event_fired_8206030
+    }
+    exists = IDO
+    has_global_flag = cold_war_pacific
+    IDO = { vassal_of = NET }
+  }
+  immediate = { set_global_flag = event_fired_8206050 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8206050_A
+overlord = { release_vassal = THIS } 
+  }
+}
+country_event = {
+  id = 8206051
+  title = EVT_8206051_NAME
+  desc = EVT_8206051_DESC
+  picture = "nwo2_dutch_east_india"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1955
+    NOT = {
+    IDO = { vassal_of = NET }
+    }
+    has_global_flag = event_fired_8206030
+    has_global_flag = cold_war_pacific
+  }
+  immediate = { set_global_flag = event_fired_8206051 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8206051_A
+create_vassal = IDO 
+  }
+}
+country_event = {
+  id = 8206052
+  title = EVT_8206052_NAME
+  desc = EVT_8206052_DESC
+  picture = "nwo2_dutch_west_guinea"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1999
+    NOT = {
+    has_global_flag = federated_indonesia
+    }
+    exists = IDO
+    has_global_flag = cold_war_pacific
+    IDO = { vassal_of = NET }
+  }
+  immediate = { set_global_flag = event_fired_8206052 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8206052_A
+overlord = { release_vassal = THIS } 
+  }
+}

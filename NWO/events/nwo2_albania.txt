@@ -1,0 +1,113 @@
+country_event = {
+  id = 8000201
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ALB
+    year = 1988
+  }
+  immediate = { set_global_flag = event_fired_8000201 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Mori" personality = energetic background = no_background }define_general = { name = "Kristo" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8000202
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ALB
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8000202 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+}
+country_event = {
+  id = 8000203
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ALB
+    year = 1990
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8000203 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+}
+country_event = {
+  id = 8000204
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ALB
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8000204 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+  }
+}
+country_event = {
+  id = 8000205
+  title = "EVT_8000202_NAME"
+  desc = "EVT_8000202_DESC"
+  picture = "nwo2_kosovo_claims"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ALB
+    year = 1999
+    NOT = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8000205 }
+
+  mean_time_to_happen = { days = 1000 }
+
+  option = {
+    name = "EVT_8000202_A"
+498 = { remove_core =  THIS }relation = { who = YUG value = 100 } 
+  }
+
+  option = {
+    name = "EVT_8000202_B"
+relation = { who = YUG value = -100 } badboy = 10 
+  }
+}

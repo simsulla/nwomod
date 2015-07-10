@@ -1,0 +1,376 @@
+country_event = {
+  id = 8380000
+  title = EVT_8380000_NAME
+  desc = EVT_8380000_DESC
+  picture = "nwo2_american_troops_in_moscow"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    OR = {
+    NOT = {
+    any_owned_province = { province_id = 1915 }    }
+    NOT = {
+    any_owned_province = { province_id = 795 }    }
+    }
+    NOT = {
+    war_with = GER
+    }
+    NOT = {
+    any_owned_province = { province_id = 155 }    any_owned_province = { province_id = 155 }    any_owned_province = { province_id = 1923 }    any_owned_province = { province_id = 1098 }    }
+    NOT = {
+    has_global_flag = novus_ordo_seclorum
+    }
+    NOT = {
+    has_global_flag = event_fired_8381000
+    }
+    USA = { war_with = RUS }
+    RUS = { lost_national = 0.55 }
+  }
+  immediate = { set_global_flag = event_fired_8380000 }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8380000_A
+set_global_flag = novus_ordo_seclorum any_pop = { militancy = 1.5 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.65 } } }
+  }
+
+  option = {
+    name = EVT_8380000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      NOT = {
+#      average_militancy  = 40
+#      }
+#    }
+any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8381000
+  title = EVT_8381000_NAME
+  desc = EVT_8381000_DESC
+  picture = "nwo2_russia_administrative_division"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    has_global_flag = novus_ordo_seclorum
+  }
+  immediate = { set_global_flag = event_fired_8381000 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8381000_A
+
+  }
+
+  option = {
+    name = EVT_8381000_B
+country_event =  { id = 8383002 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8381000_C
+country_event =  { id = 8383000 days = 1 } country_event =  { id = 8383001 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8381000_D
+any_pop = { militancy = 2.0 }clr_global_flag = novus_ordo_seclorum 
+  }
+}
+country_event = {
+  id = 8382000
+  title = EVT_8382000_NAME
+  desc = EVT_8382000_DESC
+  picture = "nwo2_defeated_zhukov"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = novus_ordo_seclorum
+     has_global_flag = event_fired_8381000
+  }
+  immediate = { set_global_flag = event_fired_8382000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8382000_A
+end_war = JAP end_war = USA end_war = ENG country_event =  { id = 2088001 days = 1 } change_tag = RUS set_global_flag = lower_soviet_bloc_coherence country_event = 8225001 
+  }
+}
+country_event = {
+  id = 8383000
+  title = EVT_8383000_NAME
+  desc = EVT_8383000_DESC
+  picture = "nwo2_republics_of_ussr"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = novus_ordo_seclorum
+     has_global_flag = event_fired_8382000
+  }
+  immediate = { set_global_flag = event_fired_8383000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8383000_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.5 } } }664 = { secede_province = ROM } 665 = { secede_province = ROM } 666 = { secede_province = ROM } 668 = { secede_province = ROM } 667 = { secede_province = ROM } 669 = { secede_province = ROM } release = LIT release = LAT release = EST release = BYE release = UKR release = AZB release = GEO release = ARM release = KAZ release = TRK release = UZB release = KYR release = TAJ 1003 = { secede_province = UKR } 201 = { secede_province = GEO } 202 = { secede_province = GEO } 204 = { secede_province = GEO } 2555 = { secede_province = GEO } 106 = { secede_province = GEO } 150 = { secede_province = GEO } 1185 = { secede_province = KAZ } 1186 = { secede_province = KAZ } 1187 = { secede_province = KAZ } 1188 = { secede_province = KAZ } 2606 = { secede_province = KAZ } 
+  }
+}
+country_event = {
+  id = 8383001
+  title = EVT_8383001_NAME
+  desc = EVT_8383001_DESC
+  picture = "nwo2_empire_of_russia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = novus_ordo_seclorum
+     has_global_flag = event_fired_8382000
+  }
+  immediate = { set_global_flag = event_fired_8383001 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8383001_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }664 = { secede_province = ROM } 665 = { secede_province = ROM } 666 = { secede_province = ROM } 668 = { secede_province = ROM } 667 = { secede_province = ROM } 669 = { secede_province = ROM } release = LIT release = LAT release = EST create_vassal = LIT create_vassal = LAT create_vassal = EST create_alliance = LIT create_alliance = LAT create_alliance = EST 
+  }
+}
+country_event = {
+  id = 8383002
+  title = EVT_8383002_NAME
+  desc = EVT_8383002_DESC
+  picture = "nwo2_americans_in_vladivostok"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    has_global_flag = novus_ordo_seclorum
+     has_global_flag = event_fired_8382000
+  }
+  immediate = { set_global_flag = event_fired_8383002 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8383002_A
+1182 = { secede_province = USA } 1183 = { secede_province = USA } 1194 = { secede_province = USA } 2610 = { secede_province = USA } 2702 = { secede_province = USA } 1192 = { secede_province = USA } NorthernPermafrost = { secede_province = USA } 1077 = { secede_province = USA } 1067 = { secede_province = USA } 1068 = { secede_province = USA } 1063 = { secede_province = USA } 2698 = { secede_province = USA } 1064 = { secede_province = USA } 2615 = { secede_province = USA } Krasnoyarsk = { secede_province = USA } 1075 = { secede_province = USA } 2676 = { secede_province = USA } 2677 = { secede_province = USA } 2695 = { secede_province = USA } 
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          JAP = { vassal_of = USA }
+          USA = { alliance_with = JAP }
+          }
+
+        }
+Primorski = { secede_province = JAP } 
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          OR = {
+          JAP = { vassal_of = USA }
+          USA = { alliance_with = JAP }
+          }
+
+        }
+Sakhalin_Kuriles = { secede_province = JAP } 
+      }
+FarEastSiberia = { secede_province = USA } 664 = { secede_province = ROM } 665 = { secede_province = ROM } 666 = { secede_province = ROM } 668 = { secede_province = ROM } 667 = { secede_province = ROM } 669 = { secede_province = ROM } random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.5 } } }release = LIT release = LAT release = EST release = BYE release = UKR release = AZB release = GEO release = ARM release = KAZ release = TRK release = UZB release = KYR release = TAJ 1003 = { secede_province = UKR } 201 = { secede_province = GEO } 202 = { secede_province = GEO } 204 = { secede_province = GEO } 2555 = { secede_province = GEO } 106 = { secede_province = GEO } 150 = { secede_province = GEO } 1185 = { secede_province = KAZ } 1186 = { secede_province = KAZ } 1187 = { secede_province = KAZ } 1188 = { secede_province = KAZ } 2606 = { secede_province = KAZ } 
+  }
+}
+country_event = {
+  id = 8384000
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_null"
+  fire_only_once = yes
+
+  trigger = {
+    tag = REB
+    year = 1999
+    OR = {
+    OR = {
+     has_global_flag = event_fired_8383000
+     has_global_flag = event_fired_8383001
+     has_global_flag = event_fired_8383002
+    }
+    }
+    has_global_flag = novus_ordo_seclorum
+  }
+  immediate = { set_global_flag = event_fired_8384000 }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+clr_global_flag = novus_ordo_seclorum 
+  }
+}
+country_event = {
+  id = 8389000
+  title = EVT_8389000_NAME
+  desc = EVT_8389000_DESC
+  picture = "nwo2_national_alliance_of_russian_solidarists"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    NOT = {
+    has_global_flag = novus_ordo_seclorum
+    }
+    has_global_flag = ww3
+    USA = { war_with = RUS }
+    RUS = { lost_national = 0.15 }
+  }
+  immediate = { set_global_flag = event_fired_8389000 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8389000_A
+money = -500 
+  }
+
+  option = {
+    name = EVT_8389000_B
+
+# TODO this needs to be separate events
+#    trigger = {
+#      ai = yes
+#    }
+money = 1 country_event =  { id = 8389001 days = 1 } 
+  }
+}
+country_event = {
+  id = 8389001
+  title = EVT_8389001_NAME
+  desc = EVT_8389001_DESC
+  picture = "nwo2_national_alliance_of_russian_solidarists"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1999
+    NOT = {
+    has_global_flag = novus_ordo_seclorum
+    }
+    has_global_flag = event_fired_8389000
+    has_global_flag = ww3
+    USA = { war_with = RUS }
+    RUS = { lost_national = 0.25 }
+  }
+  immediate = { set_global_flag = event_fired_8389001 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8389001_A
+any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }country_event =  { id = 8389002 days = 1 } 
+  }
+
+  option = {
+    name = EVT_8389001_B
+any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8389002
+  title = EVT_8389002_NAME
+  desc = EVT_8389002_DESC
+  picture = "nwo2_national_alliance_of_russian_solidarists"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    has_global_flag = event_fired_8384000
+    exists = RUS
+  }
+  immediate = { set_global_flag = event_fired_8389002 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8389002_A
+relation = { who = RUS value = -50 } 
+  }
+
+  option = {
+    name = EVT_8389002_B
+country_event = 8389003 relation = { who = RUS value = 25 } 
+  }
+}
+country_event = {
+  id = 8389003
+  title = EVT_8389003_NAME
+  desc = EVT_8389003_DESC
+  picture = "nwo2_national_alliance_of_russian_solidarists"
+
+  trigger = {
+    tag = RUS
+  }
+  immediate = { set_global_flag = event_fired_8389003 }
+
+  option = {
+    name = EVT_8389003_A
+random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+define_general = { name = "Bildering" personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+          NOT = {
+          }
+
+        }
+define_general = { name = "Birger R.K." personality = energetic background = no_background }
+      }
+
+      random_country = {
+
+        limit = {
+
+          tag = THIS
+
+        }
+define_general = { name = "Biryukov" personality = energetic background = no_background }
+      }
+
+  }
+}

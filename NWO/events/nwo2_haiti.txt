@@ -1,0 +1,230 @@
+country_event = {
+  id = 8006601
+  title = EVT_8006601_NAME
+  desc = EVT_8006601_DESC
+  picture = "nwo2_paul_magloire"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1950
+  }
+  immediate = { set_global_flag = event_fired_8006601 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8006601_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }define_general = { name = "Polynice" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8006602
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1956
+  }
+  immediate = { set_global_flag = event_fired_8006602 }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Sainté Frederic" personality = energetic background = no_background }define_general = { name = "Polynice" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8006603
+  title = EVT_ELECTIONS_NAME
+  desc = EVT_ELECTIONS_DESC
+  picture = "nwo2_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1970
+  }
+  immediate = { set_global_flag = event_fired_8006603 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_ELECTIONS_LEFT
+any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_RIGHT
+any_pop = { militancy = -0.4 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Léger" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_ELECTIONS_NOCHANGE
+any_pop = { militancy = 1.8 }
+  }
+}
+country_event = {
+  id = 8006604
+  title = EVT_DEATH_NAME
+  desc = EVT_DEATH_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1985
+  }
+  immediate = { set_global_flag = event_fired_8006604 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_DEATH
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+}
+country_event = {
+  id = 8006605
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1987
+  }
+  immediate = { set_global_flag = event_fired_8006605 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+}
+country_event = {
+  id = 8006606
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1989
+  }
+  immediate = { set_global_flag = event_fired_8006606 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+}
+country_event = {
+  id = 8006607
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1990
+  }
+  immediate = { set_global_flag = event_fired_8006607 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+  }
+}
+country_event = {
+  id = 8006608
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8006608 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.050000000000000044 } } }
+  }
+}
+country_event = {
+  id = 8006609
+  title = EVT_8006609_NAME
+  desc = EVT_8006609_DESC
+  picture = "nwo2_hurricane"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1954
+  }
+  immediate = { set_global_flag = event_fired_8006609 }
+
+  mean_time_to_happen = { days = 20 }
+
+  option = {
+    name = EVT_8006609_A
+any_pop = { militancy = 2.0 }
+  }
+}
+country_event = {
+  id = 8006610
+  title = EVT_8006610_NAME
+  desc = EVT_8006610_DESC
+  picture = "nwo2_francois_duvalier"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1963
+  }
+  immediate = { set_global_flag = event_fired_8006610 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8006610_A
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.65 } } }
+  }
+}
+country_event = {
+  id = 8006611
+  title = EVT_8006611_NAME
+  desc = EVT_8006611_DESC
+  picture = "nwo2_francois_duvalier"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HAI
+    year = 1983
+  }
+  immediate = { set_global_flag = event_fired_8006611 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8006611_A
+any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
+  }
+}

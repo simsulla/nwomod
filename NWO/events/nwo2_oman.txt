@@ -1,0 +1,91 @@
+country_event = {
+  id = 8010801
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = OMA
+    year = 1969
+  }
+  immediate = { set_global_flag = event_fired_8010801 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Abdul Qaader" personality = energetic background = no_background }define_general = { name = "Douglas-Hamilton" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8010802
+  title = EVT_8010802_NAME
+  desc = EVT_8010802_DESC
+  picture = "nwo2_oman"
+  fire_only_once = yes
+
+  trigger = {
+    tag = OMA
+    year = 1959
+  }
+  immediate = { set_global_flag = event_fired_8010802 }
+
+  mean_time_to_happen = { days = 300 }
+
+  option = {
+    name = EVT_8010802_A
+random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }any_pop = { militancy = 0.5 }
+  }
+
+  option = {
+    name = EVT_8010802_B
+any_pop = { militancy = 1.0 }country_event =  { id = 8010803 days = 1 } 
+  }
+}
+country_event = {
+  id = 8010803
+  title = EVT_8010803_NAME
+  desc = EVT_8010803_DESC
+  picture = "nwo2_oman"
+  fire_only_once = yes
+
+  trigger = {
+    tag = OMA
+    year = 1960
+    has_global_flag = event_fired_8010802
+  }
+  immediate = { set_global_flag = event_fired_8010803 }
+
+  mean_time_to_happen = { days = 300 }
+
+  option = {
+    name = EVT_8010803_A
+any_pop = { militancy = -1.0 }
+  }
+
+  option = {
+    name = EVT_8010803_B
+any_pop = { militancy = 2.5 }
+  }
+}
+country_event = {
+  id = 8010804
+  title = EVT_8010804_NAME
+  desc = EVT_8010804_DESC
+  picture = "nwo2_sultan_qaboos"
+  fire_only_once = yes
+
+  trigger = {
+    tag = OMA
+    year = 1999
+  }
+  immediate = { set_global_flag = event_fired_8010804 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8010804_A
+
+  }
+}

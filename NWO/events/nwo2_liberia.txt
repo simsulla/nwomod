@@ -1,0 +1,177 @@
+country_event = {
+  id = 8008801
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1951
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008801 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Banks Williams" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008802
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1970
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008802 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+define_general = { name = "Banks Williams" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8008803
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1976
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008803 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8008804
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1979
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008804 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8008805
+  title = EVT_8008805_NAME
+  desc = EVT_8008805_DESC
+  picture = "nwo2_samuel_doe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1985
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008805 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008805_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8008806
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1989
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008806 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
+country_event = {
+  id = 8008807
+  title = EVT_8008807_NAME
+  desc = EVT_8008807_DESC
+  picture = "nwo2_charles_taylor"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1999
+    OR = {
+    }
+    has_global_flag = event_fired_8008808
+  }
+  immediate = { set_global_flag = event_fired_8008807 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008807_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}
+country_event = {
+  id = 8008808
+  title = EVT_8008808_NAME
+  desc = EVT_8008808_DESC
+  picture = "nwo2_charles_taylor"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1999
+    OR = {
+    }
+  }
+  immediate = { set_global_flag = event_fired_8008808 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008808_A
+random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+  }
+}

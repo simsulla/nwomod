@@ -1,0 +1,21 @@
+country_event = {
+  id = 8022201
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = DEN
+    year = 1999
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8022201 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+
+  }
+}
