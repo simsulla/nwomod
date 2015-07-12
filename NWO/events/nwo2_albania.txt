@@ -7,7 +7,8 @@ country_event = {
 
   trigger = {
     tag = ALB
-    year = 1988
+    year = 1944
+    NOT = { government = proletarian_dictatorship }
   }
   immediate = { set_global_flag = event_fired_8000201 }
 
@@ -15,7 +16,10 @@ country_event = {
 
   option = {
     name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Mori" personality = energetic background = no_background }define_general = { name = "Kristo" personality = energetic background = no_background }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+	define_general = { name = "Theofan Noli" personality = energetic background = no_background }
+	define_general = { name = "Xhafer Ypi" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -27,17 +31,16 @@ country_event = {
 
   trigger = {
     tag = ALB
-    year = 1999
-    OR = {
-    }
+    year = 1989
+    NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000202 }
-
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+	define_general = { name = "Ramiz Alia" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -50,16 +53,15 @@ country_event = {
   trigger = {
     tag = ALB
     year = 1990
-    OR = {
-    }
+    NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000203 }
-
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+	define_general = { name = "Adil Carcani" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -71,17 +73,16 @@ country_event = {
 
   trigger = {
     tag = ALB
-    year = 1999
-    OR = {
-    }
+    year = 1991
+    NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000204 }
-
+ 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.09999999999999998 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
+	define_general = { name = "Fatos Nano" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -93,21 +94,25 @@ country_event = {
 
   trigger = {
     tag = ALB
-    year = 1999
-    NOT = {
-    }
+    year = 1945
+	NOT = { owns = 802 }
   }
-  immediate = { set_global_flag = event_fired_8000205 }
-
   mean_time_to_happen = { days = 1000 }
 
   option = {
     name = "EVT_8000202_A"
-498 = { remove_core =  THIS }relation = { who = YUG value = 100 } 
+	ai_chance = { factor = 60 }
+	802 = { remove_core =  ALB }
+	803 = { remove_core =  ALB }
+	relation = { who = YUG value = 100 } 
   }
 
   option = {
     name = "EVT_8000202_B"
-relation = { who = YUG value = -100 } badboy = 10 
+	ai_chance = { factor = 40 }
+	802 = { add_core =  ALB }
+	803 = { add_core =  ALB }
+	relation = { who = YUG value = -100 } 
+	badboy = 10 
   }
 }

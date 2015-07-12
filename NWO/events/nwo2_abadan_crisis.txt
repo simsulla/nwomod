@@ -7,7 +7,7 @@ country_event = {
 
   trigger = {
     tag = PER
-    year = 1952
+    year = 1951
     has_global_flag = cold_war
   }
   immediate = { set_global_flag = event_fired_8501001 }
@@ -15,13 +15,15 @@ country_event = {
   mean_time_to_happen = { days = 30 }
 
   option = {
-    name = EVT_8501001_A
-add_country_modifier = { name = dh_industrial_modifier duration = 365 }relation = { who = ENG value = -100 } 
+    name = EVT_8501001_A # Nationalize the fields
+	nationalize = yes
+	relation = { who = ENG value = -100 } 
   }
 
   option = {
-    name = EVT_8501001_B
-any_pop = { militancy = 1.5 }country_event =  { id = 8501002 days = 1 } 
+    name = EVT_8501001_B # Remain on good terms
+	any_pop = { militancy = 1.5 }
+	ENG = { country_event =  { id = 8501002 days = 30 } }
   }
 }
 country_event = {
@@ -31,23 +33,22 @@ country_event = {
   picture = "nwo2_abadan_crisis"
   fire_only_once = yes
 
-  trigger = {
-    tag = ENG
-    year = 1953
-    has_global_flag = event_fired_8501001
-  }
-  immediate = { set_global_flag = event_fired_8501002 }
+  is_triggered_only = yes
+  
+   immediate = { set_global_flag = event_fired_8501002 }
 
-  mean_time_to_happen = { days = 30 }
-
-  option = {
+  option = { # Impose sanctions
     name = EVT_8501002_A
-badboy = 10 relation = { who = PER value = -100 } 
+	badboy = 10 
+	relation = { who = PER value = -100 } 
+	ai_chance = { factor = 80 }
   }
 
   option = {
     name = EVT_8501002_B
-any_pop = { militancy = 1.0 }relation = { who = PER value = 100 } country_event =  { id = 8501003 days = 1 } 
+	PER = { add_country_modifier = { name = great_depression duration = 60 } }
+	relation = { who = PER value = 100 } 
+	ai_chance = { factor = 20 }
   }
 }
 country_event = {
@@ -64,18 +65,25 @@ country_event = {
   }
   immediate = { set_global_flag = event_fired_8501003 }
 
-  mean_time_to_happen = { days = 30 }
+  mean_time_to_happen = { days = 60 }
 
   option = {
-    name = EVT_8501003_A
-add_country_modifier = { name = dh_industrial_modifier duration = 365 }any_pop = { militancy = 1.5 }
+    name = EVT_8501003_A # Sanctions are successful
+	add_country_modifier = { name = stock_market_crash duration = 365 }
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 80 }
   }
 
   option = {
-    name = EVT_8501003_B
-any_pop = { militancy = 1.0 }country_event =  { id = 8501004 days = 1 } country_event =  { id = 8501020 days = 1 } 
+    name = EVT_8501003_B # Sanctions are a failure
+	any_pop = { militancy = 0.1 }
+	country_event =  { id = 8501004 days = 30 } 
+	country_event =  { id = 8501020 days = 60 } # Operation Ajax
+	ai_chance = { factor = 20 }
   }
 }
+
+# Economic sanctions are successful, we ask Soviets, otherwise its going to end up in Operation Ajax
 country_event = {
   id = 8501004
   title = EVT_8501004_NAME
@@ -83,44 +91,41 @@ country_event = {
   picture = "nwo2_abadan_crisis"
   fire_only_once = yes
 
-  trigger = {
-    tag = PER
-    year = 1953
-    has_global_flag = event_fired_8501003
-  }
+  is_triggered_only = yes
   immediate = { set_global_flag = event_fired_8501004 }
 
-  mean_time_to_happen = { days = 30 }
-
   option = {
-    name = EVT_8501004_A
-any_pop = { militancy = 1.5 }
+    name = EVT_8501004_A # Try to persevere
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 70 }
   }
 
   option = {
-    name = EVT_8501004_B
-country_event = 8501005 
+    name = EVT_8501004_B # Ask Soviets for help
+	RUS = { country_event = 8501005 }
+	ai_chance = { factor = 30 }
   }
 }
+# Soviet are asked for help
 country_event = {
   id = 8501005
   title = EVT_8501005_NAME
   desc = EVT_8501005_DESC
   picture = "nwo2_abadan_crisis"
 
-  trigger = {
-    tag = RUS
-  }
-  immediate = { set_global_flag = event_fired_8501005 }
+  is_triggered_only = yes
 
   option = {
-    name = EVT_8501005_A
-relation = { who = PER value = 50 } country_event = 8501006 
+    name = EVT_8501005_A # Help out
+	relation = { who = PER value = 50 } 
+	USA = { country_event = 8501006 }  # American ultimatum
+	ai_chance = { factor = 75 }
   }
 
   option = {
-    name = EVT_8501005_B
-relation = { who = PER value = -50 } 
+    name = EVT_8501005_B # Refrain
+	relation = { who = PER value = -50 } 
+	ai_chance = { factor = 25 }
   }
 }
 country_event = {
@@ -129,19 +134,21 @@ country_event = {
   desc = EVT_8501006_DESC
   picture = "nwo2_abadan_crisis"
 
-  trigger = {
-    tag = USA
-  }
+  is_triggered_only = yes
   immediate = { set_global_flag = event_fired_8501006 }
 
   option = {
-    name = EVT_8501006_A
-relation = { who = PER value = -50 } country_event = 8501007 
+    name = EVT_8501006_A # Soviet reaction
+	relation = { who = PER value = -50 } 
+	RUS = { country_event = 8501007 } 
+	ai_chance = { factor = 60 }
   }
 
   option = {
     name = EVT_8501006_B
-country_event = 8501010 relation = { who = ENG value = -150 } 
+	RUS = { country_event = 8501010 } # Soviets are able to send Iranians help
+	relation = { who = ENG value = -150 } 
+	ai_chance = { factor = 40 }
   }
 }
 country_event = {
@@ -150,19 +157,19 @@ country_event = {
   desc = EVT_8501007_DESC
   picture = "nwo2_abadan_crisis"
 
-  trigger = {
-    tag = RUS
-  }
-  immediate = { set_global_flag = event_fired_8501007 }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8501007_A
-relation = { who = PER value = -50 } 
+	relation = { who = PER value = -50 } 
+	ai_chance = { factor = 75 }
   }
 
   option = {
     name = EVT_8501007_B
-country_event = 8501010 country_event = 8501008 
+	PER = { country_event = 8501010 } 
+	USA = { country_event = 8501008 }
+	ai_chance = { factor = 25 }
   }
 }
 country_event = {
@@ -171,37 +178,38 @@ country_event = {
   desc = EVT_8501008_DESC
   picture = "nwo2_abadan_crisis"
 
-  trigger = {
-    tag = USA
-  }
-  immediate = { set_global_flag = event_fired_8501008 }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8501008_A
-war = RUS any_pop = { militancy = 0.5 }
+	add_casus_belli = { target = RUS type = humiliate months = 24 }
+	war = RUS 
+	ai_chance = { factor = 0 }
+	any_pop = { militancy = 0.5 }
   }
 
   option = {
     name = EVT_8501008_B
-any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+	ai_chance =  { factor = 100 }
+	any_pop = { militancy = 0.1 }
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.05 } } }
   }
 }
+
 country_event = {
   id = 8501010
   title = EVT_8501010_NAME
   desc = EVT_8501010_DESC
   picture = "nwo2_abadan_crisis"
 
-  trigger = {
-    tag = PER
-  }
-  immediate = { set_global_flag = event_fired_8501010 }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8501010_A
-add_country_modifier = { name = dh_industrial_modifier duration = 365 }any_pop = { militancy = -2.0 }
+	any_pop = { militancy = -0.5 }
   }
 }
+
 country_event = {
   id = 8501020
   title = EVT_8501020_NAME
@@ -209,26 +217,21 @@ country_event = {
   picture = "nwo2_operation_ajax"
   fire_only_once = yes
 
-  trigger = {
-    tag = PER
-    year = 1953
-    NOT = {
-    has_global_flag = event_fired_8501010
-    }
-    has_global_flag = event_fired_8501004
-  }
-  immediate = { set_global_flag = event_fired_8501020 }
+  is_triggered_only = yes
 
   mean_time_to_happen = { days = 90 }
 
   option = {
     name = EVT_8501020_A
-any_pop = { militancy = 1.0 }country_event =  { id = 8501022 days = 1 } country_event = 8011407 
+	any_pop = { militancy = 1.0 }
+	country_event =  { id = 8501022 days = 360 } 
+	country_event = { id = 8011407 days = 360 }  
   }
 
   option = {
     name = EVT_8501020_B
-any_pop = { militancy = -1.0 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }country_event =  { id = 8011407 days = 1 } country_event =  { id = 8501021 days = 1 } 
+	any_pop = { militancy = -1.0 }
+	country_event = { id = 8011407 days = 360 } 
   }
 }
 country_event = {
@@ -244,13 +247,12 @@ country_event = {
     has_global_flag = event_fired_8501002
     has_global_flag = cold_war
   }
-  immediate = { set_global_flag = event_fired_8501021 }
 
   mean_time_to_happen = { days = 180 }
 
   option = {
     name = EVT_8501021_A
-any_pop = { militancy = -0.3 }
+	any_pop = { militancy = -0.3 }
   }
 }
 country_event = {
@@ -266,12 +268,11 @@ country_event = {
     has_global_flag = event_fired_8501002
     has_global_flag = cold_war
   }
-  immediate = { set_global_flag = event_fired_8501022 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = EVT_8501022_A
-any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 0.8 }
   }
 }

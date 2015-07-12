@@ -1,68 +1,4 @@
 country_event = {
-  id = 8000801
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1950
-    OR = {
-    }
-  }
-  immediate = { set_global_flag = event_fired_8000801 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -1.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Pistarini" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 1.2 }
-  }
-}
-country_event = {
-  id = 8000802
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1954
-    OR = {
-    }
-  }
-  immediate = { set_global_flag = event_fired_8000802 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -1.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Pistarini" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 1.5 }
-  }
-}
-country_event = {
   id = 8000803
   title = "EVT_8000803_NAME"
   desc = "EVT_8000803_DESC"
@@ -71,90 +7,27 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1957
+    year = 1955
   }
-  immediate = { set_global_flag = event_fired_8000803 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = "EVT_8000803_A"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
+	random_state = { any_pop = { dominant_issue = { value = ruling_party_opinion factor = 0.30 } } }
+	define_general = { name = "Pedro Aramburu" personality = energetic background = no_background }
+	government = presidential_dictatorship
   }
 
   option = {
     name = "EVT_8000803_B"
-any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
+	any_pop = { militancy = 1.0 }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }
+	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
   }
 }
-country_event = {
-  id = 8000804
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
 
-  trigger = {
-    tag = ARG
-    year = 1962
-    OR = {
-    AND = {
-    }
-    }
-  }
-  immediate = { set_global_flag = event_fired_8000804 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 0.9 }
-  }
-}
-country_event = {
-  id = 8000805
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1964
-    OR = {
-    AND = {
-    }
-    }
-  }
-  immediate = { set_global_flag = event_fired_8000805 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -1.5 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 1.5 }
-  }
-}
 country_event = {
   id = 8000806
   title = EVT_8000806_NAME
@@ -168,85 +41,15 @@ country_event = {
     OR = {
     }
   }
-  immediate = { set_global_flag = event_fired_8000806 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = EVT_8000806_A
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-}
-country_event = {
-  id = 8000807
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1970
-  }
-  immediate = { set_global_flag = event_fired_8000807 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-}
-country_event = {
-  id = 8000808
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1972
-  }
-  immediate = { set_global_flag = event_fired_8000808 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-}
-country_event = {
-  id = 8000809
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1973
-    OR = {
-    }
-  }
-  immediate = { set_global_flag = event_fired_8000809 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19999999999999996 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.6 }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
+	random_state = { any_pop = { dominant_issue = { value = ruling_party_opinion factor = 0.30 } } }
+	define_general = { name = "Juan Carlos Ongania" personality = energetic background = no_background }
+	government = presidential_dictatorship
   }
 }
 country_event = {
@@ -258,49 +61,19 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1975
-    OR = {
-    }
+    year = 1974
+    NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000810 }
 
-  mean_time_to_happen = { days = 1 }
+  mean_time_to_happen = { days = 120 }
 
   option = {
     name = EVT_8000810_A
-
-      random_country = {
-
-        limit = {
-
-          tag = THIS
-
-        }
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }
-      }
-
-      random_country = {
-
-        limit = {
-
-          tag = THIS
-
-        }
-random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
-      }
-
-      random_country = {
-
-        limit = {
-
-          tag = THIS
-
-        }
-
-      }
-
+	define_general = { name = "Isabel Martinez de Perón" personality = energetic background = no_background }
+	kill_leader = "Juan Peron"
   }
 }
+
 country_event = {
   id = 8000811
   title = EVT_8000811_NAME
@@ -310,143 +83,20 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1980
-    OR = {
-    }
+    year = 1976
+    NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000811 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = EVT_8000811_A
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30 } } }
+	random_state = { any_pop = { dominant_issue = { value = ruling_party_opinion factor = 0.35 } } }
+	define_general = { name = "Jorge Rafael Videla" personality = energetic background = no_background }
   }
 }
-country_event = {
-  id = 8000812
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
 
-  trigger = {
-    tag = ARG
-    year = 1981
-  }
-  immediate = { set_global_flag = event_fired_8000812 }
-
-  mean_time_to_happen = { days = 180 }
-
-  option = {
-    name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-}
-country_event = {
-  id = 8000813
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1981
-  }
-  immediate = { set_global_flag = event_fired_8000813 }
-
-  mean_time_to_happen = { days = 180 }
-
-  option = {
-    name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-}
-country_event = {
-  id = 8000814
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1982
-  }
-  immediate = { set_global_flag = event_fired_8000814 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-}
-country_event = {
-  id = 8000815
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1988
-    OR = {
-    }
-  }
-  immediate = { set_global_flag = event_fired_8000815 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.3 }
-  }
-}
-country_event = {
-  id = 8000816
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ARG
-    year = 1999
-    OR = {
-    }
-  }
-  immediate = { set_global_flag = event_fired_8000816 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -1.8 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.19999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 1.8 }
-  }
-}
 country_event = {
   id = 8000817
   title = "EVT_8000817_NAME"
@@ -456,17 +106,18 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1948
+    year = 1947
   }
-  immediate = { set_global_flag = event_fired_8000817 }
-
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = "EVT_8000817_A"
-any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }
+	any_pop = { militancy = -0.5 }
+	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }
+	define_general = { name = "Juan Peron" personality = energetic background = no_background }
   }
 }
+
 country_event = {
   id = 8000818
   title = "EVT_8000818_NAME"
@@ -480,10 +131,10 @@ country_event = {
   }
   immediate = { set_global_flag = event_fired_8000818 }
 
-  mean_time_to_happen = { days = 1 }
+  mean_time_to_happen = { days = 128 }
 
   option = {
     name = "EVT_8000818_A"
-any_pop = { militancy = -0.1 }
+	any_pop = { militancy = -0.1 }
   }
 }

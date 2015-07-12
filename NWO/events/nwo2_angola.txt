@@ -1,161 +1,14 @@
 country_event = {
-  id = 8000601
-  title = "EVT_GOVTCHANGE_NAME"
-  desc = "EVT_GOVTCHANGE_DESC"
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ANG
-    year = 1939
-  }
-  immediate = { set_global_flag = event_fired_8000601 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }define_general = { name = "Bilstein de Menenses" personality = energetic background = no_background }
-  }
-}
-country_event = {
-  id = 8000602
-  title = "EVT_GOVTCHANGE_NAME"
-  desc = "EVT_GOVTCHANGE_DESC"
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ANG
-    year = 1941
-  }
-  immediate = { set_global_flag = event_fired_8000602 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }define_general = { name = "Carvalho" personality = energetic background = no_background }
-  }
-}
-country_event = {
-  id = 8000603
-  title = "EVT_GOVTCHANGE_NAME"
-  desc = "EVT_GOVTCHANGE_DESC"
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ANG
-    year = 1942
-  }
-  immediate = { set_global_flag = event_fired_8000603 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
-  }
-}
-country_event = {
-  id = 8000604
-  title = "EVT_GOVTCHANGE_NAME"
-  desc = "EVT_GOVTCHANGE_DESC"
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ANG
-    year = 1946
-  }
-  immediate = { set_global_flag = event_fired_8000604 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
-  }
-}
-country_event = {
-  id = 8000605
-  title = "EVT_GOVTCHANGE_NAME"
-  desc = "EVT_GOVTCHANGE_DESC"
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ANG
-    year = 1954
-  }
-  immediate = { set_global_flag = event_fired_8000605 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
-  }
-}
-country_event = {
-  id = 8000606
-  title = "EVT_GOVTCHANGE_NAME"
-  desc = "EVT_GOVTCHANGE_DESC"
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ANG
-    year = 1956
-  }
-  immediate = { set_global_flag = event_fired_8000606 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
-  }
-}
-country_event = {
-  id = 8000607
-  title = "EVT_GOVTCHANGE_NAME"
-  desc = "EVT_GOVTCHANGE_DESC"
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ANG
-    year = 1960
-  }
-  immediate = { set_global_flag = event_fired_8000607 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
-  }
-}
-country_event = {
   id = 8000608
   title = "EVT_8000608_NAME"
   desc = "EVT_8000608_DESC"
   picture = "nwo2_angolan_independence"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ANG
-    year = 1974
-  }
-  immediate = { set_global_flag = event_fired_8000608 }
-
-  mean_time_to_happen = { days = 360 }
+  is_triggered_only = yes
 
   option = {
     name = "EVT_8000608_A"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.3 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
   }
 }
 country_event = {
@@ -167,16 +20,17 @@ country_event = {
 
   trigger = {
     tag = ANG
-    year = 1971
+    year = 1966
     ANG = { vassal_of = POR }
   }
-  immediate = { set_global_flag = event_fired_8000611 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	define_general = { name = "Camilo Rebocho Vaz" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -188,16 +42,17 @@ country_event = {
 
   trigger = {
     tag = ANG
-    year = 1973
+    year = 1972
     ANG = { vassal_of = POR }
   }
-  immediate = { set_global_flag = event_fired_8000612 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	define_general = { name = "Fernando Augusto Santos" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -212,15 +67,17 @@ country_event = {
     year = 1974
     ANG = { vassal_of = POR }
   }
-  immediate = { set_global_flag = event_fired_8000613 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15000000000000002 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	define_general = { name = "António Alva Rosa Coutinho" personality = energetic background = no_background }
   }
 }
+
 country_event = {
   id = 8000614
   title = EVT_GOVTCHANGE_NAME
@@ -231,16 +88,16 @@ country_event = {
   trigger = {
     tag = ANG
     year = 1978
-    OR = {
-    }
+    NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000614 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.3 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+	define_general = { name = "António Agostinho Neto" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -253,8 +110,7 @@ country_event = {
   trigger = {
     tag = ANG
     year = 1999
-    OR = {
-    }
+    NOT = { government = proletarian_dictatorship }
   }
   immediate = { set_global_flag = event_fired_8000615 }
 
@@ -262,6 +118,8 @@ country_event = {
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+	define_general = { name = "José Eduardo dos Santos" personality = energetic background = no_background }
   }
 }

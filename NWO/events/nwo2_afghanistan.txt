@@ -7,17 +7,16 @@ country_event = {
 
   trigger = {
     tag = AFG
-    year = 1952
-    OR = {
-    }
+    year = 1946
+    NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000101 }
-
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }define_general = { name = "Shah Ghazi" personality = energetic background = no_background }
+	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.30 } } }
+	define_general = { name = "Muhammed Hashim" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -29,9 +28,8 @@ country_event = {
 
   trigger = {
     tag = AFG
-    year = 1999
-    OR = {
-    }
+    year = 1953
+    NOT = { government = proletarian_dictatorship }
   }
   immediate = { set_global_flag = event_fired_8000102 }
 
@@ -39,7 +37,9 @@ country_event = {
 
   option = {
     name = "OK"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.30 } } }
+	define_general = { name = "Mohammed Daoud" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -51,117 +51,15 @@ country_event = {
 
   trigger = {
     tag = AFG
-    year = 1972
-    OR = {
-    }
+    year = 1954
+     NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000103 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = "EVT_HAPPYBIRTHDAY"
-define_general = { name = "Sergente" personality = energetic background = no_background }
-  }
-}
-country_event = {
-  id = 8000104
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AFG
-    year = 1964
-  }
-  immediate = { set_global_flag = event_fired_8000104 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8000105
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AFG
-    year = 1966
-  }
-  immediate = { set_global_flag = event_fired_8000105 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8000106
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AFG
-    year = 1970
-  }
-  immediate = { set_global_flag = event_fired_8000106 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8000107
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AFG
-    year = 1971
-  }
-  immediate = { set_global_flag = event_fired_8000107 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8000108
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AFG
-    year = 1972
-  }
-  immediate = { set_global_flag = event_fired_8000108 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
+	define_general = { name = "Muhammed Zahir" personality = energetic background = no_background }
   }
 }
 country_event = {
@@ -174,64 +72,59 @@ country_event = {
   trigger = {
     tag = AFG
     year = 1977
-    OR = {
-    }
+    NOT = { government = proletarian_dictatorship }
   }
-  immediate = { set_global_flag = event_fired_8000109 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = EVT_8000109_A
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+	ai_chance = { value = 0 }
+	government = presidential_dictatorship
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30 } } }
+	define_general = { name = "Mohammed Daoud" personality = energetic background = no_background }
   }
 
   option = {
     name = EVT_8000109_B
-any_pop = { militancy = 2.0 }country_event =  { id = 8000110 days = 1 } country_event =  { id = 8000111 days = 1 } country_event =  { id = 8000112 days = 1 } country_event =  { id = 8176110 days = 1 } 
+	ai_chance = { value = 100 }
+	any_pop = { militancy = 2.0 }
+	random_country = {
+		limit = { overload = { NOT = { government = proletarian_dictaorship } } }
+		overload = { country_event =  { id = 8000111 days = 360 } }
+	}
+	set_global_flag = event_fired_8000109 # will trigger 8176110 # Soviet intervention
   }
 }
 country_event = {
-  id = 8000110
+  id = 8000110 # triggered by 8176110
   title = EVT_8000110_NAME
   desc = EVT_8000110_DESC
   picture = "nwo2_saur_revolution"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AFG
-    year = 1978
-    OR = {
-    }
-    has_global_flag = event_fired_8176110
-  }
-  immediate = { set_global_flag = event_fired_8000110 }
-
-  mean_time_to_happen = { days = 360 }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8000110_A
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
+	government = proletarian_dictatorship
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.15 } } }
+	country_event =  { id = 8000112 days = 360 } 
+	country_event =  { id = 8176109 days = 30 }  
   }
 }
-country_event = {
+country_event = { # overloard
   id = 8000111
   title = EVT_8000111_NAME
   desc = EVT_8000111_DESC
   picture = "nwo2_soviet_intervention_in_afghanistan"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AFG
-    year = 1990
-  }
-  immediate = { set_global_flag = event_fired_8000111 }
-
-  mean_time_to_happen = { days = 360 }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8000111_A
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }release = AFG 
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.4 } } }
+	release = AFG 
   }
 }
 country_event = {
@@ -239,18 +132,12 @@ country_event = {
   title = EVT_GOVTCHANGE_NAME
   desc = EVT_GOVTCHANGE_DESC
   picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AFG
-    year = 1999
-  }
-  immediate = { set_global_flag = event_fired_8000112 }
-
-  mean_time_to_happen = { days = 360 }
+  is_triggered_only = yes
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30 } } }
+	define_general = { name = "Burhanuddin Rabbani" personality = energetic background = no_background }
   }
 }
