@@ -15,8 +15,8 @@ country_event = {
 	}
 	RUS = { war_with = GER }
 	owns = 1912 # Warsaw
-	immediate = { set_global_flag = event_fired_8222000 }
   }
+  immediate = { set_global_flag = event_fired_8222000 }
   mean_time_to_happen = { days = 3 }
 
   option = {
@@ -128,7 +128,7 @@ country_event = {
   option = {
     name = EVT_8222004_B #"Offer our full support"
 	any_owned = { 
-		limit = { OR = { provinceId = 958 provinceId = 798 } }
+		limit = { OR = { province_id = 958 province_id = 798 } }
 		secede_province = POL
 	}
 	money = -400

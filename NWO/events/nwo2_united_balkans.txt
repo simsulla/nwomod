@@ -213,7 +213,7 @@ country_event = {
 
   option = {
     name = EVT_8216022_A #"We invite people of Bulgaria"
-	ai_chance = {value = 75 }
+	ai_chance = { factor = 75 }
 	relation = { who = BUL value = 50 } 
 	relation = { who = RUS value = -50 } 
 	badboy = 10 
@@ -221,7 +221,7 @@ country_event = {
 
   option = {
     name = EVT_8216022_B #"Not really"
-	ai_chance = {value = 25 }
+	ai_chance = { factor = 25 }
 	relation = { who = RUS value = 50 } 
 	relation = { who = BUL value = -50 } 
 	any_pop = { militancy = -0.5 }
@@ -237,14 +237,14 @@ country_event = {
 
   option = {
     name = EVT_8216023_A #"Let them"
-	ai_chance = {value = 50 }
+	ai_chance = { factor = 50 }
 	relation = { who = BUL value = -50 } 
 	relation = { who = YUG value = -50 } 
   }
 
   option = {
     name = EVT_8216023_B #"Not really"
-	ai_chance = {value = 50 }
+	ai_chance = { factor = 50 }
 	relation = { who = BUL value = 50 } 
 	relation = { who = YUG value = 50 } 
 	BUL = {country_event =  { id = 8216024 days = 30 } }
@@ -259,13 +259,13 @@ country_event = {
 
   option = {
     name = EVT_8216024_A
-	ai_chance = {value = 70 }
+	ai_chance = { factor = 70 }
 	YUG = { country_event = 8216025 }
   }
 
   option = {
     name = EVT_8216024_B
-	ai_chance = {value = 30 }
+	ai_chance = { factor = 30 }
 	relation = { who = RUS value = -200 } 
 	relation = { who = YUG value = -200 } 
 	any_pop = { militancy = 0.5 }

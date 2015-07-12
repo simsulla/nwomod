@@ -79,7 +79,7 @@ country_event = {
 
   option = {
     name = EVT_8000109_A
-	ai_chance = { value = 0 }
+	ai_chance = { factor = 0 }
 	government = presidential_dictatorship
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30 } } }
@@ -88,11 +88,11 @@ country_event = {
 
   option = {
     name = EVT_8000109_B
-	ai_chance = { value = 100 }
+	ai_chance = { factor = 100 }
 	any_pop = { militancy = 2.0 }
 	random_country = {
-		limit = { overload = { NOT = { government = proletarian_dictaorship } } }
-		overload = { country_event =  { id = 8000111 days = 360 } }
+		limit = { overlord = { NOT = { government = proletarian_dictatorship } } }
+		overlord = { country_event =  { id = 8000111 days = 360 } }
 	}
 	set_global_flag = event_fired_8000109 # will trigger 8176110 # Soviet intervention
   }
@@ -113,7 +113,7 @@ country_event = {
 	country_event =  { id = 8176109 days = 30 }  
   }
 }
-country_event = { # overloard
+country_event = { # overlord
   id = 8000111
   title = EVT_8000111_NAME
   desc = EVT_8000111_DESC
