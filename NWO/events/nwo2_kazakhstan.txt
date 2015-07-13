@@ -1,0 +1,64 @@
+country_event = {
+  id = 8008001
+  title = EVT_8008001_NAME
+  desc = EVT_8008001_DESC
+  picture = "nwo2_baikonur_cosmodrome"
+
+  trigger = {
+    tag = RUS
+	is_sphere_leader_of = KAZ
+	any_owned_province = { province_id = 986 }
+    OR = { year = 2005 NOT = { has_country_modifier = lease_baikonur } }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8008001_OPTA
+	add_country_modifier = { name = lease_baikonur duration = 3600 }
+	treasury = -1200
+	KAZ = { treasury = 1200 }
+  }
+  
+  option = {
+    name = EVT_8008001_OPTB
+	KAZ = { country_event = 8008003 }
+	prestige = -10
+  }
+  
+}
+
+country_event = {
+  id = 8008002
+  title = EVT_8008002_NAME
+  desc = EVT_8008002_DESC
+  picture = "nwo2_baikonur_cosmodrome"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8008002_OPTA
+	badboy = 15
+	relation = { who = KAZ value = -200 }
+	986 = { add_core = KAZ }
+  }
+  
+  option = {
+    name = EVT_8008002_OPTB
+	KAZ = { country_event = 8008003 }
+  }
+  
+}
+
+country_event = {
+  id = 8008003
+  title = EVT_8008003_NAME
+  desc = EVT_8008003_DESC
+  picture = "nwo2_baikonur_cosmodrome"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8008003_OPTA
+	986 = { add_core = KAZ change_controller = KAZ}
+  }
+  
+}
