@@ -113,6 +113,7 @@ country_event = {
 			consciousness = 2
 			militancy = 10
 		}
+		release_vassal = RAJ
 		RAJ = { country_event = { id = 8214013 days = 30 } }
 	}
 	
@@ -153,10 +154,12 @@ country_event = {
 		release_vassal = BHU
 		release_vassal = NEP
 		release_vassal = JAK
-		diplomatic_influence = { who = BHU value = -100 } 
-		diplomatic_influence = { who = NEP value = -100 } 
-		diplomatic_influence = { who = JAK value = -100 } 
-		diplomatic_influence = { who = TIB value = -100 } 
+		overlord = { 
+			diplomatic_influence = { who = BHU value = -100 } 
+			diplomatic_influence = { who = NEP value = -100 } 
+			diplomatic_influence = { who = JAK value = -100 } 
+			diplomatic_influence = { who = TIB value = -100 } 
+		}
 		any_neighbor_country = { 
 			limit = { is_our_vassal = THIS NOT = { tag = JAK } } 
 			country_event = 8214016
@@ -189,10 +192,12 @@ country_event = {
 		release_vassal = BHU
 		release_vassal = NEP
 		release_vassal = JAK
-		diplomatic_influence = { who = BHU value = -100 } 
-		diplomatic_influence = { who = NEP value = -100 } 
-		diplomatic_influence = { who = JAK value = -100 } 
-		diplomatic_influence = { who = TIB value = -100 }
+		overlord = { 
+			diplomatic_influence = { who = BHU value = -100 } 
+			diplomatic_influence = { who = NEP value = -100 } 
+			diplomatic_influence = { who = JAK value = -100 } 
+			diplomatic_influence = { who = TIB value = -100 }
+		}
 		any_neighbor_country = { 
 			limit = { is_our_vassal = THIS NOT = { tag = JAK } }
 			country_event = 8214017
