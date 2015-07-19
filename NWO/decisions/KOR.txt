@@ -13,7 +13,7 @@ political_decisions = {
 		allow = {
 			war = no
 			NKO = {
-				NOT = { is_vassal = yes NOT = { vassal_of = THIS } }
+				OR = { is_vassal = no vassal_of = THIS }
 				all_core = {
 					owner = {
 						OR = {
@@ -25,7 +25,7 @@ political_decisions = {
 				}
 			}		
 			SKO = {
-				NOT = { is_vassal = yes NOT = { vassal_of = THIS } }
+				OR = { is_vassal = no vassal_of = THIS }
 				all_core = {
 					owner = {
 						OR = {
