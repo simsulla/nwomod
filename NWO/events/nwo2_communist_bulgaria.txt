@@ -1,0 +1,70 @@
+country_event = { # Death of Prince Kiril
+  id = 8022902
+  title = EVT_8022902_NAME
+  desc = EVT_8022902_DESC
+  picture = "nwo2_kiril_preslav"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1945
+    NOT = { year = 1946 }
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8022902_A
+  }
+}
+country_event = {
+  id = 8022903
+  title = EVT_8022903_NAME
+  desc = EVT_8022903_DESC
+  picture = "nwo2_simeon_ii"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1946
+    NOT = { year = 1949 }
+    has_global_flag = cold_war
+  }
+  immediate = { set_global_flag = event_fired_8022903 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8022903_A
+	define_general = { name = "Simeon II" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8022913
+  title = EVT_8022913_NAME
+  desc = EVT_8022913_DESC
+  picture = "nwo2_bulgaria_1989"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BUL
+    year = 1990
+    NOT = { year = 1999 }
+    has_global_flag = autumn_of_nations
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8022913_A
+	overlord = { release_vassal = THIS } 
+	government = democracy
+  }
+
+  option = {
+    name = EVT_8022913_B
+	any_pop = { militancy = 2.5 }
+	overlord = { release_vassal = THIS } 
+  }
+}

@@ -38,7 +38,6 @@ country_event = {
 
   option = {
     name = EVT_8222001_A
-	add_country_modifier = { name = dh_oilpool duration = 365 }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.1 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.45 } } }
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.15 } } }
@@ -77,7 +76,6 @@ country_event = {
   option = {
     name = EVT_8222002_B
 	money = -200 
-	add_country_modifier = { name = dh_oilpool duration = 365 }
 	random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.45 } } }
   }
 }
@@ -99,7 +97,7 @@ country_event = {
 
   option = {
     name = "OK"
-	relation = { who = ENG value = 150 } add_country_modifier = { name = dh_oilpool duration = 365 }
+	relation = { who = ENG value = 150 } 
   }
 }
 

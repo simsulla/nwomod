@@ -1,0 +1,132 @@
+country_event = {
+  id = 8010403
+  title = EVT_8010403_NAME
+  desc = EVT_8010403_DESC
+  picture = "nwo2_anastacio_somoza"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NIC
+	year = 1956 NOT = { year = 1962 }
+    government = democracy
+  }
+  immediate = { set_global_flag = event_fired_8010403 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8010403_A
+	government = presidential_dictatorship
+  }
+}
+country_event = {
+  id = 8010408
+  title = EVT_8010408_NAME
+  desc = EVT_8010408_DESC
+  picture = "nwo2_sandinistas"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NIC
+	year = 1985 NOT = { year = 1989 }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8010408_A
+	government = proletarian_dictatorship
+  }
+}
+country_event = {
+  id = 8010410
+  title = EVT_8010410_NAME
+  desc = EVT_8010410_DESC
+  picture = "nwo2_sandinistas"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NIC
+	year = 1982 NOT = { year = 1980 }
+  }
+  immediate = { set_global_flag = event_fired_8010410 }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8010410_A
+	add_country_modifier = { name = great_depression duration = 365 }
+  }
+}
+country_event = {
+  id = 8010411
+  title = EVT_8010411_NAME
+  desc = EVT_8010411_DESC
+  picture = "nwo2_sandinistas"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+	year = 1982 NOT = { year = 1982 }
+    exists = NIC
+	NIC = { government = proletarian_dictatorship }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8010411_A
+	treasury = -2000 
+	NIC = { country_event = { id = 8010412 days = 300 } }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8010411_B
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8010412
+  title = EVT_8010412_NAME
+  desc = EVT_8010412_DESC
+  picture = "nwo2_sandinistas"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8010412_A
+	relation = { who = USA value = -100 } 
+	add_country_modifier = { name = great_depression duration = 365 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8010412_B
+	any_pop = { militancy = 2.0 }
+	relation = { who = USA value = 200 } 
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.8 } } }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8010413
+  title = EVT_8010413_NAME
+  desc = EVT_8010413_DESC
+  picture = "nwo2_sandinistas"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NIC
+	year = 1988 NOT = { year = 1989 }
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8010413_A
+	any_pop = { militancy = -1.0 }
+	government = democracy
+  }
+}

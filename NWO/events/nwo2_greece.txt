@@ -1,0 +1,96 @@
+country_event = {
+  id = 8006215
+  title = EVT_8006215_NAME
+  desc = EVT_8006215_DESC
+  picture = "nwo2_greek_coup_1967"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+	year = 1966 NOT = { year = 1967 }
+    government = hms_government
+  }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8006215_A
+	prestige = -10
+  }
+}
+country_event = {
+  id = 8006216
+  title = EVT_8006216_NAME
+  desc = EVT_8006216_DESC
+  picture = "nwo2_greek_coup_1967"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+	year = 1967 NOT = { year = 1968 }
+    government = hms_government
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8006216_A
+	government = presidential_dictatorship
+	CYP = { country_event = 8004110 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8006216_B
+	any_pop = { militancy = 2.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8006218
+  title = EVT_8006218_NAME
+  desc = EVT_8006218_DESC
+  picture = "nwo2_trial_of_the_colonels"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+	year = 1973 NOT = { year = 1974 }
+  }
+
+  mean_time_to_happen = { days = 160 }
+
+  option = {
+    name = EVT_8006218_A
+	country_event = 8006225
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8006218_B
+	any_pop = { militancy = 2.0 }
+	ai_chance = { factor = 0 }
+  }
+
+}
+country_event = {
+  id = 8006225
+  title = EVT_8006225_NAME
+  desc = EVT_8006225_DESC
+  picture = "nwo2_king_constantine"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8006225_A
+	government = democracy
+	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8006225_B
+	government = hms_government
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}

@@ -1,0 +1,49 @@
+country_event = {
+  id = 8012212
+  title = EVT_8012212_NAME
+  desc = EVT_8012212_DESC
+  picture = "nwo2_rhodesian_udi"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RHO
+    year = 1965 NOT = { year = 1975 }
+    OR = { government = hms_government government = democracy }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8012212_A
+	any_pop = { militancy = 0.5 }
+	overlord = { release_vassal = THIS } 
+	government = populist_dictatorship
+  }
+}
+country_event = {
+  id = 8012214
+  title = EVT_8012214_NAME
+  desc = EVT_8012214_DESC
+  picture = "nwo2_zimbabwe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RHO
+    year = 1978 NOT = { year = 1986 }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8012214_A
+	government = democracy
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.3 } } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8012214_B
+	any_pop = { militancy = 3.0 }
+	ai_chance = { factor = 0 }
+  }
+}

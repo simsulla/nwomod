@@ -1,0 +1,63 @@
+country_event = {
+  id = 8008805
+  title = EVT_8008805_NAME
+  desc = EVT_8008805_DESC
+  picture = "nwo2_samuel_doe"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1980 NOT = { year = 1986 }
+    government = democracy
+  }
+  immediate = { set_global_flag = event_fired_8008805 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008805_A
+	any_pop = { militancy = 6.0 }
+    government = presidential_dictatorship
+  }
+}
+country_event = {
+  id = 8008807
+  title = EVT_8008807_NAME
+  desc = EVT_8008807_DESC
+  picture = "nwo2_charles_taylor"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1986 NOT = { year = 1989 }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008807_A
+	1888 = { change_controller = REB }
+	1889 = { change_controller = REB }
+	1891 = { change_controller = REB }
+  }
+}
+country_event = {
+  id = 8008808
+  title = EVT_8008808_NAME
+  desc = EVT_8008808_DESC
+  picture = "nwo2_charles_taylor"
+  fire_only_once = yes
+
+  trigger = {
+    tag = LIB
+    year = 1989 NOT = { year = 1999 }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008808_A
+	government = populist_dictatorship
+	1890 = { change_controller  = REB } 
+  }
+}

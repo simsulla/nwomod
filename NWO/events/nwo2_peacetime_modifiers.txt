@@ -1,0 +1,53 @@
+country_event = {
+  id = 8930000
+  title = "EVT_PEACETIME_NAME"
+  desc = "EVT_PEACETIME_DESC"
+  picture = "nwo2_peacetime"
+
+  trigger = {
+    NOT = { has_country_flag  = time_of_peace }
+    NOT = { has_global_flag = ww3 }
+    has_global_flag = cold_war_pacific
+    war = no
+  }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = "EVT_PEACETIME_A"
+	any_pop = { 
+		dominant_issue = { value = pro_military factor = 0.1 }
+		dominant_issue = { value = anti_military factor = 0.1 }
+	}
+	set_country_flag = time_of_peace 
+	clr_country_flag = war_time 
+  }
+}
+country_event = {
+  id = 8930001
+  title = "EVT_WARTIME_NAME"
+  desc = "EVT_WARTIME_DESC"
+  picture = "nwo2_wartime"
+  fire_only_once = yes
+
+  trigger = {
+    OR = {
+		has_global_flag = ww3
+		war = yes
+    }
+	NOT = { has_country_flag  = war_time }
+    has_country_flag  = time_of_peace
+  }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = "EVT_WARTIME_A"
+	clr_country_flag = time_of_peace 
+	set_country_flag = war_time 
+	any_pop = { 
+		dominant_issue = { value = pro_military factor = 0.1 }
+		dominant_issue = { value = anti_military factor = 0.1 }
+	}
+  }
+}

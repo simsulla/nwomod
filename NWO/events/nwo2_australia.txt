@@ -1,334 +1,4 @@
 country_event = {
-  id = 8001001
-  title = "EVT_GOVGENERAL_NAME"
-  desc = "EVT_GOVGENERAL_DESC"
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1945
-  }
-  immediate = { set_global_flag = event_fired_8001001 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-define_general = { name = "Burrows" personality = energetic background = no_background }
-  }
-}
-country_event = {
-  id = 8001002
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1946
-  }
-  immediate = { set_global_flag = event_fired_8001002 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Cremor" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }define_general = { name = "Cannan" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 0.3 }
-  }
-}
-country_event = {
-  id = 8001003
-  title = "EVT_GOVGENERAL_NAME"
-  desc = "EVT_GOVGENERAL_DESC"
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1948
-  }
-  immediate = { set_global_flag = event_fired_8001003 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-define_general = { name = "Dallas" personality = energetic background = no_background }
-  }
-}
-country_event = {
-  id = 8001004
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1950
-  }
-  immediate = { set_global_flag = event_fired_8001004 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Cannan" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.050000000000000044 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Cremor" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 0.6 }
-  }
-}
-country_event = {
-  id = 8001005
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1952
-  }
-  immediate = { set_global_flag = event_fired_8001005 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Cannan" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }define_general = { name = "Cremor" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 0.6 }
-  }
-}
-country_event = {
-  id = 8001006
-  title = "EVT_GOVGENERAL_NAME"
-  desc = "EVT_GOVGENERAL_DESC"
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1954
-  }
-  immediate = { set_global_flag = event_fired_8001006 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-
-  }
-}
-country_event = {
-  id = 8001007
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1957
-  }
-  immediate = { set_global_flag = event_fired_8001007 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -0.6 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Cannan" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 0.6 }
-  }
-}
-country_event = {
-  id = 8001008
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1959
-  }
-  immediate = { set_global_flag = event_fired_8001008 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Cannan" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-any_pop = { militancy = 0.9 }
-  }
-}
-country_event = {
-  id = 8001009
-  title = "EVT_GOVGENERAL_NAME"
-  desc = "EVT_GOVGENERAL_DESC"
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1960
-  }
-  immediate = { set_global_flag = event_fired_8001009 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-
-  }
-}
-country_event = {
-  id = 8001010
-  title = "EVT_GOVGENERAL_NAME"
-  desc = "EVT_GOVGENERAL_DESC"
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1964
-  }
-  immediate = { set_global_flag = event_fired_8001010 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "OK"
-
-  }
-}
-country_event = {
-  id = 8001011
-  title = "EVT_ELECTIONS_NAME"
-  desc = "EVT_ELECTIONS_DESC"
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1965
-  }
-  immediate = { set_global_flag = event_fired_8001011 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = "EVT_ELECTIONS_RIGHT"
-random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }define_general = { name = "Cannan" personality = energetic background = no_background }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_LEFT"
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = "EVT_ELECTIONS_NOCHANGE"
-
-  }
-}
-country_event = {
-  id = 8001012
-  title = EVT_GOVGENERAL_NAME
-  desc = EVT_GOVGENERAL_DESC
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1968
-  }
-  immediate = { set_global_flag = event_fired_8001012 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8001013
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1967
-  }
-  immediate = { set_global_flag = event_fired_8001013 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.3 }
-  }
-}
-country_event = {
   id = 8001014
   title = EVT_8001014_NAME
   desc = EVT_8001014_DESC
@@ -337,375 +7,14 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1970
+    year = 1970 NOT = { year = 1971 }
   }
-  immediate = { set_global_flag = event_fired_8001014 }
 
   mean_time_to_happen = { days = 360 }
 
   option = {
     name = EVT_8001014_A
-
-  }
-}
-country_event = {
-  id = 8001015
-  title = EVT_GOVGENERAL_NAME
-  desc = EVT_GOVGENERAL_DESC
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1973
-  }
-  immediate = { set_global_flag = event_fired_8001015 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8001016
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1971
-  }
-  immediate = { set_global_flag = event_fired_8001016 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8001017
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1974
-  }
-  immediate = { set_global_flag = event_fired_8001017 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.3 }
-  }
-}
-country_event = {
-  id = 8001018
-  title = EVT_GOVGENERAL_NAME
-  desc = EVT_GOVGENERAL_DESC
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1976
-  }
-  immediate = { set_global_flag = event_fired_8001018 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8001019
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1976
-  }
-  immediate = { set_global_flag = event_fired_8001019 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.3 }
-  }
-}
-country_event = {
-  id = 8001020
-  title = EVT_GOVGENERAL_NAME
-  desc = EVT_GOVGENERAL_DESC
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1981
-  }
-  immediate = { set_global_flag = event_fired_8001020 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8001021
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1979
-  }
-  immediate = { set_global_flag = event_fired_8001021 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-
-  }
-}
-country_event = {
-  id = 8001022
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1982
-  }
-  immediate = { set_global_flag = event_fired_8001022 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.9 }
-  }
-}
-country_event = {
-  id = 8001023
-  title = EVT_GOVGENERAL_NAME
-  desc = EVT_GOVGENERAL_DESC
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1988
-  }
-  immediate = { set_global_flag = event_fired_8001023 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8001024
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1983
-  }
-  immediate = { set_global_flag = event_fired_8001024 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.3 }
-  }
-}
-country_event = {
-  id = 8001025
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1986
-  }
-  immediate = { set_global_flag = event_fired_8001025 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.3 }
-  }
-}
-country_event = {
-  id = 8001026
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1989
-  }
-  immediate = { set_global_flag = event_fired_8001026 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.9 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.9 }
-  }
-}
-country_event = {
-  id = 8001027
-  title = EVT_GOVGENERAL_NAME
-  desc = EVT_GOVGENERAL_DESC
-  picture = "nwo2_governor_general"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1999
-  }
-  immediate = { set_global_flag = event_fired_8001027 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-
-  }
-}
-country_event = {
-  id = 8001028
-  title = EVT_ELECTIONS_NAME
-  desc = EVT_ELECTIONS_DESC
-  picture = "nwo2_elections"
-  fire_only_once = yes
-
-  trigger = {
-    tag = AST
-    year = 1999
-  }
-  immediate = { set_global_flag = event_fired_8001028 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = EVT_ELECTIONS_LEFT
-any_pop = { militancy = -0.3 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15000000000000002 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_RIGHT
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.0 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-  }
-
-  option = {
-    name = EVT_ELECTIONS_NOCHANGE
-any_pop = { militancy = 0.3 }
+	prestige = 10
   }
 }
 country_event = {
@@ -717,15 +26,15 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1963
+    year = 1963  NOT = { year = 1967 }
   }
-  immediate = { set_global_flag = event_fired_8001029 }
 
   mean_time_to_happen = { days = 720 }
 
   option = {
     name = "EVT_8001029_A"
-any_pop = { militancy = -0.3 }
+	any_pop = { militancy = -0.3 }
+	prestige = 10
   }
 }
 country_event = {
@@ -737,18 +46,16 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956
-    NOT = {
-    war_with = AST
-    }
+    year = 1956  NOT = { year = 1957 }
+	war = no
   }
-  immediate = { set_global_flag = event_fired_8001030 }
 
   mean_time_to_happen = { days = 14 }
 
   option = {
     name = "EVT_8001030_A"
-any_pop = { militancy = -0.3 }
+	any_pop = { militancy = -0.3 }
+	prestige = 50
   }
 }
 country_event = {
@@ -760,17 +67,16 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1963
+    year = 1963 NOT = { year = 1964 }
     has_global_flag = cold_war_pacific
     war = no
   }
-  immediate = { set_global_flag = event_fired_8001031 }
 
   mean_time_to_happen = { days = 600 }
 
   option = {
     name = "EVT_8001031_A"
-add_country_modifier = { name = dh_province_manpower duration = 365 }
+	add_country_modifier = { name = four_children duration = 365 }
   }
 }
 country_event = {
@@ -782,16 +88,15 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1970
+    year = 1970  NOT = { year = 1972 }
     war = no
   }
-  immediate = { set_global_flag = event_fired_8001032 }
 
   mean_time_to_happen = { days = 2000 }
 
   option = {
     name = "EVT_8001032_A"
-random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }
+	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }
   }
 }
 country_event = {
@@ -802,13 +107,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1946
+    year = 1946  NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001050 }
 
   option = {
     name = EVT_8001050_A
-any_pop = { militancy = 0.1 }add_country_modifier = { name = dh_building_prod_mod duration = 365 }add_country_modifier = { name = dh_research_mod duration = 365 }
+	any_pop = { militancy = 0.1 }
+	prestige = 10
   }
 }
 country_event = {
@@ -819,19 +124,20 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1946
+    year = 1946  NOT = { year = 1950 }
     war = no
   }
-  immediate = { set_global_flag = event_fired_8001051 }
 
   option = {
     name = EVT_8001051_A
-any_pop = { militancy = -0.2 }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.6 } } }
+	any_pop = { militancy = -0.2 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8001051_B
-any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -842,14 +148,16 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1946
+    year = 1946  NOT = { year = 1950 }
     war = no
   }
-  immediate = { set_global_flag = event_fired_8001052 }
 
   option = {
     name = EVT_8001052_A
-any_pop = { militancy = -0.1 }relation = { who = AST value = 5 } relation = { who = ENG value = 5 } 
+	prestige = 10
+	any_pop = { militancy = -0.1 }
+	relation = { who = NZL value = 50 } 
+	relation = { who = ENG value = 50 } 
   }
 }
 country_event = {
@@ -860,14 +168,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1946
+    year = 1946  NOT = { year = 1950 }
     has_global_flag = cold_war_pacific
   }
-  immediate = { set_global_flag = event_fired_8001053 }
 
   option = {
     name = EVT_8001053_A
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.44999999999999996 } } }
+	any_pop = { militancy = -0.1 }
   }
 }
 country_event = {
@@ -878,13 +185,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1946
+    year = 1946  NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001054 }
 
   option = {
     name = EVT_8001054_A
-add_country_modifier = { name = dh_research_mod duration = 365 }
+	prestige = 10
   }
 }
 country_event = {
@@ -895,13 +201,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1946
+    year = 1946  NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001055 }
 
   option = {
     name = EVT_8001055_A
-add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+	prestige = 20
   }
 }
 country_event = {
@@ -912,13 +217,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1946
+    year = 1946  NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001056 }
 
   option = {
     name = EVT_8001056_A
-add_country_modifier = { name = dh_industrial_modifier duration = 365 }any_pop = { militancy = 1.0 }
+	add_country_modifier = { name = stock_market_crash duration = 36 }
   }
 }
 country_event = {
@@ -929,18 +233,19 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1946
+    year = 1946  NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001057 }
 
   option = {
     name = EVT_8001057_A
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }
+	any_pop = { militancy = -0.1 }
   }
 
   option = {
     name = EVT_8001057_B
-any_pop = { militancy = 1.5 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }
+	any_pop = { militancy = 0.15 }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }
   }
 }
 country_event = {
@@ -951,23 +256,29 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1947
+    year = 1947  NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001058 }
 
   option = {
     name = EVT_8001058_A
-any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8001058_B
-any_pop = { militancy = 0.6 }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.55 } } }
+	any_pop = { militancy = 0.6 }
+	random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.55 } } }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8001058_C
-add_country_modifier = { name = dh_industrial_modifier duration = 365 }any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }
+	any_pop = { militancy = 1.0 }
+	random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.6 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -978,7 +289,7 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1947
+    year = 1947 NOT = { year = 1950 }
   }
   immediate = { set_global_flag = event_fired_8001059 }
 
@@ -1000,7 +311,7 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1947
+    year = 1947 NOT = { year = 1950 }
     NOT = {
     }
     has_global_flag = cold_war_pacific
@@ -1021,7 +332,7 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1947
+    year = 1947 NOT = { year = 1950 }
   }
   immediate = { set_global_flag = event_fired_8001061 }
 
@@ -1038,13 +349,14 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1947
+    year = 1947 NOT = { year = 1950 }
   }
   immediate = { set_global_flag = event_fired_8001062 }
 
   option = {
     name = EVT_8001062_A
-any_pop = { militancy = -0.2 }add_country_modifier = { name = dh_research_mod duration = 365 }relation = { who = ENG value = 20 } relation = { who = AST value = 20 } 
+	any_pop = { militancy = -0.2 }
+	relation = { who = ENG value = 20 } relation = { who = NZL value = 20 } 
   }
 }
 country_event = {
@@ -1055,13 +367,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1948
+    year = 1948 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001063 }
 
   option = {
     name = EVT_8001063_A
-any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 0.2 }
   }
 }
 country_event = {
@@ -1072,13 +383,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1948
+    year = 1948 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001064 }
 
   option = {
     name = EVT_8001064_A
-any_pop = { militancy = -2.0 }
+	any_pop = { militancy = -2.0 }
   }
 }
 country_event = {
@@ -1089,13 +399,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1948
+    year = 1948 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001065 }
 
   option = {
     name = EVT_8001065_A
-any_pop = { militancy = -0.2 }add_country_modifier = { name = dh_attrition_mod duration = 365 }
+	any_pop = { militancy = -0.2 }
   }
 }
 country_event = {
@@ -1106,13 +415,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1949
+    year = 1949 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001066 }
 
   option = {
     name = EVT_8001066_A
-any_pop = { militancy = -0.4 }
+	any_pop = { militancy = -0.4 }
   }
 }
 country_event = {
@@ -1123,23 +431,32 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1949
+    year = 1949 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001067 }
 
   option = {
     name = EVT_8001067_A
-any_pop = { militancy = 0.2 }relation = { who = RUS value = -15 } 
+	any_pop = { militancy = 0.2 }
+	relation = { who = RUS value = -15 } 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8001067_B
-any_pop = { militancy = 0.7 }relation = { who = RUS value = -30 } random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+	any_pop = { militancy = 0.7 }
+	relation = { who = RUS value = -30 } 
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8001067_C
-any_pop = { militancy = 1.4 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }relation = { who = ENG value = -15 } relation = { who = USA value = -15 } relation = { who = RUS value = 25 } 
+	any_pop = { militancy = 1.4 }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+	relation = { who = ENG value = -15 } 
+	relation = { who = USA value = -15 } 
+	relation = { who = RUS value = 25 } 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -1150,13 +467,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1949
+    year = 1949 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001068 }
 
   option = {
     name = EVT_8001068_A
-any_pop = { militancy = 2.4 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+	any_pop = { militancy = 0.24 }
   }
 }
 country_event = {
@@ -1167,18 +483,18 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1949
+    year = 1949 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001069 }
 
   option = {
     name = EVT_8001069_A
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }
+	any_pop = { militancy = -0.1 }
+	prestige = 10
   }
 
   option = {
     name = EVT_8001069_B
-any_pop = { militancy = 0.7 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }
+	any_pop = { militancy = 0.7 }
   }
 }
 country_event = {
@@ -1189,14 +505,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1949
-    has_global_flag = event_fired_8001068
+    year = 1949 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001070 }
 
   option = {
     name = EVT_8001070_A
-any_pop = { militancy = -1.2 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+	any_pop = { militancy = -1.2 }
+	prestige = 5
   }
 }
 country_event = {
@@ -1207,13 +522,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1949
+    year = 1949 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001071 }
 
   option = {
     name = EVT_8001071_A
-any_pop = { militancy = -0.1 }
+	any_pop = { militancy = -0.1 }
   }
 }
 country_event = {
@@ -1224,13 +538,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1950
+    year = 1950 NOT = { year = 1950 }
   }
-  immediate = { set_global_flag = event_fired_8001072 }
 
   option = {
     name = EVT_8001072_A
-any_pop = { militancy = 1.25 }
+	any_pop = { militancy = 0.25 }
   }
 }
 country_event = {
@@ -1241,13 +554,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1950
+    year = 1950 NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001073 }
 
   option = {
     name = EVT_8001073_A
-relation = { who = RUS value = -10 } relation = { who = CHI value = -10 } 
+	relation = { who = RUS value = -10 } 
+	relation = { who = CHI value = -10 } 
   }
 }
 country_event = {
@@ -1258,19 +571,20 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1950
+    year = 1950 NOT = { year = 1955 }
     NKO = { war_with = KOR }
   }
-  immediate = { set_global_flag = event_fired_8001074 }
 
   option = {
     name = EVT_8001074_A
-badboy = 5 random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.44999999999999996 } } }
+	badboy = 5 
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8001074_B
-money = 100 
+	money = 100 
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
@@ -1281,13 +595,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1950
+    year = 1950 NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001075 }
 
   option = {
     name = EVT_8001075_A
-any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 }
   }
 }
 country_event = {
@@ -1298,13 +611,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1950
+    year = 1950  NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001076 }
 
   option = {
     name = EVT_8001076_A
-any_pop = { militancy = 1.5 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+	any_pop = { militancy = 0.5 }
   }
 }
 country_event = {
@@ -1315,14 +627,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1950
+    year = 1950  NOT = { year = 1955 }
     has_global_flag = event_fired_8001076
   }
-  immediate = { set_global_flag = event_fired_8001077 }
 
   option = {
     name = EVT_8001077_A
-any_pop = { militancy = -1.5 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+	any_pop = { militancy = -0.5 }
   }
 }
 country_event = {
@@ -1333,23 +644,25 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1951
+    year = 1951  NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001078 }
 
   option = {
     name = EVT_8001078_A
-any_pop = { militancy = 0.3 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }
+	any_pop = { militancy = 0.3 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8001078_B
-any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8001078_C
-any_pop = { militancy = 2.0 }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }
+	any_pop = { militancy = 2.0 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -1360,13 +673,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1951
+    year = 1951  NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001079 }
 
   option = {
     name = EVT_8001079_A
-any_pop = { militancy = 0.2 }add_country_modifier = { name = dh_max_organization duration = 365 }
+	any_pop = { militancy = 0.2 }
   }
 }
 country_event = {
@@ -1377,13 +689,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1951
+    year = 1951  NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001080 }
 
   option = {
     name = EVT_8001080_A
-any_pop = { militancy = -0.6 }relation = { who = USA value = 25 } relation = { who = NZL value = 25 } relation = { who = AST value = 25 } 
+	any_pop = { militancy = -0.6 }
+	relation = { who = USA value = 25 } relation = { who = NZL value = 25 } relation = { who = AST value = 25 } 
   }
 }
 country_event = {
@@ -1394,20 +706,17 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1951
-    NOT = {
-    }
+    year = 1951 NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001081 }
 
   option = {
     name = EVT_8001081_A
-any_pop = { militancy = 0.5 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.44999999999999996 } } }
+	any_pop = { militancy = 0.5 }
   }
 
   option = {
     name = EVT_8001081_B
-any_pop = { militancy = 2.0 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }
+	any_pop = { militancy = 2.0 }
   }
 }
 country_event = {
@@ -1418,13 +727,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1952
+    year = 1952  NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001082 }
 
   option = {
     name = EVT_8001082_A
-relation = { who = AST value = 10 } relation = { who = FRA value = 10 } relation = { who = THI value = 10 } relation = { who = NZL value = 10 } relation = { who = USA value = 10 } relation = { who = ENG value = 10 } relation = { who = SRL value = 10 } relation = { who = PHI value = 10 } 
+	relation = { who = AST value = 10 } relation = { who = FRA value = 10 } relation = { who = THI value = 10 } relation = { who = NZL value = 10 } relation = { who = USA value = 10 } relation = { who = ENG value = 10 } relation = { who = SRL value = 10 } relation = { who = PHI value = 10 } 
   }
 }
 country_event = {
@@ -1435,13 +743,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1953
+    year = 1953  NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001083 }
 
   option = {
     name = EVT_8001083_A
-add_country_modifier = { name = dh_research_mod duration = 365 }add_country_modifier = { name = dh_building_prod_mod duration = 365 }
+	prestige = 10
   }
 }
 country_event = {
@@ -1452,7 +759,7 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1954
+    year = 1954 NOT = { year = 1955 }
   }
   immediate = { set_global_flag = event_fired_8001084 }
 
@@ -1469,13 +776,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1954
+    year = 1954 NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001085 }
 
   option = {
     name = EVT_8001085_A
-add_country_modifier = { name = dh_research_mod duration = 365 }
+	prestige  = 10
   }
 }
 country_event = {
@@ -1486,23 +792,24 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1954
+    year = 1954 NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001086 }
 
   option = {
     name = EVT_8001086_A
-relation = { who = USA value = 10 } relation = { who = ENG value = 10 } 
+	relation = { who = USA value = 10 } relation = { who = ENG value = 10 } 
+	ai_chance = { factor  = 100 }
   }
 
   option = {
     name = EVT_8001086_B
-relation = { who = USA value = -20 } relation = { who = ENG value = -20 } relation = { who = RUS value = 10 } any_pop = { militancy = 1.5 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
+	ai_chance = { factor  = 0 }
+	relation = { who = USA value = -20 } relation = { who = ENG value = -20 } relation = { who = RUS value = 10 } any_pop = { militancy = 1.5 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
   }
 
   option = {
     name = EVT_8001086_C
-add_country_modifier = { name = dh_industrial_modifier duration = 365 }relation = { who = USA value = -10 } relation = { who = ENG value = -10 } any_pop = { militancy = 1.8 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }
+	relation = { who = USA value = -10 } relation = { who = ENG value = -10 } any_pop = { militancy = 1.8 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }
   }
 }
 country_event = {
@@ -1513,23 +820,26 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1955
+    year = 1955 NOT = { year = 1960 }
   }
   immediate = { set_global_flag = event_fired_8001087 }
 
   option = {
     name = EVT_8001087_A
-any_pop = { militancy = -0.1 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.44999999999999996 } } }
+	any_pop = { militancy = -0.1 }
+	ai_chance = { factor  = 100 }
   }
 
   option = {
     name = EVT_8001087_B
-any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor  = 0 }
   }
 
   option = {
     name = EVT_8001087_C
-any_pop = { militancy = 0.7 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.44999999999999996 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.55 } } }
+	any_pop = { militancy = 0.7 }
+	ai_chance = { factor  = 0 }
   }
 }
 country_event = {
@@ -1540,13 +850,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1955
+    year = 1955 NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8001088 }
 
   option = {
     name = EVT_8001088_A
-relation = { who = USA value = 10 } add_country_modifier = { name = dh_research_mod duration = 365 }relation = { who = AST value = 10 } 
+	relation = { who = USA value = 10 } 
+	prestige = 5
   }
 }
 country_event = {
@@ -1557,13 +867,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956
+    year = 1956 NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8001089 }
 
   option = {
     name = EVT_8001089_A
-any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 0.15 }
   }
 }
 country_event = {
@@ -1574,13 +883,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956
+    year = 1956 NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8001090 }
 
   option = {
     name = EVT_8001090_A
-any_pop = { militancy = 1.2 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+	any_pop = { militancy = 0.2 }
   }
 }
 country_event = {
@@ -1591,14 +899,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956
+    year = 1956 NOT = { year = 1960 }
     has_global_flag = event_fired_8001089
   }
-  immediate = { set_global_flag = event_fired_8001091 }
 
   option = {
     name = EVT_8001091_A
-any_pop = { militancy = -1.5 }
+	any_pop = { militancy = -1.5 }
   }
 }
 country_event = {
@@ -1609,14 +916,13 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956
+    year = 1956 NOT = { year = 1960 }
     has_global_flag = event_fired_8001090
   }
-  immediate = { set_global_flag = event_fired_8001092 }
 
   option = {
     name = EVT_8001092_A
-any_pop = { militancy = -1.2 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+	any_pop = { militancy = -1.2 }
   }
 }
 country_event = {
@@ -1627,13 +933,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956
+    year = 1956 NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8001093 }
 
   option = {
     name = EVT_8001093_A
-any_pop = { militancy = -0.5 }add_country_modifier = { name = dh_industrial_modifier duration = 365 }
+	any_pop = { militancy = -0.5 }
   }
 }
 country_event = {
@@ -1644,20 +949,23 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956
-    NOT = {
-    }
+    year = 1956 NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8001094 }
 
   option = {
     name = EVT_8001094_A
-any_pop = { militancy = -0.2 }relation = { who = RUS value = -10 } relation = { who = HUN value = -25 } add_country_modifier = { name = dh_province_manpower duration = 365 }
+	any_pop = { militancy = -0.2 }
+	relation = { who = RUS value = -10 } 
+	relation = { who = HUN value = -25 } 
+	ai_chance = { factor  = 100 }
   }
 
   option = {
     name = EVT_8001094_B
-any_pop = { militancy = 0.5 }relation = { who = RUS value = 5 } relation = { who = HUN value = 5 } 
+	any_pop = { militancy = 0.5 }
+	relation = { who = RUS value = 5 } 
+	relation = { who = HUN value = 5 } 
+	ai_chance = { factor  = 0 }
   }
 }
 country_event = {
@@ -1668,13 +976,12 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1957
+    year = 1957 NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8001095 }
 
   option = {
     name = EVT_8001095_A
-any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 }
   }
 }
 country_event = {
@@ -1685,12 +992,11 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1958
+    year = 1958 NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8001096 }
 
   option = {
     name = EVT_8001096_A
-any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 }
   }
 }

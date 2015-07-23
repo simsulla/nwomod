@@ -1,0 +1,44 @@
+country_event = {
+  id = 8029720
+  title = EVT_8029720_NAME
+  desc = EVT_8029720_DESC
+  picture = "nwo2_tanzania"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1963 NOT = { year = 1990 }
+    exists = TAN
+	owns = 2048 #Zanzibar
+  }
+  immediate = { set_global_flag = event_fired_8029720 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8029720_A
+    relation = { who = TAN value = 100 } 
+	2048 = { secede_province = TAN } 
+	TAN = { country_event = 8029721 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8029720_B
+	relation = { who = TAN value = -100 } 
+	random_owned = { limit = { province_id = 2048 } any_pop = { militancy = 5.0 } }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8029721
+  title = EVT_8029721_NAME
+  desc = EVT_8029721_DESC
+  picture = "nwo2_tanzania"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8029721_A
+	any_pop = { militancy = -0.5 }
+  }
+}

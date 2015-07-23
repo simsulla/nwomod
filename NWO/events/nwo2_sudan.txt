@@ -1,0 +1,24 @@
+country_event = {
+  id = 8014520
+  title = EVT_8014520_NAME
+  desc = EVT_8014520_DESC
+  picture = "nwo2_unrest_in_sudan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SUD
+    year = 1963
+    any_owned_province = { province_id = 360 }  }
+  immediate = { set_global_flag = event_fired_8014520 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014520_A
+	any_pop = { limit = { NOT = { religion = sunni } } militancy = 5.0 }
+	any_owned = { 
+		limit = { OR = { province_id = 1843 province_id = 1844  province_id = 1845  province_id = 1846 province_id = 1847} }
+		change_controller = REB 
+	} 
+  }
+}

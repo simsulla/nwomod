@@ -3,7 +3,14 @@ country_event = {
   title = "EVT_8000608_NAME"
   desc = "EVT_8000608_DESC"
   picture = "nwo2_angolan_independence"
-  is_triggered_only = yes
+
+  trigger = {
+    tag = ANG
+	is_vassal = no
+	exists = ANG
+  }
+
+  mean_time_to_happen = { days = 36 }
 
   option = {
     name = "EVT_8000608_A"

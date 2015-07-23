@@ -1,0 +1,20 @@
+country_event = {
+  id = 8009111
+  title = EVT_8009111_NAME
+  desc = EVT_8009111_DESC
+  picture = "nwo2_madagascar"
+  fire_only_once = yes
+
+  trigger = {
+    tag = MAD
+    year = 1953 NOT = { year = 1990 }
+	exists = yes
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8009111_A
+	define_general = { name = "Philibert Tsiranana" personality = energetic background = no_background }
+  }
+}

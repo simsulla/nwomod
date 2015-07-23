@@ -1,0 +1,61 @@
+country_event = {
+  id = 8008616
+  title = EVT_8008616_NAME
+  desc = EVT_8008616_DESC
+  picture = "nwo2_muammar_gaddafi"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TRI
+    year = 1969 NOT = { year = 1970 }
+	OR = { government = hms_government government = absolute_monarchy government = democracy }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008616_A
+	government = nationalist_dictatorship
+  }
+}
+country_event = {
+  id = 8008625
+  title = EVT_8008625_NAME
+  desc = EVT_8008625_DESC
+  picture = "nwo2_muammar_gaddafi"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TRI
+    year = 1977 NOT = { year = 1978 }
+  }
+  immediate = { set_global_flag = event_fired_8008625 }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8008625_A
+	any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8008626
+  title = EVT_8008626_NAME
+  desc = EVT_8008626_DESC
+  picture = "nwo2_great_manmade_river"
+  fire_only_once = yes
+
+  trigger = {
+    tag = TRI
+    year = 1984 NOT = { year = 1990 }
+	government = nationalist_dictatorship
+	money = 2500 
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8008626_A
+	treasury = -2500 
+  }
+}

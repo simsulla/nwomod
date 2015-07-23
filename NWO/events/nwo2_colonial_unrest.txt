@@ -1,0 +1,39 @@
+province_event = { # Madagascar
+  id = 8210001
+  title = EVT_COLONIALUNREST_NAME
+  desc = EVT_COLONIALUNREST_DESC
+  picture = "nwo2_colonial_unrest"
+  #ire_only_once = yes
+
+  trigger = {
+    NOT = { owned_by = MAD }
+    year = 1946 NOT = { year = 1948 }
+    is_core = MAD  
+  }
+
+  mean_time_to_happen = { days = 1080 }
+
+  option = {
+    name = OK
+	any_pop = { militancy = 3.0 }
+  }
+}
+province_event = { # Morocco
+  id = 8210002
+  title = EVT_COLONIALUNREST_NAME
+  desc = EVT_COLONIALUNREST_DESC
+  picture = "nwo2_colonial_unrest"
+  #fire_only_once = yes
+
+  trigger = {
+    NOT = { owned_by = MOR }
+    year = 1952 NOT = { year = 1954 }
+  }
+
+  mean_time_to_happen = { days = 1080 }
+
+  option = {
+    name = OK
+	any_pop = { militancy = 3.0 }
+  }
+}

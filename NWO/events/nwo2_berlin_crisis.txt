@@ -1,0 +1,210 @@
+country_event = {
+  id = 8500701
+  title = EVT_8500701_NAME
+  desc = EVT_8500701_DESC
+  picture = "nwo2_khrushchev_ulbricht"
+  fire_only_once = yes
+
+  trigger = {
+    year = 1963
+	tag = RUS
+    exists = GER
+    exists = DDR
+    has_global_flag = divided_berlin
+    USA = { owns = 549 }# Berlin
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8500701_A
+	badboy = 5 
+	USA = { country_event = 8500702 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500701_B
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
+	relation = { who = DDR value = -50 } 
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500702
+  title = EVT_8500702_NAME
+  desc = EVT_8500702_DESC
+  picture = "nwo2_khrushchev_ulbricht"
+  is_triggered_only = yes
+  
+  immediate = { set_global_flag = event_fired_8500702 }
+
+  option = {
+    name = EVT_8500702_A
+	any_pop = { militancy = -0.3 }
+	relation = { who = DDR value = -25 } 
+	relation = { who = GER value = 75 } 
+	country_event = { id = 8500703 days = 30 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500702_B
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
+	relation = { who = GER value = -150 } 
+	relation = { who = DDR value = 150 } 
+	any_pop = { militancy = 1.0 } 
+	clr_global_flag = divided_berlin 
+	set_global_flag = raise_soviet_bloc_coherence 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500703
+  title = EVT_8500703_NAME
+  desc = EVT_8500703_DESC
+  picture = "nwo2_berlin_wall"
+  is_triggered_only = yes
+  
+  immediate = { set_global_flag = event_fired_8500703 }
+
+  option = {
+    name = EVT_8500703_A
+	any_pop = { militancy = -0.3 }
+	relation = { who = DDR value = -50 } 
+	relation = { who = GER value = -100 } 
+	USA = { country_event =  8500704 } 
+	set_global_flag = raise_soviet_bloc_coherence 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500703_B
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
+	relation = { who = GER value = -50 } 
+	relation = { who = DDR value = 25 }
+	# some event to make DDR angry DDR = { country_event = xxx } 
+	any_pop = { militancy = 0.8 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = { # East Berlin is off limits
+  id = 8500704
+  title = EVT_8500704_NAME
+  desc = EVT_8500704_DESC
+  picture = "nwo2_berlin_crisis_1961"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500704_A
+	any_pop = { militancy = -0.1 }
+	relation = { who = GER value = -25 } 
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8500704_B
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
+	relation = { who = GER value = -50 } 
+	relation = { who = DDR value = 25 } 
+	any_pop = { militancy = 0.5 }
+	RUS = { country_event = 8500705 }
+	set_global_flag = raise_soviet_bloc_coherence 
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = { # Access to East Berlin
+  id = 8500705
+  title = EVT_8500705_NAME
+  desc = EVT_8500705_DESC
+  picture = "nwo2_berlin_crisis_1961"
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8500705_A
+	any_pop = { militancy = -0.3 }
+	USA = { country_event = 8500705 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500705_B
+	relation = { who = GER value = -50 } 
+	relation = { who = DDR value = 25 } 
+	any_pop = { militancy = 0.5 }
+	set_global_flag = lower_soviet_bloc_coherence 
+	USA = { country_event = 8500706 }
+	ai_chance = { factor = 0 }
+  }
+
+}
+country_event = {
+  id = 8500706
+  title = EVT_8500706_NAME
+  desc = EVT_8500706_DESC
+  picture = "nwo2_berlin_crisis_1961"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500706_A
+	any_pop = { militancy = -0.3 }
+	RUS = { country_event = 8500707 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500706_B
+	relation = { who = GER value = -50 } 
+	relation = { who = DDR value = 25 } 
+	any_pop = { militancy = 1.0 }
+	set_global_flag = raise_soviet_bloc_coherence 
+    ai_chance = { factor = 0 }  
+  }
+
+  option = {
+    name = EVT_8500706_C
+    any_pop = { militancy = 1.5 }
+	badboy = 5
+	# TODO DDR event rais internal doscontent
+    ai_chance = { factor = 0 }  
+  }
+}
+country_event = { 
+  id = 8500707
+  title = EVT_8500707_NAME
+  desc = EVT_8500707_DESC
+  picture = "nwo2_berlin_crisis_1961"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500707_A
+	any_pop = { militancy = -0.3 }
+	USA = { country_event =  8500708  }
+	ai_chance = { factor = 100 }
+   }
+
+  option = {
+    name = EVT_8500707_B
+	relation = { who = GER value = -50 } 
+	relation = { who = DDR value = 25 } 
+	any_pop = { militancy = 1.5 }
+	war = USA # TODO take Berlin
+	ai_chance = { factor = 0 }
+ }
+}
+country_event = {
+  id = 8500708
+  title = EVT_8500708_NAME
+  desc = EVT_8500708_DESC
+  picture = "nwo2_berlin_crisis_1961"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500708_A
+	any_pop = { militancy = -0.3 }
+	set_global_flag = lower_soviet_bloc_coherence 
+  }
+}

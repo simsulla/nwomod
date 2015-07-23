@@ -1,0 +1,30 @@
+country_event = {
+  id = 8219000
+  title = EVT_COLONIALCLAIMS_NAME
+  desc = EVT_COLONIALCLAIMS_DESC
+  picture = "nwo2_colonialism"
+
+  trigger = {
+	NOT = { has_country_flag = colonial_claims }
+	OR = { is_secondary_power = yes is_greater_power = yes }
+	year = 1954 NOT = { year = 1960 }
+    any_owned_province = { is_colonial = yes }
+    NOT = { has_global_flag = ww3 }
+    has_global_flag = cold_war_pacific
+    war = no
+  }
+
+  mean_time_to_happen = { days = 90 }
+
+  option = {
+    name = EVT_COLONIALCLAIMS_A
+	set_country_flag = colonial_claims
+  }
+
+  option = {
+    name = EVT_COLONIALCLAIMS_B
+	any_pop = { militancy = 1.0 }
+	badboy = 5 
+	set_country_flag = colonial_claims
+  }
+}

@@ -1,0 +1,127 @@
+country_event = {
+  id = 8009922
+  title = EVT_8009922_NAME
+  desc = EVT_8009922_DESC
+  picture = "nwo2_tanger_protocol"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+    year = 1956 NOT = { year = 1963 }
+    exists = MOR
+	war = no
+	MOR = { war = no }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8009922_A
+	1686 = { secede_province = MOR } 
+	1687 = { secede_province = MOR } 
+	1688 = { secede_province = MOR } 
+	1695 = { secede_province = MOR } 
+	1696 = { secede_province = MOR } 
+	MOR = { country_event = 8009923 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009922_B
+	any_pop = { militancy = 0.8 }
+	badboy = 5 
+	ai_chance = { factor = 1 }
+  }
+}
+country_event = {
+  id = 8009923
+  title = EVT_8009923_NAME
+  desc = EVT_8009923_DESC
+  picture = "nwo2_tanger_protocol"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8009923_A
+	any_pop = { militancy = -0.5 }
+	prestige = 5
+  }
+}
+country_event = {
+  id = 8009924
+  title = EVT_8009924_NAME
+  desc = EVT_8009924_DESC
+  picture = "nwo2_western_sahara"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+    year = 1974 NOT = { year = 1991 }
+    exists = MOR
+	owns = 1773
+	owns = 1774
+  }
+
+  mean_time_to_happen = { days = 260 }
+
+  option = {
+    name = EVT_8009924_A
+	1773 = { secede_province = MOR } 
+	1774 = { secede_province = MOR } 
+	any_pop = { militancy = -0.5 }
+	relation = { who = MOR value = 100 } 
+	MOR = {country_event = 8009925 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009924_B
+	any_pop = { militancy = 0.8 }
+	relation = { who = MOR value = -200 } 
+	release = WSA
+	MOR = {country_event = 8009926 }
+	ai_chance = { factor = 0 }
+  }
+  
+  option = {
+    name = EVT_8009924_C
+	any_pop = { militancy = 0.8 }
+	badboy = 20 
+	relation = { who = MOR value = -200 } 
+	relation = { who = ALG value = -100 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8009925
+  title = EVT_8009925_NAME
+  desc = EVT_8009925_DESC
+  picture = "nwo2_western_sahara"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8009925_A
+  }
+}
+country_event = {
+  id = 8009926
+  title = EVT_8009925_NAME
+  desc = EVT_8009925_DESC
+  picture = "nwo2_western_sahara"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8009926_A
+	add_casus_belli = { target = WSA type = conquest }
+	badboy = 10 
+	relation = { who = ALG value = -200 } 
+	relation = { who = WSA value = -200 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009926_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+  
+}

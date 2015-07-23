@@ -1,0 +1,296 @@
+country_event = { # form the Malayan Union
+  id = 8009701
+  title = EVT_8009701_NAME
+  desc = EVT_8009701_DESC
+  picture = "nwo2_federation_of_malaysia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1946 NOT = { year = 1953 }
+  }
+
+  mean_time_to_happen = { days = 260 }
+
+  option = {
+    name = EVT_8009701_A
+	1388 = { secede_province = MSY }
+	1386 = { secede_province = MSY }
+	prestige = 10
+	badboy = -2
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8009702_A
+	relation = { who = MSY value = -100 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = { # Singapore independence
+  id = 8009702
+  title = EVT_8009702_NAME
+  desc = EVT_8009702_DESC
+  picture = "nwo2_federation_of_malaysia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1959 NOT = { year = 1963 }
+	NOT = { exists = SNG }
+  }
+
+  mean_time_to_happen = { days = 260 }
+
+  option = {
+    name = EVT_8009702_A
+	release_vassal = SNG
+	prestige = 10
+	badboy = -2
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8009702_A
+	prestige = -10
+	badboy = 2
+	1384 = { any_pop = { militancy = 5 } }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8009704
+  title = EVT_8009704_NAME
+  desc = EVT_8009704_DESC
+  picture = "nwo2_tomb_of_gurney"
+  fire_only_once = yes
+
+  trigger = {
+    tag = MSY
+    year = 1951 NOT = { year = 1953 }
+  }
+
+  mean_time_to_happen = { days = 260 }
+
+  option = {
+    name = EVT_8009704_A
+	prestige = -5
+  }
+}
+country_event = {
+  id = 8009719
+  title = EVT_8009719_NAME
+  desc = EVT_8009719_DESC
+  picture = "nwo2_malayan_emergency"
+  fire_only_once = yes
+
+  trigger = {
+    tag = MSY
+    year = 1948 NOT = { year = 1960 }
+  }
+
+  mean_time_to_happen = { days = 1000 }
+
+  option = {
+    name = EVT_8009719_A
+	any_pop = { limit = { culture = chinese } militancy = 4 }
+  }
+}
+country_event = {
+  id = 8009720
+  title = EVT_8009720_NAME
+  desc = EVT_8009720_DESC
+  picture = "nwo2_federation_of_malaysia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SNG
+    year = 1948 NOT = { year = 1963 }
+    exists = MSY
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8009720_A
+	relation = { who = MSY value = 100 }
+	MSY = { country_event =  8009721 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009720_B
+	any_pop = { militancy = 0.3 }
+	relation = { who = MSY value = -100 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8009721
+  title = EVT_8009721_NAME
+  desc = EVT_8009721_DESC
+  picture = "nwo2_federation_of_malaysia"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8009721_A
+	inherit = SNG 
+	any_pop = { militancy = -0.3 }
+  }
+}
+country_event = {
+  id = 8009722
+  title = EVT_8009722_NAME
+  desc = EVT_8009722_DESC
+  picture = "nwo2_federation_of_malaysia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1963 NOT = { year = 1964 }
+    exists = MSY
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8009722_A
+	relation = { who = MSY value = 200 } 
+	any_pop = { militancy = 0.5 }
+	MSY = { country_event =  8009723 }
+	release = BRU
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009722_B
+	relation = { who = MSY value = -200 } 
+	any_pop = { limit = { culture = malay } militancy = 10 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8009723
+  title = EVT_8009723_NAME
+  desc = EVT_8009723_DESC
+  picture = "nwo2_federation_of_malaysia"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8009723_A
+	ENG = { 1394 = { secede_province = MSY } 1395 = { secede_province = MSY } 1396 = { secede_province = MSY } 1397 = { secede_province = MSY } }
+	government = democracy # to change flag
+	any_pop = { militancy = -0.3 }
+  }
+}
+country_event = {
+  id = 8009724
+  title = EVT_8009724_NAME
+  desc = EVT_8009724_DESC
+  picture = "nwo2_konfrontasi"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1962 NOT = { year = 1965 }
+    NOT = { owns = 1394 owns = 1397 }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8009724_A
+	any_pop = { militancy = -0.5 }
+	badboy = 15 
+	money = -500 
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.43 } } }
+	MSY = { country_event = 8009725 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009724_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8009725
+  title = EVT_8009725_NAME
+  desc = EVT_8009725_DESC
+  picture = "nwo2_konfrontasi"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8009725_A
+	any_pop = { militancy = -0.3 }
+	IDO = { country_event = 8009726 }
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8009725_B
+	any_pop = { militancy = 1.0 }
+	1394 = { secede_province = IDO } 1395 = { secede_province = IDO } 1396 = { secede_province = IDO } 1397 = { secede_province = IDO }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8009726
+  title = EVT_8009726_NAME
+  desc = EVT_8009726_DESC
+  picture = "nwo2_konfrontasi"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8009726_A
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009726_B
+	war = { target = MSY attacker_goal = { casus_belli = acquire_state state_province_id = 1397 } defender_goal = { casus_belli  = status_quo } }
+	any_pop = { militancy = -0.3 }
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 8009728
+  title = EVT_8009728_NAME
+  desc = EVT_8009728_DESC
+  picture = "nwo2_may_13_incident"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1968 NOT = { year = 1969 }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8009728_A
+	any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8009729
+  title = EVT_8009729_NAME
+  desc = EVT_8009729_DESC
+  picture = "nwo2_malaysian_economy"
+  fire_only_once = yes
+
+  trigger = {
+    tag = IDO
+    year = 1969 NOT = { year = 1970 }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8009729_A
+	add_country_modifier = { name = economic_boom duration = 365 }
+  }
+}

@@ -1,0 +1,33 @@
+country_event = {
+  id = 8011705
+  title = EVT_8011705_NAME
+  desc = EVT_8011705_DESC
+  picture = "nwo2_carnation_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POR
+    year = 1974
+	government = populist_dictatorship
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8011705_A
+	government = democracy
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
+    any_owned = {
+        limit = {
+          province_id = 1446
+        }
+		secede_province = IDO
+    }
+	# TODO how about africa?
+  }
+
+  option = {
+    name = EVT_8011705_B
+	any_pop = { militancy = 4.0 }
+  }
+}
