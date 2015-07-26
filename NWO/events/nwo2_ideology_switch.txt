@@ -1,0 +1,38 @@
+country_event = {
+  id = 8208101
+  title = EVT_COMMIESWITCH_NAME
+  desc = EVT_COMMIESWITCH_DESC
+  picture = "nwo2_commie_switch"
+
+  trigger = {
+	NOT = { has_country_flag = was_commi }
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_SWITCH
+	set_country_flag = was_commi
+  }
+}
+country_event = {
+  id = 8208102
+  title = EVT_DEMOSWITCH_NAME
+  desc = EVT_DEMOSWITCH_DESC
+  picture = "nwo2_demo_switch"
+
+  trigger = {
+	has_country_flag = was_commi
+	NOT = { government = proletarian_dictatorship }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_DEMOSWITCH_SWITCH
+	clr_country_flag = was_commi
+  }
+
+}
+

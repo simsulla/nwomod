@@ -137,11 +137,17 @@ EVT_DEMOUNITE_NAME;Reunification;;;;;;;;;;X
 EVT_DEMOUNITE_DESC;Thanks to the change of government in another part of the country that used to be ruled by communists we may now celebrate the reunification of our country. Once divided, we can now be again one state.;;;;;;;;;;X
 EVT_COMMIEUNITE_NAME;Reunification;;;;;;;;;;X
 EVT_COMMIEUNITE_DESC;Thanks to the change of government in another part of the country that used to be ruled by reactionists we may now celebrate the reunification of our country. Once divided, we can now be again one state.;;;;;;;;;;X
-EVT_COLONIALUNREST_NAME;Colonial unrest;;;;;;;;;;X
+EVT_COLONIALUNREST_NAME;Colonial unrest in $PROVINCENAME$;;;;;;;;;;X
 EVT_COLONIALUNREST_DESC;Colonial riots occurred from time to time because of discrepancies in well-being of colonialists and local population, discrimination because of on nationality and growing nationalism of African and Asian nations. Unrest usually started as peaceful marches and demonstrations but sometimes ended up brutally interrupted by police, leaving demonstrators injured or dead. In 1940s and 1950s colonial empires often promised improvement of living standards and gradual process of entitling subjugated nations to self-governance but for many activists the process was too slow.;;;;;;;;;;X
+EVT_COLONIALUNREST_SUPPRESS;Suppress the unrest;;;;;;;;;;X
+EVT_COLONIALUNREST_PROMISE;Promise self-governance in the future;;;;;;;;;;X
+EVT_COLONIAL_PROMISE_BROKEN_NAME;Colonials in $PROVINCENAME$ accuses us of breaking promises;;;;;;;;;;X
+EVT_COLONIAL_PROMISE_BROKEN_DESC;In 1940s and 1950s colonial empires often promised improvement of living standards and gradual process of entitling subjugated nations to self-governance but for many activists the process was too slow. We feel that continued rule of $COUNTRY$of $PROVINCENAME$ is the best for all residents. Criminal unrest and illegal violent demonstrations will not derail our commitment and focused on improvement of living standards for all our subjects;;;;;;;;;;X
+EVT_COLONIAL_PROMISE_BROKEN_A;Stay on the path for prosperity;;;;;;;;;;X
 EVT_FREEDIVISIONS_NAME;Formation of the Army;;;;;;;;;;X
 EVT_FREEDIVISIONS_DESC;An army, whatever its size, is one of manifestations of independence of a country and its willingness to defend against foreign incursions. After regaining independence most countries were very quick to form their first divisions, usually out of colonial regiments or paramilitary units.;;;;;;;;;;X
 EVT_FREEDIVISIONS_A;It's an order!;;;;;;;;;;X
+EVT_INDEPENDENCE_NAME;Self-rule of $FROMCOUNTRY$;;;;;;;;;;X
 EVT_SELFRULE_ALG_NAME;Self-rule of Algeria;;;;;;;;;;X
 EVT_SELFRULE_ANG_NAME;Self-rule of Angola;;;;;;;;;;X
 EVT_INDEPENDENCE_ANG_NAME;Independence of Angola;;;;;;;;;;X
@@ -203,9 +209,11 @@ EVT_DONTLIBERATE;Cling onto these lands;;;;;;;;;;X
 EVT_MILACCESS_NAME;Colonial bases;;;;;;;;;;X
 EVT_MILACCESS_DESC;We were just given autonomy that we craved for so long. Negotiatable withdraw of our former overlords comes with the price, though, as colonial empires are not ready to give up all their influence overnight. Among those strings of influence that attach ourselves to the former metropolis, is their army. We agreed to accept their troops on our lands and let them maintain their military bases, at least for the time being.;;;;;;;;;;X
 EVT_MILACCESS_A;We hope they will leave, some day;;;;;;;;;;X
-EVT_FULLINDEPENDENCE_NAME;Full independence;;;;;;;;;;X
+EVT_FULLINDEPENDENCE_NAME;Full independence of $COUNTRY$;;;;;;;;;;X
+EVT_FULLINDEPENDENCE_OVERLOARD_NAME;Full independence of $FROMCOUNTRY$;;;;;;;;;;X
 EVT_FULLINDEPENDENCE_DESC;After years of pressure and struggles for indepedence, our nation was deemed worthy of autonomy. Since the time we were granted self-rule on, we became true masters in our country and influence of our former overlords diminished and lately became a rather symbolic one. According to the conditions of our independence, we are now given full sovereignty, taking full power of shaping domestic and international politics alike, this coming with complete responsibility for the future of our nation.;;;;;;;;;;X
 EVT_FULLINDEPENDENCE_A;OK;;;;;;;;;;X
+EVT_FULLINDEPENDENCE_B;This is not acceptable;;;;;;;;;;X
 EVT_ENDOFHISTORY_NAME;End of History;;;;;;;;;;X
 EVT_ENDOFHISTORY_DESC;"Since the darkest days of World War II, the world had largely recovered from its war wounds and the Cold War developed from its modest beginning to a hot competition between the United States and the Soviet Union. Clashes between communism and capitalism dominated the decade, especially in the Northern Hemisphere. The conflicts included the Korean War in the beginnings of the decade and the beginning of the Space Race with the launch of Sputnik I. Along with increased testing of nuclear weapons, this created a politically conservative climate. The beginning of decolonization in Africa and Asia occurred in 1950s and accelerated in the following decade. The 1960s have become synonymous with the new, radical, and subversive events and trends of the period, which continued to develop in the following decades. Several governments turned to the left in the early 1960s. In the United States, John F. Kennedy, a Keynesian and staunch anti-communist who pushed for centre-left social reforms such as civil rights for African Americans and healthcare for the elderly and the poor, was elected to the Presidency;;;;;;;;;;X
 EVT_ENDOFHISTORY_A;Time passes so quickly…;;;;;;;;;;X
@@ -1345,7 +1353,7 @@ EVT_8007030_DESC;The British seem to easily accept our expansion of territorial 
 EVT_8007030_A;Great news;;;;;;;;;;X
 EVT_8007205_NAME;Independence of India;;;;;;;;;;X
 EVT_8007205_DESC;"The first organized militant movements, with a goal of independent India, showed up in Bengal, but they later took to the political stage in the form of a mainstream movement in the then newly formed Indian National Congress (INC), with prominent moderate leaders seeking only their basic right to appear for civil service examinations, as well as more rights, economic in nature, for the people of the soil. The last stages of the freedom struggle from the 1920s onwards saw Congress adopt Mohandas Karamchand Gandhi's policy of nonviolence and civil resistance, Muhammad Ali Jinnah's constitutional struggle for the rights of minorities in India, and several other campaigns. Legendary figures such as Netaji Subhash Chandra Bose later came to adopt a militant approach to the movement, while others like Swami Sahajanand Saraswati wanted both political and economic freedom for India's peasants and toiling masses. Poets including Rabindranath Tagore used literature, poetry and speech as a tool for political awareness. The period of the Second World War saw the peak of the campaigns by the Quit India movement (led by 'Mahatma' Gandhi) and the Indian National Army (INA) movement (led by Netaji Subhas Chandra Bose) and others, eventually resulting in the withdrawal of the British.;;;;;;;;;;X
-EVT_8007205_A;OK;;;;;;;;;;X
+EVT_8007205_A;We will see how this develops;;;;;;;;;;X
 EVT_8007223_NAME;Assassination of Indira Gandhi;;;;;;;;;;X
 EVT_8007223_DESC;On 31 October 1984, two of Gandhi's bodyguards, Satwant Singh and Beant Singh, shot her with their service weapons in the garden of the Prime Minister's residence in New Delhi. The shooting occurred as she was walking past a wicket gate guarded by Satwant and Beant. She was to have been interviewed by the British actor Peter Ustinov, who was filming a documentary for Irish television. Beant Singh shot her three times using his side-arm, and Satwant Singh fired 30 rounds. Beant Singh and Satwant Singh dropped their weapons and surrendered. Afterwards they were taken away by other guards into a closed room where Beant Singh was shot dead. Kehar Singh was later arrested for conspiracy in the attack. Both Satwant and Kehar were sentenced to death and hanged in Delhi's Tihar jail.;;;;;;;;;;X
 EVT_8007223_A;We mourn the loss;;;;;;;;;;X
@@ -1409,21 +1417,6 @@ EVT_8007243_A;OK;;;;;;;;;;X
 EVT_8007244_NAME;First Kashmir War comes to stalemate;;;;;;;;;;X
 EVT_8007244_DESC;Both sides of the war already lost many men over Kashmir but the future of the region remains unclear. The frontier comes directly through the center of the state and there is little chance that the following month are going to change this. For now, we have to agree that the province remains divided, roughly along ethnic borders, if it is possible to mark clear ethnic border in this region.;;;;;;;;;;X
 EVT_8007244_A;Kashmir will remain bone of contention;;;;;;;;;;X
-EVT_8007245_NAME;First Kashmir War comes to stalemate;;;;;;;;;;X
-EVT_8007245_DESC;Both sides of the war already lost many men over Kashmir but the future of the region remains unclear. The frontier comes directly through the center of the state and there is little chance that the following month are going to change this. For now, we have to agree that the province remains divided, roughly along ethnic borders, if it is possible to mark clear ethnic border in this region.;;;;;;;;;;X
-EVT_8007245_A;Kashmir will remain bone of contention;;;;;;;;;;X
-EVT_8007246_NAME;Marginal victory in First Kashmir War;;;;;;;;;;X
-EVT_8007246_DESC;The battles in mountaineous region were tough but we managed to push the frontier to the Pakistani side and counquer whole Kashmir. There's little chance for us to achieve something more but at least we can gain what we fought for, the region of Kashmir.;;;;;;;;;;X
-EVT_8007246_A;OK;;;;;;;;;;X
-EVT_8007247_NAME;Marginal defeat in First Kashmir War;;;;;;;;;;X
-EVT_8007247_DESC;Indian army defended its mountain frontier and we are unable to reconquer the state of Kashmir. Due to stalling of frontier and prolonged warfare, there is little we can do but to accept that for now Kashmir will remain in Indian hands.;;;;;;;;;;X
-EVT_8007247_A;OK;;;;;;;;;;X
-EVT_8007248_NAME;Total victory in First Kashmir War;;;;;;;;;;X
-EVT_8007248_DESC;We managed to push deep into the enemy's territory, taking not only Kashmir but areas far behind the Pakistani boundaries. We are in a position to claim the whole territory of the princely state as well as resolve ethnic border disputes in a couple of other provinces to our liking.;;;;;;;;;;X
-EVT_8007248_A;OK;;;;;;;;;;X
-EVT_8007249_NAME;Total defeat in First Kashmir War;;;;;;;;;;X
-EVT_8007249_DESC;Indian army defended its mountain frontier and pulled off a large-scale counterattack which found us surprised and ill-prepared. Facing total defeat we have to agree to give the whole area of Kashmir to India but also secede a couple of border provinces with sizeable Hindu population.;;;;;;;;;;X
-EVT_8007249_A;OK;;;;;;;;;;X
 EVT_8007250_NAME;Invasion of Goa;;;;;;;;;;X
 EVT_8007250_DESC;For many years after India gained its independence, it made diplomatic overtures to gain control over a Portuguese colony of Goa. This met staunch opposition of Salazar's regime, not willing to discuss any peaceful withdrawal, as in the case of other parts of Portuguese colonial empire.;;;;;;;;;;X
 EVT_8007250_A;Carry out Operation Vijay;;;;;;;;;;X
@@ -2961,7 +2954,7 @@ EVT_8023003_NAME;Deposition of King Michael;;;;;;;;;;X
 EVT_8023003_DESC;"In 1944, when World War II was going badly for the Axis powers, King Michael joined a coup against Antonescu, and declared war on Germany. At the end of the war, King Michael was awarded the highest degree of the Legion of Merit by U.S. President and decorated with the Soviet Order of Victory by Joseph Stalin.;;;;;;;;;;X
 EVT_8023003_A;OK;;;;;;;;;;X
 EVT_8023226_NAME;PKWN Manifesto;;;;;;;;;;X
-EVT_8023226_DESC;The Manifesto of the Polish Committee of National Liberation (PKWN) was a political manifesto of the Soviet-backed provisional government, which operated in opposition to the London-based Polish government in exile. It was officially proclaimed in Che³m on 22 July 1944, but its text was personally amended by Joseph Stalin in Moscow and it was printed there as well.;;;;;;;;;;X
+EVT_8023226_DESC;The Manifesto of the Polish Committee of National Liberation (PKWN) was a political manifesto of the Soviet-backed provisional government, which operated in opposition to the London-based Polish government in exile. It was officially proclaimed in Chem on 22 July 1944, but its text was personally amended by Joseph Stalin in Moscow and it was printed there as well.;;;;;;;;;;X
 EVT_8023226_A;PKWN is the true Polish government;;;;;;;;;;X
 EVT_8023226_B;Invite London Government to cooperate;;;;;;;;;;X
 EVT_8023227_NAME;3 x Yes Referendum;;;;;;;;;;X
@@ -3604,10 +3597,11 @@ EVT_8211025_A;Damn!;;;;;;;;;;X
 EVT_8212164_NAME;Dutch Indonesia;;;;;;;;;;X
 EVT_8212164_DESC;Political freedoms in Indonesia under the Dutch were limited at best. While Dutch aims to 'civilize' and 'modernize' the peoples of the Indies sometimes led to tolerance for native publications and organizations, the Dutch also strictly limited the content of these activities. Educational initatives provided opportunities for local inteligentsia but not enough to appease rising counsciousness of Indonesian nationalists.;;;;;;;;;;X
 EVT_8212164_A;OK;;;;;;;;;;X
-EVT_8215000_NAME;Dissolution of Western Allies;;;;;;;;;;X
+EVT_8215000_NAME;The Western Allies;;;;;;;;;;X
 EVT_8215000_DESC;The Allies of World War II were the countries that opposed the Axis powers during the Second World War. The Allies became involved in World War II either because they had already been invaded, were directly threatened with invasion by the Axis or because they were concerned that the Axis powers would come to control the world.;;;;;;;;;;X
 EVT_8215000_A;OK;;;;;;;;;;X
-EVT_8215001_NAME;Dissolution of Eastern Allies;;;;;;;;;;X
+EVT_8215000_B;No need to stay Allied;;;;;;;;;;X
+EVT_8215001_NAME;The Eastern Allies;;;;;;;;;;X
 EVT_8215001_DESC;The Allies of World War II were the countries that opposed the Axis powers during the Second World War. The Allies became involved in World War II either because they had already been invaded, were directly threatened with invasion by the Axis or because they were concerned that the Axis powers would come to control the world.;;;;;;;;;;X
 EVT_8215001_A;OK;;;;;;;;;;X
 EVT_8215002_NAME;World superpower;;;;;;;;;;X
@@ -3829,29 +3823,18 @@ EVT_8224001_NAME;Yugoslavia is free;;;;;;;;;;X
 EVT_8224001_DESC;After self-liberation during the course of WW2, we claim our rightful possessions once more.;;;;;;;;;;X
 EVT_8224001_A;OK;;;;;;;;;;X
 EVT_8225000_NAME;Our control over Central-Eastern Europe strenghtens;;;;;;;;;;X
-EVT_8225000_DESC;After recent turn of world events, our support of communist cause and surrounding fortunate circumstances allowed us to further tighten our grip over the bloc of our allies.;;;;;;;;;;X
-EVT_8225000_A;We are already in complete control;;;;;;;;;;X
-EVT_8225000_B;We are now in complete control;;;;;;;;;;X
-EVT_8225000_C;Our control is now much more confident;;;;;;;;;;X
-EVT_8225000_D;Our control is now more confident;;;;;;;;;;X
-EVT_8225000_E;Our control is no longer faltering;;;;;;;;;;X
-EVT_8225000_F;We saved our bloc from dissolution;;;;;;;;;;X
-EVT_8225000_G;We saved the USSR from dissolution;;;;;;;;;;X
+EVT_8225000_DESC;After recent turn of events in $FROMCOUNTRY$, our support of communist cause and surrounding fortunate circumstances allowed us to further tighten our grip over the bloc of our allies.;;;;;;;;;;X
+EVT_8225000_A;Our control is now more confident;;;;;;;;;;X
 EVT_8225001_NAME;Our control over Central-Eastern Europe weakens;;;;;;;;;;X
-EVT_8225001_DESC;After recent turn of world events, our ineptitude in supporting communist cause and surrounding unfortunate circumstances resulted in loosening our grip over the bloc of our allies.;;;;;;;;;;X
+EVT_8225001_DESC;After recent turn of events in $FROMCOUNTRY$, our ineptitude in supporting communist cause and surrounding unfortunate circumstances resulted in loosening our grip over the bloc of our allies.;;;;;;;;;;X
 EVT_8225001_A;Our control is no longer complete;;;;;;;;;;X
-EVT_8225001_B;Our control is now less confident;;;;;;;;;;X
-EVT_8225001_C;Our control is now much less confident;;;;;;;;;;X
-EVT_8225001_D;Our is now faltering;;;;;;;;;;X
-EVT_8225001_E;Our bloc is now on the verge of dissolution;;;;;;;;;;X
-EVT_8225001_F;Eastern Europe is no longer ours!;;;;;;;;;;X
-EVT_8225001_G;The core is falling!;;;;;;;;;;X
 EVT_8225002_NAME;Our Big Soviet brother is not watching;;;;;;;;;;X
 EVT_8225002_DESC;After recent turn of world events and misfortunes of Soviet foreign policy, Soviet control over its communist puppets around the world was weakened and they no longer hold sway over each aspect of our internal policy.;;;;;;;;;;X
 EVT_8225002_A;Great!;;;;;;;;;;X
 EVT_8225003_NAME;Unsure future of the Warsaw Pact;;;;;;;;;;X
 EVT_8225003_DESC;After recent turn of world events and misfortunes of Soviet foreign policy, Soviet control over its communist puppets around the world was weakened and our military cooperation in the time of peace is currently put on hold.;;;;;;;;;;X
 EVT_8225003_A;Great!;;;;;;;;;;X
+EVT_8225003_B;Stay on a good relation with Russia;;;;;;;;;;X
 EVT_8225004_NAME;Rise of nations in Eastern Europe;;;;;;;;;;X
 EVT_8225004_DESC;Many countries in Europe after World War II came into sphere of influence of Soviet Union which enforced communist principles of economy under close guidance single-party socialist state. But without supervision of a big neighbor all those countries can now breathe in relief and choose their own ways.;;;;;;;;;;X
 EVT_8225004_A;Down with communism!;;;;;;;;;;X
@@ -4533,90 +4516,20 @@ EVT_8231050_DESC;"Henrich Focke (8 October 1890 – 25 February 1979) was a German
 EVT_8231050_A;OK;;;;;;;;;;X
 EVT_8231100_NAME;Operation Paperclip;;;;;;;;;;X
 EVT_8231100_DESC;"Operation Paperclip was the Office of Strategic Services (OSS) program used to recruit the scientists of Nazi Germany for employment by the United States in the aftermath of World War II. It was conducted in the context of the burgeoning Soviet–American Cold War, one purpose of Operation Paperclip was to deny German scientific knowledge and expertise to the USSR, the UK, and (divided) Germany itself. To circumvent President Truman's anti-Nazi order and the Allied Potsdam and Yalta agreements, the JIOA worked independently to create false employment and political biographies for the scientists. The JIOA also expunged from the public record the scientists' Nazi Party memberships and régime affiliations. Paperclip, the project's operational name, derived from the paperclips used to attach the scientists' new political personae to their 'US Government Scientist' JIOA personnel files.;;;;;;;;;;X
-EVT_8231100_A;We manage to capture most of scientists;;;;;;;;;;X
-EVT_8231100_B;We manage to capture some scientists;;;;;;;;;;X
-EVT_8231100_C;We manage to capture few scientists;;;;;;;;;;X
+EVT_8231100_A;Capture the German scientists;;;;;;;;;;X
 EVT_8231101_NAME;Operation Osoaviakhim;;;;;;;;;;X
 EVT_8231101_DESC;Operation Osoaviakhim was a Soviet operation which took place on 22 October 1946, with NKVD and Soviet army units recruiting thousands of military-related technical specialists from the Soviet occupation zone of post-World-War-II Germany for employment in the Soviet Union. Much related equipment was moved too, the aim being to virtually transplant research and production centres, such as the relocated V-2 rocket centre at Mittelwerk Nordhausen, from Germany to the Soviet Union. The codename 'Osoaviakhim' was the acronym of a Soviet paramilitary organisation, later renamed DOSAAF. The operation was commanded by NKVD deputy Colonel General Serov, outside the control of the local Soviet Military Administration (which in a few cases, such as Carl Zeiss AG, tried to prevent the removal of specialists and equipment of vital economic significance for the occupation zone). The operation took 92 trains to transport the specialists and their families (perhaps 10,000-15,000 people in all) along with their furniture and belongings. Whilst those removed were offered generous contracts (the specialists were told that they would be paid on the same terms as equivalent Soviet workers, which in post-war Germany was seen as a gain), there was little doubt that failing to sign them was not a realistic option.;;;;;;;;;;X
-EVT_8231101_A;We manage to capture most of scientists;;;;;;;;;;X
-EVT_8231101_B;We manage to capture some scientists;;;;;;;;;;X
-EVT_8231101_C;We manage to capture few scientists;;;;;;;;;;X
+EVT_8231101_A;Capture the German scientists;;;;;;;;;;X
 EVT_8231102_NAME;Operation Backfire;;;;;;;;;;X
 EVT_8231102_DESC;Operation Backfire was a military scientific operation during and after the Second World War, which was performed mainly by British staff. It was part of the Allies' scramble to acquire German technology.;;;;;;;;;;X
-EVT_8231102_A;We manage to capture most of scientists;;;;;;;;;;X
-EVT_8231102_B;We manage to capture some scientists;;;;;;;;;;X
+EVT_8231102_A;Capture the German scientists;;;;;;;;;;X
 EVT_8232000_NAME;Schuman Declaration;;;;;;;;;;X
 EVT_8232000_DESC;The Schuman Declaration of May 9, 1950 (later known as Europe Day) laid out a plan for a European Community to pool the coal and steel of its members in a common market but today is widely recognized as one of the first step of further European integration.;;;;;;;;;;X
 EVT_8232000_A;Propose the economic and political integration;;;;;;;;;;X
 EVT_8232000_B;Propose the economic integration;;;;;;;;;;X
 EVT_8232000_C;This is not needed;;;;;;;;;;X
-EVT_8232001_NAME;European federation proposal;;;;;;;;;;X
-EVT_8232001_DESC;The term 'United States of Europe' was used by Winston Churchill in his speech delivered in 1946 at the University of Zürich. Churchill concluded that 'We must build a kind of United States of Europe. In this way only will hundreds of millions of toilers be able to regain the simple joys and hopes which make life worth living.' The terms was then used by various advocates of far-reaching European integration.;;;;;;;;;;X
-EVT_8232001_A;We accept only the economic part of the deal;;;;;;;;;;X
-EVT_8232001_B;We accept the federation proposal!;;;;;;;;;;X
-EVT_8232001_C;We are not interested at all;;;;;;;;;;X
-EVT_8232002_NAME;European federation proposal;;;;;;;;;;X
-EVT_8232002_DESC;The term 'United States of Europe' was used by Winston Churchill in his speech delivered in 1946 at the University of Zürich. Churchill concluded that 'We must build a kind of United States of Europe. In this way only will hundreds of millions of toilers be able to regain the simple joys and hopes which make life worth living.' The terms was then used by various advocates of far-reaching European integration.;;;;;;;;;;X
-EVT_8232002_A;We accept only the economic part of the deal;;;;;;;;;;X
-EVT_8232002_B;We accept the federation proposal!;;;;;;;;;;X
-EVT_8232002_C;We are not interested at all;;;;;;;;;;X
-EVT_8232003_NAME;European federation proposal;;;;;;;;;;X
-EVT_8232003_DESC;The term 'United States of Europe' was used by Winston Churchill in his speech delivered in 1946 at the University of Zürich. Churchill concluded that 'We must build a kind of United States of Europe. In this way only will hundreds of millions of toilers be able to regain the simple joys and hopes which make life worth living.' The terms was then used by various advocates of far-reaching European integration.;;;;;;;;;;X
-EVT_8232003_A;We accept only the economic part of the deal;;;;;;;;;;X
-EVT_8232003_B;We accept the federation proposal!;;;;;;;;;;X
-EVT_8232003_C;We are not interested at all;;;;;;;;;;X
-EVT_8232004_NAME;European federation proposal;;;;;;;;;;X
-EVT_8232004_DESC;The term 'United States of Europe' was used by Winston Churchill in his speech delivered in 1946 at the University of Zürich. Churchill concluded that 'We must build a kind of United States of Europe. In this way only will hundreds of millions of toilers be able to regain the simple joys and hopes which make life worth living.' The terms was then used by various advocates of far-reaching European integration.;;;;;;;;;;X
-EVT_8232004_A;We accept only the economic part of the deal;;;;;;;;;;X
-EVT_8232004_B;We accept the federation proposal!;;;;;;;;;;X
-EVT_8232004_C;We are not interested at all;;;;;;;;;;X
-EVT_8232005_NAME;European federation proposal;;;;;;;;;;X
-EVT_8232005_DESC;The term 'United States of Europe' was used by Winston Churchill in his speech delivered in 1946 at the University of Zürich. Churchill concluded that 'We must build a kind of United States of Europe. In this way only will hundreds of millions of toilers be able to regain the simple joys and hopes which make life worth living.' The terms was then used by various advocates of far-reaching European integration.;;;;;;;;;;X
-EVT_8232005_A;We accept only the economic part of the deal;;;;;;;;;;X
-EVT_8232005_B;We accept the federation proposal!;;;;;;;;;;X
-EVT_8232005_C;We are not interested at all;;;;;;;;;;X
-EVT_8232010_NAME;European federation;;;;;;;;;;X
-EVT_8232010_DESC;In spite of various obstacles, the Western European nations remembered well how difficult the times of war were and how important it is to unite as Europe. Unite to defend against the common enemies and against the Europeans' own prejudices.;;;;;;;;;;X
-EVT_8232010_A;We welcome European Federation;;;;;;;;;;X
-EVT_8232011_NAME;Luxemburg joins the European federation;;;;;;;;;;X
-EVT_8232011_DESC;In spite of various obstacles, the Western European nations remembered well how difficult the times of war were and how important it is to unite as Europe. Unite to defend against the common enemies and against the Europeans' own prejudices.;;;;;;;;;;X
-EVT_8232011_A;We welcome Luxemburg in the European Federation;;;;;;;;;;X
-EVT_8232020_NAME;The Proposal for United States of Europe;;;;;;;;;;X
-EVT_8232020_DESC;Churchill summed up his reservations about European unification in words: 'We see nothing but good and hope in a richer, freer, more contented European commonality. But we have our own dream and our own task. We are with Europe, but not of it. We are linked but not compromised. We are interested and associated but not absorbed.' What will we say?;;;;;;;;;;X
-EVT_8232020_A;Let us go forward together;;;;;;;;;;X
-EVT_8232020_B;Let us remain where we are;;;;;;;;;;X
-EVT_8232020_C;Let us break away!;;;;;;;;;;X
-EVT_8232021_NAME;The Proposal for United States of Europe;;;;;;;;;;X
-EVT_8232021_DESC;Churchill summed up his reservations about European unification in words: 'We see nothing but good and hope in a richer, freer, more contented European commonality. But we have our own dream and our own task. We are with Europe, but not of it. We are linked but not compromised. We are interested and associated but not absorbed.' What will we say?;;;;;;;;;;X
-EVT_8232021_A;Let us go forward together (Game Over);;;;;;;;;;X
-EVT_8232021_B;Let us remain where we are;;;;;;;;;;X
-EVT_8232021_C;Let us break away!;;;;;;;;;;X
-EVT_8232022_NAME;The Proposal for United States of Europe;;;;;;;;;;X
-EVT_8232022_DESC;Churchill summed up his reservations about European unification in words: 'We see nothing but good and hope in a richer, freer, more contented European commonality. But we have our own dream and our own task. We are with Europe, but not of it. We are linked but not compromised. We are interested and associated but not absorbed.' What will we say?;;;;;;;;;;X
-EVT_8232022_A;Let us go forward together (Game Over);;;;;;;;;;X
-EVT_8232022_B;Let us remain where we are;;;;;;;;;;X
-EVT_8232022_C;Let us break away!;;;;;;;;;;X
-EVT_8232023_NAME;The Proposal for United States of Europe;;;;;;;;;;X
-EVT_8232023_DESC;Churchill summed up his reservations about European unification in words: 'We see nothing but good and hope in a richer, freer, more contented European commonality. But we have our own dream and our own task. We are with Europe, but not of it. We are linked but not compromised. We are interested and associated but not absorbed.' What will we say?;;;;;;;;;;X
-EVT_8232023_A;Let us go forward together (Game Over);;;;;;;;;;X
-EVT_8232023_B;Let us remain where we are;;;;;;;;;;X
-EVT_8232023_C;Let us break away!;;;;;;;;;;X
-EVT_8232024_NAME;The Proposal for United States of Europe;;;;;;;;;;X
-EVT_8232024_DESC;Churchill summed up his reservations about European unification in words: 'We see nothing but good and hope in a richer, freer, more contented European commonality. But we have our own dream and our own task. We are with Europe, but not of it. We are linked but not compromised. We are interested and associated but not absorbed.' What will we say?;;;;;;;;;;X
-EVT_8232024_A;Let us go forward together (Game Over);;;;;;;;;;X
-EVT_8232024_B;Let us remain where we are;;;;;;;;;;X
-EVT_8232024_C;Let us break away!;;;;;;;;;;X
-EVT_8232025_NAME;The Proposal for United States of Europe;;;;;;;;;;X
-EVT_8232025_DESC;Churchill summed up his reservations about European unification in words: 'We see nothing but good and hope in a richer, freer, more contented European commonality. But we have our own dream and our own task. We are with Europe, but not of it. We are linked but not compromised. We are interested and associated but not absorbed.' What will we say?;;;;;;;;;;X
-EVT_8232025_A;Let us go forward together (Game Over);;;;;;;;;;X
-EVT_8232025_B;Let us remain where we are;;;;;;;;;;X
-EVT_8232025_C;Let us break away!;;;;;;;;;;X
-EVT_8232030_NAME;United States of Europe;;;;;;;;;;X
-EVT_8232030_DESC;Some day, following the example of the United States of America, there will be a United States of Europe.;;;;;;;;;;X
-EVT_8232030_A;United we stand;;;;;;;;;;X
-EVT_8232031_NAME;United States of Europe;;;;;;;;;;X
-EVT_8232031_DESC;Europe is so well gardened that it resembles a work of art, a scientific theory, a neat metaphysical system. Man has re-created Europe in his own image.;;;;;;;;;;X
-EVT_8232031_A;United we stand;;;;;;;;;;X
+EVT_8232001_B;Sign the Schuman Declaration;;;;;;;;;;X
+EVT_8232001_C;This is not needed;;;;;;;;;;X
 EVT_8232040_NAME;Treaty of Paris;;;;;;;;;;X
 EVT_8232040_DESC;The Treaty of Paris was signed on 18 April 1951 between France, West Germany, Italy and the three Benelux countries established the European Coal and Steel Community (ECSC), which subsequently became part of the European Union. The treaty came into force on 23 July 1952 and expired on 23 July 2002, exactly fifty years after it came into effect.;;;;;;;;;;X
 EVT_8232040_A;Propose the Treaty;;;;;;;;;;X
@@ -4625,22 +4538,6 @@ EVT_8232041_NAME;European Coal and Steel Community;;;;;;;;;;X
 EVT_8232041_DESC;The European Coal and Steel Community (ECSC) was a six-nation international organisation serving to unify Western Europe during the Cold War and create the foundation for the modern-day developments of the European Union. The ECSC was the first organisation to be based on the principles of supranationalism.;;;;;;;;;;X
 EVT_8232041_A;Join!;;;;;;;;;;X
 EVT_8232041_B;No, thanks;;;;;;;;;;X
-EVT_8232042_NAME;European Coal and Steel Community;;;;;;;;;;X
-EVT_8232042_DESC;The European Coal and Steel Community (ECSC) was a six-nation international organisation serving to unify Western Europe during the Cold War and create the foundation for the modern-day developments of the European Union. The ECSC was the first organisation to be based on the principles of supranationalism.;;;;;;;;;;X
-EVT_8232042_A;Join!;;;;;;;;;;X
-EVT_8232042_B;No, thanks;;;;;;;;;;X
-EVT_8232043_NAME;European Coal and Steel Community;;;;;;;;;;X
-EVT_8232043_DESC;The European Coal and Steel Community (ECSC) was a six-nation international organisation serving to unify Western Europe during the Cold War and create the foundation for the modern-day developments of the European Union. The ECSC was the first organisation to be based on the principles of supranationalism.;;;;;;;;;;X
-EVT_8232043_A;Join!;;;;;;;;;;X
-EVT_8232043_B;No, thanks;;;;;;;;;;X
-EVT_8232044_NAME;European Coal and Steel Community;;;;;;;;;;X
-EVT_8232044_DESC;The European Coal and Steel Community (ECSC) was a six-nation international organisation serving to unify Western Europe during the Cold War and create the foundation for the modern-day developments of the European Union. The ECSC was the first organisation to be based on the principles of supranationalism.;;;;;;;;;;X
-EVT_8232044_A;Join!;;;;;;;;;;X
-EVT_8232044_B;No, thanks;;;;;;;;;;X
-EVT_8232045_NAME;European Coal and Steel Community;;;;;;;;;;X
-EVT_8232045_DESC;The European Coal and Steel Community (ECSC) was a six-nation international organisation serving to unify Western Europe during the Cold War and create the foundation for the modern-day developments of the European Union. The ECSC was the first organisation to be based on the principles of supranationalism.;;;;;;;;;;X
-EVT_8232045_A;Join!;;;;;;;;;;X
-EVT_8232045_B;No, thanks;;;;;;;;;;X
 EVT_8232050_NAME;Treaty of Rome;;;;;;;;;;X
 EVT_8232050_DESC;In 1956, Paul Henri Spaak lead the Intergovernmental Conference on the Common Market and Euratom at the Val Duchesse castle, which prepared for the Treaty of Rome in 1957. The conference led to the signature, on 25 March 1957, of the Treaty of Rome establishing a European Economic Community.;;;;;;;;;;X
 EVT_8232050_A;Establish EEC and Euratom;;;;;;;;;;X
@@ -4648,21 +4545,6 @@ EVT_8232050_B;There is no need;;;;;;;;;;X
 EVT_8232051_NAME;Economic results of European integration;;;;;;;;;;X
 EVT_8232051_DESC;The process of European integration resulted in boost in trade and industrial production.;;;;;;;;;;X
 EVT_8232051_A;OK;;;;;;;;;;X
-EVT_8232052_NAME;Economic results of European integration;;;;;;;;;;X
-EVT_8232052_DESC;The process of European integration resulted in boost in trade and industrial production.;;;;;;;;;;X
-EVT_8232052_A;OK;;;;;;;;;;X
-EVT_8232053_NAME;Economic results of European integration;;;;;;;;;;X
-EVT_8232053_DESC;The process of European integration resulted in boost in trade and industrial production.;;;;;;;;;;X
-EVT_8232053_A;OK;;;;;;;;;;X
-EVT_8232054_NAME;Economic results of European integration;;;;;;;;;;X
-EVT_8232054_DESC;The process of European integration resulted in boost in trade and industrial production.;;;;;;;;;;X
-EVT_8232054_A;OK;;;;;;;;;;X
-EVT_8232055_NAME;Economic results of European integration;;;;;;;;;;X
-EVT_8232055_DESC;The process of European integration resulted in boost in trade and industrial production.;;;;;;;;;;X
-EVT_8232055_A;OK;;;;;;;;;;X
-EVT_8232056_NAME;Economic results of European integration;;;;;;;;;;X
-EVT_8232056_DESC;The process of European integration resulted in boost in trade and industrial production.;;;;;;;;;;X
-EVT_8232056_A;OK;;;;;;;;;;X
 EVT_8233000_NAME;Nuclear clearance granted;;;;;;;;;;X
 EVT_8233000_DESC;Even before the first nuclear weapons had been developed, scientists involved with the Manhattan Project were divided over the use of the weapon. The role of the two atomic bombings of the country in Japan's surrender and the U.S.'s ethical justification for them has been the subject of scholarly and popular debate for decades. The question of whether nations should have nuclear weapons, or test them, has been continually and nearly universally controversial. Because of the immense military power they can confer, the political control of nuclear weapons has been a key issue for as long as they have existed.;;;;;;;;;;X
 EVT_8233000_A;Roll out those little boys!;;;;;;;;;;X
@@ -5557,7 +5439,7 @@ EVT_8500509_A;OK;;;;;;;;;;X
 EVT_8500510_NAME;Civil War goes hot;;;;;;;;;;X
 EVT_8500510_DESC;After a brief interlude when both sides of the conflict hoped for political resolution, incidents intensified and peace was becoming harder to maintain. Fighting resumed in March 1946, as a gang of 30 ex-ELAS members, most of whom were persecuted, attacked a police station in the village of Litochoro. The next day, the official KKE paper’s coversheet announced, 'Authorities and gangs fabricate alleged communist attacks'. Contemporaneously, armed bands of ELAS veterans infiltrated Greece through mountainous regions near the Yugoslav and Albanian borders;;;;;;;;;;X
 EVT_8500510_A;It is time for war!;;;;;;;;;;X
-EVT_8500510_B;The time is not ripe;;;;;;;;;;X
+EVT_8500510_B;The time is not right;;;;;;;;;;X
 EVT_8500511_NAME;Civil War goes hot;;;;;;;;;;X
 EVT_8500511_DESC;After a brief interlude when both sides of the conflict hoped for political resolution, incidents intensified and peace was becoming harder to maintain. Fighting resumed in March 1946, as a gang of 30 ex-ELAS members, most of whom were persecuted, attacked a police station in the village of Litochoro. The next day, the official KKE paper’s coversheet announced, 'Authorities and gangs fabricate alleged communist attacks'. Contemporaneously, armed bands of ELAS veterans infiltrated Greece through mountainous regions near the Yugoslav and Albanian borders;;;;;;;;;;X
 EVT_8500511_A;It is time for war!;;;;;;;;;;X
@@ -6319,3 +6201,9 @@ EVT_8023245_NAME;End of People's Republic;;;;;;;;;;X
 EVT_8023245_DESC;"In December 1989, the Sejm approved the government's reform program to transform the Polish economy rapidly from a centrally planned one to a free market. The constitution was amended to eliminate references to the 'leading role' of the communist party and the country was renamed the 'Republic of Poland.' The communist Polish United Workers' Party dissolved itself in January 1990, creating in its place a new party, Social Democracy of the Republic of Poland. 'Territorial self-government', abolished in 1950, was legislated back in March 1990, to be led by locally elected officials;;;;;;;;;;X
 EVT_8023245_A;OK;;;;;;;;;;X
 ISR_DESC;After World War II, Britain found itself in fierce conflict with the Jewish community. At the same time, hundreds of thousands of Jewish Holocaust survivors and refugees sought a new life far from their destroyed communities in Europe. In 1947, the British government announced it would withdraw from Mandatory Palestine, stating it was unable to arrive at a solution acceptable to both Arabs and Jews. International community proposed a plan to replace the British Mandate with 'an independent Arab State, an independent Jewish State, and the City of Jerusalem ... the last to be under an International Trusteeship System'. The Jewish Agency, which was the recognized representative of the Jewish community, accepted the plan, but the Arab League and Arab Higher Committee of Palestine rejected it.;;;;;;;;;;X
+EVT_8212000_NAME;Our control over our Colonies strenghtens;;;;;;;;;;X
+EVT_8212000_DESC;After recent turn of events in $FROMCOUNTRY$, our support of colonialism and surrounding fortunate circumstances allowed us to further tighten our grip over our colonial possessions.;;;;;;;;;;X
+EVT_8212000_A;Our control is now more confident;;;;;;;;;;X
+EVT_8212001_NAME;Our control over the Empire weakens;;;;;;;;;;X
+EVT_8212001_DESC;After recent turn of events in $FROMCOUNTRY$, our ineptitude in colonial administration and surrounding unfortunate circumstances resulted in loosening our grip over imperial positions.;;;;;;;;;;X
+EVT_8212001_A;Our control is no longer complete;;;;;;;;;;X

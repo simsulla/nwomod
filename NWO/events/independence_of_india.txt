@@ -154,7 +154,7 @@ country_event = {
 		release_vassal = BHU
 		release_vassal = NEP
 		release_vassal = JAK
-		overlord = { 
+		ENG = { 
 			diplomatic_influence = { who = BHU value = -100 } 
 			diplomatic_influence = { who = NEP value = -100 } 
 			diplomatic_influence = { who = JAK value = -100 } 
@@ -165,6 +165,7 @@ country_event = {
 			country_event = 8214016
 		}
 		change_tag = HND
+		JAK = { country_event = 8007231 }
 	}
 	
 	option = {
@@ -293,22 +294,22 @@ country_event = {
 	option = {
 		name = EVT_8214015_A 
 		PAK = { inherit = THIS }
-		ai_chance = { factor = 1 modifier = { pop_majority_religion = sunni factor = 100 } }
+		ai_chance = { factor = 1 modifier = { pop_majority_religion = sunni factor = 10 } }
 	}
 
 	option = {
 		name = EVT_8214014_A 
 		HND = { inherit = THIS }
-		ai_chance = { factor = 1 modifier = { pop_majority_religion = hindu factor = 100 } }
+		ai_chance = { factor = 1 modifier = { pop_majority_religion = hindu factor = 10 } }
 	}
 
 	option = {
 		name = EVT_8214015_B 
 		relation = { who = PAK value = -200 }
 		relation = { who = HND value = -200 }
-		PAK = { add_casus_belli = { target = THIS type = conquest } }
-		HND = { add_casus_belli = { target = THIS type = conquest } }
-		ai_chance = { factor = 0 }
+		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
+		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
+		ai_chance = { factor = 1 modifier = { tag = HYD factor = 100 } }
 	}
 	
 }
@@ -334,8 +335,8 @@ country_event = {
 		name = EVT_8214015_B 
 		relation = { who = PAK value = -200 }
 		relation = { who = HND value = -200 }
-		PAK = { add_casus_belli = { target = THIS type = conquest } }
-		HND = { add_casus_belli = { target = THIS type = conquest } }
+		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
+		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
 		ai_chance = { factor = 0 }
 	}
 	

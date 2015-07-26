@@ -4,7 +4,7 @@ political_decisions = {
         alliance_nato = {
 				picture = "alliance_nato"
                 potential = {
-					year = 1949
+					OR = { year = 1955 has_country_flag = invitation_to_nato }
 					NOT =  { capital_scope = { has_province_modifier = neutrality } }
                     NOT =  { in_sphere = RUS }					
                     NOT =  { capital_scope = { has_province_modifier = csto_alliance } }
@@ -221,7 +221,8 @@ political_decisions = {
 		warsaw_pact = {
 				picture = "warsaw_pact"
                 potential = {
-					year = 1955
+					OR = { year = 1960 has_country_flag = invitation_to_warsaw_pact }
+					NOT = { has_global_flag = dissolve_warsaw_pact }
                     NOT =  {
 						capital_scope = { has_province_modifier = warsaw_pact }
 						capital_scope = { has_province_modifier = leave_warsaw_pact }

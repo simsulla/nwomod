@@ -1,0 +1,488 @@
+country_event = {
+  id = 8023216
+  title = EVT_8023216_NAME
+  desc = EVT_8023216_DESC
+  picture = "nwo2_1970_polish_riots"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1970 NOT = { year = 1979 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 160 }
+
+  option = {
+    name = EVT_8023216_A
+	any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8023217
+  title = EVT_8023217_NAME
+  desc = EVT_8023217_DESC
+  picture = "nwo2_solidarity"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1980 NOT = { year = 1981 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+    war = no
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8023217_A
+	any_pop = { militancy = -0.5 }
+	set_global_flag = lower_soviet_bloc_coherence 
+	RUS = { country_event =  8023237 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8023217_B
+	any_pop = { militancy = 1.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8023218
+  title = EVT_8023218_NAME
+  desc = EVT_8023218_DESC
+  picture = "nwo2_polish_martial_law"
+
+  trigger = {
+    tag = POL
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+	year = 1980 NOT = { year = 1990 }
+	average_militancy  = 5.0
+  }
+
+  option = {
+    name = OK
+	set_country_flag = polish_martial_law
+  }
+}
+country_event = {
+  id = 8023226
+  title = EVT_8023226_NAME
+  desc = EVT_8023226_DESC
+  picture = "nwo2_pkwn_manifesto"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1944 NOT = { year = 1945 }
+	government = proletarian_dictatorship
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8023226_A
+	relation = { who = ENG value = -100 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8023226_B
+	relation = { who = ENG value = 50 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8023227
+  title = EVT_8023227_NAME
+  desc = EVT_8023227_DESC
+  picture = "nwo2_3x_yes_referendum"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1946 NOT = { year = 1947 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8023227_A
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8023227_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8023228
+  title = EVT_8023228_NAME
+  desc = EVT_8023228_DESC
+  picture = "nwo2_polish_three_year_plan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1949 NOT = { year = 1950 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8023228_A
+	any_pop = { militancy = -0.3 }
+	add_country_modifier = { name = economic_boom duration = 365 }
+  }
+}
+country_event = {
+  id = 8023229
+  title = EVT_8023229_NAME
+  desc = EVT_8023229_DESC
+  picture = "nwo2_polish_communist_party"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1948 NOT = { year = 1949 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8023229_A
+  }
+}
+country_event = {
+  id = 8023230
+  title = EVT_8023230_NAME
+  desc = EVT_8023230_DESC
+  picture = "nwo2_gomulka_speaking"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1948 NOT = { year = 1949 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8023230_A
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8023231
+  title = EVT_8023231_NAME
+  desc = EVT_8023231_DESC
+  picture = "nwo2_polish_six_year_plan"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1954 NOT = { year = 1955 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8023231_A
+	any_pop = { militancy = 1.0 }
+	add_country_modifier = { name = economic_boom duration = 365 }
+  }
+}
+country_event = {
+  id = 8023232
+  title = EVT_8023232_NAME
+  desc = EVT_8023232_DESC
+  picture = "nwo2_poznan_protests"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1956 NOT = { year = 1957 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+  immediate = { set_global_flag = event_fired_8023232 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8023232_A
+	any_pop = { militancy = 1.5 }
+  }
+}
+country_event = {
+  id = 8023233
+  title = EVT_8023233_NAME
+  desc = EVT_8023233_DESC
+  picture = "nwo2_polish_thaw"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1956 NOT = { year = 1957 }
+    has_global_flag = cold_war
+	has_global_flag = event_fired_8023232
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8023233_A
+	any_pop = { militancy = -1.0 }
+	set_global_flag = lower_soviet_bloc_coherence 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8023233_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8023234
+  title = EVT_8023234_NAME
+  desc = EVT_8023234_DESC
+  picture = "nwo2_territorial_exchanges"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1963 NOT = { year = 1964 }
+    NOT = { has_country_flag = poland_west_littlegains }
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8023234_A
+	relation = { who = RUS value = 100 }
+	set_country_flag = poland_west_littlegains
+  }
+}
+country_event = {
+  id = 8023235
+  title = EVT_8023235_NAME
+  desc = EVT_8023235_DESC
+  picture = "nwo2_cursed_soldiers"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1954 NOT = { year = 1955 }
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8023235_A
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8023236
+  title = EVT_8023236_NAME
+  desc = EVT_8023236_DESC
+  picture = "nwo2_john_paul_ii"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1977 NOT = { year = 1978 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8023236_A
+	# any_pop = { more religious } 
+  }
+}
+country_event = {
+  id = 8023237
+  title = EVT_8023237_NAME
+  desc = EVT_8023237_DESC
+  picture = "nwo2_solidarity"
+  is_triggered_only = yes # RUS
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8023237_A
+	any_pop = { militancy = -0.2 }
+	POL = { country_event = 8023238 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8023237_B
+	any_pop = { militancy = 1.0 }
+	POL = { country_event = 8023239 } 
+	set_global_flag = lower_soviet_bloc_coherence_2 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8023238
+  title = EVT_8023238_NAME
+  desc = EVT_8023238_DESC
+  picture = "nwo2_solidarity"
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8023238_A
+	any_pop = { militancy = -0.5 }
+	country_event = 8023218 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8023238_B
+	overlord = { release_vassal = THIS } 
+	RUS = { end_military_access = THIS } 
+	RUS = { country_event = 8023240 } 
+	ai_chance = { factor = 0 }	
+  }
+}
+country_event = {
+  id = 8023239
+  title = EVT_8023239_NAME
+  desc = EVT_8023239_DESC
+  picture = "nwo2_solidarity_victory"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8023239_A
+	relation = { who = RUS value = -100 } 
+	any_pop = { militancy = -2.0 }
+	clr_country_flag = block_ideology_switch 
+  }
+}
+country_event = {
+  id = 8023240
+  title = EVT_8023240_NAME
+  desc = EVT_8023240_DESC
+  picture = "nwo2_solidarity_defeat"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8023240_A
+	create_vassal = POL 
+	set_global_flag = raise_soviet_bloc_coherence 
+	country_event = 8023241 
+  }
+}
+country_event = {
+  id = 8023241
+  title = EVT_8023241_NAME
+  desc = EVT_8023241_DESC
+  picture = "nwo2_solidarity_defeat"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8023241_A
+	any_pop = { militancy = 2.5 }
+	relation = { who = RUS value = 50 } 
+	clr_country_flag = block_ideology_switch 
+  }
+}
+country_event = {
+  id = 8023243
+  title = EVT_8023243_NAME
+  desc = EVT_8023243_DESC
+  picture = "nwo2_polish_round_table"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1988 NOT = { year = 1989 }
+    has_global_flag = autumn_of_nations
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8023243_A
+	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8023243_B
+	any_pop = { militancy = 3.0 }
+	country_event =  { id = 8023244 days = 1 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8023244
+  title = EVT_8023244_NAME
+  desc = EVT_8023244_DESC
+  picture = "nwo2_poland_1989"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1988 NOT = { year = 1989 }
+    has_global_flag = autumn_of_nations
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8023244_A
+	any_pop = { militancy = -0.5 }
+	set_country_flag = block_ideology_switch 
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8023244_B
+	any_pop = { militancy = 3.0 }
+	country_event =  { id = 8023245 days = 30 } 
+	overlord = { release_vassal = THIS } 
+	ai_chance = { factor = 100 }	
+  }
+}
+country_event = {
+  id = 8023245
+  title = EVT_8023245_NAME
+  desc = EVT_8023245_DESC
+  picture = "nwo2_crowned_eagle"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8023245_A
+	government = democracy
+  }
+}

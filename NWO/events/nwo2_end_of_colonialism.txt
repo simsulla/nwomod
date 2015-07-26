@@ -1,0 +1,209 @@
+# TODO add calling these events
+country_event = {
+  id = 8212000
+  title = EVT_8212000_NAME
+  desc = EVT_8212000_DESC
+  picture = "nwo2_colonialism"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8212000_A
+    change_variable = {
+		which = denationalization
+		value = 1
+	}
+  }
+
+}
+country_event = {
+  id = 8212001
+  title = EVT_8212001_NAME
+  desc = EVT_8212001_DESC
+  picture = "nwo2_colonialism"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8225000_A
+    change_variable = {
+		which = denationalization
+		value = -1
+	}
+  }
+}
+
+province_event = {
+ id = 8212003
+  title = EVT_COLONIALUNREST_NAME
+  desc = EVT_COLONIALUNREST_DESC
+  picture = "nwo2_colonialism"
+
+  trigger = {
+	is_overseas = yes
+	is_colonial = yes
+	#continent = africa
+	OR = { 
+		has_province_modifier = colonial_unrest 
+		is_coastal = yes
+		any_neighbor_province = { has_province_modifier = colonial_unrest } 
+    }
+  }
+
+  mean_time_to_happen = { months = 120 }
+
+  option = {
+    name = EVT_COLONIALUNREST_SUPPRESS
+	any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } militancy = 0.5 }
+	add_province_modifier = { name = colonial_unrest duration = -1 }
+	ai_chance = { factor = 1 modifier = { factor = 100 owner = { NOT = { government = democracy government = hms_government } } } }
+  }
+
+  option = {
+    name = EVT_COLONIALUNREST_PROMISE
+	any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } consciousness = 0.5 }
+	add_province_modifier = { name = colonial_promise duration = -1 }
+	add_province_modifier = { name = colonial_dry_spell duration = 3500 }
+	ai_chance = { factor = 10 }
+  }
+}
+
+province_event = {
+ id = 8212004
+  title = EVT_COLONIAL_PROMISE_BROKEN_NAME
+  desc = EVT_COLONIAL_PROMISE_BROKEN_DESC
+  picture = "nwo2_colonialism"
+
+  trigger = {
+	has_province_modifier = colonial_promise 
+	NOT = { has_province_modifier = colonial_dry_spell }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COLONIAL_PROMISE_BROKEN_A
+	any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } militancy = 1.0 }
+	set_province_flag = colonial_unrest
+	remove_province_modifier = colonial_promise 
+  }
+}
+country_event = {
+  id = 8212005
+  title = AI_EVENT
+  desc = AI_EVENT
+  picture = "nwo2_colonialism"
+
+  trigger = {
+	exists = no 
+	year = 1950 # 1960 - 10
+	any_core = { OR = { has_province_modifier  = colonial_promise has_province_modifier = colonial_promise } }
+  }
+  
+  mean_time_to_happen = { 
+	months = 240 # 20 years 
+	modifier = { factor = 0.5 check_variable = { which = denationalization value = 6 } }
+	modifier = { factor = 0.5 check_variable = { which = denationalization value = 5 } }
+	modifier = { factor = 0.5 check_variable = { which = denationalization value = 4 } }
+	modifier = { factor = 0.5 check_variable = { which = denationalization value = 3 } }
+  }
+
+  option = {
+    name = AI_EVENT
+	random_country = {  limit = { any_owned_province =  {is_core = THIS } } country_event = 8212006 }
+  }
+}
+country_event = {
+  id = 8212006
+  title = EVT_INDEPENDENCE_NAME
+  desc = EVT_INDEPENDENCE_DESC
+  picture = "nwo2_colonialism"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_LIBERATE
+	release_vassal = FROM
+	FROM = { country_event = 8212007 }
+	ai_chance = { factor = 10 }
+  }
+  option = {
+    name = EVT_DONTLIBERATE
+	any_owned = {  
+		limit = { is_core = FROM } 
+		any_pop = { 
+			limit = { is_accepted_culture = no is_primary_culture = no }
+			militancy = 1.0 
+		}
+	}
+	ai_chance = { factor = 1 modifier = { factor = 100 NOT = { government = democracy government = hms_government } } }
+  }
+}
+country_event = {
+  id = 8212007
+  title = EVT_MILACCESS_NAME
+  desc = EVT_MILACCESS_DESC
+  picture = "nwo2_colonialism"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_MILACCESS_A
+	government = hms_government
+	FROM = { military_access = THIS } 
+	any_owned = { remove_province_modifier = colonial_promise remove_province_modifier = colonial_unrest  }
+	# note: we do not reduce militancy so a country that have had a very violent liberation 
+	# tend to remains violent at its core
+	random_country = { 
+		limit = { average_militancy = 5.0 tag = THIS } 
+		set_country_flag = full_independance  
+	}
+  }
+}
+country_event = {
+  id = 8212008
+  title = EVT_FULLINDEPENDENCE_NAME
+  desc = EVT_FULLINDEPENDENCE_DESC
+  picture = "nwo2_colonialism"
+  fire_only_once = yes
+
+  trigger = {
+	OR = { 
+		average_militancy = 5.0
+		has_country_flag = full_independance
+		NOT = { ruling_party_ideology = conservative }
+	}
+    is_vassal = yes
+  }
+
+  mean_time_to_happen = { days = 350 modifier = { factor = 5 NOT = { average_militancy = 5.0 has_country_flag = full_independance } } }
+
+  option = {
+    name = EVT_FULLINDEPENDENCE_A
+	government = democracy
+	overlord = { country_event = 8212009 }
+  }
+}
+country_event = {
+  id = 8212009
+  title = EVT_FULLINDEPENDENCE_OVERLOARD_NAME
+  desc = EVT_FULLINDEPENDENCE_DESC
+  picture = "nwo2_colonialism"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_FULLINDEPENDENCE_A
+	release_vassal = FROM 
+	end_military_access = FROM 
+	prestige = -5
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_FULLINDEPENDENCE_B
+	release_vassal = FROM 
+	end_military_access = FROM 
+	badboy = 5
+	prestige = -5
+	add_casus_belli = { target = FROM type = make_puppet months = 24 }
+	ai_chance = { factor = 0 }
+  }
+  
+}
+
+

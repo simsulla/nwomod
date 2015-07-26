@@ -1,0 +1,147 @@
+country_event = {
+  id = 8233000
+  title = EVT_8233000_NAME
+  desc = EVT_8233000_DESC
+  picture = "nwo2_nukes_enabled"
+
+  trigger = {
+    year = 1946
+    OR = {
+		RUS = { war_with = USA }
+		lost_national = 0.30
+    }
+    NOT = { has_country_flag  = nukes_enabled }
+    war = yes
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8233000_A
+	set_country_flag = task_nuke 
+	set_country_flag = nukes_enabled 
+	badboy = 5
+  }
+}
+country_event = {
+  id = 8233100
+  title = EVT_8233100_NAME
+  desc = EVT_8233100_DESC
+  picture = "nwo2_hiroshima_nuke"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    NOT = { has_country_flag  = nukes_enabled }
+    war_with = JAP
+	JAP = { controls  = 1638 }
+  }
+
+  mean_time_to_happen = { days = 10 }
+
+  option = {
+    name = EVT_8233100_A
+	JAP = { country_event = 8233101 } 
+	badboy = 5 
+	any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8233100_B
+  }
+}
+country_event = {
+  id = 8233101
+  title = EVT_8233101_NAME
+  desc = EVT_8233101_DESC
+  picture = "nwo2_hiroshima_nuke"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8233100_A
+	1638 = { add_province_modifier = { name = nuked duration = 1500 } }
+  }
+}
+country_event = {
+  id = 8233102
+  title = EVT_8233102_NAME
+  desc = EVT_8233102_DESC
+  picture = "nwo2_nagasaki_nuke"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    NOT = { has_country_flag  = nukes_enabled }
+    war_with = JAP
+	JAP = { controls  = 1661 }
+  }
+
+  mean_time_to_happen = { days = 10 }
+
+  option = {
+    name = EVT_8233100_A
+	JAP = { country_event = 8233103 } 
+	badboy = 5 
+	any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8233100_B
+  }
+}
+country_event = {
+  id = 8233103
+  title = EVT_8233103_NAME
+  desc = EVT_8233103_DESC
+  picture = "nwo2_nagasaki_nuke"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8233100_A
+	1661 = { add_province_modifier = { name = nuked duration = 1500 } }
+  }
+}
+country_event = {
+  id = 8233104
+  title = EVT_8233104_NAME
+  desc = EVT_8233104_DESC
+  picture = "nwo2_kokura_nuke"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1999
+    NOT = { has_country_flag  = nukes_enabled }
+    war_with = JAP
+	JAP = { controls  = 1659 }
+  }
+
+  mean_time_to_happen = { days = 10 }
+
+  option = {
+    name = EVT_8233100_A
+	JAP = { country_event = 8233105 } 
+	badboy = 5 
+	any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8233100_B
+  }
+
+}
+country_event = {
+  id = 8233105
+  title = EVT_8233105_NAME
+  desc = EVT_8233105_DESC
+  picture = "nwo2_kokura_nuke"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8233100_A
+	1659 = { add_province_modifier = { name = nuked duration = 1500 } }
+  }
+
+}

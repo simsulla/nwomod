@@ -1,0 +1,393 @@
+country_event = {
+  id = 8218000
+  title = EVT_8218000_NAME
+  desc = EVT_8218000_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1958 NOT = { year = 1963 }
+	government = presidential_dictatorship # nasser
+    exists = SYR
+	SYR = { government = presidential_dictatorship }
+    has_global_flag = cold_war
+    war = no
+  }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8218000_A
+	SYR = { country_event =  8218001 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8218000_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8218001
+  title = EVT_8218001_NAME
+  desc = EVT_8218001_DESC
+  picture = "nwo2_united_arab_republic"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8218001_A
+	relation = { who = EGY value = 200 } 
+	EGY = { country_event = 8218002 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8218001_B
+	relation = { who = EGY value = -100 } 
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8218002
+  title = EVT_8218002_NAME
+  desc = EVT_8218002_DESC
+  picture = "nwo2_united_arab_republic"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8218002_A
+	any_pop = { militancy = -0.5 }
+	inherit = SYR 
+  }
+}
+country_event = {
+  id = 8218003
+  title = EVT_8218003_NAME
+  desc = EVT_8218003_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+	year = 1958 NOT = { year = 1963 }
+    exists = IRQ
+	IRQ = { government = presidential_dictatorship }
+	NOT = {exists = SYR }
+    has_global_flag = cold_war
+    war = no
+  }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218003_A
+	IRQ = { country_event =  8218004 }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8218003_B
+	any_pop = { militancy = 0.8 }
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = {
+  id = 8218004
+  title = EVT_8218004_NAME
+  desc = EVT_8218004_DESC
+  picture = "nwo2_united_arab_republic"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8218004_A
+	relation = { who = UAR value = -100 } 
+	any_pop = { militancy = -0.2 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8218004_B
+	relation = { who = UAR value = 200 } 
+	UAR = { country_event = 8218005 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8218005
+  title = EVT_8218005_NAME
+  desc = EVT_8218005_DESC
+  picture = "nwo2_united_arab_republic"
+
+  option = {
+    name = EVT_8218005_A
+	any_pop = { militancy = -0.5 }
+	inherit = IRQ
+  }
+}
+country_event = {
+  id = 8218006
+  title = EVT_8218006_NAME
+  desc = EVT_8218006_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+    year = 1958 NOT = { year = 1963 }
+    exists = JOR
+	NOT = { exists = SYR }
+    has_global_flag = cold_war
+    war = no
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8218006_A
+	JOR = { country_event =  8218007 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8218006_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8218007
+  title = EVT_8218007_NAME
+  desc = EVT_8218007_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8218007_A
+	relation = { who = EGY value = 200 } 
+	UAR = { country_event = 8218008 }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8218007_B
+	relation = { who = EGY value = -100 } 
+	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = {
+  id = 8218008
+  title = EVT_8218008_NAME
+  desc = EVT_8218008_DESC
+  picture = "nwo2_united_arab_republic"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8218008_A
+	any_pop = { militancy = -0.5 }
+	inherit = JOR
+  }
+}
+country_event = {
+  id = 8218010
+  title = EVT_8218010_NAME
+  desc = EVT_8218010_DESC
+  picture = "nwo2_nasser_diplomacy"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+    year = 1958 NOT = { year = 1970 }
+	NOT = { exists = SYR }
+    has_global_flag = cold_war
+    war = no
+  }
+
+  mean_time_to_happen = { days = 120 }
+
+  option = {
+    name = EVT_8218010_A
+	any_pop = { militancy = -0.5 }
+	change_tag = UAR 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8218010_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8218011
+  title = EVT_8218011_NAME
+  desc = EVT_8218011_DESC
+  picture = "nwo2_egypt"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+    year = 1961 NOT = { year = 1963 }
+	war = no
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8218011_A
+	any_pop = { militancy = 0.5 }
+	release = SYR 
+	release = JOR 
+	release = IRQ 
+  }
+}
+country_event = {
+  id = 8218020
+  title = EVT_8218020_NAME
+  desc = EVT_8218020_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+    year = 1958
+    NOT = { year = 1963 }
+    exists = LEB
+    has_global_flag = cold_war
+    war = no
+  }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218020_A
+	LEB = { country_event =  8218021 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8218020_B
+	any_pop = { militancy = 0.3 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8218021
+  title = EVT_8218021_NAME
+  desc = EVT_8218021_DESC
+  picture = "nwo2_united_arab_republic"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8218021_A
+	relation = { who = UAR value = 200 } 
+	UAR = {country_event = 8218008  }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8218021_B
+	relation = { who = UAR value = -100 } 
+	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = {
+  id = 8218022
+  title = EVT_8218022_NAME
+  desc = EVT_8218022_DESC
+  picture = "nwo2_united_arab_republic"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8218022_A
+	any_pop = { militancy = -0.5 }
+	inherit = LEB
+  }
+}
+country_event = {
+  id = 8218023
+  title = EVT_8218023_NAME
+  desc = EVT_8218023_DESC
+  picture = "nwo2_united_arab_republic"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+    year = 1958 NOT = { year = 1963 }
+    exists = PAL
+    has_global_flag = cold_war
+    war = no
+  }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218023_A
+	PAL = { country_event =  8218024 }
+  }
+
+  option = {
+    name = EVT_8218023_B
+	any_pop = { militancy = 0.3 }
+ }
+}
+country_event = {
+  id = 8218024
+  title = EVT_8218024_NAME
+  desc = EVT_8218024_DESC
+  picture = "nwo2_united_arab_republic"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8218024_A
+	relation = { who = UAR value = 200 } 
+	UAR = { country_event = 8218008 }
+  }
+
+  option = {
+    name = EVT_8218024_B
+	relation = { who = UAR value = -100 } 
+	any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8218025
+  title = EVT_8218025_NAME
+  desc = EVT_8218025_DESC
+  picture = "nwo2_united_arab_republic"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8218025_A
+	any_pop = { militancy = -0.5 }
+	inherit = PAL
+  }
+}
+country_event = {
+  id = 8218030
+  title = EVT_8218030_NAME
+  desc = EVT_8218030_DESC
+  picture = "nwo2_dome_of_the_rock"
+  fire_only_once = yes
+
+  trigger = {
+    tag = UAR
+    year = 1959
+    NOT = { year = 1961 }
+	NOT = { exists = PAL }
+    has_global_flag = cold_war
+    war = no
+  }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8218030_A
+	any_pop = { militancy = -0.5 }
+  }
+}

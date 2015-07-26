@@ -1,0 +1,793 @@
+country_event = {
+  id = 8007205
+  title = EVT_8007205_NAME
+  desc = EVT_8007205_DESC
+  picture = "nwo2_independence_of_india"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8007205_A
+  }
+}
+country_event = {
+  id = 8007223
+  title = EVT_8007223_NAME
+  desc = EVT_8007223_DESC
+  picture = "nwo2_indira_gandhi"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1984 NOT ={ year = 1985 }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8007223_A
+	any_pop = { militancy = 0.5 }
+	country_event = 8007272
+  }
+}
+country_event = {
+  id = 8007228
+  title = EVT_8007228_NAME
+  desc = EVT_8007228_DESC
+  picture = "nwo2_independence_of_india"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RAJ
+    year = 1947 NOT = { year = 1990 }
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = OK
+	country_event = 8007205 
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8007229
+  title = EVT_8007229_NAME
+  desc = EVT_8007229_DESC
+  picture = "nwo2_independence_of_india"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+	exists = HYD
+    year = 1947 NOT = { year = 1990 }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8007229_A
+	any_pop = { militancy = 1.0 }
+	badboy = 5 
+	war = { target = HYD attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007229_B
+	any_pop = { militancy = 1.0 }
+	set_country_flag = princely_states 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007230
+  title = EVT_8007230_NAME
+  desc = EVT_8007230_DESC
+  picture = "nwo2_kashmir"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAK
+	exists = HND
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007230_A
+  }
+}
+country_event = {
+  id = 8007231
+  title = EVT_8007231_NAME
+  desc = EVT_8007231_DESC
+  picture = "nwo2_kashmir"
+  is_triggered_only = yes # independance_of_india.txt
+
+  option = {
+    name = EVT_8007231_A
+	HND = { country_event = 8007232 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007231_B
+	PAK = { country_event = 8007234 } 
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8007231_C
+	HND = { country_event = { id = 8007236 days = 60 } } 
+	PAK = { country_event = 8007237 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007232
+  title = EVT_8007232_NAME
+  desc = EVT_8007232_DESC
+  picture = "nwo2_kashmir"
+  is_triggered_only = yes # HND
+
+  option = {
+    name = EVT_8007232_A
+	inherit = JAK 
+	country_event = 8007233 
+  }
+}
+country_event = {
+  id = 8007233
+  title = EVT_8007233_NAME
+  desc = EVT_8007233_DESC
+  picture = "nwo2_first_kashmir_war"
+  is_triggered_only = yes # PAK
+
+  option = {
+    name = EVT_8007233_A
+	war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 1225 } } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007233_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007234
+  title = EVT_8007234_NAME
+  desc = EVT_8007234_DESC
+  picture = "nwo2_kashmir"
+  is_triggered_only = yes # PAK
+
+  option = {
+    name = EVT_8007234_A
+	inherit = JAK 
+	HND = { country_event = 8007235 }
+  }
+}
+country_event = {
+  id = 8007235
+  title = EVT_8007235_NAME
+  desc = EVT_8007235_DESC
+  picture = "nwo2_first_kashmir_war"
+  is_triggered_only = yes # HND
+  
+  option = {
+    name = EVT_8007235_A
+	war = { target = PAK attacker_goal = { casus_belli = acquire_core_state state_province_id = 1224 } } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007235_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007236
+  title = EVT_8007236_NAME
+  desc = EVT_8007236_DESC
+  picture = "nwo2_kashmir"
+  is_triggered_only = yes # HND
+
+  option = {
+    name = EVT_8007236_A
+	war = { target = JAK attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007236_B
+    any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007237
+  title = EVT_8007237_NAME
+  desc = EVT_8007237_DESC
+  picture = "nwo2_kashmir"
+  is_triggered_only = yes # PAK
+
+  option = {
+    name = EVT_8007237_A
+	war = { target = JAK attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007237_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007238
+  title = EVT_8007238_NAME
+  desc = EVT_8007238_DESC
+  picture = "nwo2_first_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    PAK = { owns = 1224 war = no }
+	war = no
+  }
+
+  mean_time_to_happen = { days = 3 }
+  
+  option = {
+    name = EVT_8007238_A
+	war = { target = PAK attacker_goal = { casus_belli = acquire_core_state state_province_id = 1224 } } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007238_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007239
+  title = EVT_8007239_NAME
+  desc = EVT_8007239_DESC
+  picture = "nwo2_first_kashmir_war"
+  trigger = {
+    tag = PAK
+    HND = { owns = 1225 war = no }
+	war = no
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007239_A
+	war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 1225 } } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007239_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007240 
+  title = EVT_8007240_NAME
+  desc = EVT_8007240_DESC
+  picture = "nwo2_first_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = PAK tag = HND }
+    year = 1948 NOT = { year = 1960 }
+	war = no
+	owns = 1224
+	owns = 1225
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007240_A
+	prestige = 50
+  }
+}
+country_event = {
+  id = 8007241
+  title = EVT_8007241_NAME
+  desc = EVT_8007241_DESC
+  picture = "nwo2_first_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = PAK tag = HND }
+    year = 1948 NOT = { year = 1960 }
+	war = no
+	NOT = { owns = 1225 } 
+	NOT = { owns = 1224 } 
+  }
+
+  option = {
+    name = EVT_8007241_A
+	prestige = -50
+  }
+}
+country_event = {
+  id = 8007242
+  title = EVT_8007242_NAME
+  desc = EVT_8007242_DESC
+  picture = "nwo2_first_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = PAK tag = HND }
+    year = 1948 NOT = { year = 1960 }
+	war = no
+	owns = 1224 
+	NOT = { owns = 1225 }
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007242_A
+	prestige = 20
+	PAK = { country_event = 8007243 }
+  }
+}
+country_event = {
+  id = 8007243
+  title = EVT_8007243_NAME
+  desc = EVT_8007243_DESC
+  picture = "nwo2_first_kashmir_war"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8007243_A
+	prestige = -20
+	
+  }
+}
+country_event = {
+  id = 8007244
+  title = EVT_8007244_NAME
+  desc = EVT_8007244_DESC
+  picture = "nwo2_first_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND  # and PAK
+    year = 1950 NOT = { year = 1960 }
+	war = no
+	NOT = { HND = { war_with = PAK } }
+    exists = JAK
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007244_A
+	country_event = 8007274
+  }
+}
+country_event = {
+  id = 8007250
+  title = EVT_8007250_NAME
+  desc = EVT_8007250_DESC
+  picture = "nwo2_invasion_of_goa"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1963
+    NOT = { HND = { alliance_with = POR } }
+    NOT = { owns = 1303 }
+  }
+  
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8007250_A
+	money = -200 
+	badboy = 5 
+	POR = { country_event = 8007251 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007250_B
+    relation = { who = POR value = 100 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007251
+  title = EVT_8007251_NAME
+  desc = EVT_8007251_DESC
+  picture = "nwo2_invasion_of_goa"
+  is_triggered_only = yes # POR
+
+  option = {
+    name = EVT_8007251_A
+	any_pop = { militancy = 0.5 }
+	1303 = { secede_province = HND } 
+	HND = { country_event = 8007252 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007251_B
+	any_pop = { militancy = -0.3 }
+	HND = { country_event = 8007253 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007252
+  title = EVT_8007252_NAME
+  desc = EVT_8007252_DESC
+  picture = "nwo2_invasion_of_goa"
+  is_triggered_only = yes # HND
+
+  option = {
+    name = EVT_8007252_A
+	any_pop = { militancy = -0.3 }
+	prestige = 10
+  }
+}
+country_event = {
+  id = 8007253
+  title = EVT_8007253_NAME
+  desc = EVT_8007253_DESC
+  picture = "nwo2_invasion_of_goa"
+  is_triggered_only = yes # HND
+
+  option = {
+    name = EVT_8007253_A
+	any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8007260
+  title = EVT_8007260_NAME
+  desc = EVT_8007260_DESC
+  picture = "nwo2_second_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAK
+    year = 1965 NOT = { year = 1966 }
+    NOT = { relation = { who = HND value = 100 } }
+    exists = HND
+	NOT = { OR = { owns = 1224 owns = 1225 } } 
+    war = no
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007260_A
+	random_country = { 
+		limit = { owns = 1224 NOT = { owns = 1225 } } 
+		THIS = { 
+			war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 1224 } defender_goal = { casus_belli = status_quo } } 
+			set_country_flag = second_kashmir_war_all
+		}
+	}
+	random_country = { 
+		limit = { owns = 1224 NOT = { owns = 1225 } } 
+		THIS = { 
+			war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 1225 } defender_goal = { casus_belli = status_quo } } 
+			set_country_flag = second_kashmir_war_girgit
+		}
+	}
+	any_pop = { militancy = -1.0 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007260_B
+	prestige = -10
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007261
+  title = EVT_8007261_NAME
+  desc = EVT_8007261_DESC
+  picture = "nwo2_second_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAK
+    year = 1965 NOT = { year = 1966 }
+    war_with = HND
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8007261_A
+	HND = { country_event = 8007262 }
+	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007261_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007262
+  title = EVT_8007262_NAME
+  desc = EVT_8007262_DESC
+  picture = "nwo2_second_kashmir_war"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8007262_A
+	end_war = PAK
+	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007262_B
+	any_pop = { militancy = 0.5 }
+	badboy = 5 
+	relation = { who = USA value = -150 } 
+	relation = { who = ENG value = -150 } 
+	relation = { who = FRA value = -150 } 
+	relation = { who = CHI value = -150 } 
+	relation = { who = RUS value = -150 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8007263
+  title = EVT_8007263_NAME
+  desc = EVT_8007263_DESC
+  picture = "nwo2_second_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = PAK
+    year = 1966 NOT = { year = 1970 }
+    NOT = { war_with = HND }
+	OR = { 
+		AND = { has_country_flag = second_kashmir_war_girgit owns = 1225 } 
+		AND = { has_country_flag = second_kashmir_war_all owns = 1224 } 
+	}
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007263_A
+	any_pop = { militancy = -1.5 }
+	HND = { country_event = 8007264 }
+  }
+}
+country_event = {
+  id = 8007264
+  title = EVT_8007264_NAME
+  desc = EVT_8007264_DESC
+  picture = "nwo2_second_kashmir_war"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8007264_A
+	any_pop = { militancy = 1.5 }
+	prestige = -50
+  }
+}
+country_event = {
+  id = 8007265
+  title = EVT_8007265_NAME
+  desc = EVT_8007265_DESC
+  picture = "nwo2_second_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+	tag = HND
+    year = 1966 NOT = { year = 1970 }
+    NOT = { war_with = PAK }
+	OR = { 
+		AND = { PAK = { has_country_flag = second_kashmir_war_girgit } NOT = { owns = 1225 } } 
+		AND = { PAK = { has_country_flag = second_kashmir_war_all } NOT = { owns = 1224 } } 
+	}
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007265_A
+	PAK = { country_event =  8007263 }
+  }
+}
+country_event = {
+  id = 8007266
+  title = EVT_8007266_NAME
+  desc = EVT_8007266_DESC
+  picture = "nwo2_second_kashmir_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1966 NOT = { year = 1970 }
+    NOT = { war_with = PAK }
+	owns = 1224
+	owns = 1225
+	OR = { 
+		PAK = { has_country_flag = second_kashmir_war_girgit }
+		PAK = { has_country_flag = second_kashmir_war_all }
+	}
+  }
+  
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007266_A
+	PAK = { country_event = 8007267 }
+	prestige = 10
+  }
+}
+country_event = {
+  id = 8007267
+  title = EVT_8007267_NAME
+  desc = EVT_8007267_DESC
+  picture = "nwo2_second_kashmir_war"
+  is_triggered_only = yes # PAK
+  
+  option = {
+    name = EVT_8007267_A
+	prestige = -10
+  }
+}
+country_event = {
+  id = 8007270
+  title = EVT_8007270_NAME
+  desc = EVT_8007270_DESC
+  picture = "nwo2_indira_gandhi"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1970 NOT = { year =  1975 }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 1000 }
+
+  option = {
+    name = EVT_8007270_A
+	any_pop = { militancy = -0.5 }
+	1252 = { any_pop = { dominant_issue = { value = planned_economy factor = 0.5 } } }
+	# seed for the Naxalite rebellion 
+  }
+}
+country_event = {
+  id = 8007271
+  title = EVT_8007271_NAME
+  desc = EVT_8007271_DESC
+  picture = "nwo2_indira_gandhi"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1975 NOT = { year = 1976 }
+	government = democracy
+    war = no
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8007271_A
+	election = yes
+  }
+
+  option = {
+    name = EVT_8007271_B
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8007272
+  title = EVT_8007272_NAME
+  desc = EVT_8007272_DESC
+  picture = "nwo2_anti_sikh_riots"
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8007272_A
+	any_pop = { limit = { culture = sikh } militancy = 5.0 } 
+  }
+}
+country_event = {
+  id = 8007273
+  title = EVT_8007273_NAME
+  desc = EVT_8007273_DESC
+  picture = "nwo2_development_of_india"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1985 NOT = { year = 1886 }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 160 }
+
+  option = {
+    name = EVT_8007273_A
+	any_pop = { militancy = -0.5 }
+	add_country_modifier = { name = central_planning_inflexibility2 duration = 3500 }
+  }
+}
+country_event = {
+  id = 8007274
+  title = EVT_8007274_NAME
+  desc = EVT_8007274_DESC
+  picture = "nwo2_first_kashmir_war"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8225006_A
+	add_country_modifier = { name = military_man duration = 365 }
+  }
+}
+country_event = {
+  id = 8007275
+  title = EVT_8007275_NAME
+  desc = EVT_8007275_DESC
+  picture = "nwo2_empty"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1960
+    has_global_flag = event_fired_8014272 # soviet_union.txt
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007275_A
+	relation = { who = RUS value = 75 } 
+	relation = { who = CHI value = -25 } 
+	relation = { who = PAK value = -25 } 
+	relation = { who = USA value = -25 } 
+  }
+}
+country_event = {
+  id = 8007276
+  title = EVT_8007276_NAME
+  desc = EVT_8007276_DESC
+  picture = "nwo2_empty"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1999
+    has_global_flag = event_fired_8015859 # usa.txt
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8007276_A
+	relation = { who = RUS value = -25 } 
+  }
+}

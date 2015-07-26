@@ -1,0 +1,548 @@
+country_event = {
+  id = 8500800
+  title = EVT_8500800_NAME
+  desc = EVT_8500800_DESC
+  picture = "nwo2_kim_il_sung_speaking"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+	year = 1949 NOT = { year = 1950 }
+    NOT = { war_with = SKO }
+    exists = SKO
+    has_global_flag = cold_war_pacific
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8500800_A
+	ai_chance = { factor = 100 }
+	overlord = { release_vassal = THIS } 
+	SKO = { country_event =  8500801 } 
+	any_pop = { militancy = -0.5 }
+  }
+
+  option = {
+    name = EVT_8500800_B
+	any_pop = { militancy = 2.0 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500801
+  title = EVT_8500801_NAME
+  desc = EVT_8500801_DESC
+  picture = "nwo2_syngman_rhee_sitting"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500801_A
+	overlord = { release_vassal = THIS } 
+	NKO = { country_event =  8500802 } 
+  }
+}
+country_event = {
+  id = 8500802
+  title = EVT_8500802_NAME
+  desc = EVT_8500802_DESC
+  picture = "nwo2_korean_war"
+  is_triggered_only = yes
+
+
+  option = {
+    name = EVT_8500802_A
+	war = { target = SKO attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
+  }
+}
+country_event = {
+  id = 8500840
+  title = EVT_8500840_NAME
+  desc = EVT_8500840_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1949 NOT = { year = 1950 }
+    SKO = { war_with = NKO }
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8500840_A
+  }
+}
+country_event = {
+  id = 8500841
+  title = EVT_8500841_NAME
+  desc = EVT_8500841_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1949 NOT = { year = 1950 }
+    SKO = { war_with = NKO }
+     has_global_flag = event_fired_8500840
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500841_A
+
+  }
+}
+country_event = {
+  id = 8500842
+  title = EVT_8500842_NAME
+  desc = EVT_8500842_DESC
+  picture = "nwo2_united_nations_intervention"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1949 NOT = { year = 1950 }
+    SKO = { war_with = NKO }
+  }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8500842_A
+
+  }
+}
+country_event = {
+  id = 8500803
+  title = EVT_8500803_NAME
+  desc = EVT_8500803_DESC
+  picture = "nwo2_american_intervention_in_korea"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+	year = 1949 NOT = { year = 1950 }
+    NKO = { war_with = SKO }
+	NOT = { war_with = NKO }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8500803_A
+	any_pop = { militancy = -0.5 }
+	country_event = 8500804 
+  }
+
+  option = {
+    name = EVT_8500803_B
+	ai_chance = { factor = 0 }
+	any_pop = { militancy = 0.1 }
+	money = -3000 
+  }
+
+  option = {
+    name = EVT_8500803_C
+	any_pop = { militancy = 1.0 }
+	RUS = { country_event =  { id = 8500805 days = 1 } }
+  }
+}
+country_event = {
+  id = 8500804
+  title = EVT_8500804_NAME
+  desc = EVT_8500804_DESC
+  picture = "nwo2_american_intervention_in_korea"
+  is_triggered_only = yes # USA
+
+  option = {
+    name = EVT_8500804_A
+	any_pop = { militancy = -0.3 }
+	diplomatic_influence = { who = SKO value = 100 }
+  }
+}
+country_event = {
+  id = 8500805
+  title = EVT_8500805_NAME
+  desc = EVT_8500805_DESC
+  picture = "nwo2_american_intervention_in_korea"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500805_A
+	any_pop = { militancy = 0.3 }
+	USA = { country_event = 8500806  }
+  }
+
+  option = {
+    name = EVT_8500805_B
+	any_pop = { militancy = -0.5 }
+	country_event = 8500809 
+	money = -3000 
+	 ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500805_C
+	any_pop = { militancy = 0.6 }
+	country_event = 8500808 
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500806
+  title = EVT_8500806_NAME
+  desc = EVT_8500806_DESC
+  picture = "nwo2_american_intervention_in_korea"
+  is_triggered_only = yes # USA
+
+  option = {
+    name = EVT_8500806_A
+	any_pop = { militancy = 0.5 }
+	country_event = 8500804 
+	NKO = { country_event = 8500809 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500806_B
+	any_pop = { militancy = 1.0 }
+	RUS = { country_event = 8500807 } 
+	SKO = { country_event = 8500808 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500807
+  title = EVT_8500807_NAME
+  desc = EVT_8500807_DESC
+  picture = "nwo2_american_intervention_in_korea"
+  is_triggered_only = yes # RUS
+
+  option = {
+    name = EVT_8500807_A
+	create_alliance = NKO
+	NKO = { country_event = 8500809 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500807_B
+	any_pop = { militancy = 0.3 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500808
+  title = EVT_8500808_NAME
+  desc = EVT_8500808_DESC
+  picture = "nwo2_american_intervention_in_korea"
+  is_triggered_only = yes # SKO
+
+  option = {
+    name = EVT_8500808_A
+	any_pop = { militancy = -2.5 }
+	create_alliance = USA country_event = 8500804 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500808_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500809
+  title = EVT_8500809_NAME
+  desc = EVT_8500809_DESC
+  picture = "nwo2_soviet_intervention_in_korea"
+  is_triggered_only = yes # NKO
+
+  option = {
+    name = EVT_8500809_A
+	any_pop = { militancy = -0.3 }
+  }
+}
+country_event = {
+  id = 8500810
+  title = EVT_8500810_NAME
+  desc = EVT_8500810_DESC
+  picture = "nwo2_chinese_intervention_in_korea"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1949 NOT = { year = 1950 }
+    has_global_flag = CHC_won_civil_war
+    NKO = { war_with = SKO }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8500810_A
+	NKO = { country_event = 8500811 } 
+	NKO = { military_access = THIS } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500810_B
+	ai_chance = { factor = 0 }
+	any_pop = { militancy = 0.1 }
+  }
+}
+country_event = {
+  id = 8500811
+  title = EVT_8500811_NAME
+  desc = EVT_8500811_DESC
+  picture = "nwo2_chinese_intervention_in_korea"
+  is_triggered_only = yes # NKO
+
+  option = {
+    name = EVT_8500811_A
+	any_pop = { militancy = -4.0 }
+  }
+}
+country_event = {
+  id = 8500820
+  title = EVT_8500820_NAME
+  desc = EVT_8500820_DESC
+  picture = "nwo2_kim_il_sung_triumphant"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+	year = 1962 NOT = { year = 1963 }
+    NOT = { exists = SKO }
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500820_A
+	any_pop = { militancy = -1.0 }
+	set_global_flag = raise_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8500821
+  title = EVT_8500821_NAME
+  desc = EVT_8500821_DESC
+  picture = "nwo2_syngman_rhee_triumphant"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1962 NOT = { year = 1963 }
+    NOT = { exists = NKO }
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8500821_A
+	any_pop = { militancy = -1.0 }
+	set_global_flag = lower_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8500822
+  title = EVT_8500822_NAME
+  desc = EVT_8500822_DESC
+  picture = "nwo2_end_of_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1962 NOT = { year = 1963 }
+    has_global_flag = cold_war_pacific
+	war = no
+    exists = NKO
+  }
+
+  mean_time_to_happen = { days = 330 }
+
+  option = {
+    name = EVT_8500822_A
+	NKO = { country_event = 8500823 }
+    ai_chance = { factor = 100 }
+  }
+}
+country_event = {
+  id = 8500823
+  title = EVT_8500823_NAME
+  desc = EVT_8500823_DESC
+  picture = "nwo2_end_of_korean_war"
+  is_triggered_only = yes # NKO
+
+  option = {
+    name = EVT_8500823_A
+	# end_war = SKO 
+	ai_chance = { factor = 100 }
+  }
+
+}
+country_event = {
+  id = 8500830
+  title = EVT_8500830_NAME
+  desc = EVT_8500830_DESC
+  picture = "nwo2_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+	year = 1952 NOT = { year = 1953 }
+    war_with = SKO
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8500830_A
+	any_pop = { militancy = -2.5 }
+  }
+}
+country_event = {
+  id = 8500831
+  title = EVT_8500831_NAME
+  desc = EVT_8500831_DESC
+  picture = "nwo2_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1952 NOT = { year = 1953 }
+    war_with = NKO
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8500831_A
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8500832
+  title = EVT_8500832_NAME
+  desc = EVT_8500832_DESC
+  picture = "nwo2_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+	year = 1952 NOT = { year = 1953 }
+	war_with = SKO
+  }
+
+  mean_time_to_happen = { days = 200 }
+
+  option = {
+    name = EVT_8500832_A
+  }
+}
+country_event = {
+  id = 8500833
+  title = EVT_8500833_NAME
+  desc = EVT_8500833_DESC
+  picture = "nwo2_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1952 NOT = { year = 1953 }
+	war_with = NKO
+  }
+
+  mean_time_to_happen = { days = 200 }
+
+  option = {
+    name = EVT_8500833_A
+	any_pop = { militancy = -5.0 }
+  }
+}
+country_event = {
+  id = 8500834
+  title = EVT_8500834_NAME
+  desc = EVT_8500834_DESC
+  picture = "nwo2_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+	year = 1952 NOT = { year = 1953 }
+    USA = { alliance_with = SKO }
+    war_with = SKO
+  }
+
+  mean_time_to_happen = { days = 314 }
+
+  option = {
+    name = EVT_8500834_A
+	any_pop = { militancy = 2.0 }
+  }
+}
+country_event = {
+  id = 8500835
+  title = EVT_8500835_NAME
+  desc = EVT_8500835_DESC
+  picture = "nwo2_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1952 NOT = { year = 1953 }
+    USA = { alliance_with = SKO }
+    war_with = NKO
+  }
+
+  mean_time_to_happen = { days = 314 }
+
+  option = {
+    name = EVT_8500835_A
+	any_pop = { militancy = -1.0 }
+  }
+}
+country_event = {
+  id = 8500836
+  title = EVT_8500836_NAME
+  desc = EVT_8500836_DESC
+  picture = "nwo2_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+	year = 1952 NOT = { year = 1953 }
+	war_with = SKO
+  }
+
+  mean_time_to_happen = { days = 414 }
+
+  option = {
+    name = EVT_8500836_A
+	any_pop = { militancy = -2.5 }
+  }
+}
+country_event = {
+  id = 8500837
+  title = EVT_8500837_NAME
+  desc = EVT_8500837_DESC
+  picture = "nwo2_korean_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SKO
+	year = 1952 NOT = { year = 1953 }
+	war_with = NKO
+  }
+
+  mean_time_to_happen = { days = 414 }
+
+  option = {
+    name = EVT_8500837_A
+  }
+}
