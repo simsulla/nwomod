@@ -36,3 +36,22 @@ country_event = {
 
 }
 
+country_event = {
+  id = 8208103
+  title = EVT_COMMIESWITCH_CELEBRATE_NAME
+  desc = EVT_COMMIESWITCH_CELEBRATE_DESC
+  picture = "nwo2_commie_switch"
+
+  trigger = {
+	NOT = { has_country_flag = was_commi }
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_COMMIESWITCH_CELEBRATE
+	set_country_flag = was_commi
+  }
+}
+

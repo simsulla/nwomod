@@ -11,6 +11,7 @@ country_event = {
 		AND = { NET = { NOT = { owns = 1413 } } NOT = { has_global_flag = end_colonialism_indonesia } }
 		AND = { exists = ALG NOT = { has_global_flag = end_northafrica_indonesia } }
 	}
+	has_global_flag = not_disabled # TODO enable
 	ai = no
   }
 
@@ -19,7 +20,7 @@ country_event = {
   option = {
     name = EVT_8212000_A
     change_variable = {
-		which = denationalization
+		which = decolionalization
 		value = 1
 	}
 	random_country = { limit = { tag = THIS exists = HND } set_global_flag = end_colonialism_india }
@@ -35,6 +36,7 @@ country_event = {
   picture = "nwo2_colonialism"
 
   trigger = { 
+	has_global_flag = not_disabled  # TODO enable
 #	OR = {
 		#AND = { 
 			has_global_flag = federated_indonesia NOT = { has_global_flag = colonialism_indonesia } 
@@ -48,7 +50,7 @@ country_event = {
   option = {
     name = EVT_8225000_A
     change_variable = {
-		which = denationalization
+		which = decolionalization
 		value = -1
 	}
 	random_country = { limit = { has_global_flag = federated_indonesia } set_global_flag = colonialism_indonesia }

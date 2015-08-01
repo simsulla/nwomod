@@ -7,7 +7,7 @@ country_event = {
 
   trigger = {
     tag = ALG
-    year = 1958
+    year = 1958 NOT = { year = 1969 }
   }
 
   mean_time_to_happen = { days = 360 }
@@ -29,7 +29,7 @@ country_event = {
 
   trigger = {
     tag = ALG
-    year = 1965
+    year = 1965 NOT = { year = 1969 }
     NOT = { government = proletarian_dictatorship }
   }
 
@@ -54,7 +54,7 @@ country_event = {
 
   trigger = {
     tag = ALG
-    year = 1979
+    year = 1979 NOT = { year = 1989 }
     government = presidential_dictatorship
   }
 
@@ -77,7 +77,7 @@ country_event = {
 
   trigger = {
     tag = ALG
-    year = 1984
+    year = 1984 NOT = { year = 1989 }
 	government = presidential_dictatorship
   }
 
@@ -101,7 +101,7 @@ country_event = {
 
   trigger = {
     tag = ALG
-    year = 1988
+    year = 1988 NOT = { year = 1991 }
 	government = presidential_dictatorship
   }
 
@@ -124,7 +124,7 @@ country_event = {
 
   trigger = {
     tag = ALG
-    year = 1989
+    year = 1989 NOT = { year = 1991 }
 	government = presidential_dictatorship
   }
   immediate = { set_global_flag = event_fired_8000317 }
@@ -148,7 +148,7 @@ country_event = {
 
   trigger = {
     tag = ALG
-    year = 1991
+    year = 1991 NOT = { year = 1992 }
 	government = presidential_dictatorship
   }
   immediate = { set_global_flag = event_fired_8000318 }

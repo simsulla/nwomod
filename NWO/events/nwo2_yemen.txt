@@ -7,9 +7,7 @@ country_event = {
 
   trigger = {
     tag = YEM
-    year = 1961
-    OR = {
-    }
+    year = 1961 NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8018201 }
 
@@ -30,9 +28,7 @@ country_event = {
 
   trigger = {
     tag = YEM
-    year = 1962
-    OR = {
-    }
+    year = 1962 NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8018202 }
 
@@ -53,7 +49,7 @@ country_event = {
 
   trigger = {
     tag = YEM
-    year = 1966
+    year = 1966 NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8018203 }
 
@@ -76,9 +72,7 @@ country_event = {
 
   trigger = {
     tag = YEM
-    year = 1973
-    OR = {
-    }
+    year = 1973 NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8018204 }
 
@@ -99,9 +93,7 @@ country_event = {
 
   trigger = {
     tag = YEM
-    year = 1976
-    OR = {
-    }
+    year = 1976 NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8018205 }
 
@@ -122,9 +114,7 @@ country_event = {
 
   trigger = {
     tag = YEM
-    year = 1977
-    OR = {
-    }
+    year = 1977 NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8018206 }
 
@@ -145,7 +135,7 @@ country_event = {
 
   trigger = {
     tag = YEM
-    year = 1978
+    year = 1978 NOT = { year = 1990 }
     NOT = {
 		government = democracy
 		government = hms_government

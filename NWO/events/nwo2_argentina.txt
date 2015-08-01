@@ -7,7 +7,7 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1955
+    year = 1955 NOT = { year = 1980 }
   }
 
   mean_time_to_happen = { days = 360 }
@@ -37,9 +37,7 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1969
-    OR = {
-    }
+    year = 1969 NOT = { year = 1980 }
   }
 
   mean_time_to_happen = { days = 360 }
@@ -61,7 +59,7 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1974
+    year = 1974 NOT = { year = 1980 }
     NOT = { government = proletarian_dictatorship }
   }
 
@@ -82,7 +80,7 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1976
+    year = 1976 NOT = { year = 1980 }
     NOT = { government = proletarian_dictatorship }
   }
 
@@ -105,7 +103,7 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1947
+    year = 1947 NOT = { year = 1980 }
   }
   mean_time_to_happen = { days = 360 }
 
@@ -126,7 +124,7 @@ country_event = {
 
   trigger = {
     tag = ARG
-    year = 1952
+    year = 1952 NOT = { year = 1980 }
   }
   immediate = { set_global_flag = event_fired_8000818 }
 
