@@ -1,0 +1,740 @@
+country_event = {
+  id = 8002809
+  title = EVT_8002809_NAME
+  desc = EVT_8002809_DESC
+  picture = "nwo2_mao_zedong_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1976 NOT = { year = 1977 }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002809_A
+	prestige = 10
+  }
+}
+country_event = {
+  id = 8002810
+  title = EVT_8002810_NAME
+  desc = EVT_8002810_DESC
+  picture = "nwo2_deng_xiaoping"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1978 NOT = { year = 1979 }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002810_A
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002810_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002810_C
+	any_pop = { militancy = 2.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002813
+  title = EVT_8002813_NAME
+  desc = EVT_8002813_DESC
+  picture = "nwo2_china_land_reform"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1950 NOT = { year = 1963 }
+    has_global_flag = CHC_won_civil_war
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002813_A
+	add_country_modifier = { name = power_vacuum duration = 1700 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002813_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002814
+  title = EVT_8002814_NAME
+  desc = EVT_8002814_DESC
+  picture = "nwo2_chinese_anti_campaigns"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1951 NOT = { year = 1963 }
+    has_global_flag = CHC_won_civil_war
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002814_A
+	add_country_modifier = { name = prince_of_terror duration = 1700 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002814_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002815
+  title = EVT_8002815_NAME
+  desc = EVT_8002815_DESC
+  picture = "nwo2_chinese_anti_campaigns"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1957  NOT = { year = 1963 }
+    has_global_flag = CHC_won_civil_war
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002815_A
+	add_country_modifier = { name = prince_of_terror duration = 1700 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002815_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002816
+  title = EVT_8002816_NAME
+  desc = EVT_8002816_DESC
+  picture = "nwo2_great_leap_forward"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1958 NOT = { year = 1963 }
+    has_global_flag = CHC_won_civil_war
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002816_A
+	add_country_modifier = { name = great_depression duration = 1700 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002816_B
+	any_pop = { militancy = 2.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002817
+  title = EVT_8002817_NAME
+  desc = EVT_8002817_DESC
+  picture = "nwo2_iron_furnaces"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1958 NOT = { year = 1963 }
+    has_global_flag = event_fired_8002816
+  }
+
+  mean_time_to_happen = { days = 760 }
+
+  option = {
+    name = EVT_8002817_A
+	add_country_modifier = { name = stock_market_crash duration = 1700 }
+	any_pop = { militancy = 1.0 }
+  }
+}
+country_event = {
+  id = 8002818
+  title = EVT_8002818_NAME
+  desc = EVT_8002818_DESC
+  picture = "nwo2_mao_with_khrushchev"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1961 NOT = { year = 1963 }
+    has_global_flag = event_fired_8014217
+    exists = RUS
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002818_A
+	RUS = { end_military_access = THIS } 
+	relation = { who = RUS value = -100 } 
+	set_global_flag = sino_soviet_split 
+	RUS = {	country_event = 8002819 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002818_B
+	any_pop = { militancy = -0.3 }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002818_C
+	any_pop = { militancy = 0.3 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002819
+  title = EVT_8002819_NAME
+  desc = EVT_8002819_DESC
+  picture = "nwo2_mao_with_khrushchev"
+  is_triggered_only = yes # RUS
+
+  option = {
+    name = EVT_8002819_A
+	any_pop = { militancy = -0.5 }
+	relation = { who = CHI value = -100 } 
+	prestige = -10
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002819_B
+	any_pop = { militancy = 0.3 }
+	prestige = -20
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002820
+  title = EVT_8002820_NAME
+  desc = EVT_8002820_DESC
+  picture = "nwo2_cultural_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1966 NOT = { year = 1972 }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8002820_A
+	add_country_modifier = { name = prince_of_terror duration = 365 }
+	any_pop = { militancy = 3.0 }
+  }
+}
+country_event = {
+  id = 8002821
+  title = EVT_8002821_NAME
+  desc = EVT_8002821_DESC
+  picture = "nwo2_sino_soviet_border_conflict"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1962 NOT = { year = 1968 }
+    exists = RUS
+    has_global_flag = sino_soviet_split
+    war = no
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002821_A
+	any_pop = { militancy = -0.8 }
+	RUS = { country_event = 8002822 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002821_B
+	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002822
+  title = EVT_8002822_NAME
+  desc = EVT_8002822_DESC
+  picture = "nwo2_sino_soviet_border_conflict"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8002822_A
+	any_pop = { militancy = -0.8 }
+	relation = { who = CHI value = -120 } 
+	CHI = { country_event = 8002824 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002822_B
+	any_pop = { militancy = 0.8 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002824
+  title = EVT_8002824_NAME
+  desc = EVT_8002824_DESC
+  picture = "nwo2_sino_soviet_border_conflict"
+  is_triggered_only = yes # CHI
+
+
+  option = {
+    name = EVT_8002824_A
+	any_pop = { militancy = -0.8 }
+	ai_chance = { factor = 100 }
+	country_event = 8002827
+	RUS  = { country_event = 8002826 }
+  }
+
+  option = {
+    name = EVT_8002824_B
+	RUS = { country_event = 8002825 } 
+	any_pop = { militancy = -1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002825
+  title = EVT_8002825_NAME
+  desc = EVT_8002825_DESC
+  picture = "nwo2_sino_soviet_border_conflict"
+  is_triggered_only = yes # RUS
+
+
+  option = {
+    name = EVT_8002825_A
+	war = { target = CHI attacker_goal = { casus_belli = humiliate } } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002825_B
+	any_pop = { militancy = 1.5 }
+	ai_chance = { factor = 0 }
+	
+  }
+}
+country_event = {
+  id = 8002826
+  title = EVT_8002826_NAME
+  desc = EVT_8002826_DESC
+  picture = "nwo2_sino_soviet_border_conflict"
+  is_triggered_only = yes # RUS
+
+  option = {
+    name = EVT_8002826_A
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8002827
+  title = EVT_8002827_NAME
+  desc = EVT_8002827_DESC
+  picture = "nwo2_sino_soviet_border_conflict"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = EVT_8002827_A
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8002830
+  title = EVT_8002830_NAME
+  desc = EVT_8002830_DESC
+  picture = "nwo2_chinese_economy"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1967 NOT = { year = 1984 }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 720 }
+
+  option = {
+    name = EVT_8002830_A
+	add_country_modifier = { name = stock_market_crash duration = 3650 }
+	any_pop = { militancy = -0.5 }
+  }
+}
+country_event = {
+  id = 8002831
+  title = EVT_8002831_NAME
+  desc = EVT_8002831_DESC
+  picture = "nwo2_chinese_economy"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1982 NOT = { year = 1988 }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 180 }
+
+  option = {
+    name = EVT_8002831_A
+	remove_country_modifier = stock_market_crash
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8002832
+  title = EVT_8002832_NAME
+  desc = EVT_8002832_DESC
+  picture = "nwo2_chinese_hongkong"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1991
+    war = no
+	OR = {
+		1496 = { owned_by = ENG } 
+		HKG = { vassal_of = ENG }
+	}
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002832_A
+	relation = { who = ENG value = 100 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002832_B
+	ai_chance = { factor = 0 }
+  }
+
+}
+country_event = { 
+  id = 8002840
+  title = EVT_8002840_NAME
+  desc = EVT_8002840_DESC
+  picture = "nwo2_tiananmen_square_protests"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1989 NOT = { year = 1990 }
+    war = no
+	NOT = { government = democracy }
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8002840_A
+	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.1 } } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002840_B
+	any_pop = { militancy = 1.0 }
+	country_event =  8002841
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002841
+  title = EVT_8002841_NAME
+  desc = EVT_8002841_DESC
+  picture = "nwo2_tiananmen_square_massacre"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1989 NOT = { year = 1990 }
+    war = no
+	NOT = { government = democracy }
+  }
+
+  mean_time_to_happen = { days = 60 }
+
+  option = {
+    name = EVT_8002841_A
+	any_pop = { militancy = 1.0 }
+	country_event =  { id = 8002842 days = 10 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002841_B
+	any_pop = { militancy = 2.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002842
+  title = EVT_8002842_NAME
+  desc = EVT_8002842_DESC
+  picture = "nwo2_tiananmen_square_massacre"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1989 NOT = { year = 1990 }
+    war = no
+	NOT = { government = democracy }
+  }
+
+  mean_time_to_happen = { days = 120 }
+
+  option = {
+    name = EVT_8002842_A
+	any_pop = { militancy = 1.5 }
+	country_event =  { id = 8002843 days = 10 } 
+	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.65 } } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002842_B
+	any_pop = { militancy = 3.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002843
+  title = EVT_8002843_NAME
+  desc = EVT_8002843_DESC
+  picture = "nwo2_tiananmen_square_massacre"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1989 NOT = { year = 1990 }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 240 }
+
+  option = {
+    name = EVT_8002843_A
+	any_pop = { militancy = 2.5 }
+	country_event =  8002844 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002843_B
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002844
+  title = EVT_8002844_NAME
+  desc = EVT_8002844_DESC
+  picture = "nwo2_democratic_china"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8002844_A
+	any_pop = { militancy = 0.5 }
+	relation = { who = KMT value = 50 } 
+	government = democracy
+	ruling_party_ideology = communist
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002844_B
+	any_pop = { militancy = 1.0 }
+	relation = { who = KMT value = 100 } 
+	government = democracy
+	election = yes
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002844_C
+	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002845
+  title = EVT_8002845_NAME
+  desc = EVT_8002845_DESC
+  picture = "nwo2_democratic_china"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1991 NOT = { year = 1992 }
+	election = no
+    war = no
+	government = democracy
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8002845_A
+	any_pop = { militancy = -1.0 }
+	ruling_party_ideology = socialist
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002845_B
+	any_pop = { militancy = -0.5 }
+	ruling_party_ideology = conservative
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002845_C
+	any_pop = { militancy = -3.0 }
+	ruling_party_ideology = communist
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002846
+  title = EVT_8002846_NAME
+  desc = EVT_8002846_DESC
+  picture = "nwo2_united_china"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8002846_A
+	any_pop = { militancy = -0.5 }
+  }
+
+}
+country_event = {
+  id = 8002847
+  title = EVT_8002847_NAME
+  desc = EVT_8002847_DESC
+  picture = "nwo2_united_china"
+  is_triggered_only = yes
+
+
+  option = {
+    name = EVT_8002847_A
+	any_pop = { militancy = -1.0 } 
+  }
+}
+country_event = {
+  id = 8002850
+  title = EVT_8002850_NAME
+  desc = EVT_8002850_DESC
+  picture = "nwo2_ping_pong_diplomacy"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1971 NOT = { year = 1980 }
+    NOT = { has_global_flag = CHC_in_UNSC }
+    exists = USA
+    has_global_flag = cold_war
+    war = no
+    relation = { who = USA value = -100 }
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8002850_A
+	country_event = 8002851
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002850_B
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002851
+  title = EVT_8002851_NAME
+  desc = EVT_8002851_DESC
+  picture = "nwo2_nixon_visit_to_china"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8002851_A
+	CHI = { country_event = 8002852 } 
+	relation = { who = CHI value = 150 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002851_B
+	relation = { who = CHI value = -150 } 
+	CHI = { country_event = 8002853 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002852
+  title = EVT_8002852_NAME
+  desc = EVT_8002852_DESC
+  picture = "nwo2_communist_china_in_unsc"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = EVT_8002852_A
+	any_pop = { militancy = -0.5 }
+	set_global_flag = CHC_in_UNSC 
+  }
+}
+country_event = {
+  id = 8002853
+  title = EVT_8002853_NAME
+  desc = EVT_8002853_DESC
+  picture = "nwo2_communist_china_in_unsc"
+  is_triggered_only = yes # CHI
+
+
+  option = {
+    name = EVT_8002853_A
+	any_pop = { militancy = 1.0 }relation = { who = USA value = -100 } 
+  }
+}

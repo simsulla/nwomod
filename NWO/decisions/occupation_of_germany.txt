@@ -37,6 +37,7 @@ political_decisions = {
 				limit = { is_core = GER }
 				add_province_modifier = { name = denazification duration = 700 }
 			}
+			country_event = 8204080
 		}
 	}
 	
@@ -98,6 +99,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = saar_protectorate
 			release_vassal = SAL
+			country_event = 8204036
 		}
 	}
 	
@@ -191,6 +193,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = establish_east_germany
+			any_owned = { limit = { is_core = GER } add_core = DDR }
 			release = DDR
 			diplomatic_influence = { who = DDR value = 200 }
 		}
@@ -329,12 +332,9 @@ political_decisions = {
 				secede_province = GER
 			}
 			GER = {
-				any_owned = { 
-					limit = { OR = { province_id = 577 province_id = 578 province_id = 580 } }
-					secede_province = FRA
-					add_province_modifier = { name = blood_and_iron_mine duration = 1000 }
-				}
+				country_event = 8204030
 				capital = 574 # Bonn
+				574 = { change_province_name = "Bonn" }
 			}
 			set_country_flag = ruhr_area
 			diplomatic_influence = { who = GER value = 200 }
@@ -356,7 +356,7 @@ political_decisions = {
 			tag = GER
 			any_core = { 
 				NOT = { has_province_modifier = blood_and_iron_mine } 
-				owned_by = FRA
+				owned_by = IAR
 			}
 			OR = {
 				AND = {

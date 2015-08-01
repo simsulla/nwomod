@@ -59,7 +59,7 @@ country_event = {
 
 	title = EVT_1228002_NAME
 	desc = EVT_1228002_DESC
-	picture = "french_vietnam"
+	picture = "nwo2_chinese_vietnam"
 
 	is_triggered_only = yes
 
@@ -67,6 +67,7 @@ country_event = {
 		name = EVT_1228002_A # South Vietnam Independence
 		ai_chance = { factor = 100 }
 		FRA = { release = SVI }
+		DAI = { country_event = 8228005 }
 		diplomatic_influence = {
 			who = SVI
 			value = 200
@@ -85,6 +86,14 @@ country_event = {
 		name = EVT_1228002_B # Leave Vietnam to it's faith
 		ai_chance = { factor = 0 }
 		FRA = { release = DAI }
+	}
+	
+	option = {
+		name = EVT_8228002_A # Let's ask Chiang to help
+		FRA = { release = SVI }
+		FRA = { release = DAI }
+		KMT = { country_event = 8228003 }
+		ai_chance = { factor = 0 }
 	}
 
 }

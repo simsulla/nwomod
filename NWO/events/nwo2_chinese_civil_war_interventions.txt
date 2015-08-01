@@ -166,14 +166,7 @@ country_event = {
   title = "EVT_8200120_NAME"
   desc = "EVT_8200120_DESC"
   picture = "nwo2_failed_intervention"
-  fire_only_once = yes
-
-  trigger = {
-    tag = USA
-    year = 1945 NOT = { year = 1963 }
-    has_global_flag = CHC_won_civil_war
-    war = no
-  }
+  is_triggered_only = yes # USA
 
   mean_time_to_happen = { days = 30 }
 
@@ -187,16 +180,7 @@ country_event = {
   title = "EVT_8200121_NAME"
   desc = "EVT_8200121_DESC"
   picture = "nwo2_failed_intervention"
-  fire_only_once = yes
-
-  trigger = {
-    tag = RUS
-    year = 1945 NOT = { year = 1963 }
-    has_global_flag = CHI_won_civil_war
-    war = no
-  }
-
-  mean_time_to_happen = { days = 30 }
+  is_triggered_only = yes
 
   option = {
     name = "EVT_8200121_A"

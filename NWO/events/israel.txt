@@ -13,6 +13,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		relation = { who = USA value = 10 }
 		prestige = -2
+		country_event = 8007623
 		country_event = { id = 1007602 days = 335 } 
 	}
 	
@@ -66,8 +67,10 @@ country_event = {
 		ai_chance = { factor = 100 }
 		prestige = -2
 		release = ISR
+		ISR= { country_event = 8007624 }
 		USA = { country_event = 1007603 }
 		release = PAL
+		PAL = { country_event = 8007626 }
 		PAL = { country_event = 1007604 }
 		end_military_access = EGY
 	}
@@ -100,6 +103,7 @@ country_event = {
 		badboy = -2
 		add_country_modifier =  { name = stock_market_crash duration = 365 }
 		release = PAL
+		PAL = { country_event = 8007626 }
 		PAL = { country_event = 1007604 }
 	}	
 }

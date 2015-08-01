@@ -248,8 +248,18 @@ country_event = {
   title = EVT_8234030_NAME
   desc = EVT_8234030_DESC
   picture = "nwo2_united_nations_intervention"
-  is_triggered_only = yes # united_nations.txt
+  fire_only_once = yes # united_nations.txt
 
+  trigger = {
+    tag = ARG
+	war = yes
+	has_global_flag = un_falkland_intervention
+	NOT = { has_global_flag = un_falkland_interventionveto }
+	NOT = { has_global_flag = un_falkland_totalveto }
+  }
+
+  mean_time_to_happen = { days = 30 }
+  
   option = {
     name = EVT_8234030_A
 	any_pop = { militancy = 1.5 }

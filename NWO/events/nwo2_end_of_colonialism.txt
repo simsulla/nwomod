@@ -4,14 +4,27 @@ country_event = {
   title = EVT_8212000_NAME
   desc = EVT_8212000_DESC
   picture = "nwo2_colonialism"
-  is_triggered_only = yes
+  
+  trigger = { 
+	OR = {
+		AND = { exists = HND NOT = { has_global_flag = end_colonialism_india } }
+		AND = { NET = { NOT = { owns = 1413 } } NOT = { has_global_flag = end_colonialism_indonesia } }
+		AND = { exists = ALG NOT = { has_global_flag = end_northafrica_indonesia } }
+	}
+	ai = no
+  }
 
+  mean_time_to_happen = { months = 12 }
+  
   option = {
     name = EVT_8212000_A
     change_variable = {
 		which = denationalization
 		value = 1
 	}
+	random_country = { limit = { tag = THIS exists = HND } set_global_flag = end_colonialism_india }
+	random_country = { limit = { NET = { NOT = { owns = 1413 } } } set_global_flag = end_colonialism_indonesia }
+	random_country = { limit = { tag = THIS exists = ALG } set_global_flag = end_northafrica_indonesia }
   }
 
 }
@@ -20,14 +33,26 @@ country_event = {
   title = EVT_8212001_NAME
   desc = EVT_8212001_DESC
   picture = "nwo2_colonialism"
-  is_triggered_only = yes
 
+  trigger = { 
+#	OR = {
+		#AND = { 
+			has_global_flag = federated_indonesia NOT = { has_global_flag = colonialism_indonesia } 
+		#}
+#	}
+	ai = no
+  }
+
+  mean_time_to_happen = { months = 12 }
+  
   option = {
     name = EVT_8225000_A
     change_variable = {
 		which = denationalization
 		value = -1
 	}
+	random_country = { limit = { has_global_flag = federated_indonesia } set_global_flag = colonialism_indonesia }
+	
   }
 }
 
