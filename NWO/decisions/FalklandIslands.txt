@@ -4,7 +4,6 @@ political_decisions = {
 		picture = "falkland"
 		potential = {
 			tag = ARG
-			owns = 2131
 			NOT = {
 				has_global_flag = rename_malvinas
 			}
@@ -41,39 +40,6 @@ political_decisions = {
 			}
 			prestige = 5
 			clr_global_flag = rename_malvinas
-		}
-	}
-
-	falkland_purchase = {
-		picture = "falkland"
-		potential = {
-			2131 = {
-				NOT = { owned_by = THIS }
-				is_core = THIS
-			}
-			NOT = { has_country_flag = falkland_purchase }
-		}
-		
-		allow = {
-			war = no
-			money = 1900000
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}
-			2131 = {
-				owner = {
-					war = no
-					relation = { who = THIS value = 200 }
-				}
-			}
-		}
-		
-		effect = {
-			set_country_flag = falkland_purchase
-			2131 = {
-				owner = { country_event = 32553 }
-			}
 		}
 	}
 }
