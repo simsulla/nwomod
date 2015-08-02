@@ -20,7 +20,7 @@ country_event = {
   option = {
     name = EVT_8212000_A
     change_variable = {
-		which = decolionalization
+		which = end_of_colonialism
 		value = 1
 	}
 	random_country = { limit = { tag = THIS exists = HND } set_global_flag = end_colonialism_india }
@@ -50,7 +50,7 @@ country_event = {
   option = {
     name = EVT_8225000_A
     change_variable = {
-		which = decolionalization
+		which = end_of_colonialism
 		value = -1
 	}
 	random_country = { limit = { has_global_flag = federated_indonesia } set_global_flag = colonialism_indonesia }
@@ -127,10 +127,10 @@ country_event = {
   
   mean_time_to_happen = { 
 	months = 240 # 20 years 
-	modifier = { factor = 0.5 check_variable = { which = denationalization value = 6 } }
-	modifier = { factor = 0.5 check_variable = { which = denationalization value = 5 } }
-	modifier = { factor = 0.5 check_variable = { which = denationalization value = 4 } }
-	modifier = { factor = 0.5 check_variable = { which = denationalization value = 3 } }
+	modifier = { factor = 0.5 check_variable = { which = end_of_colonialism value = 6 } }
+	modifier = { factor = 0.5 check_variable = { which = end_of_colonialism value = 5 } }
+	modifier = { factor = 0.5 check_variable = { which = end_of_colonialism value = 4 } }
+	modifier = { factor = 0.5 check_variable = { which = end_of_colonialism value = 3 } }
   }
 
   option = {
@@ -178,7 +178,7 @@ country_event = {
 	# note: we do not reduce militancy so a country that have had a very violent liberation 
 	# tend to remains violent at its core
 	random_country = { 
-		limit = { average_militancy = 5.0 tag = THIS } 
+		limit = { average_militancy = 9.0 tag = THIS } 
 		set_country_flag = full_independance  
 	}
   }
@@ -192,14 +192,15 @@ country_event = {
 
   trigger = {
 	OR = { 
-		average_militancy = 5.0
+		average_militancy = 9.0
 		has_country_flag = full_independance
-		NOT = { ruling_party_ideology = conservative }
 	}
+	NOT = { ruling_party_ideology = conservative }
     is_vassal = yes
+	year = 1960 # TODO this is way two crude
   }
 
-  mean_time_to_happen = { days = 350 modifier = { factor = 5 NOT = { average_militancy = 5.0 has_country_flag = full_independance } } }
+  mean_time_to_happen = { days = 350 modifier = { factor = 5 NOT = { average_militancy = 9.0 has_country_flag = full_independance } } }
 
   option = {
     name = EVT_FULLINDEPENDENCE_A

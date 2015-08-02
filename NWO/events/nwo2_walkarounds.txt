@@ -308,25 +308,3 @@ country_event = {
   }
 }
 
-country_event = {
-  id = 8299040
-  title = AI_EVENT
-  desc = AI_EVENT
-  picture = "nwo2_null"
-  fire_only_once = yes
-
-  trigger = {
-    tag = RUS
-    year = 1953
-    ai = yes
-  }
-  immediate = { set_global_flag = event_fired_8299040 }
-
-  mean_time_to_happen = { days = 360 }
-
-  option = {
-    name = OK
-	add_country_modifier = { name = colonial_museum_of_natural_history duration = 365 }
-  }
-}
-

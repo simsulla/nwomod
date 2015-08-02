@@ -202,13 +202,14 @@ province_event = {
 			prestige = 5
 			treasury = -100
 		}
-		any_country = {
+		random_country = {
 			limit = {
 				civilized = yes
 				prestige = 25
 				NOT = {
 					tag = THIS
 				}
+				exists = yes
 			}
 			country_event = { id=19022 days=0 }
 		}

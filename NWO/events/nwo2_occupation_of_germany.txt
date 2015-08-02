@@ -7,7 +7,7 @@ country_event = {
 
   trigger = {
 	OR = { government = democracy government = hms_government }
-	year = 1944 NOT = { year = 1963 }
+	year = 1960 NOT = { year = 1963 }
     has_global_flag = cold_war
     GER = { any_core = { owned_by = THIS } } 
   }
@@ -36,7 +36,7 @@ country_event = {
 
   trigger = {
 	government = proletarian_dictatorship
-	year = 1944 NOT = { year = 1963 }
+	year = 1960 NOT = { year = 1963 }
     has_global_flag = cold_war
     GER = { any_core = { owned_by = THIS } }
   }
@@ -64,7 +64,7 @@ country_event = {
   picture = "nwo2_occupation_zones_in_germany"
 
   trigger = {
-    OR = { tag = CAN tag = NZL tag = USA tag = AST tag = FRA tag = RAJ tag = ENG }
+    OR = { tag = USA tag = FRA tag = ENG }
 	year = 1944 NOT = { year = 1963 }
 	NOT = { exists = GER }
     NOT = { exists = IAR }

@@ -146,4 +146,28 @@ country_event = {
 
 }
 
+country_event = {
+	id = 19804
+	title = "AI_EVENT"
+	desc = "AI_EVENT"
+	picture = "greatpowers"
+	fire_only_once = yes
+
+	trigger = {
+		rank = 10
+		ai = yes
+		NOT = { has_global_flag = cold_war }
+		NOT = { has_global_flag = cold_war_pacific }
+	}
+
+	immediate = {
+		set_global_flag = cold_war
+		set_global_flag = cold_war_pacific
+	}
+	
+	option = {
+		name = "AI_EVENT"
+	}
+
+}
 

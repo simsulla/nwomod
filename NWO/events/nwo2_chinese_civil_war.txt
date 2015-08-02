@@ -667,11 +667,14 @@ province_event = {
     year = 1946 NOT = { year = 1952 }
     NOT = { has_global_flag = CHC_won_civil_war }
     owner = { war = yes  war_with = CHI }
-	
+	has_national_minority = no
 	NOT = { country_units_in_province = KMT }
+	NOT = { region = CHI_1578 } # no rebellion in Sichuan
+	NOT = { region = CHI_1579 }
+	NOT = { region = RUS_1065 }
   }
 
-  mean_time_to_happen = { days = 100 }
+  mean_time_to_happen = { months = 30 }
 
   option = {
     name = "EVT_8200050_A"

@@ -203,6 +203,7 @@ political_decisions = {
 			NOT = { has_country_modifier = bretton_system }
 			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
 			NOT = { OR = { is_vassal = yes tag = RUS } government = proletarian_dictatorship }
+			OR = { USA = { has_country_modifier = bretton_system } tag = USA } # USA should get Bretton Woods first!
 		}
 		allow = {
 			war = no
@@ -217,6 +218,7 @@ political_decisions = {
 				government = presidential_dictatorship
 				government = absolute_monarchy
 				year = 1992 # TODO change to market_communism
+				keynesian_economics = 1
 			}
 		}
 		effect = {

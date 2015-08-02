@@ -23,6 +23,7 @@ country_event = { # one_point_five_children
 	trigger = {
 		OR = { literacy = 0.6 AND = { literacy = 0.20 pop_majority_religion = irreligion NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
 		NOT = { has_country_modifier = one_point_five_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
 	}
 	
 	option = {
@@ -49,6 +50,7 @@ country_event = { # two_children
 		literacy = 0.20
 		NOT = { OR = { literacy = 0.6 pop_majority_religion = irreligion NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
 		NOT = { has_country_modifier = two_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
 	}
 	
 	option = {
@@ -76,6 +78,7 @@ country_event = { # two_point_five_children
 		literacy = 0.15
 		NOT = { literacy = 0.2 }
 		NOT = { has_country_modifier = two_point_five_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
 	}
 	
 	option = {
@@ -102,6 +105,7 @@ country_event = { # three_children
 		literacy = 0.1
 		NOT = { literacy = 0.15 }
 		NOT = { has_country_modifier = three_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
 	}
 	
 	option = {
@@ -127,6 +131,7 @@ country_event = { # three_children
 	trigger = {
 		NOT = { literacy = 0.1 }
 		NOT = { has_country_modifier = four_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
 	}
 	
 	option = {
@@ -157,6 +162,7 @@ country_event = { # family_values
 			NOT = { has_province_modifier = family_values }
 			NOT = { literacy =  0.2 }
        	}
+		year = 1990 # TODO fix demographics for the 1946 start date
 	}
 	
 	option = {
@@ -218,6 +224,7 @@ country_event = { # pre_demographic_transition
 				}
       		}
        	}
+		year = 1990 # TODO fix demographics for the 1946 start date
 	}
 	
 	mean_time_to_happen = {

@@ -8,16 +8,16 @@ country_event = {
   trigger = {
     tag = KMT
     year = 1944 NOT = { year = 1945 }
-    NOT = { KMT = { war_with = SIK } }
-    exists = SIK
-	SIK = { ai = yes }
+    NOT = { KMT = { war_with = ETS } }
+    exists = ETS
+	ETS = { ai = yes }
   }
 
   mean_time_to_happen = { days = 30 }
 
   option = {
     name = EVT_8013801_A
-	inherit = SIK 
+	inherit = ETS 
     ai_chance = { factor = 100 }
   }
 
@@ -38,12 +38,13 @@ country_event = {
   trigger = {
     tag = RUS
     year = 1945 NOT = { year = 1948 }
-    exists = SIK
+    exists = ETS
+	ETS = { war = no }
   }
 
   option = {
     name = EVT_8013802_A
-	create_vassal = SIK 
+	create_vassal = ETS 
 	any_pop = { militancy = 0.5 }
 	badboy = 10 
 	relation = { who = KMT value = -100 } 
@@ -68,7 +69,7 @@ country_event = {
   trigger = {
     tag = KMT
     year = 1944 NOT = { year = 1948 }
-    NOT = { exists = ETS exists = SIK }
+    NOT = { exists = ETS }
   }
 
   mean_time_to_happen = { days = 30 }
