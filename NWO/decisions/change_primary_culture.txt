@@ -1,4 +1,35 @@
 political_decisions = {
+
+	pink_tide = { 
+		picture = pink_tide 
+		
+		potential = { 
+			NOT = { tag = ARG }
+			NOT = { tag = CHI }
+			capital_scope = { OR = { continent = north_america continent = south_america } } 
+			primary_culture = white_spanish
+			NOT = { pop_majority_culture =  white_spanish }
+			NOT = { has_country_flag = pink_tide }
+		} 
+		
+		allow = { 
+			government = democracy
+			OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist } 
+			minorities_reform = minorities_promotive
+			wars_of_national_liberation = 1
+		} 
+		
+		effect = { 
+			prestige = 5
+			random_country = { limit = { tag = THIS THIS = { tag = BRZ }  } primary_culture = pardo_portuguese add_accepted_culture = white_portuguese }  
+			random_country = { limit = { NOT = { tag = BRZ } tag = THIS } primary_culture = mestizo add_accepted_culture = white_spanish }  
+			any_pop = { limit = { OR = { culture =  pardo_portuguese culture =  mestizo } } militancy = -3.0 } 
+			set_country_flag = pink_tide
+		} 
+		
+		ai_will_do = { factor = 1 } 
+	}
+
 	cpcn_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = pashtun government = nationalist_dictatorship } allow = { } effect = { prestige = -2 primary_culture = tajik  add_accepted_culture = uzbek } ai_will_do = { factor = 1 } }
 	cpc_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = tajik NOT = { government = nationalist_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = pashtun  remove_accepted_culture = uzbek } ai_will_do = { factor = 1 } }
 
