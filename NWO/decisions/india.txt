@@ -67,4 +67,25 @@ political_decisions = {
 		}
 	}
 
+	naxalite = {
+		picture = "naxalite"
+		potential = {
+			tag = NAX
+			NOT = { 
+				has_country_flag = claim_naxalite_india
+			}
+		}
+
+		allow = {
+			is_vassal = no
+			war = no
+			government = proletarian_dictatorship
+		}
+
+		effect = {
+			set_country_flag = claim_naxalite_india
+			HND = { any_owned = { add_core = NAX } }
+		}
+	}
+	
 }
