@@ -6,9 +6,8 @@ political_decisions = {
 		potential = { 
 			NOT = { tag = ARG }
 			NOT = { tag = CHI }
-			capital_scope = { OR = { continent = north_america continent = south_america } } 
+			capital_scope = { OR = { continent = north_america continent = south_america }  NOT = { pop_majority_culture = white_spanish } } 
 			primary_culture = white_spanish
-			NOT = { pop_majority_culture =  white_spanish }
 			NOT = { has_country_flag = pink_tide }
 		} 
 		
