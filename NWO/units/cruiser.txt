@@ -1,9 +1,10 @@
+#======= WW2 =========
 cruiser = {
-	icon = 4
-	naval_icon = 1
+	icon = 17
+	naval_icon = 5
 	
 	type = naval
-	sprite = Manowar
+	sprite = Cruiser
 	unit_type = big_ship
 	capital = yes
 	floating_flag = yes
@@ -13,25 +14,25 @@ cruiser = {
 	priority = 25
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 16
+	maximum_speed = 32
 	weighted_value = 24.0
 	can_build_overseas = no
 
 
 	#Building Costs
 	build_time = 360
+	#cost 1B
 	build_cost = {
-		ships = 30
-		weaponry = 10
-		#electric_gear = 10
-		#telephones = 5
-		aeroplanes = 60
+		ships = 100
+		weaponry = 100
+		aeroplanes = 16
 	}
-	min_port_level = 4
+	min_port_level = 3
 	limit_per_port = -1
 	supply_consumption_score = 25
 	
 	supply_consumption = 1.0
+	#cost 1B
 	supply_cost = {
 		ships = 1.5
 		weaponry = 1.5
@@ -40,9 +41,10 @@ cruiser = {
 	}
 	
 	#Naval Abilties
-        hull = 28
-        gun_power = 33
-        fire_range = 0.6
-        evasion = 0.0
+        hull = 24
+        gun_power = 16
+        fire_range = 0.5
+        evasion = 0.1
 }
+
 

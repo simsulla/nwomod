@@ -1,0 +1,41 @@
+#======= Modern =========
+modern_fighter = {
+	icon = 4
+	
+	type = land
+	sprite = Fighter
+	active = no
+	unit_type = support
+	floating_flag = no
+	
+	#Core Abilities
+	priority = 45
+	max_strength = 3
+	default_organisation = 30
+	maximum_speed = 5.00
+	weighted_value = 10.0
+
+	#Building Costs
+	build_time = 120
+	# cost 29M * 20 = 0.5B
+	build_cost = {
+		aeroplanes = 52
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		aeroplanes = 2.0
+		small_arms = 0.1
+		weaponry = 0.5
+		fuel = 0.5
+	}
+
+	#Land Abilties
+	reconnaissance = 4
+	siege = 1
+	attack = 4
+	defence = 4
+	discipline = 0.25
+	support = 2
+	maneuver = 4
+}

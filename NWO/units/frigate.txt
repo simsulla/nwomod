@@ -1,11 +1,10 @@
-##patrol_boat
+#======= WW2 =========
 frigate = {
-	icon = 5
-	naval_icon = 2
+	icon = 15
+	naval_icon = 3
 	
 	type = naval
-	sprite = Battleship
-	#sprite = Frigate
+	sprite = Frigate
 	unit_type = light_ship
 	capital = yes
 	floating_flag = yes
@@ -15,15 +14,16 @@ frigate = {
 	priority = 13
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 12
+	maximum_speed = 50
 	weighted_value = 4.0
 	can_build_overseas = yes
 
 	#Building Costs
 	build_time = 180
+	#cost 0.4B
 	build_cost = {
-		ships = 20
-		weaponry = 5
+		ships = 80
+		weaponry = 20
 	}
 	min_port_level = 0
 	limit_per_port = -1
@@ -38,9 +38,8 @@ frigate = {
 	
 	#Naval Abilties
 	hull = 2
-	gun_power = 3
-	fire_range = 0.2
-	evasion = 0.20
-	torpedo_attack = 0.1
+	gun_power = 2
+	fire_range = 0.15
+	evasion = 0.30
+	torpedo_attack = 2
 }
-

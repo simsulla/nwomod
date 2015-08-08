@@ -1,10 +1,9 @@
-##tank
+#======= WW2 =========
 artillery = { 
 	icon = 3
 	
 	type = land
-	sprite = Tank
-	#sprite = Artillery
+	sprite = Artillery
 	active = no
 	unit_type = support
 	floating_flag = no
@@ -13,21 +12,13 @@ artillery = {
 	priority = 20
 	max_strength = 3
 	default_organisation = 30
-	maximum_speed = 10.00
+	maximum_speed = 4.00
 	weighted_value = 9
 
 
-	#Building Costs, copy of tank but halved
-	#needs are the same, better to copy
 	build_time = 270
+	# cost 4M # TODO
 	build_cost = {
-		#artillery = 7.5
-		#regular_clothes = 10
-		#explosives = 7.5
-		canned_food = 12.5
-		#barrels = 12.5
-		fuel = 12.5
-		clothes = 10
 		weaponry = 12.5
 	}
 	
@@ -40,12 +31,12 @@ artillery = {
 	
 
 	#Land Abilties
-	reconnaissance = 0
-	attack = 2
-	defence = 2
+	reconnaissance = 4
+	attack = 4
+	defence = 0.1
 	discipline = 0.5
-	support = 1.0
-	maneuver = 2
+	support = 2.0
+	maneuver = 1
 	siege = 1
 
 }

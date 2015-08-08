@@ -1,0 +1,39 @@
+#======= WW2 =========
+motorized_infantry = {
+	icon = 8
+	
+	type = land
+	sprite = Motor
+	active = yes
+	unit_type = infantry
+	floating_flag = no
+	
+	#Core Abilities
+	priority = 5
+	max_strength = 3
+	default_organisation = 20
+	maximum_speed = 4.00
+	weighted_value = 1.0
+
+	build_time = 120 # TODO
+	build_cost = {
+		small_arms = 30
+		clothes = 20
+		weaponry = 18
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		small_arms = 0.1
+		weaponry = 0.4
+	}
+
+	#Land Abilties
+	reconnaissance = 1
+	attack = 2
+	siege = 1
+	defence = 4
+	discipline = 1
+	support = 0.0
+	maneuver = 2
+}

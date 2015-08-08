@@ -1,45 +1,45 @@
-#advanced_drone
+#======= WW2 =========
 tank = {
-	icon = 20
+	icon = 10
 	
 	type = land
-	sprite = Plane
+	sprite = Tank
 	active = no
-	unit_type = cavalry
+	unit_type = special
 	floating_flag = yes
 	
 	#Core Abilities
 	priority = 50
 	max_strength = 3
-	default_organisation = 30
-	maximum_speed = 10.00
-	weighted_value = 9.0
+	default_organisation = 40
+	maximum_speed = 4.00
+	weighted_value = 10.0
 
 
 	#Building Costs
-	build_time = 540
+	build_time = 270
+	# cost c.300 per div 6M/tank - > 1.5B
 	build_cost = {
-		weaponry = 30
-		clothes = 40
-		canned_food = 50
-		fuel = 50
+		fuel = 12.5
+		clothes = 10
+		weaponry = 12.5
 	}
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		aeroplanes = 0.5
-		weaponry = 0.5
 		fuel = 0.5
+		weaponry = 0.1
+		small_arms = 0.1
 	}
 	
 
 	#Land Abilties
-	reconnaissance = 0
-	attack = 6
-	defence = 6
+	reconnaissance = 1
+	attack = 16
+	defence = 8
 	discipline = 1
-	support = 0.0
-	maneuver = 2
-	siege = 2
+	support = 0.5
+	maneuver = 1
+	siege = 0
 	
 }
