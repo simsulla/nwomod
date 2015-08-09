@@ -6,7 +6,7 @@ long_range_fire_tactic = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = ironclads
+			invention = ww2_destroyer
 		}
 		modifier = {
 			factor = 2
@@ -14,7 +14,7 @@ long_range_fire_tactic = {
 		}
 	}
 	effect = {
-		activate_unit = battleship
+		activate_unit = modern_cruiser
 		navy_base = {
 			default_organisation = 5
 		}
@@ -26,7 +26,7 @@ speedy_maneuvering_tactic = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = ironclads
+			invention = ww2_destroyer
 		}
 		modifier = {
 			factor = 1
@@ -90,12 +90,6 @@ big_ship_competitor = {
 	effect = {
 		navy_base = {
 			gun_power = 1
-		}
-		steam_transport = {
-			gun_power = -1
-		}
-		clipper_transport = {
-			gun_power = -1
 		}
 	}
 }
@@ -179,13 +173,6 @@ offensive_attitude = {
 		navy_base = {
 			gun_power = 1
 		}
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}
-		
 	}
 }
 defensive_attitude = {
@@ -202,7 +189,7 @@ defensive_attitude = {
 		}
 	}
 	effect = {
-		dreadnought = {
+		carrier = {
 			hull = 5
 		}
 		cruiser = {
@@ -229,12 +216,6 @@ decisive_firepower_doctrine = {
 		navy_base = {
 			gun_power = 1
 		}
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
 	}
 }
 naval_firepower_doctrine = {
@@ -250,12 +231,6 @@ naval_firepower_doctrine = {
 		navy_base = {
 			gun_power = 1
 		}
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
 	}
 }
 #fleet_auxiliary_cv_doctrine = {
@@ -344,8 +319,38 @@ fish_processing = {
 		activate_building = fish_canned_food_factory
 	}
 }
+steamer_transports = {
+	limit = { modern_shipbuilding = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			personal_computer = 1
+		}
+	}
+	effect = {
+		activate_unit = transportship 
+	}
+}
+commerce_raiders = {
+	limit = { modern_shipbuilding = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			nuclear_reactors = 1
+		}
+		modifier = {
+			factor = 3
+			overseas_naval_base = 1
+		}
+	}
+	effect = {
+		activate_unit = submarine 
+	}
+}
 #corvette_building
-patrol_boats = {
+ww2_frigate = {
 	limit = { corvettes = 1 }
 	chance = {
 		base = 2
@@ -358,7 +363,7 @@ patrol_boats = {
 		activate_unit = frigate
 	}
 }
-awses = {
+ww2_destroyer = {
 	limit = { corvettes = 1 }
 	chance = {
 		base = 2
@@ -372,7 +377,7 @@ awses = {
 		}
 	}
 	effect = {
-		activate_unit = clipper_transport
+		activate_unit = destroyer
 	}
 }
 mechanized_fishing_vessels = {
@@ -416,78 +421,13 @@ steamer_automatic_construction_plants = {
 		}
 	}
 }
-steamer_transports = {
-	limit = { nuclear_submarine = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			personal_computer = 1
-		}
-	}
-	effect = {
-		activate_unit = steam_transport 
-	}
-}
-commerce_raiders = {
-	limit = { nuclear_submarine = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			nuclear_reactors = 1
-		}
-		modifier = {
-			factor = 3
-			overseas_naval_base = 1
-		}
-	}
-	effect = {
-		activate_unit = commerce_raider 
-	}
-}
-#guided_missile_destroyers
-ironclads = {
-	limit = { guided_missile_destroyers = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = commerce_raiders
-		}
-		modifier = {
-			factor = 2
-			microgeneration = 1
-		}
-	}
-	effect = {
-		activate_unit = ironclad  
-	}
-}
-monitors = {
-	limit = { guided_missile_destroyers = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = commerce_raiders
-		}
-		modifier = {
-			factor = 2
-			invention = ironclads
-		}
-	}
-	effect = {
-		activate_unit = monitor 
-	}
-}
 #torpedo_boats = {
 #	limit = { guided_missile_destroyers = 1 }
 #	chance = {
 #		base = 4
 #		modifier = {
 #			factor = 2
-#			invention = ironclads
+#			invention = ww2_destroyer
 #		}
 #		modifier = {
 #			factor = 2
@@ -504,7 +444,7 @@ protected_cruisers = {
 		base = 1
 		modifier = {
 			factor = 2
-			invention = ironclads
+			invention = ww2_destroyer
 		}
 		modifier = {
 			factor = 2
@@ -539,13 +479,13 @@ protected_cruisers = {
 #	effect = {
 #	}
 #}
-pre_dreadnought = {
+early_carrier = {
 	limit = { ballistic_missile_submarine = 1 }
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = ironclads
+			invention = ww2_destroyer
 		}
 		modifier = {
 			factor = 1
@@ -557,7 +497,7 @@ pre_dreadnought = {
 		}
 	}
 	effect = {
-		ironclad = {
+		destroyer = {
 			hull = 1
 			gun_power = 1
 			maximum_speed = 1
@@ -621,7 +561,7 @@ advanced_battleships = {
 		}
 	}
 	effect = {
-		dreadnought = {
+		carrier = {
 			hull = 1
 			gun_power = 1
 		} 
@@ -641,7 +581,7 @@ modern_battleships = {
 		}
 	}
 	effect = {
-		dreadnought = {
+		carrier = {
 			maximum_speed = 1
 		} 
 	}
@@ -652,7 +592,7 @@ experimental_carriers = {
 		base = 6
 	}
 	effect = { 
-		activate_unit = battleship 
+		activate_unit = carrier 
 	}
 }
 #nuclear_reactors
@@ -673,12 +613,6 @@ optical_rangefinders = {
 		navy_base = {
 			gun_power = 1
 		}
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
 	}
 }
 gyrostabilized_fire_control = {
@@ -694,12 +628,6 @@ gyrostabilized_fire_control = {
 		navy_base = {
 			gun_power = 1
 		} 
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
 	}
 }
 armour_piercing_projectiles = {
@@ -719,12 +647,6 @@ armour_piercing_projectiles = {
 		navy_base = {
 			gun_power = 1
 		} 
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
 	}
 }
 armour_piercing_exploding_projectiles = {
@@ -744,13 +666,6 @@ armour_piercing_exploding_projectiles = {
 		navy_base = {
 			gun_power = 1
 		} 
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
-		
 	}
 }
 armoured_turrets = {
@@ -759,7 +674,7 @@ armoured_turrets = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = ironclads
+			invention = ww2_destroyer
 		}
 		modifier = {
 			factor = 2
@@ -790,12 +705,6 @@ bomb_guns = {
 		navy_base = {
 			gun_power = 1
 		}
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
 	}
 }
 rifled_guns = {
@@ -811,12 +720,6 @@ rifled_guns = {
 		navy_base = {
 			gun_power = 1
 		}
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
 	}
 }
 quick_firing_guns = {
@@ -836,12 +739,6 @@ quick_firing_guns = {
 		navy_base = {
 			gun_power = 1
 		}
-		clipper_transport = {
-			gun_power = -1
-		}
-		steam_transport = {
-			gun_power = -1
-		}		
 	}
 }
 armoured_citadels = {
@@ -858,10 +755,10 @@ armoured_citadels = {
 		}
 	}
 	effect = {
-		ironclad = {
+		destroyer = {
 			hull = 2
 		}
-		dreadnought = {
+		carrier = {
 			hull = 2
 		}
 	
@@ -881,10 +778,10 @@ heavy_caliber_guns = {
 		}
 	}
 	effect = {
-		ironclad = {
+		destroyer = {
 			gun_power = 2
 		}
-		dreadnought = {
+		carrier = {
 			gun_power = 2
 		}
 	}
@@ -915,7 +812,7 @@ gun_hydraulics = {
 		}
 	}
 	effect = {
-		dreadnought = {
+		carrier = {
 			gun_power = 2
 		}
 	}
@@ -930,7 +827,7 @@ heavy_armour_plates = {
 		}
 	}
 	effect = {
-		dreadnought = {
+		carrier = {
 			hull = 2
 		} 
 	}
@@ -988,7 +885,7 @@ advanced_fire_control = {
 		}
 	}
 	effect = {
-		dreadnought = {
+		carrier = {
 			gun_power = 2
 		}
 		cruiser = {
@@ -1014,7 +911,7 @@ advanced_fire_control = {
 		}
 	}
 	effect = {
-		dreadnought = {
+		carrier = {
 			gun_power = 2
 		}
 	}

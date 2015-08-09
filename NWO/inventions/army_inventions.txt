@@ -436,8 +436,8 @@ personnel_asgt = {
 		}
 	}
 	effect = {
-	engineer = {defence = 1}
-	guard = {defence = 1}
+	motorized_infantry = {defence = 1}
+	modern_infantry = {defence = 1}
 	infantry = {defence = 1}
 	}
 }
@@ -458,10 +458,7 @@ paratroopers = {
 		}
 	}
 	effect = {
-		activate_unit = infantry
-		engineer = {defence = 1}
-		guard = {defence = 1}
-		infantry = {defence = 1}
+		infantry = {attack = 0.1}
 	}
 }
 helicpeter_delivery = {
@@ -474,7 +471,7 @@ helicpeter_delivery = {
 		}
 	}
 	effect = {
-		activate_unit = cuirassier # helicopter
+		army_base = { default_organisation = 0.1 }
 	}
 }
 #guerrilla
@@ -515,8 +512,8 @@ cordon_and_search = {
 		}
 	}
 	effect = {
-	army_base = {
-		supply_consumption = 0.1
+		army_base = {
+			supply_consumption = 0.1
 		}
 	}
 }
@@ -538,7 +535,7 @@ population_control = {
 		}
 	}
 	effect = {
-		activate_unit = engineer
+		army_base = { default_organisation = 0.1 } }
 	}
 }
 #mechanized_infantry
@@ -590,8 +587,7 @@ rpg7_unit = {
 		}
 	}
 	effect = {
-		# rpg
-		activate_unit = guard
+		infantry = {defence = 0.5}
 	}
 }
 #special_forces
@@ -605,9 +601,7 @@ commandos = {
 		}
 	}
 	effect = {
-	engineer = {defence = 2}
-	guard = {defence = 2}
-	infantry = {defence = 1}
+		activate_unit = modern_infantry
 	}
 }
 range_reconnaissance_patrol = {
@@ -620,7 +614,7 @@ range_reconnaissance_patrol = {
 		}
 	}
 	effect = {
-	engineer = {reconnaissance = 1}
+	motorized_infantry = {reconnaissance = 1}
 	}
 }
 #modern_rifles
@@ -699,8 +693,8 @@ red_dot_sight = {
 		}
 	}
 	effect = {
-	engineer = {attack = 1}
-	guard = {attack = 1}
+	motorized_infantry = {attack = 1}
+	modern_infantry = {attack = 1}
 	infantry = {attack = 1}
 	}
 }
@@ -810,8 +804,8 @@ interceptor_body_armor = {
 		}
 	}
 	effect = {
-	engineer = {defence = 2}
-	guard = {defence = 2}
+	motorized_infantry = {defence = 2}
+	modern_infantry = {defence = 2}
 	infantry = {defence = 1}
 	}
 }
@@ -833,7 +827,7 @@ special_reconnaissance = {
 		}
 	}
 	effect = {
-	engineer = {reconnaissance = 1}
+	motorized_infantry = {reconnaissance = 1}
 	}
 }
 direct_action = {
@@ -854,7 +848,7 @@ direct_action = {
 		}
 	}
 	effect = {
-	engineer = {attack = 1}
+	motorized_infantry = {attack = 1}
 	}
 }
 universal_camouflage_pattern = {
@@ -875,8 +869,8 @@ universal_camouflage_pattern = {
 		}
 	}
 	effect = {
-	engineer = {defence = 1 supply_consumption = 0.05}
-	guard = {defence = 1 supply_consumption = 0.05}
+	motorized_infantry = {defence = 1 supply_consumption = 0.05}
+	modern_infantry = {defence = 1 supply_consumption = 0.05}
 	infantry = {defence = 1 supply_consumption = 0.05}
 	}
 }
@@ -900,8 +894,8 @@ plastic_tipped_bullets = {
 		}
 	}
 	effect = {
-	engineer = {attack = 1}
-	guard = {attack = 1}
+	motorized_infantry = {attack = 1}
+	modern_infantry = {attack = 1}
 	infantry = {attack = 1}
 	}
 }
@@ -919,7 +913,7 @@ llm01 = {
 		}
 	}
 	effect = {
-		cavalry = {
+		fighter = {
 			reconnaissance = 2
 			attack = 1
 		}
@@ -987,7 +981,7 @@ adaptiv = {
 		}
 	}
 	effect = {
-		cavalry = {
+		fighter = {
 		 defence = 1
 		 supply_consumption = 0.05
 		}
@@ -1047,8 +1041,8 @@ multicam = {
 		}
 	}
 	effect = {
-	engineer = {defence = 1 supply_consumption = 0.05}
-	guard = {defence = 1 supply_consumption = 0.05}
+	motorized_infantry = {defence = 1 supply_consumption = 0.05}
+	modern_infantry = {defence = 1 supply_consumption = 0.05}
 	infantry = {defence = 1 supply_consumption = 0.05}
 	}
 }
@@ -1093,8 +1087,8 @@ intelligent_munitions_system = {
 		}
 	}
 	effect = {
-	engineer = { attack = 1 }
-	guard = { attack = 1 }
+	motorized_infantry = { attack = 1 }
+	modern_infantry = { attack = 1 }
 	infantry = { attack = 1 }
 	}
 }
@@ -1116,7 +1110,7 @@ lower_extremity_exoskeleton = {
 		}
 	}
 	effect = {
-	guard = { attack = 1 }
+	modern_infantry = { attack = 1 }
 	infantry = { attack = 1 }
 	}
 }
@@ -1138,7 +1132,7 @@ powered_exoskeleton = {
 		}
 	}
 	effect = {
-	guard = { attack = 1 defence = 1}
+	modern_infantry = { attack = 1 defence = 1}
 	infantry = { attack = 1 defence = 1}
 	}
 }
@@ -1168,7 +1162,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	guard = { attack = 1 defence = 1}
+	modern_infantry = { attack = 1 defence = 1}
 	infantry = { attack = 1 defence = 1}
 	}
 }
@@ -1198,7 +1192,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	guard = { attack = 1 defence = 1}
+	modern_infantry = { attack = 1 defence = 1}
 	infantry = { attack = 1 defence = 1}
 	}
 }
@@ -1228,7 +1222,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	guard = { attack = 1 defence = 1}
+	modern_infantry = { attack = 1 defence = 1}
 	infantry = { attack = 1 defence = 1}
 	}
 }
@@ -1258,7 +1252,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	guard = { attack = 1 defence = 1}
+	modern_infantry = { attack = 1 defence = 1}
 	infantry = { attack = 1 defence = 1}
 	}
 }
@@ -1288,7 +1282,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	guard = { attack = 1 defence = 1}
+	modern_infantry = { attack = 1 defence = 1}
 	infantry = { attack = 1 defence = 1}
 	}
 }
@@ -1318,7 +1312,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-		guard = { attack = 1 defence = 1}
+		modern_infantry = { attack = 1 defence = 1}
 		infantry = { attack = 1 defence = 1}
 	}
 }
@@ -1442,8 +1436,7 @@ ceramic_armor = {
 	}
 	effect = {
 		artillery = {
-		 defence = 1
-		 supply_consumption = 0.05
+			supply_consumption = 0.05
 		}
 	}
 }
@@ -1459,7 +1452,9 @@ mech_prototypes = {
 		}
 	}
 	effect = {
-		activate_unit = tank
+		artillery = {
+			supply_consumption = -0.05
+		}
 	}
 }
 
@@ -1474,6 +1469,6 @@ drone_prototypes = {
 		}
 	}
 	effect = {
-		activate_unit = plane # drone
+		activate_unit = tactical_drone
 	}
 }
