@@ -64,5 +64,27 @@ political_decisions = {
 				war = yes
 			}
 		}
+	}
+	
+	bosphorus_canal = {
+		picture = bosphorus_canal
+		potential = {
+			NOT = { is_canal_enabled = 4 }
+			owns = 860
+		}
+		allow = {
+		}
+		effect = {
+			enable_canal = 4
+			860 = { set_province_flag = bosphorus_canal }
+			prestige = 5
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
 	}	
 }
