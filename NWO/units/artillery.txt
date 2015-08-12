@@ -13,29 +13,29 @@ artillery = {
 	max_strength = 3
 	default_organisation = 30
 	maximum_speed = 4.00
-	weighted_value = 9
+	weighted_value = 5
 
 
-	build_time = 270
-	# cost 4M # TODO
+	build_time = 120
+	# cost 4M # -> 100 canons 0.5B
 	build_cost = {
-		weaponry = 12.5
+		weaponry = 100
+		small_arms = 100
 	}
 	
 	supply_consumption = 1.0
-	supply_cost = {
-		fuel = 0.5
+	supply_cost = { # 0.4 mil $
 		weaponry = 0.1
 		small_arms = 0.1
 	}
 	
 
 	#Land Abilties
-	reconnaissance = 4
-	attack = 4
+	reconnaissance = 0
+	attack = 1.5 # 4
 	defence = 0.1
-	discipline = 0.5
-	support = 2.0
+	discipline = 1.0
+	support = 2
 	maneuver = 1
 	siege = 1
 

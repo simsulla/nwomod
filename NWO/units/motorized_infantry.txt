@@ -3,7 +3,7 @@ motorized_infantry = {
 	icon = 1
 	
 	type = land
-	sprite = Motor
+	sprite = Infantry # Motor
 	active = yes
 	unit_type = infantry
 	floating_flag = no
@@ -11,21 +11,23 @@ motorized_infantry = {
 	#Core Abilities
 	priority = 5
 	max_strength = 3
-	default_organisation = 20
-	maximum_speed = 4.00
-	weighted_value = 1.0
+	default_organisation = 30
+	maximum_speed = 8.00
+	weighted_value = 2.0
 
-	build_time = 120 # TODO
+	build_time = 90
+	# 0.5B
 	build_cost = {
-		small_arms = 30
-		clothes = 20
-		weaponry = 18
+		clothes = 100
+		small_arms = 200
+		weaponry = 50
 	}
 	
 	supply_consumption = 1.0
 	supply_cost = {
 		small_arms = 0.1
-		weaponry = 0.4
+		fuel = 0.2
+		weaponry = 0.1
 	}
 
 	#Land Abilties
@@ -35,5 +37,5 @@ motorized_infantry = {
 	defence = 4
 	discipline = 1
 	support = 0.0
-	maneuver = 2
+	maneuver = 1
 }
