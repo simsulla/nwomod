@@ -3,7 +3,6 @@ country_event = { # TODO trigger by chines civil war
   title = EVT_85101XX_NAME
   desc = EVT_85101XX_DESC
   picture = "nwo2_un_security_council"
-  fire_only_once = yes
 
   trigger = {
 	NOT = { has_country_flag = un_ccw }
@@ -54,7 +53,7 @@ country_event = {
 	NOT = { has_global_flag = un_ccw_totalveto has_global_flag = un_ccw_interventionveto } 
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8510106_A
@@ -139,7 +138,7 @@ country_event = {
 	NOT = { has_global_flag = un_suez_totalveto has_global_flag = un_suez_interventionveto } 
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8510206_A
@@ -189,7 +188,7 @@ country_event = { # TODO trigger by taiwan war
 	CHI = { war_with = KMT } has_global_flag = CHC_won_civil_war
   }
 
-  mean_time_to_happen = { months = 1 }
+  mean_time_to_happen = { days = 10 }
 
   immediate = { set_country_flag = un_taiwan }
   
@@ -224,7 +223,7 @@ country_event = {
 	NOT = { has_global_flag = un_taiwan_totalveto has_global_flag = un_taiwan_interventionveto } 
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8510306_A
@@ -257,7 +256,6 @@ country_event = { # TODO Greek Civil war trigger
   title = EVT_85104XX_NAME
   desc = EVT_85104XX_DESC
   picture = "nwo2_un_security_council"
-  fire_only_once = yes
 
   trigger = {
 	NOT = { has_country_flag = un_gcw }
@@ -275,7 +273,7 @@ country_event = { # TODO Greek Civil war trigger
 
   mean_time_to_happen = { months = 1 }
 
-  immediate = { set_country_flag = un_gcv }
+  immediate = { set_country_flag = un_gcw }
   
   option = {
     name = EVT_85104XX_A
@@ -308,7 +306,7 @@ country_event = {
 	NOT = { has_global_flag = un_gcw_totalveto has_global_flag = un_gcw_interventionveto } 
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8510406_A
@@ -340,7 +338,6 @@ country_event = { # TODO Eritrea trigger
   title = EVT_85105XX_NAME
   desc = EVT_85105XX_DESC
   picture = "nwo2_un_security_council"
-  fire_only_once = yes
 
   trigger = {
 	NOT = { has_country_flag = un_eritrea }
@@ -392,7 +389,7 @@ country_event = {
 	NOT = { has_global_flag = un_eritrea_totalveto has_global_flag = un_eritrea_interventionveto } 
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8510506_A
@@ -404,7 +401,6 @@ country_event = { # TODO Indonesian National Revolution
   title = EVT_85106XX_NAME
   desc = EVT_85106XX_DESC
   picture = "nwo2_un_security_council"
-  fire_only_once = yes
   
   trigger = {
 	NOT = { has_country_flag = un_indonesia }
@@ -451,11 +447,11 @@ country_event = {
 
   trigger = {
     tag = IDO
-    has_global_flag = un_eritrea_intervention
-	NOT = { has_global_flag = un_eritrea_totalveto has_global_flag = un_eritrea_interventionveto } 
+    has_global_flag = un_indonesia_intervention
+	NOT = { has_global_flag = un_indonesia_totalveto has_global_flag = un_indonesia_interventionveto } 
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8510506_A
@@ -471,8 +467,8 @@ country_event = {
 
   trigger = {
     tag = IDO
-    has_global_flag = un_gcw_interventionveto
-	NOT = { has_global_flag = un_gcw_totalveto } 
+    has_global_flag = un_indonesia_interventionveto
+	NOT = { has_global_flag = un_indonesia_totalveto } 
   }
 
   mean_time_to_happen = { days = 1 }
@@ -487,7 +483,6 @@ country_event = { # TODO Korean War
   title = EVT_85107XX_NAME
   desc = EVT_85107XX_DESC
   picture = "nwo2_un_security_council"
-  fire_only_once = yes
   
   trigger = {
 	NOT = { has_country_flag = un_korea }
@@ -538,7 +533,7 @@ country_event = {
 	NOT = { has_global_flag = un_korea_totalveto has_global_flag = un_korea_interventionveto } 
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8510706_A
@@ -571,7 +566,6 @@ country_event = { # TODO Hungarian Revolution
   title = EVT_85108XX_NAME
   desc = EVT_85108XX_DESC
   picture = "nwo2_un_security_council"
-  fire_only_once = yes
   
   trigger = {
 	NOT = { has_country_flag = un_hungary }
@@ -636,7 +630,6 @@ country_event = { # called in falkland wars
   title = EVT_85109XX_NAME
   desc = EVT_85109XX_DESC
   picture = "nwo2_un_security_council"
-  fire_only_once = yes
 
   trigger = {
 	NOT = { has_country_flag = un_falkland }
@@ -654,7 +647,7 @@ country_event = { # called in falkland wars
 
   mean_time_to_happen = { months = 1 }
 
-  immediate = { set_country_flag = un_gcv }
+  immediate = { set_country_flag = un_falkland }
   
   option = {
     name = EVT_85109XX_A
@@ -697,7 +690,7 @@ country_event = {
 
   mean_time_to_happen = { months = 1 }
 
-  immediate = { set_country_flag = un_gcv }
+  immediate = { set_country_flag = un_desertstorm }
   
   option = {
     name = EVT_85109XX_A

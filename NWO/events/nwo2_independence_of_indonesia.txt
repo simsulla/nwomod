@@ -63,10 +63,12 @@ country_event = {
 	   type = acquire_core_state
 	   months = 24
 	}
-	war = { 
-		target = NET
-		attacker_goal = { casus_belli = acquire_core_state }
-		defender_goal = { casus_belli = conquest }
+	NET = { 
+		war = { 
+			target = IDO
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = acquire_core_state }
+		}
 	}
 	ai_chance = { factor = 100 }
   }
@@ -616,17 +618,16 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1945 NOT = { year = 1990 }
-    NOT = { has_global_flag = event_fired_8206030 }
     exists = IDO
     has_global_flag = cold_war_pacific
     vassal_of = NET
+	war = no
   }
   mean_time_to_happen = { days = 337 }
 
   option = {
     name = EVT_8206050_A
-	set_global_flag = event_fired_8206050
-	overlord = { release_vassal = THIS } 
+	overlord = { release_vassal = THIS leave_alliance = THIS end_military_access = THIS } 
   }
 }
 country_event = {
