@@ -148,14 +148,13 @@ country_event = {
 
 country_event = {
 	id = 19804
-	title = "AI_EVENT"
-	desc = "AI_EVENT"
-	picture = "greatpowers"
+	title = "EVT_19804_NAME"
+	desc = "EVT_19804_DESC"
+	picture = "cold_war"
 	fire_only_once = yes
 
 	trigger = {
-		rank = 10
-		ai = yes
+		ai = no
 		NOT = { has_global_flag = cold_war }
 		NOT = { has_global_flag = cold_war_pacific }
 	}
@@ -166,7 +165,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "AI_EVENT"
+		name = "EVT_19804_A"
 	}
 
 }

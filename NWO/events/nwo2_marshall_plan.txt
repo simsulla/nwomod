@@ -102,7 +102,6 @@ country_event = {
 	any_country = { 
 		limit = { has_global_flag = marshall_plan_west_only capital_scope = { continent = europe } NOT = { government = proletarian_dictatorship } } 
 		diplomatic_influence  = { who = USA value = 100 } 
-		treasury = 20000
 		USA = { treasury = -20000 }
 		country_event = 8202020
 		any_pop = { militancy = -0.2 }
@@ -135,6 +134,7 @@ country_event = {
 
   option = {
     name = EVT_820202X_A
+	treasury = 20000
   }
 }
 
