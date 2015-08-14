@@ -244,8 +244,7 @@ country_event = {
   trigger = {
     tag = NET
     year = 1947 NOT = { year = 1990 }
-    exists = IDO
-	war = no
+    war_with = IDO
   }
 
   mean_time_to_happen = { days = 360 }
@@ -298,11 +297,6 @@ country_event = {
   option = {
     name = EVT_8206034_A
 	IDO = { country_event = 8206015  }
-	war = { 
-		target = IDO
-		attacker_goal = { casus_belli = make_puppet }
-		defender_goal = { casus_belli = annex_core_country }
-	}
 	ai_chance = { factor = 100 }
   }
 
@@ -339,7 +333,7 @@ country_event = {
     war_with = IDO
   }
 
-  mean_time_to_happen = { days = 30 }
+  mean_time_to_happen = { days = 90 }
 
   option = {
     name = EVT_8206036_A
