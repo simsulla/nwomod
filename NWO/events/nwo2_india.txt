@@ -7,6 +7,7 @@ country_event = {
 
   option = {
     name = EVT_8007205_A
+	country_event = { id = 8214013 days = 30 }
   }
 }
 country_event = {
@@ -29,7 +30,7 @@ country_event = {
 	country_event = 8007272
   }
 }
-country_event = {
+country_event = { # Army of India
   id = 8007228
   title = EVT_8007228_NAME
   desc = EVT_8007228_DESC
@@ -45,7 +46,6 @@ country_event = {
 
   option = {
     name = OK
-	country_event = 8007205 
 	any_pop = { militancy = 0.5 }
   }
 }
@@ -257,6 +257,8 @@ country_event = {
   title = EVT_8007239_NAME
   desc = EVT_8007239_DESC
   picture = "nwo2_first_kashmir_war"
+  fire_only_once = yes
+  
   trigger = {
     tag = PAK
     HND = { owns = 1225 war = no }

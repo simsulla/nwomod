@@ -1,21 +1,17 @@
-# Interim Government of India
-country_event = {
+country_event = { # Interim Government of India
 	id = 1214010
 
 	title = EVT_1214010_NAME
 	desc = EVT_1214010_DESC
 	picture = "independence_of_india"
-
-	fire_only_once = yes
 	
 	trigger = {
-		OR = { 
-			AND = { tag = ENG is_our_vassal = RAJ }
-			AND = { tag = RAJ is_vassal = no }
-		}
+		tag = ENG 
+		is_our_vassal = RAJ
 		NOT = { exists = HND }
 		war = no
 		1236 = { controlled_by = RAJ } # Delhi
+		NOT = { has_country_flag = ali_jinnah_negotiating }
 	}
 
 	mean_time_to_happen = {
@@ -24,7 +20,6 @@ country_event = {
 
 	option = {
 		name = EVT_1214010_A 
-		ai_chance = { factor = 0 }
 		prestige = -2 
 		any_pop = {
 			limit = {
@@ -33,7 +28,8 @@ country_event = {
 			consciousness = 2
 			militancy = 5
 		}
-		country_event = { id = 1214011 days = 365 } 
+		set_country_flag = ali_jinnah_negotiating
+		ai_chance = { factor = 0 }
 	}
 	
 	option = {
@@ -45,13 +41,12 @@ country_event = {
 			consciousness = 2
 			militancy = 2
 		}
+		set_country_flag = ali_jinnah_negotiating
 		ai_chance = { factor = 100 }
-		country_event = { id = 1214011 days = 365 } 
 	}
 
 	option = {
 		name = EVT_1214010_C
-		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {
 				OR = { culture = indian culture = indian_muslim }
@@ -59,6 +54,7 @@ country_event = {
 			militancy = 10
 		}
 		add_country_modifier = { name = denied_independence duration = 365 }
+		ai_chance = { factor = 0 }
 	}
 
 }
@@ -70,8 +66,15 @@ country_event = {
 	desc = EVT_1214011_DESC
 	picture = "ali_jinnah_negotiating"
 
-	is_triggered_only = yes
-
+	trigger = { 
+		tag = ENG
+		has_country_flag = ali_jinnah_negotiating
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
 	option = {
 		name = EVT_1214011_A 
 		ai_chance = { factor = 100 }
@@ -114,7 +117,7 @@ country_event = {
 			militancy = 10
 		}
 		release_vassal = RAJ
-		RAJ = { country_event = { id = 8214013 days = 30 } }
+		RAJ = { country_event = 8007205 }
 	}
 	
 	option = {
@@ -132,7 +135,7 @@ country_event = {
 
 }
 
-country_event = {
+country_event = { # Mountbatten Plan 
 	id = 8214013
 
 	title = EVT_8214013_NAME
@@ -151,22 +154,22 @@ country_event = {
 		}		
 		prestige = -10
 		release = PAK
-		release_vassal = BHU
 		release_vassal = NEP
 		release_vassal = JAK
 		ENG = { 
+			diplomatic_influence = { who = RAJ value = -100 } 
 			diplomatic_influence = { who = BHU value = -100 } 
 			diplomatic_influence = { who = NEP value = -100 } 
 			diplomatic_influence = { who = JAK value = -100 } 
 			diplomatic_influence = { who = TIB value = -100 } 
 		}
-		BLO = { country_event = { id = 8214016 days = 30 } }
-		AZK = { country_event = { id = 8214016 days = 60 } }
-		any_neighbor_country = { 
-			limit = { is_our_vassal = THIS NOT = { tag = JAK } } 
-			country_event = { id = 8214016 days = 30 }
-		}
+		leave_alliance = TIB
+		leave_alliance = JAK
 		change_tag = HND
+		any_country = { 
+			limit = { overlord = { tag = HND } NOT = { tag = JAK } NOT = { tag = BHU } NOT = { tag = SIK } } 
+			country_event = 8214016
+		}
 		JAK = { country_event = { id = 8007231 days = 50 } }
 	}
 	
@@ -192,7 +195,6 @@ country_event = {
 			limit = { is_core = PAK }
 			add_core = HND
 		}
-		release_vassal = BHU
 		release_vassal = NEP
 		release_vassal = JAK
 		overlord = { 
@@ -201,8 +203,10 @@ country_event = {
 			diplomatic_influence = { who = JAK value = -100 } 
 			diplomatic_influence = { who = TIB value = -100 }
 		}
+		leave_alliance = TIB
+		leave_alliance = JAK
 		any_neighbor_country = { 
-			limit = { is_our_vassal = THIS NOT = { tag = JAK } }
+			limit = { is_our_vassal = THIS NOT = { tag = BHU } NOT = { tag = SIK } }
 			country_event = 8214017
 		}		
 		change_tag = HND
@@ -291,27 +295,33 @@ country_event = {
 
 	is_triggered_only = yes
 	
-	immediate = { release_vassal = THIS }
-
-	option = {
-		name = EVT_8214015_A 
-		PAK = { inherit = THIS }
-		ai_chance = { factor = 1 modifier = { pop_majority_religion = sunni factor = 10 } }
+	immediate = { 
+		FROM = { release_vassal = THIS } 
+		FROM = { leave_alliance = THIS }
+		ENG = { diplomatic_influence = { who = HND value = -50 } }
 	}
 
 	option = {
-		name = EVT_8214014_A 
-		HND = { inherit = THIS }
-		ai_chance = { factor = 1 modifier = { pop_majority_religion = hindu factor = 10 } }
-	}
-
-	option = {
-		name = EVT_8214015_B 
+		name = EVT_8214015_A
 		relation = { who = HND value = -200 }
+		ENG = { diplomatic_influence = { who = THIS value = -100 } }
 		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
 		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
 		ai_chance = { factor = 1 modifier = { tag = HYD factor = 100 } }
 	}
+
+	option = {
+		name = EVT_8214015_B 
+		PAK = { inherit = THIS }
+		ai_chance = { factor = 1 modifier = { pop_majority_religion = sunni factor = 100 } }
+	}
+
+	option = {
+		name = EVT_8214015_C 
+		HND = { inherit = THIS }
+		ai_chance = { factor = 1 modifier = { pop_majority_religion = hindu NOT = { tag = HYD } factor = 100 } }
+	}
+
 	
 }
 
@@ -324,7 +334,10 @@ country_event = {
 
 	is_triggered_only = yes
 	
-	immediate = { release_vassal = THIS }
+	immediate = { 
+		FROM = { release_vassal = THIS } 
+		FROM = { leave_alliance = THIS }
+	}
 
 	option = {
 		name = EVT_8214014_A 
@@ -337,8 +350,6 @@ country_event = {
 		relation = { who = PAK value = -200 }
 		relation = { who = HND value = -200 }
 		ENG = { diplomatic_influence = { who = THIS value = -100 } }
-		HND = { leave_alliance = THIS }
-		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
 		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
 		ai_chance = { factor = 0 }
 	}

@@ -60,7 +60,7 @@ country_event = {
 	any_pop = { militancy = 1.0 }
 	war = { 
 		target = NET
-		attacker_goal = { casus_belli = acquire_core_state }
+		attacker_goal = { casus_belli = acquire_core_state state_province_id = 1413 }
 		defender_goal = { casus_belli = conquest }
 	}
 	ai_chance = { factor = 100 }
@@ -98,18 +98,20 @@ country_event = {
     war_with = IDO
   }
 
-  mean_time_to_happen = { days = 10 }
+  mean_time_to_happen = { days = 100 }
 
   option = {
     name = EVT_8206005_A
 	badboy = -5 
 	relation = { who = USA value = 20 } 
-	set_global_flag = event_fired_8206005
+	IDO = { country_event =  8206006 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8206005_B
 	IDO = { country_event =  8206007 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -117,26 +119,19 @@ country_event = {
   title = EVT_8206006_NAME
   desc = EVT_8206006_DESC
   picture = "nwo2_indonesian_national_revolution"
-  fire_only_once = yes
-
-  trigger = {
-    tag = IDO
-    year = 1945 NOT = { year = 1990 }
-    has_global_flag = event_fired_8206005
-    war_with = NET
-  }
-
-  mean_time_to_happen = { days = 30 }
+  is_triggered_only = yes # as IDO
 
   option = {
     name = EVT_8206006_A
 	any_pop = { militancy = -0.3 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8206006_B
 	any_pop = { militancy = -1.0 }
-	NET = { country_event =  8206007 }
+	NET = { country_event =  8206008 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -145,19 +140,21 @@ country_event = {
   desc = EVT_8206007_DESC
   picture = "nwo2_indonesian_national_revolution"
   
-  is_triggered_only = yes # as NET or IDO
+  is_triggered_only = yes # as IDO
 
   option = {
     name = EVT_8206007_A
 	any_pop = { militancy = 3 }
-	NET= { country_event = 8206008 }
+	NET = { country_event = 8206008 }
+	ai_chance = { factor = 0 }
   }
   option = {
     name = EVT_8206007_B
 	any_pop = { militancy = -0.3 }
+	ai_chance = { factor = 100 }
   }
 }
-country_event = {
+country_event = { # Indonesians agree to the Federated Indonesia proposal
   id = 8206008
   title = EVT_8206008_NAME
   desc = EVT_8206008_DESC
@@ -172,12 +169,14 @@ country_event = {
     name = EVT_8206008_A
 	IDO = { country_event = 8206009 }
 	any_pop = { militancy = 2 }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8206008_B
 	set_global_flag = federated_indonesia 
 	NET = { country_event = 8206030 }
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
@@ -225,7 +224,7 @@ country_event = {
     war_with = NET
   }
 
-  mean_time_to_happen = { days = 90 }
+  mean_time_to_happen = { days = 290 }
 
   option = {
     name = EVT_8206031_A
@@ -244,8 +243,9 @@ country_event = {
 
   trigger = {
     tag = NET
-    year = 1946 NOT = { year = 1990 }
-    war_with = IDO
+    year = 1947 NOT = { year = 1990 }
+    exists = IDO
+	war = no
   }
 
   mean_time_to_happen = { days = 360 }
@@ -253,16 +253,16 @@ country_event = {
   option = {
     name = EVT_8206032_A
 	relation = { who = IDO value = 20 } 
+	IDO = { country_event = 8206013 }
 	badboy = -5 
-	ai_chance = { factor = 90 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8206032_B
 	any_pop = { limit = { culture = indonesian } militancy = 2.5 } 
 	badboy = 25 
-	country_event = 8206013 
-	ai_chance = { factor = 10 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -271,17 +271,19 @@ country_event = {
   desc = EVT_8206033_DESC
   picture = "nwo2_linggajati_agreement"
 
-  is_triggered_only = yes
+  is_triggered_only = yes # IDO
 	
   option = {
     name = EVT_8206033_A
 	any_pop = { limit = { culture = indonesian } militancy = 0.7 }
+	NET = { country_event = 8206014 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8206033_B
 	any_pop = { limit = { culture = indonesian } militancy = 1.5 }
-	country_event = 8206014
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -291,17 +293,24 @@ country_event = {
   picture = "nwo2_linggajati_agreement"
   fire_only_once = yes
 
-  is_triggered_only = yes
+  is_triggered_only = yes # NET
   
   option = {
     name = EVT_8206034_A
 	IDO = { country_event = 8206015  }
+	war = { 
+		target = IDO
+		attacker_goal = { casus_belli = make_puppet }
+		defender_goal = { casus_belli = annex_core_country }
+	}
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8206034_B
 	country_event = 8206030 
 	set_global_flag = federated_indonesia 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -374,7 +383,6 @@ country_event = {
 
   option = {
     name = EVT_8206060_A
-
 	badboy = 3 
   }
 }
@@ -400,62 +408,6 @@ country_event = {
 		badboy = 4 
     }
 }
-country_event = { 
-  id = 8206026
-  title = EVT_8206066_NAME
-  desc = EVT_8206066_DESC
-  picture = "nwo2_end_of_indonesian_national_revolution"
-  fire_only_once = yes
-
-  trigger = {
-    tag = NET
-    year = 1948 NOT = { year = 1990 }
-    ai = no
-    war_with = IDO
-  }
-
-  mean_time_to_happen = { days = 180 }
-
-  option = {
-    name = EVT_8206066_A
-	country_event = 8206030 
-	any_pop = { militancy = -0.3 }
-  }
-
-  option = {
-    name = EVT_8206066_B
-	badboy = 1 
-  }
-}
-country_event = {
-  id = 8206027
-  title = EVT_8206067_NAME
-  desc = EVT_8206067_DESC
-  picture = "nwo2_end_of_indonesian_national_revolution"
-  fire_only_once = yes
-
-  trigger = {
-    tag = NET
-    year = 1949 NOT = { year = 1990 }
-    ai = no
-    NOT = { has_global_flag = event_fired_8510607 }
-    NOT = { has_global_flag = event_fired_8510606 }
-    war_with = IDO
-  }
-
-  mean_time_to_happen = { days = 90 }
-
-  option = {
-    name = EVT_8206067_A
-	country_event = 8206030 
-	any_pop = { militancy = -0.5 }
-  }
-
-  option = {
-    name = EVT_8206067_B
-	badboy = 1 
-  }
-}
 country_event = {
   id = 8206028
   title = EVT_8206068_NAME
@@ -466,12 +418,8 @@ country_event = {
   trigger = {
     tag = NET
     year = 1949 NOT = { year = 1990 }
-    ai = no
-    OR = {
-		has_global_flag = event_fired_8510606
-		has_global_flag = event_fired_8510607
-    }
-    war_with = IDO
+	war = no
+    exists = IDO
   }
 
   mean_time_to_happen = { days = 90 }
@@ -480,11 +428,13 @@ country_event = {
     name = EVT_8206068_A
 	country_event = 8206030 
 	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8206068_B
 	badboy = 1 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = { 
@@ -493,13 +443,13 @@ country_event = {
   desc = EVT_8206070_DESC
   picture = "nwo2_end_of_indonesian_national_revolution"
 
-  is_triggered_only = yes
+  is_triggered_only = yes # NET
 
   option = {
     name = EVT_8206070_A
-	end_war = IDO 	#leave all prov to IDO; force IDO to relase vassal states if federated_indonesia is set.
-	random_country = { limit = { tag = IDO has_global_flag = federated_indonesia } country_event = 8206051 } 
-	IDO = { country_event = 8206031 }
+	all_core = { limit = { is_core = IDO owned_by = NET NOT = { is_core = WPA } } secede_province = IDO }
+	random_country = { limit = { tag = IDO has_global_flag = federated_indonesia } country_event = 8206032 } 
+	random_country = { limit = { tag = IDO NOT = { has_global_flag = federated_indonesia } } country_event = 8206031 } 
   }
 }
 country_event = { 
@@ -520,16 +470,14 @@ country_event = {
   title = EVT_8206072_NAME
   desc = EVT_8206072_DESC
   picture = "nwo2_federated_indonesia"
-
-  trigger = {
-    tag = NET
-    has_global_flag = federated_indonesia
-	war = no
- }
+  is_triggered_only = yes # IDO
 
   option = {
     name = EVT_8206072_A
-	any_owned = { limit = { is_core = IDO } secede_province = IDO }
+	create_vassal = EID # East Indonesia
+	create_vassal = DYA # Dyak
+	#create_vassal = WJA # West Java
+	#create_vassal = SUM # Sumatra
   }
 }
 country_event = {
@@ -571,14 +519,9 @@ country_event = {
 
   option = {
     name = EVT_8206081_A
-    casus_belli = {
-	   target = NET
-	   type = acquire_core_state
-	   months = 24
-	}
 	war = { 
 		target = NET
-		attacker_goal = { casus_belli = acquire_core_state }
+		attacker_goal = { casus_belli = acquire_core_state state_province_id = 1453 }
 		defender_goal = { casus_belli = status_quo }
 	}
   }
@@ -621,22 +564,6 @@ country_event = {
   option = {
     name = EVT_8206050_A
 	overlord = { release_vassal = THIS leave_alliance = THIS end_military_access = THIS } 
-  }
-}
-country_event = {
-  id = 8206051
-  title = EVT_8206051_NAME
-  desc = EVT_8206051_DESC
-  picture = "nwo2_dutch_east_india"
-  
-  is_triggered_only = yes
-
-  option = {
-    name = EVT_8206051_A
-	create_vassal = EID # East Indonesia
-	create_vassal = DYA # Dyak
-	#create_vassal = WJA # West Java
-	#create_vassal = SUM # Sumatra
   }
 }
 country_event = {
