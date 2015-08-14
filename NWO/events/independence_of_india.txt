@@ -160,13 +160,14 @@ country_event = {
 			diplomatic_influence = { who = JAK value = -100 } 
 			diplomatic_influence = { who = TIB value = -100 } 
 		}
+		BLO = { country_event = { id = 8214016 days = 30 } }
+		AZK = { country_event = { id = 8214016 days = 60 } }
 		any_neighbor_country = { 
 			limit = { is_our_vassal = THIS NOT = { tag = JAK } } 
-			country_event = 8214016
+			country_event = { id = 8214016 days = 30 }
 		}
 		change_tag = HND
-		JAK = { country_event = 8007231 }
-		country_event = { id = 8007231 days = 30 }
+		JAK = { country_event = { id = 8007231 days = 50 } }
 	}
 	
 	option = {
@@ -306,7 +307,6 @@ country_event = {
 
 	option = {
 		name = EVT_8214015_B 
-		relation = { who = PAK value = -200 }
 		relation = { who = HND value = -200 }
 		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
 		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
@@ -336,6 +336,8 @@ country_event = {
 		name = EVT_8214015_B 
 		relation = { who = PAK value = -200 }
 		relation = { who = HND value = -200 }
+		ENG = { diplomatic_influence = { who = THIS value = -100 } }
+		HND = { leave_alliance = THIS }
 		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
 		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
 		ai_chance = { factor = 0 }

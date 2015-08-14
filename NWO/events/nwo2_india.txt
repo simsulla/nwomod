@@ -102,24 +102,24 @@ country_event = {
   title = EVT_8007231_NAME
   desc = EVT_8007231_DESC
   picture = "nwo2_kashmir"
-  is_triggered_only = yes # independance_of_india.txt
+  is_triggered_only = yes # independance_of_india.txt JAK
 
   option = {
     name = EVT_8007231_A
-	HND = { country_event = 8007232 }
+	HND = { country_event =  { id = 8007232 days = 60 }  }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007231_B
-	PAK = { country_event = 8007234 } 
+	PAK = { country_event = { id = 8007234 days = 60 }  } 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8007231_C
-	HND = { country_event = { id = 8007236 days = 60 } } 
-	PAK = { country_event = 8007237 }
+	HND = { country_event = { id = 8007236 days = 120 } } 
+	PAK = { country_event = { id = 8007237 days = 60 } }
 	ai_chance = { factor = 0 }
   }
 }
