@@ -58,17 +58,10 @@ country_event = {
   option = {
     name = EVT_8206003_A
 	any_pop = { militancy = 1.0 }
-    casus_belli = {
-	   target = NET
-	   type = acquire_core_state
-	   months = 24
-	}
-	NET = { 
-		war = { 
-			target = IDO
-			attacker_goal = { casus_belli = conquest }
-			defender_goal = { casus_belli = acquire_core_state }
-		}
+	war = { 
+		target = NET
+		attacker_goal = { casus_belli = acquire_core_state }
+		defender_goal = { casus_belli = conquest }
 	}
 	ai_chance = { factor = 100 }
   }

@@ -670,8 +670,11 @@ province_event = {
 	has_national_minority = no
 	NOT = { country_units_in_province = KMT }
 	NOT = { region = CHI_1578 } # no rebellion in Sichuan
-	NOT = { region = CHI_1579 }
+	NOT = { region = CHI_1579 } 
 	NOT = { region = RUS_1065 }
+	NOT = { region = CHI_1485 } # not in Taiwan
+	NOT = { province_id = 1499 } # not on other islands
+	NOT = { province_id = 2576 } # not on other islands
   }
 
   mean_time_to_happen = { months = 30 }
@@ -717,6 +720,7 @@ country_event = {
 
   option = {
     name = "EVT_8200101_A"
+	CHI = { country_event = 8200104 }
   }
 }
 country_event = {
@@ -736,7 +740,7 @@ country_event = {
 		national_provinces_occupied = 0.5
 	}
 	year = 1948
-	NOT = { controls = 1485 } # we must still control Taibei
+	NOT = { controls = 1485 } # we do not control Taibei
   }
 
   mean_time_to_happen = { days = 12 }
