@@ -9,16 +9,20 @@ country_event = {
 	trigger = {
 		NOT = { has_country_modifier = not_member_of_united_nations }
 		NOT = { has_country_modifier = united_nations }
-		OR = { 
-			AND = { tag = CHI has_global_flag = china_united_nations_security_council }
-			NOT = { tag = CHI }
-		}
-		OR = { 
-			AND = { tag = KMT NOT = { has_global_flag = china_united_nations_security_council } }
-			NOT = { tag = KMT }
-		}
 		war = no
+		OR = { is_vassal = no government = proletarian_dictatorship }
 		year = 1947
+		NOT = { 
+			OR = { 
+				AND = { tag = CHI has_global_flag = china_united_nations_security_council }
+				AND = { tag = KMT NOT = { has_global_flag = china_united_nations_security_council } }
+				tag = KMT
+				tag = ENG
+				tag = USA
+				tag = FRA
+				tag = RUS
+			}		
+		}
 	}
 
 	mean_time_to_happen = {
