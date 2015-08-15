@@ -1,3 +1,5 @@
+#TODO make thisabout drugs,not alcohol
+
 #Temperance League
 country_event = {
 	id = 100
@@ -7,12 +9,6 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		NOT = {
-			OR = {
-				religion = sunni
-				religion = shiite
-			}
-		}
 		NOT = {
 			OR = {
 				has_country_modifier = libertine_culture

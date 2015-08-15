@@ -51,3 +51,149 @@ country_event = {
 	}
 
 }
+
+country_event = {
+  id = 8000101
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1946 NOT = { year = 1990 }
+    NOT = { government = proletarian_dictatorship }
+  }
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.30 } } }
+	define_general = { name = "Muhammed Hashim" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8000102
+  title = "EVT_GOVTCHANGE_NAME"
+  desc = "EVT_GOVTCHANGE_DESC"
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1953 NOT = { year = 1990 }
+    NOT = { government = proletarian_dictatorship }
+  }
+  immediate = { set_global_flag = event_fired_8000102 }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "OK"
+	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.30 } } }
+	define_general = { name = "Mohammed Daoud" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8000103
+  title = "EVT_BIRTHDAY_NAME"
+  desc = "EVT_BIRTHDAY_DESC"
+  picture = "nwo2_birthday"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1954 NOT = { year = 1990 }
+     NOT = { government = proletarian_dictatorship }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = "EVT_HAPPYBIRTHDAY"
+	define_general = { name = "Muhammed Zahir" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8000109
+  title = EVT_8000109_NAME
+  desc = EVT_8000109_DESC
+  picture = "nwo2_afghani_coup_1973"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AFG
+    year = 1977 NOT = { year = 1990 }
+    NOT = { government = proletarian_dictatorship }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8000109_A
+	ai_chance = { factor = 0 }
+	government = presidential_dictatorship
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30 } } }
+	define_general = { name = "Mohammed Daoud" personality = energetic background = no_background }
+  }
+
+  option = {
+    name = EVT_8000109_B
+	ai_chance = { factor = 100 }
+	any_pop = { militancy = 2.0 }
+	random_country = {
+		limit = { overlord = { NOT = { government = proletarian_dictatorship } } }
+		overlord = { country_event =  { id = 8000111 days = 360 } }
+	}
+	set_global_flag = event_fired_8000109 # will trigger 8176110 # Soviet intervention
+  }
+}
+country_event = {
+  id = 8000110 # triggered by 8176110
+  title = EVT_8000110_NAME
+  desc = EVT_8000110_DESC
+  picture = "nwo2_saur_revolution"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8000110_A
+	government = proletarian_dictatorship
+	set_country_flag = soviet_intervention_in_afghanistan
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.15 } } }
+	country_event =  { id = 8000112 days = 360 } 
+	country_event =  { id = 8176109 days = 30 }  
+  }
+}
+country_event = { # overlord
+  id = 8000111
+  title = EVT_8000111_NAME
+  desc = EVT_8000111_DESC
+  picture = "nwo2_soviet_intervention_in_afghanistan"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8000111_A
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.4 } } }
+	release = AFG 
+  }
+}
+country_event = {
+  id = 8000112
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  is_triggered_only = yes
+
+  option = {
+    name = OK
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30 } } }
+	define_general = { name = "Burhanuddin Rabbani" personality = energetic background = no_background }
+  }
+}
+

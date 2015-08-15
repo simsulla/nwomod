@@ -1,3 +1,117 @@
+country_event = {
+	id = 13201
+	title = "EVTNAME13201"
+	desc = "EVTDESC13201"
+	picture = "Outside_influences"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA13201"
+		diplomatic_influence = {
+			who = FROM
+			value = -200
+		}
+		casus_belli = {
+			target = FROM
+			type = add_to_sphere
+			months = 12
+		}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = add_to_sphere
+			}
+		}
+	}
+
+	option = {
+		name = "DIPLO_CALL_ALLIES"
+		diplomatic_influence = {
+			who = FROM
+			value = -100
+		}
+		casus_belli = {
+			target = FROM
+			type = cut_down_to_size
+			months = 12
+		}
+		war = {
+			target = FROM
+			call_ally = yes
+			attacker_goal = {
+				casus_belli = cut_down_to_size
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB13201"
+		diplomatic_influence = {
+			who = FROM
+			value = -100
+		}
+		prestige = -20
+	}
+}
+
+country_event = {
+	id = 8209501
+
+	title = EVT_8209501_NAME
+	desc = EVT_8209501_DESC
+	picture = "five_year_plan"
+
+	trigger = {
+		has_country_modifier = five_year_plan
+		NOT = { has_country_modifier = central_planning_inflexibility }
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 36
+	}
+
+	option = {
+		name = EVT_8209501_A
+		add_country_modifier = { 
+			name = central_planning_inflexibility
+			duration = 3650 
+		}
+	}
+	
+
+}
+
+country_event = {
+	id = 8209502
+
+	title = EVT_8209501_NAME
+	desc = EVT_8209501_DESC
+	picture = "five_year_plan"
+
+	trigger = {
+		has_country_modifier = five_year_plan
+		has_country_modifier = central_planning_inflexibility
+		NOT = { has_country_modifier = central_planning_inflexibility2 }
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = EVT_8209501_A
+		add_country_modifier = { 
+			name = central_planning_inflexibility2
+			duration = 3650 
+		}
+	}
+	
+
+}
+
 #### Press Rights ####
 # Newspaper Publishes Slander
 country_event = {

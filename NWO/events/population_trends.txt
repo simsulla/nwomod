@@ -1,0 +1,308 @@
+#############################################################
+#															#
+#                  	Birth Rate Events						#
+#															#
+#############################################################
+
+## Country modifiers
+# one_point_five_children literacy > 60% 
+# two_children literacy literacy > 20% 
+# two_point_five_children literacy > 10%
+# three_children literacy < 10%
+## Province modifiers set every 10 years
+# pre_demographic_transition hard coded year and geography + 1 child
+# family_values depends on irreligion + 1 child
+
+# consciousness, literacy and bad economy cause low birth rates
+country_event = { # one_point_five_children
+	id = 2260603
+	title = EVTNAME226063 # "Birth Rate Low!"
+	desc = EVTDESC226063
+	picture = "one_point_five_children"
+	
+	trigger = {
+		OR = { literacy = 0.6 AND = { literacy = 0.20 pop_majority_religion = irreligion NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
+		NOT = { has_country_modifier = one_point_five_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
+	}
+	
+	option = {
+		name = EVTOPTA226063
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		add_country_modifier = {
+			name = one_point_five_children 
+			duration = 3500
+		}
+	}
+}
+
+# consciousness, literacy and bad economy cause low birth rates
+country_event = { # two_children
+	id = 2260604
+	title = EVTNAME226064 # "Birth Rate Stable!"
+	desc = EVTDESC226064
+	picture = "one_point_five_children"
+	
+	trigger = {
+		literacy = 0.20
+		NOT = { OR = { literacy = 0.6 pop_majority_religion = irreligion NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
+		NOT = { has_country_modifier = two_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
+	}
+	
+	option = {
+		name = EVTOPTA226064
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		add_country_modifier = {
+			name = two_children 
+			duration = 3500
+		}
+	}
+}
+
+# consciousness, literacy and bad economy cause low birth rates
+country_event = { # two_point_five_children
+	id = 2260605
+	title = EVTNAME226065 # "Birth Rate Positive!"
+	desc = EVTOPTA226065
+	picture = "pre_demographic_transition"
+	
+	trigger = {
+		literacy = 0.15
+		NOT = { literacy = 0.2 }
+		NOT = { has_country_modifier = two_point_five_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
+	}
+	
+	option = {
+		name = EVTOPTA226065
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		add_country_modifier = {
+			name = two_point_five_children
+			duration = 3500
+		}
+	}
+}
+
+country_event = { # three_children
+	id = 2260606
+	title = EVTNAME226066 # "Birth Rate High!"
+	desc = EVTDESC226066
+	picture = "pre_demographic_transition"
+	
+	trigger = {
+		literacy = 0.1
+		NOT = { literacy = 0.15 }
+		NOT = { has_country_modifier = three_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
+	}
+	
+	option = {
+		name = EVTOPTA226066
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		add_country_modifier = {
+			name = three_children
+			duration = 3500
+		}
+	}
+}
+
+country_event = { # three_children
+	id = 2260607
+	title = EVTNAME226067 # "Birth Rate High!"
+	desc = EVTDESC226067
+	picture = "pre_demographic_transition"
+	
+	trigger = {
+		NOT = { literacy = 0.1 }
+		NOT = { has_country_modifier = four_children }
+		year = 1990 # TODO fix demographics for the 1946 start date
+	}
+	
+	option = {
+		name = EVTOPTA226066
+		remove_country_modifier = one_point_five_children
+		remove_country_modifier = two_children 
+		remove_country_modifier = two_point_five_children
+		remove_country_modifier = three_children
+		remove_country_modifier = four_children
+		add_country_modifier = {
+			name = four_children
+			duration = 3500
+		}
+	}
+}
+
+# 0.001 gives 2.5% pop growth per year. set every 10 year active for 5 -> 1.2%
+country_event = { # family_values
+	id = 2260610
+	title = EVTNAME2260610 # "Family values!"
+	desc = EVTDESC2260610
+	picture = "family_values"
+	
+	trigger = {
+		NOT = { has_country_modifier = demographics_culture }
+       	NOT = {	pop_majority_religion = irreligion }
+		any_owned_province = {
+			NOT = { has_province_modifier = family_values }
+			NOT = { literacy =  0.2 }
+       	}
+		year = 1990 # TODO fix demographics for the 1946 start date
+	}
+	
+	option = {
+		name = EVTOPTA2260610
+		add_country_modifier = {
+			name = demographics_culture
+			duration = 3600
+		}
+		any_owned = {
+			limit = {
+				NOT = { has_province_modifier = family_values }
+				literacy =  0.05
+				NOT = { literacy =  0.2 }
+			}
+			add_province_modifier = {
+				name = family_values
+				duration = 1750
+			}
+		}
+		any_owned = {
+			limit = {
+				NOT = { has_province_modifier = family_values }
+				NOT = { literacy =  0.05 }
+			}
+			add_province_modifier = {
+				name = family_values
+				duration = 3500
+			}
+		}
+	}
+}
+
+# 0.001 gives 2.5% pop growth per year. set every 10 year active for 5 -> 1.2%
+country_event = { # pre_demographic_transition
+	id = 2260611
+	title = EVT_2260611_NAME 
+	desc = EVT_2260611_DESC
+	picture = "pre_demographic_transition"
+	
+	trigger = {
+		NOT = { has_country_modifier = demographics }
+		any_owned_province = {
+			NOT = { has_province_modifier = pre_demographic_transition }
+			OR = {
+				AND = { 
+					NOT = { year = 2000 } pop_majority_religion = sunni 
+				}
+				AND = { 
+					NOT = { year = 2018 } 
+					NOT = { pop_majority_religion = irreligion } 
+					continent = africa 
+					owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } 
+				}
+				AND = { 
+					NOT = { year = 2028 } 
+					continent = africa 
+					pop_majority_religion = sunni 
+					owner = {  NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } 
+				}
+      		}
+       	}
+		year = 1990 # TODO fix demographics for the 1946 start date
+	}
+	
+	mean_time_to_happen = {
+        months = 1
+	}
+	
+	option = {
+		name = EVT_2260611_OPTA
+		add_country_modifier = {
+			name = demographics
+			duration = 3500
+		}
+		any_owned = {
+			limit = {
+			NOT = { has_province_modifier = pre_demographic_transition }
+			NOT = { pop_majority_religion = irreligion }
+			OR = {
+				AND = { NOT = { year = 2000 } pop_majority_religion = sunni }
+				AND = { NOT = { year = 2010 } NOT = { pop_majority_religion = irreligion } 
+				continent = africa owner = { NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
+				AND = { NOT = { year = 2020 } continent = africa pop_majority_religion = sunni owner = {  NOT = { tag = ALG tag = TUN tag = EGY tag = TRI tag = MOR } } }
+			}
+			}
+			add_province_modifier = {
+				name = pre_demographic_transition
+				duration = 1750
+			}
+		}
+	}
+}
+
+
+province_event = { # haredim_jewish
+	id = 2260612
+	title = EVT_2260612_NAME 
+	desc = EVT_2260612_DESC
+	picture = "haredim_jewish"
+	
+	trigger = {
+		any_pop = { 
+			culture = haredim_jewish
+		}
+	}
+	
+	mean_time_to_happen = {
+        months = 120
+	}
+	
+	option = {
+		name = EVT_2260612_OPTA
+		any_pop = { 
+			limit = { culture = haredim_jewish }
+			reduce_pop = 1.35
+		}
+	}
+}
+
+province_event = { # mennonites
+	id = 2260613
+	title = EVT_2260613_NAME 
+	desc = EVT_2260613_DESC
+	picture = "family_values"
+	
+	trigger = {
+		any_pop = { 
+			culture = mennonites
+		}
+	}
+	
+	mean_time_to_happen = {
+        months = 120
+	}
+	
+	option = {
+		name = EVT_2260613_OPTA
+		any_pop = { 
+			limit = { culture = mennonites }
+			reduce_pop = 1.35
+		}
+	}
+}
