@@ -63,4 +63,116 @@ country_event = {
 	}
 	
 }
+country_event = {
+  id = 8000608
+  title = "EVT_8000608_NAME"
+  desc = "EVT_8000608_DESC"
+  picture = "nwo2_angolan_independence"
+
+  trigger = {
+    tag = ANG
+	is_vassal = no
+	exists = ANG
+	NOT = { year = 1990 }
+  }
+  fire_only_once = yes
+
+  mean_time_to_happen = { days = 36 }
+
+  option = {
+    name = "EVT_8000608_A"
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.3 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+  }
+}
+country_event = {
+  id = 8000611
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ANG
+    year = 1966 NOT = { year = 1990  }
+    ANG = { vassal_of = POR }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	define_general = { name = "Camilo Rebocho Vaz" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8000612
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ANG
+    year = 1972 NOT = { year = 1990  }
+    ANG = { vassal_of = POR }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	define_general = { name = "Fernando Augusto Santos" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8000613
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ANG
+    year = 1974 NOT = { year = 1990  }
+    ANG = { vassal_of = POR }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	define_general = { name = "António Alva Rosa Coutinho" personality = energetic background = no_background }
+  }
+}
+
+country_event = {
+  id = 8000614
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ANG
+    year = 1978 NOT = { year = 1990  }
+    NOT = { government = proletarian_dictatorship }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = OK
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.3 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+	define_general = { name = "António Agostinho Neto" personality = energetic background = no_background }
+  }
+}
+
 

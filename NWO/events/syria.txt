@@ -63,4 +63,44 @@ country_event = {
 	}
 		
 }
+country_event = {
+  id = 8014720
+  title = EVT_8014720_NAME
+  desc = EVT_8014720_DESC
+  picture = "nwo2_baath_party_coup"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYR
+    year = 1963 NOT = { year = 1964 }
+    government = democracy
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014720_A
+	government = presidential_dictatorship
+  }
+}
+country_event = {
+  id = 8014725
+  title = EVT_8014725_NAME
+  desc = EVT_8014725_DESC
+  picture = "nwo2_hafez_al_assad"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYR
+    year = 1970 NOT = { year = 1971 }
+	government = presidential_dictatorship
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8014725_A
+	government = nationalist_dictatorship
+  }
+}
 

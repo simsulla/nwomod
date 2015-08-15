@@ -18,3 +18,391 @@ country_event = {
 	define_general = { name = "Jovan Nikolic" personality = "energetic" background = "no_background" }
   }
 }
+country_event = {
+  id = 8022708
+  title = EVT_8022708_NAME
+  desc = EVT_8022708_DESC
+  picture = "nwo2_tito_tomb"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1980 NOT = { year = 1981 }
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_DEATH
+	prestige = 10
+  }
+}
+country_event = {
+  id = 8022724
+  title = EVT_8022724_NAME
+  desc = EVT_8022724_DESC
+  picture = "nwo2_josip_broz_tito"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1948 NOT = { year = 1951 }
+    NOT = { YUG = { vassal_of = RUS }
+    }
+    exists = RUS
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8022724_A
+	any_pop = { militancy = 0.3 }
+	relation = { who = RUS value = -50 } 
+	add_country_modifier = { name = comecon_excluded duration = -1 }
+	RUS = { country_event =  { id = 8022726 days = 30 } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8022724_B
+	any_pop = { militancy = 1.0 }
+	relation = { who = RUS value = 100 } 
+	RUS = { country_event = 8022725 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8022725
+  title = EVT_8022725_NAME
+  desc = EVT_8022725_DESC
+  picture = "nwo2_tito_stalin"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8022725_A
+	create_vassal = YUG 
+	create_alliance = YUG 
+	YUG = { remove_country_modifier = comecon_excluded }
+  }
+}
+country_event = {
+  id = 8022726
+  title = EVT_8022726_NAME
+  desc = EVT_8022726_DESC
+  picture = "nwo2_josip_broz_tito"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8022726_A
+	any_pop = { militancy = 0.3 }
+	relation = { who = YUG value = -100 } 
+	set_global_flag = tito_stalin_split 
+	set_global_flag = lower_soviet_bloc_coherence 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8022726_B
+	any_pop = { militancy = 1.5 }
+	relation = { who = YUG value = 50 } 
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8022726_C
+	any_pop = { militancy = 2.5 }
+	badboy = 10 
+	YUG = { country_event = 8022727  }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8022727
+  title = EVT_8022727_NAME
+  desc = EVT_8022727_DESC
+  picture = "nwo2_tito_at_war"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8022727_A
+	any_pop = { militancy = -0.5 }
+	RUS = { country_event = 8022728 }
+  }
+}
+country_event = {
+  id = 8022728
+  title = EVT_8022728_NAME
+  desc = EVT_8022728_DESC
+  picture = "nwo2_tito_at_war"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8022728_A
+	any_pop = { militancy = -0.2 }
+	war = { target = YUG  attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo } }
+	set_country_flag = military_intervention_aginst_tito
+  }
+}
+country_event = {
+  id = 8022731
+  title = EVT_8022731_NAME
+  desc = EVT_8022731_DESC
+  picture = "nwo2_tito_at_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+	year = 1948 NOT = { year = 1952 }
+	is_our_vassal = YUG
+    has_global_flag = cold_war
+	war = no
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8022731_A
+	any_pop = { militancy = -0.7 }
+	set_global_flag = raise_soviet_bloc_coherence 
+	country_event = 8225000  # dissolution_of_the_eastern_bloc.txt
+	YUG = { country_event = 8022734 } 
+  }
+}
+country_event = {
+  id = 8022732
+  title = EVT_8022732_NAME
+  desc = EVT_8022732_DESC
+  picture = "nwo2_tito_at_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1949 NOT = { year = 1952 }
+	NOT = { vassal_of = RUS }
+	war = no
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8022732_A
+	any_pop = { militancy = -0.7 }
+	set_global_flag = lower_soviet_bloc_coherence 
+  }
+}
+country_event = {
+  id = 8022733
+  title = EVT_8022733_NAME
+  desc = EVT_8022733_DESC
+  picture = "nwo2_tito_at_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1951 NOT = { year = 1952 }
+    exists = YUG
+	war = no
+    NOT = { is_our_vassal = YUG }
+	has_country_flag = military_intervention_aginst_tito 
+	has_recently_lost_war = yes
+  }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = EVT_8022733_A
+	any_pop = { militancy = 0.7 }
+	release = HUN 
+	release = BUL 
+	release = ROM 
+	release = CZH 
+	release = POL 
+	release = AUS 
+	release = GRE 
+	set_global_flag = lower_soviet_bloc_coherence 
+	country_event = 8225001 
+  }
+}
+country_event = {
+  id = 8022734
+  title = EVT_8022734_NAME
+  desc = EVT_8022734_DESC
+  picture = "nwo2_trial_of_tito"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8022734_A
+	any_pop = { militancy = 0.5 }
+  }
+}
+country_event = {
+  id = 8022729
+  title = EVT_8022729_NAME
+  desc = EVT_8022729_DESC
+  picture = "nwo2_tito_statue"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1950 NOT = { year = 1958 }
+    has_global_flag = cold_war
+	is_vassal = no
+	war = no
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8022729_A
+	any_pop = { militancy = -0.5 }
+	relation = { who = USA value = 50 } 
+	relation = { who = FRA value = 50 } 
+	relation = { who = ENG value = 50 } 
+	relation = { who = GER value = 50 } 
+	relation = { who = RUS value = -100 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8022729_B
+	relation = { who = RUS value = 50 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8022730
+  title = EVT_8022730_NAME
+  desc = EVT_8022730_DESC
+  picture = "nwo2_non_aligned_movement"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1961 NOT = { year = 1963 }
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 260 }
+
+  option = {
+    name = EVT_8022730_A
+	any_pop = { militancy = -0.5 }
+	relation = { who = HND value = 100 } 
+	relation = { who = EGY value = 100 } 
+	relation = { who = IDO value = 100 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8022730_B
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.15 } } }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8022740
+  title = EVT_8022740_NAME
+  desc = EVT_8022740_DESC
+  picture = "nwo2_tito_statue"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1974 NOT = { year = 1980 }
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8022740_A
+	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.1 } } }
+	any_pop = { militancy = 0.5 }
+	release_vassal = SLO
+	release_vassal = CRO
+	release_vassal = BOS
+	release_vassal = MON
+	release_vassal = MAC
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8022740_B
+	any_pop = { militancy = 5.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8022741
+  title = EVT_8022741_NAME
+  desc = EVT_8022741_DESC
+  picture = "nwo2_yugoslav_wars"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1990 NOT = { year = 1991 }
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8022741_A
+	change_tag = SER
+	any_pop = { limit = { NOT = { culture = serb } } militancy = 5.0 }
+  }
+
+}
+country_event = {
+  id = 8022742
+  title = EVT_8022742_NAME
+  desc = EVT_8022742_DESC
+  picture = "nwo2_yugoslav_wars"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+	year = 1991 NOT = { year = 1992 }
+    has_global_flag = autumn_of_nations
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8022742_A
+	any_pop = { militancy = 0.5 }
+	release = CRO release = SLV 
+	war = { target = CRO attacker_goal = { casus_belli = liberate_country country = SRK } defender_goal = { casus_belli = status_quo } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8022742_B
+	any_pop = { militancy = 3.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8224001
+  title = EVT_8224001_NAME
+  desc = EVT_8224001_DESC
+  picture = "nwo2_yugoslav_lands"
+  fire_only_once = yes
+
+  trigger = {
+    tag = YUG
+    year = 1943 NOT = { year = 1963 }
+	NOT = { government = proletarian_dictatorship }
+    NOT = { has_country_flag  = cores_returned }
+  }
+
+  mean_time_to_happen = { days = 3 }
+
+  option = {
+    name = EVT_8224001_A
+	set_country_flag = cores_returned 
+	any_owned = { add_core =  THIS }
+  }
+}

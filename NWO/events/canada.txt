@@ -41,3 +41,206 @@ country_event = {
 	}
 
 }
+country_event = {
+  id = 8002622
+  title = EVT_8002622_NAME
+  desc = EVT_8002622_DESC
+  picture = "nwo2_newfoundland"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8002622_A
+	prestige = 10
+  }
+}
+country_event = {
+  id = 8002623
+  title = EVT_8002623_NAME
+  desc = EVT_8002623_DESC
+  picture = "nwo2_canadian_oil_fields"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CAN
+    year = 1947 NOT = { year = 1963 }
+    owns = 22
+	owns = 26
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8002623_A
+	22 = { trade_goods = petroleum }
+	26 = { trade_goods = petroleum }
+  }
+}
+country_event = {
+  id = 8002624
+  title = EVT_8002624_NAME
+  desc = EVT_8002624_DESC
+  picture = "nwo2_canadian_red_scare"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CAN
+    year = 1945 NOT = { year = 1963 }
+    NOT = {
+    }
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 160 }
+
+  option = {
+    name = EVT_8002624_A
+	any_pop = { militancy = -0.2 }
+  }
+}
+country_event = {
+  id = 8002625
+  title = EVT_8002625_NAME
+  desc = EVT_8002625_DESC
+  picture = "nwo2_avro_arrow"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CAN
+	year = 1958 NOT = { year = 1963 }
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 320 }
+
+  option = {
+    name = EVT_8002625_A
+	any_pop = { militancy = 0.5 }
+  }
+
+  option = {
+    name = EVT_8002625_B
+	money = -1000 
+  }
+
+  option = {
+    name = EVT_8002625_C
+	money = 1000 
+	any_pop = { militancy = 0.3 }
+  }
+}
+country_event = {
+  id = 8002626
+  title = EVT_8002626_NAME
+  desc = EVT_8002626_DESC
+  picture = "nwo2_maple_leaf_flag"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CAN
+    year = 1965 NOT = { year = 1966 }
+	government = hms_government
+  }
+  immediate = { set_global_flag = event_fired_8002626 }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = EVT_8002626_A
+	ai_chance = { factor = 100 }
+	government = democracy
+  }
+
+  option = {
+    name = EVT_8002626_B
+	relation = { who = ENG value = 5 } 
+  }
+}
+country_event = {
+  id = 8002627
+  title = EVT_8002627_NAME
+  desc = EVT_8002627_DESC
+  picture = "nwo2_montreal"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CAN
+    year = 1960 NOT = { year = 1967 }
+    war = no
+    any_owned_province = { province_id = 2534 }  
+  }
+
+  mean_time_to_happen = { days = 1600 }
+
+  option = {
+    name = EVT_8002627_A
+  }
+}
+country_event = {
+  id = 8002628
+  title = EVT_8002628_NAME
+  desc = EVT_8002628_DESC
+  picture = "nwo2_quebec_october_crisis"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CAN
+    year = 1970 NOT = { year = 1975 }
+    NOT = { exists = QUE }
+    war = no
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8002628_A
+	any_pop = { militancy = 0.5 }
+	country_event =  { id = 8002629 days = 3000 }  # 1979
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002628_B
+	any_pop = { militancy = 2.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002629
+  title = EVT_8002629_NAME
+  desc = EVT_8002629_DESC
+  picture = "nwo2_quebec_independence"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8002629_A
+	any_pop = { militancy = -0.2 }
+	country_event = { id = 8002630 days = 350 }  # 1980
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002629_B
+	any_pop = { militancy = 1.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002630
+  title = EVT_8002630_NAME
+  desc = EVT_8002630_DESC
+  picture = "nwo2_quebec_independence"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8002630_A
+	any_pop = { militancy = -1.0 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002630_B
+	release_vassal = QUE 
+	create_alliance = QUE 
+	ai_chance = { factor = 0 }
+  }
+}

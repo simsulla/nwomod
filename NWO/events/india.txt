@@ -788,3 +788,24 @@ country_event = {
 	relation = { who = CHI value = -25 } 
   }
 }
+country_event = {
+  id = 8299011
+  title = EVT_GOVTCHANGE_NAME
+  desc = EVT_GOVTCHANGE_DESC
+  picture = "nwo2_govt_change"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1959
+  }
+  immediate = { set_global_flag = event_fired_8299011 }
+
+  mean_time_to_happen = { days = 7 }
+
+  option = {
+    name = OK
+	define_general = { name = "Rajendra Prasad" personality = energetic background = no_background }
+  }
+}
+

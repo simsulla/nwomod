@@ -44,5 +44,257 @@ country_event = {
 	}
 	
 }
+country_event = {
+  id = 8023107
+  title = EVT_8023107_NAME
+  desc = EVT_8023107_DESC
+  picture = "nwo2_prague_spring"
+  fire_only_once = yes
 
-	
+  trigger = {
+    tag = CZH
+    year = 1968 NOT = { year = 1969 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+	vassal_of = RUS
+  }
+
+  mean_time_to_happen = { days = 30 }
+
+  option = {
+    name = EVT_8023107_A
+	any_pop = { militancy = 0.5 }
+	relation = { who = RUS value = -50 } 
+	relation = { who = USA value = 50 } 
+	relation = { who = ENG value = 50 } 
+	relation = { who = FRA value = 50 } 
+	set_global_flag = lower_soviet_bloc_coherence 
+	RUS = { country_event = 8023121 } 
+	ai_chance = { factor  = 50 }
+  }
+
+  option = {
+    name = EVT_8023107_B
+	any_pop = { militancy = 3.0 }
+	set_global_flag = event_fired_8023107
+	ai_chance = { factor  = 50 }
+  }
+}
+country_event = {
+  id = 8023108
+  title = EVT_8023108_NAME
+  desc = EVT_8023108_DESC
+  picture = "nwo2_prague_spring_defeat"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8023108_A
+	prestige = -10
+  }
+}
+country_event = {
+  id = 8023113
+  title = EVT_8023107_NAME
+  desc = EVT_8023107_DESC
+  picture = "nwo2_jan_masaryk"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CZH
+    year = 1968 NOT = { year = 1969 }
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 10 }
+
+  option = {
+    name = EVT_DEATH
+	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.2 } } }
+  }
+}
+country_event = {
+  id = 8023114
+  title = EVT_8023114_NAME
+  desc = EVT_8023114_DESC
+  picture = "nwo2_rudolf_slansky"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CZH
+    year = 1948 NOT = { year = 1952 }
+    has_global_flag = cold_war
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8023114_A
+	any_pop = { militancy = 0.3 }
+  }
+
+  option = {
+    name = EVT_8023114_B
+	relation = { who = RUS value = -100 } 
+  }
+}
+country_event = {
+  id = 8023120
+  title = EVT_8023120_NAME
+  desc = EVT_8023120_DESC
+  picture = "nwo2_prague_spring"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CZH
+    year = 1968 NOT = { year = 1970 }
+    has_global_flag = event_fired_8023107
+    has_global_flag = cold_war
+    war = no
+  }
+
+  mean_time_to_happen = { days = 360 }
+
+  option = {
+    name = EVT_8023120_A
+	any_pop = { militancy = 0.5 }
+	relation = { who = RUS value = -50 } 
+	relation = { who = USA value = 50 } 
+	relation = { who = ENG value = 50 } 
+	relation = { who = FRA value = 50 } 
+	RUS = { country_event = 8023121 }
+	ai_chance = { factor  = 100 }
+  }
+
+  option = {
+    name = EVT_8023120_B
+	any_pop = { militancy = 1.5 }
+	ai_chance = { factor  = 0 }
+  }
+}
+country_event = {
+  id = 8023121
+  title = EVT_8023121_NAME
+  desc = EVT_8023121_DESC
+  picture = "nwo2_prague_spring"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8023121_A
+	any_pop = { militancy = -0.2 }
+	set_country_flag = end_the_spring
+	war = { target = CZH attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = become_independent } }
+	ai_chance = { factor  = 100 }
+  }
+
+  option = {
+    name = EVT_8023121_B
+	any_pop = { militancy = 1.0 }
+	release = CZH
+	CZH = { country_event = 8023122 }
+	set_global_flag = lower_soviet_bloc_coherence 
+	ai_chance = { factor  = 0 }
+  }
+}
+country_event = {
+  id = 8023122 
+  title = EVT_8023122_NAME
+  desc = EVT_8023122_DESC
+  picture = "nwo2_prague_spring"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8023122_A
+	overlord = { release_vassal = THIS } 
+	RUS = { end_military_access = THIS } 
+	country_event = 8023123
+  }
+}
+country_event = {
+  id = 8023123
+  title = EVT_8023123_NAME
+  desc = EVT_8023123_DESC
+  picture = "nwo2_prague_spring_victory"
+  fire_only_once = yes
+  
+  trigger = {
+    tag = RUS
+   	has_country_flag = end_the_spring
+	war = no
+	NOT = { is_our_vassal = CZH }
+  }
+ 
+ option = {
+    name = EVT_8023123_A
+	relation = { who = RUS value = -100 } 
+	any_pop = { militancy = -2.0 }
+	government = democracy
+  }
+}
+country_event = {
+  id = 8023124
+  title = EVT_8023124_NAME
+  desc = EVT_8023124_DESC
+  picture = "nwo2_prague_spring_defeat"
+  fire_only_once = yes
+  
+  trigger = {
+    tag = RUS
+   	has_country_flag = end_the_spring
+	war = no
+	is_our_vassal = CZH
+  }
+
+  option = {
+    name = EVT_8023124_A
+	set_global_flag = raise_soviet_bloc_coherence 
+	CZH = { country_event = 8023125 }
+  }
+}
+country_event = {
+  id = 8023125
+  title = EVT_8023125_NAME
+  desc = EVT_8023125_DESC
+  picture = "nwo2_prague_spring_defeat"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8023125_A
+	any_pop = { militancy = 1.0 }
+	relation = { who = RUS value = 50 } 
+	RUS = { country_event = 8023108 }
+  }
+}
+country_event = {
+  id = 8023130
+  title = EVT_8023130_NAME
+  desc = EVT_8023130_DESC
+  picture = "nwo2_velvet_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CZH
+    year = 1989 NOT = { year = 1990 }
+    has_global_flag = autumn_of_nations
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { days = 14 }
+
+  option = {
+    name = EVT_8023130_A
+	any_pop = { militancy = -1.0 }
+	government = democracy
+	ai_chance = { factor  = 100 }
+  }
+
+  option = {
+    name = EVT_8023130_B
+	any_pop = { militancy = 2.5 }
+	overlord = { release_vassal = THIS } 
+	ai_chance = { factor  = 0 }
+  }
+}
+
