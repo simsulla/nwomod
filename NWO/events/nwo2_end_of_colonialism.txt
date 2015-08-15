@@ -1,48 +1,20 @@
-# TODO add calling these events
+# variable end_of_colonialism desidec where we are in the decolonlialization process
+# 1- = asia
+# 3- = north africa
+# 4- = africa (exept: south africa)
+# 5- = aouth africa
+# 6- = all
 country_event = {
   id = 8212000
   title = EVT_8212000_NAME
   desc = EVT_8212000_DESC
   picture = "nwo2_colonialism"
-  
-  trigger = { 
-	OR = {
-		AND = { exists = HND NOT = { has_global_flag = end_colonialism_india } }
-		AND = { NET = { NOT = { owns = 1413 } } NOT = { has_global_flag = end_colonialism_indonesia } }
-		AND = { exists = ALG NOT = { has_global_flag = end_northafrica_indonesia } }
-	}
-	has_global_flag = not_disabled # TODO enable
-	ai = no
-  }
-
-  mean_time_to_happen = { months = 12 }
-  
-  option = {
-    name = EVT_8212000_A
-    change_variable = {
-		which = end_of_colonialism
-		value = 1
-	}
-	random_country = { limit = { tag = THIS exists = HND } set_global_flag = end_colonialism_india }
-	random_country = { limit = { NET = { NOT = { owns = 1413 } } } set_global_flag = end_colonialism_indonesia }
-	random_country = { limit = { tag = THIS exists = ALG } set_global_flag = end_northafrica_indonesia }
-  }
-
-}
-country_event = {
-  id = 8212001
-  title = EVT_8212001_NAME
-  desc = EVT_8212001_DESC
-  picture = "nwo2_colonialism"
+  fire_only_once = yes
 
   trigger = { 
-	has_global_flag = not_disabled  # TODO enable
-#	OR = {
-		#AND = { 
-			has_global_flag = federated_indonesia NOT = { has_global_flag = colonialism_indonesia } 
-		#}
-#	}
-	ai = no
+	has_global_flag = federated_indonesia 
+	NOT = { has_global_flag = colonialism_indonesia } 
+	tag = NET
   }
 
   mean_time_to_happen = { months = 12 }
@@ -57,6 +29,38 @@ country_event = {
 	
   }
 }
+country_event = {
+  id = 8212001
+  title = EVT_8212001_NAME
+  desc = EVT_8212001_DESC
+  picture = "nwo2_colonialism"
+  
+  trigger = { 
+	OR = {
+		AND = { tag = ENG exists = HND NOT = { has_global_flag = end_colonialism_india } year = 1950 }
+		AND = { tag = NET NET = { NOT = { owns = 1413 } } NOT = { has_global_flag = end_colonialism_indonesia } year = 1952 }#Djakarta
+		AND = { tag = FRA exists = ALG ALG = { NOT= { government =nationalist_dictatorship } } NOT = { has_global_flag = end_colonialism_northafrica }  year = 1958 }
+		AND = { tag = ENG exists = GHA NOT = { has_global_flag = end_colonialism_africa }  year = 1960 }
+		AND = { tag = POR exists = MOZ NOT = { has_global_flag = end_colonialism_southafrica }  year = 1972 }
+	}
+  }
+
+  mean_time_to_happen = { months = 12 }
+  
+  option = {
+    name = EVT_8212001_A
+    change_variable = {
+		which = end_of_colonialism
+		value = 1
+	}
+	random_country = { limit = { tag = THIS exists = HND } set_global_flag = end_colonialism_india }
+	random_country = { limit = { NET = { NOT = { owns = 1413 } } } set_global_flag = end_colonialism_indonesia }
+	random_country = { limit = { tag = THIS exists = ALG } set_global_flag = end_colonialism_northafrica }
+	random_country = { limit = { tag = THIS exists = GHA } set_global_flag = end_colonialism_africa }
+	random_country = { limit = { tag = THIS exists = MOZ } set_global_flag = end_colonialism_southafrica }
+  }
+
+}
 
 province_event = {
  id = 8212003
@@ -67,7 +71,6 @@ province_event = {
   trigger = {
 	is_overseas = yes
 	is_colonial = yes
-	#continent = africa
 	OR = { 
 		has_province_modifier = colonial_unrest 
 		is_coastal = yes
@@ -109,33 +112,31 @@ province_event = {
   option = {
     name = EVT_COLONIAL_PROMISE_BROKEN_A
 	any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } militancy = 1.0 }
-	set_province_flag = colonial_unrest
+	add_province_modifier = { name = colonial_unrest duration = -1 }
 	remove_province_modifier = colonial_promise 
   }
 }
 country_event = {
   id = 8212005
-  title = AI_EVENT
-  desc = AI_EVENT
+  title = EVT_DEMAND_INDEPENDENCE_NAME
+  desc = EVT_INDEPENDENCE_DESC
   picture = "nwo2_colonialism"
 
   trigger = {
-	exists = no 
-	year = 1950 # 1960 - 10
-	any_core = { OR = { has_province_modifier  = colonial_promise has_province_modifier = colonial_promise } }
+	exists = no
+	OR = { 
+		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes continent = asia } check_variable = { which = end_of_colonialism value = 1 } } 
+		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes OR = { is_core = MOR is_core = ALG is_core = TUN is_core = TRI is_core = EGY is_core = SUD } } check_variable = { which = end_of_colonialism value = 3 } }
+		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes is_overseas = yes continent = africa NOT = { owned_by = SAF } NOT = { OR = { is_core = MOZ is_core = ZIM is_core = ZAM is_core = MLW is_core = ANG } } } check_variable = { which = end_of_colonialism value = 4 } }
+		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes continent = africa } check_variable = { which = end_of_colonialism value = 5 } } 
+	}
   }
   
-  mean_time_to_happen = { 
-	months = 240 # 20 years 
-	modifier = { factor = 0.5 check_variable = { which = end_of_colonialism value = 6 } }
-	modifier = { factor = 0.5 check_variable = { which = end_of_colonialism value = 5 } }
-	modifier = { factor = 0.5 check_variable = { which = end_of_colonialism value = 4 } }
-	modifier = { factor = 0.5 check_variable = { which = end_of_colonialism value = 3 } }
-  }
+  mean_time_to_happen = { months = 12 }
 
   option = {
-    name = AI_EVENT
-	random_country = {  limit = { any_owned_province =  {is_core = THIS } } country_event = 8212006 }
+    name = EVT_DEMAND_INDEPENDENCE_A
+	random_country = {  limit = { any_owned_province = {is_core = THIS } } country_event = 8212006 }
   }
 }
 country_event = {
@@ -191,16 +192,12 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-	OR = { 
-		average_militancy = 9.0
-		has_country_flag = full_independance
-	}
+	has_country_flag = full_independance
 	NOT = { ruling_party_ideology = conservative }
     is_vassal = yes
-	year = 1960 # TODO this is way two crude
   }
 
-  mean_time_to_happen = { days = 350 modifier = { factor = 5 NOT = { average_militancy = 9.0 has_country_flag = full_independance } } }
+  mean_time_to_happen = { days = 350 }
 
   option = {
     name = EVT_FULLINDEPENDENCE_A
