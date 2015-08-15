@@ -2,13 +2,13 @@
 # 1- = asia
 # 3- = north africa
 # 4- = africa (exept: south africa)
-# 5- = aouth africa
+# 5- = south africa and oceania
 # 6- = all
 country_event = {
   id = 8212000
   title = EVT_8212000_NAME
   desc = EVT_8212000_DESC
-  picture = "nwo2_colonialism"
+  picture = "nwo2_federated_indonesia"
   fire_only_once = yes
 
   trigger = { 
@@ -29,7 +29,7 @@ country_event = {
 	
   }
 }
-country_event = {
+country_event = { # Our control over the Empire weakens
   id = 8212001
   title = EVT_8212001_NAME
   desc = EVT_8212001_DESC
@@ -62,11 +62,11 @@ country_event = {
 
 }
 
-province_event = {
+province_event = { # Colonial unrest in $PROVINCENAME$
  id = 8212003
   title = EVT_COLONIALUNREST_NAME
   desc = EVT_COLONIALUNREST_DESC
-  picture = "nwo2_colonialism"
+  picture = "colonial_unrest"
 
   trigger = {
 	is_overseas = yes
@@ -96,11 +96,11 @@ province_event = {
   }
 }
 
-province_event = {
+province_event = { # Colonials in $PROVINCENAME$ accuses us of breaking promises
  id = 8212004
-  title = EVT_COLONIAL_PROMISE_BROKEN_NAME
+  title = EVT_COLONIAL_PROMISE_BROKEN_NAME 
   desc = EVT_COLONIAL_PROMISE_BROKEN_DESC
-  picture = "nwo2_colonialism"
+  picture = "colonial_unrest"
 
   trigger = {
 	has_province_modifier = colonial_promise 
@@ -120,7 +120,7 @@ country_event = {
   id = 8212005
   title = EVT_DEMAND_INDEPENDENCE_NAME
   desc = EVT_INDEPENDENCE_DESC
-  picture = "nwo2_colonialism"
+  picture = "colonialism_end"
 
   trigger = {
 	exists = no
@@ -128,7 +128,7 @@ country_event = {
 		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes continent = asia } check_variable = { which = end_of_colonialism value = 1 } } 
 		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes OR = { is_core = MOR is_core = ALG is_core = TUN is_core = TRI is_core = EGY is_core = SUD } } check_variable = { which = end_of_colonialism value = 3 } }
 		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes is_overseas = yes continent = africa NOT = { owned_by = SAF } NOT = { OR = { is_core = MOZ is_core = ZIM is_core = ZAM is_core = MLW is_core = ANG } } } check_variable = { which = end_of_colonialism value = 4 } }
-		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes continent = africa } check_variable = { which = end_of_colonialism value = 5 } } 
+		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes OR = { continent = oceania continent = africa } } check_variable = { which = end_of_colonialism value = 5 } } 
 	}
   }
   
@@ -143,7 +143,7 @@ country_event = {
   id = 8212006
   title = EVT_INDEPENDENCE_NAME
   desc = EVT_INDEPENDENCE_DESC
-  picture = "nwo2_colonialism"
+  picture = "colonialism_self_rule"
   is_triggered_only = yes
 
   option = {
@@ -168,7 +168,7 @@ country_event = {
   id = 8212007
   title = EVT_MILACCESS_NAME
   desc = EVT_MILACCESS_DESC
-  picture = "nwo2_colonialism"
+  picture = "colonialism_self_rule"
   is_triggered_only = yes
 
   option = {
@@ -188,7 +188,7 @@ country_event = {
   id = 8212008
   title = EVT_FULLINDEPENDENCE_NAME
   desc = EVT_FULLINDEPENDENCE_DESC
-  picture = "nwo2_colonialism"
+  picture = "colonialism_end"
   fire_only_once = yes
 
   trigger = {
@@ -209,7 +209,7 @@ country_event = {
   id = 8212009
   title = EVT_FULLINDEPENDENCE_OVERLOARD_NAME
   desc = EVT_FULLINDEPENDENCE_DESC
-  picture = "nwo2_colonialism"
+  picture = "colonialism_end"
   is_triggered_only = yes
 
   option = {
