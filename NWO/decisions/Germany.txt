@@ -1,18 +1,417 @@
 political_decisions = {
-	### MAM REMOVED ###
-	#ems_dispatch = {}
-	#construct_germania_werft = {}
-	#support_ruhr_industrialism = {}	
-	#die_wacht_am_rhein = {}
-	#niederwald_denkmal = {}
-	#schwabing_circles = {}
-	#support_biesterfelds = {}
-	#support_schaumburgs = {}
-	#das_zivilgesetzbuch = {}
-	#kaiser_wilhelms_land = {}
-	#the_heligoland_question = {}
-	#construct_the_walhalla = {}
-	#introduce_the_presbyteries = {}
-	#von_moltkes_staff_reforms = {}
-	#the_ruhr_boom = {}
+
+	denazification = {
+		picture = "denazification"
+		potential = {
+			OR = { 
+				AND = { tag = USA 564 = { owned_by = USA } }
+				AND = { tag = ENG 369 = { owned_by = ENG } }
+				AND = { tag = RUS 551 = { owned_by = RUS } }
+			}
+			NOT = { has_country_flag = denazification }
+		}
+
+		allow = {
+			OR = { 
+				AND = { tag = USA 564 = { owned_by = USA } }
+				AND = { tag = ENG 369 = { owned_by = ENG } }
+				AND = { tag = RUS 551 = { owned_by = RUS } }
+			}
+			NOT = { has_country_flag = denazification }
+			OR = {
+				AND = {
+					year = 1947
+					ai = yes
+				}
+				AND = {
+					marshall_plan = 1
+					#public_switched_telephone_network = 1
+					ai = no
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = denazification
+			any_owned = { 
+				limit = { is_core = GER }
+				add_province_modifier = { name = denazification duration = 700 }
+			}
+			country_event = 8204080
+		}
+	}
+	
+	monnet_plan = {
+		picture = "monnet_plan"
+		potential = {
+			tag = FRA 574 = { owned_by = FRA } 
+			NOT = { has_country_flag = monnet_plan }
+		}
+
+		allow = {
+			tag = FRA 574 = { owned_by = FRA }
+			NOT = { has_country_flag = monnet_plan }
+			OR = {
+				AND = {
+					year = 1947
+					ai = yes
+				}
+				AND = {
+					marshall_plan = 1
+					#public_switched_telephone_network = 1
+					ai = no
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = monnet_plan
+			any_owned = { 
+				limit = { owned_by = GER NOT = { province_id = 573 } }
+				add_province_modifier = { name = colonial_exploitation duration = 700 }
+			}
+		}
+	}
+	
+	saar_protectorate = {
+		picture = "saar_protectorate"
+		potential = {
+			has_country_flag = monnet_plan
+			tag = FRA 573 = { owned_by = FRA }
+			NOT = { has_country_flag = saar_protectorate }
+		}
+
+		allow = {
+			tag = FRA 573 = { owned_by = FRA }
+			NOT = { has_country_flag = saar_protectorate }
+			OR = {
+				AND = {
+					year = 1947
+					ai = yes
+				}
+				AND = {
+					NOT = { relation = { who = USA value = -50 } }
+					ai = no
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = saar_protectorate
+			release_vassal = SAL
+			country_event = 8204036
+		}
+	}
+	
+	establish_west_germany = {
+		picture = "establish_west_germany"
+		potential = {
+			GER = { exists = no }
+			OR = { 
+				AND = { 
+					has_country_flag = denazification
+					tag = ENG
+					year = 1952
+					369 = { owned_by = ENG }
+				}
+				AND = { 
+					has_country_flag = denazification
+					tag = USA 
+					564 = { owned_by = USA NOT = { has_province_modifier = denazification } } 
+				}
+			}
+			NOT = { has_country_flag = establish_west_germany }
+		}
+
+		allow = {
+			NOT = { has_country_flag = establish_west_germany }
+			OR = { 
+				AND = { 
+					tag = ENG
+					year = 1952
+					369 = { owned_by = ENG }
+				}
+				AND = { 
+					tag = USA 
+					564 = { owned_by = USA NOT = { has_province_modifier = denazification } } 
+				}
+			}
+			OR = {
+				AND = {
+					year = 1949
+					ai = yes
+				}
+				AND = {
+					NOT = { relation = { who = FRA value = 0 } }
+					ai = no
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = establish_west_germany
+			release = GER
+			diplomatic_influence = { who = GER value = 100 }
+			prestige = 5
+			relation = { who = GER value = 100 }
+		}
+	}
+	
+	establish_east_germany = {
+		picture = "establish_east_germany"
+		potential = {
+			DDR = { exists = no }
+			has_country_flag = denazification
+			tag = RUS
+			OR = { 
+				year = 1952
+				GER = { exists = yes }
+			}
+			NOT = { has_country_flag = establish_east_germany }
+		}
+
+		allow = {
+			DDR = { exists = no }
+			has_country_flag = denazification
+			tag = RUS
+			OR = { 
+				year = 1952
+				GER = { exists = yes }
+			}
+			NOT = { has_country_flag = establish_east_germany }
+			OR = {
+				AND = {
+					year = 1952
+					ai = yes
+				}
+				AND = {
+					NOT = { relation = { who = USA value = 0 } }
+					ai = no
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = establish_east_germany
+			any_owned = { limit = { is_core = GER } add_core = DDR }
+			release = DDR
+			diplomatic_influence = { who = DDR value = 200 }
+		}
+	}
+
+	end_occupation_of_germany = {
+		picture = "establish_west_germany"
+		potential = {
+			GER = { exists = yes }
+			OR = { 
+				AND = { tag = USA 564 = { owned_by = USA } }
+				AND = { tag = ENG 369 = { owned_by = ENG } }
+			}
+			NOT = { has_country_flag = end_occupation_of_germany }
+		}
+
+		allow = {
+			OR = { 
+				AND = { tag = USA 564 = { owned_by = USA } GER = { has_country_flag = end_of_sonderweg } }
+				AND = { tag = ENG 369 = { owned_by = ENG } GER = { has_country_flag = end_of_sonderweg } }
+			}
+			NOT = { has_country_flag = end_occupation_of_germany }
+			GER = { exists = yes }
+		}
+
+		effect = {
+			set_country_flag = end_occupation_of_germany
+			release = GER
+			diplomatic_influence = { who = GER value = 100 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	end_of_sonderweg = {
+		picture = "end_of_sonderweg"
+		potential = {
+			tag = GER
+			exists = yes
+			NOT = { has_country_flag = end_of_sonderweg }
+		}
+
+		allow = {
+			tag = GER
+			OR = {
+				AND = {
+					year = 1949
+					ai = yes
+				}
+				AND = {
+					relation = { who = USA value = 100 }
+					relation = { who = ENG value = 100 }
+					ai = no
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = end_of_sonderweg
+			prestige = 20
+			all_core = {
+				limit = { owned_by = RUS }
+				remove_core = GER
+			}
+		}
+	}
+
+	accept_ruhr_area = {
+		picture = "ruhr_area"
+		potential = {
+			tag = GER
+			578 = { owned_by = GER } # Dusseldorf
+			579 = { owned_by = FRA } # East of Rhine
+			NOT = { has_country_flag = accept_ruhr_area }
+		}
+
+		allow = {
+			tag = GER
+			578 = { owned_by = GER } # Dusseldorf
+			579 = { owned_by = FRA } # East of Rhine
+			NOT = { has_country_flag = accept_ruhr_area }
+			OR = {
+				AND = {
+					year = 1949
+					ai = yes
+				}
+				AND = {
+					relation = { who = FRA value = 100 }
+					ai = no
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = accept_ruhr_area
+			prestige = -20
+			FRA = { diplomatic_influence = { who = GER value = 50 } }
+			relation = { who = FRA value = 100 }
+		}
+	}
+
+	ruhr_area = {
+		picture = "ruhr_area"
+		potential = {
+			tag = FRA
+			580 = { owned_by = GER } # Dortmund
+			578 = { owned_by = GER } # Dusseldorf
+			577 = { owned_by = GER } # Cleves
+			579 = { owned_by = FRA } # East of Rhine
+			NOT = { has_country_flag = ruhr_area }
+		}
+
+		allow = {
+			tag = FRA
+			580 = { owned_by = GER } # Dortmund
+			578 = { owned_by = GER } # Dusseldorf
+			577 = { owned_by = GER } # Cleves
+			579 = { owned_by = FRA } # East of Rhine
+			GER = { has_country_flag = accept_ruhr_area }
+			OR = {
+				AND = {
+					year = 1949
+					ai = yes
+				}
+				AND = {
+					relation = { who = GER value = 100 }
+					ai = no
+				}
+			}
+		}
+
+		effect = {
+			any_owned = {
+				limit = { is_core = GER NOT = { is_core = FRA } }
+				secede_province = GER
+			}
+			GER = {
+				country_event = 8204030
+				capital = 574 # Bonn
+				574 = { change_province_name = "Bonn" }
+			}
+			set_country_flag = ruhr_area
+			diplomatic_influence = { who = GER value = 200 }
+		}
+	}
+	
+	end_international_authority_over_ruhr = {
+		picture = "ruhr_area"
+		potential = {
+			tag = GER
+			GER = { has_country_flag = accept_ruhr_area }
+			580 = { owned_by = FRA } # Dortmund
+			578 = { owned_by = FRA } # Dusseldorf
+			577 = { owned_by = FRA } # Cleves
+			FRA = { has_country_flag = ruhr_area }
+		}
+
+		allow = {
+			tag = GER
+			any_core = { 
+				NOT = { has_province_modifier = blood_and_iron_mine } 
+				owned_by = IAR
+			}
+			OR = {
+				AND = {
+					year = 1951
+					ai = yes
+				}
+				relation = { who = FRA value = 150 }
+			}
+		}
+
+		effect = {
+			FRA = { country_event = 1005702 }
+			clr_country_flag = accept_ruhr_area
+		}
+	}
+	
+	form_germany = {
+		potential = {
+			is_culture_group = germanic
+			NOT = {
+				exists = GER
+				tag = ISR
+			}
+		}
+		
+		allow = {
+			is_greater_power = yes
+			prestige = 45
+			war = no
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 20
+			change_tag = GER
+			any_country = {
+				limit = {
+					is_culture_group = germanic
+					in_sphere = THIS
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+		
 }

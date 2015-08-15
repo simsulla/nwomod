@@ -1,0 +1,205 @@
+political_decisions = {
+
+	allow_form_korea = {
+		picture = "claim_greater_korea"
+		potential = {
+			OR = {
+				is_sphere_leader_of = SKO
+				is_sphere_leader_of = NKO
+			}
+			NOT = { exists = KOR }
+			NOT = { has_country_flag = allow_form_korea }
+		}
+		allow = {
+			war = no
+			NKO = {
+				OR = { is_vassal = no vassal_of = THIS }
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}		
+			SKO = {
+				OR = { is_vassal = no vassal_of = THIS }
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = allow_form_korea
+			prestige = 20
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_korea = {
+		picture = "claim_greater_korea"
+		potential = {
+			OR = {
+				tag = SKO
+				tag = NKO
+			}
+		}
+		allow = {
+			war = no
+			OR = { 
+				sphere_owner = { has_country_flag = allow_form_korea }
+				AND = { 
+					NKO = {
+						all_core = {
+							owner = {
+								OR = {
+									tag = THIS
+									in_sphere = THIS
+									vassal_of = THIS
+								}
+							}
+						}
+					}		
+					SKO = {
+						all_core = {
+							owner = {
+								OR = {
+									tag = THIS
+									in_sphere = THIS
+									vassal_of = THIS
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 20
+			any_country = {
+				limit = {
+					exists = KOR
+					OR = {
+						tag = NKO
+						tag = SKO
+					}
+				}
+				all_core = { add_core = KOR }
+				KOR = { inherit = THIS }
+			}
+			change_tag = KOR
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	claim_greater_korea = {
+			picture = "claim_greater_korea"
+			potential = {
+					tag = KOR
+					NOT = { has_country_flag = claim_greater_korea }
+			}
+
+			allow = {
+				   tag = KOR
+					part_of_sphere = no
+					has_unclaimed_cores = no
+					NOT = {	
+						has_country_flag = claim_greater_korea
+						ruling_party_ideology = socialist
+						ruling_party_ideology = progressive
+						ruling_party_ideology = liberal 
+					}
+					is_vassal = no
+					prestige = 45
+					OR = {
+							ruling_party_ideology = populist
+							jingoism = 24
+					}
+			}
+
+			effect = {
+					badboy = 12
+					set_country_flag = claim_greater_korea
+					1554 = { add_core = KOR }
+					1082 = { add_core = KOR }
+					1083 = { add_core = KOR }
+			}
+
+	}
+
+	abandon_claim_greater_korea = {
+			picture = "claim_greater_korea"
+			potential = {
+					tag = KOR
+					has_country_flag = claim_greater_korea
+					OR = {
+							government = democracy
+							government = hms_government
+					}
+			}
+
+			allow = {
+					war = no
+					is_vassal = no
+					has_country_flag = claim_greater_korea
+					OR = {
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal
+					}
+			}
+
+			effect = {
+					prestige = 10
+					any_pop = {
+							consciousness = 1
+					}
+					clr_country_flag = claim_greater_korea
+					all_core = { 
+							limit = { NOT = { owned_by = THIS } }
+							remove_core = KOR
+					}
+			}
+
+	}
+
+	korea_trusteeship = {
+			picture = "korea_trusteeship"
+			potential = {
+				OR = {
+					AND = { 1624 = { controlled_by = USA } tag = USA }
+					AND = { 1619 = { controlled_by = RUS } tag = RUS }
+				}
+				NOT = { has_country_flag = korea_trusteeship }
+				NOT = { has_country_flag = recognized_provincial_gov_korea }
+			}
+
+			allow = {
+				OR = {
+					tag = USA
+					tag = RUS
+				}
+				public_switched_telephone_network = 1
+				NOT = { has_country_flag = recognized_provincial_gov_korea }
+				war = no
+				year = 1947
+			}
+
+			effect = {
+				prestige = 5
+				set_country_flag = korea_trusteeship
+			}
+	}
+}

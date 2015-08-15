@@ -1,12 +1,34 @@
 political_decisions = {
-	### MAM REMOVED ###
-	#enact_liquor_prohibition = {}
-	#abolish_prohibition = {}
-	#institute_central_bank = {}
-	#enact_female_suffrage = {}
-	#westernize_nation = {}
-	#the_meiji_restoration = {}
-	#the_meiji_restoration2 = {}
+
+	five_year_plan = {
+			picture = "five_year_plan"
+			potential = {
+				OR = {
+					continent = asia
+					continent = africa
+					government = proletarian_dictatorship
+					tag = ARG
+				}
+				NOT = { tag = JAP }
+				NOT = { has_country_modifier = five_year_plan }
+			}
+
+			allow = {
+				OR = {
+					government = proletarian_dictatorship
+					AND = { NOT = { year = 1992 } ruling_party_ideology = socialist }
+				}
+				public_switched_telephone_network = 1
+				war = no
+			}
+
+			effect = {
+				prestige = 5
+				add_country_modifier = { name = five_year_plan duration = 1825 }
+			}
+			ai_will_do = { factor = 1 }
+	}
+
 	leave_soi = {
 		alert = no
 		potential = {
@@ -69,4 +91,48 @@ political_decisions = {
 			factor = 0
 		}
 	}
+	
+	form_union_nation = {
+		potential = {
+			culture_has_union_tag = yes
+			NOT = {
+				OR = {
+					cultural_union = { exists = yes }
+					is_culture_group = germanic
+					is_culture_group = arabic
+				}
+			}
+		}
+		
+		allow = {
+			prestige = 45
+			war = no
+			cultural_union = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 20
+			change_tag = culture
+			any_country = {
+				limit = {
+					is_culture_group = THIS
+					in_sphere = THIS
+				}
+				country_event = { id=11101 days=0 }
+			}
+			add_accepted_culture = union
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
 }
