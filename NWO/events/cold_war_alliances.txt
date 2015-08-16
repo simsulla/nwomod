@@ -113,7 +113,7 @@ country_event = {
 	relation = { who = USA value = 100 }
   }
 }
-country_event = {
+country_event = { # Maintaining security in Europe
   id = 8215010
   title = EVT_8215010_NAME
   desc = EVT_8215010_DESC
@@ -147,7 +147,7 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
-country_event = {
+country_event = { # Maintaining security in Europe
   id = 8215011
   title = EVT_8215011_NAME
   desc = EVT_8215011_DESC
@@ -166,8 +166,8 @@ country_event = {
   option = {
     name = EVT_8215011_A
 	any_country = { 
-		limit = { government = proletarian_dictatorship }
-		country_event = 8215015
+		limit = { war = no government = proletarian_dictatorship NOT = { tag = THIS } }
+		country_event = 8215013
 	}
 	ai_chance = { factor = 100 }
   }
@@ -217,29 +217,19 @@ country_event = {
   title = EVT_8215013_NAME
   desc = EVT_8215013_DESC
   picture = "nwo2_eastern_allies"
-
-  trigger = {
-    capital_scope = { continent = europe  }
-	year = 1946 NOT = { year = 1949 }
-	has_global_flag = ww3
-    war_with = USA
-	NOT = { has_country_flag = event_8215013 }
-	war = no
-  }
-
-  mean_time_to_happen = { months = 1  }
-
+  is_triggered_only = yes
+ 
   option = {
     name = EVT_8215013_A
 	create_alliance = RUS 
-	set_country_flag = event_8215013 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8215013_B
 	relation = { who = USA value = 50 } 
 	relation = { who = RUS value = -150 } 
-	set_country_flag = event_8215013 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
