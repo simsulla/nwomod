@@ -1,16 +1,4 @@
 country_event = {
-  id = 8007205
-  title = EVT_8007205_NAME
-  desc = EVT_8007205_DESC
-  picture = "nwo2_independence_of_india"
-  is_triggered_only = yes
-
-  option = {
-    name = EVT_8007205_A
-	country_event = { id = 8214013 days = 30 }
-  }
-}
-country_event = {
   id = 8007223
   title = EVT_8007223_NAME
   desc = EVT_8007223_DESC
@@ -88,13 +76,24 @@ country_event = {
 
   trigger = {
     tag = JAK
+	is_vassal = no
 	exists = HND
+	NOT = { exists = PAK }
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
-    name = EVT_8007230_A
+    name = EVT_8007231_A
+	HND = { country_event =  { id = 8007232 days = 60 }  }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8007231_C
+	HND = { country_event = { id = 8007236 days = 120 } } 
+	PAK = { country_event = { id = 8007237 days = 60 } }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -102,18 +101,27 @@ country_event = {
   title = EVT_8007231_NAME
   desc = EVT_8007231_DESC
   picture = "nwo2_kashmir"
-  is_triggered_only = yes # independance_of_india.txt JAK
+  fire_only_once = yes
+
+  trigger = {
+    tag = JAK
+	is_vassal = no
+	exists = HND
+	exists = PAK
+  }
+
+  mean_time_to_happen = { months = 5  }
 
   option = {
     name = EVT_8007231_A
 	HND = { country_event =  { id = 8007232 days = 60 }  }
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8007231_B
 	PAK = { country_event = { id = 8007234 days = 60 }  } 
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
