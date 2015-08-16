@@ -43,7 +43,7 @@ country_event = {
 	
 }
 
-country_event = {
+country_event = { # Independence of Indonesia
   id = 8007303
   title = EVT_8007303_NAME
   desc = EVT_8007303_DESC
@@ -55,13 +55,16 @@ country_event = {
     year = 1945
 	exists = yes
 	NOT = { government = proletarian_dictatorship }
+	is_vassal = no
+	owns = 1413
+	war = no
   }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8007303_A
-	define_general = { name = "Sukarno" personality = energetic background = no_background }
+	capital = 1413
   }
 }
 country_event = {

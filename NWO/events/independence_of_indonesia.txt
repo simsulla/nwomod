@@ -1,4 +1,4 @@
-country_event = {
+country_event = { # Indonesia prepares for independence war
   id = 8206001
   title = EVT_8206001_NAME
   desc = EVT_8206001_DESC
@@ -15,6 +15,7 @@ country_event = {
 
   option = {
     name = EVT_8206001_A
+	define_general = { name = "Sukarno" personality = energetic background = no_background }
 	add_country_modifier = { name = military_reform duration = 1000 }
   }
 }
@@ -85,7 +86,7 @@ country_event = {
 	NET = { inherit = IDO }
   }
 }
-country_event = {
+country_event = { # Ceasefire of 1945
   id = 8206005
   title = EVT_8206005_NAME
   desc = EVT_8206005_DESC
@@ -230,11 +231,11 @@ country_event = {
     name = EVT_8206031_A
 	all_core = { 
 		limit = { NOT = { controlled_by = IDO } } 
-		any_pop = { limit = { culture = indonesian } militancy = 10 } 
+		any_pop = { limit = { culture = indonesian } militancy = 5  } 
 	}
   }
 }
-country_event = { 
+country_event = { # Linggajati Agreement
   id = 8206012
   title = EVT_8206032_NAME
   desc = EVT_8206032_DESC
@@ -264,7 +265,7 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
-country_event = {
+country_event = { # Linggajati Agreement
   id = 8206013
   title = EVT_8206033_NAME
   desc = EVT_8206033_DESC
@@ -296,14 +297,14 @@ country_event = {
   
   option = {
     name = EVT_8206034_A
-	IDO = { country_event = 8206015  }
+	IDO = { country_event = { id = 8206015  days = 30 } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8206034_B
-	country_event = 8206030 
 	set_global_flag = federated_indonesia 
+	country_event = 8206030 
 	ai_chance = { factor = 0 }
   }
 }
@@ -422,16 +423,10 @@ country_event = {
     name = EVT_8206068_A
 	country_event = 8206030 
 	any_pop = { militancy = -0.5 }
-	ai_chance = { factor = 100 }
   }
 
-  option = {
-    name = EVT_8206068_B
-	badboy = 1 
-	ai_chance = { factor = 0 }
-  }
 }
-country_event = { 
+country_event = { # End of the Indonesian National Revolution
   id = 8206030
   title = EVT_8206070_NAME
   desc = EVT_8206070_DESC
@@ -441,12 +436,12 @@ country_event = {
 
   option = {
     name = EVT_8206070_A
-	all_core = { limit = { is_core = IDO owned_by = NET NOT = { is_core = WPA } } secede_province = IDO }
+	any_owned = { limit = { is_core = IDO NOT = { is_core = WPA } } secede_province = IDO }
 	random_country = { limit = { tag = IDO has_global_flag = federated_indonesia } country_event = 8206032 } 
 	random_country = { limit = { tag = IDO NOT = { has_global_flag = federated_indonesia } } country_event = 8206031 } 
   }
 }
-country_event = { 
+country_event = { # End of the Indonesian National Revolution
   id = 8206031
   title = EVT_8206071_NAME
   desc = EVT_8206071_DESC
@@ -468,8 +463,8 @@ country_event = {
 
   option = {
     name = EVT_8206072_A
-	create_vassal = EID # East Indonesia
-	create_vassal = DYA # Dyak
+	release_vassal = EID # East Indonesia
+	release_vassal = DYA # Dyak
 	#create_vassal = WJA # West Java
 	#create_vassal = SUM # Sumatra
   }
