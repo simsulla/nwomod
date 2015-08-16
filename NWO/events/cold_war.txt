@@ -1,6 +1,6 @@
 
 # Soviet support communist regimes not in our sphere, may by decision improve relation with us thus targeting membership in comecon
-country_event = {
+country_event = { # Soviet-$COUNTRY$ Friendship
 	id = 19800
 	title = "EVTNAME19800"
 	desc = "EVTDESC19800"
@@ -9,6 +9,7 @@ country_event = {
 	trigger = {
 		NOT = { tag = RUS }
 		government = proletarian_dictatorship
+		NOT = { has_country_flag = soviet_friendship }
 		RUS = { is_greater_power = yes government = proletarian_dictatorship } 
 		NOT = { has_country_modifier = comecon }
 		NOT = { has_country_modifier = bretton_system }
@@ -30,6 +31,7 @@ country_event = {
 		name = "EVTOPTA19800"
 		ai_chance = { factor = 100 }
 		RUS = { country_event =  19801 }
+		set_country_flag = soviet_friendship
 		any_country = {
 			limit = { NOT = { government = proletarian_dictatorship } }
 			relation = { who = THIS value = -100 } 
@@ -40,6 +42,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB19800"
 		ai_chance = { factor = 0 }
+		set_country_flag = soviet_friendship
 		any_country = { 
 			limit = { NOT = { government = proletarian_dictatorship } } 
 			relation = { who = THIS value = -50 } 
