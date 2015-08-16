@@ -125,3 +125,23 @@ country_event = {
   }
   
 }
+province_event = { # Morocco
+  id = 8210002
+  title = EVT_COLONIALUNREST_NAME
+  desc = EVT_COLONIALUNREST_DESC
+  picture = "nwo2_colonial_unrest"
+  fire_only_once = yes
+
+  trigger = {
+    NOT = { owned_by = MOR }
+    year = 1952 NOT = { year = 1954 }
+	is_core = MOR
+  }
+
+  mean_time_to_happen = { months = 3 }
+
+  option = {
+    name = OK
+	any_pop = { militancy = 3.0 }
+  }
+}

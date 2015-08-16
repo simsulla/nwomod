@@ -18,3 +18,25 @@ country_event = {
 	define_general = { name = "Philibert Tsiranana" personality = energetic background = no_background }
   }
 }
+
+province_event = { # Madagascar
+  id = 8210001
+  title = EVT_COLONIALUNREST_NAME
+  desc = EVT_COLONIALUNREST_DESC
+  picture = "nwo2_colonial_unrest"
+  fire_only_once = yes
+
+  trigger = {
+    NOT = { owned_by = MAD }
+    year = 1946 NOT = { year = 1948 }
+    is_core = MAD  
+  }
+
+  mean_time_to_happen = { months = 3 }
+
+  option = {
+    name = OK
+	any_pop = { militancy = 3.0 }
+  }
+}
+
