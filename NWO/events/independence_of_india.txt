@@ -167,6 +167,7 @@ country_event = { # Mountbatten Plan
 		leave_alliance = TIB
 		leave_alliance = JAK
 		change_tag = HND
+		primary_culture = indian
 		any_country = { 
 			limit = { overlord = { tag = HND } NOT = { tag = JAK } NOT = { tag = BHU } NOT = { tag = SIK } } 
 			country_event = 8214016
@@ -305,6 +306,7 @@ country_event = {
 	option = {
 		name = EVT_8214015_A
 		relation = { who = HND value = -200 }
+		relation = { who = PAK value = -200 }
 		ENG = { diplomatic_influence = { who = THIS value = -100 } }
 		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
 		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
