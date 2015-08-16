@@ -10,7 +10,7 @@ country_event = {
     year = 1963 NOT = {year = 1964}
   }
 
-  mean_time_to_happen = { days = 60 }
+  mean_time_to_happen = { months = 2  }
 
   option = {
     name = "EVT_8004506_A"
@@ -29,7 +29,7 @@ country_event = {
     year = 1974 NOT = { year = 1975 }
   }
 
-  mean_time_to_happen = { days = 360 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8004514_A
@@ -51,7 +51,7 @@ country_event = {
     war = no
   }
 
-  mean_time_to_happen = { days = 1 }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8004522_A
@@ -73,7 +73,7 @@ country_event = {
     war = no
   }
 
-  mean_time_to_happen = { days = 30 }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8004523_A
@@ -151,7 +151,7 @@ country_event = {
     has_global_flag = cold_war
   }
   immediate = { set_global_flag = event_fired_8004526 }
-  mean_time_to_happen = { days = 180 }
+  mean_time_to_happen = { months = 6  }
 
   option = {
     name = EVT_8004526_A
@@ -180,7 +180,7 @@ country_event = {
     has_global_flag = cold_war
   }
 
-  mean_time_to_happen = { days = 180 }
+  mean_time_to_happen = { months = 6  }
 
   option = {
     name = EVT_8004527_A
@@ -239,7 +239,7 @@ country_event = { # Stasi
 	NOT = { year = 1952 }
   }
 
-  mean_time_to_happen = { days = 60 }
+  mean_time_to_happen = { months = 2  }
 
   option = {
     name = EVT_8004312_A
@@ -260,7 +260,7 @@ country_event = { # East German Uprising of 1953
     NOT = { year = 1955 }
   }
 
-  mean_time_to_happen = { days = 40 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8004313_A
@@ -301,7 +301,7 @@ country_event = { # Construction of the Berlin Wall;
   }
   immediate = { set_global_flag = event_fired_8004314 } # used in # Fall of the Berlin Wall
 
-  mean_time_to_happen = { days = 180 }
+  mean_time_to_happen = { months = 6  }
 
   option = {
     name = EVT_8004314_A
@@ -322,7 +322,7 @@ country_event = {
     NOT = { year = 1963 }
   }
 
-  mean_time_to_happen = { days = 360 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = "EVT_8004315_A"
@@ -345,7 +345,7 @@ country_event = {
     exists = POL
   }
 
-  mean_time_to_happen = { days = 1 }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = "EVT_8004316_A"
@@ -371,7 +371,7 @@ country_event = { # Brain drain flight_to_west_germany
     any_owned_province = { province_id = 155 }  
   }
 
-  mean_time_to_happen = { days = 720 }
+  mean_time_to_happen = { months = 24  }
 
   option = {
     name = EVT_8004317_A
@@ -395,7 +395,7 @@ country_event = {
 
   immediate = { set_global_flag = event_fired_8004318 }
 
-  mean_time_to_happen = { days = 1 }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8004318_A
@@ -416,7 +416,7 @@ country_event = {
     NOT = { has_global_flag = divided_berlin }
     has_global_flag = event_fired_8004318
   }
-  mean_time_to_happen = { days = 1 }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8004319_A
@@ -439,7 +439,7 @@ country_event = { # Fall of the Berlin Wall
   }
   immediate = { set_global_flag = event_fired_8004320 }
 
-  mean_time_to_happen = { days = 300 }
+  mean_time_to_happen = { months = 10 }
 
   option = {
     name = EVT_8004320_A
