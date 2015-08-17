@@ -27,7 +27,8 @@ country_event = {
 	relation = { who = ENG value = -100 } 
 	relation = { who = RUS value = 100 }
     war = { target = ENG attacker_goal = { casus_belli = acquire_core_state state_province_id = 1755 } defender_goal = { casus_belli = status_quo } }
-	ENG = { country_event =  8500302 }
+	# Only if ISR exist shall this kick of
+	random_country = { limit = { tag = ENG exists = ISR } country_event = 8500302 }
 	ai_chance = { factor = 100 }
   }
 
