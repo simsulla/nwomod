@@ -145,3 +145,16 @@ province_event = { # Morocco
 	any_pop = { militancy = 3.0 }
   }
 }
+country_event = { # Independent Morocco
+  id = 8009927
+  title = EVT_8009927_NAME
+  desc = EVT_8009927_DESC
+  picture = "nwo2_tanger_protocol"
+  is_triggered_only = yes # MOR from algeria.txt
+
+  option = {
+    name = EVT_8009927_A
+	any_pop = { militancy = -2 }
+	prestige = 5
+  }
+}

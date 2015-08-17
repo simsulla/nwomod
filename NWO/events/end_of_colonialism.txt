@@ -40,8 +40,9 @@ country_event = { # Our control over the Empire weakens
 		AND = { tag = ENG exists = HND NOT = { has_global_flag = end_colonialism_india } year = 1950 }
 		AND = { tag = NET NET = { NOT = { owns = 1413 } } NOT = { has_global_flag = end_colonialism_indonesia } year = 1952 }#Djakarta
 		AND = { tag = FRA exists = ALG ALG = { NOT= { government =nationalist_dictatorship } } NOT = { has_global_flag = end_colonialism_northafrica }  year = 1958 }
-		AND = { tag = ENG exists = GHA NOT = { has_global_flag = end_colonialism_africa }  year = 1960 }
-		AND = { tag = POR exists = MOZ NOT = { has_global_flag = end_colonialism_southafrica }  year = 1972 }
+		AND = { tag = FRA exists = GUI GUI = { is_vassal = no } NOT = { has_global_flag = end_colonialism_africa }  year = 1958 }
+		AND = { tag = ENG exists = GHA GHA = { is_vassal = no } NOT = { has_global_flag = end_colonialism_africa }  year = 1960 }
+		AND = { tag = POR exists = MOZ MOZ = { is_vassal = no } NOT = { has_global_flag = end_colonialism_southafrica }  year = 1972 }
 	}
   }
 
@@ -56,6 +57,7 @@ country_event = { # Our control over the Empire weakens
 	random_country = { limit = { tag = THIS exists = HND } set_global_flag = end_colonialism_india }
 	random_country = { limit = { NET = { NOT = { owns = 1413 } } } set_global_flag = end_colonialism_indonesia }
 	random_country = { limit = { tag = THIS exists = ALG } set_global_flag = end_colonialism_northafrica }
+	random_country = { limit = { tag = THIS exists = GUI } set_global_flag = end_colonialism_africa }
 	random_country = { limit = { tag = THIS exists = GHA } set_global_flag = end_colonialism_africa }
 	random_country = { limit = { tag = THIS exists = MOZ } set_global_flag = end_colonialism_southafrica }
   }
@@ -179,7 +181,7 @@ country_event = {
 	# note: we do not reduce militancy so a country that have had a very violent liberation 
 	# tend to remains violent at its core
 	random_country = { 
-		limit = { average_militancy = 9.0 tag = THIS } 
+		limit = { average_militancy = 5.0 tag = THIS } 
 		set_country_flag = full_independance  
 	}
   }
@@ -189,7 +191,6 @@ country_event = {
   title = EVT_FULLINDEPENDENCE_NAME
   desc = EVT_FULLINDEPENDENCE_DESC
   picture = "colonialism_end"
-  fire_only_once = yes
 
   trigger = {
 	has_country_flag = full_independance
