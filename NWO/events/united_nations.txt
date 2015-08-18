@@ -102,7 +102,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		prestige = -2 
 		add_country_modifier = { name = call_for_un_peacekeeping_mission duration = 700 }
-		random_country = { limit = { ai = no has_country_modifier = united_nations } country_event = 1215012 }
+		any_country = { limit = { ai = no has_country_modifier = united_nations } country_event = 1215012 }
 	}
 	
 	# no need for second factor ai will always do
@@ -153,7 +153,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		prestige = 2
 		remove_country_modifier = call_for_un_peacekeeping_mission
-		random_country = { limit = { ai = no has_country_modifier = un_peacekeeping_mission } country_event = 1215014 }
+		any_country = { limit = { ai = no has_country_modifier = un_peacekeeping_mission } country_event = 1215014 }
 	}
 	
 	# no need for second factor ai will always do

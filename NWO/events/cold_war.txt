@@ -157,7 +157,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		ai = no
+		ai = no # in an multi player env this may fire multiple times but no worry as it only sets flags
 		NOT = { has_global_flag = cold_war }
 		NOT = { has_global_flag = cold_war_pacific }
 	}

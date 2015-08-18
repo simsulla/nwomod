@@ -72,6 +72,8 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA70005"
+		leave_alliance = FROM
+		diplomatic_influence = { who = FROM value = -200 }
 		FROM = { country_event = 70006 }
 		ai_chance = { factor = 100 }
 	}
@@ -94,34 +96,34 @@ country_event = {
 		name = "EVTOPTA70006" # accept
 		annex_to = FROM
         ai_chance = {
-			factor = 75
+			factor = 1
             modifier = {
-                factor = 2
+                factor = 10
 				FROM = { is_primary_culture = THIS }
 			}
-            modifier = {
-                factor = 2
-                average_militancy = 5
-            }
-            modifier = {
-                factor = 2
-                average_militancy = 10
-            }
-			# TODO other like same ideology
         }
 	}
 	option = {
 		name = "EVTOPTB70006" # become_independent
-		release_vassal = FROM
+		FROM = { release_vassal = THIS }
 		relation = { who = FROM value = -100 }
-		add_casus_belli = {
-			target = FROM
-			type = make_puppet
-			months = 12
+		FROM = { 
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = make_puppet }
+			}
 		}
         ai_chance = {
-			factor = 25
-		}
+			factor = 1
+            modifier = {
+                factor = 10
+                average_militancy = 5
+            }
+            modifier = {
+                factor = 10
+                average_militancy = 10
+            }
+        }
 	}
 	
 }

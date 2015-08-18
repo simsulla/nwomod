@@ -7,7 +7,7 @@ country_event = { #koreas same government form = unite
 		exists = NKO
 		NOT = { has_global_flag = korea_reformed }
 		SKO = {NOT = {war_with = NKO}}
-		OR = {
+		OR = { # both can't be ai - find with multi player
 			AND = {
 				tag = SKO
 				NKO = {ai = yes is_vassal = no part_of_sphere = no }
