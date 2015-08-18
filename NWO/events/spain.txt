@@ -1,3 +1,56 @@
+country_event = { # United Nations Security Council Resolution 7
+  id = 8014301
+  title = EVT_8014301_NAME
+  desc = EVT_8014301_DESC
+  picture = "generalissimo_francisco_franco"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+	year = 1946
+  }
+
+  mean_time_to_happen = { months = 4 }
+
+  option = {
+    name = EVT_8014302_A # We are all alone
+	add_country_modifier = { name = boycott_fascism duration = -1 }
+  }
+  
+}
+
+country_event = {
+  id = 8014302
+  title = EVT_8014302_NAME
+  desc = EVT_8014302_DESC
+  picture = "colonial_unrest"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+	owns = 1955
+	NOT = { exists = EQG }
+	OR = { exists = CRM exists = GAB }
+  }
+
+  mean_time_to_happen = { months = 48 }
+
+  option = {
+    name = EVT_8014302_A
+	release = EQG
+	badboy = -10
+	prestige = 10
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8014302_B
+	badboy = 2
+	prestige = -20
+	ai_chance = { factor = 0 }
+  }
+
+  
+}
 country_event = {
   id = 8014304
   title = EVT_8014304_NAME
@@ -35,5 +88,14 @@ country_event = {
     name = EVT_8014312_A
 	any_pop = { militancy = -1.0 }
 	government = democracy
+	remove_country_modifier = boycott_fascism
+	release = EQG
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8014312_B
+	prestige = -20
+	any_pop = { militancy = 2.0 }
+	ai_chance = { factor = 0 }
   }
 }
