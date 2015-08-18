@@ -150,9 +150,17 @@ country_event = {
 
   option = {
     name = EVT_LIBERATE
-	release_vassal = FROM
+	FROM = { release_vassal = THIS }
+	government = hms_government
+	any_owned = { remove_province_modifier = colonial_promise remove_province_modifier = colonial_unrest  }
+	# note: we do not reduce militancy so a country that have had a very violent liberation 
+	# tend to remains violent at its core
+	random_country = { 
+		limit = { average_militancy = 1.0 tag = THIS } 
+		set_country_flag = full_independance  
+	}
 	FROM = { country_event = 8212007 }
-	ai_chance = { factor = 10 }
+	ai_chance = { factor = 100 }
   }
   option = {
     name = EVT_DONTLIBERATE
@@ -163,7 +171,7 @@ country_event = {
 			militancy = 1.0 
 		}
 	}
-	ai_chance = { factor = 1 modifier = { factor = 100 NOT = { government = democracy government = hms_government } } }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -175,15 +183,7 @@ country_event = {
 
   option = {
     name = EVT_MILACCESS_A
-	government = hms_government
-	FROM = { military_access = THIS } 
-	any_owned = { remove_province_modifier = colonial_promise remove_province_modifier = colonial_unrest  }
-	# note: we do not reduce militancy so a country that have had a very violent liberation 
-	# tend to remains violent at its core
-	random_country = { 
-		limit = { average_militancy = 5.0 tag = THIS } 
-		set_country_flag = full_independance  
-	}
+	military_access = FROM 
   }
 }
 country_event = {
