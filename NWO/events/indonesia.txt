@@ -9,9 +9,10 @@ country_event = {
 	
 	trigger = {
 		tag = IDO
+		year = 1992
 		NOT = { exists = TIM }
 		war = no
-		1446 = { controlled_by = IDO } # Dili
+		1446 = { controlled_by = IDO pop_militancy = 5.0 } # Dili
 	}
 
 	mean_time_to_happen = {
@@ -154,12 +155,14 @@ country_event = {
 		name = EVT_8007321_A
 		any_pop = { militancy = -0.5 }
 		IDO = { country_event = 8007322 }
+		ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007321_B
 	badboy = 10
 	1446 = { add_core = IDO }
+	ai_chance = { factor = 0 }
   }
 }
 
@@ -176,14 +179,14 @@ country_event = {
 		any_pop = { militancy = -0.5 }
 		1446 = { secede_province = IDO } 
 		badboy = 10
-		ai_chance = { factor = 80 }
+		ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007322_B
 	any_pop = { militancy = 0.5 }
 	POR = { release = TIM }
-	ai_chance = { factor = 20 }
+	ai_chance = { factor = 0 }
   }
 }
 

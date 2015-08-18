@@ -231,5 +231,15 @@ country_event = {
   }
   
 }
+country_event = {
+  id = 8212010
+  title = EVT_FULLINDEPENDENCE_NAME
+  desc = EVT_FULLINDEPENDENCE_DESC
+  picture = "colonialism_end"
+  is_triggered_only = yes
 
-
+  option = {
+    name = EVT_FULLINDEPENDENCE_A
+	FROM = { release = THIS }
+  }
+}

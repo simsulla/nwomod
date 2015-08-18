@@ -3,31 +3,28 @@ country_event = {
   title = EVT_8011705_NAME
   desc = EVT_8011705_DESC
   picture = "nwo2_carnation_revolution"
-  fire_only_once = yes
 
   trigger = {
     tag = POR
-    year = 1974
+    year = 1972
 	government = populist_dictatorship
+	NOT = { has_country_flag = carnation_revolution }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 24 }
 
   option = {
     name = EVT_8011705_A
 	government = democracy
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
-    any_owned = {
-        limit = {
-          province_id = 1446
-        }
-		secede_province = IDO
-    }
-	# TODO how about africa?
+	# Timor -> indonesia.txt events
+	# African colonies release unconditionally
+	any_country = { limit = { OR = { tag = ANG tag = MOZ tag = GUB tag = STP } } country_event = 8212010 }
+	set_country_flag = carnation_revolution
   }
 
   option = {
     name = EVT_8011705_B
-	any_pop = { militancy = 4.0 }
+	any_pop = { militancy = 2.0 }
   }
 }
