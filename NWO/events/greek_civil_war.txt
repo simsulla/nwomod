@@ -9,7 +9,6 @@ province_event = {
     owned_by = GRE
 	controlled_by_rebels = yes
   }
-  immediate = { set_global_flag = event_fired_8940010 }
 
   option = {
     name = OK
@@ -26,10 +25,11 @@ country_event = {
 
   trigger = {
     tag = GRE
-    year = 1963
-    num_of_revolts = 1
-    has_global_flag = event_fired_8940010
+    year = 1946 NOT = { year = 1990 }
     has_global_flag = cold_war
+	NOT = { government = proletarian_dictatorship }
+	war = no
+	NOT = { exists = UGR }
   }
 
   mean_time_to_happen = { months = 3  }
@@ -47,14 +47,15 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = GRE
-	year = 1949 NOT = { year = 1950 }
-    exists = GRE
+	exists = UGR
+    tag = UGR
+	year = 1947 NOT = { year = 1950 }
+ 	war_with = GRE
     has_global_flag = cold_war
-	NOT = { government = proletarian_dictatorship }
+	government = proletarian_dictatorship
   }
 
-  mean_time_to_happen = { months = 6  }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8500501_A
@@ -79,7 +80,7 @@ country_event = {
   title = EVT_8500502_NAME
   desc = EVT_8500502_DESC
   picture = "nwo2_greek_civil_war"
-  is_triggered_only = yes
+  is_triggered_only = yes # YUG
   
   option = {
     name = EVT_8500502_A
@@ -104,36 +105,27 @@ country_event = {
 
   option = {
     name = EVT_8500503_A
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8500503_B
-	GRE = { country_event = 8500520 }
-	ai_chance = { factor = 0 }
+	treasury = -1000
+	UGR = { country_event = 8500520 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500503_C
 	USA = { country_event = 8500504 }
-	GRE = { country_event = 8500504 }
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8500503_D
 	USA = { country_event = 8500504 }
-	GRE = { country_event = 8500521 }
-	country_event =  8500522 
+	UGR = { country_event = 8500521 }
 	any_pop = { militancy = 1.0 }
-	ai_chance = { factor = 0 }
-  }
-
-  option = {
-    name = EVT_8500503_A
-	relation = { who = GRE value = -100 } 
-	USA = { country_event = 8500504 }
-	country_event =  { id = 8500523 days = 1 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -149,7 +141,7 @@ country_event = {
   option = {
     name = EVT_8500504_A
 	RUS = { country_event = 8500505 }
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
@@ -170,15 +162,18 @@ country_event = {
 
   option = {
     name = EVT_8500505_A
-	any_pop = { militancy = 0.2 }
-	GRE = { country_event =  8500522 } 
+	any_pop = { consciousness = 1.0 }
+	# TODO lower Soviet block coherence
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500505_B
+	any_pop = { consciousness = 1.0 }
 	any_pop = { militancy = 1.0 }
+	war = { target = GRE attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = status_quo } }
 	USA = { country_event = 8500506 } 
+	UGR = { country_event =  8500522 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -193,13 +188,14 @@ country_event = {
   option = {
     name = EVT_8500506_A
 	create_alliance = GRE
-	RUS = { war = { target = GRE attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = { casus_belli = status_quo } } }
+	diplomatic_influence = { who = GRE value = 200 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500506_B
-	any_pop = { militancy = 2.5 }
+	prestige = -10
+	any_pop = { militancy = 0.1 }
 	GRE = { country_event = 8500509 }
 	ai_chance = { factor = 0 }
   }
@@ -215,7 +211,7 @@ country_event = {
     name = EVT_8500509_A
 	leave_alliance = USA
 	any_pop = { militancy = 1.0 }
-	set_global_flag = event_fired_8500509
+	war_exhaustion = 40
   }
 }
 country_event = {
@@ -253,13 +249,12 @@ country_event = {
   title = EVT_8500520_NAME
   desc = EVT_8500520_DESC
   picture = "nwo2_greek_civil_war"
-  is_triggered_only = yes # GRE
-
+  is_triggered_only = yes # UGR
 
   option = {
     name = EVT_8500520_A
 	any_pop = { militancy = -0.3 }
-	money = 100 
+	treasury = 1000
   }
 }
 country_event = {
@@ -267,13 +262,13 @@ country_event = {
   title = EVT_8500521_NAME
   desc = EVT_8500521_DESC
   picture = "nwo2_greek_civil_war"
-  is_triggered_only = yes # GRE
+  is_triggered_only = yes # UGR
 
 
   option = {
     name = EVT_8500521_A
 	any_pop = { militancy = -0.6 }
-	money = 250 
+	treasury = 1000
   }
 }
 country_event = {
@@ -281,22 +276,13 @@ country_event = {
   title = EVT_8500522_NAME
   desc = EVT_8500522_DESC
   picture = "nwo2_greek_civil_war"
-  fire_only_once = yes
-
-  trigger = {
-    tag = GRE
-	year = 1949 NOT = { year = 1950 }
-    has_global_flag = event_fired_8500509
-  }
-
-  mean_time_to_happen = { months = 1  }
+  is_triggered_only = yes # UGR
 
   option = {
     name = EVT_8500522_A
 	create_alliance = RUS 
-	government = proletarian_dictatorship
 	any_pop = { militancy = -0.6 }
-	relation = { who = RUS value = 100 } 
+	diplomatic_influence = { who = RUS value = 100 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -316,8 +302,8 @@ country_event = {
 
   trigger = {
     tag = USA
-	year = 1949 NOT = { year = 1950 }
-    GRE = { government = democracy  any_owned_province = { controlled_by_rebels = yes } }
+	year = 1948 NOT = { year = 1950 }
+    GRE = { government = democracy war_with = UGR }
   }
 
   mean_time_to_happen = { months = 2  }
@@ -344,37 +330,32 @@ country_event = {
   picture = "nwo2_greek_civil_war"
   is_triggered_only = yes # GRE
 
-
   option = {
     name = EVT_8500524_A
-	any_pop = { militancy = -0.4 }money = 250 
+	any_pop = { militancy = -0.4 }
+	treasury = 250 
   }
 }
-country_event = {
+province_event = {
   id = 8500530
   title = "EVT_8500530_NAME"
   desc = "EVT_8500530_DESC"
   picture = "nwo2_kke_partisans"
-  fire_only_once = yes
 
   trigger = {
-    tag = GRE
+    controller = { tag = GRE }
 	year = 1948 NOT = { year = 1949 }
-	government = democracy  
-	any_owned_province = { controlled_by_rebels = yes }
+	owner = { tag = GRE war_with = UGR }
+	is_capital = no
   }
 
   mean_time_to_happen = { months = 4  }
 
   option = {
     name = "EVT_8500530_A"
-	ai_chance = { factor = 100 }
+	random_owned = { limit = { NOT = { is_capital = yes } } change_controller = UGR }
   }
 
-  option = {
-    name = "EVT_8500530_B"
-	ai_chance = { factor = 0 }
-  }
 }
 country_event = {
   id = 8500540
@@ -384,10 +365,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = GRE
-	year = 1954 NOT = { year = 1955 }
-	government = democracy  
-	NOT = { any_owned_province = { controlled_by_rebels = yes } }
+	exists = UGR
+    tag = UGR
+	year = 1948 NOT = { year = 1955 }
+	war_with = GRE
     has_global_flag = cold_war
   }
 
@@ -395,8 +376,8 @@ country_event = {
 
   option = {
     name = EVT_8500540_A
-	any_pop = { militancy = 0.3 }
-	country_event = 8500543 
+	any_pop = { militancy = 0.5 }
+	war_exhaustion = 50 
   }
 }
 country_event = {
@@ -407,7 +388,8 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = GRE
+    tag = UGR
+	NOT = { exists = GRE }
 	NOT = { year = 1963 }
 	government = proletarian_dictatorship
   }
@@ -417,20 +399,9 @@ country_event = {
   option = {
     name = EVT_8500541_A
 	any_pop = { militancy = -2.5 }
-	country_event = 8500542 
+	change_tag = GRE
+	government = proletarian_dictatorship
 	set_global_flag = raise_soviet_bloc_coherence 
-  }
-}
-country_event = {
-  id = 8500542
-  title = EVT_8500542_NAME
-  desc = EVT_8500542_DESC
-  picture = "nwo2_kke_victory"
-  is_triggered_only = yes # GRE
-
-
-  option = {
-    name = EVT_8500542_A
   }
 }
 country_event = {
@@ -444,6 +415,7 @@ country_event = {
     tag = USA
 	NOT = { year = 1950 }
     GRE = { government = proletarian_dictatorship }
+	war = no
   }
 
   mean_time_to_happen = { months = 1  }
@@ -451,13 +423,13 @@ country_event = {
   option = {
     name = EVT_8500550_A
 	RUS = { country_event = 8500551 }
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8500550_B
 	any_pop = { militancy = 1.0 }
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
@@ -466,7 +438,6 @@ country_event = {
   desc = EVT_8500551_DESC
   picture = "nwo2_greek_civil_war"
   is_triggered_only = yes # RUS
-
 
   option = {
     name = EVT_8500551_A
@@ -487,7 +458,6 @@ country_event = {
   desc = EVT_8500552_DESC
   picture = "nwo2_greek_civil_war"
   is_triggered_only = yes # USA
-
 
   option = {
     name = EVT_8500552_A
@@ -513,6 +483,7 @@ country_event = {
 	year = 1949 NOT = { year = 1950 }
     GRE = { government = proletarian_dictatorship }
 	USA = { war_with = GRE }
+	war = no
   }
 
   mean_time_to_happen = { months = 1  }
@@ -567,7 +538,7 @@ country_event = {
 
   option = {
     name = EVT_8500555_A
-	create_alliance = GRE 
+	diplomatic_influence = { who = GRE value = 100 } 
 	ai_chance = { factor = 0 }
   }
 }
