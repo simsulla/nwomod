@@ -120,7 +120,7 @@ country_event = { # Lipanda
 	any_pop = { limit = { location = { is_colonial = yes } } consciousness = 1.0 }
 	prestige = -10
 	badboy = 1.0
-	ai_chance = { factor = 10 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -188,8 +188,7 @@ country_event = {
     name = EVT_8003329_A
 	relation = { who = BEL value = -100 } 
 	any_pop = { militancy = 0.5 }
-	country_event = 8003330
-	set_global_flag = congo_crisis
+	country_event = { id = 8003330 days = 60 }
   }
 }
 country_event = {
@@ -202,6 +201,7 @@ country_event = {
   option = {
     name = EVT_8003330_A
 	any_pop = { militancy = 2.0 }
+	set_global_flag = congo_crisis
 	country_event = 8003332
   }
 }
@@ -243,12 +243,12 @@ country_event = {
   desc = EVT_8003332_DESC
   picture = "nwo2_congo_crisis"
   is_triggered_only = yes # CNG
-  major = yes
 
   option = {
     name = EVT_8003332_A
 	any_owned = { limit = { OR = { region = BEL_1996 region = BEL_1990 province_id = 1989 province_id = 1992 } } secede_province = UCS }
 	release = KAT
+	UCS = { capital = 1996 }
 	war = { target = UCS attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
 	country_event = 8003334
   }
@@ -290,7 +290,6 @@ country_event = {
   desc = EVT_8003334_DESC
   picture = "nwo2_congo_crisis"
   is_triggered_only = yes
-  major = yes
 
   option = {
     name = EVT_8003334_A

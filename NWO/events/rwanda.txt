@@ -1,3 +1,37 @@
+country_event = { # Rwanda Independence
+  id = 1029500
+  title = EVT_1029500_NAME
+  desc = EVT_1029500_DESC
+  picture = "rwanda_independence"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BEL
+	NOT = { exists = RWA }
+	NOT = { exists = BRN }
+	exists = CNG
+	war = no
+	owns = 2034
+  }
+
+  mean_time_to_happen = { months = 24  }
+
+  option = {
+    name = EVT_8003300_A
+	prestige = 20
+	RWA = { country_event = 8212010 }
+	BRN = { country_event = 8212010 }
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8003300_B
+	any_pop = { limit = { location = { is_colonial = yes } } militancy = 2.0 }
+	any_pop = { limit = { location = { is_colonial = yes } } consciousness = 1.0 }
+	prestige = -10
+	badboy = 1.0
+	ai_chance = { factor = 0 }
+  }
+}
 country_event = {
 	id = 1029501
 	title = "EVT_1029501_NAME"
@@ -60,3 +94,4 @@ country_event = {
 	
 	
 }
+
