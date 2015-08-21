@@ -457,72 +457,7 @@ country_event = {
 	}
 }
 
-# Gain Core event
-province_event = {
-	id = 2560
-	title = "EVTNAME2560"
-	desc = "EVTDESC2560"
-	
-	trigger = {
-		NOT = { is_core = THIS }
-		controlled_by = THIS
-		is_colonial = no
-		OR = {
-			is_primary_culture = yes
-			is_accepted_culture = yes
-			any_neighbor_province = {
-				is_core = THIS
-				controlled_by = THIS
-			}
-		}
-		owner = {
-			tag = THIS
-			is_greater_power = yes
-			age_of_protests = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 180
-		modifier = {
-			factor = 0.5
-			is_primary_culture = yes
-		}
-		modifier = {
-			factor = 0.8
-			is_coastal = yes
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				average_militancy = 1
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				average_militancy = 2
-			}
-		}
-		modifier = {
-			factor = 0.95
-			NOT = {
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				average_consciousness = 4
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA2560"
-		add_core = THIS
-	}
-}
+
 
 # Fascist Aggression
 country_event = {
