@@ -268,7 +268,7 @@ country_event = { # Philippeville massacre
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1700 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } } change_controller = FRA } }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
-		limit = { tag = MOR vassal_of = THIS } 
+		limit = { tag = MOR vassal_of = FRA } 
 		release = MOR
 		FRA = { diplomatic_influence = { who = MOR value = -200 } }
 		FRA = { add_casus_belli = { target = MOR type = make_puppet months = 24 } }
@@ -284,7 +284,8 @@ country_event = { # Philippeville massacre
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1700 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } }  change_controller = FRA } }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
-		limit = { tag = MOR vassal_of = THIS } 
+		limit = { tag = MOR vassal_of = FRA } 
+		release = MOR
 		country_event = 8009927 
 		FRA = { diplomatic_influence = { who = MOR value = 50 } } 
 		FRA = { relation = { who = MOR value = 50 } }
@@ -318,7 +319,7 @@ country_event = { # Battle of Algiers
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } } change_controller = FRA } }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
-		limit = { tag = TUN vassal_of = THIS } 
+		limit = { tag = TUN vassal_of = FRA } 
 		release = TUN
 		FRA = { diplomatic_influence = { who = TUN value = -200 } }
 		FRA = { add_casus_belli = { target = TUN type = make_puppet months = 24 } }
@@ -334,7 +335,8 @@ country_event = { # Battle of Algiers
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } }  change_controller = FRA } }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
-		limit = { tag = TUN vassal_of = THIS } 
+		limit = { tag = TUN vassal_of = FRA }
+		release = TUN
 		country_event = 8015409 
 		FRA = { diplomatic_influence = { who = TUN value = 50 } } 
 		FRA = { relation = { who = TUN value = 50 } }
