@@ -1,21 +1,19 @@
-#
 country_event = {
 	id = 1004901
 	title = "EVT_1004901_NAME"
 	desc = "EVT_1004901_DESC"
 	picture = "nasser_revolution"
-
 	fire_only_once = yes
 	
 	trigger = {
 		tag = EGY
 		NOT = { 1755 = { owned_by = THIS } }
 		OR = { government = democracy government = hms_government government = absolute_monarchy }
-		year = 1952
+		year = 1952 NOT = { year = 1990 }
 	}
 
 	mean_time_to_happen = {
-		months = 72
+		months = 2
 	}
 	
 	option = {
@@ -40,71 +38,6 @@ country_event = {
 	}
 	
 }
-
-country_event = {
-	id = 1004902
-	title = "EVT_1004902_NAME"
-	desc = "EVT_1004902_DESC"
-	picture = "sudan_independence"
-
-	fire_only_once = yes
-	
-	trigger = {
-		tag = EGY
-		1827 = { owned_by = ENG }
-		NOT = { OR = { government = democracy government = hms_government government = absolute_monarchy } }
-	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
-	
-	option = {
-		name = "EVT_1004902_A"
-		ai_chance = { factor = 100 }
-		ENG = { country_event = 1004903 }
-	}
-	
-	option = {
-		name = "EVT_1004902_B"
-		any_pop = {
-			limit = {
-				culture = sunni_arab
-			}
-			consciousness = 2
-		}
-	}
-	
-}
-
-country_event = {
-	id = 1004903
-
-	title = EVT_1004903_NAME
-	desc = EVT_1004903_DESC
-	picture = "sudan_independence"
-
-	is_triggered_only = yes
-
-	option = {
-		name = EVT_1004903_A 
-		ai_chance = { factor = 100 }
-		release = SUD
-	}
-	
-	option = {
-		name = EVT_1004903_B
-		ai_chance = { factor = 0 }
-		badboy = 4.0
-		any_pop = {
-			limit = {
-				culture = sunni_arab
-			}
-			militancy = 10
-		}
-	}
-
-}
 country_event = {
   id = 8004906
   title = "EVT_8004906_NAME"
@@ -113,15 +46,16 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = EGY
-    year = 1952 NOT = { year = 1960 }
-	government = presidential_dictatorship
+    tag = ENG
+    year = 1952 NOT = { year = 1990 }
+	EGY = { government = presidential_dictatorship }
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = "EVT_8004906_A"
+	diplomatic_influence = { who = EGY value = -200 }
   }
 }
 

@@ -1,4 +1,57 @@
 country_event = {
+	id = 1004902
+	title = "EVT_1004902_NAME"
+	desc = "EVT_1004902_DESC"
+	picture = "sudan_independence"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EGY
+		1827 = { owned_by = ENG } # Khartoum
+		NOT = { OR = { government = democracy government = hms_government government = absolute_monarchy } }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "EVT_1004902_A"
+		ENG = { country_event = 1004903 }
+		prestige = 5
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_1004902_B"
+		prestige = -5
+		any_pop = { limit = { culture = sunni_arab } consciousness = 2 }
+	}
+}
+country_event = {
+	id = 1004903
+	title = EVT_1004903_NAME
+	desc = EVT_1004903_DESC
+	picture = "sudan_independence"
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_1004903_A 
+		release = SUD
+		prestige = 5
+		diplomatic_influence = { who = SUD value = 100 }
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = EVT_1004903_B
+		ai_chance = { factor = 0 }
+		badboy = 4.0
+		relation = { who = EGY value = -200 }
+		any_pop = { limit = { culture = sunni_arab } militancy = 10 }
+	}
+}
+country_event = {
   id = 8014520
   title = EVT_8014520_NAME
   desc = EVT_8014520_DESC
@@ -8,13 +61,14 @@ country_event = {
   trigger = {
     tag = SUD
     year = 1963
-    any_owned_province = { province_id = 360 }  }
-  immediate = { set_global_flag = event_fired_8014520 }
+    any_owned_province = { province_id = 360 }  
+  }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8014520_A
+	government = populist_dictatorship
 	any_pop = { limit = { NOT = { religion = sunni } } militancy = 5.0 }
 	any_owned = { 
 		limit = { OR = { province_id = 1843 province_id = 1844  province_id = 1845  province_id = 1846 province_id = 1847} }
