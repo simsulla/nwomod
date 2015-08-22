@@ -1,3 +1,62 @@
+country_event = { # Cyprus Emergency
+  id = 8004100
+  title = EVT_8004100_NAME
+  desc = EVT_8004100_DESC
+  picture = "cyprus_emergency"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+	owns = 855 # Nicosia
+	NOT = { exists = CYP }
+    year = 1955 NOT = {year = 1990 }
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = EVT_8004100_A
+	release = CYP
+	war = { target = CYP attacker_goal = { casus_belli = conquest } defender_goal = { casus_belli = status_quo } }
+  }
+
+}
+
+country_event = { # Cyprus Independence
+  id = 8004101
+  title = EVT_8004101_NAME
+  desc = EVT_8004101_DESC
+  picture = "cyprus_independence"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1960 NOT = { year = 1990 }
+	owns = 855 # Nicosia
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8004101_A
+	prestige = 10
+	release = CYP
+	diplomatic_influence = { who = CYP value = -100 } 
+	GRE = { create_alliance = CYP }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8004101_B
+	prestige = -10
+	any_pop = { limit = { culture = greek } militancy = 10 }
+	release = CYP
+	war = { target = CYP attacker_goal = { casus_belli = conquest } defender_goal = { casus_belli = status_quo } }
+	ai_chance = { factor = 0 }
+  }
+  
+}
+
 country_event = {
   id = 8004103
   title = EVT_8004103_NAME
@@ -7,21 +66,15 @@ country_event = {
 
   trigger = {
     tag = CYP
-    year = 1974 NOT = {year = 1976 }
+	exists = CYP
+    year = 1974 NOT = {year = 1990 }
   }
-
-  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8004103_A
     define_general = { name = "Makarios" personality = energetic background = no_background }
+	country_event = 8004110
 	ai_chance = { factor = 100 }
-  }
-
-  option = {
-    name = EVT_8004103_B
-    define_general = { name = "Clerides" personality = energetic background = no_background }
-	ai_chance = { factor = 0 }
   }
 
   option = {
@@ -36,15 +89,7 @@ country_event = {
   title = EVT_8004110_NAME
   desc = EVT_8004110_DESC
   picture = "nwo2_enosis"
-  fire_only_once = yes
-
-  trigger = {
-    tag = CYP
-    year = 1974  NOT = {year = 1976 }
-  }
-  immediate = { set_global_flag = event_fired_8004110 }
-
-  mean_time_to_happen = { months = 4 }
+  is_triggered_only = yes
 
   option = { # Carry out the coup
     name = EVT_8004110_A
@@ -55,8 +100,7 @@ country_event = {
 
   option = {
     name = EVT_8004110_B
-	any_pop = { militancy = 4.0 }
-	country_event =  { id = 8004113 days = 1 } 
+	any_pop = { militancy = 5.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -65,22 +109,21 @@ country_event = {
   title = EVT_8004111_NAME
   desc = EVT_8004111_DESC
   picture = "nwo2_enosis"
-  is_triggered_only = yes
+  is_triggered_only = yes # TUR
 
   option = {
     name = EVT_8004111_A
 	relation = { who = GRE value = -150 } 
-	relation = { who = CYP value = -250 } 
+	relation = { who = CYP value = -200 } 
 	war = { target = CYP  attacker_goal = { casus_belli = liberate_country country = NCY } defender_goal = { casus_belli = status_quo } }
-	any_pop = { militancy = 1.0 }
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
 	CYP = { country_event = 8004112 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8004111_B
-	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -94,10 +137,13 @@ country_event = {
   trigger = {
     tag = TUR
     year = 1975
-    NOT = { year = 1980 }
+    NOT = { year = 1990 }
     exists = NCY
+	CYP = { government = populist_dictatorship }
 	war = no
   }
+
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8004112_A
@@ -116,10 +162,11 @@ country_event = {
   trigger = {
     tag = CYP
     year = 1975
-    NOT = { year = 1976 }
+    NOT = { year = 1990 }
     exists = GRE
 	war = no
-	owns = 857
+	government = democracy
+	owns = 857 # Famagusta
   }
 
   mean_time_to_happen = { months = 1  }

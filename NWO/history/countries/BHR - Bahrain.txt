@@ -1,14 +1,14 @@
 capital = 1162
 primary_culture = sunni_arab
 religion = irreligion
-government = hms_government
+government = nationalist_dictatorship
 plurality = 3.0
-nationalvalue = nv_equality
+nationalvalue = nv_order
 literacy = 0.06
 non_state_culture_literacy = 0.04
 civilized = yes
 prestige = 0
-ruling_party = party_islamist_0_BHR
+ruling_party = party_populist_0_sunni_arab_BHR
 upper_house = {
 	populist = 4
 	liberal = 21
@@ -19,16 +19,16 @@ upper_house = {
 	communist = 5
 	}
 # Political Reforms
-political_opinions = regulated_opinion
-minorities_reform = minorities_equal_rights
+political_opinions = ruling_party_opinion
+minorities_reform = minorities_oppression
 immigration_policy = quota_immigration
 internet_infrastructure = quality_of_service
 political_parties = parties_only_nominated
-religious_rights = no_state_religion
+religious_rights = state_religion
 lgbt_rights = lgbt_outlawed
 publishing_rights = censored_publishing
 gender_rights = gender_role_based
-vote_franschise = registered_voting
+vote_franschise = none_voting
 # Social Reforms
 safety_regulations = some_regulations
 pensions = no_pensions
@@ -41,6 +41,11 @@ pollution = no_controls
 wage_and_work_hours = unregulated_hours
 social_service_reform = no_social_service
 # Technologies
+post_war_radar = 1
+infantry = 1
+heavy_tanks = 1
+first_generation_subsonic_jet_fighters = 1
+cold_war_doctrine = 1
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
@@ -50,14 +55,14 @@ oob = "/BHR_oob.txt"
 1992.1.1 = {
 	capital = 1162
 	religion = irreligion
-	government = hms_government
+	government = nationalist_dictatorship
 	plurality = 10.0
-	nationalvalue = nv_equality
+	nationalvalue = nv_order
 	literacy = 0.25
 	non_state_culture_literacy = 0.15
 	civilized = yes
-	prestige = 2
-	ruling_party = party_islamist_0_BHR
+	prestige = 1
+	ruling_party = party_populist_0_sunni_arab_BHR
 	upper_house = {
 		populist = 4
 		liberal = 21
@@ -68,16 +73,16 @@ oob = "/BHR_oob.txt"
 		communist = 5
 		}
 	# Political Reforms
-	political_opinions = regulated_opinion
-	minorities_reform = minorities_equal_rights
+	political_opinions = ruling_party_opinion
+	minorities_reform = minorities_oppression
 	immigration_policy = quota_immigration
 	internet_infrastructure = quality_of_service
 	political_parties = parties_only_nominated
-	religious_rights = no_state_religion
+	religious_rights = state_religion
 	lgbt_rights = lgbt_outlawed
 	publishing_rights = censored_publishing
 	gender_rights = gender_role_based
-	vote_franschise = registered_voting
+	vote_franschise = none_voting
 	# Social Reforms
 	safety_regulations = some_regulations
 	pensions = no_pensions
@@ -91,10 +96,15 @@ oob = "/BHR_oob.txt"
 	social_service_reform = no_social_service
 	# Technologies
 	post_war_radar = 1
+	strategic_bomber = 1
 	infantry = 1
+	guerrilla = 1
 	heavy_tanks = 1
+	antitank_weapons = 1
 	first_generation_subsonic_jet_fighters = 1
+	second_generation_jet_fighters = 1
 	cold_war_doctrine = 1
+	proxy_war = 1
 	international_financial_institutions = 1
 	gold_standard = 1
 	keynesian_economics = 1

@@ -151,3 +151,122 @@ country_event = {
 random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
   }
 }
+
+country_event = { # The Federation of South Arabia
+  id = 8018210
+  title = EVT_8018210_NAME
+  desc = EVT_8018210_DESC
+  picture = "independence_of_south_yemen"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1962 NOT = { year = 1990 }
+	owns = 1412 # Aden
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8018210_A
+	prestige = 10
+	release_vassal = SYE
+	diplomatic_influence = { who = SYE value = 200 } 
+	create_alliance = SYE
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8018210_B
+	prestige = -10
+	any_pop = { limit = { culture = sunni_arab } militancy = 10 }
+	# TODO SYE UDI
+	ai_chance = { factor = 0 }
+  }
+  
+}
+
+country_event = { # Independence of South Yemen
+  id = 8018211
+  title = EVT_8018211_NAME
+  desc = EVT_8018211_DESC
+  picture = "independence_of_south_yemen"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYE
+    year = 1967 NOT = { year = 1990 }
+	is_vassal = yes
+  }
+
+  mean_time_to_happen = { months = 10 }
+
+  option = {
+    name = EVT_8018211_A
+	government = proletarian_dictatorship
+	overlord = { 
+		country_event = 8018212
+	}
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8018211_B
+	prestige = -10
+	any_pop = { limit = { culture = sunni_arab } militancy = 5 }
+	ai_chance = { factor = 0 }
+  }
+  
+}
+
+country_event = { # Independence of South Yemen
+  id = 8018212
+  title = EVT_8018211_NAME
+  desc = EVT_8018211_DESC
+  picture = "independence_of_south_yemen"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8018211_A
+	release_vassal = FROM
+	diplomatic_influence = { who = FROM value = -200 } 
+	leave_alliance = FROM
+	add_casus_belli =  { target = FROM type = make_puppet months = 24 }
+  }
+}
+
+country_event = { # South Yemen Civil War
+  id = 8018213
+  title = EVT_8018213_NAME
+  desc = EVT_8018213_DESC
+  picture = "south_yemen_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYE
+    year = 1986 NOT = { year = 1990 }
+	government = proletarian_dictatorship
+	part_of_sphere = no
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+  option = {
+    name = EVT_8018213_A 
+	government = populist_dictatorship
+	relation = { who = YEM value = 100 }
+	relation = { who = RUS value = -100 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 2 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8018213_B
+	prestige = -10
+	relation = { who = YEM value = -100 }
+	relation = { who = RUS value = 100 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 2 }
+	ai_chance = { factor = 0 }
+  }
+  
+}
