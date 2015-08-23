@@ -1,21 +1,68 @@
 country_event = {
-	id = 1008601
-
+	id = 1008600
 	title = EVT_1008601_NAME
 	desc = EVT_1008601_DESC
 	picture = "king_idris_of_libya"
+	fire_only_once = yes
 
 	trigger = {
-		OR = { 
-			AND = { tag = ENG 1731 = { controlled_by = ENG } }  # Tripoli
-			AND = { tag = FRA 1743 = { controlled_by = FRA }  } # Fezzan / Ghat
-		}
+		year = 1946 NOT = { year = 1990 }
+		tag = ENG
+		owns = 1731 # Tripoli
 		NOT = { has_country_flag = king_idris_of_libya }
 		war = no
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 6
+	}
+
+	option = {
+		name = EVT_1008601_A 
+		ai_chance = { factor = 100 }
+		any_country = {
+			limit = { primary_culture = sunni_arab government = absolute_monarchy }
+			relation = { who = THIS value = 50 }
+		}
+		prestige = -2
+		set_country_flag = king_idris_of_libya
+	}
+	
+	option = {
+		name = EVT_1008601_B 
+		ai_chance = { factor = 0 }
+		any_pop = {
+			limit = {
+				culture = sunni_arab
+			}
+			consciousness = 1
+			militancy = 2
+		}
+		any_country = {
+			limit = { primary_culture = sunni_arab }
+			relation = { who = THIS value = -50 }
+		}
+		badboy = 0.5
+	}
+
+}
+country_event = {
+	id = 1008601
+	title = EVT_1008601_NAME
+	desc = EVT_1008601_DESC
+	picture = "king_idris_of_libya"
+	fire_only_once = yes
+
+	trigger = {
+		year = 1946 NOT = { year = 1990 }
+		owns = 1743 # Fezzan / Ghat
+		tag = FRA
+		NOT = { has_country_flag = king_idris_of_libya }
+		# war = no
+	}
+
+	mean_time_to_happen = {
+		months = 6
 	}
 
 	option = {
@@ -50,20 +97,21 @@ country_event = {
 
 country_event = {
 	id = 1008602
-
 	title = EVT_1008602_NAME
 	desc = EVT_1008602_DESC
 	picture = "king_idris_of_libya"
+	fire_only_once = yes
 
 	trigger = {
 		tag = ENG
+		year = 1951 NOT = { year = 1990 }
 		has_country_flag = king_idris_of_libya
 		NOT = { exists = TRI }
 		1731 = { controlled_by = ENG }
 	}
 
 	mean_time_to_happen = {
-		months = 60 
+		months = 1 
 	}
 
 	option = {
@@ -90,23 +138,21 @@ country_event = {
 			limit = { primary_culture = sunni_arab }
 			relation = { who = THIS value = -50 }
 		}
-		badboy = 0.5
+		badboy = 1.5
 	}
 
 }
 
 country_event = {
 	id = 1008603
-
 	title = EVT_1008603_NAME
 	desc = EVT_1008603_DESC
 	picture = "king_idris_of_libya"
-
 	fire_only_once = yes
 	
 	trigger = {
 		tag = FRA
-		FRA = { has_country_flag = king_idris_of_libya }
+		has_country_flag = king_idris_of_libya
 		exists = TRI
 		1743 = { controlled_by = FRA }
 	}
