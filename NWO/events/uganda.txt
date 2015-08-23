@@ -83,3 +83,166 @@ country_event = {
 	
 }
 
+country_event = {
+	id = 1027010
+	title = "EVT_1027010_NAME" # Power politics in Buganda
+	desc = "EVT_1027010_DESC"
+	picture = "kabaka_freddie" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		owns = 2019 # Entebbe Kampala
+		year = 1953 NOT = { year = 1990 }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "EVT_1027010_A" 
+		any_pop = { limit = { culture = ganda } militancy = 8 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "EVT_1027003_B" # never mind
+		prestige = -5
+		any_pop = { limit = { culture = ganda } consciousness = 2 }
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+country_event = {
+	id = 1027011
+	title = EVT_1027011_NAME # Independence of Uganda
+	desc = EVT_1027011_DESC
+	picture = "independence_uganda" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		owns = 2019 # Entebbe Kampala
+		year = 1962 NOT = { year = 1990 }
+		exists = TAN
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+    option = {
+	  name = EVT_1027011_A
+	  prestige = 10
+	  release = UGA
+	  diplomatic_influence = { who = UGA value = 100 } 
+	  create_alliance = UGA
+  	  ai_chance = { factor = 100 }
+    }
+  
+  option = {
+	name = EVT_1027011_B
+	release_vassal = UGA
+	diplomatic_influence = { who = UGA value = 200 } 
+	any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 2 }
+	create_alliance = UGA
+	ai_chance = { factor = 0 }
+  }  
+
+  option = {
+	name = EVT_1027011_C
+	prestige = -10
+	any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 10 }
+	# TODO UGA UDI
+	ai_chance = { factor = 0 }
+  }	
+	
+}
+
+country_event = {
+	id = 1027012
+	title = EVT_1027012_NAME # The Idi Amin Regime
+	desc = EVT_1027012_DESC
+	picture = "idi_amin" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = UGA
+		exists = UGA
+		war = no
+		year = 1971 NOT = { year = 1990 }
+	}
+	
+    option = {
+	  name = EVT_1027012_A
+	  overlord = { country_event = 8212009 }
+	  government = presidential_dictatorship
+    }
+}
+
+country_event = {
+	id = 1027013
+	title = EVT_1027013_NAME # Expulsion of Asians from Uganda
+	desc = EVT_1027013_DESC
+	picture = "idi_amin" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = UGA
+		exists = UGA
+		war = no
+		year = 1972 NOT = { year = 1990 }
+		government = populist_dictatorship
+	}
+	
+    option = {
+	  name = EVT_1027013_A
+	  any_pop = { limit = { culture = indian } move_pop = 300 } # London
+	  any_pop = { limit = { NOT = { culture = african_minor } } militancy = 5 } 
+	  badboy = 15
+	  add_country_modifier = { name = great_depression duration = 3500 }
+	  ai_chance = { factor = 100 }
+    }
+	
+	option = {
+	  name = EVT_1027013_B
+	  any_pop = { limit = { NOT = { culture = indian } } militancy = 2 consciousness = 2 } 
+	  ai_chance = { factor = 0 }
+	}
+	
+}
+
+country_event = {
+	id = 1027014
+	title = EVT_1027014_NAME # Uganda–Tanzania War
+	desc = EVT_1027014_DESC
+	picture = "uganda_tanzania_war" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = UGA
+		exists = UGA
+		year = 1972 NOT = { year = 1990 }
+		government = populist_dictatorship
+		exists = TAN
+		war = no
+	}
+	
+    option = {
+	  name = EVT_1027014_A
+	  war = { target = TAN attacker_goal = { casus_belli = acquire_state state_province_id = 2044 } defender_goal = { casus_belli = install_sectarian_regime } }
+	  ai_chance = { factor = 100 }
+    }
+	
+	option = {
+	  name = EVT_1027014_B
+	  any_pop = { limit = { NOT = { culture = african_minor } } militancy = 5 } 
+	  ai_chance = { factor = 0 }
+	}
+	
+}

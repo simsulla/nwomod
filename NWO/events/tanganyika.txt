@@ -1,44 +1,135 @@
 country_event = {
-  id = 8029720
-  title = EVT_8029720_NAME
-  desc = EVT_8029720_DESC
-  picture = "nwo2_tanzania"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ENG
-    year = 1963 NOT = { year = 1990 }
-    exists = TAN
-	owns = 2048 #Zanzibar
-  }
-  immediate = { set_global_flag = event_fired_8029720 }
-
-  mean_time_to_happen = { months = 12 }
-
-  option = {
-    name = EVT_8029720_A
-    relation = { who = TAN value = 100 } 
-	2048 = { secede_province = TAN } 
-	TAN = { country_event = 8029721 }
-	ai_chance = { factor = 100 }
-  }
-
-  option = {
-    name = EVT_8029720_B
-	relation = { who = TAN value = -100 } 
-	random_owned = { limit = { province_id = 2048 } any_pop = { militancy = 5.0 } }
-	ai_chance = { factor = 0 }
-  }
+	id = 8029700
+	title = EVT_8029700_NAME # Independence of Tanganyika
+	desc = EVT_8029700_DESC
+	picture = "independence_tanganyika" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		owns = 2036 # Dar Es Salaam
+		year = 1961 NOT = { year = 1990 }
+		OR = { exists = GHA exists = NGE }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+    option = {
+	  name = EVT_8029700_A
+	  prestige = 10
+	  release = TAN
+	  diplomatic_influence = { who = TAN value = 100 } 
+	  create_alliance = TAN
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8029700_B
+	  prestige = -10
+	  any_pop = { limit = { location = { is_core = TAN } } militancy = 10 }
+	  # TODO TAN UDI
+	  ai_chance = { factor = 0 }
+    }	
 }
 country_event = {
-  id = 8029721
-  title = EVT_8029721_NAME
-  desc = EVT_8029721_DESC
-  picture = "nwo2_tanzania"
-  is_triggered_only = yes
+	id = 8029701
+	title = EVT_8029701_NAME # Independence of Zanzibar
+	desc = EVT_8029701_DESC
+	picture = "independence_zanzibar" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_our_vassal = ZAN
+		year = 1963 NOT = { year = 1990 }
+		exists = TAN
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+    option = {
+	  name = EVT_8029701_A
+	  prestige = 10
+	  release = ZAN
+	  diplomatic_influence = { who = ZAN value = 100 } 
+	  create_alliance = ZAN
+  	  ai_chance = { factor = 100 }
+    }
   
-  option = {
-    name = EVT_8029721_A
-	any_pop = { militancy = -0.5 }
-  }
+    option = {
+	  name = EVT_8029701_B
+	  prestige = -10
+	  any_pop = { limit = { location = { is_core = ZAN } } militancy = 10 }
+	  # TODO ZAN UDI
+	  ai_chance = { factor = 0 }
+    }	
+	
 }
+
+country_event = {
+	id = 8029702
+	title = EVT_8029702_NAME # Zanzibar Revolution
+	desc = EVT_8029702_DESC
+	picture = "zanzibar_revolution" 
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ZAN
+		is_vassal = no
+		year = 1964 NOT = { year = 1990 }
+		exists = TAN
+		TAN = { is_vassal = no }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+    option = {
+	  name = EVT_8029700_A
+	  primary_culture = swahili
+	  badboy = 10
+	  add_country_modifier = { name = ethnic_cleansing duration = 350 }
+	  ENG = { diplomatic_influence = { who = ZAN value = -100 } } 
+  	  ai_chance = { factor = 100 }
+    }
+	
+    option = {
+	  name = EVT_8029700_B
+	  prestige = -10
+	  any_pop = { limit = { culture = swahili } militancy = 10 }
+	  ai_chance = { factor = 0 }
+    }	
+	
+}
+
+country_event = {
+	id = 8029720
+	title = EVT_8029720_NAME # Union of Tanganyika and Zanzibar
+	desc = EVT_8029720_DESC
+	picture = "nwo2_tanzania" 
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TAN
+		is_vassal = no
+		year = 1964 NOT = { year = 1990 }
+		exists = ZAN
+		ZAN = { ai = yes NOT = { government = hms_government } is_vassal = no part_of_sphere = no  }
+	}
+	
+	mean_time_to_happen = { months = 12 }
+	
+    option = {
+	  name = EVT_8029720_A
+	  inherit = ZAN
+  	  ai_chance = { factor = 100 }
+    }
+
+    option = {
+	  name = EVT_8029720_B
+	  prestige = -5
+    }
+	
+}
+

@@ -98,3 +98,118 @@ country_event = {
   }
 
 }
+
+
+
+
+
+
+#
+# Botswana 
+#
+country_event = { # Botswana Independence
+  id = 8012670
+  title = EVT_8012670_NAME 
+  desc = EVT_8012670_DESC
+  picture = "botswana_independance"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+	owns = 2074
+	NOT = { exists = BOT }
+	OR = { 
+		exists = ZAM
+		exists = ZIM
+	}
+   }
+
+	mean_time_to_happen = { months = 3 }
+	
+    option = {
+	  name = EVT_8012670_A
+	  prestige = 10
+	  release = BOT
+	  diplomatic_influence = { who = BOT value = 100 } 
+	  create_alliance = BOT
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8012670_B
+	  prestige = -10
+	  any_pop = { limit = { location = { is_core = BOT } } militancy = 10 }
+	  # TODO BOT UDI
+	  ai_chance = { factor = 0 }
+    }
+}
+#
+# Lesotho
+#
+country_event = { # Lesotho Independence
+  id = 8012680
+  title = EVT_8012680_NAME
+  desc = EVT_8012680_DESC
+  picture = "lesotho_independance"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+	is_our_vassal = LES
+	OR = { 
+		exists = BOT
+		exists = ZIM
+	}
+  }
+
+  mean_time_to_happen = { months = 3 }
+	
+    option = {
+	  name = EVT_8012680_A
+	  prestige = 10
+	  release = LES
+	  diplomatic_influence = { who = LES value = 100 } 
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8012680_B
+	  prestige = -10
+	  ai_chance = { factor = 0 }
+    }
+}
+#
+# Swaziland 
+#
+country_event = { # Swaziland Independence
+  id = 8012690
+  title = EVT_8012690_NAME
+  desc = EVT_8012690_DESC
+  picture = "swaziland_independance"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+	is_our_vassal = SWA
+	OR = { 
+		exists = BOT
+		exists = ZIM
+	}
+   }
+
+	mean_time_to_happen = { months = 12 }
+	
+    option = {
+	  name = EVT_8012690_A
+	  prestige = 10
+	  release = SWA
+	  diplomatic_influence = { who = SWA value = 100 } 
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8012690_B
+	  prestige = -10
+	  ai_chance = { factor = 0 }
+    }
+}
