@@ -1,25 +1,190 @@
-country_event = {
-  id = 8012212
-  title = EVT_8012212_NAME
-  desc = EVT_8012212_DESC
-  picture = "nwo2_rhodesian_udi"
+country_event = { # Federation of Rhodesia and Nyasaland
+  id = 8012200
+  title = EVT_8012200_NAME
+  desc = EVT_8012200_DESC
+  picture = "rhodesia_and_nyasaland"
   fire_only_once = yes
 
   trigger = {
-    tag = RHO
-    year = 1965 NOT = { year = 1975 }
-    OR = { government = hms_government government = democracy }
+    tag = ENG
+    year = 1953 NOT = { year = 1990 }
+    OR = { 
+		AND = { is_our_vassal = RHO exists = RHO }
+		AND = { owns = 2068 NOT = { exists = RHO } } # Harare
+	}
+	owns = 2067 # Lilongwe
+	owns = 2012 # Lusaka
+	war = no
   }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
-    name = EVT_8012212_A
-	any_pop = { militancy = 0.5 }
-	overlord = { release_vassal = THIS } 
-	government = populist_dictatorship
+    name = EVT_8012200_A
+	prestige = 10
+	badboy = -2
+	release_vassal = RHO
+	RHO = { country_event = 8012201 }
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8012200_B
+	prestige = -5
+	ai_chance = { factor = 0 }
   }
 }
+country_event = { # Federation of Rhodesia and Nyasaland
+  id = 8012201
+  title = EVT_8012200_NAME
+  desc = EVT_8012200_DESC
+  picture = "rhodesia_and_nyasaland"
+  fire_only_once = yes
+
+  option = {
+    name = EVT_8012200_A
+	prestige = 10
+	badboy = -2
+	ENG = { any_owned = { limit = { OR = { is_core = MLW is_core = ZAM } } secede_province = RHO } }
+	release_vassal = ZIM
+	release_vassal = MLW
+	MLW = { government = hms_government primary_culture = white_anglo }
+	ZAM = { government = hms_government primary_culture = white_anglo }
+  }
+}
+country_event = {
+	id = 8012210
+	title = EVT_8012210_NAME # Independence of Zambia and Malawi
+	desc = EVT_8012210_DESC
+	picture = "independence_zambia" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		owns = 2067 # Lilongwe
+		owns = 2012 # Lusaka
+		year = 1963 NOT = { year = 1990 }
+		exists = TAN
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+    option = {
+	  name = EVT_8012210_A
+	  prestige = 10
+	  release = ZAM
+	  release = MLW
+	  diplomatic_influence = { who = ZAM value = 100 } 
+	  diplomatic_influence = { who = MLW value = 100 } 
+  	  ai_chance = { factor = 100 }
+    }
+  
+  option = {
+	name = EVT_8012210_B
+	prestige = -10
+	any_pop = { limit = { location = { OR = { is_core = ZAM is_core = MLW } } } militancy = 10 }
+	# TODO ZAM and MLW UDI
+	ai_chance = { factor = 0 }
+  }	
+}
+country_event = {
+	id = 8012211
+	title = EVT_8012210_NAME # Independence of Zambia and Malawi
+	desc = EVT_8012210_DESC
+	picture = "independence_zambia" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		exists = ZAM
+		exists = MLW
+		exists = RHO
+		is_our_vassal = RHO
+		ZAM = { vassal_of = RHO }
+		MLW = { vassal_of = RHO }
+		year = 1963 NOT = { year = 1990 }
+		exists = TAN
+	}
+	
+	mean_time_to_happen = { months = 3 }
+
+    option = {
+	  name = EVT_8012210_A
+	  RHO = { country_event = 8012212 }
+  	  ai_chance = { factor = 100 }
+    }
+    option = {
+	  name = EVT_8012210_B
+	  prestige = -10
+	  any_pop = { limit = { location = { OR = { is_core = ZAM is_core = MLW } } } militancy = 10 }
+	  # TODO ZAM and MLW UDI
+	  ai_chance = { factor = 0 }
+    }	
+}
+country_event = { # Unilateral Declaration of Independence
+  id = 8012212
+  title = EVT_8012212_NAME
+  desc = EVT_8012212_DESC
+  picture = "nwo2_rhodesian_udi"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8012212_A
+	any_pop = { militancy = 0.5 }
+	release = ZAM
+    release = MLW
+	ZAM = { primary_culture = black_anglo }
+	MLW = { primary_culture = chewa }
+	overlord = { release_vassal = THIS country_event = 8012213 } 
+	badboy = 5
+	government = populist_dictatorship
+  }
+  option = {
+    name = EVT_8012212_B
+	any_pop = { militancy = 0.5 }
+    release = MLW
+	MLW = { primary_culture = chewa }
+	overlord = { release_vassal = THIS country_event = 8012213 } 
+	badboy = 20
+	government = populist_dictatorship
+  }  
+  option = {
+    name = EVT_8012212_C
+	any_pop = { militancy = 0.5 }
+	release = ZAM
+    release = MLW
+	ZAM = { primary_culture = black_anglo }
+	MLW = { primary_culture = chewa }
+	overlord = { release_vassal = THIS country_event = 8012213 } 
+	government = democracy
+	primary_culture = shona
+	change_tag = ZIM
+  }
+  
+}
+country_event = {
+  id = 8012213
+  title = EVT_8012212_NAME
+  desc = EVT_8012212_DESC
+  picture = "nwo2_rhodesian_udi"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8012213_A
+	add_casus_belli = { target = RHO type = install_democracy months = 24 }
+	random_country = { limit = { tag = ZAM vassal_of = RHO } war = { target = RHO attacker_goal = { casus_belli = release_puppet } defender_goal = { casus_belli = status_quo }  } }
+	ai_chance = { factor = 0 }
+  }
+  option = {
+    name = EVT_8012213_A
+	prestige = -10
+	add_casus_belli = { target = RHO type = install_democracy months = 24 }
+	ai_chance = {factor = 100 }
+}  
+  
+}
+
 country_event = {
   id = 8012214
   title = EVT_8012214_NAME
@@ -29,7 +194,8 @@ country_event = {
 
   trigger = {
     tag = RHO
-    year = 1978 NOT = { year = 1986 }
+    OR = { government = democracy year = 1978 }
+	NOT = { year = 1990 }
   }
 
   mean_time_to_happen = { months = 12 }
@@ -37,7 +203,9 @@ country_event = {
   option = {
     name = EVT_8012214_A
 	government = democracy
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.3 } } }
+	primary_culture = shona
+	change_tag = ZIM
+	release = ZAM
 	ai_chance = { factor = 100 }
   }
 
