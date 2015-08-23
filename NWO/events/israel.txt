@@ -772,8 +772,8 @@ country_event = {
 
   option = {
     name = EVT_8007683_A
-	random_country = { limit = { owns = 920 NOT = { owns = 1756 } tag = ISR } EGY = { war = { target = ISR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } } }
-	random_country = { limit = { owns = 1756 tag = ISR } EGY = { war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 1756 } defender_goal = { casus_belli = status_quo }} } }
+	random_country = { limit = { owns = 920 ISR = { owns = 1756 } tag = EGY } war = { target = ISR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } }
+	random_country = { limit = { ISR = { owns = 1756 } tag = EGY } war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 1756 } defender_goal = { casus_belli = status_quo } } }
 	ISR = { country_event = 8007684 } 
 	SYR = { country_event = 8007685 }
 	ai_chance = { factor = 100 }
