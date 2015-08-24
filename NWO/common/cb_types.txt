@@ -50,6 +50,7 @@ gunboat
 free_peoples
 liberate_country
 install_sectarian_regime
+install_populist_regime
 install_communist_gov_cb
 uninstall_communist_gov_cb
 acquire_state 
@@ -1168,9 +1169,8 @@ install_populist_regime = {
 		NOT = { government = populist_dictatorship }
 		NOT = { is_our_vassal = THIS }
 		THIS = {
-			NOT = {
-				war_policy = pacifism
-			}
+			NOT = { war_policy = pacifism }
+			NOT = { government = proletarian_dictatorship }
 		}
 		OR = {                        
 			NOT = { relation = { who = THIS value = -50 } }
@@ -1224,9 +1224,8 @@ install_sectarian_regime = {
 		NOT = { government = nationalist_dictatorship }
 		NOT = { is_our_vassal = THIS }
 		THIS = {
-			NOT = {
-				war_policy = pacifism
-			}
+			NOT = { war_policy = pacifism }
+			NOT = { government = proletarian_dictatorship }
 		}
 		OR = {                        
 			NOT = { relation = { who = THIS value = -50 } }
