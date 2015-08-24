@@ -1,3 +1,32 @@
+country_event = { # Guyana Independence
+  id = 8006500
+  title = EVT_8006500_NAME
+  desc = EVT_8006500_DESC
+  picture = "guyana_independence"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1966 NOT = { year = 1990 }
+	owns = 2239 # Georgetown
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8006500_A
+	release = GUY
+	diplomatic_influence = { who = ENG value = 150 }
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8006500_B
+	badboy = 2
+	prestige = -10
+	any_pop = { limit = { location = { is_core = GUY } }  militancy = 10 }
+	ai_chance = { factor = 0 }
+  }
+}
 country_event = {
   id = 8006506
   title = EVT_8006506_NAME
@@ -36,5 +65,36 @@ country_event = {
   option = {
     name = EVT_8006518_A
 	any_pop = { militancy = 0.1 }
+  }
+}
+
+country_event = { # Suriname Independence
+  id = 8006550
+  title = EVT_8006550_NAME
+  desc = EVT_8006550_DESC
+  picture = "suriname_independence"
+  fire_only_once = yes
+
+  trigger = {
+    tag = NET
+    year = 1973 NOT = { year = 1990 }
+	owns = 2240 # Paramaribo
+	war = no
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8006550_A
+	release = SUR
+	SUR = { any_pop = { limit = { NOT = { strata = poor } } move_pop = 375 } } # Amsterdam
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8006550_B
+	badboy = 2
+	prestige = -10
+	any_pop = { limit = { location = { is_core = SUR } }  militancy = 10 }
+	ai_chance = { factor = 0 }
   }
 }

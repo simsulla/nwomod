@@ -1,44 +1,101 @@
-country_event = {
+country_event = { # Form the West Indies Federation
 	id = 1002700
-
-	title = EVT_1002621_NAME
-	desc = EVT_1002621_DESC
-	picture = "newfoundland"
-
+	title = EVT_1002700_NAME
+	desc = EVT_1002700_DESC
+	picture = "west_indies_federation"
 	fire_only_once = yes
 	
 	trigger = {
 		tag = ENG
-		74 = { controlled_by = ENG }
-		NOT = { 74 = { has_province_modifier = nationalist_agitation } }
+		owns = 2237 # Trinidad
+		OR = { exists = TAN exists = GHA }
 		war = no
-		CAN = { war = no }
 	}
 
-	mean_time_to_happen = {
-		months = 12
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = EVT_1002700_A # Form the Federation
+		ai_chance = { factor = 100 }
+		prestige = 5
+		any_owned = { limit = { OR = { is_core = AAB is_core = BAR is_core = CYI is_core = COM is_core = JAM is_core = GRD is_core = STL is_core = SVG is_core = SKN is_core = TAT is_core = TCI } } add_core = XCC }
+		release_vassal = XCC
+		diplomatic_influence = { who = XCC value = 200 }
 	}
 
 	option = {
-		name = EVT_1002621_A # Newfoundland Responsible government
+		name = EVT_1002700_B # Stay integrated part of the empire
 		ai_chance = { factor = 0 }
-		prestige = 5
-		release_vassal = NFL
+		any_pop = { limit = { culture = black_anglo } militancy = 2 }
+		prestige = -5
 	}
+
+}
+ 
+country_event = { # Dissolve the West Indies Federation
+	id = 1002701
+	title = EVT_1002701_NAME
+	desc = EVT_1002701_DESC
+	picture = "west_indies_federation"
+	fire_only_once = yes
+	
+	trigger = {
+		is_our_vassal = XCC
+		tag = ENG
+		war = no
+		XCC = { war = no ai = yes }
+		year = 1962	NOT = { year = 1990 }
+	}
+
+	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = EVT_1002621_B # Integrate with Canada
+		name = EVT_1002701_A # Dissolve the Federation
 		ai_chance = { factor = 100 }
-		release = CAN
-		CAN = { country_event = 8002622 }
+		prestige = 5
+		inherit = XCC
+		any_owned = { limit = { OR = { is_core = AAB is_core = BAR is_core = CYI is_core = COM is_core = JAM is_core = GRD is_core = STL is_core = SVG is_core = SKN is_core = TAT is_core = TCI } } remove_core = XCC }
+		XCC = { country_event = 1002702 }
 	}
 
 	option = {
-		name = EVT_1002621_C # stay integrated part of the empire
+		name = EVT_1002701_B # Keep the Federation
 		ai_chance = { factor = 0 }
+		XCC = { any_pop = { limit = { culture = black_anglo } militancy = 5 } }
 		prestige = -5
-		74 = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
 	}
 
 }
 
+country_event = { # Dissolve the West Indies Federation
+	id = 1002702
+	title = EVT_1002701_NAME
+	desc = EVT_1002701_DESC
+	picture = "west_indies_federation"
+	fire_only_once = yes
+
+	trigger = {
+		is_vassal = no
+		tag = XCC
+		war = no
+		year = 1962	NOT = { year = 1990 }
+		part_of_sphere = no
+	}
+
+	option = {
+		name = EVT_1002701_A # Dissolve the Federation
+		ai_chance = { factor = 100 }
+		any_country = { limit = { OR = { tag = AAB tag = BAR tag = COM tag = JAM tag = GRD tag = STL tag = SVG tag = SKN } } country_event = 8212010 }
+		any_owned = { limit = { OR = { is_core = CYI is_core = TCI } } secede_province = ENG }
+		change_tag = TAT
+		overlord = { release_vassal = TAT }
+	}
+
+	option = {
+		name = EVT_1002701_B # Keep the Federation
+		ai_chance = { factor = 0 }
+		XCC = { any_pop = { limit = { culture = black_anglo } militancy = 5 } }
+		prestige = -5
+	}
+
+}
