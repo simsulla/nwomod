@@ -1,5 +1,20 @@
 political_decisions = {
 
+	canada_caribbean  = { 
+		picture = "canada_caribbean"
+		potential = {
+			tag = CAN
+			exists = XCC
+			XCC = { ai = yes }
+		}
+		allow = {
+			is_greater_power = yes
+			XCC = { is_vassal = no in_sphere = THIS }
+		}
+		effect = {
+			inherit = XCC
+		}		
+	}
 #
 # Member Decisions: 	
 #
