@@ -1185,15 +1185,16 @@ country_event = {
 
   trigger = {
     tag = RUS
-    year = 1960
+    year = 1960 
     exists = HND
-	relation = { who = RUS value = 0 }
+	government = proletarian_dictatorship
+	relation = { who = HND value = 0 }
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8014272_A
-	country_event = 8007275 
+	HND = { country_event = 8007275 }
   }
 }
