@@ -36,7 +36,7 @@ country_event = {
     name = EVT_8500601_B
 	money = -2000 
 	clr_global_flag = divided_berlin 
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
   }
 }
 
@@ -56,7 +56,7 @@ country_event = {
     name = EVT_8500602_B
 	RUS = { country_event =  { id = 8500603 days = 30 } } 
 	clr_global_flag = divided_berlin 
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
   }
 }
 country_event = {
@@ -88,7 +88,7 @@ country_event = {
     name = EVT_8500603_C
 	relation = { who = USA value = 100 } 
 	country_event = 8500608 
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 15 }
   }
 
@@ -128,7 +128,7 @@ country_event = { # Airlifts are hampered further
     name = EVT_8500604_B
 	country_event =  { id = 8500607 days = 30 } 
 	clr_global_flag = divided_berlin 
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -151,7 +151,7 @@ country_event = { # Putsch is organized
     name = EVT_8500605_B
 	RUS = { country_event = 8500607 }
 	clr_global_flag = divided_berlin 
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -186,7 +186,7 @@ country_event = { # End of Berlin Airlift RUS
 	any_pop = { militancy = 0.3 }
 	USA = { country_event = 8500608 }
 	GER = { country_event = 8500609 }
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
   }
 }
 country_event = { # End of Berlin Airlift USA

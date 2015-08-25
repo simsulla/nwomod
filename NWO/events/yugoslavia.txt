@@ -98,7 +98,7 @@ country_event = {
 	any_pop = { militancy = 0.3 }
 	relation = { who = YUG value = -100 } 
 	set_global_flag = tito_stalin_split 
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -164,7 +164,7 @@ country_event = {
   option = {
     name = EVT_8022731_A
 	any_pop = { militancy = -0.7 }
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	country_event = 8225000  # dissolution_of_the_eastern_bloc.txt
 	YUG = { country_event = 8022734 } 
   }
@@ -188,7 +188,7 @@ country_event = {
   option = {
     name = EVT_8022732_A
 	any_pop = { militancy = -0.7 }
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
   }
 }
 country_event = {
@@ -220,7 +220,7 @@ country_event = {
 	release = POL 
 	release = AUS 
 	release = GRE 
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	country_event = 8225001 
   }
 }

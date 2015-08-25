@@ -63,7 +63,7 @@ country_event = {
   option = {
     name = EVT_8500203_B
 	any_pop = { militancy = 1.0 }
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -86,7 +86,7 @@ country_event = {
     name = EVT_8500204_B
 	any_pop = { militancy = 2.0 }
 	relation = { who = RUS value = 100 } 
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 
@@ -125,7 +125,7 @@ country_event = {
     name = EVT_8500205_B
 	any_pop = { militancy = 0.3 }
 	clr_global_flag = missiles_in_cuba 
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -148,7 +148,7 @@ country_event = {
     name = EVT_8500206_B
 	any_pop = { militancy = 1.5 }
 	clr_global_flag = missiles_in_cuba 
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }	
   }
 }
@@ -171,7 +171,7 @@ country_event = {
 	badboy = -10 
 	relation = { who = USA value = 100 } 
 	clr_global_flag = missiles_in_cuba 
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }
   }
 
@@ -202,7 +202,7 @@ country_event = {
     name = EVT_8500208_B
 	badboy = -10 
 	relation = { who = RUS value = 100 } 
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 
@@ -281,7 +281,7 @@ country_event = {
     name = EVT_8500211_A
 	clr_global_flag = divided_berlin 
 	clr_global_flag = missiles_in_cuba 
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -335,7 +335,7 @@ country_event = {
   option = {
     name = EVT_8500213_A
 	any_pop = { militancy = 0.5 }
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
   }
 }
 country_event = {

@@ -207,22 +207,20 @@ country_event = {
   option = {
     name = EVT_8014250_A
     define_general = { name = "Nikita Khrushchev" personality = energetic background = no_background }
-	country_event =  { id = 8014251 days = 1 } 
-	country_event = { id = 8014206 days = 100 } 
+	country_event =  { id = 8014251 days = 10 } 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8014250_B
     define_general = { name = "Vyacheslav Molotov" personality = energetic background = no_background }
-	country_event =  { id = 8014251 days = 1 } 
-	country_event = { id = 8014206 days = 100 } 
+	country_event =  { id = 8014251 days = 10 } 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8014250_C
-	country_event =  { id = 8014251 days = 1 } 
+	country_event =  { id = 8014251 days = 10 } 
 	country_event = { id = 8014254 days = 30 } 
 	ai_chance = { factor = 100 }
   }
@@ -230,8 +228,7 @@ country_event = {
   option = {
     name = EVT_8014250_D
     define_general = { name = "Georgy Zhukov" personality = energetic background = no_background }
-    country_event =  { id = 8014251 days = 1 } 
-	country_event = { id = 8014206 days = 100 } 
+    country_event =  { id = 8014251 days = 10 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -246,7 +243,7 @@ country_event = {
   option = {
     name = EVT_8014251_A
 	any_pop = { militancy = 1.0 }
-	country_event =  { id = 8014253 days = 1 } 
+	country_event = 8014253 
 	ai_chance = { factor = 100 }
   }
 
@@ -274,7 +271,6 @@ country_event = {
 	set_global_flag = breakup_of_ussr 
 	country_event = 8014206 
 	ai_chance = { factor = 0 }
-	#TODO any_owned = { limit = { NOT = { is_core = THIS } } any_core = { limit = { NOT = { is_core = THIS } } country_event = 123123123 } } }  #- release = THIS
   }
 }
 country_event = {
@@ -461,7 +457,7 @@ country_event = {
     name = EVT_8014261_A
 	inherit = DDR 
 	neutrality = yes
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	RUS = { country_event = 8014262 }
   }
 }
@@ -562,7 +558,7 @@ country_event = {
   option = {
     name = EVT_8014216_A
 	any_pop = { militancy = 1.0 }
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -792,7 +788,7 @@ country_event = {
   option = {
     name = EVT_8014228_A
 	any_pop = { militancy = 1.0 }
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -861,6 +857,7 @@ country_event = {
 
   trigger = {
     tag = RUS
+	government = proletarian_dictatorship
     year = 1984 NOT = { year = 1990 }
   }
 
@@ -869,8 +866,7 @@ country_event = {
   option = {
     name = EVT_8014237_A
 	define_general = { name = "Mikhail Gorbachev" personality = energetic background = no_background }
-	set_global_flag = lower_soviet_bloc_coherence 
-	add_country_modifier = { name = dour_economist duration = 3605 }
+	RUS  = { country_event = 8225001 } 
 	set_country_flag = mikhail_gorbachev
 	ai_chance = { factor = 100 }
   }
@@ -879,7 +875,7 @@ country_event = {
     name = EVT_8014237_B
 	add_country_modifier = { name = dour_economist duration = 3605 }
 	any_pop = { militancy = 1.5 }
-	country_event =  { id = 8014248 days = 1 } 
+	country_event = 8014248 
 	ai_chance = { factor = 0 }
   }
 }
@@ -893,13 +889,14 @@ country_event = {
   trigger = {
     tag = RUS
     has_global_flag = autumn_of_nations
+	NOT = { has_global_flag = august_coup }
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8014239_A
-	country_event =  { id = 8014248 days = 1 } 
+	add_country_modifier = { name = great_depression duration = 3650 }
 	ai_chance = { factor = 100 }
   }
 
@@ -907,7 +904,7 @@ country_event = {
     name = EVT_8014239_B
 	any_pop = { militancy = 2.0 }
 	add_country_modifier = { name = great_depression duration = 3650 }
-	clr_global_flag = autumn_of_nations 
+	country_event = 8014248 
 	ai_chance = { factor = 0 }
   }
 }
@@ -981,11 +978,12 @@ country_event = {
 
   trigger = {
     tag = RUS
-    year = 1988
+	government = proletarian_dictatorship
+    year = 1970
     check_variable = { which = soviet_control_cee value = 6 }
   }
 
-  mean_time_to_happen = { months = 6  }
+  mean_time_to_happen = { months = 70  }
 
   option = {
     name = EVT_8014243_A
@@ -1033,12 +1031,13 @@ country_event = {
 
   trigger = {
     tag = RUS
+	government = proletarian_dictatorship
     year = 1991
     NOT = { has_global_flag = autumn_of_nations }
-    average_militancy  = 5
+    average_militancy  = 8
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 6  }
 
   option = {
     name = EVT_8014245_A
@@ -1055,11 +1054,11 @@ country_event = {
 
   trigger = {
     tag = RUS
-    year = 1990
+	government = proletarian_dictatorship
     has_global_flag = autumn_of_nations
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 6  }
 
   option = {
     name = EVT_8014246_A
@@ -1069,6 +1068,9 @@ country_event = {
 	LIT = { country_event = 8014247 }
 	LAT = { country_event = 8014247 }
 	EST = { country_event = 8014247 }
+   add_casus_belli = { target = LIT type = conquest months = 24 }
+   add_casus_belli = { target = LAT type = conquest months = 24 }
+   add_casus_belli = { target = EST type = conquest months = 24 }
   }
 }
 country_event = {
@@ -1082,6 +1084,7 @@ country_event = {
 
   option = {
     name = EVT_8014247_A
+	USA = { diplomatic_influence = { who = THIS value = 200 } }
 	any_pop = { militancy = -5.0 }
   }
 }
@@ -1094,7 +1097,9 @@ country_event = {
 
   option = {
     name = EVT_8014248_A
-	any_pop = { militancy = 4.0 }
+	any_pop = { militancy = 2.0 }
+	clr_global_flag = autumn_of_nations 
+	set_global_flag = august_coup
 	ai_chance = { factor = 100 }
   }
 
@@ -1105,7 +1110,7 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
-country_event = {
+country_event = { # Belavezha Accords
   id = 8014249
   title = EVT_8014249_NAME
   desc = EVT_8014249_DESC
@@ -1114,13 +1119,13 @@ country_event = {
 
   trigger = {
     tag = RUS
-    year = 1991
     has_global_flag = autumn_of_nations
+	has_global_flag = august_coup
     war = no
 	government = proletarian_dictatorship
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 5  }
 
   option = {
     name = EVT_8014249_A
@@ -1138,7 +1143,7 @@ country_event = {
 	country_event = 8014271
   }
 }
-country_event = {
+country_event = { # Fall of USSR
   id = 8014271
   title = EVT_8014271_NAME
   desc = EVT_8014271_DESC
@@ -1149,6 +1154,7 @@ country_event = {
     name = EVT_8014271_A
 	any_pop = { militancy = -2.5 }
 	government = democracy
+	political_reform = registered_voting
   }
 }
 country_event = {
@@ -1185,7 +1191,7 @@ country_event = {
 
   trigger = {
     tag = RUS
-    year = 1960 
+    year = 1960  NOT = { year = 1990 }
     exists = HND
 	government = proletarian_dictatorship
 	relation = { who = HND value = 0 }

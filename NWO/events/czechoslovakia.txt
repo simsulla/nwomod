@@ -68,7 +68,7 @@ country_event = {
 	relation = { who = USA value = 50 } 
 	relation = { who = ENG value = 50 } 
 	relation = { who = FRA value = 50 } 
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	RUS = { country_event = 8023121 } 
 	ai_chance = { factor  = 50 }
   }
@@ -191,7 +191,7 @@ country_event = {
 	any_pop = { militancy = 1.0 }
 	release = CZH
 	CZH = { country_event = 8023122 }
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor  = 0 }
   }
 }
@@ -249,7 +249,7 @@ country_event = {
 
   option = {
     name = EVT_8023124_A
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	CZH = { country_event = 8023125 }
   }
 }

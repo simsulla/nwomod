@@ -73,7 +73,7 @@ country_event = {
     name = EVT_8225000_A
     change_variable = {
 		which = soviet_control_cee
-		value = 1
+		value = -1
 	}
   }
 
@@ -89,7 +89,7 @@ country_event = {
     name = EVT_8225000_A
     change_variable = {
 		which = soviet_control_cee
-		value = -1
+		value = 1
 	}
   }
 }
@@ -186,11 +186,10 @@ country_event = {
 	government = proletarian_dictatorship
     year = 1963 
     OR = {
-		has_global_flag = event_fired_8014253 # soviet_union.txt
+		has_global_flag = breakup_of_ussr # DH alt history
 		has_global_flag = novus_ordo_seclorum
     }
   }
-  immediate = { set_global_flag = event_fired_8225005 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -212,8 +211,8 @@ country_event = {
   trigger = {
     tag = RUS
 	government = proletarian_dictatorship
-    NOT = { has_global_flag = event_fired_8225005 }
-    has_global_flag = autumn_of_nations # soviet_union.txt
+    has_global_flag = autumn_of_nations 
+	OR = { exists = LAT exists = LIT exists = EST }
   }
 
   mean_time_to_happen = { months = 1  }

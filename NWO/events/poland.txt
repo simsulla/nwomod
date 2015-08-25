@@ -39,7 +39,7 @@ country_event = {
   option = {
     name = EVT_8023217_A
 	any_pop = { militancy = -0.5 }
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	RUS = { country_event =  8023237 } 
 	ai_chance = { factor = 100 }
   }
@@ -251,7 +251,7 @@ country_event = {
   option = {
     name = EVT_8023233_A
 	any_pop = { militancy = -1.0 }
-	set_global_flag = lower_soviet_bloc_coherence 
+	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -344,7 +344,7 @@ country_event = {
     name = EVT_8023237_B
 	any_pop = { militancy = 1.0 }
 	POL = { country_event = 8023239 } 
-	set_global_flag = lower_soviet_bloc_coherence_2 
+	RUS  = { country_event = 8225001 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -397,7 +397,7 @@ country_event = {
   option = {
     name = EVT_8023240_A
 	create_vassal = POL 
-	set_global_flag = raise_soviet_bloc_coherence 
+	RUS  = { country_event = 8225000 } 
 	country_event = 8023241 
   }
 }
