@@ -16,8 +16,7 @@ country_event = {
   trigger = {
     tag = USA
     year = 1949
-	NOT = { year = 1950 } 
-    has_global_flag = event_fired_8204044 # Berlin Blockade
+	NOT = { year = 1990 } 
     exists = DDR
     has_global_flag = cold_war
   }
@@ -138,7 +137,7 @@ country_event = { # Putsch is organized
   title = EVT_8500605_NAME
   desc = EVT_8500605_DESC
   picture = "nwo2_berlin_airlift"
-  is_triggered_only = yes
+  is_triggered_only = yes # USA
 
   option = {
     name = EVT_8500605_A
@@ -164,7 +163,7 @@ country_event = { # Berlin Airlift gets hot
 
   option = {
     name = EVT_8500606_A
-	war = RUS # TODO what war?
+	# war = RUS # TODO what war?
 	ai_chance = { factor = 0 }
   }
 

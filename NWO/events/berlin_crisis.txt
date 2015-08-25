@@ -11,7 +11,8 @@ country_event = {
     exists = GER
     exists = DDR
     has_global_flag = divided_berlin
-    USA = { owns = 549 }# Berlin
+    NOT = { owns = 549 }# Berlin
+    NOT = { DDR = { owns = 549 } }# Berlin
   }
 
   mean_time_to_happen = { months = 1  }
