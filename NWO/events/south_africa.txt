@@ -119,8 +119,8 @@ country_event = { # Botswana Independence
 	owns = 2074
 	NOT = { exists = BOT }
 	OR = { 
-		exists = ZAM
-		exists = ZIM
+		AND = { exists = ZAM is_vassal = no }
+		AND = { exists = ZIM is_vassal = no }
 	}
    }
 
