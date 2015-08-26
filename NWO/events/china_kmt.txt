@@ -545,10 +545,12 @@ country_event = {
   title = EVT_8002948_NAME
   desc = EVT_8002948_DESC
   picture = "nwo2_kmt_end_of_instability"
+  fire_only_once = yes
 
   trigger = {
     tag = KMT
 	year = 1960 NOT = { year = 1990 }
+	war = no
   }
 
   option = {

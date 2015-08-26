@@ -197,7 +197,7 @@ country_event = {
 		exists = yes
 		war = no
 		capital_scope = { NOT = { province_id = 1612 } }
-		any_owned_province = { province_id = 1612 }
+		owns = 1612
 	}
 
 	option = {				
@@ -221,10 +221,10 @@ country_event = {
 		war = yes
 		war_with = CHI
 		OR = { 
-			CHI = { brigades_compare = 0.5 }
-			national_provinces_occupied = 0.5
+			CHI = { brigades_compare = 0.4 }
+			national_provinces_occupied = 0.8
 		}
-		year = 1948
+		NOT = { year = 1952 }
 		controls  = 1485 # we must still control Taibei
 	}
 	

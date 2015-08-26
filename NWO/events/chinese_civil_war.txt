@@ -21,6 +21,7 @@ country_event = {
   option = {
     name = "EVT_8200000_A"
 	release = CHI
+	prestige = 10
 	CHI = { country_event = 8200005 } 
 	ai_chance = { factor = 100 }
   }
@@ -28,8 +29,10 @@ country_event = {
   option = {
     name = "EVT_8200000_B"
 	relation = { who = CHI value = -100 } 
+	relation = { who = KMT value = -100 } 
 	badboy = 10 
-	any_pop = { militancy = 0.5 }
+	prestige = -50
+	any_pop = { limit = { culture = chinese } militancy = 5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -714,49 +717,13 @@ country_event = {
   id = 8200101
   title = "EVT_8200101_NAME"
   desc = "EVT_8200101_DESC"
-  picture = "nwo2_kmt_flees_to_taiwan"
+  picture = "nwo2_chiang_crying"
   is_triggered_only = yes #KMT
 
 
   option = {
     name = "EVT_8200101_A"
 	CHI = { country_event = 8200104 }
-  }
-}
-country_event = {
-  id = 8200102
-  title = "EVT_8200102_NAME"
-  desc = "EVT_8200102_DESC"
-  picture = "nwo2_chiang_crying"
-  fire_only_once = yes
-
-  trigger = {
-	tag = KMT
-	exists = yes
-	war = yes
-	war_with = CHI
-	CHI = { brigades_compare = 0.5 }
-	national_provinces_occupied = 0.5
-	year = 1948
-	NOT = { controls = 1485 } # we do not control Taibei
-  }
-
-  mean_time_to_happen = { months = 1  }
-
-  option = {
-    name = "EVT_8200102_A"
-	end_war = CHI
-	CHI = { 
-		country_event = 8200104 
-		inherit = KMT 
-	}
-	ai_chance = { factor = 100 }
-  }
-
-  option = {
-    name = EVT_8200102_B
-	any_pop = { militancy = 2.0 }
-	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -772,7 +739,7 @@ country_event = {
     tag = CHI
 	war = no
 	owns = 1612
-	NOT = { year = 1960 }
+	1612 = { is_capital = no } 
   }
 
   option = {
