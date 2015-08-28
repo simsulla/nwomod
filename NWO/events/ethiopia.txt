@@ -29,7 +29,7 @@ country_event = {
 			militancy = 2
 		}
 		release = ERI
-		ERI = { government = absolute_monarchy  }
+		ERI = { government = absolute_monarchy country_event = 800050  }
 		ETH = { create_vassal = ERI }
 	}
 	
@@ -127,7 +127,7 @@ country_event = {
   option = {
     name = EVT_8005303_B
 	define_general = { name = " Amha Selassie" personality = energetic background = no_background }
-	government = hms_government 
+	government = hms_government country_event = 800054 
 	ai_chance = { factor = 0 }
   }
 }
@@ -147,7 +147,7 @@ country_event = {
 
   option = {
     name = EVT_8005305_A
-	government = proletarian_dictatorship
+	government = proletarian_dictatorship country_event = 800052
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
 	ai_chance = { factor = 0 }
   }
@@ -155,7 +155,7 @@ country_event = {
   option = {
     name = EVT_8005305_B
 	any_pop = { militancy = 3.0 }
-	government = hms_government
+	government = hms_government country_event = 800054
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19 } } }
 	country_event =  { id = 8005306 days = 360 } 
 	ai_chance = { factor = 100 }
@@ -170,7 +170,7 @@ country_event = {
 
   option = {
     name = EVT_8005306_A
-	government = proletarian_dictatorship
+	government = proletarian_dictatorship country_event = 800052
 	relation = { who = USA value = -150 } 
 	relation = { who = ENG value = -150 } 
 	relation = { who = RUS value = 150 } 
@@ -193,7 +193,7 @@ country_event = {
 
   option = {
     name = EVT_8005309_A
-	government = democracy
+	government = democracy country_event = 800054
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
 	release = ERI
 	ai_chance = { factor = 100 }

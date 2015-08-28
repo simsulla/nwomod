@@ -39,7 +39,7 @@ country_event = { # Our control over the Empire weakens
 	OR = {
 		AND = { tag = ENG exists = HND NOT = { has_global_flag = end_colonialism_india } year = 1950 }
 		AND = { tag = NET NET = { NOT = { owns = 1413 } } NOT = { has_global_flag = end_colonialism_indonesia } year = 1952 }#Djakarta
-		AND = { tag = FRA exists = ALG ALG = { NOT= { government =nationalist_dictatorship } } NOT = { has_global_flag = end_colonialism_northafrica }  year = 1958 }
+		AND = { tag = FRA exists = ALG ALG = { NOT= { government = nationalist_dictatorship } } NOT = { has_global_flag = end_colonialism_northafrica }  year = 1958 }
 		AND = { tag = FRA exists = GUI GUI = { is_vassal = no } NOT = { has_global_flag = end_colonialism_africa }  year = 1958 }
 		AND = { tag = ENG exists = GHA GHA = { is_vassal = no } NOT = { has_global_flag = end_colonialism_africa }  year = 1960 }
 		AND = { tag = POR exists = MOZ MOZ = { is_vassal = no } NOT = { has_global_flag = end_colonialism_southafrica }  year = 1972 }
@@ -151,7 +151,7 @@ country_event = {
   option = {
     name = EVT_LIBERATE
 	FROM = { release_vassal = THIS }
-	government = hms_government
+	government = hms_government country_event = 800054
 	any_owned = { remove_province_modifier = colonial_promise remove_province_modifier = colonial_unrest  }
 	# note: we do not reduce militancy so a country that have had a very violent liberation 
 	# tend to remains violent at its core
@@ -202,7 +202,7 @@ country_event = {
 
   option = {
     name = EVT_FULLINDEPENDENCE_A
-	government = democracy
+	government = democracy country_event = 800054
 	overlord = { country_event = 8212009 }
   }
 }

@@ -69,7 +69,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		prestige = -20 
 		release = BUR
-		BUR = { government = democracy }
+		BUR = { government = democracy  country_event = 800054 }
 		remove_country_modifier = denied_independence
 	}
 	
@@ -113,7 +113,7 @@ country_event = {
 			militancy = 10
 		}
 		release_vassal = BUR
-		BUR = { government = hms_government }
+		BUR = { government = hms_government  country_event = 800054 }
 		remove_country_modifier = denied_independence
 	}
 	
@@ -172,7 +172,7 @@ country_event = {
 
   option = {
     name = "OK"
-	government = proletarian_dictatorship
+	government = proletarian_dictatorship  country_event = 800050
 	any_pop = { consciousness = 1.0 }
 	treasury = -2000 
   }

@@ -120,7 +120,7 @@ country_event = {
 		badboy = -1
 		release = TRI
 		diplomatic_influence = { who = TRI value = 100 }
-		TRI = { government = absolute_monarchy } 
+		TRI = { government = absolute_monarchy country_event = 800050 } 
 	}
 	
 	option = {
@@ -253,7 +253,7 @@ country_event = {
 
   option = {
     name = EVT_8008616_A
-	government = nationalist_dictatorship
+	government = nationalist_dictatorship country_event = 800050
   }
 }
 country_event = {
@@ -286,7 +286,7 @@ country_event = {
   trigger = {
     tag = TRI
     year = 1984 NOT = { year = 1990 }
-	government = nationalist_dictatorship
+	government = nationalist_dictatorship 
 	money = 2500 
   }
 

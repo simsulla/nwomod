@@ -15,7 +15,7 @@ country_event = {
 
   option = {
     name = EVT_8011211_A
-	government = presidential_dictatorship
+	government = presidential_dictatorship country_event = 800050
   }
 }
 country_event = {
@@ -36,14 +36,14 @@ country_event = {
   option = {
     name = EVT_8011215_A
 	relation = { who = USA value = -150 } 
-	government = presidential_dictatorship
+	government = presidential_dictatorship country_event = 800050
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8011215_B
 	any_pop = { militancy = 2.0 }
-	government = democracy
+	government = democracy country_event = 800054
 	ai_chance = { factor = 0 }
   }
 }
@@ -112,6 +112,6 @@ country_event = {
   option = {
     name = EVT_8011218_B
 	any_pop = { militancy = 2.0 }
-	government = democracy 
+	government = democracy country_event = 800054
   }
 }

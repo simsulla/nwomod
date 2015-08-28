@@ -16,8 +16,8 @@ country_event = {
   option = {
     name = OK
 	define_general = { name = "Ahmad al Hamid" personality = "energetic" background = "no_background" }
-	government = presidential_dictatorship
-  }
+	government = presidential_dictatorship country_event = 800050
+  } 
 }
 country_event = {
   id = 8018202
@@ -37,7 +37,7 @@ country_event = {
   option = {
     name = OK
 	define_general = { name = "Muhammad al-Badr" personality = "energetic" background = "no_background" }
-	government = presidential_dictatorship
+	government = presidential_dictatorship country_event = 800050
   }
 }
 country_event = {
@@ -60,7 +60,7 @@ country_event = {
 	define_general = { name = "Abdullah al-Sallal" personality = "energetic" background = "no_background" }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
-	government = nationalist_dictatorship
+	government = nationalist_dictatorship country_event = 800050
   }
 }
 country_event = {
@@ -203,7 +203,7 @@ country_event = { # Independence of South Yemen
 
   option = {
     name = EVT_8018211_A
-	government = proletarian_dictatorship
+	government = proletarian_dictatorship country_event = 800052
 	overlord = { 
 		country_event = 8018212
 	}
@@ -253,7 +253,7 @@ country_event = { # South Yemen Civil War
 
   option = {
     name = EVT_8018213_A 
-	government = populist_dictatorship
+	government = populist_dictatorship country_event = 800050
 	relation = { who = YEM value = 100 }
 	relation = { who = RUS value = -100 }
 	any_pop = { limit = { culture = sunni_arab } militancy = 2 }

@@ -165,7 +165,7 @@ country_event = {
 
   option = {
     name = EVT_8003311_A
-	government = populist_dictatorship
+	government = populist_dictatorship  country_event = 800050
   }
 }
 country_event = {
@@ -312,7 +312,7 @@ country_event = {
 
   option = {  # Lumumba is removed and soon will be killed
     name = EVT_8003335_A 
-	government = presidential_dictatorship
+	government = presidential_dictatorship  country_event = 800050
 	relation = { who = USA value = 200 } 
 	relation = { who = RUS value = -200 } 
 	KAT = { country_event = 8003336 }
@@ -323,7 +323,7 @@ country_event = {
     name = EVT_8003335_B
 	relation = { who = USA value = -200 } 
 	relation = { who = RUS value = 200 } 
-	government = presidential_dictatorship
+	government = presidential_dictatorship  country_event = 800050
 	ai_chance = { factor = 0 }
   }
 }
@@ -336,7 +336,7 @@ country_event = {
  
   option = {
     name = EVT_8003336_A
-	government = presidential_dictatorship
+	government = presidential_dictatorship  country_event = 800050
 	any_pop = { militancy = 0.3 }
   }
 }
@@ -443,7 +443,7 @@ country_event = {
   option = {
     name = EVT_8003341_A
 	change_tag_no_core_switch = CNG
-	government = proletarian_dictatorship
+	government = proletarian_dictatorship  country_event = 800052
 	RUS = { diplomatic_influence = { who = CNG value = 100 } }
   }
 }

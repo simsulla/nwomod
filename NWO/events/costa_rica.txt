@@ -17,13 +17,13 @@ country_event = {
     name = "EVT_8003402_A"
 	ai_chance = { factor = 100 }
 	define_general = { name = "Figueres" personality = energetic background = no_background }
-	government = presidential_dictatorship
+	government = presidential_dictatorship  country_event = 800050
   }
 
   option = {
     name = "EVT_8003402_B"
 	ai_chance = { factor = 0 }
-	government = presidential_dictatorship
+	government = presidential_dictatorship  country_event = 800050
 	any_pop = { militancy = 0.5 }
   }
 }
@@ -44,7 +44,7 @@ country_event = {
 
   option = {
     name = "EVT_8003403_A"
-	government = democracy
+	government = democracy  country_event = 800054
 	ai_chance = { factor = 100 }
   }
 

@@ -244,7 +244,7 @@ country_event = {
 		end_war = CHI
 		any_owned = { 
 			limit = { controlled_by = KMT province_id = 1485 }
-			capital = 1485
+			owner = { capital = 1485 }
 		}
 		random_country = { limit = { tag = CHI KMT = { owns = 1499 } } country_event = 90904 }
 		country_event = 8200101
@@ -920,7 +920,7 @@ country_event = {
     name = EVT_8002844_A
 	any_pop = { militancy = 0.5 }
 	relation = { who = KMT value = 50 } 
-	government = democracy
+	government = democracy  country_event = 800054
 	ruling_party_ideology = communist
 	ai_chance = { factor = 100 }
   }
@@ -929,7 +929,7 @@ country_event = {
     name = EVT_8002844_B
 	any_pop = { militancy = 1.0 }
 	relation = { who = KMT value = 100 } 
-	government = democracy
+	government = democracy  country_event = 800054
 	election = yes
 	ai_chance = { factor = 0 }
   }

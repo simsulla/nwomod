@@ -15,7 +15,7 @@ country_event = {
 
   option = {
     name = "OK"
-	government = presidential_dictatorship
+	government = presidential_dictatorship  country_event = 800050
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.1 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
 	define_general = { name = "Vargas" personality = energetic background = no_background }
@@ -38,7 +38,7 @@ country_event = { # Suicide of Vargas
 
   option = {
     name = "EVT_8002004_A"
-	government = democracy
+	government = democracy  country_event = 800054
 	any_pop = { consciousness = 1 }
   }
 }
@@ -81,7 +81,7 @@ country_event = {
     name = EVT_8002008_A
 	relation = { who = RUS value = -50 }
 	relation = { who = USA value = 100 }
-	government = presidential_dictatorship
+	government = presidential_dictatorship  country_event = 800050
 	any_pop = { militancy = 0.4 }
   }
 }

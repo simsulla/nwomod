@@ -47,8 +47,8 @@ country_event = { # Federation of Rhodesia and Nyasaland
 	ENG = { any_owned = { limit = { OR = { is_core = MLW is_core = ZAM } } secede_province = RHO } }
 	release_vassal = ZAM
 	release_vassal = MLW
-	random_country = { limit = { tag = MLW vassal_of = RHO } government = hms_government primary_culture = white_anglo }
-	random_country = { limit = { tag = ZAM vassal_of = RHO } government = hms_government primary_culture = white_anglo }
+	random_country = { limit = { tag = MLW vassal_of = RHO } government = hms_government country_event = 800054 primary_culture = white_anglo }
+	random_country = { limit = { tag = ZAM vassal_of = RHO } government = hms_government country_event = 800054 primary_culture = white_anglo }
   }
 }
 country_event = {
@@ -138,7 +138,7 @@ country_event = { # Unilateral Declaration of Independence
 	MLW = { primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
 	badboy = 5
-	government = populist_dictatorship
+	government = populist_dictatorship country_event = 800050 
   }
   option = {
     name = EVT_8012212_B
@@ -147,7 +147,7 @@ country_event = { # Unilateral Declaration of Independence
 	MLW = { primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
 	badboy = 20
-	government = populist_dictatorship
+	government = populist_dictatorship country_event = 800050
   }  
   option = {
     name = EVT_8012212_C
@@ -157,7 +157,7 @@ country_event = { # Unilateral Declaration of Independence
 	ZAM = { primary_culture = black_anglo }
 	MLW = { primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
-	government = democracy
+	government = democracy country_event = 800054
 	primary_culture = shona
 	change_tag = ZIM
   }
@@ -202,7 +202,7 @@ country_event = {
 
   option = {
     name = EVT_8012214_A
-	government = democracy
+	government = democracy country_event = 800054
 	primary_culture = shona
 	change_tag = ZIM
 	release = ZAM
