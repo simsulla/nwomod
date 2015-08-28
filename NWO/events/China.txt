@@ -221,7 +221,7 @@ country_event = {
 		war = yes
 		war_with = CHI
 		OR = { 
-			CHI = { brigades_compare = 0.4 }
+			CHI = { brigades_compare = 2 }
 			national_provinces_occupied = 0.8
 		}
 		NOT = { year = 1952 }
@@ -233,7 +233,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		any_country = { limit = { war_with = THIS NOT = { tag = CHI } } end_war = THIS }
 		any_owned = { 
-			limit = { controlled_by = CHI NOT = { province_id = 1485 } NOT = { province_id = 1499 } NOT = { province_id = 2576 } NOT = { province_id = 2562 } }
+			limit = { controlled_by = CHI }
 			secede_province = CHI
 		}
 		any_owned = { 
@@ -242,8 +242,11 @@ country_event = {
 			change_controller = REB
 		}
 		end_war = CHI
-		capital = 1485
-		CHI = { country_event = 90904 }
+		any_owned = { 
+			limit = { controlled_by = KMT province_id = 1485 }
+			capital = 1485
+		}
+		random_country = { limit = { tag = CHI KMT = { owns = 1499 } } country_event = 90904 }
 		country_event = 8200101
 	}
 	
