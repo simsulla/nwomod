@@ -7,15 +7,15 @@ country_event = { # Trust Territory of Somaliland
 
   trigger = {
     tag = ENG
-	is_our_vassal = SOM
-    year = 1949 NOT = { year = 1990 }
+	owns = 1869
+	year = 1949 NOT = { year = 1990 }
   }
 
   mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8014100_A
-	release = SOM
+	any_owned = { limit = { is_core = SOM NOT = { is_core = SML } } secede_province = ITA }
 	ITA = { country_event = 8014101 }
   }
 }
@@ -28,7 +28,7 @@ country_event = {
 
   option = {
     name = EVT_8014100_A
-	create_vassal = SOM
+	release_vassal = SOM
   }
 }
 country_event = { # Somalia Independence
@@ -48,7 +48,7 @@ country_event = { # Somalia Independence
 
   option = {
     name = EVT_8014102_A
-	release = SOM
+	release = SOM 
 	random_country = { limit = { owns = 1873 } country_event = 8014103 }
   }
 }
