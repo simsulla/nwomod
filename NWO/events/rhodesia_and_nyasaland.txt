@@ -47,8 +47,8 @@ country_event = { # Federation of Rhodesia and Nyasaland
 	ENG = { any_owned = { limit = { OR = { is_core = MLW is_core = ZAM } } secede_province = RHO } }
 	release_vassal = ZAM
 	release_vassal = MLW
-	MLW = { government = hms_government primary_culture = white_anglo }
-	ZAM = { government = hms_government primary_culture = white_anglo }
+	random_country = { limit = { tag = MLW vassal_of = RHO } government = hms_government primary_culture = white_anglo }
+	random_country = { limit = { tag = ZAM vassal_of = RHO } government = hms_government primary_culture = white_anglo }
   }
 }
 country_event = {
