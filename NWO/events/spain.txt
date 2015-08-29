@@ -7,7 +7,8 @@ country_event = { # United Nations Security Council Resolution 7
 
   trigger = {
     tag = SPA
-	year = 1946
+	year = 1946 NOT = { year = 1990 }
+	government = populist_dictatorship
   }
 
   mean_time_to_happen = { months = 4 }
@@ -28,7 +29,7 @@ country_event = {
 
   trigger = {
     tag = SPA
-	owns = 1955
+	owns = 1955 NOT = { year = 1990 }
 	NOT = { exists = EQG }
 	OR = { exists = CMR exists = GAB }
   }
@@ -60,7 +61,7 @@ country_event = {
 
   trigger = {
     tag = SPA
-    year = 1975 NOT = { year = 1976 }
+    year = 1975 NOT = { year = 1990 }
 	government = populist_dictatorship
   }
 
@@ -79,7 +80,8 @@ country_event = {
 
   trigger = {
     tag = SPA
-    year = 1978 NOT = { year = 1979 }
+    year = 1978 NOT = { year = 1990 }
+	government = populist_dictatorship
   }
 
   mean_time_to_happen = { months = 12 }
