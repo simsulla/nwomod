@@ -99,11 +99,6 @@ country_event = {
 
 }
 
-
-
-
-
-
 #
 # Botswana 
 #
@@ -116,6 +111,7 @@ country_event = { # Botswana Independence
 
   trigger = {
     tag = ENG
+	year = 1966 NOT = { year = 1990 }
 	owns = 2074
 	NOT = { exists = BOT }
 	OR = { 
