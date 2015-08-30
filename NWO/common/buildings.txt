@@ -9,6 +9,18 @@
 # time = x #==> number of days to build.
 #
 
+# IRL cost of factory
+# Example Volkswagen $208,000,000 -> 116 Rcars/day
+# 0.51 cost/unit -> c.2,000,000 -> 10 Rcars
+# 58 cars -> 580 Rcars
+# $1,000,000,000 -> c580 Rcars and 
+# $1,000,000,000 -> 250 £ in building cost
+# 
+# cement = 1000 x 0.06 = 60 TODO
+# machine_parts = 500 x 0.16 = 80 TODO
+# fuel = 2500 x 0.05 = 125 TODO
+#
+
 fish_canned_food_factory = {
 	type = factory
 	on_completion = factory
@@ -1197,6 +1209,16 @@ fort = {
 	fort_level = 1
 }
 
+# Ref. Gwadar Port
+# Ph 1 $248 million
+# Ph 2 $932 million
+# i.e. c1 bil -> 250 £
+# timber = 100 x 0.14 = 14
+# lumber = 100 x 0.10 = 10
+# cement = 100 x 0.06 = 6
+# steel = 200 x 0.38 = 76
+# machine_parts = 10 x 0.16 = 1.6
+# fuel = 2500 x 0.05 = 125 TODO
 naval_base = {    
 	type = naval_base
 	cost = 15000
@@ -1221,7 +1243,12 @@ naval_base = {
 	colonial_range = 50
 	local_ship_build = -0.10
 }
-       
+
+# Rough estimate of high speed rail ocst $1 bil/province -> 250 £       
+# timber = 100 x 0.14 = 14
+# cement = 2000 x 0.06 = 120
+# steel = 200 x 0.38 = 76
+# fuel = 250 x 0.05 = 12.5 TODO
 railroad = {   
 	type = infrastructure
 	goods_cost =
