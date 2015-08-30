@@ -120,6 +120,7 @@ country_event = {
   option = {
     name = "EVT_8203004_A"
 	government = proletarian_dictatorship country_event = 800054
+	any_country = { limit = { any_onwed = { is_core = AUS }NOT = { tag = THIS } } country_event = 8203005 } 
   }
 }
 country_event = {
@@ -140,7 +141,6 @@ country_event = {
     name = "EVT_8203005_B"
 	any_pop = { militancy = 0.5 }
 	badboy = 5 
-	country_event =  { id = 8203005 days = 3500 } 
 	ai_chance = { factor = 0 }
   }
 }
