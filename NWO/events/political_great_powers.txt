@@ -87,13 +87,13 @@ country_event = {
 
 	option = {
 		name = EVT_19001_A
-		sphere_owner = { country_event = 19002 }
+		random_country = { limit = { is_sphere_leader_of = THIS } country_event = 19002 }
 		ai_chance = { factor = 100 }
 	}
 
 	option = {
 		name = EVT_19001_B
-		sphere_owner = { diplomatic_influence = { who = THIS value = -25 } relation = { who = THIS value = -25 } }
+		random_country = { limit = { is_sphere_leader_of = THIS } diplomatic_influence = { who = THIS value = -25 } relation = { who = THIS value = -25 } }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -1513,25 +1513,22 @@ country_event = {
 	
 	option = {
 		name = "EVT_sanctions_OPTA" #Darn!
-		add_country_modifier = { name = bretton_system_excluded duration = 350 }
-		add_country_modifier = { name = stock_market_crash duration = 30 }
-		FROM = { add_country_modifier = { name = central_planning_inflexibility duration = 350 } }
+		add_country_modifier = { name = bretton_system_excluded duration = 1700 }
+		add_country_modifier = { name = stock_market_crash duration = 350 }
 		remove_country_modifier = bretton_system
-		end_war = FROM
 	}
 }
 
 country_event = {
 	id = 96088
-	title = "EVT_96088_NAME" #Populist Regime
+	title = "EVT_96088_NAME" #The New $COUNTRY_ADJ$ Authoritarian Regime
 	desc = "EVT_96088_DESC"
 	picture = "unite"
-	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVT_96088_OPTA"
-		government = populist_dictatorship
+		name = EVT_96088_A
+		government = populist_dictatorship country_event = 800050
 		ruling_party_ideology = populist
 		clr_country_flag = tory_election_win
 		clr_country_flag = socialist_election_win
@@ -1545,21 +1542,25 @@ country_event = {
 		random_country = {
 			limit = {
 				is_sphere_leader_of = THIS
-				NOT = { has_country_flag = friendly_sectarian_regime }
+				NOT = { has_country_flag = friendly_authoritarian_regime }
 			}
 			diplomatic_influence = { who = THIS value = -100 }
 		}
 		random_country = {
 			limit = {
-				has_country_flag = friendly_sectarian_regime
+				has_country_flag = friendly_authoritarian_regime
 				truce_with = THIS
 			}
 			relation = { who = THIS value = 400 }
 			diplomatic_influence = { who = THIS value = 100 }
 			create_alliance = THIS
-			clr_country_flag = friendly_sectarian_regime
+			clr_country_flag = friendly_authoritarian_regime
 		}
 		any_pop = {
+			scaled_militancy = {
+				ideology = socialist
+				factor = 1
+			}
 			scaled_militancy = {
 				ideology = islamist
 				factor = 2
@@ -1573,20 +1574,12 @@ country_event = {
 				factor = -4
 			}
 		}
+		ai_chance = { factor = 0.2 }
 	}
-}
 
-country_event = {
-	id = 96089
-	title = "EVT_96089_NAME" #Nationalist Regime
-	desc = "EVT_96089_DESC"
-	picture = "unite"
-	
-	is_triggered_only = yes
-	
 	option = {
-		name = "EVT_96089_OPTA"
-		government = nationalist_dictatorship
+		name = EVT_96088_B
+		government = nationalist_dictatorship country_event = 800050
 		ruling_party_ideology = populist
 		clr_country_flag = tory_election_win
 		clr_country_flag = socialist_election_win
@@ -1594,25 +1587,145 @@ country_event = {
 		clr_country_flag = communist_election_win
 		clr_country_flag = islamist_election_win
 		set_country_flag = populist_election_win
+		clr_country_flag = progressive_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_authoritarian_regime }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_authoritarian_regime
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 100 }
+			create_alliance = THIS
+			clr_country_flag = friendly_authoritarian_regime
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = socialist
+				factor = 1
+			}
+			dominant_issue = {
+				value = sectarianism_minority
+				factor = 0.3
+			}
+			scaled_militancy = {
+				ideology = islamist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 1
+			}
+			scaled_militancy = {
+				ideology = populist
+				factor = -4
+			}
+		}
+		ai_chance = { 
+			factor = 0.05 
+			modifier = { 
+				factor = 100  
+				is_culture_group = FROM
+			}
+		}
+	}
+
+	option = {
+		name = EVT_96088_C
+		government = presidential_dictatorship country_event = 800050
+		ruling_party_ideology = conservative
+		set_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		clr_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		clr_country_flag = islamist_election_win
+		clr_country_flag = populist_election_win
+		clr_country_flag = progressive_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_authoritarian_regime }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_authoritarian_regime
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 100 }
+			create_alliance = THIS
+			clr_country_flag = friendly_authoritarian_regime
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = socialist
+				factor = 1
+			}
+			scaled_militancy = {
+				ideology = islamist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 1
+			}
+			scaled_militancy = {
+				ideology = populist
+				factor = -4
+			}
+		}
+		ai_chance = { factor = 0.75 }
+	}
+	
+}
+
+country_event = {
+	id = 96089
+	title = "EVT_96089_NAME" #The New $COUNTRY_ADJ$ Theocratic Regime
+	desc = "EVT_96089_DESC"
+	picture = "unite"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_96089_OPTA"
+		government = islamist_dictatorship country_event = 800051
+		ruling_party_ideology = islamist
+		clr_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		clr_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		set_country_flag = islamist_election_win
+		clr_country_flag = populist_election_win
 		clr_country_flag = nationalist_election_win
 		clr_country_flag = progressive_election_win
 
 		random_country = {
 			limit = {
 				is_sphere_leader_of = THIS
-				NOT = { has_country_flag = friendly_sectarian_regime }
+				NOT = { has_country_flag = friendly_theocratic_regime }
 			}
 			diplomatic_influence = { who = THIS value = -100 }
 		}
 		random_country = {
 			limit = {
-				has_country_flag = friendly_sectarian_regime
+				has_country_flag = friendly_theocratic_regime
 				truce_with = THIS
 			}
 			relation = { who = THIS value = 400 }
 			diplomatic_influence = { who = THIS value = 100 }
 			create_alliance = THIS
-			clr_country_flag = friendly_sectarian_regime
+			clr_country_flag = friendly_theocratic_regime
 		}
 		any_pop = {
 			dominant_issue = {
@@ -1620,7 +1733,7 @@ country_event = {
 				factor = 0.3
 			}
 			scaled_militancy = {
-				ideology = islamist
+				ideology = socialist
 				factor = 2
 			}
 			scaled_militancy = {

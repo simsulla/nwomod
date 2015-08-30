@@ -49,8 +49,8 @@ status_quo
 gunboat 
 free_peoples
 liberate_country
-install_sectarian_regime
-install_populist_regime
+install_theocratic_regime
+install_authoritarian_regime
 install_communist_gov_cb
 uninstall_communist_gov_cb
 acquire_state 
@@ -71,32 +71,30 @@ gunboat = {
 	constructing_cb = no
 	crisis = no
 	
-	can_use = {
-		THIS = { part_of_sphere = no }
-		OR = {
-			has_country_modifier = in_bankrupcy
-			has_country_modifier = generalised_debt_default
-		}
-		in_default = THIS
-		# both we THIS and target must not be sphered or vassaled
-		part_of_sphere = no
-		is_vassal = no
-		THIS = {
-			part_of_sphere = no
-			is_vassal = no
-		}		
-	}
+	badboy_factor = 1
+	prestige_factor = 5
+	peace_cost_factor = 1
+	penalty_factor = 1
 
 	break_truce_prestige_factor = 0
 	break_truce_infamy_factor = 0
 	break_truce_militancy_factor = 0
 	truce_months = 0
 	
-	badboy_factor = 1
-	prestige_factor = 5
-	peace_cost_factor = 1
-	penalty_factor = 1
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
 	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		OR = {
+			has_country_modifier = in_bankrupcy
+			has_country_modifier = generalised_debt_default
+		}
+		always = no
+		in_default = THIS
+	}
+
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
@@ -152,17 +150,21 @@ conquest = {
 	crisis = no
 	
 	can_use = {
-		THIS = { part_of_sphere = no }
-		NOT = { number_of_states = 2 }
-		is_independant = yes
-		NOT = { relation = { who = THIS value = -50 } }
+		NOT = { is_our_vassal = THIS }
+		# only one state or unciv
+		NOT = { number_of_states = 5 }
 		OR = {
-			THIS = { government = populist_dictatorship }
-			THIS = { government = islamist_dictatorship }
-			war_with = THIS
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
+			AND = {
+				civilized = yes
+				NOT = { number_of_states = 2 }
+			}
+			AND = {
+				civilized = no
+				THIS = { civilized = no }
+				NOT = { number_of_states = 2 }
+			}
 		}
+		is_independant = yes
 	}
 
 	badboy_factor = 2.2
@@ -302,14 +304,9 @@ take_from_sphere = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
+		NOT = { is_our_vassal = THIS }
 		THIS = { is_greater_power = yes }
 		is_greater_power = yes
-		OR = {
-			NOT = { relation = { who = THIS value = -100 } }
-			war_with = THIS
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
-		}
 	}
 
 	
@@ -319,7 +316,6 @@ take_from_sphere = {
 	allowed_countries = {
 		is_sphere_leader_of = FROM
 		FROM = { is_vassal = no }
-		NOT = { relation = { who = THIS value = 0 } } 
 	}
 	
 	po_add_to_sphere = yes
@@ -364,17 +360,13 @@ acquire_core_state = {
 		any_owned_province = {
 			is_core = THIS
 		}
-		OR = {
-			NOT = { relation = { who = THIS value = 0 } }
-			THIS = { ai = no }
-		}		
 	}
 	
 	allowed_states = {
 		any_owned_province = {
 			is_core = THIS
 		}
-		not = { any_owned_province = { is_capital = yes } }
+		NOT = { any_owned_province = { is_capital = yes } }
 	}
 
 	po_demand_state = yes
@@ -399,7 +391,7 @@ annex_core_country = {
 
 	badboy_factor = 0
 	prestige_factor = 5
-	peace_cost_factor = 0.8
+	peace_cost_factor = 0.7
 	penalty_factor = 1
 	always = yes
 
@@ -460,24 +452,34 @@ acquire_state = {
 	good_relation_infamy_factor = 1
 	good_relation_militancy_factor = 1
 
-	can_use = {
-		THIS = { part_of_sphere = no }
+	can_use = { # TODO add AI limits
+		NOT = { is_our_vassal = THIS }
 		number_of_states = 2 # annex if you want their last state
 		any_owned_province = {
 			NOT = { is_core = THIS }
+			#is_colonial = no
+		}
+		OR = {
+			AND = {
+				civilized = yes
+				THIS = {
+					civilized = yes
+				}
+			}
+			AND = {
+				civilized = no
+				THIS = {
+					civilized = no
+				}
+			}
 		}
 		is_independant = yes
-		NOT = { relation = { who = THIS value = -100 } }
-		OR = {
-			THIS = { government = populist_dictatorship }
-			THIS = { government = islamist_dictatorship }
-			THIS = { ai = no }
-		}
 	}
 	
 	allowed_states = {
 		any_owned_province = {
 			NOT = {	is_core = THIS }
+			#is_colonial = no
 		}
 		NOT = { any_owned_province = { is_capital = yes } }
 	}
@@ -502,7 +504,6 @@ acquire_state = {
 		}
 	}
 }
-
 
 # Cut Down to size
 cut_down_to_size = {
@@ -530,15 +531,8 @@ cut_down_to_size = {
 	war_name = WAR_NAME
 	
 	can_use = {
-		THIS = { part_of_sphere = no }
+		NOT = { is_our_vassal = THIS }
 		is_disarmed = no
-		is_independant = yes
-		OR = {
-			war_with = THIS
-			NOT = { relation = { who = THIS value = -50 } }
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
-		}
 	}
 	
 	on_add = {
@@ -575,11 +569,6 @@ free_allied_cores = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
 		number_of_states = 2
-		OR = {
-			war_with = THIS
-			NOT = { relation = { who = THIS value = 0 } }
-			THIS = { ai = no }
-		}
 	}
 
 	# THIS - us
@@ -656,13 +645,7 @@ free_peoples = {
 	
 	
 	can_use = {
-		THIS = { part_of_sphere = no }
-		is_independant = yes
-		OR = {
-			NOT = { relation = { who = THIS value = -50 } }
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
-		}
+		NOT = { is_our_vassal = THIS }
 	}
 
 	# THIS - us
@@ -670,18 +653,20 @@ free_peoples = {
 	# war target country of goal is scope
 	allowed_countries = {
 		number_of_states = 2
-		part_of_sphere = no
-		is_vassal = no
+		NOT = {
+			tag = FROM
+			this_culture_union = FROM	
+		}
 		FROM = {
 			exists = yes
 		}
 		
 		any_owned_province = {
 			is_core = FROM
-			#NOT =
-			#{
-			#	is_core = THIS
-			#}
+			NOT =
+			{
+				is_core = THIS
+			}
 		}
 		is_releasable_vassal = FROM
 	}
@@ -708,7 +693,7 @@ free_peoples = {
 	}
 	
 	on_po_accepted = {
-		country_event = 2651
+		country_event =	2651	# Territorial Loss event
 	}	
 }
 
@@ -734,14 +719,7 @@ liberate_country = {
 	
 	
 	can_use = {
-		THIS = { part_of_sphere = no }
 		NOT = { is_our_vassal = THIS }
-		is_vassal = no
-		OR = {
-			NOT = { relation = { who = THIS value = -50 } }
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
-		}
 	}
 
 	# THIS - us
@@ -750,9 +728,11 @@ liberate_country = {
 	allowed_countries = {
 		number_of_states = 2
 		NOT = { tag = FROM }
-		FROM = { exists = no }
-		part_of_sphere = no
-		is_vassal = no
+		NOT = {
+			tag = FROM
+			this_culture_union = FROM	
+		}
+		FROM = { exists = yes }
 		any_owned_province = {
 			is_core = FROM
 			NOT =
@@ -773,7 +753,7 @@ liberate_country = {
 	}
 	all_allowed_states = yes
 	po_transfer_provinces = yes
-	po_remove_cores = yes
+	#po_remove_cores = yes
 
 	war_name = WAR_LIBERATE_NAME
 	
@@ -813,13 +793,6 @@ release_puppet = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		num_of_vassals_no_substates = 1
-		is_vassal = no
-		OR = {
-			war_with = THIS
-			NOT = { relation = { who = THIS value = -50 } }
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
-		}
 	}
 	
 	# THIS - us
@@ -866,22 +839,10 @@ make_puppet = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		THIS = { part_of_sphere = no }
 		NOT = { is_our_vassal = THIS }
 		NOT = { number_of_states = 4 }
-		part_of_sphere = no
 		is_greater_power = no
 		is_vassal = no
-		OR = {
-			THIS = { government = populist_dictatorship }
-			THIS = { government = nationalist_dictatorship }
-			THIS = { government = islamist_dictatorship }
-			THIS = { government = proletarian_dictatorship }
-			war_with = THIS
-			NOT = { relation = { who = THIS value = -100 } }
-			FROM = { involved_in_crisis = yes }
-			THIS = { ai = no }
-		}
 	}
 	
 	# THIS - us
@@ -899,9 +860,10 @@ make_puppet = {
 			value = 0.25
 		}
 	}
-        on_po_accepted = {
-                country_event = 19370
-        }
+	
+	on_po_accepted = {
+		country_event = 19370
+	}
 }
 
 # Become Independent
@@ -953,16 +915,12 @@ become_independent = {
 			value = 0.25
 		}
 		add_war_goal = {
-			casus_belli = liberate_country
-		}
-		add_war_goal = {
 			casus_belli = make_puppet
 		}
 		leave_alliance = FROM
 		release_vassal = THIS
 	}
 }
-
 
 # Humiliate
 humiliate = {
@@ -993,9 +951,6 @@ humiliate = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
-		part_of_sphere = no
-		has_recently_lost_war = no
-		NOT = { relation = { who = THIS value = -50 } }
  	}	
 	on_add = {
 		move_issue_percentage = { 
@@ -1035,24 +990,16 @@ sanctions = {
 	war_name = WAR_SANCTIONS_NAME
 
 	can_use = {
+		NOT = { is_our_vassal = THIS }
 		THIS = {
 			OR = { 
 				is_greater_power = yes
 				produces = credit
 			}
+			war = no
 		}
 		war = no
-		is_vassal = no
-		civilized = yes
 		is_greater_power = no
-		NOT = { is_our_vassal = THIS }
-		part_of_sphere = no
-		OR = {
-			government = proletarian_dictatorship
-			government = populist_dictatorship
-			government = nationalist_dictatorship
-			government = islamist_dictatorship
-		}
 		NOT = { relation = { who = THIS value = -100 } }
 	}
 	on_add = {
@@ -1061,8 +1008,11 @@ sanctions = {
 			to = pro_military
 			value = 0.05
 		}
-		FROM = { country_event = 96086 }
 	}
+
+	on_po_accepted = {
+		country_event = 96086
+	}	
 }
 
 install_democracy = {
@@ -1088,26 +1038,24 @@ install_democracy = {
 
 	can_use = {
 		THIS = {
-			NOT = { government = proletarian_dictatorship government = islamist_dictatorship }
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			OR = {
+				government = hms_government
+				government = democracy
+			}
 		}
 		is_vassal = no
 		civilized = yes
 		NOT = { is_our_vassal = THIS }
-		OR = {
-			government = proletarian_dictatorship
-			government = populist_dictatorship
-			government = nationalist_dictatorship
-			government = islamist_dictatorship
-		}
+		NOT = { government = hms_government }
+		NOT = { government = democracy }
 		THIS = {
 			NOT = {
 				war_policy = pacifism
 			}
-		}
-		OR = {                        
-				NOT = { relation = { who = THIS value = -50 } }
-				FROM = { involved_in_crisis = yes }
-				THIS = { ai = no }
 		}
 	}
 	
@@ -1128,12 +1076,8 @@ install_democracy = {
 			set_country_flag = friendly_democracy
 			any_country = {
 				limit = {
-					OR = {
-						government = proletarian_dictatorship
-						government = populist_dictatorship
-						government = nationalist_dictatorship
-						government = islamist_dictatorship
-					}
+					NOT = { government = hms_government }
+					NOT = { government = democracy }
 				}
 				relation = { who = THIS value = -50 }
 			}
@@ -1142,7 +1086,7 @@ install_democracy = {
 	}
 }
 
-install_populist_regime = {
+install_authoritarian_regime = {
 	sprite_index = 13
 	is_triggered_only = yes
 	months = 12
@@ -1164,18 +1108,18 @@ install_populist_regime = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		is_vassal = no
-		civilized = yes
-		NOT = { government = populist_dictatorship }
-		NOT = { is_our_vassal = THIS }
 		THIS = {
 			NOT = { war_policy = pacifism }
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
 			NOT = { government = proletarian_dictatorship }
+			NOT = { government = islamist_dictatorship }
 		}
-		OR = {                        
-			NOT = { relation = { who = THIS value = -50 } }
-			FROM = { involved_in_crisis = yes }
-		}
+		is_vassal = no
+		civilized = yes
+		NOT = { is_our_vassal = THIS }
 	}
 	
 	po_remove_prestige = yes
@@ -1191,12 +1135,12 @@ install_populist_regime = {
 	}
 	
 	on_po_accepted = {
-		THIS = { set_country_flag = friendly_sectarian_regime }
+		THIS = { set_country_flag = friendly_authoritarian_regime }
 		country_event = 96088
 	}
 }
 
-install_sectarian_regime = {
+install_theocratic_regime = {
 	sprite_index = 13
 	is_triggered_only = yes
 	months = 12
@@ -1218,19 +1162,13 @@ install_sectarian_regime = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
+		THIS = {
+			government = islamist_dictatorship
+			NOT = { war_policy = pacifism }
+		}
 		is_vassal = no
 		civilized = yes
-		OR = { tag = AFG tag = BYE tag = BRN tag = IRQ tag = NGX tag = SAR tag = SAL tag = SAF tag = SSU tag = YEM tag = SYR tag = TRI tag = UKR }
-		NOT = { government = nationalist_dictatorship }
 		NOT = { is_our_vassal = THIS }
-		THIS = {
-			NOT = { war_policy = pacifism }
-			NOT = { government = proletarian_dictatorship }
-		}
-		OR = {                        
-			NOT = { relation = { who = THIS value = -50 } }
-			FROM = { involved_in_crisis = yes }
-		}
 	}
 	
 	po_remove_prestige = yes
@@ -1246,7 +1184,7 @@ install_sectarian_regime = {
 	}
 	
 	on_po_accepted = {
-		THIS = { set_country_flag = friendly_sectarian_regime }
+		THIS = { set_country_flag = friendly_theocratic_regime }
 		country_event = 96089
 	}
 }
@@ -1272,8 +1210,6 @@ install_communist_gov_cb = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		is_vassal = no
-		part_of_sphere = no
 		THIS = {
 			# If actor is a great power
 			is_greater_power = yes
@@ -1315,16 +1251,7 @@ install_communist_gov_cb = {
 	}
 	
 	on_po_accepted = {
-		political_reform = none_voting
-		political_reform = ruling_party_opinion
-		political_reform = state_religion
-		political_reform = quality_of_service
-		political_reform = censored_publishing
-		political_reform = gender_role_based
-		political_reform = parties_not_allowed
-		political_reform = nobody_gets_out
-		political_reform = lgbt_outlawed
-		political_reform = minorities_oppression
+		country_event = 800052
 	}
 }
 
