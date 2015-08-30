@@ -145,8 +145,8 @@ country_event = {
 	ai_chance = { factor = 100 }
 	any_pop = { militancy = 2.0 }
 	random_country = {
-		limit = { overlord = { NOT = { government = proletarian_dictatorship } } }
-		overlord = { country_event =  { id = 8000111 days = 360 } }
+		limit = { tag = AFG is_vassal = yes overlord = { NOT = { government = proletarian_dictatorship } } }
+		overlord = { country_event =  8000111 }
 	}
 	set_global_flag = event_fired_8000109 # will trigger 8176110 # Soviet intervention
   }
