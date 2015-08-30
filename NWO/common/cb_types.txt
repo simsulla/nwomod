@@ -61,6 +61,7 @@ release_puppet
 become_independent
 make_puppet
 humiliate
+territorial_dispute
 sanctions
 }
 
@@ -951,6 +952,126 @@ humiliate = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
+ 	}	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+# territorial_dispute
+territorial_dispute = {
+	sprite_index = 11
+	is_triggered_only = yes
+	months = 12
+
+	badboy_factor = 1.5
+	prestige_factor = 1
+	peace_cost_factor = 15
+	penalty_factor = 1
+	always = yes
+	
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	po_remove_prestige = yes
+
+	tws_battle_factor = 2.0
+	
+	war_name = WAR_HUMILIATE_NAME
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		is_vassal = no
+		THIS = { 
+			NOT = { has_country_flag = international_court_of_justice }
+			OR = { government = democracy government = hms_government }
+		}
+		OR = { 
+			# Israel alone in the Arab world
+			AND = { tag = ISR exists = ISR THIS = { OR  = { primary_culture = sunni_arab primary_culture = shia_arab } } } 
+			AND = { tag = ISR exists = ISR THIS = { government = islamist_dictatorship OR = { pop_majority_religion = sunni pop_majority_religion = shiite } } } 
+			# Africa
+			AND = { tag = ERI exists = ERI THIS = { tag = ETH } } AND = { tag = ETH exists = ETH THIS = { tag = ERI } } # Badme
+			AND = { tag = CMR exists = CMR THIS = { tag = NGE } } AND = { tag = NGE exists = NGE THIS = { tag = CMR } } # Bakassi
+			AND = { tag = MAD exists = MAD THIS = { tag = COM } } AND = { tag = COM exists = COM THIS = { tag = MAD } } # Banc du Geyser
+			AND = { tag = MAD exists = MAD THIS = { tag = FRA } } AND = { tag = FRA exists = FRA THIS = { tag = MAD } } # Bassas da India
+			AND = { tag = MRT exists = MRT THIS = { tag = ENG } } AND = { tag = ENG exists = ENG THIS = { tag = MRT } } # Chagos Archipelago
+			AND = { tag = MRT exists = MRT THIS = { tag = FRA } } AND = { tag = FRA exists = FRA THIS = { tag = MRT } } # Tromelin Island
+			AND = { tag = SEY exists = SEY THIS = { tag = FRA } } AND = { tag = FRA exists = FRA THIS = { tag = SEY } } # Glorioso Islands
+			AND = { tag = KEN exists = KEN THIS = { tag = SSU } } AND = { tag = SSU exists = SSU THIS = { tag = KEN } } # Ilemi Triangle
+			AND = { tag = SPA exists = SPA THIS = { tag = MOR } } AND = { tag = MOR exists = MOR THIS = { tag = SPA } } # Islas Chafarinas
+			AND = { tag = SSU exists = SSU THIS = { tag = SUD } } AND = { tag = SUD exists = SUD THIS = { tag = SSU } } # Heglig,Kafia Kingi
+			AND = { tag = UGA exists = UGA THIS = { tag = RWA } } AND = { tag = RWA exists = RWA THIS = { tag = UGA } } # Kabale District
+			AND = { tag = CNG exists = CNG THIS = { tag = ANG } } AND = { tag = ANG exists = ANG THIS = { tag = CNG } } # Kahemba
+			AND = { tag = BUR exists = BUR THIS = { tag = BEN } } AND = { tag = BEN exists = BEN THIS = { tag = BUR } } # Koualou
+			AND = { tag = IVC exists = IVC THIS = { tag = GUI } } AND = { tag = GUI exists = GUI THIS = { tag = IVC } } # Sipilou
+			AND = { tag = SSU exists = SSU THIS = { tag = UGA } } AND = { tag = UGA exists = UGA THIS = { tag = SSU } } # Moyo District
+			AND = { tag = MLW exists = MLW THIS = { tag = TAN } } AND = { tag = TAN exists = TAN THIS = { tag = MLW } } # Lake Malawi
+			AND = { tag = GAB exists = GAB THIS = { tag = EQG } } AND = { tag = EQG exists = EQG THIS = { tag = GAB } } # Congas Island
+			AND = { tag = UGA exists = UGA THIS = { tag = KEN } } AND = { tag = KEN exists = KEN THIS = { tag = UGA } } # Migingo Island
+			AND = { tag = CNG exists = CNG THIS = { tag = ROC } } AND = { tag = ROC exists = ROC THIS = { tag = CNG } } # Congo River
+			AND = { tag = CMR exists = CMR THIS = { tag = EQG } } AND = { tag = EQG exists = EQG THIS = { tag = CMR } } # Ntem River
+			AND = { tag = NAM exists = NAM THIS = { tag = SAF } } AND = { tag = SAF exists = SAF THIS = { tag = NAM } } # Okpara River
+			AND = { tag = ERI exists = ERI THIS = { tag = DJI } } AND = { tag = DJI exists = DJI THIS = { tag = ERI } } # Ras Doumeira and Doumeira Island
+			AND = { tag = UGA exists = UGA THIS = { tag = CNG } } AND = { tag = CNG exists = CNG THIS = { tag = UGA } } # Rukwanzi Island 
+			AND = { tag = ZAM exists = ZAM THIS = { tag = ZIM } } AND = { tag = ZIM exists = ZIM THIS = { tag = ZAM } } # Sindabezi Island
+			AND = { tag = EGY exists = EGY THIS = { tag = SAA } } AND = { tag = SAA exists = SAA THIS = { tag = EGY } } # Tiran Island
+			AND = { tag = TRI exists = TRI THIS = { tag = ALG } } AND = { tag = ALG exists = ALG THIS = { tag = TRI } } # South East Algeria
+			# Asia and the Pacific
+			AND = { tag = SYR exists = SYR THIS = { tag = LEB } } AND = { tag = LEB exists = LEB THIS = { tag = SYR } } # Aarsal
+			AND = { tag = PER exists = PER THIS = { tag = UAE } } AND = { tag = UAE exists = UAE THIS = { tag = PER } } # Abu Musa
+			AND = { tag = NKO exists = NKO THIS = { tag = CHI } } AND = { tag = CHI exists = CHI THIS = { tag = NKO } } # Baekdu Mountain
+			AND = { tag = BHU exists = BHU THIS = { tag = CHI } } AND = { tag = CHI exists = CHI THIS = { tag = BHU } } # Bhutanese enclaves
+			AND = { tag = DAI exists = DAI THIS = { tag = CAM } } AND = { tag = CAM exists = CAM THIS = { tag = DAI } } # Koh Thonsay
+			AND = { tag = AZB exists = AZB THIS = { tag = GEO } } AND = { tag = GEO exists = GEO THIS = { tag = AZB } } # David Gareja monastery complex
+			AND = { tag = BUR exists = BUR THIS = { tag = THI } } AND = { tag = THI exists = THI THIS = { tag = BUR } } # Doi Lang
+			AND = { tag = BAH exists = BAH THIS = { tag = QAT } } AND = { tag = QAT exists = QAT THIS = { tag = BAH } } # Fasht Ad Dibal
+			AND = { tag = UZB exists = UZB THIS = { tag = KYR } } AND = { tag = KYR exists = KYR THIS = { tag = UZB } } # Fergana Valley
+			AND = { tag = TAJ exists = TAJ THIS = { tag = KYR } } AND = { tag = KYR exists = KYR THIS = { tag = TAJ } } # Isfara Valley
+			AND = { tag = MSY exists = MSY THIS = { tag = IDO } } AND = { tag = IDO exists = IDO THIS = { tag = MSY } } # Karang Unarang
+			AND = { tag = NEP exists = NEP THIS = { tag = HND } } AND = { tag = HND exists = HND THIS = { tag = NEP } } # Kalapani 
+			AND = { tag = ARM exists = ARM THIS = { tag = AZB } } AND = { tag = AZB exists = AZB THIS = { tag = ARM } } # Artsvashen 
+			AND = { tag = OMA exists = OMA THIS = { tag = SYE } } AND = { tag = SYE exists = SYE THIS = { tag = OMA } } # Khuriya Muriya Islands
+			AND = { tag = SKO exists = SKO THIS = { tag = JAP } } AND = { tag = JAP exists = JAP THIS = { tag = SKO } } # Liancourt Rocks
+			AND = { tag = VAN exists = VAN THIS = { tag = FRA } } AND = { tag = FRA exists = FRA THIS = { tag = VAN } } # Matthew and Hunter Islands
+			AND = { tag = FIJ exists = FIJ THIS = { tag = TON } } AND = { tag = TON exists = TON THIS = { tag = FIJ } } # Minerva Reefs
+			AND = { tag = HND exists = HND THIS = { tag = BNG } } AND = { tag = BNG exists = BNG THIS = { tag = HND } } # Indo-Bangladesh enclaves
+			AND = { tag = BUR exists = BUR THIS = { tag = BNG } } AND = { tag = BNG exists = BNG THIS = { tag = BUR } } # Naf River
+			AND = { tag = MSY exists = MSY THIS = { tag = SNG } } AND = { tag = SNG exists = SNG THIS = { tag = MSY } } # Pedra Branca
+			AND = { tag = CAM exists = CAM THIS = { tag = THI } } AND = { tag = THI exists = THI THIS = { tag = CAM } } # Prachinburi 
+			AND = { tag = KUW exists = KUW THIS = { tag = SAA } } AND = { tag = SAA exists = SAA THIS = { tag = KUW } } # Qarooh
+			AND = { tag = PHI exists = PHI THIS = { tag = MSY } } AND = { tag = MSY exists = MSY THIS = { tag = PHI } } # Sabah
+			AND = { tag = UAE exists = UAE THIS = { tag = SAA } } AND = { tag = SAA exists = SAA THIS = { tag = UAE } } # Saudi Arabia–UAEborder dispute
+			AND = { tag = IRQ exists = IRQ THIS = { tag = PER } } AND = { tag = PER exists = PER THIS = { tag = IRQ } } # Shatt al-Arab
+			AND = { tag = LEB exists = LEB THIS = { tag = ISR } } AND = { tag = ISR exists = ISR THIS = { tag = LEB } } # Shebaa Farms
+			AND = { tag = TOK exists = TOK THIS = { tag = USA } } AND = { tag = USA exists = USA THIS = { tag = TOK } } # Swains Island
+			AND = { tag = KAZ exists = KAZ THIS = { tag = RUS } } AND = { tag = RUS exists = RUS THIS = { tag = KAZ } } # Malozhemchuzny
+			AND = { tag = KAZ exists = KAZ THIS = { tag = UZB } } AND = { tag = UZB exists = UZB THIS = { tag = KAZ } } # Vozrozhdeniya Island
+			# North America			
+			AND = { tag = CUB exists = CUB THIS = { tag = USA } } AND = { tag = USA exists = USA THIS = { tag = CUB } } # Gulf of Mexico
+			AND = { tag = GRN exists = GRN THIS = { tag = CAN } } AND = { tag = CAN exists = CAN THIS = { tag = GRN } } # Hans Island
+			# Europe
+			AND = { tag = GRE exists = GRE THIS = { tag = TUR } } AND = { tag = TUR exists = TUR THIS = { tag = GRE } } # Aegean dispute
+			AND = { tag = SPA exists = SPA THIS = { tag = POR } } AND = { tag = POR exists = POR THIS = { tag = SPA } } # Olivenza
+			AND = { tag = SER exists = SER THIS = { tag = CRO } } AND = { tag = CRO exists = CRO THIS = { tag = SER } } # Croatia-Serbia border dispute
+			AND = { tag = SLO exists = SLO THIS = { tag = CRO } } AND = { tag = CRO exists = CRO THIS = { tag = SLO } } # Gulf of Piran
+			AND = { tag = MON exists = MON THIS = { tag = CRO } } AND = { tag = CRO exists = CRO THIS = { tag = MON } } # Prevlaka
+			AND = { tag = SER exists = SER THIS = { tag = BOS } } AND = { tag = BOS exists = BOS THIS = { tag = SER } } # Sastavci
+			AND = { tag = MON exists = MON THIS = { tag = BOS } } AND = { tag = BOS exists = BOS THIS = { tag = MON } } # Sutorina
+			AND = { tag = CRO exists = CRO THIS = { tag = BOS } } AND = { tag = BOS exists = BOS THIS = { tag = CRO } } # Neum
+			# South America
+			#AND = { tag = TG1 exists = TG1 THIS = { tag = TG2 } } AND = { tag = TG2 exists = TG2 THIS = { tag = TG1 } } # TerrName
+		}
  	}	
 	on_add = {
 		move_issue_percentage = { 

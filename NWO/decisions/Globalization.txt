@@ -347,4 +347,21 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}	
 	
+	international_court_of_justice = { 
+		picture = "international_court_of_justice"
+		alert = no
+		potential = {
+			NOT = { has_country_flag = international_court_of_justice }
+		}
+		allow = {
+			globalization = 1
+			OR = { government = democracy government = hms_government }
+			NOT = { ruling_party_ideology = populist }
+		}
+		effect = {
+			set_country_flag = international_court_of_justice
+			prestige = -20
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
