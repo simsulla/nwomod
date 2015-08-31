@@ -994,9 +994,11 @@ territorial_dispute = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
-		THIS = { 
-			NOT = { has_country_flag = international_court_of_justice }
-			OR = { government = democracy government = hms_government }
+		THIS = {
+			NOT = {
+				has_country_flag = international_court_of_justice
+				OR = { government = democracy government = hms_government }
+			}
 		}
 		OR = { 
 			# Israel alone in the Arab world
