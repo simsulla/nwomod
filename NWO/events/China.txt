@@ -217,7 +217,7 @@ country_event = {
 
 	trigger = {
 		tag = KMT
-		exists = yes
+		exists = KMT
 		war = yes
 		war_with = CHI
 		OR = { 
@@ -231,7 +231,7 @@ country_event = {
 	option = {				
 		name = "EVTOPTA90903" # flee to Taiwan
 		ai_chance = { factor = 100 }
-		any_country = { limit = { war_with = THIS NOT = { tag = CHI } } end_war = THIS }
+		any_country = { limit = { war_with = THIS NOT = { tag = CHI } NOT = { tag = KMT } exists = yes } end_war = THIS }
 		any_owned = { 
 			limit = { controlled_by = CHI }
 			secede_province = CHI

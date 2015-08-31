@@ -325,7 +325,7 @@ country_event = {
     name = "EVT_8200024_A"
 	relation = { who = CHI value = -100 } 
 	clr_global_flag = chinese_unity_govt 
-	CHI = { country_event =  { id = 8200025 days = 30 } }
+	CHI = { limit = { exists = KMT } country_event =  { id = 8200025 days = 30 } }
 	ai_chance = { factor = 100 }
   }
 
@@ -333,7 +333,7 @@ country_event = {
     name = "EVT_8200024_B"
 	relation = { who = CHI value = 20 } 
 	any_pop = { militancy = 1.0 }
-	CHI = { country_event =  { id = 8200026 days = 30 } }
+	CHI = { limit = { exists = KMT } country_event =  { id = 8200026 days = 30 } }
 	ai_chance = { factor = 0 }
   }
 }
