@@ -650,9 +650,9 @@ country_event = {
 	917 = { add_core = ISR }
 	920 = { add_core = ISR }
 	918 = { add_core = ISR }
-	random_country = { limit = { owns = 920 tag = EGY } ISR = { war = { target = EGY attacker_goal = { casus_belli = acquire_core_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } } }
-	random_country = { limit = { owns = 2687 tag = SYR } ISR = { war = { target = SYR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo }} } }
-	random_country = { limit = { owns = 917 tag = JOR } ISR = { war = { target = JOR attacker_goal = { casus_belli = acquire_core_state state_province_id = 917 } defender_goal = { casus_belli = status_quo }} } }
+	random_country = { limit = { EGY = { owns = 920 } tag = ISR } war = { target = EGY attacker_goal = { casus_belli = acquire_core_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } }
+	random_country = { limit = { SYR = { owns = 2687 } tag = ISR } war = { target = SYR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo }} }
+	random_country = { limit = { JOR = { owns = 917 } tag = ISR } war = { target = JOR attacker_goal = { casus_belli = acquire_core_state state_province_id = 917 } defender_goal = { casus_belli = status_quo }} }
 	add_casus_belli = { target = EGY type = acquire_state months = 48 }
 	any_pop = { militancy = -0.5 }
 	badboy = 15 
@@ -1022,16 +1022,18 @@ country_event = {
     tag = ISR
     year = 1978 NOT = { year = 1991 }
     NOT = { exists = PAL }
+	owns = 918
     war = no
   }
+  
+  immediate = { 918 = { add_core = ISR } }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8007697_A
 	any_pop = { militancy = 2.0 }
-	920 = { secede_province = PAL }
-	918 = { secede_province = PAL }
+	any_owned = { limit = { OR = { province_id = 920 province_id = 918 } } secede_province = PAL }
 	war = { target = PAL attacker_goal = { casus_belli = acquire_core_state state_province_id = 918 } defender_goal = { casus_belli = status_quo }}
 	ai_chance = { factor = 100 }
   }
@@ -1039,8 +1041,7 @@ country_event = {
   option = {
     name = EVT_8007697_A
 	any_pop = { militancy = 0.5 }
-	918 = { secede_province = PAL }
-	920 = { secede_province = PAL }
+	any_owned = { limit = { OR = { province_id = 920 province_id = 918 } } secede_province = PAL }
 	ai_chance = { factor = 0 }
   }
 }
