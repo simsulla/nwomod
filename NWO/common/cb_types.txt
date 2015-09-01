@@ -63,6 +63,7 @@ make_puppet
 humiliate
 territorial_dispute
 sanctions
+rude_boy
 }
 
 gunboat = {
@@ -1034,6 +1035,7 @@ territorial_dispute = {
 			# Asia and the Pacific
 			AND = { tag = SYR exists = SYR THIS = { tag = LEB } } AND = { tag = LEB exists = LEB THIS = { tag = SYR } } # Aarsal
 			AND = { tag = PER exists = PER THIS = { tag = UAE } } AND = { tag = UAE exists = UAE THIS = { tag = PER } } # Abu Musa
+			AND = { tag = NKO exists = NKO THIS = { tag = JAP } } AND = { tag = JAP exists = JAP THIS = { tag = NKO } } # Liancourt Rocks
 			AND = { tag = NKO exists = NKO THIS = { tag = CHI } } AND = { tag = CHI exists = CHI THIS = { tag = NKO } } # Baekdu Mountain
 			AND = { tag = BHU exists = BHU THIS = { tag = CHI } } AND = { tag = CHI exists = CHI THIS = { tag = BHU } } # Bhutanese enclaves
 			AND = { tag = DAI exists = DAI THIS = { tag = CAM } } AND = { tag = CAM exists = CAM THIS = { tag = DAI } } # Koh Thonsay
@@ -1430,4 +1432,47 @@ uninstall_communist_gov_cb = {
 	}
 }
 
+# Bad Boy
+rude_boy = {
+	sprite_index = 11
+	is_triggered_only = no
+	months = 12
+	construction_speed = 2
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 0.5
+	peace_cost_factor = 1.5
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+	
+	always = yes
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		badboy = 1
+	}
+	
+	po_remove_prestige = yes
+	po_disarmament = yes
+	po_reparations = yes
+	
+	war_name = WAR_RUDEBOI_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.1
+		}
+	}
+}
 
