@@ -105,10 +105,6 @@ country_migration_target =
 {
 	factor = 1
 
-	modifier = { factor = 2.0 OR = { tag = AST tag = CAN } }	
-	modifier = { factor = 1.1 total_pops = 25000000 } # 100,000,000
-	modifier = { factor = 1.1 total_pops = 2500000 } # 10,000,000
-	modifier = { factor = 1.1 total_pops = 250000 } # 1,000,000
 	modifier = { factor = 1.1 rank = 10 }
 	modifier = { factor = 1.1 rank = 20 }
 	modifier = { factor = 1.1 rank = 30 }
@@ -158,42 +154,21 @@ country_migration_target =
 		has_pop_culture = THIS
 	}
 	modifier = {
-		factor = 1.25
-		vote_franschise = universal_weighted_voting
-	}
-	modifier = {
-		factor = 1.5
-		vote_franschise = promoted_voting
-	}
-	modifier = {
 		factor = 2.0
 		OR = { 
 			continent = north_america
 			continent = south_america
 			continent = oceania
-			continent = europe
+			AND = { year = 1968 continent = europe }
 		}
 	}
-		modifier = {
-		factor = 0.1
-		NOT = {
-			any_owned_province = {
-				life_rating = 30
-				OR = {
-					AND = {
-						has_pop_type = labourers
-						NOT = { unemployment_by_type = { value = 0.1 type = labourers } }
-					}
-					AND = {
-						has_pop_type = farmers
-						NOT = { unemployment_by_type = { value = 0.1 type = farmers } }
-					}
-					AND = {
-						state_scope = { has_factories = yes }
-						NOT = { unemployment_by_type = { value = 0.1 type = farmers } }
-					}
-				}
-			}
+	modifier = {
+		factor = 4.0
+		OR = {
+			AND = { tag = USA is_culture_group = latin_american_cultures }
+			AND = { OR = { tag = CAN tag = AST } OR = { is_culture_group = south_asian is_culture_group = far_east_asian is_culture_group = east_asian } }
+			AND = { continent = europe OR = { is_culture_group = arabic is_culture_group = turko_semitic is_culture_group = east_african } }
+			AND = { OR = { tag = FRA tag = ENG } OR = { is_culture_group = south_asian is_culture_group = african_diaspora_cultures } }
 		}
 	}
 }

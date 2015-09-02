@@ -558,7 +558,11 @@ colonialmigration_chance = {
 #general emigration chance
 emigration_chance = 
 {
-	factor = 0.04
+	factor = 0.08 # 0.04
+	modifier = {
+		factor = -2.0
+		state_scope = { is_colonial = yes }
+	}
 	group = {
 		modifier = {
 			factor = 0.25
@@ -593,7 +597,23 @@ emigration_chance =
 	}
 	modifier = { 
 		factor = 2
-		OR = { culture  = mestizo culture  = white_spanish culture  = sunni_arab culture  = somali culture  = turkish culture  = black_anglo culture  = black_french culture  = black_portuguese } 
+		year = 1960  
+		OR = { 
+			country = { tag = MEX }
+			country = { tag = YUG }
+			is_culture_group = arabic 
+			is_culture_group = turko_semitic 
+			is_culture_group = east_african
+			is_culture_group = african_diaspora_cultures
+		} 
+	}
+	modifier = { 
+		factor = 2
+		NOT = { year = 1968 }
+		country = { tag = MEX }
+		country = { tag = YUG }
+		country = { NOT = { tag = BRZ } }
+		is_culture_group = latin_american_cultures
 	}
 	# rich more likely to migrate - due to only emigrate from dictatorships
 	modifier = {
@@ -602,7 +622,7 @@ emigration_chance =
 	}
 	# roundabout way to mod that mostly refugees emigrate
 	modifier = { 
-		factor = -1.8
+		factor = -1.2
 		country = {
 			NOT = { tag = MEX }
 			OR = {
@@ -750,13 +770,10 @@ emigration_chance =
 	}
 	# ugly but need to limit pop fragmentation and sino indian swamping
 	modifier = { 
-		factor = -1.2
+		factor = -1.1
 		OR = { 
-			culture = indian
-			culture = muslim_indian
-			culture = bengali
-			culture = bengali_hindu
-			culture = chinese
+			is_culture_group = south_asian 
+			is_culture_group = east_asian
 		}
 	}
 }
@@ -959,6 +976,11 @@ conversion_chance =
 		factor = 2
 		country = { religious_policy = secularized }
 	}
+	
+	modifier = {
+		factor = 10
+		country = { government = proletarian_dictatorship }
+	}	
 
 	modifier = {
 		factor = 2
