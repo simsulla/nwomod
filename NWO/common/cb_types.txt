@@ -154,7 +154,7 @@ conquest = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		# only one state or unciv
-		THIS = { OR = { NOT = { government = democracy } NOT = { government = hms_government } ai = no } } 
+		THIS = { NOT = { OR = { government = democracy government = hms_government  government = nationalist_dictatorship } ai = yes } } 
 		NOT = { number_of_states = 5 }
 		OR = {
 			AND = {
@@ -363,6 +363,8 @@ acquire_core_state = {
 		any_owned_province = {
 			is_core = THIS
 		}
+		THIS = { war_policy = jingoism }
+		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
 	}
 	
 	allowed_states = {
@@ -419,6 +421,8 @@ annex_core_country = {
 				}
 			}
 		}
+		THIS = { war_policy = jingoism }
+		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
 	}
 
 	po_annex = yes
@@ -458,7 +462,7 @@ acquire_state = {
 	can_use = { # TODO add AI limits
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2 # annex if you want their last state
-		THIS = { OR = { NOT = { government = democracy } NOT = { government = hms_government } ai = no } } 
+		THIS = { NOT = { OR = { government = democracy government = hms_government  government = nationalist_dictatorship } ai = yes } } 
 		any_owned_province = {
 			NOT = { is_core = THIS }
 			#is_colonial = no
@@ -996,9 +1000,10 @@ territorial_dispute = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
 		THIS = {
+			war_policy = jingoism
 			NOT = {
 				has_country_flag = international_court_of_justice
-				OR = { government = democracy government = hms_government }
+				OR = { government = democracy government = hms_government government = nationalist_dictatorship }
 			}
 		}
 		OR = { 
