@@ -1104,66 +1104,6 @@ country_event = {
 		}
 	}
 }
-#Colonial Recruitment
-country_event = {
-	id = 14680
-	title = "EVTNAME14680"
-	desc = "EVTDESC14680"
-	picture = "emigration"
-	
-	trigger = {
-		colonial_nation = yes
-		invention = mission_to_civilize
-	}
-	
-	mean_time_to_happen = {	
-		months = 700
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				average_consciousness = 4
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA14680"
-		random_state = {
-			limit = {
-				is_colonial = yes
-			}
-			any_owned = {
-				add_province_modifier = {
-					name = colonial_recruitment
-					duration = 7300
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB14680"
-		random_state = {
-			limit = {
-				is_colonial = no
-			}
-			any_owned = {
-				add_province_modifier = {
-					name = baby_boom
-					duration = 1825
-				}
-			}
-		}
-	}
-}
 # Loyal Colonials
 country_event = {
 	id = 14690

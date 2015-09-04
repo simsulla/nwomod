@@ -9,9 +9,8 @@ coal_transport_delivery = {
 		}
 	}
 	effect = {
-		activate_building = cement_factory 
 		factory_goods_output = {
-			machine_parts = 0.05 
+			cement = 0.05 
 		}
 	}
 }
@@ -25,10 +24,8 @@ thermal_power_station = {
 		}
 	}
 	effect = {
-		activate_building = lumber_factory 
-		factory_goods_output = {
-			machine_parts = 0.05 
-		}
+		activate_building = furniture_factory
+		factory_goods_output = { machine_parts = 0.05 }
 	}
 }
 
@@ -46,8 +43,7 @@ gas_turbine_plants = {
 		}
 	}
 	effect = {
-		activate_building = heating_electricity_factory
-		farm_rgo_eff = 0.05
+		activate_building = gas_fuel_factory
 	}
 }
 reciprocating_engines = {
@@ -163,7 +159,7 @@ reprocessing_depleted_uranium = {
 		}
 	}
 	effect = {
-		rgo_output = 0.05
+		activate_building = heating_electricity_factory
 		factory_throughput = 0.05
 	}
 }
@@ -1220,7 +1216,7 @@ intensive_fruit_crop_farming = {
 		}
 	}
 	effect = {
-		activate_building = fruit_canned_food_factory
+        rgo_goods_output = { fruit = 1 }
 	}
 }
 intensive_oil_seeds_crop_farming = {
@@ -1237,7 +1233,7 @@ intensive_oil_seeds_crop_farming = {
 		}
 	}
 	effect = {
-		activate_building = oil_seeds_canned_food_factory
+        rgo_goods_output = { oil_seeds = 1 }
 	}
 }
 # mineral_processing
@@ -1530,9 +1526,7 @@ transgenic_plants = {
 		}
 	}
 	effect = {
-		factory_goods_output = {
-			grain = 0.05
-		}
+        rgo_goods_output = { grain = 1 }
 	}
 }
 genetically_modified_crops = {
@@ -1576,9 +1570,7 @@ system_of_rice_intensification = {
 		}
 	}
 	effect = {
-		factory_goods_output = {
-			rice = 0.1
-		}
+        rgo_goods_output = { rice = 1 }
 	}
 }
 marker_assisted_selection = {
@@ -2119,6 +2111,15 @@ automation = {
 	}
 }
 #electricity
+spinning = {
+	limit = { electricity = 1 }
+	chance = {
+		base = 4
+	}
+	effect = {
+		activate_building = clothes_factory
+	}
+}
 circuits = {
 	limit = { electricity = 1 }
 	chance = {
@@ -2136,7 +2137,6 @@ circuits = {
 		factory_goods_output = {
 			integrated_circuits = 0.05 
 		}
-		activate_building = fabric_factory
 	}
 }
 electric_power = {
@@ -2153,10 +2153,10 @@ electric_power = {
 		}
 	}
 	effect = {
+		activate_building = aluminium_factory
 		factory_goods_output = {
 			heating_electricity = 0.05 
 		}
-		activate_building = wool_fabric_factory
 	}
 }
 #petrochemical_industry
@@ -2204,7 +2204,9 @@ lubricants = {
 		}
 	}
 	effect = {
-		activate_building = clothes_factory
+		factory_goods_output = {
+			clothes = 0.05 
+		}
 	}
 }
 #plastic_industry

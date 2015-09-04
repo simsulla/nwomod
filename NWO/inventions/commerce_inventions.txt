@@ -12,7 +12,6 @@ the_imf = {
 		}
 	}
 	effect = {
-		activate_building = paper_factory  
 		tax_eff = 1 
 	}
 }
@@ -552,10 +551,9 @@ john_maynard_keynes = {
 		}
 	}
 	effect = {
+		activate_building = paper_factory  
 		permanent_prestige = 3 
-	factory_goods_throughput = {
-		financial_services = 0.02
-		}
+		factory_goods_throughput = { financial_services = 0.02 }
 	}
 	
 	
@@ -973,7 +971,7 @@ post_war_consensus = {
 		}
 	}
 	effect = {
-		activate_building = footwear_factory
+		factory_cost = -0.01
 	}
 }
 anti_trust_laws = {

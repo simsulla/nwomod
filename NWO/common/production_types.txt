@@ -912,17 +912,12 @@ automobiles_factory = {
 jewellery_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 3
 		gold_silver = 18	
 	}
 	output_goods = jewellery 
 	value = 9
 	bonus = {
 		trigger = { trade_goods_in_state = gold_silver }
-		value = 0.125
-	}
-	bonus = {
-		trigger = { has_building = optics_factory }
 		value = 0.125
 	}
 }
