@@ -14,9 +14,8 @@ country_event = {
 		year = 1947
 		NOT = { 
 			OR = { 
-				AND = { tag = CHI has_global_flag = china_united_nations_security_council }
-				AND = { tag = KMT NOT = { has_global_flag = china_united_nations_security_council } }
-				tag = KMT
+				AND = { tag = CHI has_global_flag = CHI_in_UNSC }
+				AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 				tag = ENG
 				tag = USA
 				tag = FRA
@@ -188,9 +187,9 @@ country_event = { # TODO trigger by chines civil war
 	NOT = { has_country_flag = un_ccw }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -271,9 +270,9 @@ country_event = { # TODO trigger by suez war
 	NOT = { has_country_flag = un_suez }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -358,9 +357,9 @@ country_event = { # TODO trigger by taiwan war
 	NOT = { has_country_flag = un_taiwan }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -441,9 +440,9 @@ country_event = { # TODO Greek Civil war trigger
 	NOT = { has_country_flag = un_gcw }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -523,9 +522,9 @@ country_event = { # TODO Eritrea trigger
 	NOT = { has_country_flag = un_eritrea }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -586,9 +585,9 @@ country_event = { # TODO Indonesian National Revolution
 	NOT = { has_country_flag = un_indonesia }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -670,9 +669,9 @@ country_event = { # TODO Korean War
 	NOT = { has_country_flag = un_korea }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -753,9 +752,9 @@ country_event = { # TODO Hungarian Revolution
 	NOT = { has_country_flag = un_hungary }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -817,9 +816,9 @@ country_event = { # called in falkland wars
 	NOT = { has_country_flag = un_falkland }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA
@@ -860,9 +859,9 @@ country_event = {
 	NOT = { has_country_flag = un_desertstorm }
 	is_greater_power = yes
 	OR = { 
-		AND = { tag = CHI has_global_flag = CHC_in_UNSC }
+		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
-		tag = KMT
+		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
 		tag = ENG
 		tag = USA
 		tag = FRA

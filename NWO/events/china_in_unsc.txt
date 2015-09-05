@@ -16,7 +16,7 @@ country_event = { # # China in United Nations Security Council
 
   option = {
     name = EVT_8207000_A
-	set_global_flag = china_united_nations_security_council 
+	set_global_flag = CHI_in_UNSC 
   }
 }
 country_event = {
@@ -29,7 +29,7 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1944 NOT = { year = 1990 }
-    NOT = { has_global_flag = china_united_nations_security_council }
+    NOT = { has_global_flag = CHI_in_UNSC }
     exists = CHI
     has_global_flag = CHC_won_civil_war
   }
@@ -58,7 +58,7 @@ country_event = {
 
   option = {
     name = EVT_8207002_A
-	set_global_flag = china_united_nations_security_council 
+	set_global_flag = CHI_in_UNSC 
 	any_pop = { militancy = -0.5 }
   }
 }
@@ -72,7 +72,7 @@ country_event = {
   trigger = {
     tag = RUS
     year = 1949 NOT = { year = 1950 }
-    NOT = { has_global_flag = china_united_nations_security_council }
+    NOT = { has_global_flag = CHI_in_UNSC }
     exists = CHI
     has_global_flag = CHC_won_civil_war
   }
