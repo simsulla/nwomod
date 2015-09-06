@@ -812,24 +812,24 @@ guiTypes = {
 			verticalBorder = ""
 			fullScreen = no
 			
-				iconType = {
+			iconType = {
 				name = "politics_polparties"
 			    spriteType = "GFX_politics_irreligion"
 				position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
 				Orientation = "UPPER_LEFT"
-					}
-				instantTextBoxType = { 
+			}
+			instantTextBoxType = { 
 				name = "reform_name"
 				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
 				font = "vic_18"
 				text = "REFORM_NAME"	
 				maxWidth = 100
 				maxHeight = 20	
-					}
-
 			}
-			
-			windowType = {
+
+		}
+
+		windowType = {
 			name = "lgbt_rights"
 			backGround =""
 			position = { x = 686 y = 158 }
@@ -884,6 +884,34 @@ guiTypes = {
 
 			}
 			
+		windowType = {
+			name = "voting_system"
+			backGround =""
+			position = { x = 686 y = 528 }
+			size = { x=686 y= 100}
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = "0"
+			verticalBorder = ""
+			fullScreen = no
+			
+			iconType = {
+				name = "politics_votingsys"
+			    spriteType = "GFX_politics_votingsys"
+				position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = { 
+				name = "reform_name"
+				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
+				font = "vic_18"
+				text = "REFORM_NAME"	
+				maxWidth = 100
+				maxHeight = 20	
+			}
+
+		}
+
 
 			########################
 			### social

@@ -11,7 +11,7 @@ country_event = {
 			controlled_by = owner
 			OR = {
 				owner = { has_country_modifier = sectarian_divide }
-				minorities_reform = minorities_promotive
+				minorities_reform = minorities_equal_rights
 			}
 			has_national_minority = yes
 			any_core = { NOT = { tag = THIS } }
@@ -67,7 +67,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 4
-			NOT = { minorities_reform = minorities_promotive }
+			NOT = { minorities_reform = minorities_equal_rights }
 		}
 	}
 	
@@ -80,7 +80,7 @@ country_event = {
 				controlled_by = owner
 				OR = {
 					owner = { has_country_modifier = sectarian_divide }
-					minorities_reform = minorities_promotive
+					minorities_reform = minorities_equal_rights
 				}
 				has_national_minority = yes
 				any_core = { NOT = { tag = THIS } }
@@ -91,7 +91,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = { name = denied_independence duration = 1080 }
-		ai_chance = { factor = 1 modifier = { minorities_reform = minorities_promotive factor = 0 } }
+		ai_chance = { factor = 1 modifier = { minorities_reform = minorities_equal_rights factor = 0 } }
 	}
 	option = {
 		name = "EVTOPTB15500"		# Promised autonomy
@@ -102,7 +102,7 @@ country_event = {
 				controlled_by = owner
 				OR = {
 					owner = { has_country_modifier = sectarian_divide }
-					minorities_reform = minorities_promotive
+					minorities_reform = minorities_equal_rights
 				}
 				has_national_minority = yes
 				any_core = { NOT = { tag = THIS } }
@@ -113,7 +113,7 @@ country_event = {
 			}
 			add_province_modifier = { name = promised_autonomy duration = 1800 }
 		}
-		ai_chance = { factor = 1 modifier = { NOT = { minorities_reform = minorities_promotive } factor = 0  } }
+		ai_chance = { factor = 1 modifier = { NOT = { minorities_reform = minorities_equal_rights } factor = 0  } }
 	}
 }
 
@@ -160,7 +160,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 4
-			NOT = { minorities_reform = minorities_promotive }
+			NOT = { minorities_reform = minorities_equal_rights }
 		}
 	}	
 	
@@ -176,11 +176,11 @@ country_event = {
 			}
             country_event = 15502
 		}		
-		ai_chance = { factor = 1 modifier = { NOT = { minorities_promotive = 1 } factor = 0 } }
+		ai_chance = { factor = 1 modifier = { NOT = { minorities_equal_rights = 1 } factor = 0 } }
 	}
 	option = {
 		name = "EVTOPTB15501"		#Reject
-		ai_chance = { factor = 1 modifier = { minorities_promotive = 1 factor = 0 } }
+		ai_chance = { factor = 1 modifier = { minorities_equal_rights = 1 factor = 0 } }
 	}
 }
 

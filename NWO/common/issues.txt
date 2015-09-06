@@ -177,23 +177,6 @@ party_issues = {
 # Political reforms.
 ##########################################
 political_reforms = {
-#	slavery = {
-#		yes_slavery = {
-#			rules = { slavery_allowed = yes }
-#			allow = {
-#				NOT = { government = proletarian_dictatorship }
-#			}
-#		}
-#		no_slavery = {
-#			rules = { slavery_allowed = no }
-#			prestige = 0.01
-#			global_immigrant_attract = 0.05
-#			allow = {
-#				NOT = { has_country_flag = the_slavery_debate }
-#			}
-#
-#		}
-#	}
 
 	vote_franschise = {
 		next_step_only = yes
@@ -212,13 +195,19 @@ political_reforms = {
 			global_immigrant_attract = 0.15
 			cb_generation_speed_modifier = -0.1
 		}
-		universal_weighted_voting = { # wealth_weighted_voting wealth_voting
-			rich_vote = 3
-			rules = { largest_share = yes }
-			middle_vote = 3
-			poor_vote = 1
-			global_immigrant_attract = 0.2
-			cb_generation_speed_modifier = -0.2
+		universal_weighted_voting = { # wealth_weighted_voting 
+			rich_vote = 2
+			middle_vote = 1
+			poor_vote = 0
+			
+			global_immigrant_attract = 0.02
+		}
+		universal_voting = { # wealth_voting
+			rich_vote = 1
+			middle_vote = 1
+			poor_vote = 0
+			
+			global_immigrant_attract = 0.03
 		}
 		promoted_voting = { # universal_voting
 			rich_vote = 1
@@ -230,7 +219,6 @@ political_reforms = {
 		}
 	}
 
-
 	political_opinions = { # upper_house_composition
 		next_step_only = yes
 		administrative = yes
@@ -238,44 +226,37 @@ political_reforms = {
 			rules = { same_as_ruling_party = yes }
 		}
 		regulated_opinion = { # appointed
+			rules = { rich_only = yes }
+			global_immigrant_attract = 0.01
+		}
+		open_opinion = { # state_equal_weight
 			rules = { state_vote = yes }
-			allow = {
+			allow = { 
 				NOT = { vote_franschise = none_voting }
 			}
+			global_immigrant_attract = 0.02
 		}
-		free_opinion = { # state_equal_weight
+		free_opinion = { # population_equal_weight
 			rules = { population_vote = yes }
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
 		}
-		democratic_opinion = { # population_equal_weight
-			rules = { state_vote = yes }
+		democratic_opinion = { # appointed
+			rules = { rich_only = yes }
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 	}
 
-	religious_rights = { # voting_system TODO
+	religious_rights = { 
 		next_step_only = yes
-		state_religion = { # first_past_the_post
-#			rules = { largest_share = yes }
-#			allow = {
-#				NOT = { vote_franschise = none_voting }
-#			}
+		state_religion = { 
 		}
-		no_state_religion = { # jefferson_method
-#			rules = { dhont = yes }
-#			allow = {
-#				NOT = { vote_franschise = none_voting }
-#			}
+		no_state_religion = { 
 		}
-		irreligion_religion = { # proportional_representation
-#			rules = { sainte_laque = yes }
-#			allow = {
-#				NOT = { vote_franschise = none_voting }
-#			}
+		irreligion_religion = { 
 		}
 	}
 
@@ -433,15 +414,34 @@ political_reforms = {
 			rules = { culture_voting = yes }
 			allow = { not = { citizenship_policy = residency } }
 		}
-		minorities_promotive = { # protected
+		minorities_affirmative_action = { # protected
 			allow = { citizenship_policy = full_citizenship } 
 			rules = { all_voting = yes }
 			global_immigrant_attract = 0.1
 		}
-		minorities_affirmative_action = { #
-			global_immigrant_attract = 0.1
+	}
+	
+	voting_system = {
+		first_past_the_post = {
+			rules = { largest_share = yes }
+			allow = { 
+				NOT = { vote_franschise = none_voting }
+			}
+		}
+		jefferson_method = {
+			rules = { dhont = yes }
+			allow = { 
+				NOT = { vote_franschise = none_voting }
+			}
+		}
+		proportional_representation = {
+			rules = { sainte_laque = yes }
+			allow = { 
+				NOT = { vote_franschise = none_voting }
+			}			
 		}
 	}
+	
 }
 
 ##########################################
@@ -565,25 +565,25 @@ social_reforms = {
 			factory_throughput = 0.05
 		}
 		limited_child_care = { # child_labor_restricted
-			global_population_growth = 0.001
+			global_population_growth = 0.002
 			factory_throughput = -0.05
 			global_immigrant_attract = 0.05
 			tax_efficiency = -0.02
 		}
 		supported_child_care = { # child_labor_illegal
-			global_population_growth = 0.001
+			global_population_growth = 0.002
 			factory_throughput = -0.05
 			global_immigrant_attract = 0.1
 			tax_efficiency = -0.04
 		}
 		parental_leave_child_care = { # 
-			global_population_growth = 0.001
+			global_population_growth = 0.002
 			factory_throughput = -0.10
 			global_immigrant_attract = 0.1
 			tax_efficiency = -0.10
 		}
 		state_provided_child_care = { # 
-			global_population_growth = 0.001
+			global_population_growth = 0.002
 			global_immigrant_attract = 0.1
 			tax_efficiency = -0.20
 		}
