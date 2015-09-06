@@ -37,7 +37,7 @@ guiTypes = {
 			{
 				name ="frontend_backdrop"
 				spriteType = "GFX_frontend_main_bg"
-				position = { x= -800 y = -326 }
+				position = { x= -938 y = -326 } # EDIT x=-800
 				Orientation = "CENTER"
 			}
 		iconType =
@@ -170,7 +170,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_HOST"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			guiButtonType = {
@@ -181,7 +181,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_JOIN_LAN_GAME"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			guiButtonType = {
@@ -192,7 +192,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_JOIN_INTERNET_GAME"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			guiButtonType = {
@@ -203,7 +203,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_SCAN"
-				buttonFont = "vic_18_black"
+				buttonFont = "vic_18"
 			}
 			
 			guiButtonType = {
@@ -214,7 +214,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_METASERVER"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			guiButtonType = {
@@ -225,7 +225,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_BACK"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			editBoxType = {
@@ -300,7 +300,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_BACK"
-				buttonFont = "vic_18_black"
+				buttonFont = "vic_18"
 			}
 						
 		}
@@ -315,7 +315,7 @@ guiTypes = {
 		windowType = {
 			name ="mainmenu_panel"
 			backGround=""
-			position = { x= -800 y = -200}	
+			position = { x = -938 y = -326}# EDIT x = -188	
 			size = { x=420 y =500}
 			moveable = 0
 			dontRender = ""
@@ -328,122 +328,122 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "single_player_button"
-				position = { x = 288 y = 400 }
+				position = { x = 739 y = 534 } # x = x0 - 938 + 938 y = y0 - 326 + 326 
 				quadTextureSprite ="GFX_frontend_button_236"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_SINGLE_PLAYER"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			guiButtonType = {
 				name = "multi_player_button"
-				position = { x = 550 y = 400 }
+				position = { x = 958 y = 534 } # { x = 550 y = 400 }
 				quadTextureSprite ="GFX_frontend_button_236"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_MULTI_PLAYER"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			guiButtonType = {
 				name = "nudge_button"
-				position = { x = 121 y = 155 }
-				quadTextureSprite ="GFX_frontend_button_236"	
+				position = { x = 887 y = 600 }
+				quadTextureSprite ="GFX_frontend_button_196"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "Nudge"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 
 			guiButtonType = {
 				name = "tutorial_button"
-				position = { x = 812 y = 400 }
-				quadTextureSprite ="GFX_frontend_button_236"	
+				position = { x = 723 y = 600 }
+				quadTextureSprite ="GFX_frontend_button_196"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_TUTORIAL"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 
 			guiButtonType = {
 				name = "settings_button"
-				position = { x = 1074 y = 400 }
-				quadTextureSprite ="GFX_frontend_button_236"	
+				position = { x = 584 y = 600 }
+				quadTextureSprite ="GFX_frontend_button_196"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_OPTIONS"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			guiButtonType = {
 				name = "credits_button"
-				position = { x = 288 y = 455 }
-				quadTextureSprite ="GFX_frontend_button_236"	
+				position = { x = 1018 y = 600 }
+				quadTextureSprite ="GFX_frontend_button_196"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_CREDITS"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			guiButtonType = {
 				name = "exit_button"
-				position = { x =  1096 y = 455 }
+				position = { x = 1157 y = 600 } # { x =  1096 y = 455 }
 				quadTextureSprite ="GFX_frontend_button_196"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "FE_EXIT"
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			
 			
 			guiButtonType = {
 				name = "homepage_button"
-				position = { x = 569 y = 455	 }
+				position = { x = 1345 y = 592	 }
 				quadTextureSprite ="homepage"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = ""
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			guiButtonType = {
 				name = "forum_button"
-				position = { x = 719 y = 455	 }
+				position = { x = 1385 y = 592	 }
 				quadTextureSprite ="forum"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = ""
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}
 			guiButtonType = {
 				name = "facebook_button"
-				position = { x = 833 y = 455	 }
+				position = { x = 1425 y = 592	 }
 				quadTextureSprite ="facebook"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = ""
-				buttonFont = "vic_22_black"
+				buttonFont = "vic_22"
 			}			
 			guiButtonType = {
 				name = "twitter_button"
-				position = { x = 981 y = 455	 }
+				position = { x = 1465 y = 592	 }
 				quadTextureSprite ="twitter"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = ""
-				buttonFont = "vic_22_black"
-			}			
-			
+				buttonFont = "vic_22"
+			}	
+
 		}
 
 		
