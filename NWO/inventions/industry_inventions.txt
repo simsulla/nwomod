@@ -2159,9 +2159,8 @@ electric_power = {
 		}
 	}
 }
-#petrochemical_industry
-synthetic_polymers = {
-	limit = { petrochemical_industry = 1 }
+synthetic_polymers = { # part of electricity because 1946 we need plastics
+	limit = { electricity = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -2170,11 +2169,10 @@ synthetic_polymers = {
 		}
 	}
 	effect = {
-		factory_goods_output = {
-			plastics = 0.05 
-		}
+		activate_building = petroleum_plastics_factory
 	}
 }
+#petrochemical_industry
 petroleum_coke = {
 	limit = { petrochemical_industry = 1 }
 	chance = {
