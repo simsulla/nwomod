@@ -994,9 +994,30 @@ clothes_footwear_factory = {
 	}
 }
 
-############# LEVEL_4
-
 weaponry_factory = {       
+	template = modern_factory_template
+	input_goods = {    
+		electric_gear = 30	
+		automobiles = 30	
+	}
+	output_goods = weaponry 
+	value = 75
+	bonus = {
+		trigger = { has_building = automobiles_factory }
+		value = 0.125
+	}
+	bonus = {
+		trigger = { 
+			OR = {
+				has_building = electric_telecommunications_factory 
+				has_building = telecommunications_factory 
+			}
+		}
+		value = 0.125
+	}
+}
+
+advanced_weaponry_factory = {       
 	template = modern_factory_template
 	input_goods = {    
 		telecommunications = 30	
