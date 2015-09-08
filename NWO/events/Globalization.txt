@@ -317,15 +317,15 @@ country_event = {
 	title = EVT_15612_NAME
 	desc = EVT_15612_DESC
 	picture = anglo_american_finance
-	fire_only_once = yes
 	
 	trigger = {
 		tag = USA
 		has_country_flag = world_bank
+		NOT = { year = 1950 }
 	}
 	
 	mean_time_to_happen = {
-		months = 12
+		months = 8
 	}
 	
 	option = {
