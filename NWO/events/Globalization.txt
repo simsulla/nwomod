@@ -311,3 +311,25 @@ country_event = {
 		treasury = -100000
 	}
 }
+
+country_event = {
+	id = 15612
+	title = EVT_15612_NAME
+	desc = EVT_15612_DESC
+	picture = anglo_american_finance
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		has_country_flag = world_bank
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = EVT_15612_A
+		any_pop = { limit = { type = capitalists is_accepted_culture = yes location = { OR = { province_id = 232 province_id = 243 province_id = 84 province_id = 564 } } } money = 10000 }
+	}
+}
