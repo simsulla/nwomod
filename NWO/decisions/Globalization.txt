@@ -390,8 +390,8 @@ political_decisions = {
 		picture = "wb_credit_facillity"
 		potential = {
 			tag = USA
-			# avid start year ugly!
-			#year = 1947 NOT = { year = 1992 } year = 1993
+			# avoid start year ugly!
+			year = 1947 NOT = { year = 1992 } year = 1993
 			NOT = { has_country_modifier = wb_credit_facillity }
 		}
 		allow = {
@@ -401,9 +401,9 @@ political_decisions = {
 			has_country_modifier = bretton_system
 		}
 		effect = {
-			add_country_modifier = { name = wb_credit_facillity duration = 700 } # everysecond year
+			add_country_modifier = { name = wb_credit_facillity duration = 700 } # every second year
 			any_country = { limit = { money = 100000 in_sphere = USA } country_event = 15601 }
-			random_country = { limit = { money = 100000 has_country_flag = the_imf } THIS = { treasury = 100000 } country_event = 15609 } 
+			random_country = { limit = { money = 100000 has_country_flag = the_imf } USA = { treasury = 100000 } country_event = 15609 } 
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -486,6 +486,7 @@ political_decisions = {
 		picture = "uk_war_debt"
 		potential = {
 			tag = USA
+			NOT = { year = 1992 }
 			NOT = { has_country_modifier = uk_war_debt }
 			ENG = { money = 100000 } # TODO add condition if ENG does not decolonlialize
 			NOT = { check_variable = { which = "uk_war_debt" value = 5 }
