@@ -558,7 +558,7 @@ colonialmigration_chance = {
 #general emigration chance
 emigration_chance = 
 {
-	factor = 0.06 # 0.04
+	factor = 0.06 
 	modifier = {
 		factor = -2.0
 		state_scope = { is_colonial = yes }
@@ -595,9 +595,15 @@ emigration_chance =
 			luxury_needs = 0.6
 		}
 	}
+	modifier = {
+		factor = -2.0
+		NOT = { year = 1970 }
+		state_scope = { NOT = { continent = europe } }
+		country = { NOT = { tag = MEX } }
+	}
 	modifier = { 
 		factor = 2
-		year = 1960  
+		year = 1980  
 		OR = { 
 			country = { tag = MEX }
 			country = { tag = YUG }
@@ -609,7 +615,7 @@ emigration_chance =
 	}
 	modifier = { 
 		factor = 2
-		NOT = { year = 1968 }
+		NOT = { year = 1980 }
 		country = { tag = MEX }
 		country = { tag = YUG }
 		country = { NOT = { tag = BRZ } }
