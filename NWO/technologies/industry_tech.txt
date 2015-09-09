@@ -4,7 +4,7 @@ fossil_fuel_power = {
 	cost = 3600
 
 	activate_building = petroleum_fuel_factory 
-	rgo_goods_output = { coal = 0.15 }
+	rgo_goods_output = { coal = 0.25 }
 	ai_chance = {
 		factor = 1.1
 		modifier = {
@@ -40,6 +40,7 @@ oil_well = {
 	cost = 5400
 
 	rgo_goods_output = { petroleum = 0.25 }
+	rgo_goods_output = { gas = 0.1 }
 	ai_chance = {
 		factor = 1.1
 		modifier = {
@@ -113,6 +114,7 @@ liquefied_natural_gas = {
 	cost = 7200
 	
 	rgo_goods_output = { gas = 0.25 }
+	rgo_goods_output = { petroleum = 0.1 }
 	ai_chance = {
 		factor = 1.01
 		modifier = {
@@ -150,8 +152,8 @@ offshore_drilling = {
 	year = 1990
 	cost = 12600
 	
-	rgo_goods_output = { gas = 0.15 }
-	rgo_goods_output = { petroleum = 0.15 }
+	rgo_goods_output = { gas = 0.25 }
+	rgo_goods_output = { petroleum = 0.25 }
 	ai_chance = {
 		factor = 1.01
 		modifier = {
@@ -190,7 +192,7 @@ hydraulic_fracturing = {
 	cost = 14400
 
 	mine_rgo_eff = 0.2
-	rgo_goods_output = { gas = 0.25 }
+	rgo_goods_output = { gas = 0.6 }
 	ai_chance = {
 		factor = 1.1
 		modifier = {
@@ -711,6 +713,10 @@ intensive_farming = {
 	rgo_goods_output = { rubber = 0.05 }
 	rgo_goods_output = { grain = 0.05 }
 	rgo_goods_output = { cattle = 0.05 }
+	rgo_goods_output = { cotton = 0.3 }
+	rgo_goods_output = { timber = 0.1 }
+	rgo_goods_output = { coffee = 0.3 }
+	
 	ai_chance = {
 		factor = 1.1
 		modifier = {
@@ -819,6 +825,7 @@ heavy_mining = {
 	year = 1946
 	cost = 5400
 	
+	rgo_goods_output = { copper = 0.1 }
 	rgo_goods_output = { coal = 0.25 }
 	rgo_size = { coal = 0.2 }
 	rgo_goods_output = { other_minerals = 0.25 }
@@ -940,6 +947,12 @@ green_revolution = {
 	rgo_goods_output = { rubber = 0.25 }
 	rgo_goods_output = { grain = 0.25 }
 	rgo_goods_output = { cattle = 0.25 }
+	rgo_goods_output = { timber = 0.1 }
+	rgo_goods_output = { tea = 0.35 }
+	rgo_goods_output = { tobacco = 0.2 }
+	rgo_goods_output = { cotton = 0.3 }
+	rgo_goods_output = { coffee = 0.3 }
+
 	ai_chance = {
 		factor = 1.1
 		modifier = {
@@ -989,13 +1002,17 @@ contemporary_agriculture = {
 	year = 1992
 	cost = 12600
 	
+	rgo_goods_output = { rubber = 0.25 }
+	rgo_size = { fruit = 0.1 }
 	rgo_goods_output = { fruit = 0.25 }
 	rgo_size = { fruit = 0.1 }
 	rgo_goods_output = { tea = 0.25 }
 	rgo_size = { tea = 0.1 }
 	rgo_goods_output = { coffee = 0.25 }
 	rgo_size = { coffee = 0.1 }
-	
+	rgo_goods_output = { cotton = 0.3 }
+	rgo_size = { cotton = 0.1 }
+
 	ai_chance = {
 		factor = 1.1
 		modifier = {
@@ -1011,30 +1028,6 @@ contemporary_agriculture = {
 			big_producer = coffee
 		}
 		modifier = {
-			factor = 1.3
-			any_owned_province = {
-				produces = coal
-			}
-		}
-		modifier = {
-			factor = 1.1
-			any_owned_province = {
-				produces = iron
-			}
-		}
-		modifier = {
-			factor = 1.1
-			any_owned_province = {
-				produces = other_minerals
-			}
-		}
-		modifier = {
-			factor = 1.1
-			any_owned_province = {
-				produces = gold_silver
-			}
-		}
-		modifier = {
 			factor = 1.02
 			tech_school = industrial_tech_school
 		}
@@ -1045,6 +1038,7 @@ automated_mining = {
 	year = 2000
 	cost = 14400
 
+	rgo_goods_output = { copper = 0.4 }
 	rgo_goods_output = { gold_silver = 0.25 }
 	rgo_goods_output = { coal = 0.25 }
 	rgo_goods_output = { iron = 0.25 }
@@ -1104,6 +1098,9 @@ genetically_modified_organism = {
 	rgo_goods_output = { coal = 0.25 }
 	rgo_goods_output = { iron = 0.25 }
 	rgo_size = { other_minerals = 0.2 }
+	rgo_goods_output = { cotton = 0.1 }
+	rgo_goods_output = { coffee = 0.25 }
+	rgo_size = { coffee = 0.1 }
 	
 	ai_chance = {
 		factor = 1.1
@@ -1211,6 +1208,8 @@ landfill_mining_and_recycling = {
 	year = 2045
 	cost = 18000
 
+	rgo_goods_output = { copper = 0.4 }
+	rgo_goods_output = { gold_silver = 0.25 }
 	factory_goods_output = { steel = 0.1 }
 	rgo_goods_output = { coal = 1 }
 	rgo_goods_output = { iron = 1 }
@@ -1533,6 +1532,7 @@ petrochemical_industry = {
 	cost = 3600
 
 	supply_limit = 0.25
+	factory_goods_output = { jewellery = 0.4 }
 	
 	ai_chance = {
 		factor = 1.1
@@ -1552,6 +1552,8 @@ plastic_industry = {
 	cost = 5400
 
 	supply_limit = 0.25
+	factory_goods_output = { beverages = 0.3 }
+	factory_goods_output = { jewellery = 0.3 }
 	
 	ai_chance = {
 		factor = 1.1
@@ -1571,6 +1573,7 @@ modern_medicine = {
 	cost = 7200
 
 	supply_limit = 0.25
+	factory_goods_output = { beverages = 0.4 }
 	
 	ai_chance = {
 		factor = 1.1
@@ -1590,6 +1593,8 @@ molecular_biology = {
 	cost = 12600
 
 	supply_limit = 0.25
+	factory_goods_output = { beverages = 0.3 }
+	factory_goods_output = { fabric = 0.2 }
 	
 	ai_chance = {
 		factor = 1.1
