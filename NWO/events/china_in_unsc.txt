@@ -7,9 +7,13 @@ country_event = { # # China in United Nations Security Council
 
   trigger = {
     tag = CHI
-	year = 1954 NOT = { year = 1990 }
-    NOT = { exists = KMT }
+	year = 1954 
+	OR = { 
+		year = 1992
+		NOT = { exists = KMT }
+	}
     war = no
+	NOT = { has_global_flag = CHI_in_UNSC }
   }
 
   mean_time_to_happen = { months = 1  }

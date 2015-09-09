@@ -1082,7 +1082,7 @@ country_event = {
 
   trigger = {
     tag = CHI
-    year = 1964
+    year = 1964  NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8299012 }
 
@@ -1103,7 +1103,7 @@ country_event = {
 
   trigger = {
     tag = CHI
-    year = 1977
+    year = 1977 NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8299013 }
 
@@ -1123,7 +1123,7 @@ country_event = {
 
   trigger = {
     tag = CHI
-    year = 1979
+    year = 1979  NOT = { year = 1990 }
     social_reform_want = 0.8
   }
   immediate = { set_global_flag = event_fired_8299014 }

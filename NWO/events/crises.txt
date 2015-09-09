@@ -8,6 +8,7 @@ country_event = {
 
 	trigger = {
 		# only UNSC members
+		is_greater_power = yes
 		OR = { 
 			AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 			AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
