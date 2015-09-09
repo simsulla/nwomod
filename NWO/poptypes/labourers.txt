@@ -409,7 +409,7 @@ promote_to =
 	bureaucrats =
 	{
 		factor = 0.01
-		modifier = { factor = -20 NOT = { is_primary_culture = yes } NOT = { is_accpeted_culture = yes } }
+		modifier = { factor = -20 NOT = { is_primary_culture = yes } NOT = { is_accepted_culture = yes } }
 		group = {
 			modifier = { factor = 6 state_scope = { NOT = { bureaucrats = 0.01 } } }
 			modifier = { factor = -2 state_scope = { bureaucrats = 0.01 } }
@@ -471,7 +471,7 @@ promote_to =
 	soldiers =
 	{
 		factor = 0.01
-		modifier = { factor = -20 NOT = { is_primary_culture = yes } NOT = { is_accpeted_culture = yes } }
+		modifier = { factor = -20 NOT = { is_primary_culture = yes } NOT = { is_accepted_culture = yes } }
 		group = {
 			modifier = { factor = 10 state_scope = { NOT = { soldiers = 0.008 } } }
 			modifier = { factor = -2 state_scope = { soldiers = 0.016 } }
