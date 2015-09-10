@@ -354,7 +354,6 @@ country_event = {
     name = "EVT_8200025_B"
 	clr_global_flag = chinese_unity_govt 
 	relation = { who = KMT value = -150 } 
-	country_event =  { id = 8200027 days = 1 } 
 	country_event = 8200028 
 	ai_chance = { factor = 0 }
   }
@@ -377,7 +376,6 @@ country_event = {
     name = "EVT_8200026_A"
 	clr_global_flag = chinese_unity_govt 
 	relation = { who = CHI value = -150 } 
-	country_event =  { id = 8200027 days = 1 } 
 	country_event = 8200028 
 	ai_chance = { factor = 100 }
   }
@@ -399,6 +397,7 @@ country_event = {
   option = {
     name = "EVT_8200026_A"
 	inherit = CHI 
+	set_global_flag = CHI_won_civil_war
 	capital = 2221 
 	any_pop = { militancy = -3.0 }
   }
