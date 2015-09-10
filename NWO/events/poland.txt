@@ -488,6 +488,60 @@ country_event = {
   }
 }
 
+country_event = { # Movement for Defense of Human and Civic Rights
+  id = 8023246
+  title = EVT_8023246_NAME
+  desc = EVT_8023246_DESC
+  picture = "poland_ropcio"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1977 NOT = { year = 1990 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8023246_A
+	any_pop = { militancy = 0.5 } 
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8023246_B
+	prestige = -10
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = { # Workers' Defence Committee
+  id = 8023247
+  title = EVT_8023247_NAME
+  desc = EVT_8023247_DESC
+  picture = "poland_kor"
+  fire_only_once = yes
+
+  trigger = {
+    tag = POL
+	year = 1976 NOT = { year = 1990 }
+    has_global_flag = cold_war
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { months = 10 }
+
+  option = {
+    name = EVT_8023247_A
+	any_greater_power = { limit = { NOT = { government = proletarian_dictatorship} } relation = { who = THIS value = -50 } }
+	any_pop = { militancy = 0.5 } 
+  }
+  option = {
+    name = EVT_8023247_B
+	prestige = -5
+	any_pop = { consciousness = 0.5 } 
+  }
+}
 country_event = {
   id = 8222000
   title = EVT_8222000_NAME
