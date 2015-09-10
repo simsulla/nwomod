@@ -318,17 +318,19 @@ country_event = {
     name = EVT_8176110_A
 	relation = { who = AFG value = -150 } 
 	any_pop = { militancy = -0.7 }
-	badboy = 15
+	badboy = 2
 	random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
 	RUS  = { country_event = 8225000 } 
 	AFG = { country_event =  8176111 }
 	country_event = { id = 8176112 days = 380 }   
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8176110_B
 	any_pop = { militancy = 0.1 }
 	AFG = { country_event =  8000110 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -354,12 +356,15 @@ country_event = {
     name = EVT_8176112_A
 	add_casus_belli = { target = AFG type = install_communist_gov_cb months = 24 }
 	war = AFG
-  }
+	set_country_flag = soviet_intervention_in_afghanistan
+	ai_chance = { factor = 100 }
+ }
 
   option = {
     name = EVT_8176112_B
 	badboy = -10 
 	country_event = 8176114 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -367,19 +372,24 @@ country_event = {
   title = EVT_8176113_NAME
   desc = EVT_8176113_DESC
   picture = "nwo2_soviet_withdrawal_from_afghanistan"
-  is_triggered_only = yes
+  fire_only_once = yes
 
+  trigger = {
+	war = no
+	has_country_flag = soviet_intervention_in_afghanistan
+	tag = RUS
+	government = proletarian_dictatorship
+	AFG = { NOT = { government = proletarian_dictatorship } }
+  }
+  
+  mean_time_to_happen = { months = 1 }
+  
   option = {
     name = EVT_8176113_A
 	any_pop = { militancy = 0.5 }
-	badboy = -10 country_event = 8176113 
+	country_event = 8225001
   }
 
-  option = {
-    name = EVT_8176113_B
-	any_pop = { militancy = 1.0 }
-	badboy = 5 
-  }
 }
 country_event = {
   id = 8176114
