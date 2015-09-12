@@ -1,0 +1,259 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~ADD EVENT MODIFIER WB_loan2, same as wb_loan~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Made by: Hiddengearz
+
+country_event = { # this event is fired in the nation that is about to go bankrupt
+	id = 1234
+	title = "We are going bankrupt!"
+	desc = "We joined the European Union hoping for a better life for our people but somehow we have gone bankrupt. Will our EU brothers help us?"
+	#picture = "(picture name)"
+
+    #the four lines below are only needed if they are yes
+	 
+	is_triggered_only = no		        #only fired by another event or manually
+	allow_multiple_instances = yes	    #Allows to fire several at once?
+	
+	trigger = {
+		any_greater_power = { 
+				has_country_flag = xeu_ambition 
+			}	
+		has_country_modifier = in_bankrupcy
+		has_country_flag = xeu_ambition # we have to be part of EU
+	}
+ 
+	option = {
+		name = "Ask for help. Give us more money, show solidarity, our people are suffering!"
+		country_event = 1243
+		random_country = {
+			limit = {
+				is_greater_power = yes 
+				has_country_flag = xeu_ambition 
+				money = 100000 
+
+			} 
+			country_event = 1235 
+		} 
+		ai_chance = { factor = 100 } #testing
+	}
+	
+	option = {
+		name = "The trade union is the cause for this. We're out!"
+		clr_country_flag = xeu_ambition
+		clr_country_flag = in_trade_block
+		all_core = { remove_core = XEU }
+		capital_scope = { 
+			remove_province_modifier = single_market			
+			remove_province_modifier = currency_union_province
+			remove_province_modifier = defence_union
+		}
+		remove_country_modifier = currency_union
+		any_pop = {
+			scaled_militancy = {
+				issue = free_trade
+				factor = 3
+			}
+		}
+		tech_school = traditional_academic
+	
+	}
+}
+	
+	
+
+# and then you have an event 1235 which is the GP that is asked for money
+country_event = {
+	id = 1235
+	title = "A European Union member has gone bankrupt."
+	desc = "What shall we do? Bail them out or have the union fall apart?"
+	#picture = "(picture name)"
+	is_triggered_only = yes
+ 
+	option = {
+		name = "Bail them out!"
+		FROM = {
+			country_event = 1236
+		}
+		ai_chance = { factor = 100 }
+	}		
+	
+	option = {
+		name =  "Bail them out with austerity measures."
+		FROM = {
+			country_event = 1237
+		}
+	}
+	
+	option = {
+		name = "Don't help them at all."
+		From = {
+			country_event = 1238
+			#clr_country_flag = xeu_ambition
+		}
+
+	}
+}
+
+
+country_event = { #accept bailout
+	id = 1236
+	title = "They're offering to bail us out!"
+	desc = "What shall we do?"
+	#picture = "(picture name)"
+	is_triggered_only = yes
+	
+	option = { #accept bailout
+		name =  "Accept the bailout." #EVT_1236_OPT_A
+		treasury = 100000
+		FROM = {
+			treasury = -100000
+		}	
+		#add_country_modifier = {  name = TU_bankrupcy duration = 730 }
+		ai_chance = { factor = 100 }
+	}
+	
+	option = { #decline bailout, leave the union
+		name =  "Decline their bailout, leave the union." #EVT_1236_OPT_B
+		add_country_modifier = {  name = TU_bankrupcy_leave duration = 730 }
+		clr_country_flag = xeu_ambition
+		clr_country_flag = in_trade_block
+		all_core = { remove_core = XEU }
+		capital_scope = { 
+			remove_province_modifier = single_market			
+			remove_province_modifier = currency_union_province
+			remove_province_modifier = defence_union
+		}
+		remove_country_modifier = currency_union
+		any_pop = {
+			scaled_militancy = {
+				issue = free_trade
+				factor = 3
+			}
+		}
+		tech_school = traditional_academic
+		random_country = {
+			limit = {
+			treasury = 150000
+				OR = {
+					has_country_flag = world_bank
+					has_country_flag = the_imf
+				}
+				not = { has_country_modifier = wb_loan2 }
+			}
+			add_country_modifier = { name = wb_loan2 duration = 350 } # stops the loop. 
+			country_event = 1235 # ask wb/imf to bail us out. Basically repeating the process.
+
+		}
+	}
+}
+
+country_event = { #accept bailout with austerity measures
+	id = 1237
+	title = "We are going bankrupt!"
+	desc = "We are going bankrupt, what shall we do?"
+	#picture = "(picture name)"
+	is_triggered_only = yes
+	
+	option = { #accept bailout
+		name =  "Accept the bailout." #EVT_1237_OPT_A
+		treasury = 100000
+		FROM = {
+			treasury = -100000
+		}	
+		#add_country_modifier = {  name = TU_Austerity duration = 730 }
+		ai_chance = { factor = 100 }
+	}
+	
+	option = { #decline bailout and leave union
+		name =  "Decline their bailout and leave the union!" #EVT_1237_OPT_B
+		add_country_modifier = {  name = TU_bankrupcy_leave duration = 730 }
+		clr_country_flag = xeu_ambition
+		clr_country_flag = in_trade_block
+		all_core = { remove_core = XEU }
+		capital_scope = { 
+			remove_province_modifier = single_market			
+			remove_province_modifier = currency_union_province
+			remove_province_modifier = defence_union
+		}
+		remove_country_modifier = currency_union
+		any_pop = {
+			scaled_militancy = {
+				issue = free_trade
+				factor = 3
+			}
+		}
+		tech_school = traditional_academic
+				random_country = {
+			limit = {
+			treasury = 150000
+				OR = {
+					has_country_flag = world_bank
+					has_country_flag = the_imf
+				}
+				not = { has_country_modifier = wb_loan2 }
+			}
+			add_country_modifier = { name = wb_loan2 duration = 350 } # stops the loop. 
+			country_event = 1235 # ask wb/imf to bail us out. Basically repeating the process.
+
+		}
+	}
+}
+
+country_event = { #they didnt offer us anything, leave the union
+	id = 1238
+	title = "They have declined to help us!"
+	desc = "What type of union doesnt help its members. We must leave!"
+	#picture = "(picture name)"
+	is_triggered_only = yes
+	
+	option = { #leave union
+		name =  "We are leaving the union." #EVT_1238_OPT_A
+		add_country_modifier = {  name = TU_bankrupcy_leave duration = 730 }
+		clr_country_flag = xeu_ambition
+		clr_country_flag = in_trade_block
+		all_core = { remove_core = XEU }
+		capital_scope = { 
+			remove_province_modifier = single_market			
+			remove_province_modifier = currency_union_province
+			remove_province_modifier = defence_union
+		}
+		remove_country_modifier = currency_union
+		any_pop = {
+			scaled_militancy = {
+				issue = free_trade
+				factor = 3
+			}
+		}
+		tech_school = traditional_academic
+	}
+}
+
+country_event = { #end of eu debt crisis
+	id = 1242
+	title = "The European Financial crisis is over"
+	desc = "That was a close one!"
+	#picture = "(picture name)"
+	major = yes
+
+	trigger = {
+		NOT = { has_country_modifier = in_bancrupcy }
+		has_country_flag = eu_debt_crisis
+	}
+	
+	option = { 
+		name =  EVT_1242_OPT_A
+		clr_country_flag = eu_debt_crisis
+	}
+}
+
+country_event = { #start of eu debt crisis
+	id = 1243
+	title = "The European Union financial crisis."
+	desc = "A member of the EU is on the verge of bankruptcy! The global financial system is at risk.  "
+	#picture = "(picture name)"
+	is_triggered_only = yes
+	major = yes
+	
+	option = { 
+		name =  "oh no"
+		add_country_flag = eu_debt_crisis
+	}
+}
