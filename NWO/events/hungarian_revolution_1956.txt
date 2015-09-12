@@ -13,7 +13,7 @@ country_event = { # Hungarian Revolution 1956
 	vassal_of = RUS
     war = no
   }
-  immediate = { set_global_flag = event_fired_8501101 }
+  immediate = { set_global_flag = hungarian_revolution_1956 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -21,7 +21,6 @@ country_event = { # Hungarian Revolution 1956
     name = EVT_8501101_A
 	any_pop = { militancy = 0.5 }
 	relation = { who = RUS value = -200 } 
-	set_country_flag = block_ideology_switch 
 	define_general = { name = "Imre Nagy" personality = energetic background = no_background }
 	ai_chance = { factor = 100 }
   }
@@ -29,7 +28,6 @@ country_event = { # Hungarian Revolution 1956
   option = {
     name = EVT_8501101_B
 	any_pop = { militancy = 3.0 }
-	country_event =  { id = 8501102 days = 1 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -43,11 +41,10 @@ country_event = { #"Hungarian Neutrality"
   trigger = {
     tag = HUN
 	year = 1956 NOT = { year = 1957 }
-    has_global_flag = event_fired_8501101
+    has_global_flag = hungarian_revolution_1956
     has_global_flag = cold_war
     war = no
   }
-  immediate = { set_global_flag = event_fired_8501102 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -62,6 +59,8 @@ country_event = { #"Hungarian Neutrality"
   option = {
     name = EVT_8501102_B
 	any_pop = { militancy = 2.0 }
+	government = democracy country_event = 800054
+	diplomatic_influence = { who = RUS value = -100 }
 	RUS = { country_event =  { id = 8501103 days = 23 } }
 	ai_chance = { factor = 100 }
   }
@@ -71,17 +70,7 @@ country_event = {
   title = EVT_8501103_NAME
   desc = EVT_8501103_DESC
   picture = "nwo2_hungarian_revolution_1956"
-  fire_only_once = yes
-
-  trigger = {
-    tag = RUS
-	year = 1956 NOT = { year = 1957 }
-    has_global_flag = event_fired_8501102
-    has_global_flag = cold_war
-  }
-  immediate = { set_global_flag = event_fired_8501103 }
-
-  mean_time_to_happen = { months = 1  }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8501103_A
@@ -93,8 +82,7 @@ country_event = {
   option = {
     name = EVT_8501103_B
 	any_pop = { militancy = 1.0 }
-	country_event =  { id = 8501114 days = 1 } 
-	country_event = 8510800 # united_nations.txt 
+	country_event =  { id = 8501114 days = 20 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -103,17 +91,7 @@ country_event = {
   title = EVT_8501113_NAME
   desc = EVT_8501113_DESC
   picture = "nwo2_allied_intervention"
-  fire_only_once = yes
-
-  trigger = {
-    tag = USA
-	year = 1956 NOT = { year = 1959 }
-    has_global_flag = event_fired_8501103
-    has_global_flag = cold_war
-	HUN = { war_with = RUS }
-  }
-
-  mean_time_to_happen = { months = 1  }
+  is_triggered_only = yes
 
  option = {
     name = EVT_8501113_A # Intervene
@@ -138,7 +116,7 @@ country_event = {
     tag = HUN
 	war = no
 	year = 1958 NOT = { year = 1959 }
-	government = democracy
+	NOT = { government = democracy }
 	is_vassal = no
   }
 
@@ -146,7 +124,6 @@ country_event = {
     name = EVT_8501104_A
 	relation = { who = RUS value = -100 } 
 	country_event = 8021308 # communist_hungary.txt
-	clr_country_flag = block_ideology_switch 
   }
 }
 country_event = {
@@ -164,13 +141,13 @@ country_event = {
 		government = democracy
 		is_vassal = no
 	}
-	has_global_flag = event_fired_8501103
+	has_global_flag = hungarian_revolution_1956
   }
 
   option = {
     name = EVT_8501115_A
 	any_pop = { militancy = 1.0 }
-	RUS  = { country_event = 8225001 }
+	country_event = 8225001
   }
 }
 country_event = {
@@ -188,12 +165,12 @@ country_event = {
 		NOT = { government = democracy }
 		is_vassal = yes
 	}
-	has_global_flag = event_fired_8501103
+	has_global_flag = hungarian_revolution_1956
   }
 
   option = {
     name = EVT_8501105_A
-	RUS  = { country_event = 8225000 }
+	country_event = 8225000
   }
 }
 country_event = {
@@ -209,14 +186,13 @@ country_event = {
 	war = no
 	NOT = { government = democracy }
 	is_vassal = yes
-	has_global_flag = event_fired_8501103
+	has_global_flag = hungarian_revolution_1956
   }
 
   option = {
     name = EVT_8501106_A
 	relation = { who = RUS value = 50 } 
 	country_event = 8021309 
-	clr_country_flag = block_ideology_switch 
   }
 }
 country_event = {
@@ -239,8 +215,9 @@ country_event = {
   option = {
     name = EVT_8501110_A
 	any_pop = { militancy = 1.0 }
-	country_event = 8501104 
-	HUN = { country_event = 8501115 } 
+	prestige = -10
+	country_event =  8501115
+	HUN = { country_event = 8501104 } 
 	ai_chance = { factor = 0 }
   }
 
@@ -300,6 +277,7 @@ country_event = {
 
   option = {
     name = EVT_8501112_B
+	badboy = 1
 	any_pop = { militancy = 3.5 }
 	RUS = { country_event = 8501113 }
 	ai_chance = { factor = 0 }
