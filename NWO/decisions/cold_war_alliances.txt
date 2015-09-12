@@ -9,10 +9,8 @@ political_decisions = {
                     NOT =  { in_sphere = RUS }					
                     NOT =  { capital_scope = { has_province_modifier = csto_alliance } }
                     NOT =  { tag = RUS }					
-                    NOT =  {
-						capital_scope = { has_province_modifier = alliance_nato }
-						capital_scope = { has_province_modifier = leave_alliance_nato } 
-					}
+					capital_scope = { NOT = { has_province_modifier = alliance_nato } }
+					capital_scope = { NOT = { has_province_modifier = leave_alliance_nato } } 
 					OR = {
 						tag = USA
 						tag = CAN
@@ -30,10 +28,6 @@ political_decisions = {
 
                 allow = {
 					has_unclaimed_cores = no
-                    NOT =  {
-						capital_scope = { has_province_modifier = alliance_nato }
-						capital_scope = { has_province_modifier = leave_alliance_nato }
-					}
 					OR = {
 						tag = USA
 						tag = CAN
@@ -223,10 +217,8 @@ political_decisions = {
                 potential = {
 					OR = { year = 1960 has_country_flag = invitation_to_warsaw_pact }
 					NOT = { has_global_flag = dissolve_warsaw_pact }
-                    NOT =  {
-						capital_scope = { has_province_modifier = warsaw_pact }
-						capital_scope = { has_province_modifier = leave_warsaw_pact }
-					}
+                    capital_scope = { NOT = { has_province_modifier = warsaw_pact } }
+					capital_scope = { NOT = { has_province_modifier = leave_warsaw_pact } }
 					government = proletarian_dictatorship
 					OR = {
 						tag = RUS
@@ -243,10 +235,6 @@ political_decisions = {
 
                 allow = {
 					has_unclaimed_cores = no
-                    NOT =  {
-						capital_scope = { has_province_modifier = warsaw_pact }
-						capital_scope = { has_province_modifier = leave_warsaw_pact }
-					}
 					OR = {
 						tag = RUS
 						continent = europe
@@ -327,10 +315,8 @@ political_decisions = {
 				picture = "csto_alliance"
                 potential = {
 					year = 1992
-                    NOT =  {
-						capital_scope = { has_province_modifier = csto_alliance }
-						capital_scope = { has_province_modifier = leave_csto_alliance }
-					}
+					capital_scope = { NOT =  {has_province_modifier = csto_alliance } }
+					capital_scope = { NOT =  {has_province_modifier = leave_csto_alliance } }
 					OR = {
 						tag = RUS
 						tag = BYE
@@ -416,10 +402,8 @@ political_decisions = {
 				picture = "anzus_alliance"
                 potential = {
 					year = 1951
-                    NOT =  {
-						capital_scope = { has_province_modifier = anzus_alliance }
-						capital_scope = { has_province_modifier = leave_anzus_alliance }
-					}
+					capital_scope = { NOT =  { has_province_modifier = anzus_alliance } }
+					capital_scope = { NOT =  { has_province_modifier = leave_anzus_alliance } }
 					OR = {
 						tag = USA
 						AND = {
@@ -520,10 +504,8 @@ political_decisions = {
 				picture = "sco_pact"
                 potential = {
 					year = 2001
-                    NOT =  {
-						capital_scope = { has_province_modifier = sco_pact }
-						capital_scope = { has_province_modifier = leave_sco_pact }
-					}
+					capital_scope = { NOT = { has_province_modifier = sco_pact } }
+					capital_scope = { NOT = { has_province_modifier = leave_sco_pact } }
 					OR = {
 						tag = CHI
 						tag = RUS
@@ -540,10 +522,6 @@ political_decisions = {
                 }
 
                 allow = {
-                    NOT =  {
-						capital_scope = { has_province_modifier = sco_pact }
-						capital_scope = { has_province_modifier = leave_sco_pact }
-					}
 					OR = {
 						tag = CHI
 						tag = RUS
