@@ -154,7 +154,7 @@ conquest = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		# only one state or unciv
-		THIS = { NOT = { OR = { government = democracy government = hms_government  government = nationalist_dictatorship } ai = yes } } 
+		THIS = { ai = no  } 
 		NOT = { number_of_states = 5 }
 		OR = {
 			AND = {
@@ -462,7 +462,7 @@ acquire_state = {
 	can_use = { # TODO add AI limits
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2 # annex if you want their last state
-		THIS = { NOT = { OR = { government = democracy government = hms_government  government = nationalist_dictatorship } ai = yes } } 
+		THIS = { ai = no } 
 		any_owned_province = {
 			NOT = { is_core = THIS }
 			#is_colonial = no
