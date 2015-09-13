@@ -1,0 +1,67 @@
+political_decisions = {
+	olympics_bid = {
+		picture = "olympics_bid"
+		potential = {
+			NOT = { has_country_flag = arranged_olympics_games }
+			NOT = { has_country_flag = olympics_bid }
+			ai = no
+		}
+		allow = {
+			money = 120000
+			OR = { is_greater_power = yes is_secondary_power = yes }
+		}
+		effect = {
+			set_country_flag = olympics_bid
+			treasury = -1000
+			country_event = 16000
+		}
+	}
+
+	winter_olympics_bid = {
+		picture = "winter_olympics_bid"
+		potential = {
+			NOT = { has_country_flag = arranged_winter_olympics_games }
+			NOT = { has_global_flag = winter_olympics_bid }
+			ai = no
+			OR = { tag = CAN tag = USA tag = JAP tag = CHI tag = KAZ tag = SKO tag = KOR tag = NKO tag = MGL capital_scope = { continent = europe } }
+			NOT = { tag = GRE tag = POR tag = SPA }
+		}
+		allow = {
+			money = 120000
+			OR = { is_greater_power = yes is_secondary_power = yes }
+		}
+		effect = {
+			set_country_flag = winter_olympics_bid
+			treasury = -1000
+			country_event = 16001
+		}
+	}
+	
+	1948_winter_olympics = {
+		picture = "1948_winter_olympics"
+		potential = {
+			tag = SWI
+			NOT = { has_country_flag = arranged_winter_olympics_games }
+			NOT = { has_global_flag = winter_olympics_bid }
+			year = 1944 NOT = { year = 1948 }
+		}
+		allow = {
+			OR = { 
+				AND = { 
+					money = 12000
+					public_switched_telephone_network = 1
+				}
+				ai = yes
+			}
+		}
+		effect = {
+			set_country_flag = winter_olympics_bid
+			set_global_flag = winter_olympic_bid_10000
+			treasury = -10000
+			random_pop = { limit = { type = capitalists } money = 10000 }
+			prestige = 5
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+}
