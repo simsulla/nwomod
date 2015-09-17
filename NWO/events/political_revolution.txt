@@ -792,7 +792,7 @@ country_event = { #The New Regime - populist or dictatorship
 	id = 800050
 	title = "EVTNAME800050" # Reactionary
 	desc = "EVTDESC800050"
-	picture = "Danishgovernment"
+	picture = "military_junta"
 	is_triggered_only = yes
 
 	option = {
@@ -824,13 +824,24 @@ country_event = { #The New Regime- islamist
 
 	option = {
 		name = "EVTOPTA800051"
+		# rom rebel_types
+		political_reform = none_voting
+		political_reform = ruling_party_opinion
+		political_reform = quality_of_service
+		political_reform = censored_publishing
+		political_reform = gender_equal
+		political_reform = parties_not_allowed
+		political_reform = nobody_gets_out
+		political_reform = lgbt_outlawed
+		political_reform = minorities_affirmative_action
+		# end - from rebel_types		
 	}
 }
 country_event = { # The New Regime - Communist
 	id = 800052
 	title = "EVTNAME800052"  
 	desc = "EVTDESC800052"
-	picture = "Celebration"
+	picture = "communist"
 	is_triggered_only = yes
 
 	option = {
