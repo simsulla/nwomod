@@ -30,7 +30,7 @@ country_event = { # Fall of the Fourth Republic
     name = EVT_8005730_B
 	any_pop = { militancy = 1.0 }
 	ruling_party_ideology = socialist
-	any_owned = { limit = { NOT = { is_core = ALG } is_colonial = no  }  change_controller = UFR }
+	any_owned = { limit = { NOT = { is_core = ALG } is_colonial = no  }  secede_province = UFR }
 	capital = 1700 # Algiers
 	prestige = -80
 	UFR = { capital = 425 } # Paris
@@ -40,11 +40,11 @@ country_event = { # Fall of the Fourth Republic
   }
   
   option = {
-    name = EVT_8005730_B
+    name = EVT_8005730_C
 	any_pop = { militancy = 1.0 }
 	ruling_party_ideology = conservative
 	government = presidential_dictatorship country_event = 800050
-	any_owned = { limit = { NOT = { is_core = ALG } is_colonial = no }  change_controller = UFR  }
+	any_owned = { limit = { NOT = { is_core = ALG } is_colonial = no }  secede_province = UFR  }
 	prestige = -80
 	capital = 1700 # Algiers
 	UFR = { capital = 425 } # Paris
