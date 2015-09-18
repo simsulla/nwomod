@@ -2,44 +2,40 @@ country_event = {
   id = 8000201
   title = "EVT_GOVTCHANGE_NAME"
   desc = "EVT_GOVTCHANGE_DESC"
-  picture = "nwo2_govt_change"
+  picture = "nwo2_enver_hoxha"
   fire_only_once = yes
 
   trigger = {
     tag = ALB
-    year = 1944
-    NOT = { government = proletarian_dictatorship }
+    year = 1944 NOT = { year = 1989 }
+    government = proletarian_dictatorship
   }
-  immediate = { set_global_flag = event_fired_8000201 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "OK"
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
-	define_general = { name = "Theofan Noli" personality = energetic background = no_background }
-	define_general = { name = "Xhafer Ypi" personality = energetic background = no_background }
+	random_state = { any_pop = { ideology = { value = communist factor = 0.9 } } }
+	define_general = { name = "Enver Hoxha" personality = energetic background = no_background }
   }
 }
 country_event = {
   id = 8000202
   title = EVT_GOVTCHANGE_NAME
   desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
+  picture = "ppsh"
   fire_only_once = yes
 
   trigger = {
     tag = ALB
-    year = 1989
-    NOT = { government = proletarian_dictatorship }
+    year = 1989 NOT = { year = 1990 }
+    government = proletarian_dictatorship
   }
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = OK
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+	random_state = { any_pop = { ideology = { value = communist factor = 0.9 } } }
 	define_general = { name = "Ramiz Alia" personality = energetic background = no_background }
   }
 }
@@ -47,41 +43,48 @@ country_event = {
   id = 8000203
   title = EVT_GOVTCHANGE_NAME
   desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
+  picture = "ppsh"
   fire_only_once = yes
 
   trigger = {
     tag = ALB
     year = 1990
-    NOT = { government = proletarian_dictatorship }
+    government = proletarian_dictatorship
   }
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = OK
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+	random_state = { any_pop = { ideology = { value = communist factor = 0.1 } } }
 	define_general = { name = "Adil Carcani" personality = energetic background = no_background }
   }
 }
 country_event = {
   id = 8000204
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
+  title = EVT_8000204_NAME
+  desc = EVT_8000204_DESC;
+  picture = "fatos_nano"
   fire_only_once = yes
 
   trigger = {
     tag = ALB
-    year = 1991
-    NOT = { government = proletarian_dictatorship }
+    year = 1980
+	NOT = { any_neighbor_country = { government = proletarian_dictatorship } }
+	government = proletarian_dictatorship
   }
  
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
-    name = OK
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
+    name = EVT_8000204_A
+	government = democracy country_event = 800054
+	random_state = { any_pop = { ideology = { value = communist factor = 0.9 } } }
+	election = yes
+	define_general = { name = "Fatos Nano" personality = energetic background = no_background }
+  }
+  option = {
+    name = EVT_8000204_B
+	any_pop = { militancy = 5.0 }
 	define_general = { name = "Fatos Nano" personality = energetic background = no_background }
   }
 }
@@ -117,48 +120,6 @@ country_event = {
   }
 }
 country_event = {
-  id = 8022801
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ALB
-    year = 1944
-    has_global_flag = cold_war
-  }
-  mean_time_to_happen = { months = 12 }
-
-  option = {
-    name = OK
-	government = proletarian_dictatorship  country_event = 800052
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
-	define_general = { name = "Enver Hoxha" personality = energetic background = no_background }
-  }
-}
-country_event = {
-  id = 8022803
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ALB
-    year = 1981
-    has_global_flag = cold_war
-  }
-  immediate = { set_global_flag = event_fired_8022803 }
-
-  mean_time_to_happen = { months = 12 }
-
-  option = {
-    name = OK
-	define_general = { name = "Adil Carcani" personality = energetic background = no_background }
-  }
-}
-country_event = {
   id = 8022804
   title = EVT_8022804_NAME
   desc = EVT_8022804_DESC
@@ -167,16 +128,16 @@ country_event = {
 
   trigger = {
     tag = ALB
-    year = 1985
+    year = 1985 NOT = { year = 1990 }
     has_global_flag = cold_war
+	government = proletarian_dictatorship
   }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = OK
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
-	overlord = { release_vassal = THIS } 
+	any_pop = { consciousness = 2.0 }
   }
 }
 country_event = {
@@ -188,17 +149,16 @@ country_event = {
 
   trigger = {
     tag = ALB
-    year = 1945
+    year = 1945 NOT = { year = 1990 }
     exists = YUG
     has_global_flag = cold_war
   }
-  immediate = { set_global_flag = event_fired_8022805 }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = "EVT_8000202_A"
-	ai_chance = { factor = 95 }
+	ai_chance = { factor = 100 }
 	802 = { remove_core =  ALB }
 	803 = { remove_core =  ALB }
 	relation = { who = YUG value = 100 } 
@@ -206,7 +166,7 @@ country_event = {
 
   option = {
     name = EVT_8022805_B #"We'd better keep our options"
-	ai_chance = { factor = 5 }
+	ai_chance = { factor = 0 }
 	802 = { add_core =  ALB }
 	803 = { add_core =  ALB }
 	relation = { who = YUG value = -100 } 
@@ -218,44 +178,50 @@ country_event = {
   id = 8022806
   title = EVT_8022806_NAME
   desc = EVT_8022806_DESC
-  picture = "nwo2_hoxha_tito"
+  picture = "hoxha_mao"
   fire_only_once = yes
 
   trigger = {
     tag = ALB
     year = 1958
-    has_global_flag = event_fired_8014217 # nwo2_soviet_union.txt
+	is_vassal = no
+    has_global_flag = de_stalinization # russia.txt
     exists = CHI
+	CHI = { government = proletarian_dictatorship }
+	government = proletarian_dictatorship
     has_global_flag = cold_war
   }
-  immediate = { set_global_flag = event_fired_8022806 }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8022806_A
-	overlord = { release_vassal = THIS } 
 	relation = { who = RUS value = -200 } 
-	relation = { who = CHI value = 200 } 
+	relation = { who = CHI value = 200 }
+	diplomatic_influence = { who = CHI value = 200 }
+	diplomatic_influence = { who = RUS value = -100 }
 	any_pop = { militancy = -0.2 }
+	ai_chance = { factor = 100 } 
   }
 
   option = {
     name = EVT_8022806_B
 	any_pop = { militancy = 0.5 }
 	add_country_modifier = { name = great_depression duration = 365 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
   id = 8022807
   title = EVT_8022807_NAME # Hoxha policies
   desc = EVT_8022807_DESC
-  picture = "nwo2_enver_hoxha"
+  picture = "nwo2_hoxha_tito"
   fire_only_once = yes
 
   trigger = {
     tag = ALB
-    year = 1967
+    year = 1967 NOT = { year = 1990 }
+	government = proletarian_dictatorship
     has_global_flag = cold_war
   }
 
@@ -266,10 +232,12 @@ country_event = {
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.5 } } }
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.06 } } }
 	any_pop = { militancy = 0.5 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8022807_B
 	any_pop = { militancy = 0.2 }
+	ai_chance = { factor = 0 }
   }
 }
