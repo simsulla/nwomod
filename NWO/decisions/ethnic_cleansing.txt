@@ -21,7 +21,7 @@ political_decisions = {
 				set_country_flag = ethnic_cleansed
 				badboy = 20
 				add_country_modifier = {  name = ethnic_cleansing duration = 90 } 
-				any_neighbor_country = { add_country_modifier = { name = neighbor_ethnic_cleansing duration = 90 } }
+				any_neighbor_country = { limit = { NOT = { is_culture_group  = THIS } } add_country_modifier = { name = neighbor_ethnic_cleansing duration = 90 } }
 			}
 			ai_will_do = { 
 				factor = 1 
