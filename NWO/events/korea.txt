@@ -1,70 +1,3 @@
-country_event = { #koreas same government form = unite
-	id = 100100
-	title = "EVTNAME100100"
-	desc = "EVTDESC100100"
-	trigger = {
-		exists = SKO
-		exists = NKO
-		NOT = { has_global_flag = korea_reformed }
-		SKO = {NOT = {war_with = NKO}}
-		OR = { # both can't be ai - find with multi player
-			AND = {
-				tag = SKO
-				NKO = {ai = yes is_vassal = no part_of_sphere = no }
-				is_vassal = no
-			}
-			AND = {
-				ai = no
-				tag = NKO
-				SKO = {ai = yes is_vassal = no part_of_sphere = no}
-				is_vassal = no
-			}
-		}
-		OR = {
-			AND = {
-				SKO = {government = proletarian_dictatorship}
-				NKO = {government = proletarian_dictatorship}
-			}
-			AND = {
-				SKO = {government = presidential_dictatorship}
-				NKO = {government = presidential_dictatorship}
-			}
-			AND = {
-				SKO = {government = populist_dictatorship}
-				NKO = {government = populist_dictatorship}
-			}
-			AND = {
-				SKO = {government = absolute_monarchy}
-				NKO = {government = absolute_monarchy}
-			}
-			AND = {
-				SKO = {government = hms_government}
-				NKO = {government = hms_government}
-			}
-			AND = {
-				SKO = {government = democracy}
-				NKO = {government = democracy}
-			}
-		}
-	}
-	mean_time_to_happen = {
-		months = 1
-	}
-	option = {
-		name = "EVTOPTA100100"
-		set_global_flag = korea_reformed
-		change_tag = KOR
-		SKO = {
-			all_core = { add_core = KOR }
-
-		}
-		NKO = {
-			all_core = { add_core = KOR }
-		}
-		inherit = SKO
-		inherit = NKO
-	}
-}
 country_event = {
   id = 8011903
   title = EVT_8011903_NAME
@@ -87,6 +20,27 @@ country_event = {
   }
 }
 country_event = {
+  id = 8011904
+  title = EVT_8011904_NAME
+  desc = EVT_8011904_DESC
+  picture = "kim_jong_il "
+  fire_only_once = yes
+
+  trigger = {
+    tag = NKO
+	government = proletarian_dictatorship
+    year = 1994 
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8011904_A
+	any_pop = { consciousness = -2.0 }
+	add_country_modifier = { name = famine duration = 3500 }
+  }
+}
+country_event = {
   id = 8008106
   title = EVT_8008106_NAME
   desc = EVT_8008106_DESC
@@ -94,12 +48,12 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KOR
-    year = 1960 NOT = { year = 1961 }
+    OR = { tag = KOR tag = SKO }
+    year = 1960 NOT = { year = 1990 }
 	government = democracy
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8008106_A
@@ -114,8 +68,8 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KOR
-    year = 1960 NOT = { year = 1961 }
+    OR = { tag = KOR tag = SKO }
+    year = 1961 NOT = { year = 1990 }
     government = democracy
   }
 
@@ -135,7 +89,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KOR
+    OR = { tag = KOR tag = SKO }
 	government = presidential_dictatorship
     year = 1960 NOT = { year = 1980 }
   }
@@ -155,8 +109,8 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KOR
-    year = 1980 NOT = { year = 1981 }
+    OR = { tag = KOR tag = SKO }
+    year = 1980 NOT = { year = 1982 }
 	government = democracy
   }
 
@@ -175,7 +129,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KOR
+    OR = { tag = KOR tag = SKO }
     year = 1972 NOT = { year = 1978 }
 	NOT = { government = democracy }
   }
@@ -196,16 +150,35 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KOR
-    year = 1987 NOT = { year = 1988 }
+    OR = { tag = KOR tag = SKO }
+    year = 1987 NOT = { year = 1990 }
 	government = presidential_dictatorship 
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 4 }
 
   option = {
     name = EVT_8008123_A
 	any_pop = { militancy = -1.0 }
 	government = democracy country_event = 800054
+  }
+}
+country_event = { # Sampoong Department Store collapse
+  id = 8008124
+  title = EVT_8008124_NAME
+  desc = EVT_8008124_DESC
+  picture = "sampoong_department_store_collapse"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = KOR tag = SKO }
+    year = 1995 
+  }
+
+  mean_time_to_happen = { months = 4 }
+
+  option = {
+    name = EVT_8008124_A
+	add_country_modifier = { name = national_tragedy duration = 350 }
   }
 }

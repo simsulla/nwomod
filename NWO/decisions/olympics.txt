@@ -41,6 +41,7 @@ political_decisions = {
 		picture = "1948_winter_olympics"
 		potential = {
 			tag = SWI
+			NOT = { has_country_flag = 1948_winter_olympics }
 			NOT = { has_country_flag = arranged_winter_olympics_games }
 			NOT = { has_global_flag = winter_olympics_bid }
 			year = 1944 NOT = { year = 1948 }
@@ -55,6 +56,7 @@ political_decisions = {
 			}
 		}
 		effect = {
+			set_country_flag = 1948_winter_olympics
 			set_country_flag = winter_olympics_bid
 			set_global_flag = winter_olympic_bid_10000
 			treasury = -10000

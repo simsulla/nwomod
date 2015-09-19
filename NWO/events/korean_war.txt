@@ -7,9 +7,12 @@ country_event = {
 
   trigger = {
     tag = NKO
-	year = 1949 NOT = { year = 1950 }
+	year = 1949 NOT = { year = 1960 }
     NOT = { war_with = SKO }
     exists = SKO
+	exists = CHI
+	CHI = { war = no }
+	is_vassal = yes
     has_global_flag = cold_war_pacific
   }
 
@@ -38,7 +41,8 @@ country_event = {
 
   option = {
     name = EVT_8500801_A
-	overlord = { release_vassal = THIS } 
+	random_country = { limit = { is_our_vassal = THIS } release_vassal = THIS } 
+	relation = { who = USA value = 100 }
 	NKO = { country_event =  8500802 } 
   }
 }
@@ -53,6 +57,9 @@ country_event = {
   option = {
     name = EVT_8500802_A
 	war = { target = SKO attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
+	set_global_flag = korea_war
+	relation = { who = CHI value = 200 }
+	create_alliance  = CHI 
   }
 }
 country_event = {
@@ -68,10 +75,11 @@ country_event = {
     SKO = { war_with = NKO }
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 2  }
 
   option = {
     name = EVT_8500840_A
+	relation = { who = USA value = 100 }
   }
 }
 country_event = {
@@ -85,14 +93,13 @@ country_event = {
     tag = SKO
 	year = 1949 NOT = { year = 1950 }
     SKO = { war_with = NKO }
-     has_global_flag = event_fired_8500840
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 4  }
 
   option = {
     name = EVT_8500841_A
-
+	relation = { who = USA value = 100 }
   }
 }
 country_event = {
@@ -104,15 +111,16 @@ country_event = {
 
   trigger = {
     tag = SKO
-	year = 1949 NOT = { year = 1950 }
+	year = 1949 NOT = { year = 1951 }
     SKO = { war_with = NKO }
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 6  }
 
   option = {
     name = EVT_8500842_A
-
+	relation = { who = USA value = 100 }
+	create_alliance  = USA 
   }
 }
 country_event = {
@@ -127,6 +135,7 @@ country_event = {
 	year = 1949 NOT = { year = 1950 }
     NKO = { war_with = SKO }
 	NOT = { war_with = NKO }
+	has_global_flag = un_korea_intervention
   }
 
   mean_time_to_happen = { months = 1  }
@@ -275,6 +284,7 @@ country_event = {
 
   trigger = {
     tag = CHI
+	war = no
 	year = 1949 NOT = { year = 1950 }
     has_global_flag = CHC_won_civil_war
     NKO = { war_with = SKO }
@@ -286,6 +296,7 @@ country_event = {
     name = EVT_8500810_A
 	NKO = { country_event = 8500811 } 
 	NKO = { military_access = THIS } 
+	diplomatic_influence = { who = NKO value = 100 }
 	ai_chance = { factor = 100 }
   }
 
@@ -304,6 +315,8 @@ country_event = {
 
   option = {
     name = EVT_8500811_A
+	relation = { who = CHI value = 100 }
+	create_alliance  = CHI
 	any_pop = { militancy = -4.0 }
   }
 }
@@ -316,8 +329,9 @@ country_event = {
 
   trigger = {
     tag = NKO
-	year = 1962 NOT = { year = 1963 }
+	NOT = { year = 1990 }
     NOT = { exists = SKO }
+	has_global_flag = korea_war
   }
 
   mean_time_to_happen = { months = 1  }
@@ -336,15 +350,17 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = SKO
-	year = 1962 NOT = { year = 1963 }
+    OR = { tag = SKO tag = KOR }
+	NOT = { year = 1990 }
     NOT = { exists = NKO }
+	has_global_flag = korea_war
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8500821_A
+	prestige = 20
 	any_pop = { militancy = -1.0 }
 	RUS  = { country_event = 8225001 } 
   }
@@ -358,16 +374,18 @@ country_event = {
 
   trigger = {
     tag = SKO
-	year = 1962 NOT = { year = 1963 }
+	NOT = { year = 1990 }
     has_global_flag = cold_war_pacific
 	war = no
     exists = NKO
+	has_global_flag = korea_war
   }
 
   mean_time_to_happen = { months = 11  }
 
   option = {
     name = EVT_8500822_A
+	prestige = 10
 	NKO = { country_event = 8500823 }
     ai_chance = { factor = 100 }
   }
@@ -381,7 +399,7 @@ country_event = {
 
   option = {
     name = EVT_8500823_A
-	# end_war = SKO 
+	prestige = -10
 	ai_chance = { factor = 100 }
   }
 
@@ -395,7 +413,7 @@ country_event = {
 
   trigger = {
     tag = NKO
-	year = 1952 NOT = { year = 1953 }
+	year = 1952 NOT = { year = 1960 }
     war_with = SKO
   }
 
@@ -415,7 +433,7 @@ country_event = {
 
   trigger = {
     tag = SKO
-	year = 1952 NOT = { year = 1953 }
+	year = 1952 NOT = { year = 1960 }
     war_with = NKO
   }
 
@@ -435,7 +453,7 @@ country_event = {
 
   trigger = {
     tag = NKO
-	year = 1952 NOT = { year = 1953 }
+	year = 1952 NOT = { year = 1960 }
 	war_with = SKO
   }
 
@@ -454,7 +472,7 @@ country_event = {
 
   trigger = {
     tag = SKO
-	year = 1952 NOT = { year = 1953 }
+	year = 1952 NOT = { year = 1960 }
 	war_with = NKO
   }
 
@@ -474,7 +492,7 @@ country_event = {
 
   trigger = {
     tag = NKO
-	year = 1952 NOT = { year = 1953 }
+	year = 1952 NOT = { year = 1960 }
     USA = { alliance_with = SKO }
     war_with = SKO
   }
@@ -495,7 +513,7 @@ country_event = {
 
   trigger = {
     tag = SKO
-	year = 1952 NOT = { year = 1953 }
+	year = 1952 NOT = { year = 1960 }
     USA = { alliance_with = SKO }
     war_with = NKO
   }
@@ -516,11 +534,11 @@ country_event = {
 
   trigger = {
     tag = NKO
-	year = 1952 NOT = { year = 1953 }
+	year = 1952 NOT = { year = 1960 }
 	war_with = SKO
   }
 
-  mean_time_to_happen = { months = 13 }
+  mean_time_to_happen = { months = 3 }
 
   option = {
     name = EVT_8500836_A
@@ -536,11 +554,11 @@ country_event = {
 
   trigger = {
     tag = SKO
-	year = 1952 NOT = { year = 1953 }
+	year = 1952 NOT = { year = 1960 }
 	war_with = NKO
   }
 
-  mean_time_to_happen = { months = 13 }
+  mean_time_to_happen = { months = 3 }
 
   option = {
     name = EVT_8500837_A
