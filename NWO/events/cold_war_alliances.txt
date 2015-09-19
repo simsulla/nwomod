@@ -166,7 +166,7 @@ country_event = { # Maintaining security in Europe
   option = {
     name = EVT_8215011_A
 	any_country = { 
-		limit = { war = no government = proletarian_dictatorship NOT = { tag = THIS } }
+		limit = { war = no government = proletarian_dictatorship NOT = { tag = THIS } exists = yes }
 		country_event = 8215013
 	}
 	ai_chance = { factor = 100 }

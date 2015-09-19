@@ -1,69 +1,4 @@
 country_event = {
-	id = 1007501
-
-	title = EVT_1007501_NAME
-	desc = EVT_1007501_DESC
-	picture = "saddam_hussein"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = USA
-		year = 2003
-		war = no
-		IRQ = { 
-			government  = nationalist_dictatorship
-			part_of_sphere = no
-			is_vassal = no
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = EVT_1007501_OPTA
-		ai_chance = { factor = 100 }
-		IRQ = { badboy = 20 }
-		random_country = {
-			limit = { tag = SAA in_sphere = THIS ai = yes }
-			create_alliance = THIS
-		}
-		casus_belli = {
-			target = IRQ
-			type = install_democracy
-			months = 12
-		}
-		casus_belli = {
-			target = IRQ
-			type = add_to_sphere
-			months = 12
-		}
-		casus_belli = {
-			target = IRQ
-			type = free_peoples
-			months = 12
-		}
-		war = {
-			target = IRQ
-			attacker_goal = {
-				casus_belli = install_democracy
-			}
-			defender_goal = {
-				casus_belli = status_quo
-			}
-		}
-		badboy = 5
-	}
-	option = {
-		name = EVT_1007501_OPTB
-		ai_chance = { factor = 0 }
-	}
-	
-}
-
-country_event = {
   id = 8007514
   title = EVT_8007514_NAME
   desc = EVT_8007514_DESC
@@ -176,7 +111,6 @@ country_event = {
     tag = ENG
 	year = 1947 NOT = { year = 1963 }
     has_global_flag = cold_war
-    is_vassal = yes
 	is_our_vassal = IRQ
   }
 
@@ -540,3 +474,67 @@ country_event = {
   }
 }
 
+country_event = {
+	id = 1007501
+
+	title = EVT_1007501_NAME
+	desc = EVT_1007501_DESC
+	picture = "saddam_hussein"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 2003
+		war = no
+		IRQ = { 
+			government  = nationalist_dictatorship
+			part_of_sphere = no
+			is_vassal = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = EVT_1007501_OPTA
+		ai_chance = { factor = 100 }
+		IRQ = { badboy = 20 }
+		random_country = {
+			limit = { tag = SAA in_sphere = THIS ai = yes }
+			create_alliance = THIS
+		}
+		casus_belli = {
+			target = IRQ
+			type = install_democracy
+			months = 12
+		}
+		casus_belli = {
+			target = IRQ
+			type = add_to_sphere
+			months = 12
+		}
+		casus_belli = {
+			target = IRQ
+			type = free_peoples
+			months = 12
+		}
+		war = {
+			target = IRQ
+			attacker_goal = {
+				casus_belli = install_democracy
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		badboy = 5
+	}
+	option = {
+		name = EVT_1007501_OPTB
+		ai_chance = { factor = 0 }
+	}
+	
+}

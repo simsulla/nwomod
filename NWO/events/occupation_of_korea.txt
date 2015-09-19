@@ -46,7 +46,7 @@ country_event = {
 	title = EVT_1209002_NAME
 	desc = EVT_1209002_DESC
 	picture = "divided_korea"
-	#fire_only_once = yes
+	fire_only_once = yes
 
 	trigger = {
 		tag = RUS
@@ -54,7 +54,7 @@ country_event = {
 		NOT = { exists = NKO }
 		1619 = { controlled_by = RUS } # Pyongyang
 		OR = { 
-			year = 1947
+			year = 1948
 			has_country_flag = korea_trusteeship
 		}
 	}
@@ -101,21 +101,21 @@ country_event = {
 	title = EVT_1209003_NAME
 	desc = EVT_1209003_DESC
 	picture = "divided_korea"
-	#fire_only_once = yes
+	fire_only_once = yes
 
 	trigger = {
 		tag = USA
 		NOT = { exists = SKO }
 		1624 = { controlled_by = USA } # Seoul
 		OR = { 
-			year = 1947
+			year = 1948
 			has_country_flag = korea_trusteeship
 		}
 		NOT = { year = 1990 }
 	}
 
 	mean_time_to_happen = {
-		months = 20
+		months = 6
 	}
 
 	option = {
