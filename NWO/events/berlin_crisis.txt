@@ -37,7 +37,7 @@ country_event = {
   title = EVT_8500702_NAME
   desc = EVT_8500702_DESC
   picture = "nwo2_khrushchev_ulbricht"
-  is_triggered_only = yes
+  is_triggered_only = yes # USA
   
   immediate = { set_global_flag = event_fired_8500702 }
 
@@ -46,7 +46,7 @@ country_event = {
 	any_pop = { militancy = -0.3 }
 	relation = { who = DDR value = -25 } 
 	relation = { who = GER value = 75 } 
-	country_event = { id = 8500703 days = 30 }
+	RUS = { country_event = { id = 8500703 days = 30 } }
 	ai_chance = { factor = 100 }
   }
 
@@ -61,12 +61,12 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
-country_event = {
+country_event = { # Decision to close off West Berlin
   id = 8500703
   title = EVT_8500703_NAME
   desc = EVT_8500703_DESC
   picture = "nwo2_berlin_wall"
-  is_triggered_only = yes
+  is_triggered_only = yes # RUS
   
   immediate = { set_global_flag = event_fired_8500703 }
 
@@ -95,7 +95,7 @@ country_event = { # East Berlin is off limits
   title = EVT_8500704_NAME
   desc = EVT_8500704_DESC
   picture = "nwo2_berlin_crisis_1961"
-  is_triggered_only = yes
+  is_triggered_only = yes #USA
 
   option = {
     name = EVT_8500704_A
@@ -110,7 +110,7 @@ country_event = { # East Berlin is off limits
 	relation = { who = GER value = -50 } 
 	relation = { who = DDR value = 25 } 
 	any_pop = { militancy = 0.5 }
-	RUS = { country_event = 8500705 }
+	USA = { country_event = 8500705 }
 	RUS  = { country_event = 8225000 } 
 	ai_chance = { factor = 100 }
   }
@@ -120,14 +120,14 @@ country_event = { # Access to East Berlin
   title = EVT_8500705_NAME
   desc = EVT_8500705_DESC
   picture = "nwo2_berlin_crisis_1961"
-  is_triggered_only = yes
+  is_triggered_only = yes # USA
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8500705_A
 	any_pop = { militancy = -0.3 }
-	USA = { country_event = 8500705 }
+	USA = { country_event = 8500706 }
 	ai_chance = { factor = 100 }
   }
 
@@ -137,7 +137,6 @@ country_event = { # Access to East Berlin
 	relation = { who = DDR value = 25 } 
 	any_pop = { militancy = 0.5 }
 	RUS  = { country_event = 8225001 } 
-	USA = { country_event = 8500706 }
 	ai_chance = { factor = 0 }
   }
 
@@ -147,7 +146,7 @@ country_event = {
   title = EVT_8500706_NAME
   desc = EVT_8500706_DESC
   picture = "nwo2_berlin_crisis_1961"
-  is_triggered_only = yes
+  is_triggered_only = yes # USA
 
   option = {
     name = EVT_8500706_A
@@ -178,7 +177,7 @@ country_event = {
   title = EVT_8500707_NAME
   desc = EVT_8500707_DESC
   picture = "nwo2_berlin_crisis_1961"
-  is_triggered_only = yes
+  is_triggered_only = yes # RUS
 
   option = {
     name = EVT_8500707_A
@@ -192,7 +191,7 @@ country_event = {
 	relation = { who = GER value = -50 } 
 	relation = { who = DDR value = 25 } 
 	any_pop = { militancy = 1.5 }
-	war = USA # TODO take Berlin
+	war = { target = USA attacker_goal  = { casus_belli = free_allied_cores state_province_id = 1755 } } 
 	ai_chance = { factor = 0 }
  }
 }
