@@ -7,18 +7,16 @@ country_event = { # this event is fired in the nation that is about to go bankru
 	desc = EVT_1234_DESC
 	picture = "eu_current_account_imbalances"
 
-    #the four lines below are only needed if they are yes
-	 
-	is_triggered_only = no		        #only fired by another event or manually
-	allow_multiple_instances = yes	    #Allows to fire several at once?
-	
 	trigger = {
 		any_greater_power = { 
 				has_country_flag = xeu_ambition 
 			}	
 		has_country_modifier = in_bankrupcy
 		has_country_flag = xeu_ambition # we have to be part of EU
+		NOT = { has_country_flag = eu_debt_crisis }
 	}
+
+	mean_time_to_happen = { months = 1 }
  
 	option = {
 		name = EVT_1234_A
@@ -53,7 +51,7 @@ country_event = { # this event is fired in the nation that is about to go bankru
 			}
 		}
 		tech_school = traditional_academic
-	
+		clr_country_flag = eu_debt_crisis_started
 	}
 }
 	
