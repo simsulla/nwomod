@@ -96,7 +96,7 @@ country_event = {
 		name = "EVTOPTA70006" # accept
 		annex_to = FROM
         ai_chance = {
-			factor = 1
+			factor = 0.1
             modifier = {
                 factor = 10
 				FROM = { is_primary_culture = THIS }
@@ -107,14 +107,17 @@ country_event = {
 		name = "EVTOPTB70006" # become_independent
 		FROM = { release_vassal = THIS }
 		relation = { who = FROM value = -100 }
-		FROM = { 
-			war = {
-				target = THIS
-				attacker_goal = { casus_belli = make_puppet }
-			}
+		add_casus_belli = {
+			target = FROM
+			type  = make_puppet
+			months = 24
 		}
         ai_chance = {
-			factor = 1
+			factor = 0.9
+            modifier = {
+                factor = 0.1
+				FROM = { is_primary_culture = THIS }
+            }
             modifier = {
                 factor = 10
                 average_militancy = 5
