@@ -10,13 +10,13 @@ country_event = {
 	year = 1973 NOT = { year = 1989 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8003006_A
 	government = presidential_dictatorship  country_event = 800050
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
-	random_state = { any_pop = { 	dominant_issue = { value = planned_economy factor = 0.30 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	random_state = { any_pop = { 	dominant_issue = { value = planned_economy factor = 0.10 } } }
 	define_general = { name = "Augusto Pinochet" personality = energetic background = no_background }
 	ai_chance = { factor = 100 }
   }

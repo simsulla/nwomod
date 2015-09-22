@@ -29,10 +29,10 @@ country_event = {
     year = 1974 NOT = { year = 1999 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 8 }
 
   option = {
     name = EVT_8010619_A
-	any_owned = { limit = { OR = { produces = petroleum produces = gas } } trade_goods = petroleum }
+	any_owned = { limit = { OR = { produces = petroleum produces = gas } } RGO_size = 10 }
   }
 }

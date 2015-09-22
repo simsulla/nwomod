@@ -675,17 +675,17 @@ country_event = {
 
   trigger = {
     tag = HND
-    year = 1970 NOT = { year =  1975 }
+    year = 1970 NOT = { year = 1975 }
     war = no
   }
 
-  mean_time_to_happen = { months = 33 }
+  mean_time_to_happen = { months = 3 }
 
   option = {
     name = EVT_8007270_A
 	any_pop = { militancy = -0.5 }
 	1252 = { any_pop = { dominant_issue = { value = planned_economy factor = 0.5 } } }
-	# seed for the Naxalite rebellion 
+	# TODO seed for the Naxalite rebellion 
   }
 }
 country_event = {
@@ -702,7 +702,7 @@ country_event = {
     war = no
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8007271_A

@@ -763,6 +763,7 @@ country_event = {
     tag = EGY
     year = 1973 NOT = { year = 1974 }
     exists = ISR
+	exists = SYR
     war = no
   }
 
@@ -848,8 +849,8 @@ country_event = {
   option = {
     name = EVT_8007687_A
 	any_pop = { militancy = -1.5 }
-	EGY = { country_event = 8007689 }
-	SYR = { country_event = 8007689 }
+	random_country = { limit = { tag = EGY exists = EGY } country_event = 8007689 }
+	random_country = { limit = { tag = SYR exists = SYR }  country_event = 8007689 }
 	prestige = 50
   }
 }
@@ -859,7 +860,6 @@ country_event = {
   desc = EVT_8007689_DESC
   picture = "nwo2_yom_kippur_war"
   is_triggered_only = yes # EGY / SYR
-
 
   option = {
     name = EVT_8007689_A
@@ -882,6 +882,7 @@ country_event = {
 		owns = 1756
 	}
     has_recently_lost_war = no
+	exists = ISR
   }
 
   mean_time_to_happen = { months = 1  }
@@ -917,6 +918,8 @@ country_event = {
     year = 1974 NOT = { year = 1975 }
 	war = no
 	owns = 1756
+	exists = EGY
+	exists = SYR
   }
 
   mean_time_to_happen = { months = 1  }
@@ -930,7 +933,6 @@ country_event = {
   option = {
     name = EVT_8007692_B
 	any_pop = { militancy = 1.5 }
-	country_event =  { id = 8007695 days = 10 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -943,6 +945,7 @@ country_event = {
 
   option = {
     name = EVT_8007693_A
+	random_country = { limit = { tag = ISR owns = 1756 } country_event = 8007695 }
 	SYR = { country_event = 8007694 }
 	ai_chance = { factor = 100 }
   }
@@ -950,7 +953,6 @@ country_event = {
   option = {
     name = EVT_8007693_B
 	any_pop = { militancy = 1.5 }
-	country_event =  { id = 8007695 days = 10 } 
 	ai_chance = { factor = 0 }
   }
 }
