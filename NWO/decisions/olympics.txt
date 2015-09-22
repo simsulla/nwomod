@@ -21,7 +21,7 @@ political_decisions = {
 		picture = "winter_olympics_bid"
 		potential = {
 			NOT = { has_country_flag = arranged_winter_olympics_games }
-			NOT = { has_global_flag = winter_olympics_bid }
+			NOT = { has_country_flag = winter_olympics_bid }
 			ai = no
 			OR = { tag = CAN tag = USA tag = JAP tag = CHI tag = KAZ tag = SKO tag = KOR tag = NKO tag = MGL capital_scope = { continent = europe } }
 			NOT = { tag = GRE tag = POR tag = SPA }
@@ -43,7 +43,7 @@ political_decisions = {
 			tag = SWI
 			NOT = { has_country_flag = 1948_winter_olympics }
 			NOT = { has_country_flag = arranged_winter_olympics_games }
-			NOT = { has_global_flag = winter_olympics_bid }
+			NOT = { has_country_flag = winter_olympics_bid }
 			year = 1944 NOT = { year = 1948 }
 		}
 		allow = {
