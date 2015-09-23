@@ -29,10 +29,10 @@ country_event = {
   trigger = {
     tag = ALG
     year = 1965 NOT = { year = 1969 }
-    NOT = { government = proletarian_dictatorship }
+    #NOT = { government = proletarian_dictatorship }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 8 }
 
   option = {
     name = EVT_8000313_A
@@ -40,7 +40,7 @@ country_event = {
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.1 } } }
 	define_general = { name = "Houari Boumediene" personality = energetic background = no_background }
-	government = presidential_dictatorship  country_event = 800052
+	government = presidential_dictatorship  country_event = 800050 ruling_party_ideology = populist 
   }
 }
 
@@ -437,7 +437,7 @@ country_event = { # Algerian Independence
 	any_pop = { limit = { location = { is_core = ALG } culture = white_french NOT = { strata = middle } } move_pop = 467 } # Marseilles
 	any_pop = { limit = { location = { is_core = ALG } culture = jewish } move_pop = 425 } # Paris
 	release = ALG	
-	ALG = { primary_culture = sunni_arab government = presidential_dictatorship  country_event = 800050 }
+	ALG = { primary_culture = sunni_arab government = presidential_dictatorship  ruling_party_ideology = socialist country_event = 800050 }
   }
 
 }
