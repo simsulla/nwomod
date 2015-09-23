@@ -261,7 +261,7 @@ political_decisions = {
 				government = hms_government
 				government = presidential_dictatorship
 				government = absolute_monarchy
-				year = 1992 # TODO change to market_communism
+				has_country_flag = market_communism
 				keynesian_economics = 1
 			}
 		}
@@ -305,16 +305,15 @@ political_decisions = {
 			NOT = { has_country_modifier = bretton_system }
 		}
 		allow = {
-			#bretton_system = 1
-			public_switched_telephone_network = 1
+			internet = 1 # i.e 1990+
 			OR = {
 				is_secondary_power = yes
+				is_greater_power = yes
 				sphere_owner = { has_country_modifier = bretton_system } 
 			}
 		}
 		effect = {
 			set_country_flag = market_communism
-			add_country_modifier = { name = bretton_system duration = -1 }
 		}
 		ai_will_do = { factor = 1 }
 	}
