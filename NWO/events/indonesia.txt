@@ -1,29 +1,27 @@
 country_event = {
 	id = 1007301
-
 	title = EVT_1007301_NAME
 	desc = EVT_1007301_DESC
 	picture = "d_east_timor"
-
 	fire_only_once = yes
 	
 	trigger = {
 		tag = IDO
-		year = 1992
+		year = 2002
 		NOT = { exists = TIM }
 		war = no
-		1446 = { controlled_by = IDO pop_militancy = 5.0 } # Dili
+		1446 = { controlled_by = IDO } # Dili
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 2
 	}
 
 	option = {
 		name = EVT_1007301_A 
-		ai_chance = { factor = 100  modifier = { year =1999 factor = 0 } }
-		prestige = -2 
-		badboy = 0.2
+		ai_chance = { factor = 0 }
+		prestige = -20 
+		badboy = 2
 		any_pop = {
 			limit = {
 				location = { province_id = 1446 }
@@ -35,9 +33,8 @@ country_event = {
 
 	option = {
 		name = EVT_1007301_B
-		ai_chance = { factor = 10  }
-		prestige = -2 
-		badboy = -1
+		ai_chance = { factor = 100  }
+		prestige = 10 
 		release = TIM
 	}
 	

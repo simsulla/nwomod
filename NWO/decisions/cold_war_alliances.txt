@@ -75,7 +75,7 @@ political_decisions = {
 					NOT = { 
 						tag = USA
 						alliance_with = USA
-						sphere_owner = { tag = USA }
+						in_sphere = USA
 					}
 					NOT = { relation = { who = USA value = 0 } }
                 }
@@ -85,7 +85,7 @@ political_decisions = {
 					NOT = { 
 						tag = USA
 						alliance_with = USA
-						sphere_owner = { tag = USA }
+						in_sphere = USA
 					}
 					OR = { 
 						has_unclaimed_cores = yes
@@ -152,7 +152,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = USA  relation = { who = USA value = 50 } }
 						}
-						sphere_owner = {  capital_scope = { has_province_modifier = rio_pact } }
+						in_sphere = USA
 					}
 					OR = { government = democracy government = hms_government }
                 }
@@ -181,7 +181,7 @@ political_decisions = {
 					NOT = { 
 						tag = USA
 						alliance_with = USA
-						sphere_owner = { tag = USA }
+						in_sphere = USA
 					}
 					NOT = { relation = { who = USA value = 0 } }
                 }
@@ -191,7 +191,7 @@ political_decisions = {
 					NOT = { 
 						tag = USA
 						alliance_with = USA
-						sphere_owner = { tag = USA }
+						in_sphere = USA
 					}
 					OR = { 
 						has_unclaimed_cores = yes
@@ -251,7 +251,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = RUS  relation = { who = RUS value = 50 } }
 						}
-						sphere_owner = {  capital_scope = { has_province_modifier = warsaw_pact } }
+						in_sphere = RUS
 					}
 					government = proletarian_dictatorship
                 }
@@ -280,7 +280,7 @@ political_decisions = {
 					NOT = { 
 						tag = RUS
 						alliance_with = RUS
-						sphere_owner = { tag = RUS }
+						in_sphere = RUS
 					}
 					NOT = { relation = { who = RUS value = 0 } }
                 }
@@ -290,7 +290,7 @@ political_decisions = {
 					NOT = { 
 						tag = RUS
 						alliance_with = RUS
-						sphere_owner = { tag = RUS }
+						in_sphere = RUS
 					}
 					OR = { 
 						has_unclaimed_cores = yes
@@ -367,7 +367,7 @@ political_decisions = {
 					NOT = { 
 						tag = RUS
 						alliance_with = RUS
-						sphere_owner = { tag = RUS }
+						in_sphere = RUS
 					}
 					NOT = { relation = { who = RUS value = 0 } }
                 }
@@ -377,7 +377,7 @@ political_decisions = {
 					NOT = { 
 						tag = RUS
 						alliance_with = RUS
-						sphere_owner = { tag = RUS }
+						in_sphere = RUS
 					}
 					OR = { 
 						has_unclaimed_cores = yes
@@ -440,7 +440,7 @@ political_decisions = {
 							is_greater_power = yes
 							OR = { tag = USA  relation = { who = USA value = 50 } }
 						}
-						sphere_owner = {  capital_scope = { has_province_modifier = anzus_alliance } }
+						in_sphere = USA
 					}
 					OR = { government = democracy government = hms_government }
                 }
@@ -469,7 +469,7 @@ political_decisions = {
 					NOT = { 
 						tag = USA
 						alliance_with = USA
-						sphere_owner = { tag = USA }
+						in_sphere = USA
 					}
 					NOT = { relation = { who = USA value = 0 } }
                 }
@@ -479,7 +479,7 @@ political_decisions = {
 					NOT = { 
 						tag = USA
 						alliance_with = USA
-						sphere_owner = { tag = USA }
+						in_sphere = USA
 					}
 					OR = { 
 						has_unclaimed_cores = yes
@@ -526,17 +526,11 @@ political_decisions = {
 						tag = CHI
 						tag = RUS
 						AND = {
-							OR = { is_greater_power = yes part_of_sphere = yes }
+							in_sphere = CHI
 							NOT = { num_of_ports = 1 }
 							continent = asia
 						}
-					}
-					OR = {
-						AND = { 
-							is_greater_power = yes
-							OR = { tag = CHI  relation = { who = CHI value = 50 } }
-						}
-						sphere_owner = {  capital_scope = { has_province_modifier = sco_pact } }
+						OR = { tag = CHI  relation = { who = CHI value = 50 } }
 					}
                 }
 
@@ -564,7 +558,7 @@ political_decisions = {
 					NOT = { 
 						tag = CHI
 						alliance_with = CHI
-						sphere_owner = { tag = CHI }
+						in_sphere = CHI
 					}
 					NOT = { relation = { who = CHI value = 0 } }
                 }
@@ -574,7 +568,7 @@ political_decisions = {
 					NOT = { 
 						tag = CHI
 						alliance_with = CHI
-						sphere_owner = { tag = CHI }
+						in_sphere = CHI
 					}
 					OR = { 
 						has_unclaimed_cores = yes

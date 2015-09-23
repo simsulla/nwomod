@@ -503,13 +503,8 @@ country_event = {
 		ai_chance = { factor = 100 }
 		IRQ = { badboy = 20 }
 		random_country = {
-			limit = { tag = SAA in_sphere = THIS ai = yes }
-			create_alliance = THIS
-		}
-		casus_belli = {
-			target = IRQ
-			type = install_democracy
-			months = 12
+			limit = { tag = SAA ai = yes }
+			create_alliance = USA
 		}
 		casus_belli = {
 			target = IRQ
