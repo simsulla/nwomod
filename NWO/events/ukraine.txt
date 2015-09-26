@@ -1,0 +1,64 @@
+country_event = {
+	id = 1014200
+	title = "EVT_1014200_NAME"
+	desc = "EVT_1014200_DESC"
+	picture = "euromaidan"
+
+	fire_only_once = yes
+	
+	trigger = {
+		war = no
+		tag = RUS
+		year = 2010
+		UKR = { part_of_sphere = no }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVT_1014200_OPTA" # demand return of Criema and liberation of Donbass
+		casus_belli = {
+			target = UKR
+			type = liberate_country
+			months = 12
+		}
+		casus_belli = {
+			target = UKR
+			type = acquire_core_state
+			months = 12
+		}
+		war = {
+			target = UKR
+			attacker_goal = {
+				casus_belli = acquire_core_state
+				state_province_id = 964
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVT_1014200_OPTB" # never mind
+		casus_belli = {
+			target = UKR
+			type = liberate_country
+			months = 12
+		}
+		casus_belli = {
+			target = UKR
+			type = acquire_core_state
+			months = 12
+		}		
+		any_pop = {
+			scaled_militancy = {
+				ideology = populist
+				factor = 2
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}

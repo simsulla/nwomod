@@ -768,8 +768,6 @@ country_event = {
   picture = "nwo2_empty"
   is_triggered_only = yes
 
-  mean_time_to_happen = { months = 1  }
-
   option = {
     name = EVT_8007275_A
 	relation = { who = RUS value = 75 } 
@@ -796,6 +794,84 @@ country_event = {
   option = {
     name = OK
 	define_general = { name = "Rajendra Prasad" personality = energetic background = no_background }
+  }
+}
+
+# Naxlite
+country_event = {
+  id = 8007280
+  title = EVT_8007280_NAME
+  # EVT_8007280_NAME;Naxalite Insurgency
+  desc = EVT_8007280_DESC
+  # EVT_8007280_DESC;The term Naxalites comes from Naxalbari, a small village in West Bengal, where a section of the Communist Party of India (Marxist) (CPI-M) led by Charu Majumdar, Kanu Sanyal, and Jangal Santhal initiated a violent uprising in 1967. On 18 May 1967, the Siliguri Kishan Sabha, of which Jangal was the president, declared their support for the movement initiated by Kanu Sanyal, and their readiness to adopt armed struggle to redistribute land to the landless.[14] The following week, a sharecropper near Naxalbari village was attacked by the landlord's men over a land dispute. On 24 May, when a police team arrived to arrest the peasant leaders, it was ambushed by a group of tribals led by Jangal Santhal, and a police inspector was killed in a hail of arrows. This event encouraged many Santhal tribals and other poor people to join the movement and to start attacking local landlords.
+  picture = "naxalite"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 1967
+	owns = 2654 # Munger
+	owns = 1287 # Warangal
+  }
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = EVT_8007280_A
+	# EVT_8007280_A;This is not good
+	2654 = { add_core = NAX }
+	1287 = { add_core = NAX }
+	set_country_flag = naxalite_insurgency
+  }
+}
+
+province_event = {
+  id = 8007281
+  title = EVT_8007281_NAME
+  # EVT_8007281_NAME;Naxalites Spreads
+  desc = EVT_8007281_DESC
+  # EVT_8007281_DESC;A Naxal or Naxalite is a member of any of the Communist guerrilla groups in India, mostly associated with the Communist Party of India (Maoist). The term Naxal derives from the name of the village Naxalbari in West Bengal, where the movement had its origin. Naxalites are considered far-left radical communists, supportive of Maoist political sentiment and ideology. Their origin can be traced to the split in 1967 of the Communist Party of India (Marxist), leading to the formation of the Communist Party of India (Marxist–Leninist). Initially the movement had its centre in West Bengal. In later years, it spread into less developed areas of rural southern and eastern India, such as Chhattisgarh, Odisha and Andhra Pradesh through the activities of underground groups like the Communist Party of India (Maoist).
+  picture = "naxalite"
+
+  trigger = {
+    owned_by = HND
+    year = 1970
+	any_neighbor_province = { is_core = HND }
+	owner = { has_country_flag = naxalite_insurgency }
+  }
+
+  mean_time_to_happen = { months = 120 } # TODO timer based on millitancy
+
+  option = {
+    name = EVT_8007281_A
+	# EVT_8007281_A;More trouble is ahead
+	add_core = NAX
+  }
+
+}
+
+country_event = {
+  id = 8007282
+  title = EVT_8007282_NAME
+  # EVT_8007282_NAME;Naxalite Civil War
+  desc = EVT_8007280_DESC
+  # EVT_8007282_DESC;The April 2010 Dantewada Maoist attack, was an ambush by Naxalite-Maoist insurgents from the Communist Party of India (Maoist) near Chintalnar village in Dantewada district, Chhattisgarh, India, leading to the killing of 76 CRPF policemen and 8 Maoists — the deadliest attack by the Maoists on Indian security forces. The attack occurred when over 80 officers from the central paramilitary force Central Reserve Police Force (CRPF) and a local police group were conducting an area domination exercise in the Bastar tribal region of the Indian state of Chhattisgarh. This is nolonger a mere insurgency, it is a civil war!
+  picture = "naxalite_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = HND
+    year = 2010
+	war = no
+  }
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = EVT_8007282_A
+	# EVT_8007282_A;This is a full scale war!
+	release = NAX
+	NAX = { government = proletarian_dictatorship country_event = 800052 }
+	war = { target = NAX attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
+	clr_country_flag = naxalite_insurgency
   }
 }
 
