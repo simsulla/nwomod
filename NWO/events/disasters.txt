@@ -970,3 +970,149 @@ country_event = {
 		any_pop = { consciousness = 0.4 }
 	}
 }
+
+
+#
+# random events
+#
+province_event = { 
+	id = 290
+	title = "EVT_290_NAME" 
+	# EVT_290_NAME;$PROVINCENAME$ Earthquake
+	desc = "EVT_290_DESC" 
+	# EVT_290_DESC;$PROVINCENAME$ Earthquake has caused significant damages and several deaths. An earthquake (also known as a quake, tremor or temblor) is the perceptible shaking of the surface of the Earth, which can be violent enough to destroy major buildings and kill thousands of people. The severity of the shaking can range from barely felt to violent enough to toss people around. Earthquakes have destroyed whole cities. They result from the sudden release of energy in the Earth's crust that creates seismic waves. The seismicity, seismism or seismic activity of an area refers to the frequency, type and size of earthquakes experienced over a period of time.
+	picture = "earthquake"
+	
+	trigger = {
+		OR = { 
+			OR = { NOT = { continent = africa } is_core = MOR is_core = ALG is_core = TRI is_core = TUN is_core = EGY }
+			OR = { NOT = { continent = europe } is_core = ITA is_core = SPA is_core = POR is_core = GRE }
+			NOT = { is_core = BRZ }
+			NOT = { is_core = CAN }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+		modifier = { factor = 1.5 owner = { num_of_cities = 50 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 45 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 40 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 35 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 30 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 25 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 20 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 15 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 10 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 5 } }
+	}
+	
+	option = {
+		name = "EVT_290_A"
+		# EVT_290_A;Handle the damages!
+		add_province_modifier = { name = local_economic_downturn duration = 350 }
+	}
+}
+
+province_event = { 
+	id = 291
+	title = "EVT_291_NAME" 
+	# EVT_291_NAME;$PROVINCENAME$ Hurricane
+	desc = "EVT_290_DESC" 
+	# EVT_291_DESC;A tropical cyclone is a rapidly rotating storm system characterized by a low-pressure center, strong winds, and a spiral arrangement of thunderstorms that produce heavy rain. Depending on its location and strength, a tropical cyclone is referred to by names such as hurricane, typhoon, tropical storm, cyclonic storm, tropical depression, and simply cyclone.
+	picture = "tropical_cyclone"
+	
+	trigger = {
+		continent = north_america 
+		NOT = { is_core = CAN } 
+	}
+
+	mean_time_to_happen = {
+		months = 600
+		modifier = { factor = 1.5 owner = { num_of_cities = 50 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 45 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 40 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 35 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 30 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 25 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 20 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 15 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 10 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 5 } }
+	}
+	
+	option = {
+		name = "EVT_291_A"
+		# EVT_291_A;Handle the damages!
+		add_province_modifier = { name = local_economic_downturn duration = 350 }
+	}
+}
+
+province_event = { 
+	id = 292
+	title = "EVT_292_NAME" 
+	# EVT_292_NAME;$PROVINCENAME$ Cyclone
+	desc = "EVT_292_DESC" 
+	# EVT_292_DESC;A tropical cyclone is a rapidly rotating storm system characterized by a low-pressure center, strong winds, and a spiral arrangement of thunderstorms that produce heavy rain. Depending on its location and strength, a tropical cyclone is referred to by names such as hurricane, typhoon, tropical storm, cyclonic storm, tropical depression, and simply cyclone.
+	picture = "cyclone_nargis"
+	
+	trigger = {
+		continent = asia 
+		OR = { is_core = HND is_core = BNG is_core = BUR }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+		modifier = { factor = 1.5 owner = { num_of_cities = 50 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 45 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 40 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 35 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 30 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 25 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 20 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 15 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 10 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 5 } }
+	}
+	
+	option = {
+		name = "EVT_292_A"
+		# EVT_292_A;Handle the damages!
+		add_province_modifier = { name = local_economic_downturn duration = 350 }
+	}
+}
+
+province_event = { 
+	id = 293
+	title = "EVT_293_NAME" 
+	# EVT_293_NAME;$PROVINCENAME$ Typhoon
+	desc = "EVT_293_DESC" 
+	# EVT_293_DESC;A typhoon is a mature tropical cyclone that develops in the western part of the North Pacific Ocean. The storm is a rapidly rotating storm system characterized by a low-pressure center, strong winds, and a spiral arrangement of thunderstorms that produce heavy rain. Depending on its location and strength, a tropical cyclone is referred to by names such as hurricane, typhoon, tropical storm, cyclonic storm, tropical depression, and simply cyclone.
+	picture = "typhoon"
+	
+	trigger = {
+		OR = { 
+			AND = { continent = asia OR = { is_core = IDO is_core = DAI is_core = PHI is_core = CHI is_core = KMT is_core = JAP } }
+			AND = { continent = oceania NOT = { is_core = AST is_core = NZL } }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+		modifier = { factor = 1.5 owner = { num_of_cities = 50 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 45 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 40 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 35 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 30 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 25 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 20 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 15 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 10 } }
+		modifier = { factor = 1.5 owner = { num_of_cities = 5 } }
+	}
+	
+	option = {
+		name = "EVT_293_A"
+		# EVT_293_A;Handle the damages!
+		add_province_modifier = { name = local_economic_downturn duration = 350 }
+	}
+}
