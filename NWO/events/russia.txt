@@ -94,6 +94,54 @@ country_event = {
 }
 
 country_event = {
+	id = 32504
+	title = EVT_32504_NAME
+	# EVT_32504_NAME;Russian apartment bombings
+	desc = EVT_32504_DESC
+	# EVT_32504_DESC;The Russian apartment bombings were a series of explosions that hit four apartment blocks in the Russian cities of Buynaksk, Moscow and Volgodonsk in September 1999, killing 293 and injuring 651 people and spreading a wave of fear across the country. The bombings, together with the Dagestan War, led the country into the Second Chechen War.
+	picture = "russian_apartment_bombings"
+	fire_only_once = yes
+	
+	trigger = {
+		war = no
+		tag = RUS
+		year = 1999
+		OR = { is_our_vassal = CHC owns = 1055 }
+	}
+	
+	option = {
+		name = EVT_32504_A
+		# EVT_32504_A;We need to act! War on Chechen.
+		release = CHC
+		CHC = { country_event = 32505 }
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = EVT_32504_B
+		# EVT_32504_B;Leave matters as they are. Devolve our Caucasus realm.
+		release = CHC
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 32505
+	title = EVT_32505_NAME
+	# EVT_32505_NAME;Second Chechen War
+	desc = EVT_32505_DESC
+	# EVT_32505_DESC;The Second Chechen War was launched by the Russian Federation, starting 26 August 1999, in response to the Invasion of Dagestan by the Islamic International Brigade (IIB). On 1 October Russian troops entered Chechnya. The campaign ended the de facto independence of the Chechen Republic of Ichkeria and restored Russian federal control over the territory. Although it is regarded by many as an internal conflict within the Russian Federation, the war attracted a large number of foreign fighters.
+	picture = "second_chechen_war"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVT_32505_A 
+		# EVT_32505_A;Defend our country!
+	}
+}
+
+
+country_event = {
 	id = 1014200
 	title = "EVT_1014200_NAME"
 	desc = "EVT_1014200_DESC"
