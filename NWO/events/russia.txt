@@ -107,14 +107,17 @@ country_event = {
 		tag = RUS
 		year = 1999
 		OR = { is_our_vassal = CHC owns = 1055 }
+		NOT = { government = proletarian_dictatorship }
 	}
 	
+	mean_time_to_happen = { months = 2 }
+
 	option = {
 		name = EVT_32504_A
 		# EVT_32504_A;We need to act! War on Chechen.
 		release = CHC
 		war = { target = CHC attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
-		CHC = { country_event = 32505 }
+		CHC = { country_event = 32508 }
 		ai_chance = { factor = 100 }
 	}
 	option = {
@@ -128,15 +131,118 @@ country_event = {
 country_event = {
 	id = 32505
 	title = EVT_32505_NAME
-	# EVT_32505_NAME;Second Chechen War
+	# EVT_32505_NAME;First Chechen War
 	desc = EVT_32505_DESC
+	# EVT_32505_DESC;The First Chechen War, also known as the War in Chechnya, was a conflict between the Russian Federation and the Chechen Republic of Ichkeria, fought from December 1994 to August 1996. After the initial campaign of 1994–1995, culminating in the devastating Battle of Grozny, Russian federal forces attempted to seize control of the mountainous area of Chechnya but were set back by Chechen guerrilla warfare and raids on the flatlands despite Russia's overwhelming manpower, weaponry, and air support. The resulting widespread demoralization of federal forces and the almost universal opposition of the Russian public to the conflict led Boris Yeltsin's government to declare a ceasefire with the Chechens in 1996 and sign a peace treaty a year later.	
+	picture = "first_chechen_war"
+	fire_only_once = yes
+	
+	trigger = {
+		war = no
+		tag = RUS
+		year = 1994
+		exists = CHC
+		NOT = { government = proletarian_dictatorship }
+	}
+	
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = EVT_32505_A
+		# EVT_32505_A;We need to act! War on Chechen.
+		prestige = -20
+		war = { target = CHC attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo } }
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = EVT_32505_B
+		prestige = -40
+		# EVT_32505_B;Leave matters as they are. Devolve our Caucasus realm.
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 32506
+	title = EVT_32506_NAME
+	# EVT_32506_NAME;$COUNTRY_ADJ$ Oligarchs
+	desc = EVT_32506_DESC
+	# EVT_32506_DESC;By the end of the Soviet era in 1991 and during Mikhail Gorbachev's perestroika, many Russian businessmen imported or smuggled goods such as personal computers and jeans into the country and sold them, often on the black market, for a hefty profit. During the 1990s, once democratically elected President of $COUNTRY$ from 1991) took office, the oligarchs emerged as well-connected entrepreneurs who started from nearly nothing and became rich through participation in the market via connections to the corrupt, but elected, government of $COUNTRY$ during the state's transition to a market-based economy. The so-called voucher-privatization program enabled a handful of young men to become billionaires, specifically by arbitraging the vast difference between old domestic prices for $COUNTRY_ADJ$ commodities (e.g. gas, oil) and the prices prevailing on the world market. Because they stashed billions of dollars in private Swiss bank accounts rather than investing in the $COUNTRY_ADJ$ economy, they were dubbed kleptocrats.
+	picture = "oligarchs"
+	
+	trigger = {
+		war = no
+		OR = { tag = RUS tag = UKR }
+		government = democracy
+		NOT = { has_country_flag = oligarchs }
+		NOT = { has_country_flag = oligarchs_constrained }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediately = { add_country_modifier = { name = financial_crisis duration = 1700 } }
+
+	option = {
+		name = EVT_32506_A
+		treasury = 100000
+		set_country_flag = oligarchs
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = EVT_32506_B
+		set_country_flag = oligarchs_constrained
+		election = yes
+		any_pop = { militancy = 1.0 consciousness = 0.4 }
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 32507
+	title = EVT_32507_NAME
+	# EVT_32507_NAME;$COUNTRY_ADJ$ financial crisis
+	desc = EVT_32507_DESC
+	# EVT_32507_DESC;By the end of the Soviet era in 1991 and during Mikhail Gorbachev's perestroika, many Russian businessmen imported or smuggled goods such as personal computers and jeans into the country and sold them, often on the black market, for a hefty profit. During the 1990s, once democratically elected President of $COUNTRY$ from 1991) took office, the oligarchs emerged as well-connected entrepreneurs who started from nearly nothing and became rich through participation in the market via connections to the corrupt, but elected, government of $COUNTRY$ during the state's transition to a market-based economy. The so-called voucher-privatization program enabled a handful of young men to become billionaires, specifically by arbitraging the vast difference between old domestic prices for $COUNTRY_ADJ$ commodities (e.g. gas, oil) and the prices prevailing on the world market. Because they stashed billions of dollars in private Swiss bank accounts rather than investing in the $COUNTRY_ADJ$ economy, they were dubbed kleptocrats.
+	picture = "russian_financial_crisis"
+	
+	trigger = {
+		war = no
+		OR = { 
+			AND = { year = 1998 tag = RUS }
+			AND = { year = 2010 tag = UKR }
+		}
+		NOT = { has_country_modifier = in_bankrupcy }
+		government = democracy
+		has_country_flag = oligarchs
+		NOT = { has_country_flag = oligarchs_constrained }
+	}
+
+	mean_time_to_happen = {
+		months = 9
+	}
+
+	option = {
+		name = EVT_32507_A
+		treasury = -200000 # this hopefully make the country go bancrupt.
+		set_country_flag = oligarchs_constrained
+		add_country_modifier = { name = financial_crisis duration = 1700 }
+	}
+}
+
+country_event = {
+	id = 32508
+	title = EVT_32508_NAME
+	# EVT_32505_NAME;Second Chechen War
+	desc = EVT_32508_DESC
 	# EVT_32505_DESC;The Second Chechen War was launched by the Russian Federation, starting 26 August 1999, in response to the Invasion of Dagestan by the Islamic International Brigade (IIB). On 1 October Russian troops entered Chechnya. The campaign ended the de facto independence of the Chechen Republic of Ichkeria and restored Russian federal control over the territory. Although it is regarded by many as an internal conflict within the Russian Federation, the war attracted a large number of foreign fighters.
 	picture = "second_chechen_war"
 
 	is_triggered_only = yes
 	
 	option = {
-		name = EVT_32505_A 
+		name = EVT_32508_A 
 		# EVT_32505_A;Defend our country!
 	}
 }
