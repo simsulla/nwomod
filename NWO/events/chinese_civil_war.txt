@@ -35,6 +35,19 @@ country_event = {
 	any_pop = { limit = { culture = chinese } militancy = 5 }
 	ai_chance = { factor = 0 }
   }
+
+  option = {
+    name = "EVT_8200000_C"
+	relation = { who = CHI value = -100 } 
+	relation = { who = KMT value = -100 } 
+	badboy = 10 
+	prestige = -50
+	any_pop = { limit = { culture = chinese } militancy = 5 }
+	release_vassal = MCK
+	ai_chance = { factor = 0 }
+  }
+
+  
 }
 country_event = {
   id = 8200005
