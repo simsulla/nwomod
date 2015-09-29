@@ -27,7 +27,7 @@ province_event = {
 	
 	trigger = {
 		year = 1990
-		OR = { pop_majority = sunni_arab AND = { continent = africa pop_majority_religion = sunni } AND = { continent = asia NOT = { is_core = IDO } }  }
+		OR = { pop_majority_culture = sunni_arab AND = { continent = africa pop_majority_religion = sunni } AND = { continent = asia NOT = { is_core = IDO } }  }
 		owner = { NOT = { government = islamist_dictatorship }  OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
 		NOT = { is_core = ISI }
 		has_province_modifier = salafi_movement

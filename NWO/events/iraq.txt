@@ -551,7 +551,7 @@ country_event = {
 		war = {
 			target = ISI
 			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = acquire_core_state state_id = 926 } # Baghdad
+			defender_goal = { casus_belli = acquire_core_state state_province_id = 926 } # Baghdad
 		}
 		badboy = 5
 	}
@@ -563,7 +563,7 @@ country_event = {
 		war = {
 			target = ISI
 			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = acquire_core_state state_id = 926 } # Baghdad
+			defender_goal = { casus_belli = acquire_core_state state_province_id = 926 } # Baghdad
 		}
 		badboy = 5
 		random_country = { limit = { tag = THIS OR = { NOT = {exists = ISI } ISI = { ai = no } } } change_tag_no_core_switch = ISI }
