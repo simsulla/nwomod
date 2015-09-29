@@ -1,0 +1,21 @@
+political_decisions = {
+
+	jihad = {
+		# jihad_title;Jihad
+		# jihad_desc;ISIL has sought to establish itself as a caliphate, an Islamic state led by a group of religious authorities under a supreme leader—the caliph—who is believed to be the successor to Prophet Muhammad. When the caliphate was proclaimed, ISIL stated: "The legality of all emirates, groups, states and organisations becomes null by the expansion of the khilafah's [caliphate's] authority and arrival of its troops to their areas."
+		picture = "jihad"
+		potential = {
+			tag = ISI
+			exists = ISI
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			badboy = 5
+			random_country = { limit = { war = no NOT = { tag = ISI } any_owned = { any_core = { is_core = ISI } } } country_event = 1014800 }
+		}
+		ai_will_do = { factor = 1 modifier = { factor = 0 badboy = 5 } }
+	}
+	
+}

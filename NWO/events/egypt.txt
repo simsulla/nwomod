@@ -61,3 +61,41 @@ country_event = {
   }
 }
 
+country_event = {
+  id = 8004910
+  title = "EVT_8004910_NAME"
+  # EVT_8004910_NAME;Egyptian Crisis
+  desc = "EVT_8004910_DESC"
+  # EVT_8004910_DESC;The Egyptian Crisis began with the Egyptian Revolution of 2011, when hundreds of thousands of Egyptians took to the streets in an ideologically and socially diverse mass protest movement that ultimately forced longtime president Hosni Mubarak from office.[1][2] A protracted political crisis ensued, with the Supreme Council of the Armed Forces taking control of the country until a series of popular elections brought the Muslim Brotherhood to power.[3] However, disputes between elected Islamist president Mohamed Morsi and both the Egyptian military and secularists continued until Morsi's overthrow in 2013,
+  picture = "egyptian_crisis"
+  fire_only_once = yes
+
+  trigger = {
+    tag = EGY
+	has_country_flag = arab_spring
+	government = presidential_dictatorship
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = "EVT_8004910_A"
+	# EVT_8004910_A;Crack done on the Islamists
+	any_pop = {
+		limit = {
+			culture = sunni_arab
+		}
+		consciousness = 2
+		militancy = 5
+	}
+	ai_chance = { factor = 100 }
+  }
+  
+  option = {
+    name = "EVT_8004910_B"
+	# EVT_8004910_B;Democracy - Islamist power
+	government = democracy country_event = 800054
+	ai_chance = { factor = 0 }
+  }
+  
+}

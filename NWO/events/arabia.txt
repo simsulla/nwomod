@@ -2,15 +2,15 @@
 # Arabian Event to Inherit
 
 country_event = {
-	id = 111011929
-	title = "EVT_111011929_NAME"
-	desc = "EVT_111011929_DESC"
+	id = 101929
+	title = "EVT_101929_NAME"
+	desc = "EVT_101929_DESC"
 	picture = "independence_of_palestine"
 
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVT_111011929_A"
+		name = "EVT_101929_A"
 		add_country_modifier = {
 			name = denied_independence
 			duration = 1750
@@ -20,15 +20,15 @@ country_event = {
 				tag = TUN
 				MOR = { exists = yes is_vassal = yes primary_culture = sunni_arab }
 			}
-			MOR = { country_event = 111011929 }
+			MOR = { country_event = 101929 }
 		}
 	}
 }
 
 country_event = {
-	id = 111011930
-	title = "EVT_111011930_NAME"
-	desc = "EVT_111011930_DESC"
+	id = 101930
+	title = "EVT_101930_NAME"
+	desc = "EVT_101930_DESC"
 	picture = "arab_league"
 	
 	trigger = {
@@ -44,15 +44,15 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_111011930_A"
+		name = "EVT_101930_A"
 		set_country_flag = arab_league
 	}
 }
 
 country_event = {
-	id = 111011931
-	title = "EVT_111011931_NAME"
-	desc = "EVT_111011931_DESC"
+	id = 101931
+	title = "EVT_101931_NAME"
+	desc = "EVT_101931_DESC"
 	picture = "tanger_protocol"
 
 	trigger = {
@@ -75,16 +75,16 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_111011931_A"
+		name = "EVT_101931_A"
 		ai_chance = { factor = 100 }
 		overlord = { 
 			leave_alliance = THIS
-			country_event = 111011932 
+			country_event = 101932 
 		}
 	}
 	
 	option = {
-		name = "EVT_111011931_B"
+		name = "EVT_101931_B"
 		ai_chance = { factor = 0 }
 		overlord = { 
 			diplomatic_influence = {
@@ -92,12 +92,12 @@ country_event = {
 				value = -200
 			}
 			leave_alliance = THIS
-			country_event = 111011932
+			country_event = 101932
 		}
 	}
 	
 	option = {
-		name = "EVT_111011931_C"
+		name = "EVT_101931_C"
 		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {
@@ -112,9 +112,9 @@ country_event = {
 }
 
 country_event = {
-	id = 111011932
-	title = "EVT_111011932_NAME"
-	desc = "EVT_111011932_DESC"
+	id = 101932
+	title = "EVT_101932_NAME"
+	desc = "EVT_101932_DESC"
 	picture = "arab_independance"
 
 	is_triggered_only = yes
@@ -124,7 +124,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_111011932_A"
+		name = "EVT_101932_A"
 		ai_chance = { factor = 0 }
 		casus_belli = {
 			target = FROM
@@ -139,7 +139,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVT_111011932_B"
+		name = "EVT_101932_B"
 		ai_chance = { factor = 0 }
 		add_casus_belli = {
 	        target = FROM
@@ -157,7 +157,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_111011932_C"
+		name = "EVT_101932_C"
 		ai_chance = { factor = 100 }
 		relation = {
 			who = FROM
@@ -171,21 +171,20 @@ country_event = {
 }
 
 country_event = {
-	id = 111011933
-	title = "EVT_111011933_NAME"
-	desc = "EVT_111011933_DESC"
+	id = 101933
+	title = "EVT_101933_NAME"
+	desc = "EVT_101933_DESC"
 	picture = "arab_spring"
 
 	trigger = {
 		year = 2010
 		OR = { primary_culture = sunni_arab primary_culture = shia_arab }
-		NOT = { has_country_flag = arabic_spring }
+		NOT = { has_country_flag = arab_spring }
+		NOT = { government = democracy government = hms_government }
 	}
 	
-	immediate = { set_country_flag = arabic_spring }
-	
 	mean_time_to_happen = {
-		months = 48
+		months = 24
 		modifier = {
 			pop_militancy = 10
 			factor = 0.5
@@ -197,8 +196,9 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_111011933_OPTA"
+		name = "EVT_101933_OPTA"
 		ai_chance = { factor = 100 }
+		set_country_flag = arab_spring
 		any_pop = { 
 			limit = { religion = sunni }
 			militancy = 5
@@ -215,12 +215,12 @@ country_event = {
 }
 
 country_event = {
-	id = 111011934
+	id = 101934
 	title = "wahhabism"
 	desc = "wahhabism_desc"
 	picture = "wahhabism"
 
-	is_triggered_only = yes
+	is_triggered_only = yes # decision saudi_arabia.txt
 	
 	option = {
 		name = "wahhabism_opta"
@@ -232,7 +232,7 @@ country_event = {
 			}
 			ideology = { factor = 0.1 value = islamist }
 		}
-		ai_chance = { factor = 20 }
+		ai_chance = { factor = 0 }
 	}
 	option = {
 		name = "wahhabism_optb"
@@ -244,7 +244,136 @@ country_event = {
 			}
 			scaled_militancy = { factor = 0.5 ideology = islamist } 
 		}
-		ai_chance = { factor = 80 }
+		ai_chance = { factor = 100 }
 	}
 }
 
+province_event = {
+	id = 101935
+	title = EVT_101935_NAME
+	# EVT_101935_NAME;Salafi movement
+	desc = EVT_101935_DESC
+	# EVT_101935_DESC;The Salafi movement or Salafist movement is an ultra-conservative orthodoxical movement within Sunni Islam that references the doctrine known as Salafism. The doctrine can be summed up as taking "a fundamentalist approach to Islam, emulating the Prophet Muhammad and his earliest followers—al-salaf al-salih, the 'pious forefathers'...They reject religious innovation, or bida, and support the implementation of sharia (Islamic law)."
+	picture = "salafi_movement"
+	
+	trigger = {
+		year = 1972
+		OR = { pop_majority_culture = sunni_arab AND = { continent = africa pop_majority_religion = sunni } AND = { continent = asia NOT = { is_core = IDO } }  }
+		owner = { NOT = { government = islamist_dictatorship }  OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
+		NOT = { is_core = ISI } # 1014840 in isis.txt completes the ISI core
+		NOT = { has_province_modifier = salafi_supressed }
+		NOT = { has_province_modifier = salafi_movement }
+	}
+
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	option = {
+		name = EVT_101935_A
+		# EVT_101935_A;Avoid confrontation
+		any_pop = { 
+			limit = { religion = sunni }
+			dominant_issue = {
+				value = moralism
+				factor = 0.03
+			}
+			ideology = { factor = 0.04 value = islamist }
+		}
+		add_province_modifier = { name = salafi_movement duration = -1 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = EVT_101935_B
+		# EVT_101935_B;Suppress the movement
+		limit = { religion = sunni }
+		any_pop = { 
+			dominant_issue = {
+				value = moralism
+				factor = 0.03
+			}
+			scaled_militancy = { factor = 0.5 ideology = islamist } 
+		}
+		add_province_modifier = { name = salafi_supressed duration = -1 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = 101936
+	title = EVT_101936_NAME
+	# EVT_101936_NAME;Islamism
+	desc = EVT_101936_DESC
+	# EVT_101936_DESC;Islamism, also known as Political Islam, is a set of ideologies holding that "Islam should guide social and political as well as personal life." Islamism is a controversial concept not just because it posits a political role for Islam but also because its most extreme advocates believe their Islamic views are superior to all others', and that the contrary idea that Islam is, or can be, apolitical is an error.[citation needed] Islamists can have varying interpretations on various Quranic suras and ayahs. Islamist views emphasize the implementation of Sharia (Islamic law); of pan-Islamic political unity; and of the selective removal of non-Muslim, particularly Western military, economic, political, social, or cultural influences in the Muslim world that they believe to be incompatible with Islam.
+	picture = "salafi_political_movement"
+	
+	trigger = {
+		year = 1972
+		OR = { pop_majority_culture = sunni_arab AND = { continent = africa pop_majority_religion = sunni } AND = { continent = asia NOT = { is_core = IDO } }  }
+		owner = { NOT = { government = islamist_dictatorship } OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
+		NOT = { is_core = ISI } # 1014840 in isis.txt complets the ISI core
+		has_province_modifier = salafi_supressed
+	}
+
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	option = {
+		name = EVT_101936_A
+		# EVT_101936_A;This is worrisome
+		any_pop = { 
+			limit = { religion = sunni }
+			dominant_issue = {
+				value = moralism
+				factor = 0.03
+			}
+			ideology = { factor = 0.04 value = islamist }
+		}
+		add_province_modifier = { name = salafi_movement duration = -1 }
+		remove_province_modifier = salafi_supressed
+	}
+
+}
+
+country_event = {
+  id = 101937
+  title = "EVT_101937_NAME"
+  # EVT_101937_NAME;Arab Spring
+  desc = "EVT_101937_DESC"
+  # EVT_101937_DESC;The Arab Spring was a revolutionary wave of demonstrations and protests (both non-violent and violent), riots, and civil wars in the Arab world that began on 18 December 2010 in Tunisia with the Tunisian Revolution, and spread throughout the countries of the Arab League and its surroundings. While the wave of initial revolutions and protests faded by mid-2012, some started to refer to the succeeding and still ongoing large-scale discourse conflicts in the Middle East and North Africa as the Arab Winter.
+  picture = "egyptian_crisis"
+  fire_only_once = yes
+
+  trigger = {
+	primary_culture = sunni_arab
+    NOT = { tag = EGY tag = SYR tag = IRQ tag = SAA tag = QAT tag = UAE tag = OMA tag = ALG } # country events
+	has_country_flag = arab_spring
+	OR = { government = presidential_dictatorship government = absolute_monarchy }
+	
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = "EVT_101937_A"
+	# EVT_101937_A;Crack down
+	any_pop = {
+		limit = {
+			OR = { culture = sunni_arab culture = shia_arab }
+		}
+		consciousness = 2
+		militancy = 2
+	}
+	ai_chance = { factor = 0.5 modifier = { factor = 10 tag = BHR } }
+  }
+  
+  option = {
+    name = "EVT_101937_B"
+	# EVT_101937_B;Government reforms
+	random_country = { limit = { tag = THIS NOT = { government = absolute_monarchy } } government = democracy country_event = 800054 }
+	random_country = { limit = { tag = THIS government = absolute_monarchy } government = hms_government country_event = 800054 }
+	ai_chance = { factor = 0.5 }
+  }
+  
+}

@@ -476,12 +476,10 @@ country_event = {
 }
 
 country_event = {
-	id = 1007501
-
-	title = EVT_1007501_NAME
-	desc = EVT_1007501_DESC
+	id = 8007565
+	title = EVT_8007565_NAME
+	desc = EVT_8007565_DESC
 	picture = "saddam_hussein"
-
 	fire_only_once = yes
 
 	trigger = {
@@ -500,37 +498,76 @@ country_event = {
 	}
 	
 	option = {
-		name = EVT_1007501_OPTA
+		name = EVT_8007565_OPTA
 		ai_chance = { factor = 100 }
 		IRQ = { badboy = 20 }
 		random_country = {
 			limit = { tag = SAA ai = yes }
 			create_alliance = USA
 		}
-		casus_belli = {
-			target = IRQ
-			type = add_to_sphere
-			months = 12
-		}
-		casus_belli = {
-			target = IRQ
-			type = free_peoples
-			months = 12
-		}
 		war = {
 			target = IRQ
-			attacker_goal = {
-				casus_belli = install_democracy
-			}
-			defender_goal = {
-				casus_belli = status_quo
-			}
+			attacker_goal = { casus_belli = install_democracy }
+			attacker_goal = { casus_belli = liberate_country country = KUR }
+			defender_goal = { casus_belli = status_quo }
 		}
 		badboy = 5
 	}
 	option = {
-		name = EVT_1007501_OPTB
+		name = EVT_8007565_OPTB
+		prestige = -10
 		ai_chance = { factor = 0 }
 	}
 	
 }
+
+country_event = {
+	id = 8007566
+	title = EVT_8007566_NAME
+	# EVT_8007566_NAME;Iraqi Insurgency
+	desc = EVT_8007566_DESC
+	# EVT_8007566_DESC;The Iraqi insurgency, later referred to as the Iraq Crisis, escalated[14] after the withdrawal of U.S. troops in 2011, resulting in violent conflict with the central government, as well as sectarian violence among Iraq's religious groups. The insurgency was a direct continuation following the U.S.-led invasion of Iraq in 2003. After the U.S. military's withdrawal, the level of violence rose,[15] as Sunni militant groups stepped up attacks targeting the country's majority Shia population to undermine confidence in the Shia-led government and its efforts to protect people without American backup.
+	picture = "iraq_civil_war"
+	fire_only_once = yes
+
+	trigger = {
+		tag = IRQ
+		year = 2011
+		war = no
+		has_country_flag = arab_spring
+		government = democracy
+		NOT = { truce_with = USA }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = EVT_8007566_A
+		# EVT_8007566_A;Fight them!
+		any_owned = { limit = { pop_majority_culture = sunni_arab } add_core = ISI }
+		release = ISI
+		war = {
+			target = ISI
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = acquire_core_state state_id = 926 } # Baghdad
+		}
+		badboy = 5
+	}
+	option = {
+		name = EVT_8007566_B
+		# EVT_8007566_B;Become ISIS!
+		any_owned = { limit = { pop_majority_culture = sunni_arab } add_core = ISI }
+		release = ISI
+		war = {
+			target = ISI
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = acquire_core_state state_id = 926 } # Baghdad
+		}
+		badboy = 5
+		random_country = { limit = { tag = THIS OR = { NOT = {exists = ISI } ISI = { ai = no } } } change_tag_no_core_switch = ISI }
+	}
+
+}
+

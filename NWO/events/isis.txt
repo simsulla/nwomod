@@ -1,101 +1,56 @@
 country_event = {
 	id = 1014800
-
 	title = EVT_1014800_NAME
 	desc = EVT_1014800_DESC
 	picture = "isis"
+	is_triggered_only = yes
 
-	trigger = {
-		year = 2011
-		war = no
-		has_country_flag = arabic_spring
-		SAA = { has_country_modifier = wahhabism } 
-		ISI = { exists = no }
-		OR = { 
-			AND = { tag = SYR government = nationalist_dictatorship 907 = { owned_by = SYR controlled_by_rebels = yes } } 
-			AND = { tag = IRQ NOT = { government = nationalist_dictatorship } OR = { 923 = { owned_by = IRQ controlled_by_rebels = yes } 927 = { owned_by = IRQ controlled_by_rebels = yes } } }
-		}
-	}
-	
-	immediate = { 
-		any_owned = { limit = { OR = { controlled_by_rebels = yes province_id = 907 } } add_core = ISI }
-	}
-
-	mean_time_to_happen = {
-		days = 10
-	}
-	
 	option = {
-		name = EVT_1014800_OPTA
+		name = EVT_1014800_A
 		release = ISI
 		casus_belli = {
 			target = ISI
 			type = acquire_core_state
 			months = 12
 		}
-		casus_belli = {
-			target = ISI
-			type = annex_core_country
-			months = 24
-		}
-		ISI = { badboy = 25 money = 2000  }
+		ISI = { war = { target = THIS attacker_goal = { casus_belli = conquest } } }
 	}
 }
 
-country_event = {
-	id = 1014801
-
-	title = EVT_1014801_NAME
-	desc = EVT_1014800_DESC
-	picture = "isis"
-
-	trigger = {
-		ISI = { exists = yes }
-		year = 2011
-		war = no
-		has_country_flag = arabic_spring
-		SAA = { has_country_modifier = wahhabism } 
-		any_owned_province = { controlled_by_rebels = yes }
-	}
+province_event = {
+	id = 1014840
+	title = EVT_1014840_NAME
+	# EVT_1014840_NAME;Salafi jihadism
+	desc = EVT_1014840_DESC
+	# EVT_1014840_DESC;Salafi jihadism or Jihadist-Salafism is a transnational religious-political ideology based on a belief in violent jihadism and the Salafi movement of returning to (what adherents believe is) "true" Sunni Islam.
+	picture = "salafi_jihadism"
 	
-	immediate = { 
-		any_owned = { limit = { controlled_by_rebels = yes } add_core = ISI }
+	trigger = {
+		year = 1990
+		OR = { pop_majority = sunni_arab AND = { continent = africa pop_majority_religion = sunni } AND = { continent = asia NOT = { is_core = IDO } }  }
+		owner = { NOT = { government = islamist_dictatorship }  OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
+		NOT = { is_core = ISI }
+		has_province_modifier = salafi_movement
+		is_capital = no
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 48
 	}
 	
 	option = {
-		name = EVT_1014801_OPTA
-		any_owned = { limit = { controlled_by_rebels = yes } secede_province = ISI }
-		casus_belli = {
-			target = ISI
-			type = acquire_core_state
-			months = 12
-		}
-		war = {
-			target = ISI
-			attacker_goal = {
-				casus_belli = acquire_core_state
+		name = EVT_1014840_A
+		# EVT_1014840_A;Islamism is upon us
+		any_pop = { 
+			limit = { religion = sunni }
+			dominant_issue = {
+				value = moralism
+				factor = 0.03
 			}
-			defender_goal = {
-				casus_belli = acquire_core_state
-			}
+			ideology = { factor = 0.04 value = islamist }
 		}
-		ai_chance = { factor = 100 }
+		add_core = ISI
+		remove_province_modifier = salafi_movement
 	}
-	
-	option = {
-		name = EVT_1014801_OPTB
-		any_owned = { limit = { controlled_by_rebels = yes } secede_province = ISI }
-		casus_belli = {
-			target = ISI
-			type = acquire_core_state
-			months = 12
-		}
-		ai_chance = { factor = 0 }
-	}
-	
-}
 
+}
