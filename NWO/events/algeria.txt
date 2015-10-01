@@ -8,9 +8,10 @@ country_event = {
   trigger = {
     tag = FRA
     year = 1948 NOT = { year = 1969 }
+	owns = 1700 # Algiers
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 9 }
 
   option = {
     name = "EVT_8000310_A"
@@ -29,7 +30,7 @@ country_event = {
   trigger = {
     tag = ALG
     year = 1965 NOT = { year = 1969 }
-    #NOT = { government = proletarian_dictatorship }
+    NOT = { government = proletarian_dictatorship }
   }
 
   mean_time_to_happen = { months = 8 }
@@ -104,7 +105,7 @@ country_event = {
 	government = presidential_dictatorship
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 4 }
 
   option = {
     name = OK
@@ -126,7 +127,6 @@ country_event = {
     year = 1989 NOT = { year = 1991 }
 	government = presidential_dictatorship
   }
-  immediate = { set_global_flag = event_fired_8000317 }
 
   mean_time_to_happen = { months = 2 }
 
@@ -140,27 +140,47 @@ country_event = {
 }
 country_event = {
   id = 8000318
-  title = EVT_GOVTCHANGE_NAME
-  desc = EVT_GOVTCHANGE_DESC
-  picture = "nwo2_govt_change"
+  title = EVT_8000318_NAME
+  # EVT_8000318_NAME;Algerian Civil War
+  desc = EVT_8000318_DESC
+  # EVT_8000318_DESC;The Algerian Civil War was an armed conflict between the Algerian government and various Islamist rebel groups which began in 1991 following a coup negating an Islamist electoral victory. The war began slowly as it first appeared the government had successfully crushed the Islamist movement, but armed groups emerged to fight jihad and by 1994-5 violence reached such a level that it appeared the government might not be able to withstand it.[7] By 1996-7 however it became clear that the violence and predation of the Islamists had lost its popular support, although fighting continued for several years after.
+  picture = "algerian_civil_war"
   fire_only_once = yes
 
   trigger = {
     tag = ALG
-    year = 1991 NOT = { year = 1992 }
-	government = presidential_dictatorship
+    year = 1991 
+	NOT = { government = democracy }
   }
-  immediate = { set_global_flag = event_fired_8000318 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 10 }
 
   option = {
-    name = OK
+    name = EVT_8000318_A
+	# EVT_8000318_A;Prevent Islamist takeover
 	any_pop = { militancy = 1.0 }
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.1 } } }
-	define_general = { name = "Sid Ahmed Ghozali" personality = energetic background = no_background }
+	define_general = { name = "Abdelaziz Bouteflika" personality = energetic background = no_background }
+	any_owned = { 
+		limit = { NOT = { province_id = 1708 province_id = 1709 province_id = 1700 province_id = 1704 } NOT = { region = ALD_1714 region = ALD_1718 } }
+		add_core = ISI
+	}
+	release = ISI
+	war = { target = ISI attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
+	ai_chance = { factor = 100 }
   }
+
+  option = {
+    name = EVT_8000318_B
+	# EVT_8000318_B;Follow the will of the people
+	any_pop = { militancy = 1.0 }
+	government = islamist_dictatorship country_event = 800051
+	badboy = 10
+	random_country = { limit = { tag = ALG part_of_sphere = yes } sphere_owner = { diplomatic_influence = { who = ALG value = -200 } } }
+	any_neighbor_country = { limit = { NOT = { government = islamist_dictatorship } } relation = { who = ALG value = -200 } add_casus_belli = { target = ALG type = install_authoritarian_regime  months = 48 } }
+	ai_chance = { factor = 0 }
+  }
+
+  
 }
 # ################### 
 # Algerian War Events
@@ -180,7 +200,7 @@ country_event = { # Setif Massacre
     year = 1945 NOT = { year = 1950 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 7 }
 
   option = {
     name = EVT_8000320_A
@@ -268,8 +288,9 @@ country_event = { # Philippeville massacre
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1700 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } } change_controller = FRA } }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
-		limit = { tag = MOR vassal_of = FRA } 
+		limit = { tag = FRA OR = { is_our_vassal = MOR NOT = { exists = MOR } } owns = 1685 }
 		release = MOR
+		MOR = { country_event = 8009927 }
 		FRA = { diplomatic_influence = { who = MOR value = -200 } }
 		FRA = { add_casus_belli = { target = MOR type = make_puppet months = 24 } }
 	}
@@ -284,9 +305,9 @@ country_event = { # Philippeville massacre
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1700 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } }  change_controller = FRA } }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
-		limit = { tag = MOR vassal_of = FRA } 
+		limit = { tag = FRA OR = { is_our_vassal = MOR NOT = { exists = MOR } } owns = 1685 } 
 		release = MOR
-		country_event = 8009927 
+		MOR = { country_event = 8009927 }
 		FRA = { diplomatic_influence = { who = MOR value = 50 } } 
 		FRA = { relation = { who = MOR value = 50 } }
 	}
@@ -319,8 +340,9 @@ country_event = { # Battle of Algiers
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } } change_controller = FRA } }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
-		limit = { tag = TUN vassal_of = FRA } 
+		limit = { tag = FRA OR = { is_our_vassal = TUN NOT = { exists = TUN } } owns = 1725 } 
 		release = TUN
+		TUN = { country_event = 8015409 }
 		FRA = { diplomatic_influence = { who = TUN value = -200 } }
 		FRA = { add_casus_belli = { target = TUN type = make_puppet months = 24 } }
 	}
@@ -335,9 +357,9 @@ country_event = { # Battle of Algiers
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } }  change_controller = FRA } }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
-		limit = { tag = TUN vassal_of = FRA }
+		limit = { tag = FRA OR = { is_our_vassal = TUN NOT = { exists = TUN } } owns = 1725 } 
 		release = TUN
-		country_event = 8015409 
+		TUN = { country_event = 8015409 }
 		FRA = { diplomatic_influence = { who = TUN value = 50 } } 
 		FRA = { relation = { who = TUN value = 50 } }
 	}
@@ -370,7 +392,7 @@ country_event = { # The week of barricades
 	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 1 }
 	release = ALG
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1704 province_id = 1705 province_id = 1700 province_id = 1709 province_id = 1708 province_id = 1707 } } } change_controller = REB } }
-	ALG = { government = nationalist_dictatorship ruling_party_ideology  = populist  country_event = 800050 } # party_populist_2_white_french_ALG
+	ALG = { government = nationalist_dictatorship ruling_party_ideology = populist  country_event = 800050 } # party_populist_2_white_french_ALG
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = free_peoples } }
 	ai_chance = { factor = 100 }
   }
