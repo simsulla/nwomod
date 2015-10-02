@@ -9,10 +9,11 @@ country_event = {
     name = "EVT_8003808_A"
 	any_pop = { militancy = -2.5 }
 	government = proletarian_dictatorship  country_event = 800052
-	set_country_flag = castro_rules 
 	clr_country_flag = castro_rebellion 
 	relation = { who = USA value = -100 } 
 	relation = { who = RUS value = 100 } 
+	diplomatic_influence = { who = USA value = -200 }
+	diplomatic_influence = { who = RUS value = 200 }
   }
 }
 country_event = {
@@ -32,15 +33,15 @@ country_event = {
 
   option = {
     name = EVT_8003811_A
-	any_pop = { militancy = -0.3 }
-	ai_chance = { factor = 100 }
+	any_pop = { militancy = 1.0 }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8003811_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = -1.0 }
 	set_country_flag = castro_rebellion 
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
@@ -48,27 +49,26 @@ country_event = {
   title = EVT_8003812_NAME
   desc = EVT_8003812_DESC
   picture = "nwo2_castro_rebellion"
-  fire_only_once = yes
 
   trigger = {
     tag = CUB
 	year = 1954 NOT = { year = 1963 }
-    NOT = { has_country_flag = castro_rules }
+    NOT = { government = proletarian_dictatorship }
     has_country_flag = castro_rebellion
   }
 
-  mean_time_to_happen = { months = 6  }
+  mean_time_to_happen = { months = 12  }
 
   option = {
     name = EVT_8003812_A
 	any_pop = { militancy = 1.0 }
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }	
   }
 
   option = {
     name = EVT_8003812_B
 	country_event = 8003808
-	ai_chance = { factor = 0 }	
+	ai_chance = { factor = 100 }
   }
 
   option = {
@@ -87,8 +87,7 @@ country_event = {
 
   option = {
     name = EVT_8003813_A
-	any_pop = { militancy = 0.3 }
-	clr_country_flag = castro_rebellion 
+	any_pop = { militancy = 2.0 }
   }
 }
 country_event = {
@@ -113,7 +112,7 @@ country_event = {
 
   option = {
     name = EVT_8003814_B
-	any_pop = { militancy = -0.3 }
+	any_pop = { militancy = 0.5 }
   }
 }
 country_event = {
@@ -125,17 +124,19 @@ country_event = {
 
   trigger = {
     tag = USA
-    year = 1961 NOT = { year = 1962 }
+    year = 1953 NOT = { year = 1990 }
     has_country_flag = cold_war
 	CUB = { government = proletarian_dictatorship }
   }
 
   mean_time_to_happen = { months = 1  }
+  
+  immediate = { release_vassal = CUB }
 
   option = {
     name = EVT_8003815_A
 	any_pop = { militancy = -0.1 }
-	badboy = 10 
+	badboy = 5 
 	random_list = {
 		9= {
 			CUB = { country_event =  { id = 8003817 days = 10 } } 
@@ -146,11 +147,13 @@ country_event = {
 			country_event =  { id = 8003820 days = 10 }
 		}
 	}
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8003815_B
 	relation = { who = CUB value = 50 } 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -162,7 +165,7 @@ country_event = {
 
   option = {
     name = EVT_8003817_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -1.0 }
 	relation = { who = USA value = -100 } relation = { who = RUS value = 100 } 
 	USA = { country_event =  { id = 8003818 days = 10 } } 
   }
@@ -194,8 +197,9 @@ country_event = {
 	any_pop = { militancy = 1.5 }
 	relation = { who = USA value = 200 } 
 	relation = { who = RUS value = -200 } 
-	clr_country_flag = castro_rules
 	government = presidential_dictatorship  country_event = 800050
+	diplomatic_influence = { who = USA value = 200 }
+	diplomatic_influence = { who = RUS value = -200 }
 	USA = { country_event =  { id = 8003820 days = 10 } } 
   }
 }
@@ -236,7 +240,8 @@ country_event = {
     tag = CUB
 	year = 1959 NOT = { year = 1960 }
     exists = USA
-    has_country_flag = castro_rules
+	government = proletarian_dictatorship
+	is_vassal = no
     war = no
   }
 
@@ -248,14 +253,14 @@ country_event = {
 	badboy = -5 
 	relation = { who = USA value = 75 } 
 	relation = { who = RUS value = -25 } 
-	ai_chance = { factor = 80 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8003821_B
 	relation = { who = USA value = -50 } 
 	relation = { who = RUS value = 15 } 
-	ai_chance = { factor = 20 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -268,7 +273,7 @@ country_event = {
   trigger = {
     tag = CUB
 	year = 1959 NOT = { year = 1960 }
-    has_country_flag = castro_rules
+    government = proletarian_dictatorship
     war = no
   }
 
@@ -300,7 +305,7 @@ country_event = {
   trigger = {
     tag = CUB
 	year = 1959 NOT = { year = 1960 }
-    has_country_flag = castro_rules
+    government = proletarian_dictatorship
     war = no
   }
 
@@ -310,7 +315,6 @@ country_event = {
     name = EVT_8003823_A
 	relation = { who = USA value = -25 } 
 	relation = { who = RUS value = 40 } 
-	#country_event =  { id = 8003809 days = 1 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -332,7 +336,7 @@ country_event = {
     tag = CUB
 	year = 1960 NOT = { year = 1961 }
     exists = USA
-    has_country_flag = castro_rules
+	government = proletarian_dictatorship
     war = no
   }
 
@@ -342,7 +346,6 @@ country_event = {
     name = EVT_8003824_A
 	relation = { who = USA value = -25 } 
 	relation = { who = RUS value = 40 } 
-	#country_event =  { id = 8003809 days = 1 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -363,7 +366,7 @@ country_event = {
   trigger = {
     tag = CUB
 	year = 1959 NOT = { year = 1960 }
-    has_country_flag = castro_rules
+	government = proletarian_dictatorship
     war = no
   }
 
@@ -393,7 +396,7 @@ country_event = {
   trigger = {
     tag = CUB
 	year = 1960 NOT = { year = 1961 }
-    has_country_flag = castro_rules
+	government = proletarian_dictatorship
     war = no
   }
 
@@ -425,8 +428,8 @@ country_event = {
   trigger = {
     tag = CUB
 	year = 1960 NOT = { year = 1970 }
-    has_country_flag = event_fired_8003826
-    has_country_flag = castro_rules
+    can_nationalize = no # we already did it!
+	government = proletarian_dictatorship
     war = no
   }
 
@@ -475,7 +478,7 @@ country_event = {
   title = EVT_8003832_NAME
   desc = EVT_8003832_DESC
   picture = "nwo2_soviet_cuba"
-  is_triggered_only = yes # CUB
+  is_triggered_only = yes # RUS
 
   option = {
     name = EVT_8003832_A
