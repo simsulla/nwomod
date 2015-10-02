@@ -12,8 +12,6 @@ province_event = {
 	title = "EVTNAME2000"
 	desc = "EVTDESC2000"
 	
-	#is_triggered_only = yes
-	
 	trigger = {
 		has_recent_imigration = 30
 		is_colonial = no
@@ -74,14 +72,11 @@ province_event = {
 		}
 	}
 }
-
 #Employment for Immigrants
 province_event = {
 	id = 2010
 	title = "EVTNAME2010"
 	desc = "EVTDESC2010"
-	
-	#is_triggered_only = yes
 	
 	trigger = {
 		has_recent_imigration = 30
@@ -141,15 +136,11 @@ province_event = {
 		}
 	}
 }
-
-
 #Intermarriage
 province_event = {
 	id = 2020
 	title = "EVTNAME2020"
 	desc = "EVTDESC2020"
-	
-	#is_triggered_only = yes
 	
 	trigger = {
 		has_recent_imigration = 30
@@ -216,70 +207,6 @@ province_event = {
 		}
 	}
 }
-
-#Change Your Name
-province_event = {
-	id = 2030
-	title = "EVTNAME2030"
-	desc = "EVTDESC2030"
-	
-	#is_triggered_only = yes
-	
-	trigger = {
-		has_recent_imigration = 30
-		is_colonial = no
-		owner = {
-			civilized = yes
-			NOT = {
-				citizenship_policy = residency
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 6000
-		modifier = {
-			factor = 0.9
-			average_consciousness = 3
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 1.2
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.9
-			owner = {
-				plurality = 20
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA2030"
-		any_pop = {
-			militancy = -1
-		}
-		owner = {
-			plurality = 1
-		}
-	}
-
-	option = {
-		name = "EVTOPTB2030"
-		any_pop = {
-			consciousness = 1
-		}
-	}
-}
-	
 #Owning a Home
 province_event = {
 	id = 2040
@@ -889,9 +816,7 @@ province_event = {
 	id = 2130
 	title = "EVTNAME2130"
 	desc = "EVTDESC2130"
-	
-	#is_triggered_only = yes
-	
+
 	trigger = {
 		has_recent_imigration = 30
 		has_national_minority = yes

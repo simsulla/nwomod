@@ -1,30 +1,3 @@
-
-# Arabian Event to Inherit
-
-country_event = {
-	id = 101929
-	title = "EVT_101929_NAME"
-	desc = "EVT_101929_DESC"
-	picture = "independence_of_palestine"
-
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVT_101929_A"
-		add_country_modifier = {
-			name = denied_independence
-			duration = 1750
-		}
-		any_country = {
-			limit = { 
-				tag = TUN
-				MOR = { exists = yes is_vassal = yes primary_culture = sunni_arab }
-			}
-			MOR = { country_event = 101929 }
-		}
-	}
-}
-
 country_event = {
 	id = 101930
 	title = "EVT_101930_NAME"
@@ -46,9 +19,25 @@ country_event = {
 	option = {
 		name = "EVT_101930_A"
 		set_country_flag = arab_league
+		prestige = 2
 	}
 }
+country_event = {
+	id = 101929
+	title = "EVT_101929_NAME"
+	desc = "EVT_101929_DESC"
+	picture = "independence_of_palestine"
 
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_101929_A"
+		add_country_modifier = {
+			name = denied_independence
+			duration = 1750
+		}
+	}
+}
 country_event = {
 	id = 101931
 	title = "EVT_101931_NAME"
@@ -57,21 +46,13 @@ country_event = {
 
 	trigger = {
 		primary_culture = sunni_arab
-		has_country_modifier = denied_independence
+		# has_country_modifier = denied_independence
 		is_vassal = yes
 		overlord = { NOT = { has_country_modifier = xal_ambition } }
 	}
 
 	mean_time_to_happen = {
 		months = 60
-		modifier = { 
-			factor = 0.9
-			tag = MOR
-		}
-		modifier = { 
-			factor = 0.5
-			tag = TUN
-		}
 	}
 	
 	option = {
@@ -106,11 +87,11 @@ country_event = {
 			consciousness = 2
 			militancy = 5
 		}
+		country_event = 101929
 	}
 	
 	
 }
-
 country_event = {
 	id = 101932
 	title = "EVT_101932_NAME"
@@ -169,6 +150,9 @@ country_event = {
 		}		
 	}
 }
+
+
+# Arab Spring
 
 country_event = {
 	id = 101933
