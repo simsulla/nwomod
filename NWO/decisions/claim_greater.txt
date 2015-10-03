@@ -185,6 +185,7 @@ political_decisions = {
                         2133 = { add_core = ARG }
                 }
 
+				ai_will_do = { factor = 1 }
         }
 
         abandon_claim_greater_argentina = {
@@ -202,6 +203,9 @@ political_decisions = {
                         war = no
                         is_vassal = no
                         has_country_flag = claim_greater_argentina
+						part_of_sphere = yes
+						has_country_flag = international_court_of_justice
+						NOT = { jingosim = 5 }
                         OR = {
                                 ruling_party_ideology = socialist
                                 ruling_party_ideology = progressive
@@ -2689,28 +2693,23 @@ political_decisions = {
 
 			allow = {
 				   tag = VNZ
-					part_of_sphere = no
 					has_unclaimed_cores = no
-					NOT = {	
-						has_country_flag = claim_greater_venezuela
-						ruling_party_ideology = socialist
-						ruling_party_ideology = progressive
-						ruling_party_ideology = liberal 
-					}
+					NOT = {	has_country_flag = claim_greater_venezuela }
 					is_vassal = no
-					prestige = 45
 					OR = {
 							ruling_party_ideology = populist
 							jingoism = 24
+							cold_war = 1
 					}
 			}
 
 			effect = {
-					badboy = 12
+					badboy = 2
 					set_country_flag = claim_greater_venezuela
 					2242 = { add_core = VNZ }
 					2243 = { add_core = VNZ }
 			}
+			ai_will_do = { factor = 1 }
 
 	}
 
@@ -2729,6 +2728,9 @@ political_decisions = {
 					war = no
 					is_vassal = no
 					has_country_flag = claim_greater_venezuela
+					part_of_sphere = yes
+					NOT = { jingosim = 5 }
+					has_country_flag = international_court_of_justice
 					OR = {
 							ruling_party_ideology = socialist
 							ruling_party_ideology = progressive
