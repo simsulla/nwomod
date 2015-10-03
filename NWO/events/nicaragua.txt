@@ -20,6 +20,32 @@ country_event = {
   }
 }
 country_event = {
+  id = 8010404
+  title = EVT_8010404_NAME
+  # EVT_8010404_NAME;The Mosquito Coast
+  desc = EVT_8010404_DESC
+  # EVT_8010404_DESC;The Mosquito Coast was incorporated into Nicaragua in 1894; however, in 1960, the northern part was granted to Honduras by the International Court of Justice.
+  picture = "mosquito_coast"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8010404_A
+	# EVT_8010404_A;Accept the ICJ verdict.
+	relation = { who = HON value = 100 }
+	2196 = { remove_core = NIC secede_province = HON }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8010404_B
+	# EVT_8010404_B;All of the Coast is our!
+	badboy = 10
+	relation = { who = HON value = -200 }
+	ai_chance = { factor = 0 }
+  }
+  
+}
+country_event = {
   id = 8010408
   title = EVT_8010408_NAME
   desc = EVT_8010408_DESC
