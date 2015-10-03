@@ -169,22 +169,17 @@ political_decisions = {
                        tag = ARG
 						part_of_sphere = no
 						has_unclaimed_cores = no
-						NOT = {	
-							has_country_flag = claim_greater_argentina
-							ruling_party_ideology = socialist
-							ruling_party_ideology = progressive
-							ruling_party_ideology = liberal 
-						}
+						NOT = {	has_country_flag = claim_greater_argentina }
 						is_vassal = no
-                        prestige = 45
                         OR = {
                                 ruling_party_ideology = populist
                                 jingoism = 24
+								NOT = { government = democracy }
                         }
                 }
 
                 effect = {
-                        badboy = 12
+                        #badboy = 12
                         set_country_flag = claim_greater_argentina
                         2131 = { add_core = ARG }
                         2133 = { add_core = ARG }
