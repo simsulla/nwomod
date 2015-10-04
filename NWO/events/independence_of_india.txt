@@ -1,21 +1,21 @@
 country_event = { # Interim Government of India
 	id = 1214010
-
 	title = EVT_1214010_NAME
 	desc = EVT_1214010_DESC
 	picture = "independence_of_india"
 	
 	trigger = {
 		tag = ENG 
+		NOT = { year = 1990 }
 		is_our_vassal = RAJ
+		exists = RAJ
 		NOT = { exists = HND }
 		war = no
-		1236 = { controlled_by = RAJ } # Delhi
-		NOT = { has_country_modifier = denied_independence }
+		RAJ = { owns = 1236 } # Delhi
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 10
 	}
 
 	option = {
@@ -26,10 +26,10 @@ country_event = { # Interim Government of India
 				limit = {
 					culture = indian_muslim
 				}
-				consciousness = 2
-				militancy = 5
+				consciousness = 1
+				militancy = 2
 			}
-			country_event = { id = 1214011 days = 180 }
+			country_event = { id = 1214011 days = 90 }
 		}
 		ai_chance = { factor = 0 }
 	}
@@ -41,10 +41,10 @@ country_event = { # Interim Government of India
 				limit = {
 					culture = indian
 				}
-				consciousness = 2
-				militancy = 2
+				consciousness = 1
+				militancy = 1
 			}
-			country_event = { id = 1214011 days = 180 }
+			country_event = { id = 1214011 days = 90 }
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -56,10 +56,9 @@ country_event = { # Interim Government of India
 				limit = {
 					OR = { culture = indian culture = indian_muslim }
 				}
-				militancy = 10
+				militancy = 5
 			}
 		}
-		add_country_modifier = { name = denied_independence duration = 365 }
 		ai_chance = { factor = 0 }
 	}
 
@@ -71,7 +70,7 @@ country_event = {
 	title = EVT_1214011_NAME
 	desc = EVT_1214011_DESC
 	picture = "ali_jinnah_negotiating"
-	is_triggered_only = yes
+	is_triggered_only = yes # RAJ
 	
 	option = {
 		name = EVT_1214011_A 
@@ -87,37 +86,29 @@ country_event = {
 			limit = {
 				culture = indian
 			}
-			militancy = 10
+			militancy = 3
 		}
-		add_country_modifier = { name = denied_independence duration = 365 }
 	}
 
 }
 
 country_event = {
 	id = 1214012
-
 	title = EVT_1214012_NAME
 	desc = EVT_1214012_DESC
 	picture = "independence_of_india"
-
-	is_triggered_only = yes
+	is_triggered_only = yes # ENG
 
 	option = {
 		name = EVT_1214012_A 
 		ai_chance = { factor = 100 }
 		prestige = -2 
-		any_pop = {
-			limit = {
-				culture = indian_muslim
-			}
-			consciousness = 2
-			militancy = 10
-		}
 		release_vassal = RAJ
-		RAJ = { country_event = 8214013 }
+		random_country = { limit = { tag = UAE vassal_of = RAJ } RAJ = { release_vassal = UAE } create_vassal = UAE }
+		any_country = { limit = { vassal_of = RAJ } country_event = 8214019 }
+		RAJ = { country_event = { id = 8214013 days = 10 } }
 	}
-	
+
 	option = {
 		name = EVT_1214012_B 
 		ai_chance = { factor = 0 }
@@ -125,22 +116,20 @@ country_event = {
 			limit = {
 				culture = indian
 			}
-			consciousness = 2
-			militancy = 10
+			consciousness = 1
+			militancy = 4
 		}
-		country_event = { id = 1214010 days = 30 } 
+		# country_event = { id = 1214010 days = 30 } 
 	}
 
 }
 
 country_event = { # Mountbatten Plan 
 	id = 8214013
-
 	title = EVT_8214013_NAME
 	desc = EVT_8214013_DESC
 	picture = "independence_of_india"
-
-	is_triggered_only = yes
+	is_triggered_only = yes # RAJ
 
 	option = {
 		name = EVT_8214013_A 
@@ -183,26 +172,33 @@ country_event = { # Mountbatten Plan
 	}
 
 }
+country_event = {
+	id = 8214019
+	title = EVT_8214019_NAME
+	# EVT_8214019_NAME;Britain Leaves India
+	desc = EVT_8214019_DESC
+	# EVT_8214019_DESC;Neither paramountcy nor the subsidiary alliances could continue after Indian independence. The British took the view that because they had been established directly between the British crown and the princely states, they could not be transferred to the newly independent dominions of India and Pakistan.[11] At the same time, the alliances imposed obligations on Britain that it was not prepared to continue to carry out, such as the obligation to maintain troops in India for the defence of the princely states. The British government therefore decided that paramountcy, together with all treaties between them and the princely states, would come to an end upon the British departure from India.
+	picture = "princely_states"
+	is_triggered_only = yes # RAJ
+	
+	immediate = { FROM = { diplomatic_influence = { who = THIS value = -100 } } }
 
+	option = {
+		name = EVT_8214019_A 
+		# EVT_8214019_A;We have to handle this new political environment!
+	}
+}
 country_event = {
   id = 8007205
   title = EVT_8007205_NAME
   desc = EVT_8007205_DESC
   picture = "nwo2_independence_of_india"
-  is_triggered_only = yes
+  is_triggered_only = yes # RAJ
 
   option = {
     name = EVT_8007205_A
 	release_vassal = NEP
 	release_vassal = JAK
-	ENG = { 
-		diplomatic_influence = { who = RAJ value = -100 } 
-		diplomatic_influence = { who = BHU value = -100 } 
-		diplomatic_influence = { who = SIK value = -100 } 
-		diplomatic_influence = { who = NEP value = -100 } 
-		diplomatic_influence = { who = JAK value = -100 } 
-		diplomatic_influence = { who = TIB value = -100 } 
-	}
 	leave_alliance = TIB
 	leave_alliance = JAK
 	leave_alliance = ENG
@@ -225,8 +221,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2
-		modifier = { pop_majority_religion = sunni factor = 0.5 }
+		months = 1
 	}
 
 	option = {
