@@ -205,7 +205,6 @@ country_event = {
 	change_tag = HND
   }
 }
-
 country_event = {
 	id = 8214016
 	title = EVT_8214016_NAME
@@ -215,7 +214,45 @@ country_event = {
 	trigger = { 
 		NOT = { year = 1960 }
 		vassal_of = HND 
-		NOT = { tag = JAK } NOT = { tag = BHU } NOT = { tag = SIK }
+		OR = { 
+			tag = MNP tag = RAA tag = IND tag = GWA tag = BER tag = ORI tag = NAX tag = BOD tag = MYS tag = TRA 
+			AND = { NOT = { exists = PAK } tag = AZK }  AND = { NOT = { exists = PAK }  tag = BLO }
+		}
+		NOT = { has_country_flag = princely_state_stay_independent }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = EVT_8214015_A
+		relation = { who = HND value = -200 }
+		set_country_flag = princely_state_stay_independent
+		HND = { release_vassal = THIS } 
+		HND = { leave_alliance = THIS }
+		ENG = { diplomatic_influence = { who = THIS value = -100 } }
+		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = EVT_8214015_C 
+		HND = { inherit = THIS }
+		ai_chance = { factor = 100 }
+	}
+
+}
+country_event = {
+	id = 8214017
+	title = EVT_8214016_NAME
+	desc = EVT_8214016_DESC
+	picture = "independence_of_india"
+
+	trigger = { 
+		NOT = { year = 1960 }
+		vassal_of = HND 
+		OR = { tag = AZK tag = BLO }
 		exists = PAK
 		NOT = { has_country_flag = princely_state_stay_independent }
 	}
@@ -233,21 +270,21 @@ country_event = {
 		HND = { leave_alliance = THIS }
 		ENG = { diplomatic_influence = { who = THIS value = -100 } }
 		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
-		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
-		ai_chance = { factor = 0.1 modifier = { tag = HYD factor = 10 } }
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = EVT_8214015_B 
 		PAK = { inherit = THIS }
-		ai_chance = { factor = 0.1 modifier = { exists = PAK pop_majority_religion = sunni factor = 10 } }
+		ai_chance = { factor = 100 }
 	}
 
 	option = {
 		name = EVT_8214015_C 
 		HND = { inherit = THIS }
-		ai_chance = { factor = 0.1 modifier = { pop_majority_religion = hindu NOT = { tag = HYD } factor = 10 } }
+		ai_chance = { factor = 0 }
 	}
 
 }
+
 
