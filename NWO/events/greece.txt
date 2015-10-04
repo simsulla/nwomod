@@ -1,4 +1,55 @@
 country_event = {
+  id = 8006210
+  title = EVT_8006210_NAME
+  # EVT_8006210_NAME;The Dodecanese
+  desc = EVT_8006210_DESC
+  # EVT_8006210_DESC;Following the war, the islands became a British military protectorate, and were almost immediately allowed to run their own civil affairs, upon which the islands became informally united with Greece, though under separate sovereignty and military control. Despite objections from Turkey, which desired the islands as well, they were formally united with Greece by the 1947 Peace Treaty with Italy, ending 740 years of foreign rule over the islands.
+  picture = "dodecanese"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+	GRE = { 
+		war = no 
+		NOT = { government = proletarian_dictatorship }
+	}
+	owns = 846
+	NOT = { year = 1990 }
+  }
+
+  mean_time_to_happen = { months = 2  }
+
+  option = {
+    name = EVT_8006210_A
+	# EVT_8006210_A;Return the island to Greece
+	846 = { secede_province = GRE }
+	GRE = { country_event = 8006211 }
+	prestige = 10
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8006210_B
+	# EVT_8006210_B;We must keep the island of strategic reasons
+	prestige = -10
+	badboy = 5
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8006211
+  title = EVT_8006210_NAME
+  desc = EVT_8006210_DESC
+  picture = "dodecanese"
+  is_triggered_only = yes # GRE
+  
+  option = {
+    name = EVT_8006211_A
+	# EVT_8006211_A;Celebrate!
+	prestige = 10
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = {
   id = 8006215
   title = EVT_8006215_NAME
   desc = EVT_8006215_DESC
@@ -31,7 +82,7 @@ country_event = {
     government = hms_government
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8006216_A
@@ -56,6 +107,7 @@ country_event = {
   trigger = {
     tag = GRE
 	year = 1973 NOT = { year = 1974 }
+	government = presidential_dictatorship
   }
 
   mean_time_to_happen = { months = 5  }
