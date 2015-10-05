@@ -6,14 +6,17 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = BEN
-	year = 1960 NOT = { year = 1962 }
+    tag = FRA
+	year = 1960 NOT = { year = 1972 }
+	is_our_vassal = BEN
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "EVT_8001512_A"
+	diplomatic_influence = { who = BEN value = 100 }
+	release_vassal = BEN 
 	prestige = 4
   }
 }
@@ -26,7 +29,8 @@ country_event = {
 
   trigger = {
     tag = BEN
-	year = 1934 NOT = { year = 1964 }
+	is_vassal = no
+	year = 1934 NOT = { year = 1974 }
   }
 
   mean_time_to_happen = { months = 12 }
@@ -45,6 +49,7 @@ country_event = {
 
   trigger = {
     tag = BEN
+	is_vassal = no
 	year = 1954 NOT = { year = 1990 }
   }
 

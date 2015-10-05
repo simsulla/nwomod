@@ -74,7 +74,7 @@ country_event = {
   trigger = {
     tag = DOM
 	year = 1966 NOT = { year = 1969 }
-    has_global_flag = event_fired_8004615
+    is_vassal = yes
   }
 
   mean_time_to_happen = { months = 12 }
@@ -115,6 +115,7 @@ country_event = {
 	year = 1965 NOT = { year = 1966 }
     NOT = { USA = { war_with = DOM } }
     exists = DOM
+	NOT = { is_our_vassal = DOM }
     has_global_flag = cold_War
   }
 
