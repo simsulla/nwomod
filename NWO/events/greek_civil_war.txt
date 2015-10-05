@@ -7,9 +7,12 @@ province_event = {
 
   trigger = {
     owned_by = GRE
-	controlled_by_rebels = yes
+	NOT = { controlled_by = GRE }
+	NOT = { year = 1990 }
   }
 
+   mean_time_to_happen = { months = 10  }
+   
   option = {
     name = OK
 	add_province_modifier = { name = patriot_uprising duration = 700 }
@@ -27,9 +30,9 @@ country_event = {
     tag = GRE
     year = 1946 NOT = { year = 1990 }
     has_global_flag = cold_war
+	NOT = { exists = UGR }
 	NOT = { government = proletarian_dictatorship }
 	war = no
-	NOT = { exists = UGR }
   }
 
   mean_time_to_happen = { months = 3  }
@@ -84,7 +87,7 @@ country_event = {
   
   option = {
     name = EVT_8500502_A
-	GRE = { country_event = 8500520 } 
+	UGR = { country_event = 8500520 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -101,8 +104,6 @@ country_event = {
   picture = "nwo2_greek_civil_war"
   is_triggered_only = yes # RUS
   
-  immediate = { set_global_flag = event_fired_8500503 }
-
   option = {
     name = EVT_8500503_A
 	ai_chance = { factor = 0 }
@@ -163,7 +164,7 @@ country_event = {
   option = {
     name = EVT_8500505_A
 	any_pop = { consciousness = 1.0 }
-	# TODO lower Soviet block coherence
+	RUS  = { country_event = 8225001 }
 	ai_chance = { factor = 100 }
   }
 
@@ -226,7 +227,7 @@ country_event = {
 	year = 1946 NOT = { year = 1963 }
     exists = GRE
     has_global_flag = cold_war
-	any_owned_province = { controlled_by_rebels = yes }
+	any_owned_province = { controlled_by = UGR }
   }
 
   mean_time_to_happen = { months = 12 }
@@ -303,7 +304,7 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1948 NOT = { year = 1950 }
-    GRE = { government = democracy war_with = UGR }
+    GRE = { OR = { government = democracy government = hms_government } war_with = UGR }
   }
 
   mean_time_to_happen = { months = 2  }
@@ -390,7 +391,6 @@ country_event = {
   trigger = {
     tag = UGR
 	NOT = { exists = GRE }
-	NOT = { year = 1963 }
 	government = proletarian_dictatorship
   }
 
@@ -413,7 +413,7 @@ country_event = {
 
   trigger = {
     tag = USA
-	NOT = { year = 1950 }
+	NOT = { year = 1960 }
     GRE = { government = proletarian_dictatorship }
 	war = no
   }
@@ -428,7 +428,7 @@ country_event = {
 
   option = {
     name = EVT_8500550_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.5 }
 	ai_chance = { factor = 100 }
   }
 }
@@ -480,7 +480,7 @@ country_event = {
 
   trigger = {
     tag = RUS
-	year = 1949 NOT = { year = 1950 }
+	year = 1949 NOT = { year = 1960 }
     GRE = { government = proletarian_dictatorship }
 	USA = { war_with = GRE }
 	war = no
