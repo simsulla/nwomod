@@ -8,7 +8,7 @@ country_event = { # Form the West Indies Federation
 	trigger = {
 		tag = ENG
 		owns = 2237 # Trinidad
-		OR = { exists = TAN exists = GHA }
+		OR = { exists = TAN exists = GHA year = 1960 }
 		NOT = { year = 1990 }
 		war = no
 	}
@@ -41,11 +41,10 @@ country_event = { # Dissolve the West Indies Federation
 	fire_only_once = yes
 	
 	trigger = {
-		is_our_vassal = XCC
-		tag = ENG
 		war = no
-		XCC = { war = no ai = yes }
+		tag = XCC
 		year = 1962	NOT = { year = 1990 }
+		is_vassal = yes
 	}
 
 	mean_time_to_happen = { months = 2 }
@@ -54,15 +53,14 @@ country_event = { # Dissolve the West Indies Federation
 		name = EVT_1002701_A # Dissolve the Federation
 		ai_chance = { factor = 100 }
 		prestige = 5
-		inherit = XCC
 		any_owned = { limit = { OR = { is_core = AAB is_core = BAR is_core = CYI is_core = COM is_core = JAM is_core = GRD is_core = STL is_core = SVG is_core = SKN is_core = TAT is_core = TCI } } remove_core = XCC }
-		XCC = { country_event = 1002702 }
+		overlord = { release_vassal = XCC add_casus_belli = { type = make_puppet target = XCC months = 24 } }
 	}
 
 	option = {
 		name = EVT_1002701_B # Keep the Federation
 		ai_chance = { factor = 0 }
-		XCC = { any_pop = { limit = { culture = black_anglo } militancy = 5 } }
+		any_pop = { limit = { culture = black_anglo } militancy = 5 }
 		prestige = -5
 	}
 
@@ -76,11 +74,10 @@ country_event = { # Dissolve the West Indies Federation
 	fire_only_once = yes
 
 	trigger = {
-		is_vassal = no
 		tag = XCC
 		war = no
 		year = 1962	NOT = { year = 1990 }
-		part_of_sphere = no
+		is_vassal = no
 	}
 
 	option = {
@@ -89,7 +86,6 @@ country_event = { # Dissolve the West Indies Federation
 		any_country = { limit = { OR = { tag = AAB tag = BAR tag = COM tag = JAM tag = GRD tag = STL tag = SVG tag = SKN } } country_event = 8212010 }
 		any_owned = { limit = { OR = { is_core = CYI is_core = TCI } } secede_province = ENG }
 		change_tag = TAT
-		overlord = { release_vassal = TAT }
 	}
 
 	option = {

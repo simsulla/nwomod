@@ -11,7 +11,7 @@ country_event = {
 	OR = { government = hms_government government = absolute_monarchy }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "OK"
@@ -32,7 +32,7 @@ country_event = {
 	government = hms_government
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "OK"
@@ -90,7 +90,8 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = CAM
+	OR = { tag = DAI tag = SVI }
+	owns = 1380 # Saigon
 	year = 1979 NOT = { year = 1980 }
   }
 
@@ -99,11 +100,11 @@ country_event = {
   option = {
     name = EVT_8003125_A
 	any_neighbor_country = { 
-		limit = { OR = { tag = DAI tag = SVI } government = proletarian_dictatorship }
+		limit = { tag = THIS government = proletarian_dictatorship }
 		war = { target = THIS attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = make_puppet } }
 	}
 	any_neighbor_country = { 
-		limit = { OR = { tag = DAI tag = SVI } NOT = { government = proletarian_dictatorship } }
+		limit = { tag = THIS NOT = { government = proletarian_dictatorship } }
 		war = { target = THIS attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = install_democracy } }
 	}
   }
@@ -118,6 +119,7 @@ country_event = {
   trigger = {
     tag = CAM
 	year = 1989 NOT = { year = 1990 }
+	government = proletarian_dictatorship
   }
 
   mean_time_to_happen = { months = 2  }

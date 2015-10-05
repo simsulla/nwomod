@@ -169,7 +169,7 @@ country_event = {
     any_owned_province = { province_id = 2534 }  
   }
 
-  mean_time_to_happen = { months = 53 }
+  mean_time_to_happen = { months = 5 }
 
   option = {
     name = EVT_8002627_A
@@ -209,12 +209,21 @@ country_event = {
   title = EVT_8002629_NAME
   desc = EVT_8002629_DESC
   picture = "nwo2_quebec_independence"
-  is_triggered_only = yes
+  fire_only_once = yes
+
+  trigger = {
+    tag = CAN
+    year = 1979 NOT = { year = 1990 }
+    NOT = { exists = QUE }
+    war = no
+  }
+  
+  mean_time_to_happen = { months = 1 }
+  
 
   option = {
     name = EVT_8002629_A
 	any_pop = { militancy = -0.2 }
-	country_event = { id = 8002630 days = 350 }  # 1980
 	ai_chance = { factor = 100 }
   }
 
@@ -229,8 +238,17 @@ country_event = {
   title = EVT_8002630_NAME
   desc = EVT_8002630_DESC
   picture = "nwo2_quebec_independence"
-  is_triggered_only = yes
-
+  fire_only_once = yes
+  
+  trigger = {
+    tag = CAN
+    year = 1980 NOT = { year = 1990 }
+    NOT = { exists = QUE }
+    war = no
+  }
+  
+  mean_time_to_happen = { months = 1 }
+  
   option = {
     name = EVT_8002630_A
 	any_pop = { militancy = -1.0 }

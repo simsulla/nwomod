@@ -12,7 +12,7 @@ country_event = {
 	government = democracy
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = "OK"
@@ -34,7 +34,7 @@ country_event = {
 	government = presidential_dictatorship
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = "OK"
@@ -54,9 +54,8 @@ country_event = {
     year = 1950
 	NOT = { year = 1951 }
   }
-  immediate = { set_global_flag = event_fired_8001804 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "EVT_8001804_A"
@@ -87,16 +86,16 @@ country_event = {
     NOT = { government = democracy }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 3 }
 
   option = {
     name = "EVT_8001805_A"
 	government = democracy  country_event = 800054
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.09999999999999998 } } }
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.01 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.05 } } }
 	any_pop = { militancy = -1.0 }
 	define_general = { name = "J.J. Torres" personality = energetic background = no_background }
-	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.4 } } }
+	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.1 } } }
   }
 }
 country_event = {
@@ -113,7 +112,7 @@ country_event = {
     government = democracy
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8001812_A
@@ -133,7 +132,7 @@ country_event = {
     government = democracy
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_8001813_A
@@ -155,9 +154,8 @@ country_event = {
 	NOT = { year = 1978 }
 	government = presidential_dictatorship
   }
-  immediate = { set_global_flag = event_fired_8001814 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8001814_A
@@ -178,7 +176,7 @@ country_event = {
 	government = democracy
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8001815_A
@@ -198,7 +196,7 @@ country_event = {
 	government = democracy
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8001816_A

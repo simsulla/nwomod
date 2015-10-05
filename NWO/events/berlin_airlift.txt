@@ -44,18 +44,20 @@ country_event = {
   title = EVT_8500602_NAME
   desc = EVT_8500602_DESC
   picture = "nwo2_berlin_airlift"
-  is_triggered_only = yes
+  is_triggered_only = yes #USA
 
   option = {
     name = EVT_8500602_A
 	relation = { who = GER value = 50 } 
+	RUS = { country_event =  { id = 8500603 days = 30 } } 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500602_B
-	RUS = { country_event =  { id = 8500603 days = 30 } } 
 	clr_global_flag = divided_berlin 
 	RUS  = { country_event = 8225000 } 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -96,7 +98,7 @@ country_event = {
 	money = -2000 
 	USA = { country_event = 8500605 }
 	country_event = 8500606
-	ai_chance = { factor = 5 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = { # Airlifts are hampered further

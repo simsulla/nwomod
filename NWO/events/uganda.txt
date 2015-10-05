@@ -12,7 +12,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		months = 1
 	}
 	
 	option = {
@@ -39,9 +39,9 @@ country_event = {
 	
 	option = {
 		name = "EVT_1027002_A" # accept
-		relation = { who = FROM value = 100 }
+		relation = { who = RWA value = 100 }
 		relation = { who = CNG value = -200 }
-		create_alliance = FROM
+		create_alliance = RWA
 		ai_chance = { factor = 100 }
 	}
 	
@@ -71,7 +71,7 @@ country_event = {
 	
 	option = {
 		name = "EVT_1027003_A" 
-		RWA = { country_event = 1029502 } # alliance with Rwanda
+		country_event = 1027002 # alliance with Rwanda
 		CNG = { country_event = 1003302 } # support Ituri rebellion
 		ai_chance = { factor = 100 }
 	}
@@ -128,7 +128,7 @@ country_event = {
 		tag = ENG
 		owns = 2019 # Entebbe Kampala
 		year = 1962 NOT = { year = 1990 }
-		exists = TAN
+		OR = { exists = TAN year = 1971 }
 	}
 	
 	mean_time_to_happen = { months = 3 }

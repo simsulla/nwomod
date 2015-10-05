@@ -44,7 +44,6 @@ country_event = {
 		tag = RWA
 		government = democracy
 		has_recently_lost_war = yes
-		NOT = { any_owned_province = { NOT = { has_country_modifier = ethnic_cleansing } } }
 		badboy = 10
 	}
 	
@@ -54,12 +53,12 @@ country_event = {
 	
 	option = {
 		name = "EVT_1029501_A" # riece of tutsi nationalism
-		government = nationalist_dictatorship
+		government = nationalist_dictatorship country_event = 800050
 		primary_culture = tutsi
-		UGA = { country_event = 1027002 } # offer alliance
+		UGA = { country_event = 1029502 } # offer alliance
 		CNG = { country_event = 1003301 } # support rebellion
 		small_arms = 200
-		money = 100000		
+		treasury = 10000		
 		ai_chance = { factor = 100 }
 	}
 	
@@ -69,29 +68,57 @@ country_event = {
 	}
 	
 }
-
 country_event = {
 	id = 1029502
 	title = "EVT_1029502_NAME" # Alliance with Uganda
 	desc = "EVT_1029502_DESC"
 	picture = "congo_war" 
-	
-	is_triggered_only = yes
+
+	is_triggered_only = yes # UGA
 	
 	option = {
 		name = "EVT_1029502_A" # accept
-		relation = { who = FROM value = 100 }
+		relation = { who = RWA value = 100 }
 		relation = { who = CNG value = -200 }
-		create_alliance = FROM
+		create_alliance = RWA
 		ai_chance = { factor = 100 }
 	}
-	
 	option = {
 		name = "EVT_1029502_B"
 		prestige = -5
 		ai_chance = { factor = 0 }
 	}
+}
+country_event = {
+	id = 1029503
+	title = "EVT_1029503_NAME"
+	desc = "EVT_1029503_DESC"
+	picture = "rwanda_genocide" 
 	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = RWA
+		exists = yes
+		year = 1996
+		NOT = { government = populist_dictatorship }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVT_1029503_A"
+		government = populist_dictatorship country_event = 800050
+		primary_culture = hutu
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_1029503_B" # never mind
+		ai_chance = { factor = 0 }
+	}
 	
 }
 

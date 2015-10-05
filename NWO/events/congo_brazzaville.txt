@@ -10,10 +10,16 @@ country_event = {
 	year = 1963 NOT = { year = 1967 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 4 }
 
   option = {
     name = EVT_8028514_A
 	government = presidential_dictatorship  country_event = 800050
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8028514_B
+	any_pop = { militancy = 1 }
+	ai_chance = { factor = 0 }
   }
 }

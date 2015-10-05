@@ -21,13 +21,30 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA20000" # declare interest
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 		# make USA, ENG, FRA, KMT friendly
-		any_greater_power = { limit = { THIS = { ai = yes NOT = {  OR = { tag = RUS tag = CHI } } } ai = yes involved_in_crisis = yes OR = { tag = KMT tag = USA tag = ENG tag = FRA } }  relation = { who = THIS value = 200 } }
+		any_greater_power = { 
+			limit = { 
+				THIS = { ai = yes NOT = {  OR = { tag = RUS tag = CHI } } }
+				ai = yes 
+				involved_in_crisis = yes 
+				OR = { tag = KMT tag = USA tag = ENG tag = FRA } 
+			}  
+			relation = { who = THIS value = 200 } 
+		}
 		# CHI takes her own route, except if Sino-Soviet split when CHI is anti Soviet
-		random_country = { limit = { ai = yes tag = RUS CHI = { involved_in_crisis = yes } has_global_flag = CHI_in_UNSC has_global_flag = sino_soviet_split government = proletarian_dictatorship is_greater_power = yes } relation = { who = CHI value = -200 } }
+		random_country = { 
+			limit = { 
+				ai = yes 
+				tag = RUS 
+				CHI = { involved_in_crisis = yes } 
+				has_global_flag = CHI_in_UNSC 
+				has_global_flag = sino_soviet_split 
+				government = proletarian_dictatorship 
+				is_greater_power = yes 
+			} 
+			relation = { who = CHI value = -200 } 
+		}
 		add_crisis_interest = yes
 	}
 	option = {
@@ -35,7 +52,6 @@ country_event = {
 		prestige_factor = -0.2
 	}
 }
-
 province_event = {
 	id = 20100
 	title = "EVTNAME20100" #Flashpoint event for GPs
@@ -48,8 +64,7 @@ province_event = {
 			flashpoint_tension = 5
 			NOT = { flashpoint_tension = 90 }
 			}
-	}
-	
+	}	
 	mean_time_to_happen =  {
 		months = 250
 
@@ -89,7 +104,6 @@ province_event = {
 		owner = { prestige_factor = -0.15 }
 	}
 }
-
 province_event = {
 	id = 20101
 	title = "EVTNAME20101" #Flashpoint event for others
@@ -143,7 +157,6 @@ province_event = {
 		owner = { prestige_factor = -0.1 }
 	}
 }
-
 country_event = {
 	id = 20102
 	title = "EVTNAME20102" #Claim Crisis GP
@@ -193,7 +206,6 @@ country_event = {
 		prestige_factor = -0.15
 	}
 }
-
 country_event = {
 	id = 20103
 	title = "EVTNAME20103" #Liberation Crisis GP
@@ -243,7 +255,6 @@ country_event = {
 		prestige_factor = -0.15
 	}
 }
-
 country_event = {
 	id = 20104
 	title = "EVTNAME20104" #Claim Crisis non GP, e.g target
@@ -293,7 +304,6 @@ country_event = {
 		#
 	}
 }
-
 country_event = {
 	id = 20105
 	title = "EVTNAME20105" #Liberation Crisis non GP

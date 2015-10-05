@@ -166,7 +166,7 @@ country_event = { # Maintaining security in Europe
   option = {
     name = EVT_8215011_A
 	any_country = { 
-		limit = { war = no government = proletarian_dictatorship NOT = { tag = THIS } exists = yes }
+		limit = { war = no government = proletarian_dictatorship NOT = { tag = RUS } exists = yes }
 		country_event = 8215013
 	}
 	ai_chance = { factor = 100 }
@@ -193,7 +193,7 @@ country_event = {
     year = 1946 NOT = { year = 1949 }
     has_global_flag = ww3
     war_with = RUS
-	NOT = { has_country_flag = event_8215012 }
+	NOT = { has_country_flag = western_allies_in_war }
 	war = no
   }
 
@@ -202,14 +202,16 @@ country_event = {
   option = {
     name = EVT_8215012_A
 	create_alliance = USA 
-	set_country_flag = event_8215012 
+	set_country_flag = western_allies_in_war 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8215012_B
 	relation = { who = RUS value = 50 } 
 	relation = { who = USA value = -150 } 
-	set_country_flag = event_8215012 
+	set_country_flag = western_allies_in_war 
+	ai_chance = { factor = 100 }	
   }
 }
 country_event = {
@@ -361,11 +363,13 @@ country_event = {
   option = {
     name = EVT_8215024_A
 	set_country_flag = invitation_to_nato
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8215024_B
 	capital_scope = { add_province_modifier = { name = neutrality duration = 3500 } }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -391,7 +395,7 @@ country_event = {
 
   option = {
     name = EVT_8215030_B
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }
 	set_global_flag = isolationist_ussr 
   }
 }
@@ -418,10 +422,12 @@ country_event = {
   option = {
     name = EVT_8215031_A
 	set_country_flag = invitation_to_warsaw_pact
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8215031_B
 	capital_scope = { add_province_modifier = { name = neutrality duration = 3500 } }
+	ai_chance = { factor = 0 }
   }
 }

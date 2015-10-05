@@ -39,8 +39,6 @@ country_event = {
   picture = "nwo2_khrushchev_ulbricht"
   is_triggered_only = yes # USA
   
-  immediate = { set_global_flag = event_fired_8500702 }
-
   option = {
     name = EVT_8500702_A
 	any_pop = { militancy = -0.3 }
@@ -68,7 +66,7 @@ country_event = { # Decision to close off West Berlin
   picture = "nwo2_berlin_wall"
   is_triggered_only = yes # RUS
   
-  immediate = { set_global_flag = event_fired_8500703 }
+  immediate = { set_global_flag = berlin_wall }
 
   option = {
     name = EVT_8500703_A
@@ -122,12 +120,10 @@ country_event = { # Access to East Berlin
   picture = "nwo2_berlin_crisis_1961"
   is_triggered_only = yes # USA
 
-  mean_time_to_happen = { months = 1  }
-
   option = {
     name = EVT_8500705_A
 	any_pop = { militancy = -0.3 }
-	USA = { country_event = 8500706 }
+	country_event = { id = 8500706 days = 30 }
 	ai_chance = { factor = 100 }
   }
 

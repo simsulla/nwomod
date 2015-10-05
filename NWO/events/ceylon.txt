@@ -1,20 +1,21 @@
 # Sri Lanka
 country_event = {
 	id = 1028301
-
 	title = EVT_1028301_NAME
 	desc = EVT_1028301_DESC
 	picture = "independence_of_india"
+	fire_only_once = yes
 
 	trigger = {
 		tag = ENG
 		NOT = { exists = SRL }
 		war = no
+		year = 1947 NOT = { year = 1990 }
 		1321 = { controlled_by = ENG } # Colombo
 	}
 
 	mean_time_to_happen = {
-		months = 14
+		months = 2
 	}
 
 	option = {

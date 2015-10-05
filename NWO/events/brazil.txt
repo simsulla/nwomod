@@ -11,13 +11,13 @@ country_event = {
 	NOT = { year = 1946 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "OK"
 	government = presidential_dictatorship  country_event = 800050
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.1 } } }
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.01 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.05 } } }
 	define_general = { name = "Vargas" personality = energetic background = no_background }
   }
 }
@@ -34,7 +34,7 @@ country_event = { # Suicide of Vargas
     NOT = { year = 1955 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "EVT_8002004_A"
@@ -55,7 +55,7 @@ country_event = { # Resignation of Quadros
     NOT = { year = 1965 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "EVT_8002007_A"
@@ -75,7 +75,7 @@ country_event = {
     NOT = { year = 1966 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8002008_A
@@ -98,7 +98,7 @@ country_event = {
     NOT = { year = 1960 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "EVT_8002015_A"
@@ -126,9 +126,8 @@ country_event = {
  	year = 1956
     NOT = { year = 1959 }
   }
-  immediate = { set_global_flag = event_fired_8002016 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 7 }
 
   option = {
     name = "EVT_8002016_A"
@@ -159,9 +158,8 @@ country_event = {
  	year = 1956
     NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8002017 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = "EVT_8002017_A"

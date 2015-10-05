@@ -10,23 +10,24 @@ country_event = {
 	exists = PAK
     year = 1971
 	NOT = { year = 1975 }
-    NOT = { has_global_flag = event_fired_8007240 }
     NOT = { exists = BNG }
     war = no
+	HND = { war = no }
   }
 
-  mean_time_to_happen = { months = 11  }
+  mean_time_to_happen = { months = 4  }
 
   option = {
     name = EVT_8017040_A
-	any_pop = { militancy = 2.5 }
+	any_pop = { limit = { culture = bengali } militancy = 2.5 }
+	HND = { country_event =  8017050 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8017040_B
 	any_pop = { militancy = 1.0 }
-	HND = { country_event =  8017050 } 
+	release_vassal = BNG
 	ai_chance = { factor = 0 }
   }
 }
@@ -40,7 +41,6 @@ country_event = {
   option = {
     name = EVT_8017050_A
 	war = { target = PAK  attacker_goal = { casus_belli = liberate_country country = BNG } defender_goal = { casus_belli = status_quo } }
-	any_pop = { militancy = -1.0 }
 	ai_chance = { factor = 100 }
   }
 
@@ -61,7 +61,6 @@ country_event = {
     year = 1972
     NOT = { exists = BNG }
     war = no
-    has_global_flag = event_fired_8017050
   }
 
   mean_time_to_happen = { months = 1  }
@@ -117,7 +116,7 @@ country_event = {
     year = 1972
 	NOT = { year = 1979 }
 	war = no
-	BNG = { exists = yes }
+	BNG = { exists = yes is_vassal = no }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -139,7 +138,7 @@ country_event = {
     year = 1972
 	NOT = { year = 1979 }
 	war = no
-	BNG = { exists = yes }
+	BNG = { exists = yes NOT = { vassal_of = PAK } }
   }
 
   mean_time_to_happen = { months = 1  }

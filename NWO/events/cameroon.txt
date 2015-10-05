@@ -8,10 +8,7 @@ country_event = { # Southern Cameroons Plebiscite
   trigger = {
 	tag = ENG
 	owns = 1957 # Buea
-    exists = NGE
 	exists = CAM
-	NGE = { is_vassal = no }
-	CAM = { is_vassal = no }
 	NOT = { exists = ABZ }
 	war = no
   }
@@ -50,11 +47,13 @@ country_event = {
     tag = CAM
 	owns = 1959 # Yaounde
     year = 1954 NOT = { year = 1990 }
+	is_vassal = yes
   }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = "EVT_8002512_A"
+	overlord = { release_vassal = CAM add_casus_belli = { type = make_puppet target = CAM months = 24 } }
   }
 }

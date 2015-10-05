@@ -10,7 +10,7 @@ country_event = {
     year = 1970 NOT = { year = 1971 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8001014_A
@@ -29,7 +29,7 @@ country_event = {
     year = 1963  NOT = { year = 1967 }
   }
 
-  mean_time_to_happen = { months = 24  }
+  mean_time_to_happen = { months = 4  }
 
   option = {
     name = "EVT_8001029_A"
@@ -72,7 +72,7 @@ country_event = {
     war = no
   }
 
-  mean_time_to_happen = { months = 20 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = "EVT_8001031_A"
@@ -92,7 +92,7 @@ country_event = {
     war = no
   }
 
-  mean_time_to_happen = { months = 66 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = "EVT_8001032_A"
@@ -322,16 +322,16 @@ country_event = {
 
   mean_time_to_happen = { months = 1  }
 
-  immediate = { set_global_flag = event_fired_8001059 }
-
   option = {
     name = EVT_8001059_A
 any_pop = { militancy = -0.5 }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8001059_B
 any_pop = { militancy = 1.0 }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -350,8 +350,6 @@ country_event = {
     war = no
   }
   mean_time_to_happen = { months = 5  }
-
-  immediate = { set_global_flag = event_fired_8001060 }
 
   option = {
     name = EVT_8001060_A
@@ -372,11 +370,9 @@ country_event = {
 
   mean_time_to_happen = { months = 8  }
 
-  immediate = { set_global_flag = event_fired_8001061 }
-
   option = {
     name = EVT_8001061_A
-any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 }
   }
 }
 country_event = {
@@ -391,8 +387,6 @@ country_event = {
     year = 1947 NOT = { year = 1950 }
   }
   mean_time_to_happen = { months = 2 }
-
-  immediate = { set_global_flag = event_fired_8001062 }
 
   option = {
     name = EVT_8001062_A
@@ -488,7 +482,7 @@ country_event = {
     year = 1949 NOT = { year = 1950 }
   }
 
-  mean_time_to_happen = { months = 11  }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8001067_A
@@ -508,7 +502,7 @@ country_event = {
   option = {
     name = EVT_8001067_C
 	any_pop = { militancy = 1.4 }
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.3 } } }
 	relation = { who = ENG value = -15 } 
 	relation = { who = USA value = -15 } 
 	relation = { who = RUS value = 25 } 
@@ -568,7 +562,7 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1949 NOT = { year = 1950 }
+    year = 1949 NOT = { year = 1990 }
   }
 
   mean_time_to_happen = { months = 10 }
@@ -712,7 +706,6 @@ country_event = {
   trigger = {
     tag = AST
     year = 1950  NOT = { year = 1955 }
-    has_global_flag = event_fired_8001076
   }
 
   mean_time_to_happen = { months = 6 }
@@ -847,6 +840,8 @@ country_event = {
     tag = AST
     year = 1953  NOT = { year = 1955 }
   }
+  
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8001083_A
@@ -864,9 +859,8 @@ country_event = {
     tag = AST
     year = 1954 NOT = { year = 1955 }
   }
-  immediate = { set_global_flag = event_fired_8001084 }
 
-  mean_time_to_happen = { months = 10 }
+  mean_time_to_happen = { months = 3 }
 
   option = {
     name = EVT_8001084_A
@@ -934,7 +928,6 @@ country_event = {
     tag = AST
     year = 1955 NOT = { year = 1960 }
   }
-  immediate = { set_global_flag = event_fired_8001087 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -1023,8 +1016,7 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956 NOT = { year = 1960 }
-    has_global_flag = event_fired_8001089
+    year = 1957 NOT = { year = 1960 }
   }
 
   mean_time_to_happen = { months = 5 }
@@ -1043,8 +1035,7 @@ country_event = {
 
   trigger = {
     tag = AST
-    year = 1956 NOT = { year = 1960 }
-    has_global_flag = event_fired_8001090
+    year = 1957 NOT = { year = 1960 }
   }
 
   mean_time_to_happen = { months = 5 }

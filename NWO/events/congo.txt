@@ -12,17 +12,19 @@ country_event = {
 			limit = {
 				OR = { culture = tutsi culture = nyakole culture = african_minor }
 			}
-			militancy = 20
+			militancy = 10
 			consciousness = 4
 		}
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 0 }
 	}
 	
 	option = {
 		name = "EVT_1003301_B" # war with Rwanda
 		badboy = 10
+		add_country_modifier = { name = very_easy_ai duration = 900 }
+		any_owned = { limit = { pop_majority_culture = swahili } change_controller = REB }
 		war = { target = RWA attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = install_democracy } }
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 100 }
 	}
 	
 }
@@ -102,7 +104,7 @@ country_event = { # Lipanda
 	NOT = { exists = CNG }
 	year = 1950 NOT = { year = 1990 }
 	owns = 1982 # Kinshasa Leopoldville
-	exists = ROC # usually released as vassal 1958
+	OR = { year = 1958 exists = ROC } # usually released as vassal 1958
 	war = no
   }
 
@@ -111,7 +113,7 @@ country_event = { # Lipanda
   option = {
     name = EVT_8003300_A
 	prestige = 20
-	CNG = { country_event = 8212010 }
+	release = CNG
 	ai_chance = { factor = 100 }
   }
   option = {

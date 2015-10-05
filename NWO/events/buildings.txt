@@ -16,12 +16,14 @@ country_event = {
   option = {
     name = EVT_8217000_A
 	200 = { add_province_modifier = { name = rocket_test duration = 3500 } }
+	prestige = 10
+	treasury = -1000
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8217000_B
-	money = 1000
+	prestige = -10
 	ai_chance = { factor = 0 }
   }
 }
@@ -43,12 +45,13 @@ country_event = {
   option = {
     name = EVT_8217001_A
 	986 = { add_province_modifier = { name = rocket_test duration = 3500 } }
+	prestige = 10
 	treasury = -1000 
 	ai_chance = { factor = 100 }
   }
   
   option = {
     name = EVT_8217001_B
-	treasury = 1000 
+	prestige = -10
   }
 }

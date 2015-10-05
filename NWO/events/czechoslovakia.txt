@@ -9,6 +9,7 @@ country_event = {
 		war = no
 		tag = CZH
 		year = 1992
+		government = democracy
 	}
 	
 	mean_time_to_happen = {
@@ -70,14 +71,14 @@ country_event = {
 	relation = { who = FRA value = 50 } 
 	RUS  = { country_event = 8225001 } 
 	RUS = { country_event = 8023121 } 
-	ai_chance = { factor  = 50 }
+	ai_chance = { factor  = 100 }
   }
 
   option = {
     name = EVT_8023107_B
 	any_pop = { militancy = 3.0 }
-	set_global_flag = event_fired_8023107
-	ai_chance = { factor  = 50 }
+	set_global_flag = prague_spring # second chance in one year
+	ai_chance = { factor  = 0 }
   }
 }
 country_event = {
@@ -125,16 +126,18 @@ country_event = {
     has_global_flag = cold_war
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 8 }
 
   option = {
     name = EVT_8023114_A
 	any_pop = { militancy = 0.3 }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8023114_B
 	relation = { who = RUS value = -100 } 
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
@@ -147,7 +150,7 @@ country_event = {
   trigger = {
     tag = CZH
     year = 1968 NOT = { year = 1970 }
-    has_global_flag = event_fired_8023107
+    has_global_flag = prague_spring
     has_global_flag = cold_war
     war = no
   }
@@ -161,6 +164,7 @@ country_event = {
 	relation = { who = USA value = 50 } 
 	relation = { who = ENG value = 50 } 
 	relation = { who = FRA value = 50 } 
+	RUS  = { country_event = 8225001 } 
 	RUS = { country_event = 8023121 }
 	ai_chance = { factor  = 100 }
   }
@@ -191,7 +195,6 @@ country_event = {
 	any_pop = { militancy = 1.0 }
 	release = CZH
 	CZH = { country_event = 8023122 }
-	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor  = 0 }
   }
 }
@@ -225,7 +228,9 @@ country_event = {
 	war = no
 	NOT = { is_our_vassal = CZH }
   }
- 
+
+  mean_time_to_happen = { months = 2 }
+  
  option = {
     name = EVT_8023123_A
 	relation = { who = RUS value = -100 } 
@@ -246,6 +251,8 @@ country_event = {
 	war = no
 	is_our_vassal = CZH
   }
+
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8023124_A
@@ -293,7 +300,7 @@ country_event = {
   option = {
     name = EVT_8023130_B
 	any_pop = { militancy = 2.5 }
-	overlord = { release_vassal = THIS } 
+	random_country = { limit = { tag = CZH is_vassal = yes } overlord = { release_vassal = CZH } }
 	ai_chance = { factor  = 0 }
   }
 }
