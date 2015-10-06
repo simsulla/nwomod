@@ -28,6 +28,7 @@ country_event = {
   trigger = {
     tag = PAK
     year = 1948
+	NOT = { year = 1984 }
 	exists = PAK
   }
 
@@ -225,7 +226,7 @@ country_event = {
 
   option = {
     name = EVT_8011027_A
-	# TODO remove claim to Aksai Chin
+	3281 = { remove_core = PAK } # remove claim to Akasi Chin
 	relation = { who = CHI value = 125 } 
 	relation = { who = HND value = -40 } 
 	relation = { who = USA value = -40 } 
