@@ -25,20 +25,31 @@ country_event = {
 	option = {
 		name = "EVT_1004902_B"
 		prestige = -5
+		set_country_flag = claim_the_sudan
 		any_pop = { limit = { culture = sunni_arab } consciousness = 2 }
+		ai_chance = { factor = 0 }
 	}
+		
 }
 country_event = {
 	id = 1004903
 	title = EVT_1004903_NAME
 	desc = EVT_1004903_DESC
 	picture = "sudan_independence"
-	is_triggered_only = yes
+	fire_only_once = yes
 
+	trigger = { 
+		NOT = { exists = SUD }
+		owns = 1827 # Khartorum
+		exists = EGY
+		year = 1958
+	}
+	
 	option = {
 		name = EVT_1004903_A 
 		release = SUD
 		prestige = 5
+		random_country = { limit = { has_country_flag = claim_the_sudan } country_event = 1004904 }
 		diplomatic_influence = { who = SUD value = 100 }
 		ai_chance = { factor = 100 }
 	}
@@ -50,7 +61,29 @@ country_event = {
 		relation = { who = EGY value = -200 }
 		any_pop = { limit = { culture = sunni_arab } militancy = 10 }
 	}
+	
 }
+country_event = {
+	id = 1004904
+	title = EVT_1004904_NAME
+	desc = EVT_1004904_DESC
+	picture = "sudan_independence"
+	is_triggered_only = yes # EGY
+	
+	option = {
+		name = EVT_1004904_A 
+		add_casus_belli = { target = SUD type = make_puppet months = 240 }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = EVT_1004904_B
+		ai_chance = { factor = 100 }
+		relation = { who = SUD value = 200 }
+	}
+	
+}
+
 country_event = {
   id = 8014520
   title = EVT_8014520_NAME
@@ -61,6 +94,7 @@ country_event = {
   trigger = {
     tag = SUD
     year = 1969
+	NOT = { year = 1990 }
     any_owned_province = { province_id = 360 }  
   }
 
