@@ -106,7 +106,8 @@ country_event = {
 		war = no
 		tag = RUS
 		year = 1999
-		OR = { is_our_vassal = CHC owns = 1055 }
+		exists = CHC
+		NOT = { truce_with = CHC }
 		NOT = { government = proletarian_dictatorship }
 	}
 	
@@ -115,7 +116,7 @@ country_event = {
 	option = {
 		name = EVT_32504_A
 		# EVT_32504_A;We need to act! War on Chechen.
-		release = CHC
+		release_vassal = CHC
 		war = { target = CHC attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 		CHC = { country_event = 32508 }
 		ai_chance = { factor = 100 }
@@ -142,6 +143,7 @@ country_event = {
 		tag = RUS
 		year = 1994
 		exists = CHC
+		NOT = { is_our_vassal = CHC }
 		NOT = { government = proletarian_dictatorship }
 	}
 	
@@ -247,6 +249,40 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 32509
+	title = EVT_32509_NAME
+	# EVT_32509_NAME;Chechen Independence
+	desc = EVT_32509_DESC
+	# EVT_32509_DESC;In November 1990, Dzhokhar Dudayev was elected head of the Executive Committee of the unofficial opposition All-National Congress of the Chechen People, which advocated sovereignty for Chechnya as a separate republic within the Soviet Union. In October 1991, he won the presidential election. Dudayev, in his new position as president of Ichkeria, unilaterally declared the republic's sovereignty and its secession from the Soviet Union and Russia.	
+	picture = "first_chechen_war"
+	fire_only_once = yes
+	
+	trigger = {
+		war = no
+		tag = CHC
+		year = 1992
+		exists = CHC
+		is_vassal = yes
+		NOT = { government = proletarian_dictatorship }
+	}
+	
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = EVT_32509_A
+		# EVT_32509_A;Become independent
+		overlord = { release_vassal = THIS }
+		prestige = 10
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = EVT_32509_B
+		prestige = -10
+		# EVT_32509_B;Leave matters as they are. 
+		ai_chance = { factor = 0 }
+	}
+}
 
 country_event = {
   id = 8014200
