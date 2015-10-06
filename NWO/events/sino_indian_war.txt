@@ -7,10 +7,10 @@ country_event = {
 
   trigger = {
     tag = CHI
-    year = 1960 NOT = { year = 1961 }
-    NOT = { owns = 1593  }
+    year = 1960 NOT = { year = 1971 }
+    NOT = { owns = 3281 }
     exists = HND
-	HND = { owns = 1593 }
+	HND = { owns = 3281 }
     has_global_flag = CHC_won_civil_war
   }
 
@@ -20,11 +20,13 @@ country_event = {
     name = EVT_8229000_A
 	HND = { country_event =  8229001 } 
 	badboy = 1 
+	ai_chance = { factor = 100 }
   }
 
   option = {
 	prestige = -20
     name = EVT_8229000_B
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -37,12 +39,14 @@ country_event = {
   option = {
     name = EVT_8229001_A
 	country_event =  { id = 8229002 days = 130 } 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8229001_B
 	any_pop = { militancy = 0.3 }
-	1593 = { secede_province = CHI } 
+	3281 = { secede_province = CHI } 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -56,12 +60,14 @@ country_event = {
     name = EVT_8229002_A
 	relation = { who = CHI value = -100 } 
 	CHI = { country_event =  { id = 8229003 days = 130 }  }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8229002_B
 	any_pop = { militancy = 0.8 }
-	1593 = { secede_province = CHI } 
+	3281 = { secede_province = CHI } 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -73,31 +79,14 @@ country_event = {
 
   option = {
     name = EVT_8229003_A
-	country_event =  { id = 8229010 days = 130 } 
 	war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 3281 } defender_goal = { casus_belli = status_quo } } 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8229003_B
 	any_pop = { militancy = 0.8 }
-  }
-}
-country_event = {
-  id = 8229010
-  title = EVT_8229010_NAME
-  desc = EVT_8229010_DESC
-  picture = "nwo2_sino_indian_war"
-  fire_only_once = yes
-  is_triggered_only = yes
-
-  option = {
-    name = EVT_8229010_A
-	country_event = 8229011 
-	any_pop = { militancy = -0.3 }
-  }
-
-  option = {
-    name = EVT_8229010_B
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -105,44 +94,11 @@ country_event = {
   title = EVT_8229011_NAME
   desc = EVT_8229011_DESC
   picture = "nwo2_sino_indian_war"
-  is_triggered_only = yes
-
-  option = {
-    name = EVT_8229011_A
-	relation = { who = CHI value = -50 } 
-  }
-
-  option = {
-    name = EVT_8229011_B
-	any_pop = { militancy = 0.3 }
-	any_country = { limit = { war_with = THIS alliance_with = CHI } country_event = 8229012 }
-  }
-}
-
-country_event = {
-  id = 8229012
-  title = EVT_8229011_NAME
-  desc = EVT_8229011_DESC
-  picture = "nwo2_sino_indian_war"
-  is_triggered_only = yes
-
-  option = {
-    name = EVT_8229011_B
-	end_war = FROM
-  }  
-  
-}
-
-country_event = {
-  id = 8229020
-  title = EVT_8229020_NAME
-  desc = EVT_8229020_DESC
-  picture = "nwo2_sino_indian_war"
   fire_only_once = yes
 
   trigger = {
     tag = CHI
-    controls = 1593
+    controls = 3281
     has_global_flag = cold_war
     HND = { war_with = CHI }
   }
@@ -150,13 +106,15 @@ country_event = {
   mean_time_to_happen = { months = 1  }
 
   option = {
-    name = EVT_8229020_A
+    name = EVT_8229011_A
 	HND = { country_event = 8229021 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
-    name = EVT_8229020_B
+    name = EVT_8229011_B
 	any_pop = { militancy = 0.8 }
+	ai_chance = { factor = 0 }
   }  
 }
 country_event = {
@@ -164,18 +122,19 @@ country_event = {
   title = EVT_8229021_NAME
   desc = EVT_8229021_DESC
   picture = "nwo2_sino_indian_war"
-  is_triggered_only = yes
+  is_triggered_only = yes #HND
 
   option = {
     name = EVT_8229021_A
 	any_pop = { militancy = 0.5 }
-	1593 = { remove_core =  THIS }
-	any_country = { limit = { war_with = THIS alliance_with = CHI } country_event = 8229012 }
+	3281 = { remove_core =  THIS }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8229021_B
 	any_pop = { militancy = 0.8 }
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
@@ -187,7 +146,7 @@ country_event = {
 
   trigger = {
     tag = HND
-    controls = 1593
+    controls = 3281
     has_global_flag = cold_war
     HND = { war_with = CHI }
   }
@@ -217,13 +176,14 @@ country_event = {
   option = {
     name = EVT_8229023_A
 	any_pop = { militancy = 0.5 }
-	1593 = { remove_core =  THIS }
-	any_country = { limit = { war_with = THIS alliance_with = HND } country_event = 8229012 }
+	3281 = { remove_core =  THIS }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8229023_B
 	any_pop = { militancy = 0.8 }
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
@@ -236,7 +196,7 @@ country_event = {
   trigger = {
     tag = CHI
     year = 1965 NOT = { year = 1970 }
-	owns = 1593
+	owns = 3281
 	war = no
   }
 
@@ -271,7 +231,7 @@ country_event = {
   trigger = {
     tag = HND
     year = 1965 NOT = { year = 1970 }
-	owns = 1593
+	owns = 3281
 	war = no
   }
 
@@ -311,12 +271,14 @@ country_event = {
   option = {
     name = EVT_8229034_A
 	release_vassal = TIB
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8229034_B
 	any_pop = { militancy = 1.0 }
 	badboy = 5
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {

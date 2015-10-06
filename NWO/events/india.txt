@@ -51,7 +51,7 @@ country_event = {
     year = 1947 NOT = { year = 1990 }
   }
 
-  mean_time_to_happen = { months = 12  }
+  mean_time_to_happen = { months = 8 }
 
   option = {
     name = EVT_8007229_A
@@ -93,7 +93,6 @@ country_event = {
   option = {
     name = EVT_8007231_C
 	HND = { country_event = { id = 8007236 days = 120 } } 
-#	PAK = { country_event = { id = 8007237 days = 60 } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -143,7 +142,7 @@ country_event = {
   option = {
     name = EVT_8007232_A
 	inherit = JAK 
-	PAK = { country_event = 8007233 }
+	random_country = { limit = { tag = PAK exists = PAK } country_event = 8007233 }
   }
 }
 country_event = {
@@ -155,7 +154,7 @@ country_event = {
 
   option = {
     name = EVT_8007233_A
-	war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 1225 } } 
+	war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 1225 } attacker_goal = { casus_belli = acquire_core_state state_province_id = 3281 } } 
 	ai_chance = { factor = 100 }
   }
 
@@ -187,7 +186,7 @@ country_event = {
   
   option = {
     name = EVT_8007235_A
-	war = { target = PAK attacker_goal = { casus_belli = acquire_core_state state_province_id = 1224 } } 
+	war = { target = PAK attacker_goal = { casus_belli = acquire_core_state state_province_id = 1224 } attacker_goal = { casus_belli = acquire_core_state state_province_id = 3281 } } 
 	ai_chance = { factor = 100 }
   }
 
@@ -244,6 +243,7 @@ country_event = {
 
   trigger = {
     tag = HND
+	NOT = { truce_with = PAK }
     PAK = { owns = 1224 war = no }
 	war = no
   }
@@ -272,6 +272,7 @@ country_event = {
   trigger = {
     tag = PAK
     HND = { owns = 1225 war = no }
+	NOT = { truce_with = HND }
 	war = no
   }
 
@@ -308,7 +309,7 @@ country_event = {
 
   option = {
     name = EVT_8007240_A
-	prestige = 50
+	prestige = 10
   }
 }
 country_event = {
@@ -328,7 +329,7 @@ country_event = {
 
   option = {
     name = EVT_8007241_A
-	prestige = -50
+	prestige = -10
   }
 }
 country_event = {
@@ -401,6 +402,7 @@ country_event = {
     year = 1963
     NOT = { HND = { alliance_with = POR } }
     NOT = { owns = 1303 }
+	POR = { owns = 1303 }
   }
   
   mean_time_to_happen = { months = 1  }
@@ -778,6 +780,19 @@ country_event = {
   }
 }
 country_event = {
+  id = 8007276
+  title = EVT_8007276_NAME
+  desc = EVT_8007276_DESC
+  picture = "nwo2_empty"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8007276_A
+	relation = { who = RUS value = -50 } 
+	relation = { who = USA value = 100 } 
+  }
+}
+country_event = {
   id = 8299011
   title = EVT_GOVTCHANGE_NAME
   desc = EVT_GOVTCHANGE_DESC
@@ -786,9 +801,8 @@ country_event = {
 
   trigger = {
     tag = HND
-    year = 1959
+    year = 1959 NOT = { year = 1990 }
   }
-  immediate = { set_global_flag = event_fired_8299011 }
 
   mean_time_to_happen = { months = 1  }
 
