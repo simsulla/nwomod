@@ -163,22 +163,3 @@ country_event = {
 	government = democracy country_event = 800054
   }
 }
-country_event = { # Sampoong Department Store collapse
-  id = 8008124
-  title = EVT_8008124_NAME
-  desc = EVT_8008124_DESC
-  picture = "sampoong_department_store_collapse"
-  fire_only_once = yes
-
-  trigger = {
-    OR = { tag = KOR tag = SKO }
-    year = 1995 
-  }
-
-  mean_time_to_happen = { months = 4 }
-
-  option = {
-    name = EVT_8008124_A
-	add_country_modifier = { name = national_tragedy duration = 350 }
-  }
-}
