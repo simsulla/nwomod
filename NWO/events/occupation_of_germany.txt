@@ -201,10 +201,13 @@ country_event = {
     OR = { tag = ENG tag = FRA }
 	year = 1954 NOT = { year = 1959 }
     has_global_flag = cold_war
+	NOT = { has_country_flag = morgenthau_plan }
   }
 
   mean_time_to_happen = { months = 2  }
 
+  immediate = { set_country_flag = morgenthau_plan }
+  
   option = {
     name = "EVT_8204011_A"
 	any_pop = { limit = { culture = german } militancy = 1.5 }
