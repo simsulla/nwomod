@@ -36,7 +36,7 @@ country_event = {
 		name = "EVTOPTA21000"
 		random_state = {
 			any_pop = {
-				reduce_pop = 0.96
+				reduce_pop = 0.99
 				militancy = -0.5
 			}
 		}
@@ -57,6 +57,10 @@ country_event = {
 		NOT = {
 			government = hms_government
 			government = democracy
+		}
+		OR = {
+			capital_scope = { continet = africa }
+			AND = { NOT = { year = 1970 } capital_scope = { continet = asia } }
 		}
 	}
 		
@@ -80,7 +84,8 @@ country_event = {
 			}
 		}
 		add_tax_relative_income	= -5
-		#treasury = -1500
+		treasury = -1500
+		ai_chance = { factor = 100 }
 	}
 	
 	option = {
@@ -91,6 +96,7 @@ country_event = {
 				militancy = 1
 			}
 		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -131,19 +137,19 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.1
-			year = 1850
+			year = 1950
 		}
 		modifier = {
 			factor = 1.1
-			year = 1870
+			year = 1970
 		}
 		modifier = {
 			factor = 1.1
-			year = 1890
+			year = 1990
 		}
 		modifier = {
 			factor = 1.1
-			year = 1910
+			year = 2010
 		}
 	}
 	
@@ -151,19 +157,21 @@ country_event = {
 		name = "EVTOPTA21020"
 		random_state = {
 			any_pop = {
-				reduce_pop = 0.9
+				reduce_pop = 0.98
 			}
 		}
+		ai_chance = { factor = 100 }
 	}
 	
 	option = {
 		name = "EVTOPTB21020"
 		random_state = {
 			any_pop = {
-				reduce_pop = 0.96
+				reduce_pop = 0.99
 				militancy = 2
 			}
 		}
+		ai_chance = { factor = 0 }
 	}
 }
 

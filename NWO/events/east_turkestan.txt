@@ -7,10 +7,9 @@ country_event = {
 
   trigger = {
     tag = ETS
-    year = 1945
-   has_global_flag = event_fired_8013804
+    year = 1945 NOT = { year = 1990 }
+	exists = ETS
   }
-  immediate = { set_global_flag = event_fired_8299010 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -70,7 +69,7 @@ country_event = {
 	badboy = 10 
 	relation = { who = KMT value = -100 } 
 	relation = { who = CHI value = -100 } 
-    ai_chance = { factor = 1 modifier = { factor = 100 NOT = { exists = CHI } } }
+    ai_chance = { factor = 1  modifier = { factor = 0 exists = CHI } }
   }
 
   option = {
@@ -78,7 +77,7 @@ country_event = {
 	relation = { who = KMT value = 100 } 
 	relation = { who = CHI value = 100 } 
 	diplomatic_influence = { who = ETS value = -100 } 
-    ai_chance = { factor = 10 }
+    ai_chance = { factor = 1 modifier = { factor = 0 NOT = { exists = CHI } } }
   }
 }
 country_event = {
@@ -92,6 +91,7 @@ country_event = {
     tag = KMT
     year = 1944 NOT = { year = 1948 }
     NOT = { exists = ETS }
+	owns = 1595 # Illi
   }
 
   mean_time_to_happen = { months = 1  }
@@ -125,6 +125,7 @@ country_event = {
     tag = CHI
     year = 1949 NOT = { year = 1990 }
     exists = ETS
+	ETS = { is_vassal = no }
     has_global_flag = CHC_won_civil_war
   }
 
@@ -157,7 +158,6 @@ country_event = {
   option = {
     name = EVT_8013806_B
 	any_pop = { militancy = 1.0 }
-	overlord = { release_vassal = THIS } 
 	neutrality = yes
 	CHI = { war = { target = ETS attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } }
   }
@@ -185,6 +185,7 @@ country_event = {
     tag = KMT
     year = 1949 NOT = { year = 1990 }
     exists = ETS
+	ETS = { is_vassal = no }
     has_global_flag = CHI_won_civil_war
   }
 
@@ -213,13 +214,14 @@ country_event = {
   option = {
     name = EVT_8013809_A
 	country_event = 8013810 
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8013809_B
 	any_pop = { militancy = 1.0 }
-	overlord = { release_vassal = THIS } 
 	KMT = { war = { target = ETS attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } }
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
