@@ -24,6 +24,7 @@ country_event = { # Federation of Rhodesia and Nyasaland
 	prestige = 10
 	badboy = -2
 	release_vassal = RHO
+	any_owned = { limit = { OR = { is_core = MLW is_core = ZAM } } secede_province = RHO }
 	RHO = { country_event = 8012201 }
 	ai_chance = { factor = 100 }
   }
@@ -44,7 +45,6 @@ country_event = { # Federation of Rhodesia and Nyasaland
     name = EVT_8012200_A
 	prestige = 10
 	badboy = -2
-	ENG = { any_owned = { limit = { OR = { is_core = MLW is_core = ZAM } } secede_province = RHO } }
 	release_vassal = ZAM
 	release_vassal = MLW
 	random_country = { limit = { tag = MLW vassal_of = RHO } government = hms_government country_event = 800054 primary_culture = white_anglo }
@@ -197,11 +197,11 @@ country_event = {
 
   trigger = {
     tag = RHO
-    OR = { government = democracy year = 1978 }
+    year = 1978
 	NOT = { year = 1990 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 3 }
 
   option = {
     name = EVT_8012214_A
