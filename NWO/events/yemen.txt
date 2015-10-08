@@ -9,7 +9,6 @@ country_event = {
     tag = YEM
     year = 1961 NOT = { year = 1990 }
   }
-  immediate = { set_global_flag = event_fired_8018201 }
 
   mean_time_to_happen = { months = 12 }
 
@@ -30,7 +29,6 @@ country_event = {
     tag = YEM
     year = 1962 NOT = { year = 1990 }
   }
-  immediate = { set_global_flag = event_fired_8018202 }
 
   mean_time_to_happen = { months = 12 }
 
@@ -51,7 +49,6 @@ country_event = {
     tag = YEM
     year = 1966 NOT = { year = 1990 }
   }
-  immediate = { set_global_flag = event_fired_8018203 }
 
   mean_time_to_happen = { months = 12 }
 
@@ -74,7 +71,6 @@ country_event = {
     tag = YEM
     year = 1973 NOT = { year = 1990 }
   }
-  immediate = { set_global_flag = event_fired_8018204 }
 
   mean_time_to_happen = { months = 4 }
 
@@ -95,14 +91,12 @@ country_event = {
     tag = YEM
     year = 1976 NOT = { year = 1990 }
   }
-  immediate = { set_global_flag = event_fired_8018205 }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = OK
 	define_general = { name = "Ibrahim al-Hamdi" personality = "energetic" background = "no_background" }
-
   }
 }
 country_event = {
@@ -116,9 +110,8 @@ country_event = {
     tag = YEM
     year = 1977 NOT = { year = 1990 }
   }
-  immediate = { set_global_flag = event_fired_8018206 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = OK
@@ -142,13 +135,12 @@ country_event = {
 		government = proletarian_dictatorship
     }
   }
-  immediate = { set_global_flag = event_fired_8018207 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = OK
-random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.30000000000000004 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.30000000000000004 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.03 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.05 } } }
   }
 }
 
@@ -205,6 +197,7 @@ country_event = { # Independence of South Yemen
     name = EVT_8018211_A
 	government = proletarian_dictatorship country_event = 800052
 	overlord = { 
+		release_vassal = SYE
 		country_event = 8018212
 	}
 	ai_chance = { factor = 100 }
@@ -228,7 +221,6 @@ country_event = { # Independence of South Yemen
 
   option = {
     name = EVT_8018211_A
-	release_vassal = FROM
 	diplomatic_influence = { who = FROM value = -200 } 
 	leave_alliance = FROM
 	add_casus_belli =  { target = FROM type = make_puppet months = 24 }

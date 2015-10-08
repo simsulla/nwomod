@@ -1,19 +1,20 @@
 
 country_event = {
 	id = 1015801
-
 	title = EVT_1015801_NAME
 	desc = EVT_1015801_DESC
 	picture = "us_congress"
+	fire_only_once = yes
 
 	trigger = {
 		tag = USA
 		NOT = { exists = PUR }
 		war = no
+		year = 1951
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		months = 6
 	}
 
 	option = {
@@ -301,7 +302,7 @@ country_event = {
 	year = 1964 NOT = { year = 1965 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8015805_A
@@ -536,7 +537,7 @@ country_event = {
 	year = 1947 NOT = { year = 1949 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8015840_A
@@ -575,7 +576,7 @@ country_event = {
 	year = 1954 NOT = { year = 1958 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_8015842_A
@@ -602,7 +603,7 @@ country_event = {
     name = EVT_8015843_A
 	any_pop = { militancy = -0.2 }
 	relation = { who = RUS value = -25 } 
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
@@ -674,7 +675,7 @@ country_event = {
 	year = 1964 NOT = { year = 1968 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_8015846_A
@@ -693,9 +694,8 @@ country_event = {
     tag = USA
 	year = 1980 NOT = { year = 1986 }
   }
-  immediate = { set_global_flag = event_fired_8015847 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_8015847_A
@@ -814,6 +814,7 @@ country_event = {
 
   option = {
     name = EVT_8015855_A
+	prestige = -10
   }
 }
 country_event = {

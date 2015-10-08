@@ -194,7 +194,7 @@ country_event = {
 
   trigger = {
     tag = PAK
-     year = 1960 NOT = { year = 1961 }
+    year = 1960 NOT = { year = 1961 }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -308,19 +308,19 @@ country_event = {
   trigger = {
     tag = PAK
     year = 1968
-    has_global_flag = event_fired_8011030
   }
-  immediate = { set_global_flag = event_fired_8011031 }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8011031_A
 	any_pop = { limit = { type = soldiers } militancy = 8.0 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8011031_B
 	any_pop = { limit = { NOT = { culture = bengali } } militancy = 1.0 }
+	ai_chance = { factor = 0 }
   }
 }

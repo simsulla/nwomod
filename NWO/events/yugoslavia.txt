@@ -7,9 +7,8 @@ country_event = {
 
   trigger = {
     tag = YUG
-    year = 1936
+    year = 1936 NOT = { year = 1946 }
   }
-  immediate = { set_global_flag = event_fired_8018301 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -30,7 +29,7 @@ country_event = {
 	year = 1980 NOT = { year = 1981 }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_DEATH
@@ -212,13 +211,13 @@ country_event = {
   option = {
     name = EVT_8022733_A
 	any_pop = { militancy = 0.7 }
-	release = HUN 
-	release = BUL 
-	release = ROM 
-	release = CZH 
-	release = POL 
-	release = AUS 
-	release = GRE 
+	release_vassal = HUN 
+	release_vassal = BUL 
+	release_vassal = ROM 
+	release_vassal = CZH 
+	release_vassal = POL 
+	release_vassal = AUS 
+	release_vassal = GRE 
 	RUS  = { country_event = 8225001 } 
   }
 }
@@ -249,7 +248,7 @@ country_event = {
 	war = no
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8022729_A

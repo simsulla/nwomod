@@ -1,7 +1,6 @@
 # South Vietnam 
 country_event = {
 	id = 1228001
-
 	title = EVT_1228001_NAME
 	desc = EVT_1228001_DESC
 	picture = "french_vietnam"
@@ -12,6 +11,7 @@ country_event = {
 		tag = FRA
 		NOT = { exists = SVI }
 		exists = DAI
+		NOT = { year = 1990 }
 		war = no
 		1380 = { controlled_by = FRA } # Saigon
 		1369 = { NOT = { controlled_by = FRA } } # Hanoi
@@ -56,12 +56,10 @@ country_event = {
 
 country_event = {
 	id = 1228002
-
 	title = EVT_1228002_NAME
 	desc = EVT_1228002_DESC
 	picture = "nwo2_chinese_vietnam"
-
-	is_triggered_only = yes
+	is_triggered_only = yes # USA
 
 	option = {
 		name = EVT_1228002_A # South Vietnam Independence
@@ -101,18 +99,19 @@ country_event = {
 # French won Vietnam war
 country_event = {
 	id = 1228003
-
 	title = EVT_1228003_NAME
 	desc = EVT_1228003_DESC
 	picture = "french_vietnam"
+	fire_only_once = yes
 
 	trigger = {
 		tag = FRA
 		NOT = { exists = SVI }
 		NOT = { exists = DAI }
 		war = no
-		1380 = { controlled_by = FRA } # Saigon
-		1369 = { controlled_by = FRA } # Hanoi
+		owns = 1380 # Saigon
+		owns = 1369 # Hanoi
+		NOT = { year = 1990 }
 	}
 
 	mean_time_to_happen = {
@@ -707,7 +706,7 @@ country_event = {
     DAI = { war_with = SVI }
   }
 
-  mean_time_to_happen = { months = 8  }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8228111_A
@@ -774,7 +773,7 @@ country_event = {
     DAI = { war_with = SVI }
   }
 
-  mean_time_to_happen = { months = 24  }
+  mean_time_to_happen = { months = 4  }
 
   option = {
     name = EVT_8228130_A
@@ -795,7 +794,7 @@ country_event = {
     DAI = { war_with = SVI }
   }
 
-  mean_time_to_happen = { months = 24  }
+  mean_time_to_happen = { months = 4  }
 
   option = {
     name = EVT_8228131_A
@@ -822,7 +821,7 @@ country_event = {
     DAI = { war_with = SVI }
   }
 
-  mean_time_to_happen = { months = 24  }
+  mean_time_to_happen = { months = 4  }
 
   option = {
     name = EVT_8228132_A
@@ -867,7 +866,7 @@ country_event = {
     DAI = { war_with = SVI }
   }
 
-  mean_time_to_happen = { months = 6  }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8228150_A
@@ -926,7 +925,7 @@ country_event = {
     war_with = SVI
   }
 
-  mean_time_to_happen = { months = 6  }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8228200_A
