@@ -1,10 +1,8 @@
 country_event = {
-	id = 1005001
-	
+	id = 1005001	
 	title = EVT_1005001_NAME
 	desc = EVT_1005001_DESC
 	picture = "nasser_in_crowd"
-
 	is_triggered_only = yes
 	
 	option = {
@@ -91,12 +89,11 @@ country_event = {
     year = 1952 NOT = { year = 1963}
   }
 
-  immediate = { set_global_flag = event_fired_8005018 }
-
   mean_time_to_happen = { months = 3  }
 
   option = {
     name = EVT_8005018_A
+	set_country_flag = george_vi_funeral
 	any_pop = { militancy = -1.0 }
   }
 }
@@ -110,7 +107,7 @@ country_event = {
   trigger = {
     tag = ENG
     year = 1953 NOT = { year = 1963}
-    has_global_flag = event_fired_8005018
+    has_country_flag = george_vi_funeral
   }
 
   mean_time_to_happen = { months = 1  }
@@ -150,7 +147,7 @@ country_event = {
 
   trigger = {
     tag = ENG
-    year = 1979 NOT = { year = 1979 }
+    year = 1979 NOT = { year = 1990 }
     war = no
   }
 

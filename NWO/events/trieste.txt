@@ -10,7 +10,7 @@ country_event = {
     NOT = { YUG = { war_with = ITA } }
     war = no
     has_global_flag = cold_war
-	owns = 736
+	owns = 736 # USA
   }
 
   mean_time_to_happen = { months = 2  }
@@ -42,7 +42,7 @@ country_event = {
 
   trigger = {
     tag = YUG
-    year = 1954
+    year = 1954 NOT = { year = 1990 }
     NOT = { YUG = { war_with = ITA } }
     exists = TRE
     has_global_flag = cold_war

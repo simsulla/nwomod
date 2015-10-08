@@ -10,7 +10,7 @@ country_event = { # Independence of Sierra Leone
     year = 1961 NOT = { year = 1990 }
 	owns = 1884 # Freetown
 	NOT = { exists = SRN }
-	exists = GHA 
+	OR = { year = 1974 exists = GHA }
 	GHA = { is_vassal = no }
   }
 

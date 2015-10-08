@@ -8,7 +8,7 @@ country_event = {
   trigger = {
     tag = ENG
     year = 1948 NOT = { year = 1990 }
-    has_global_flag = event_fired_8214012 # independence_of_india.txt
+    exists = HND # independence_of_india.txt
     owns = 1321  # Colombo
 	NOT = { exists = SRL }
 	exists = HND
@@ -19,17 +19,20 @@ country_event = {
   option = {
     name = EVT_8028320_A
 	any_owned = { limit = { is_core = SRL } secede_province = HND } 
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8028320_B
 	release = SRL 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_DONTLIBERATE
 	any_owned = { limit = { is_core = SRL } any_pop = { militancy = 4 } } 
 	any_pop = { militancy = 0.3 }
+	ai_chance = { factor = 0 }
   }
 }
 

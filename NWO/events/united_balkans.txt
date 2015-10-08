@@ -5,7 +5,7 @@ country_event = {
   picture = "nwo2_united_balkans"
   is_triggered_only = yes
 
-  immediate = { set_global_flag = event_fired_8216010 }
+  immediate = { set_global_flag = united_balkans }
    
   option = {
     name = EVT_8216010_A 
@@ -30,10 +30,9 @@ country_event = {
     tag = ALB
     year = 1946
     NOT = { has_global_flag = tito_stalin_split }
-    has_global_flag = event_fired_8216010
+    has_global_flag = united_balkans
     exists = YUG
   }
-  immediate = { set_global_flag = event_fired_8216011 }
 
   mean_time_to_happen = { months = 2  }
 
@@ -68,6 +67,7 @@ country_event = {
 	overlord = { release_vassal = THIS } 
 	YUG = { country_event =  { id = 8216013 days = 1 }  }
 	any_pop = { militancy = -0.2 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
@@ -75,6 +75,7 @@ country_event = {
 	create_alliance = YUG 
 	relation = { who = YUG value = 100 } 
 	relation = { who = RUS value = -200 } 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {

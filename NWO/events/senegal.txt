@@ -10,7 +10,7 @@ country_event = { # Independence of Gambia
     year = 1962 NOT = { year = 1990 }
 	owns = 1785 # Banjul
 	NOT = { exists = GAM }
-	exists = GHA
+	OR = { year = 1971 exists = GHA }
 	GHA = { is_vassal = no }
   }
 

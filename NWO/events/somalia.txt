@@ -49,7 +49,7 @@ country_event = { # Somalia Independence
   option = {
     name = EVT_8014102_A
 	release = SOM 
-	random_country = { limit = { owns = 1873 } country_event = 8014103 }
+	random_country = { limit = { owns = 1873 } country_event = 8014103 } # ENG
   }
 }
 country_event = {
@@ -57,7 +57,7 @@ country_event = {
   title = EVT_8014102_NAME
   desc = EVT_8014102_DESC
   picture = "somalia_independence"
-  is_triggered_only = yes
+  is_triggered_only = yes # ENG
 
   option = {
     name = EVT_8014103_A
@@ -92,7 +92,6 @@ country_event = {
     tag = SOM
     year = 1968 NOT = { year = 1969 }
   }
-  immediate = { set_global_flag = event_fired_8014117 }
 
   mean_time_to_happen = { months = 12 }
 

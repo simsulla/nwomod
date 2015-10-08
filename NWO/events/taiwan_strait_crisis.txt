@@ -51,6 +51,7 @@ country_event = {
 	relation = { who = CHI value = -100 } 
 	relation = { who = KMT value = 100 } 
 	random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
+	diplomatic_relation = { who = KMT value = 100 } 
 	KMT = { country_event =  8500403 }
 	ai_chance = { factor = 100 }
   }
@@ -105,7 +106,6 @@ country_event = { # Communists try an all-out war, American guarantee is in plac
   trigger = {
     tag = CHI
     year = 1955 NOT = { year = 1963 }
-    has_global_flag = event_fired_8500403
     exists = KMT
 	KMT = { alliance_with = USA }
 	war = no
@@ -185,8 +185,6 @@ country_event = { # Mutual Defense Treaty for Taiwan - Communists attack
     has_global_flag = cold_war_pacific
     CHI = { war_with = KMT }
   }
-  
-  immediate = { set_global_flag = event_fired_8500411 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -209,7 +207,7 @@ country_event = {
   title = EVT_8500412_NAME
   desc = EVT_8500412_DESC
   picture = "nwo2_taiwan_strait"
-  is_triggered_only = yes
+  is_triggered_only = yes # RUS
 
   mean_time_to_happen = { months = 1  }
 
@@ -262,12 +260,12 @@ country_event = {
 
   option = {
     name = EVT_8500414_A
-	war = USA 
+	# TODO war = USA 
   }
 
   option = {
     name = EVT_8500414_B
-any_pop = { militancy = 2.0 }country_event = 8500412 
+    any_pop = { militancy = 2.0 }
   }
 }
 country_event = {

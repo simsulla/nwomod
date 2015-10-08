@@ -245,7 +245,9 @@ country_event = {
 	release = SYR 
 	release = JOR 
 	release = IRQ 
+	change_tag = EGY
   }
+  # TODO how to avoid this?
 }
 country_event = {
   id = 8218020
@@ -331,11 +333,13 @@ country_event = {
   option = {
     name = EVT_8218023_A
 	PAL = { country_event =  8218024 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8218023_B
 	any_pop = { militancy = 0.3 }
+	ai_chance = { factor = 0 }
  }
 }
 country_event = {
@@ -349,12 +353,14 @@ country_event = {
     name = EVT_8218024_A
 	relation = { who = UAR value = 200 } 
 	UAR = { country_event = 8218025 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8218024_B
 	relation = { who = UAR value = -100 } 
 	any_pop = { militancy = -0.5 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
