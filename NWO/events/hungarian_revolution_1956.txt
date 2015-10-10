@@ -75,14 +75,14 @@ country_event = {
   option = {
     name = EVT_8501103_A
 	any_pop = { militancy = -0.2 }
-	war = { target = HUN attacker_goal = { casus_belli = install_communist_gov_cb } }	
+	war = { target = HUN attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = {  casus_belli = status_quo } }	
+	USA = { country_event =  { id = 8501114 days = 20 } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8501103_B
 	any_pop = { militancy = 1.0 }
-	country_event =  { id = 8501114 days = 20 } 
 	ai_chance = { factor = 0 }
   }
 }
