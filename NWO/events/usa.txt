@@ -73,20 +73,14 @@ country_event = {
 	option = {
 		name = EVT_1015802_A 
 		ai_chance = { factor = 100 }
+		random_country = { limit = { tag = PAK  PAK = { ai = no } } create_alliance = USA }
 		any_country = { relation = { who = AFG value = -200 } }
-		add_casus_belli = {
-			target = AFG
-			type = install_democracy
-			months = 60
-		}
-		add_casus_belli = {
-			target = AFG
-			type = add_to_sphere
-			months = 60
-		}		
 		war = {
 			target = AFG
 			attacker_goal = { casus_belli = install_democracy }
+			attacker_goal = { casus_belli = add_to_sphere }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
 		}
 		prestige = 20
 		badboy = 0.5
