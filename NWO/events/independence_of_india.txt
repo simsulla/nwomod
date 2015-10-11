@@ -95,6 +95,7 @@ country_event = {
 country_event = {
 	id = 1214012
 	title = EVT_1214012_NAME
+	# EVT_1214012_NAME;Direct Action Day
 	desc = EVT_1214012_DESC
 	picture = "independence_of_india"
 	is_triggered_only = yes # ENG
@@ -102,9 +103,9 @@ country_event = {
 	option = {
 		name = EVT_1214012_A 
 		ai_chance = { factor = 100 }
-		prestige = -2 
+		prestige = 2
 		release_vassal = RAJ
-		random_country = { limit = { tag = UAE vassal_of = RAJ } RAJ = { release_vassal = UAE } create_vassal = UAE }
+		random_country = { limit = { tag = UAE vassal_of = RAJ } RAJ = { release_vassal = UAE } ENG = { create_vassal = UAE } }
 		any_country = { limit = { vassal_of = RAJ } country_event = 8214019 }
 		RAJ = { country_event = { id = 8214013 days = 10 } }
 	}
@@ -112,6 +113,7 @@ country_event = {
 	option = {
 		name = EVT_1214012_B 
 		ai_chance = { factor = 0 }
+		prestige = -2
 		any_pop = {
 			limit = {
 				culture = indian
@@ -134,6 +136,7 @@ country_event = { # Mountbatten Plan
 	option = {
 		name = EVT_8214013_A 
 		ai_chance = { factor = 100 }
+		ENG = { diplomatic_influence = { who = RAJ value = -100 } }
 		any_pop = {
 			limit = { OR = { culture = indian culture = indian_muslim } }
 			consciousness = 2
@@ -148,6 +151,7 @@ country_event = { # Mountbatten Plan
 	option = {
 		name = EVT_8214013_B 
 		ai_chance = { factor = 0 }
+		ENG = { diplomatic_influence = { who = RAJ value = -100 } }
 		prestige = -20
 		any_pop = {
 			limit = {
@@ -181,10 +185,9 @@ country_event = {
 	picture = "princely_states"
 	is_triggered_only = yes # RAJ
 	
-	immediate = { FROM = { diplomatic_influence = { who = THIS value = -100 } } }
-
 	option = {
 		name = EVT_8214019_A 
+		FROM = { diplomatic_influence = { who = THIS value = -100 } }
 		# EVT_8214019_A;We have to handle this new political environment!
 	}
 }
