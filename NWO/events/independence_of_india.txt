@@ -236,12 +236,14 @@ country_event = {
 		HND = { leave_alliance = THIS }
 		ENG = { diplomatic_influence = { who = THIS value = -100 } }
 		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
+		# TODO inform HND about this
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = EVT_8214015_C 
 		HND = { inherit = THIS }
+		# TODO inform HND about this
 		ai_chance = { factor = 100 }
 	}
 
@@ -273,18 +275,24 @@ country_event = {
 		HND = { leave_alliance = THIS }
 		ENG = { diplomatic_influence = { who = THIS value = -100 } }
 		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
+		# TODO inform PAK about this
+		# TODO inform HND about this
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = EVT_8214015_B 
 		PAK = { inherit = THIS }
+		# TODO inform PAK about this
+		# TODO inform HND about this
 		ai_chance = { factor = 100 }
 	}
 
 	option = {
 		name = EVT_8214015_C 
 		HND = { inherit = THIS }
+		# TODO inform PAK about this
+		# TODO inform HND about this
 		ai_chance = { factor = 0 }
 	}
 
