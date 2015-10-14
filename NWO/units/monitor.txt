@@ -1,11 +1,11 @@
-#======= WW2 =========
-submarine = {
-	icon = 5
-	naval_icon = 2
+#submarine
+monitor = {
+	icon = 10
+	naval_icon = 7
 	
 	type = naval
 	sprite = Submarine
-	unit_type = light_ship
+	unit_type = big_ship
 	floating_flag = yes
 	active = no
 	move_sound = steam_move
@@ -17,31 +17,32 @@ submarine = {
 	priority = 30
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 8
+	maximum_speed = 13
 	weighted_value = 10.0
 
 	#Building Costs
 	build_time = 360
-	#cost 0.1B -> 10xper wolf pack 1B
 	build_cost = {
-		ships = 200
-		weaponry = 200
+		ships = 40
+		weaponry = 6
+		canned_food = 10
 	}
-	min_port_level = 2
+	min_port_level = 3
 	limit_per_port = -1
-	supply_consumption_score = 1
+	supply_consumption_score = 12
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		ships = 0.04
-		weaponry = 0.02
-		fuel = 0.02
+		ships = 0.5
+		weaponry = 0.5
+		fuel = 0.5
 	}
 	
 	#Naval Abilties
-	hull = 2
-	gun_power = 2
-	fire_range = 0.1
-	evasion = 0.75
+	hull = 12
+	gun_power = 19
+	fire_range = 0.6
+	evasion = 0.50
 	torpedo_attack = 6
 }
+

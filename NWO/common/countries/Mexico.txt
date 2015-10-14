@@ -1,30 +1,30 @@
 graphical_culture = Generic
 color = { 0 100 0 }
 party = {
-		name = "party_conservative_0_MEX" #NAP
-		citizenship_policy = full_citizenship
-		economic_policy = laissez_faire
+		name = "party_conservative_0_MEX"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
 		ideology = conservative
-		religious_policy = secularized
+		religious_policy = pluralism
 		trade_policy = free_trade
 		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_liberal_0_MEX" #PAN
+		name = "party_liberal_0_MEX"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
 		religious_policy = secularized
 		trade_policy = free_trade
-		war_policy = pro_military
+		war_policy = anti_military
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_socialist_0_MEX" #PRI
-		citizenship_policy = residency
+		name = "party_socialist_0_MEX"
+		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
 		religious_policy = pro_atheism
@@ -34,7 +34,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_progressive_0_MEX" #PRD
+		name = "party_progressive_0_MEX"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -45,29 +45,29 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_populist_0_MEX" #PVEM
-		citizenship_policy = residency
-		economic_policy = interventionism
-		ideology = populist
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pro_military
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
-party = {
-		name = "party_islamist_0_MEX" #AZTLAN
+		name = "party_populist_0_MEX"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
-		ideology = islamist
-		religious_policy = moralism
+		ideology = populist
+		religious_policy = pluralism
 		trade_policy = protectionism
 		war_policy = jingoism
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_0_MEX" #PT
+		name = "party_islamist_0_MEX"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = islamist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_communist_0_MEX"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -78,31 +78,32 @@ party = {
 		end_date = 2092.1.1
 }
 unit_names = {
-	carrier = {
+	battleship = {
 		Independencia Libertad Anahuac Dem�crata "Porfirio" D�az Tampico "Vera Cruz" "Nicol�s Bravo" Blanquet Aguascalientes Campeche Coahuila Colima Chiapas Chihuahua Durango Guerrero Hidalgo "Nuevo Le�n" Oaxaca "San Luis Potos�" Sonora Tabasco Tlaxcala Zacatecas
 	}
-	transportship = {
+	clipper_transport = {
 	}
-	modern_frigate = {
+	commerce_raider = {
 		Olmec Teotihaucan Nahua Azcapotzalco Usumacinta Corralero "Rio Grande" Tiltepec Pastoria Ayutla Tehuantepec
 	}
 	cruiser = {
 		Zaragoza Altamira "San Fernando" "R�o Bravo" "Los Ramones" "Loma Alta" "El Lobo" Candela Villadama "Santo Domingo" Tuxpan
 	}
-	modern_cruiser = {
+	dreadnought = {
 		Independencia Libertad Anahuac Dem�crata "Porfirio" D�az Tampico "Vera Cruz" "Nicol�s Bravo" Blanquet Aguascalientes Campeche Coahuila Colima Chiapas Chihuahua Durango Guerrero Hidalgo "Nuevo Le�n" Oaxaca "San Luis Potos�" Sonora Tabasco Tlaxcala Zacatecas
 	}
 	frigate = {
 		California Chihuahua Durango Aldabaran Veracr�z Tlaxcala Jalisco Camotl�n "El Tordo" Repulsi�n Valor Iguala An�huac
 	}
-	modern_destroyer = {
+	ironclad = {
 		Guadalupe Moctezuma "Antonio L�pez de Santa Anna" Tampico Cholula Tenochtitlan Tlaxcala Tlatelolco Glorioso Victoria Chichimeca Huexotzingo Dem�crata
 	}
-	destroyer = {
+	manowar = {
 		M�xico Morales Yucat�n "Vicente Guerrero" Zaragoza "Nuevo Le�n" "Guadalupe Victoria" "Miguel Hidalgo" "Jos� Mar�a Morelos" "Agust�n de It�rbide" Xicot�ncatl "Mariano Matamoros" Chapala Chalco Campechana Orizaba Texcoco Papaloapan
 	}
-	submarine = {
+	monitor = {
 		Navojoa "La Paz" Colima Madera Coatzacoalcos Chetumal Campeche "Salina Cruz" Navolato "Santa Rosalia" Constituci�n Mexicali Democr�ta "Nicol�s Bravo"
 	}
-
+	steam_transport = {
+	}
 }

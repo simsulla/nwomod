@@ -1,0 +1,50 @@
+##corvette
+manowar = {
+	icon = 11
+	naval_icon = 8
+	
+	type = naval
+        sprite = Battleship
+	#sprite = Cruiser
+	active = no
+	unit_type = light_ship
+	move_sound = steam_move
+	select_sound = steam_selected
+	colonial_points = 16
+	
+	#Core Abilities
+	priority = 12
+	max_strength = 100
+	default_organisation = 30
+	maximum_speed = 14
+	weighted_value = 8.0
+	floating_flag = yes
+	can_build_overseas = yes
+
+
+	#Building Costs
+	build_time = 240
+	build_cost = {
+		ships = 60
+		weaponry = 6
+		canned_food = 4
+		fuel = 10
+		aeroplanes = 60
+	}
+	min_port_level = 1
+	limit_per_port = -1
+	supply_consumption_score = 3
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		ships = 0.2
+		weaponry = 0.05
+		fuel = 0.15
+	}
+	
+	#Naval Abilties
+        hull = 3
+        gun_power = 4
+        fire_range = 0.4
+        evasion = 0.2
+}

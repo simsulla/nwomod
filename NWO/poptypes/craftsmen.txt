@@ -7,14 +7,14 @@ strata = poor
 
 rebel =
 {
-	fighter = 0.0
-	tank = 0.0
-	mechanized_infantry = 0.0
-	tactical_drone = 0.0
-	modern_infantry = 0.05
-	missile = 0.05
-	motorized_infantry = 0.9
-	infantry = 0
+	cavalry = 0.0
+	artillery = 0.0
+	cuirassier = 0.0
+	dragoon = 0.0
+	guard = 0.05
+	hussar = 0.05
+	infantry = 0.9
+	irregular = 0
 }
 
 everyday_needs = {
@@ -89,6 +89,10 @@ country_migration_target =
 {
 	factor = 1
 
+	modifier = { factor = 2.0 OR = { tag = AST tag = CAN } }	
+	modifier = { factor = 1.1 total_pops = 25000000 } # 100,000,000
+	modifier = { factor = 1.1 total_pops = 2500000 } # 10,000,000
+	modifier = { factor = 1.1 total_pops = 250000 } # 1,000,000
 	modifier = { factor = 1.1 rank = 10 }
 	modifier = { factor = 1.1 rank = 20 }
 	modifier = { factor = 1.1 rank = 30 }
@@ -138,23 +142,44 @@ country_migration_target =
 		has_pop_culture = THIS
 	}
 	modifier = {
+		factor = 1.25
+		vote_franschise = universal_weighted_voting
+	}
+	modifier = {
+		factor = 1.5
+		vote_franschise = promoted_voting
+	}
+	modifier = {
 		factor = 2.0
 		OR = { 
 			continent = north_america
 			continent = south_america
 			continent = oceania
-			AND = { year = 1968 continent = europe }
+			continent = europe
 		}
 	}
 	modifier = {
-		factor = 4.0
-		OR = {
-			AND = { tag = USA is_culture_group = latin_american_cultures }
-			AND = { OR = { tag = CAN tag = AST } OR = { is_culture_group = south_asian is_culture_group = far_east_asian is_culture_group = east_asian } }
-			AND = { continent = europe OR = { is_culture_group = arabic is_culture_group = turko_semitic is_culture_group = east_african } }
-			AND = { OR = { tag = FRA tag = ENG } OR = { is_culture_group = south_asian is_culture_group = african_diaspora_cultures } }
+		factor = 0.1
+		NOT = {
+			any_owned_province = {
+				life_rating = 30
+				OR = {
+					AND = {
+						has_pop_type = labourers
+						NOT = { unemployment_by_type = { value = 0.1 type = labourers } }
+					}
+					AND = {
+						has_pop_type = farmers
+						NOT = { unemployment_by_type = { value = 0.1 type = farmers } }
+					}
+					AND = {
+						state_scope = { has_factories = yes }
+						NOT = { unemployment_by_type = { value = 0.1 type = farmers } }
+					}
+				}
+			}
 		}
-	}
+	}	
 }
 
 migration_target =
@@ -412,35 +437,18 @@ promote_to =
 	artisans =
 	{
 		factor = 0.01
-		modifier = { factor = 1.0 NOT = { literacy = 0.1 } }
-		modifier = { factor = 1.0 NOT = { literacy = 0.2 } }
-		modifier = { factor = 1.0 NOT = { literacy = 0.3 } }
-		modifier = { factor = 1.0 NOT = { literacy = 0.4 } }
-		modifier = { factor = 1.0 NOT = { literacy = 0.5 } }
+		modifier = { factor = 1 }
 	}
 	
 	bureaucrats =
 	{
 		factor = 0.01
-		modifier = { factor = -20 NOT = { is_primary_culture = yes } NOT = { is_accepted_culture = yes } }
 		group = {
 			modifier = { factor = 6 state_scope = { NOT = { bureaucrats = 0.01 } } }
 			modifier = { factor = -2 state_scope = { bureaucrats = 0.01 } }
 			modifier = { factor = -2 state_scope = { bureaucrats = 0.015 } }
 			modifier = { factor = -2 state_scope = { bureaucrats = 0.02 } }
 		}
-		modifier = { factor = -5 NOT = { literacy = 0.01 } }
-		modifier = { factor = -2 NOT = { literacy = 0.02 } }
-		modifier = { factor = -2 NOT = { literacy = 0.03 } }
-		group = {
-			modifier = { factor =  0.25 literacy = 0.40 }
-			modifier = { factor =  0.25 literacy = 0.50 }
-			modifier = { factor =  0.5 literacy = 0.60 }
-			modifier = { factor =  0.5 literacy = 0.70 }
-			modifier = { factor =  1.0 literacy = 0.80 }
-			modifier = { factor =  1.0 literacy = 0.90 }
-			modifier = { factor =  2.0 literacy = 1.0 }
-		}		
 	}	
 
 	clergymen =
@@ -454,31 +462,12 @@ promote_to =
 			modifier = { factor = -2 state_scope = { clergymen = 0.06 } }
 			modifier = { factor = -2 state_scope = { clergymen = 0.08 } }
 		}
-		modifier = { factor = -2.5 NOT = { literacy = 0.1 } }
-		modifier = { factor = -1.5 NOT = { literacy = 0.15 } }
-		modifier = { factor = -1 NOT = { literacy = 0.2 } }
-		modifier = { factor = -1 NOT = { literacy = 0.25 } }
-		modifier = { factor = -1 NOT = { literacy = 0.3 } }
-		group = {
-			modifier = { factor =  0.25 literacy = 0.40 }
-			modifier = { factor =  0.25 literacy = 0.50 }
-			modifier = { factor =  0.5 literacy = 0.60 }
-			modifier = { factor =  0.5 literacy = 0.70 }
-			modifier = { factor =  1.0 literacy = 0.80 }
-			modifier = { factor =  1.0 literacy = 0.90 }
-			modifier = { factor =  2.0 literacy = 1.0 }
-		}		
 	}
 	
 	clerks = {
 		factor = 0.01
 		modifier = { factor = 20 location = { work_available = { worker = clerks } NOT = { unemployment_by_type = { type = clerks value = 0.2 } } } }
 		modifier = { factor = -20 location = { work_available = { worker = clerks } unemployment_by_type = { type = clerks value = 0.2 } } }
-		modifier = { factor = -5 NOT = { literacy = 0.1 } }
-		modifier = { factor = -3 NOT = { literacy = 0.15 } }
-		modifier = { factor = -2 NOT = { literacy = 0.2 } }
-		modifier = { factor = -2 NOT = { literacy = 0.25 } }
-		modifier = { factor = -2 NOT = { literacy = 0.3 } }
 	}
 
 	# Demoted

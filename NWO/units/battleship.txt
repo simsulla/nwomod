@@ -1,10 +1,10 @@
-#======= WW2 =========
-carrier = {
-	icon = 18
-	naval_icon = 6
+#Aircraft Carrier
+battleship = {
+	icon = 21
+	naval_icon = 10
 	
 	type = naval
-	sprite = Carrier
+	sprite = Battleship
 	unit_type = big_ship
 	capital = yes
 	active = no
@@ -17,36 +17,35 @@ carrier = {
 	priority = 40
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 28
+	maximum_speed = 14
 	weighted_value = 50.0
 	can_build_overseas = no
 
 
 	#Building Costs
 	build_time = 700
-	# cost = 4.5B
-	build_cost = { # 256 + 16 + 2 + 5 + 864 = 1143 4.5B $1 = 4 mil IRL $
+	build_cost = {
 		ships = 160
 		weaponry = 40
 		canned_food = 20
 		fuel = 50
 		aeroplanes = 360
 	}
-	min_port_level = 3
+	min_port_level = 4
 	limit_per_port = 1 #-1 is unlimited, but it is possible to limit number of ships per port level.
-	supply_consumption_score = 30
+	supply_consumption_score = 60
 	
 	supply_consumption = 1.0
-	supply_cost = { # 1.2
-		ships = 0.02
-		weaponry = 0.02
-		fuel = 0.08
-		aeroplanes = 0.08
+	supply_cost = {
+		ships = 4.0
+		weaponry = 1.0
+		fuel = 2.5
+		aeroplanes = 2.5
 	}
 	
 	#Naval Abilties
-	hull = 32
-	gun_power = 64
+	hull = 80
+	gun_power = 90
 	fire_range = 1
 	evasion = 0
 }

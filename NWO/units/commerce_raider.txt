@@ -1,10 +1,10 @@
-#======= WW2 =========
-destroyer = {
-	icon = 16
+##frigate
+commerce_raider = {
+	icon = 8
 	naval_icon = 5
 	
 	type = naval
-	sprite = Destroyer
+	sprite = Raider
 	active = no
 	unit_type = light_ship
 	move_sound = steam_move
@@ -16,33 +16,34 @@ destroyer = {
 	priority = 15
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 32
+	maximum_speed = 14
 	weighted_value = 5.0
 	can_build_overseas = yes
 
 
 	#Building Costs
 	build_time = 360
-	# cost 0.8B
 	build_cost = {
-		ships = 200
-		weaponry = 200
+		ships = 20
+		weaponry = 3
+		canned_food = 2
 	}
-	min_port_level = 2
+	min_port_level = 1
 	limit_per_port = -1
-	supply_consumption_score = 2
+	supply_consumption_score = 6
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		ships = 0.04
-		weaponry = 0.02
-		fuel = 0.02
+		ships = 0.5
+		weaponry = 0.25
+		fuel = 0.1
 	}
 	
 	#Naval Abilties
-	hull = 8
-	gun_power = 8
-	fire_range = 0.3
-	evasion = 0.2
-	torpedo_attack = 2
+	hull = 7
+	gun_power = 9
+	fire_range = 0.5
+	evasion = 0.5
+	torpedo_attack = 0
 }
+
