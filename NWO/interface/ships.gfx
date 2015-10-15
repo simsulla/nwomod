@@ -3,23 +3,91 @@ objectTypes = {
 	EMFXActorType = {
 		name = "GenericSubmarine"
 		actorfile = "gfx\anims\Submarine.xac"
-		
+		scale = 1.4
+				
 		idle   = "gfx\anims\SubmarineMove.xsm"
 		move   = "gfx\anims\SubmarineMove.xsm"
 		attack = "gfx\anims\SubmarineMove.xsm"
 		
-		scale = 1.5
-	}
+	}	
 
 	EMFXActorType = {
 		name = "GenericTransportship"
-		actorfile = "gfx\anims\Generic_Transport.xac"
+		actorfile = "gfx\anims\Transportship.xac"
 		
-		idle   = "gfx\anims\Generic_Transport_Anim_Moving.xsm"
-		move   = "gfx\anims\Generic_Transport_Anim_Moving.xsm"
+		idle   = "gfx\anims\ShipBigIdle.xsm"
+		move   = "gfx\anims\ShipBigIdle.xsm"
+		attack = "gfx\anims\ShipAttackA.xsm"
+		scale = 2.5
+		retargeting = yes
+	}		
+	
+	EMFXActorType = {
+		name = "GenericModernCruiser"
+		actorfile = "gfx\anims\Battleship.xac"
+		
+		idle   = "gfx\anims\ShipBigIdle.xsm"
+		move   = "gfx\anims\ShipBigIdle.xsm"
+		attack = "gfx\anims\ShipAttackA.xsm"
+		scale = 2.0
+	}	
 
-		scale = 0.8
+	EMFXActorType = {
+		name = "GenericModernDestroyer"
+		actorfile = "gfx\anims\Battlecruiser.xac"
+		
+		idle   = "gfx\anims\ShipBigIdle.xsm"
+		move   = "gfx\anims\ShipBigIdle.xsm"
+		attack = "gfx\anims\ShipAttackA.xsm"
+		scale = 2.2
+		retargeting = yes
+	}	
+
+	EMFXActorType = {
+		name = "GenericCarrier"
+		actorfile = "gfx\anims\Carrier.xac"
+		
+		idle   = "gfx\anims\ShipBigIdle.xsm"
+		move   = "gfx\anims\ShipBigIdle.xsm"
+		attack = "gfx\anims\ShipAttackA.xsm"
+		scale = 1.65
+		retargeting = yes
+	}	
+
+	EMFXActorType = {
+		name = "GenericCruiser"
+		actorfile = "gfx\anims\Heavycruiser.xac"
+		
+		idle   = "gfx\anims\ShipBigIdle.xsm"
+		move   = "gfx\anims\ShipBigIdle.xsm"
+		attack = "gfx\anims\ShipAttackA.xsm"
+		scale = 2.25
+		retargeting = yes
+	}	
+	
+	EMFXActorType = {
+		name = "GenericDestroyer"
+		actorfile = "gfx\anims\Lightcruiser.xac"
+		
+		idle   = "gfx\anims\ShipBigIdle.xsm"
+		move   = "gfx\anims\ShipBigIdle.xsm"
+		attack = "gfx\anims\ShipAttackA.xsm"
+		scale = 1.9
+		retargeting = yes
 	}
+	
+	EMFXActorType = {
+		name = "GenericFrigate"
+		actorfile = "gfx\anims\Destroyer.xac"
+		
+		idle   = "gfx\anims\ShipBigIdle.xsm"
+		move   = "gfx\anims\ShipBigIdle.xsm"
+		attack = "gfx\anims\ShipAttackA.xsm"
+		scale = 2.0
+		retargeting = yes
+	}	
+
+	# OLD
 	
 	EMFXActorType = {
 		name = "GenericSteam_Transport"
@@ -75,31 +143,6 @@ objectTypes = {
 		}
 		
 		scale = 1.8
-	}
-	
-	EMFXActorType = {
-		name = "GenericCruiser"
-		actorfile = "gfx\anims\Generic_Cruiser.xac"
-		
-		animation = {
-			name = "idle"
-			file ="gfx\anims\Generic_Cruiser_Anim_Idle.xsm"
-			defaultAnimationTime = 0.25
-		}
-		
-		animation = {
-			name = "move"
-			file ="gfx\anims\Generic_Cruiser_Anim_Moving.xsm"
-			defaultAnimationTime = 0.55
-		}
-		
-		animation = {
-			name = "attack"
-			file ="gfx\anims\Generic_Cruiser_Anim_Attack.xsm"
-			defaultAnimationTime = 0.6
-		}
-
-		scale = 1.2
 	}
 	
 	EMFXActorType = {
