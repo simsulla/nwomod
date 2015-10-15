@@ -1,29 +1,41 @@
 graphical_culture = EuropeanGC
 color = { 255 69 0 }
+
 party = {
-		name = "party_conservative_0_POL"
+		name = "party_conservative_0_POL" # Stronnictwo Ludowe (SL, conservative)
 		citizenship_policy = residency
 		economic_policy = state_capitalism	
-		ideology = conservative
+		ideology = populist
 		religious_policy = moralism
 		trade_policy = free_trade
 		war_policy = pro_military
 		start_date = 1836.1.1
-		end_date = 2092.1.1
+		end_date = 1991.1.1
 }
 party = {
 		name = "party_conservative_1_POL"
+		citizenship_policy = limited_citizenship # Porozumienie Centrum (PC, conservative, rulling party, exists until 2001)
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = pluralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1991.1.1
+		end_date = 2001.1.1
+}
+party = {
+		name = "party_conservative_2_POL" # Polskie Stronnictwo Ludowe (current in game, conservative)
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
 		religious_policy = pluralism
 		trade_policy = free_trade
 		war_policy = pro_military
-		start_date = 1836.1.1
+		start_date = 2001.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_liberal_0_POL"
+		name = "party_liberal_0_POL" # Stronnictwo Demokratyczne (SD, liberal)
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
@@ -31,6 +43,39 @@ party = {
 		trade_policy = free_trade
 		war_policy = anti_military
 		start_date = 1836.1.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "party_liberal_1_POL" # Unia Demokratyczna (UD, liberal, until 1994)
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = anti_military
+		start_date = 1991.1.1
+		end_date = 1994.1.1
+}
+party = {
+		name = "party_liberal_2_POL" # Unia Wolności (UW, liberal, 1994-2005)
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = anti_military
+		start_date = 1994.1.1
+		end_date = 2005.1.1
+}
+party = {
+		name = "party_liberal_3_POL" # Platforma Obywatelska (current in game, liberal, form 2005)
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = anti_military
+		start_date = 2005.1.1
 		end_date = 2092.1.1
 }
 party = {
@@ -42,10 +87,32 @@ party = {
 		trade_policy = protectionism
 		war_policy = anti_military
 		start_date = 1836.1.1
+		end_date = 1948.1.1
+}
+party = {
+		name = "party_socialist_1_POL" # Socjaldemokracja Rzeczypospolitej Polskiej (SdRP, socialist, until 1999)
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = anti_military
+		start_date = 1948.1.1
+		end_date = 1999.1.1
+}
+party = {
+		name = "party_socialist_1_POL" # Sojusz Lewicy Demokratycznej (current in game, socialists, from 1999)
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = anti_military
+		start_date = 1999.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_progressive_0_POL"
+		name = "party_progressive_0_POL" # Twój Ruch (Ruch Palikota) (current in game, from 2010)
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -56,7 +123,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_populist_0_POL"
+		name = "party_populist_0_POL" # Stronnictwo Narodowe (SN, populist-nationalist)
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
@@ -64,17 +131,39 @@ party = {
 		trade_policy = protectionism
 		war_policy = jingoism
 		start_date = 1836.1.1
-		end_date = 2092.1.1
+		end_date = 2001.1.1
 }
 party = {
-		name = "party_populist_1_german_POL"
+		name = "party_populist_1_POL" # Prawo i Sprawiedliwość (current in game, populist, from 2001)
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
-		religious_policy = sectarianism_minority
+		religious_policy = moralism
 		trade_policy = protectionism
 		war_policy = jingoism
-		start_date = 1836.1.1
+		start_date = 2001.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_populist_2_POL" # Samoobrona Rzeczypospolitej Polskiej (Samoobrona, populist, 2001-2007)
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2001.1.1
+		end_date = 2007.1.1
+}
+party = {
+		name = "party_populist_3_POL" # Ruch Narodowy (RN, populist, current in game, from 2012)
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2007.1.1
 		end_date = 2092.1.1
 }
 party = {
@@ -97,35 +186,56 @@ party = {
 		trade_policy = protectionism
 		war_policy = anti_military
 		start_date = 1836.1.1
+		end_date = 1948.1.1
+}
+party = {
+		name = "party_communist_1_POL"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = anti_military
+		start_date = 1948.1.1
+		end_date = 1990.1.1
+}
+party = {
+		name = "party_communist_2_POL"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = anti_military
+		start_date = 1990.1.1
 		end_date = 2092.1.1
 }
 unit_names = {
-	battleship = {
+	carrier = {
 		"Arend Dickmann" "Boleslaw I Chrobry" "Jan Kostka" "Michal Figenow" "Mateusz Schapring" "Jakob Mora" "Jan III Sobieski"
 	}
-	clipper_transport = {
+	transportship = {
 	}
-	commerce_raider = {
+	modern_frigate = {
 		"Krzysztof Arciszewski" "Jedrzej Sniadecki" "Hugo Kollataj" "Jan Dlugosz" "Adam Naruszewicz" "Samuel Linde" "Mikolaj Rej"
 	}
 	cruiser = {
 		"Mikolaj Kopernik" "Jan Heweliusz" "Jan Sniadecki" "Jan Brozek" "Jan Mikolaj Smogulecki" "Albert Brudzewski" "Stanislaw Lubieniecki"
 	}
-	dreadnought = {
+	modern_cruiser = {
 		"Arend Dickmann" "Boleslaw I Chrobry" "Jan Kostka" "Michal Figenow" "Mateusz Schapring" "Jakob Mora" "Jan III Sobieski"
 	}
 	frigate = {
 		Anna Maria Katarzyna Barbara Ewa Zofia Monika
 	}
-	ironclad = {
+	modern_destroyer = {
 		Krak�w Warszawa L�dz Poznan Wroclaw Lw�w Gdansk
 	}
-	manowar = {
+	destroyer = {
 		Wisla Odra Warta Narew San Notec Bug
 	}
-	monitor = {
+	submarine = {
 		"Jan Sarkander" "Andrzej Bobola" "Jan Kety" " Stanislaus Kostka" "Stanislaw Szczepanowski" "Swieta Kinga"
 	}
-	steam_transport = {
-	}
+
 }
