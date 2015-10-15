@@ -1,66 +1,71 @@
 NKO = {
 	level = 1
-	value = -75
+	value = 40
+	influence_value = 25
+	military_access = yes
 }
 SKO = {
 	level = 2
-	value = -25
+	value = 80
+	influence_value = 25
+	military_access = yes
 }
 KMT = {
 	level = 2
-	value = -25
+	value = 80
+	influence_value = 25
+	military_access = yes
 }
 BRU = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 CAM = {
 	level = 4
-	value = 75
+	value = 160
 	influence_value = 25
 	military_access = yes
 }
 IDO = {
 	level = 4
-	value = 75
+	value = 160
 	influence_value = 25
 	military_access = yes
 }
 MSY = {
 	level = 4
-	value = 75
+	value = 160
 	influence_value = 25
 	military_access = yes
 }
 PHI = {
 	level = 3
-	value = 25
+	value = 120
 	influence_value = 25
 	military_access = yes
 }
 THI = {
 	level = 4
-	value = 75
+	value = 160
 	influence_value = 25
 	military_access = yes
 }
 DAI = {
 	level = 4
-	value = 75
+	value = 160
 	influence_value = 25
 	military_access = yes
 }
 HND = {
 	level = 4
-	value = 75
+	value = 160
 	influence_value = 25
 	military_access = yes
 }
 CHI = {
-	level = 2
-	value = -25
+	value = 80
 }
 army = {
 	name = "Japan Edo Army"
@@ -91,148 +96,238 @@ army = {
 		home = 1649
 	}
 	regiment = {
-		name= "Regiment nr6"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr7"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr8"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr9"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr10"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr11"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr12"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr13"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr14"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr15"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr16"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr17"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr18"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr19"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr20"
-		type = infantry
-		home = 1649
-	}
-	regiment = {
 		name= "Regiment nr1"
-		type = irregular
+		type = motorized_infantry
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = irregular
+		type = motorized_infantry
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = irregular
+		type = motorized_infantry
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr4"
-		type = irregular
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr1"
-		type = artillery
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr2"
-		type = artillery
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr3"
-		type = artillery
-		home = 1649
-	}
-	regiment = {
-		name= "Regiment nr4"
-		type = artillery
+		type = motorized_infantry
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr5"
-		type = artillery
+		type = motorized_infantry
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr6"
-		type = artillery
+		type = motorized_infantry
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr7"
-		type = artillery
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr8"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr9"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr10"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr11"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr12"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr13"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr14"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr15"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr16"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr17"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr18"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr19"
+		type = motorized_infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr20"
+		type = motorized_infantry
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = tank
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = tank
 		home = 1649
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = cavalry
+		type = tank
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = tank
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = tank
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr6"
+		type = tank
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr7"
+		type = tank
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr8"
+		type = tank
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr9"
+		type = tank
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr6"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr7"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr8"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr9"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr10"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr11"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr12"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr13"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr14"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr15"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr16"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr17"
+		type = fighter
+		home = 1649
+	}
+	regiment = {
+		name= "Regiment nr18"
+		type = fighter
 		home = 1649
 	}
 }
@@ -241,39 +336,35 @@ navy = {
 	location = 1651
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
-		type = ironclad
-	}
-	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr2"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr3"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr4"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr5"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr6"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr1"
-		type = manowar
+		type = patrolboat
 	}
 }
 navy = {
@@ -281,39 +372,35 @@ navy = {
 	location = 1661
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
-		type = ironclad
-	}
-	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr2"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr3"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr4"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr5"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr6"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr1"
-		type = manowar
+		type = patrolboat
 	}
 }
 navy = {
@@ -321,39 +408,31 @@ navy = {
 	location = 1657
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
-		type = ironclad
-	}
-	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr2"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr3"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr4"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr5"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr6"
-		type = commerce_raider
-	}
-	ship = {
-		name= "Chip nr1"
-		type = manowar
+		type = frigate
 	}
 }
 navy = {
@@ -361,39 +440,31 @@ navy = {
 	location = 1638
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
-		type = ironclad
-	}
-	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr2"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr3"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr4"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr5"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr6"
-		type = commerce_raider
-	}
-	ship = {
-		name= "Chip nr1"
-		type = manowar
+		type = frigate
 	}
 }
 navy = {
@@ -401,39 +472,31 @@ navy = {
 	location = 1672
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
-		type = ironclad
-	}
-	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr2"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr3"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr4"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr5"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr6"
-		type = commerce_raider
-	}
-	ship = {
-		name= "Chip nr1"
-		type = manowar
+		type = frigate
 	}
 }
 navy = {
@@ -441,38 +504,30 @@ navy = {
 	location = 1678
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
-		type = ironclad
-	}
-	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr2"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr3"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr4"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr5"
-		type = commerce_raider
+		type = frigate
 	}
 	ship = {
 		name= "Chip nr6"
-		type = commerce_raider
-	}
-	ship = {
-		name= "Chip nr1"
-		type = manowar
+		type = frigate
 	}
 }

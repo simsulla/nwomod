@@ -1,210 +1,231 @@
+USA = {
+	value = 200
+}
 IRQ = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 MSY = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 UAE = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 JOR = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 KUW = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 LES = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 NEP = {
 	level = 5
-	value = 125
+	value = 200
+	influence_value = 25
+	military_access = yes
+}
+ZAN = {
+	level = 5
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 OMA = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 JAK = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 AZK = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 RAJ = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 MNP = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 BLO = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 RAA = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 IND = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 GWA = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 BER = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 ORI = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 NAX = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 BOD = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 SIK = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 HYD = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 MYS = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 TRA = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 PER = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 QAT = {
 	level = 5
-	value = 125
+	value = 200
+	influence_value = 25
+	military_access = yes
+}
+BHR = {
+	level = 5
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 SWA = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 AST = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 NZL = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 EGY = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 RHO = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 TIB = {
 	level = 5
-	value = 125
+	value = 200
 	influence_value = 25
 	military_access = yes
 }
 SAF = {
 	level = 5
-	value = 125
+	value = 200
+	influence_value = 25
+	military_access = yes
+}
+NET = {
+	level = 3
+	value = 120
 	influence_value = 25
 	military_access = yes
 }
 LEB = {
 	level = 3
-	value = 25
+	value = 120
 	influence_value = 25
 	military_access = yes
 }
 ETH = {
 	level = 3
-	value = 25
+	value = 120
 	influence_value = 25
 	military_access = yes
 }
@@ -217,13 +238,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -233,12 +259,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -251,13 +317,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -267,12 +338,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -285,13 +396,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -301,12 +417,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -319,13 +475,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -335,12 +496,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -353,13 +554,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -369,12 +575,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -387,13 +633,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -403,12 +654,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -421,13 +712,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -437,12 +733,131 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
+		home = 300
+	}
+}
+army = {
+	name = "United Kingdom Dar Es Salaam Army"
+	location = 2036
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = motorized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -455,13 +870,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -471,12 +891,131 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
+		home = 300
+	}
+}
+army = {
+	name = "United Kingdom Kano Army"
+	location = 1945
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = motorized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -489,13 +1028,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -505,148 +1049,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
-		home = 300
-	}
-}
-army = {
-	name = "United Kingdom Bombay Army"
-	location = 1297
-	regiment = {
-		name= "Regiment nr1"
-		type = infantry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = infantry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = artillery
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr1"
-		type = cavalry
+		type = fighter
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
-		home = 300
-	}
-}
-army = {
-	name = "United Kingdom Delhi Army"
-	location = 1236
-	regiment = {
-		name= "Regiment nr1"
-		type = infantry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		type = fighter
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = infantry
+		type = fighter
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr1"
-		type = artillery
+		name= "Regiment nr4"
+		type = fighter
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr1"
-		type = cavalry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr2"
-		type = cavalry
-		home = 300
-	}
-}
-army = {
-	name = "United Kingdom Lahore Army"
-	location = 1227
-	regiment = {
-		name= "Regiment nr1"
-		type = infantry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr2"
-		type = infantry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr3"
-		type = infantry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr1"
-		type = artillery
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr1"
-		type = cavalry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr2"
-		type = cavalry
-		home = 300
-	}
-}
-army = {
-	name = "United Kingdom Calcutta Army"
-	location = 1251
-	regiment = {
-		name= "Regiment nr1"
-		type = infantry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr2"
-		type = infantry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr3"
-		type = infantry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr1"
-		type = artillery
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr1"
-		type = cavalry
-		home = 300
-	}
-	regiment = {
-		name= "Regiment nr2"
-		type = cavalry
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -659,13 +1107,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -675,12 +1128,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -693,13 +1186,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -709,12 +1207,52 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -727,13 +1265,18 @@ army = {
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr2"
-		type = infantry
+		name= "Regiment nr1"
+		type = motorized_infantry
 		home = 300
 	}
 	regiment = {
-		name= "Regiment nr3"
-		type = infantry
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
 		home = 300
 	}
 	regiment = {
@@ -743,12 +1286,289 @@ army = {
 	}
 	regiment = {
 		name= "Regiment nr1"
-		type = cavalry
+		type = bomber
 		home = 300
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = cavalry
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
+		home = 300
+	}
+}
+army = {
+	name = "United Kingdom Trieste Army"
+	location = 736
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = motorized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
+		home = 300
+	}
+}
+army = {
+	name = "United Kingdom Hamburg Army"
+	location = 528
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = motorized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
+		home = 300
+	}
+}
+army = {
+	name = "United Kingdom Hanover Army"
+	location = 534
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = motorized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = bomber
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = fighter
+		home = 300
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = fighter
 		home = 300
 	}
 }
@@ -757,7 +1577,15 @@ navy = {
 	location = 299
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = carrier
+	}
+	ship = {
+		name= "Chip nr1"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr2"
+		type = transportship
 	}
 	ship = {
 		name= "Chip nr1"
@@ -768,32 +1596,192 @@ navy = {
 		type = cruiser
 	}
 	ship = {
+		name= "Chip nr3"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr4"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr5"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr6"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr7"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr8"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr9"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr10"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr11"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr12"
+		type = cruiser
+	}
+	ship = {
 		name= "Chip nr1"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr2"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		name= "Chip nr3"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr2"
-		type = commerce_raider
+		name= "Chip nr4"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = manowar
+		name= "Chip nr5"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr6"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr7"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr8"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr9"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr10"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr11"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr12"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr13"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr14"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr15"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr16"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr17"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr18"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr19"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr20"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr21"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr22"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr23"
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
 		type = frigate
 	}
 	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr6"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr7"
+		type = frigate
+	}
+	ship = {
 		name= "Chip nr1"
-		type = monitor
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr2"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr3"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr4"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr5"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr1"
+		type = submarine
+	}
+	ship = {
+		name= "Chip nr2"
+		type = submarine
 	}
 }
 navy = {
@@ -801,7 +1789,15 @@ navy = {
 	location = 303
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = carrier
+	}
+	ship = {
+		name= "Chip nr1"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr2"
+		type = transportship
 	}
 	ship = {
 		name= "Chip nr1"
@@ -812,32 +1808,192 @@ navy = {
 		type = cruiser
 	}
 	ship = {
+		name= "Chip nr3"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr4"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr5"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr6"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr7"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr8"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr9"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr10"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr11"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr12"
+		type = cruiser
+	}
+	ship = {
 		name= "Chip nr1"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr2"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		name= "Chip nr3"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr2"
-		type = commerce_raider
+		name= "Chip nr4"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = manowar
+		name= "Chip nr5"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr6"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr7"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr8"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr9"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr10"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr11"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr12"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr13"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr14"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr15"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr16"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr17"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr18"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr19"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr20"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr21"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr22"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr23"
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
 		type = frigate
 	}
 	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr6"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr7"
+		type = frigate
+	}
+	ship = {
 		name= "Chip nr1"
-		type = monitor
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr2"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr3"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr4"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr5"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr1"
+		type = submarine
+	}
+	ship = {
+		name= "Chip nr2"
+		type = submarine
 	}
 }
 navy = {
@@ -845,7 +2001,15 @@ navy = {
 	location = 271
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = carrier
+	}
+	ship = {
+		name= "Chip nr1"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr2"
+		type = transportship
 	}
 	ship = {
 		name= "Chip nr1"
@@ -856,32 +2020,192 @@ navy = {
 		type = cruiser
 	}
 	ship = {
+		name= "Chip nr3"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr4"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr5"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr6"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr7"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr8"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr9"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr10"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr11"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr12"
+		type = cruiser
+	}
+	ship = {
 		name= "Chip nr1"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr2"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		name= "Chip nr3"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr2"
-		type = commerce_raider
+		name= "Chip nr4"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = manowar
+		name= "Chip nr5"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr6"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr7"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr8"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr9"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr10"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr11"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr12"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr13"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr14"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr15"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr16"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr17"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr18"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr19"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr20"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr21"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr22"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr23"
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
 		type = frigate
 	}
 	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr6"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr7"
+		type = frigate
+	}
+	ship = {
 		name= "Chip nr1"
-		type = monitor
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr2"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr3"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr4"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr5"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr1"
+		type = submarine
+	}
+	ship = {
+		name= "Chip nr2"
+		type = submarine
 	}
 }
 navy = {
@@ -889,7 +2213,15 @@ navy = {
 	location = 2128
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = carrier
+	}
+	ship = {
+		name= "Chip nr1"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr2"
+		type = transportship
 	}
 	ship = {
 		name= "Chip nr1"
@@ -900,32 +2232,192 @@ navy = {
 		type = cruiser
 	}
 	ship = {
+		name= "Chip nr3"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr4"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr5"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr6"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr7"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr8"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr9"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr10"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr11"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr12"
+		type = cruiser
+	}
+	ship = {
 		name= "Chip nr1"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr2"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		name= "Chip nr3"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr2"
-		type = commerce_raider
+		name= "Chip nr4"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = manowar
+		name= "Chip nr5"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr6"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr7"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr8"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr9"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr10"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr11"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr12"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr13"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr14"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr15"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr16"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr17"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr18"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr19"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr20"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr21"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr22"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr23"
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
 		type = frigate
 	}
 	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr6"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr7"
+		type = frigate
+	}
+	ship = {
 		name= "Chip nr1"
-		type = monitor
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr2"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr3"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr4"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr5"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr1"
+		type = submarine
+	}
+	ship = {
+		name= "Chip nr2"
+		type = submarine
 	}
 }
 navy = {
@@ -933,7 +2425,15 @@ navy = {
 	location = 517
 	ship = {
 		name= "Chip nr1"
-		type = steam_transport
+		type = carrier
+	}
+	ship = {
+		name= "Chip nr1"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr2"
+		type = transportship
 	}
 	ship = {
 		name= "Chip nr1"
@@ -944,32 +2444,192 @@ navy = {
 		type = cruiser
 	}
 	ship = {
+		name= "Chip nr3"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr4"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr5"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr6"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr7"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr8"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr9"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr10"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr11"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr12"
+		type = cruiser
+	}
+	ship = {
 		name= "Chip nr1"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr2"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		name= "Chip nr3"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr2"
-		type = commerce_raider
+		name= "Chip nr4"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = manowar
+		name= "Chip nr5"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr6"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr7"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr8"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr9"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr10"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr11"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr12"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr13"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr14"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr15"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr16"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr17"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr18"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr19"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr20"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr21"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr22"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr23"
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
 		type = frigate
 	}
 	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr6"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr7"
+		type = frigate
+	}
+	ship = {
 		name= "Chip nr1"
-		type = monitor
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr2"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr3"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr4"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr5"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr1"
+		type = submarine
+	}
+	ship = {
+		name= "Chip nr2"
+		type = submarine
 	}
 }
 navy = {
@@ -977,6 +2637,18 @@ navy = {
 	location = 2131
 	ship = {
 		name= "Chip nr1"
+		type = carrier
+	}
+	ship = {
+		name= "Chip nr1"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr2"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr1"
 		type = cruiser
 	}
 	ship = {
@@ -984,28 +2656,192 @@ navy = {
 		type = cruiser
 	}
 	ship = {
+		name= "Chip nr3"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr4"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr5"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr6"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr7"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr8"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr9"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr10"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr11"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr12"
+		type = cruiser
+	}
+	ship = {
 		name= "Chip nr1"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr2"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		name= "Chip nr3"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr2"
-		type = commerce_raider
+		name= "Chip nr4"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = manowar
+		name= "Chip nr5"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr6"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr7"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr8"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr9"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr10"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr11"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr12"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr13"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr14"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr15"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr16"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr17"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr18"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr19"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr20"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr21"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr22"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr23"
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
 		type = frigate
+	}
+	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr6"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr7"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr1"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr2"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr3"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr4"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr5"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr1"
+		type = submarine
+	}
+	ship = {
+		name= "Chip nr2"
+		type = submarine
 	}
 }
 navy = {
@@ -1013,6 +2849,14 @@ navy = {
 	location = 2130
 	ship = {
 		name= "Chip nr1"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr2"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr1"
 		type = cruiser
 	}
 	ship = {
@@ -1020,28 +2864,192 @@ navy = {
 		type = cruiser
 	}
 	ship = {
+		name= "Chip nr3"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr4"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr5"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr6"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr7"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr8"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr9"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr10"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr11"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr12"
+		type = cruiser
+	}
+	ship = {
 		name= "Chip nr1"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr2"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		name= "Chip nr3"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr2"
-		type = commerce_raider
+		name= "Chip nr4"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = manowar
+		name= "Chip nr5"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr6"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr7"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr8"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr9"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr10"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr11"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr12"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr13"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr14"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr15"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr16"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr17"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr18"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr19"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr20"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr21"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr22"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr23"
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
 		type = frigate
+	}
+	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr6"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr7"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr1"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr2"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr3"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr4"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr5"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr1"
+		type = submarine
+	}
+	ship = {
+		name= "Chip nr2"
+		type = submarine
 	}
 }
 navy = {
@@ -1049,6 +3057,14 @@ navy = {
 	location = 277
 	ship = {
 		name= "Chip nr1"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr2"
+		type = transportship
+	}
+	ship = {
+		name= "Chip nr1"
 		type = cruiser
 	}
 	ship = {
@@ -1056,27 +3072,191 @@ navy = {
 		type = cruiser
 	}
 	ship = {
+		name= "Chip nr3"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr4"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr5"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr6"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr7"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr8"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr9"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr10"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr11"
+		type = cruiser
+	}
+	ship = {
+		name= "Chip nr12"
+		type = cruiser
+	}
+	ship = {
 		name= "Chip nr1"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr2"
-		type = ironclad
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = commerce_raider
+		name= "Chip nr3"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr2"
-		type = commerce_raider
+		name= "Chip nr4"
+		type = destroyer
 	}
 	ship = {
-		name= "Chip nr1"
-		type = manowar
+		name= "Chip nr5"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr6"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr7"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr8"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr9"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr10"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr11"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr12"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr13"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr14"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr15"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr16"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr17"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr18"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr19"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr20"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr21"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr22"
+		type = destroyer
+	}
+	ship = {
+		name= "Chip nr23"
+		type = destroyer
 	}
 	ship = {
 		name= "Chip nr1"
 		type = frigate
+	}
+	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr6"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr7"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr1"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr2"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr3"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr4"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr5"
+		type = patrolboat
+	}
+	ship = {
+		name= "Chip nr1"
+		type = submarine
+	}
+	ship = {
+		name= "Chip nr2"
+		type = submarine
 	}
 }
