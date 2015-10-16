@@ -3,7 +3,7 @@ country_event = {
 	title = EVT_1014800_NAME
 	desc = EVT_1014800_DESC
 	picture = "isis"
-	is_triggered_only = yes
+	is_triggered_only = yes # ISI
 
 	option = {
 		name = EVT_1014800_A
@@ -13,7 +13,7 @@ country_event = {
 			type = acquire_core_state
 			months = 12
 		}
-		ISI = { war = { target = THIS attacker_goal = { casus_belli = conquest } } }
+		war = { target = ISI attacker_goal = { casus_belli = acquire_core_state } defender_goal = { casus_belli = conquest } }
 	}
 }
 
@@ -27,18 +27,18 @@ province_event = {
 	
 	trigger = {
 		year = 1990
+		NOT = { is_core = ISI }
+		has_province_modifier = salafi_movement
+		is_capital = no
+		owner = { 
+			NOT = { government = islamist_dictatorship }  
+			OR = { NOT = { government = democracy government = hms_government } tag = NGE } 
+		}
 		OR = { 
 			pop_majority_culture = sunni_arab 
 			AND = { continent = africa pop_majority_religion = sunni } 
 			AND = { continent = asia has_national_minority = no pop_majority_religion = sunni }  
 		}
-		owner = { 
-			NOT = { government = islamist_dictatorship }  
-			OR = { NOT = { government = democracy government = hms_government } tag = NGE } 
-		}
-		NOT = { is_core = ISI }
-		has_province_modifier = salafi_movement
-		is_capital = no
 	}
 
 	mean_time_to_happen = {
