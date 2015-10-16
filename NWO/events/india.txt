@@ -848,10 +848,10 @@ province_event = {
   picture = "naxalite"
 
   trigger = {
-    owned_by = HND
     year = 1970
-	any_neighbor_province = { is_core = HND }
+    owned_by = HND
 	owner = { has_country_flag = naxalite_insurgency }
+	any_neighbor_province = { is_core = NAX }
   }
 
   mean_time_to_happen = { months = 1200 } # TODO timer based on millitancy
