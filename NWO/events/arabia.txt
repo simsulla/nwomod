@@ -242,7 +242,7 @@ province_event = {
 	
 	trigger = {
 		year = 1972
-		OR = { pop_majority_culture = sunni_arab AND = { continent = africa pop_majority_religion = sunni } AND = { continent = asia NOT = { is_core = IDO } }  }
+		pop_majority_religion = sunni 
 		owner = { NOT = { government = islamist_dictatorship }  OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
 		NOT = { is_core = ISI } # 1014840 in isis.txt completes the ISI core
 		NOT = { has_province_modifier = salafi_supressed }
@@ -251,6 +251,7 @@ province_event = {
 
 	mean_time_to_happen = {
 		months = 400
+		modifier = { OR = { is_core = IDO is_core = MSY is_core = BNG } factor = 5 }
 	}
 	
 	option = {
@@ -293,7 +294,7 @@ province_event = {
 	
 	trigger = {
 		year = 1972
-		OR = { pop_majority_culture = sunni_arab AND = { continent = africa pop_majority_religion = sunni } AND = { continent = asia NOT = { is_core = IDO } }  }
+		pop_majority_religion = sunni 
 		owner = { NOT = { government = islamist_dictatorship } OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
 		NOT = { is_core = ISI } # 1014840 in isis.txt complets the ISI core
 		has_province_modifier = salafi_supressed
@@ -301,6 +302,7 @@ province_event = {
 
 	mean_time_to_happen = {
 		months = 400
+		modifier = { OR = { is_core = IDO is_core = MSY is_core = BNG } factor = 5 }
 	}
 	
 	option = {
