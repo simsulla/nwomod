@@ -771,7 +771,7 @@ emigration_chance =
 	}
 	modifier = {
 		factor = 200
-		is_primary_culture  = no
+		AND = { is_primary_culture = no is_accepted_culture = no }
 		country = { has_country_flag = ethnic_cleansing }
 	}
 	# ugly but need to limit pop fragmentation and sino indian swamping
