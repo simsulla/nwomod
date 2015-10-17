@@ -504,7 +504,7 @@ country_event = {
 
   trigger = {
     tag = JOR
-    year = 1948 NOT = {  year = 1950 }
+    year = 1948 NOT = {  year = 1960 }
 	war = no
     PAL = { ai = yes has_recently_lost_war = yes }
 	exists = ISR
@@ -761,7 +761,7 @@ country_event = {
 
   trigger = {
     tag = EGY
-    year = 1973 NOT = { year = 1974 }
+    year = 1973 NOT = { year = 1990}
     exists = ISR
 	exists = SYR
     war = no
@@ -839,7 +839,7 @@ country_event = {
 
   trigger = {
     tag = ISR
-    year = 1974 NOT = { year = 1979 }
+    year = 1974 NOT = { year = 1990 }
 	war = no
 	has_recently_lost_war = no
   }
@@ -871,10 +871,11 @@ country_event = {
   title = EVT_8007690_NAME
   desc = EVT_8007690_DESC
   picture = "nwo2_yom_kippur_war"
+  fire_only_once = yes
 
   trigger = {
     OR = { tag = EGY tag = SYR }
-    year = 1974 NOT = { year = 1979 }
+    year = 1974 NOT = { year = 1990 }
 	NOT = { has_country_flag = yom_kippur_war_victory }
     OR = {
 		owns = 2687
@@ -915,7 +916,7 @@ country_event = {
 
   trigger = {
     tag = ISR
-    year = 1974 NOT = { year = 1975 }
+    year = 1974 NOT = { year = 1990 }
 	war = no
 	owns = 1756
 	exists = EGY
@@ -984,7 +985,7 @@ country_event = {
 
   trigger = {
     tag = ISR
-    year = 1978 NOT = { year = 1979 }
+    year = 1978 NOT = { year = 1990 }
     exists = EGY
 	owns = 1756
     war = no
@@ -1020,7 +1021,7 @@ country_event = {
 
   trigger = {
     tag = ISR
-    year = 1978 NOT = { year = 1991 }
+    year = 1978 NOT = { year = 1990 }
     NOT = { exists = PAL }
 	owns = 918
     war = no
