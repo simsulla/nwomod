@@ -240,6 +240,7 @@ country_event = {
 
   option = {
     name = EVT_FULLINDEPENDENCE_A
-	FROM = { release_vassal = THIS } 
+	random_country = { limit = { THIS = { exists = no } tag = FROM } release = THIS } 
+	random_country = { limit = { is_our_vassal = THIS tag = FROM } release_vassal = THIS } 
   }
 }
