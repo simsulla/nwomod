@@ -4,51 +4,21 @@ country_event = {
 	title = "EVTNAME20000"
 	desc = "EVTDESC20000"
 	picture = "crisis"
-	is_triggered_only = yes
-
 	trigger = {
-		# only UNSC members
-		is_greater_power = yes
-		OR = { 
-			AND = { tag = CHI has_global_flag = CHI_in_UNSC }
-			AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-			tag = ENG
-			tag = USA
-			tag = FRA
-			tag = RUS
-		}				
 	}
 
+	is_triggered_only = yes
 	option = {
 		name = "EVTOPTA20000" # declare interest
-		ai_chance = { factor = 100 }
-		# make USA, ENG, FRA, KMT friendly
-		any_greater_power = { 
-			limit = { 
-				THIS = { ai = yes NOT = {  OR = { tag = RUS tag = CHI } } }
-				ai = yes 
-				involved_in_crisis = yes 
-				OR = { tag = KMT tag = USA tag = ENG tag = FRA } 
-			}  
-			relation = { who = THIS value = 200 } 
+		ai_chance = {
+			factor = 100
 		}
-		# CHI takes her own route, except if Sino-Soviet split when CHI is anti Soviet
-		random_country = { 
-			limit = { 
-				ai = yes 
-				tag = RUS 
-				CHI = { involved_in_crisis = yes } 
-				has_global_flag = CHI_in_UNSC 
-				has_global_flag = sino_soviet_split 
-				government = proletarian_dictatorship 
-				is_greater_power = yes 
-			} 
-			relation = { who = CHI value = -200 } 
-		}
+
 		add_crisis_interest = yes
 	}
 	option = {
 		name = "EVTOPTB20000" # decline
+
 		prestige_factor = -0.2
 	}
 }
