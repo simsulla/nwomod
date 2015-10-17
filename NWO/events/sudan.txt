@@ -137,7 +137,6 @@ country_event = {
 	# EVT_8014521_A;This is a Islamic country!
 	any_pop = { limit = { NOT = { religion = sunni } } militancy = 2.0 }
 	release = SSU
-	3277 = { add_core = SSU } # Blue Nile
 	war = { target = SSU attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
@@ -146,6 +145,7 @@ country_event = {
 	# EVT_8014521_B;Stick with the Addis Abebba agreement give South Sudan Autonomy
 	any_pop = { limit = { religion = sunni } militancy = 2.0 }
 	release_vassal = SSU
+	3277 = { add_core = SSU } # Blue Nile
 	ai_chance = { factor = 0 }
   }
 }
@@ -178,7 +178,6 @@ country_event = {
 	random_country = { 
 		limit = { tag = SUD NOT = { exists = SSU } owns = 1843 }
 		release = SSU
-		3277 = { add_core = SSU } # Blue Nile
 		war = { target = SSU attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	}
 	ai_chance = { factor = 100 }
@@ -191,6 +190,7 @@ country_event = {
 	random_country = { 
 		limit = { tag = SUD NOT = { exists = SSU } owns = 1843 }
 		release_vassal = SSU
+		3277 = { add_core = SSU } # Blue Nile
 	}
 	ai_chance = { factor = 0 }
   }
