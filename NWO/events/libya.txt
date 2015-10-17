@@ -245,11 +245,12 @@ country_event = {
 
   trigger = {
     tag = TRI
-    year = 1969 NOT = { year = 1970 }
+    year = 1969 NOT = { year = 1990 }
 	OR = { government = hms_government government = absolute_monarchy government = democracy }
+	war = no
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8008616_A
@@ -265,7 +266,7 @@ country_event = {
 
   trigger = {
     tag = TRI
-    year = 1977 NOT = { year = 1978 }
+    year = 1977 NOT = { year = 1990 }
   }
   immediate = { set_global_flag = event_fired_8008625 }
 
