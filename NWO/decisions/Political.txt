@@ -38,39 +38,14 @@ political_decisions = {
 		}
 		allow = {
 			is_secondary_power = yes
-			sphere_owner = {
-				NOT = { relation = {
-					who = THIS
-					value = 0
-					}
-				truce_with = THIS
-				}
-			}
+			sphere_owner = { NOT = { relation = { who = THIS value = -50 } } }
 		}
-		effect = {
-			sphere_owner = {
-				diplomatic_influence = {
-				who = THIS
-				value = -200
-				}
-			country_event = { id=13201 days=0 }
-			}
+		effect = { 
+			sphere_owner = { country_event = { id = 13201 days = 0 } }
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
-			# Ai will do, if sphere owner has LESS than thrice our brigades and a negative relation
-			modifier = {
-				factor = 0
-				sphere_owner = {
-						# Factor = (sphere_owner regiments) / (our regiments).
-						# Returns true if( factor >= x ).
-						# Use NOT statement to check if( factor < x )
-						brigades_compare = 3 
-						NOT = { relation = { who = THIS value = 0 } }
-				}
-			}
 		}
 	}
 	
