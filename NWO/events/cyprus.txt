@@ -62,19 +62,11 @@ country_event = {
   title = EVT_8004103_NAME
   desc = EVT_8004103_DESC
   picture = "nwo2_cyprus_coup"
-  fire_only_once = yes
-
-  trigger = {
-    tag = CYP
-	exists = CYP
-	exists = TUR
-    year = 1974 NOT = {year = 1990 }
-  }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8004103_A
     define_general = { name = "Makarios" personality = energetic background = no_background }
-	country_event = 8004110
 	ai_chance = { factor = 100 }
   }
 
@@ -90,18 +82,28 @@ country_event = {
   title = EVT_8004110_NAME
   desc = EVT_8004110_DESC
   picture = "nwo2_enosis"
-  is_triggered_only = yes
+  fire_only_once = yes
+
+  trigger = {
+    tag = CYP
+	exists = TUR
+    year = 1974 NOT = {year = 1990 }
+  }
+
+  mean_time_to_happen = { months = 2 }
 
   option = { # Carry out the coup
     name = EVT_8004110_A
 	TUR = { country_event = 8004111 } 
 	ai_chance = { factor = 100 }
 	government = populist_dictatorship country_event = 800050
+	country_event = 8004103
   }
 
   option = {
     name = EVT_8004110_B
 	any_pop = { militancy = 5.0 }
+	prestige = -10
 	ai_chance = { factor = 0 }
   }
 }
@@ -118,7 +120,6 @@ country_event = {
 	relation = { who = CYP value = -200 } 
 	war = { target = CYP  attacker_goal = { casus_belli = liberate_country country = NCY } defender_goal = { casus_belli = status_quo } }
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
-	CYP = { country_event = 8004112 }
 	ai_chance = { factor = 100 }
   }
 

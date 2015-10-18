@@ -660,10 +660,10 @@ free_peoples = {
 	# FROM - country scope is possible match?
 	# war target country of goal is scope
 	allowed_countries = {
-		number_of_states = 2
+		#number_of_states = 2 # the event prevents all cores beeing given
 		NOT = {
 			tag = FROM
-			this_culture_union = FROM	
+			#this_culture_union = FROM	
 		}
 		FROM = {
 			exists = yes
@@ -671,10 +671,8 @@ free_peoples = {
 		
 		any_owned_province = {
 			is_core = FROM
-			NOT =
-			{
-				is_core = THIS
-			}
+			is_capital = no
+			# NOT = { is_core = THIS }
 		}
 		is_releasable_vassal = FROM
 	}
@@ -734,19 +732,12 @@ liberate_country = {
 	# FROM - country scope is possible match?
 	# war target country of goal is scope
 	allowed_countries = {
-		number_of_states = 2
+		# number_of_states = 2
 		NOT = { tag = FROM }
-		NOT = {
-			tag = FROM
-			this_culture_union = FROM	
-		}
-		FROM = { exists = yes }
+		FROM = { exists = no }
 		any_owned_province = {
 			is_core = FROM
-			NOT =
-			{
-				is_core = THIS
-			}
+			is_capital = no
 		}
 		is_releasable_vassal = FROM
 	}
