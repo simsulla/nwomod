@@ -1,0 +1,26 @@
+political_decisions = {
+
+	communism_gets_weaker = {
+		picture = "communism_gets_weaker"
+		potential = {
+			is_greater_power = yes
+			RUS = { government = proletarian_dictatorship }
+			OR = { tag = CHI NOT = { government = proletarian_dictatorship } }
+		}
+
+		allow = {
+			has_global_flag = soviet_control_cee
+			RUS = { NOT = { check_variable = { which = soviet_control_cee value = 6 } } }			
+		}
+
+		effect = {
+			clr_global_flag = soviet_control_cee
+			RUS = { 
+				change_variable = {
+					which = soviet_control_cee
+					value = 1
+				}
+			}
+		}
+	}
+}
