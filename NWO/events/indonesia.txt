@@ -50,7 +50,7 @@ country_event = { # Independence of Indonesia
 
   trigger = {
     tag = IDO
-    year = 1945
+    year = 1945 NOT = { year = 1990 }
 	exists = yes
 	NOT = { government = proletarian_dictatorship }
 	is_vassal = no
@@ -58,7 +58,7 @@ country_event = { # Independence of Indonesia
 	war = no
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 8 }
 
   option = {
     name = EVT_8007303_A
@@ -78,7 +78,7 @@ country_event = {
 	NOT = { government = proletarian_dictatorship }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_8007314_A

@@ -35,20 +35,19 @@ country_event = {
 
   is_triggered_only = yes
   
-   immediate = { set_global_flag = event_fired_8501002 }
-
   option = { # Impose sanctions
     name = EVT_8501002_A
 	badboy = 10 
 	relation = { who = PER value = -100 } 
-	ai_chance = { factor = 80 }
+	set_global_flag = abadan_crisis
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8501002_B
 	PER = { add_country_modifier = { name = great_depression duration = 60 } }
 	relation = { who = PER value = 100 } 
-	ai_chance = { factor = 20 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -61,7 +60,7 @@ country_event = {
   trigger = {
     tag = PER
     year = 1953
-    has_global_flag = event_fired_8501002
+    has_global_flag = abadan_crisis
   }
   immediate = { set_global_flag = event_fired_8501003 }
 
@@ -244,7 +243,7 @@ country_event = {
   trigger = {
     tag = ENG
     year = 1954
-    has_global_flag = event_fired_8501002
+    has_global_flag = abadan_crisis
     has_global_flag = cold_war
   }
 
@@ -265,7 +264,7 @@ country_event = {
   trigger = {
     tag = ENG
     year = 1954
-    has_global_flag = event_fired_8501002
+    has_global_flag = abadan_crisis
     has_global_flag = cold_war
   }
 

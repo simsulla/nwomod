@@ -52,13 +52,13 @@ country_event = {
 
   trigger = {
     tag = ALB
-    year = 1948
+    year = 1948 NOT = { year = 1990 }
     exists = YUG
     has_global_flag = tito_stalin_split
     ALB = { vassal_of = YUG }
   }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 4 }
 
   option = {
     name = EVT_8216012_A #"We stand by USSR"
