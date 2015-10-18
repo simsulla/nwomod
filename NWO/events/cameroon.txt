@@ -8,7 +8,7 @@ country_event = { # Southern Cameroons Plebiscite
   trigger = {
 	tag = ENG
 	owns = 1957 # Buea
-	exists = CAM
+	exists = CMR
 	NOT = { exists = ABZ }
 	war = no
   }
@@ -17,7 +17,7 @@ country_event = { # Southern Cameroons Plebiscite
 
   option = {
     name = "EVT_8002500_A"
-	release = CAM
+	release_vassal = CMR
 	prestige = 5
 	ai_chance = { factor = 100 }
   }
@@ -25,7 +25,7 @@ country_event = { # Southern Cameroons Plebiscite
     name = "EVT_8002500_B"
 	badboy = 5
 	prestige = -10
-	any_owned = { limit = { is_core = CAM } secede_province = NGE } 
+	any_owned = { limit = { is_core = CMR } secede_province = NGE } 
 	ai_chance = { factor = 0 }
   }
   option = {
@@ -33,6 +33,7 @@ country_event = { # Southern Cameroons Plebiscite
 	badboy = 1
 	prestige = -10
 	release = ABZ
+	diplomatic_influence = { who = ENG value = 200 }
 	ai_chance = { factor = 0 }
   }  
 }
@@ -44,7 +45,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = CAM
+    tag = CMR
 	owns = 1959 # Yaounde
     year = 1954 NOT = { year = 1990 }
 	is_vassal = yes
@@ -54,6 +55,6 @@ country_event = {
 
   option = {
     name = "EVT_8002512_A"
-	overlord = { release_vassal = CAM add_casus_belli = { type = make_puppet target = CAM months = 24 } }
+	overlord = { release_vassal = CMR add_casus_belli = { type = make_puppet target = CMR months = 24 } }
   }
 }
