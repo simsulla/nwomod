@@ -150,16 +150,15 @@ country_event = {
 
   option = {
     name = EVT_LIBERATE
-	FROM = { release_vassal = THIS }
+	FROM = { 
+		release_vassal = THIS 
+		diplomatic_influence = { who = THIS value = 200 }
+	}
 	government = hms_government country_event = 800054
 	any_owned = { remove_province_modifier = colonial_promise remove_province_modifier = colonial_unrest  }
 	# note: we do not reduce militancy so a country that have had a very violent liberation 
 	# tend to remains violent at its core
-	random_country = { 
-		limit = { average_militancy = 1.0 tag = THIS } 
-		set_country_flag = full_independance  
-	}
-	FROM = { country_event = 8212007 }
+	set_country_flag = full_independance
 	ai_chance = { factor = 100 }
   }
   option = {
@@ -184,6 +183,7 @@ country_event = {
   option = {
     name = EVT_MILACCESS_A
 	military_access = FROM 
+	ai_chance = { factor = 100 }
   }
 }
 country_event = {
@@ -204,6 +204,7 @@ country_event = {
     name = EVT_FULLINDEPENDENCE_A
 	government = democracy country_event = 800054
 	overlord = { country_event = 8212009 }
+	clr_country_flag = full_independance
   }
 }
 country_event = {
@@ -240,7 +241,9 @@ country_event = {
 
   option = {
     name = EVT_FULLINDEPENDENCE_A
-	random_country = { limit = { THIS = { exists = no } tag = FROM } release = THIS } 
-	random_country = { limit = { is_our_vassal = THIS tag = FROM } release_vassal = THIS } 
+	random_country = { limit = { THIS = { exists = no } tag = FROM } release = THIS } # Incorrect Validator Warning 
+	random_country = { limit = { is_our_vassal = THIS tag = FROM } release_vassal = THIS }
+	random_country = { limit = { tag = FROM part_of_sphere = yes } sphere_owner = { diplomatic_influence = { who = THIS value = 200 } } }
+	random_country = { limit = { tag = FROM is_greater_power = yes } diplomatic_influence = { who = THIS value = 200 } }
   }
 }
