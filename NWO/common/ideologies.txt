@@ -1,6 +1,6 @@
 # If you add types, and use those tags, do not change them without changing everywhere they are used.
 
-populist_group = {
+right_group = {
 	# pragmatic
 	populist = { 
 		uncivilized = no
@@ -104,10 +104,8 @@ populist_group = {
 			base = -0.5
 		}
 	}
-}
-
-religious_group = {
-	islamist = {
+	# revert reforms
+	islamist = { # traditionalist
 		uncivilized = no
 		color = { 49 79 79 }
 		date = 1905.1.1
@@ -212,30 +210,6 @@ religious_group = {
 		}
 		
 	}
-}
-
-communist_group = {
-	communist = {
-		uncivilized = no
-		color = { 150 10 10 }
-		date = 1865.1.1
-		
-		add_political_reform = {
-			base = 0
-		}
-		remove_political_reform = {
-			base = 1
-		}
-		add_social_reform = {
-			base = 1
-		}
-		remove_social_reform = {
-			base = 0
-		}	
-	}
-}
-
-democratic_group = {
 	# pragmatic
 	conservative = {
 		color = { 10 10 250 }
@@ -395,6 +369,9 @@ democratic_group = {
 			base = -0.5
 		}
 	}
+}
+
+left_group = {	
 	# political reformist
 	liberal = {
 		color = { 51 153 255 }
@@ -483,7 +460,7 @@ democratic_group = {
 			base = 1
 		}
 	}
-	# social reformist
+	# pragmatic
 	socialist = {
 		uncivilized = no
 		color = { 255 0 0 }
@@ -567,6 +544,25 @@ democratic_group = {
 			base = 0
 		}
 	}
+	# social reformist
+	communist = {
+		uncivilized = no
+		color = { 150 10 10 }
+		date = 1865.1.1
+		
+		add_political_reform = {
+			base = 0
+		}
+		remove_political_reform = {
+			base = 1
+		}
+		add_social_reform = {
+			base = 1
+		}
+		remove_social_reform = {
+			base = 0
+		}	
+	}
 	# all reformist
 	progressive = { # green
 		color = { 0 100 0 } # color = { 255 20 147 } 
@@ -584,24 +580,5 @@ democratic_group = {
 		remove_social_reform = {
 			base = 0
 		}
-	}
-}
-	
-sectarian_group = {
-	separatist = {
-		color = { 30 60 60 }
-		
-		add_political_reform = {
-			base = 0
-		}
-		remove_political_reform = {
-			base = 0
-		}
-		add_social_reform = {
-			base = 0
-		}
-		remove_social_reform = {
-			base = 0
-		}	
 	}
 }

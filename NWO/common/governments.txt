@@ -1,70 +1,52 @@
-# Do not change tags in here without changing every other reference to them.
-# If adding new forms of governemnts, make sure they are uniquely named.
-
-
-
+# either group dictatorship
+presidential_dictatorship =
+{
+	socialist = yes
+	conservative = yes
+	election = no
+	appoint_ruling_party = yes
+}
+# left_group dictatorship
 proletarian_dictatorship =
 {
-	#which ideology of parties.
 	communist = yes
-	
 	election = no
 	appoint_ruling_party = yes
 	flagType = communist
 }
-
-
-
-presidential_dictatorship =
-{
-	#which ideology of parties.
-	socialist = yes
-	conservative = yes
-	populist = yes
-	islamist = yes
-
-	election = no
-	appoint_ruling_party = no
-}
- 
-islamist_dictatorship =
-{
-	#which ideology of parties.
-	islamist = yes	
-	election = no
-	appoint_ruling_party = no
-	flagType = islamist
-}
-
-populist_dictatorship =
-{
-	#which ideology of parties.
-	populist = yes	
-	election = no
-	appoint_ruling_party = no
-	flagType = populist
-}
-
 nationalist_dictatorship =
 {
 	#which ideology of parties.
-	populist = yes	
+	socialist = yes	
 	election = no
 	appoint_ruling_party = yes
 	flagType = nationalist
 }
- 
+# rigth_group dictatorship
+islamist_dictatorship =
+{
+	islamist = yes	
+	election = no
+	appoint_ruling_party = yes
+	flagType = islamist
+}
+populist_dictatorship =
+{
+	populist = yes	
+	conservative = yes
+	election = yes
+	appoint_ruling_party = yes
+	flagType = populist
+}
 absolute_monarchy = {
-	liberal = yes
 	conservative = yes
 	populist = yes
 	islamist = yes
-	
 	election = no
 	appoint_ruling_party = yes
 	flagType = realm
 }
- 
+# democracy
 hms_government = {
 	progressive = yes
 	liberal = yes
@@ -72,13 +54,11 @@ hms_government = {
 	socialist = yes
 	populist = yes
 	islamist = yes
-
 	election = yes
 	duration = 48
-	appoint_ruling_party = yes
+	appoint_ruling_party = no
 	flagType = realm
 }
-
 democracy = {
 	progressive = yes
 	liberal = yes
@@ -86,8 +66,7 @@ democracy = {
 	socialist = yes
 	populist = yes
 	islamist = yes
-	
 	election = yes
 	duration = 48
-	appoint_ruling_party = yes
+	appoint_ruling_party = no
 }
