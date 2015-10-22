@@ -196,20 +196,6 @@ country_event = {
 				value = secularized
 			}
 			scaled_militancy = {
-				issue = pluralism
-				factor = 0.2
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC14020"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.1
-				value = pluralism
-			}
-			scaled_militancy = {
 				issue = secularized
 				factor = 0.2
 			}
@@ -852,26 +838,12 @@ country_event = {
 				value = secularized
 			}
 			scaled_militancy = {
-				issue = pluralism
+				issue = secularized
 				factor = 0.2
 			}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTB14120"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.25
-				value = secularized
-			}
-			scaled_militancy = {
-				issue = pluralism
-				factor = 0.2
-			}
-		}
-	}
-		
 	option = {
 		name = "EVTOPTC14120"
 		any_pop = {
@@ -881,26 +853,7 @@ country_event = {
 			}
 		}
 	}
-	
-	option = {
-		name = "EVTOPTD14120"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.10
-				value = secularized
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTE14120"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.05
-				value = secularized
-			}
-		}
-	}
+
 }
 
 #Too Many Religions?
@@ -918,35 +871,11 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.30
-				value = pluralism
+				value = secularized
 			}
 			scaled_militancy = {
 				issue = secularized
 				factor = 0.2
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB14130"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.25
-				value = pluralism
-			}
-			scaled_militancy = {
-				issue = secularized
-				factor = 0.2
-			}
-		}
-	}
-		
-	option = {
-		name = "EVTOPTC14130"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.15
-				value = pluralism
 			}
 		}
 	}
@@ -956,20 +885,11 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.10
-				value = pluralism
+				value = secularized
 			}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTE14130"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.05
-				value = pluralism
-			}
-		}
-	}
 }
 
 #A Holy Place
@@ -4197,7 +4117,7 @@ country_event = {
 				factor = 4
 			}
 			scaled_militancy = {
-				issue = pluralism
+				issue = secularized
 				factor = -4
 			}
 			scaled_militancy = {
@@ -4512,7 +4432,7 @@ country_event = {
 			consciousness = 1
 			dominant_issue = {
 				factor = 0.30
-				value = pluralism
+				value = secularized
 			}
 		}
 	}
@@ -4545,7 +4465,7 @@ country_event = {
 		}
 		any_pop = {
 			scaled_militancy = {
-				issue = pluralism
+				issue = secularized
 				factor = 2
 			}
 		}
@@ -4584,7 +4504,7 @@ country_event = {
 			consciousness = 2
 		}
 		random_list = {
-			25 = {
+			33 = {
 				any_pop = {
 					dominant_issue = {
 						factor = 0.20
@@ -4592,27 +4512,15 @@ country_event = {
 					}
 				}
 			}
-			25 = {
+			34 = {
 				any_pop = {
 					dominant_issue = {
 						factor = 0.20
-						value = pluralism
-					}
-				}
-			}
-			25 = {
-				any_pop = {
-					dominant_issue = {
-						factor = 0.10
 						value = secularized
 					}
-					dominant_issue = {
-						factor = 0.10
-						value = pluralism
-					}
 				}
 			}
-			25 = {
+			33 = {
 				any_pop = {
 					dominant_issue = {
 						factor = 0.30
@@ -4630,7 +4538,7 @@ country_event = {
 				value = secularized
 			}
 			scaled_militancy = {
-				issue = pluralism
+				issue = pro_atheism
 				factor = 3
 			}
 		}
@@ -4640,7 +4548,7 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.30
-				value = pluralism
+				value = secularized
 			}
 			scaled_militancy = {
 				issue = moralism
@@ -4656,11 +4564,11 @@ country_event = {
 				value = moralism
 			}
 			scaled_militancy = {
-				issue = pluralism
+				issue = secularized
 				factor = 3
 			}
 			scaled_militancy = {
-				issue = secularized
+				issue = pro_atheism
 				factor = 3
 			}
 		}
@@ -5538,12 +5446,8 @@ country_event = {
 				factor = 3
 			}
 			scaled_militancy = {
-				issue = pluralism
-				factor = 2
-			}
-			scaled_militancy = {
 				issue = secularized
-				factor = 1
+				factor = 2
 			}
 		}
 	}
@@ -5567,10 +5471,6 @@ country_event = {
 				factor = 2
 			}
 			scaled_militancy = {
-				issue = pluralism
-				factor = 1
-			}
-			scaled_militancy = {
 				issue = pro_atheism
 				factor = 1
 			}
@@ -5589,15 +5489,11 @@ country_event = {
 			}
 			dominant_issue = {
 				factor = 0.05
-				value = pluralism
+				value = secularized
 			}
 			scaled_militancy = {
 				issue = pro_atheism
 				factor = 2
-			}
-			scaled_militancy = {
-				issue = secularized
-				factor = 1
 			}
 			scaled_militancy = {
 				issue = moralism
@@ -5627,10 +5523,6 @@ country_event = {
 			scaled_militancy = {
 				issue = secularized
 				factor = 2
-			}
-			scaled_militancy = {
-				issue = pluralism
-				factor = 1
 			}
 		}
 	}
