@@ -1849,7 +1849,7 @@ issues =
 			factor = 0
 			OR = {
 				NOT = {
-					is_next_reform = irreligion_religion
+					is_next_reform = secularism_religion
 				}
 				NOT = { consciousness = 6 }
 				NOT = { life_needs = 1 }
@@ -1890,12 +1890,12 @@ issues =
 			NOT = { agree_with_ruling_party = 0.80 }
 		}
 	}
-	irreligion_religion = {
+	secularism_religion = {
 		factor = 1
 		modifier = {
 			factor = 0
 			OR = {
-				religious_rights = irreligion_religion
+				religious_rights = secularism_religion
 				NOT = { consciousness = 6 }
 				NOT = { life_needs = 1 }
 			}

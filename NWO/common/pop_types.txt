@@ -900,7 +900,7 @@ assimilation_chance =
 	}
 	modifier = {
 		factor = 3
-		has_pop_religion = irreligion
+		has_pop_religion = secularism
 	}
 	modifier = {
     	factor = -100
@@ -924,14 +924,14 @@ assimilation_chance =
 			NOT = { unemployment = 0.05 }
 		}
 	}
-	# assimilation via irreligion
+	# assimilation via secularism
 	modifier = {
 		factor = -100
 		not = { religion = this }
 	}
 	modifier = {
 		factor = -100
-		not = { religion = irreligion }
+		not = { religion = secularism }
 	}
 	# TODO easier to assimilate into "open linguistic cultures" like for africans to become black_anglo.
 	modifier = {
@@ -1004,7 +1004,7 @@ conversion_chance =
 	}	
     modifier = {
         factor = -20
-        has_pop_religion = irreligion
+        has_pop_religion = secularism
     }
     modifier = {
         factor = -4

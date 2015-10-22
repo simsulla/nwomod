@@ -12,7 +12,7 @@
 # four_children literacy < 10% 1.5%
 ## Province modifiers set every 10 years for subset of period
 # pre_demographic_transition hard coded year and geography 2.5%->1.25% (5year >2% literacy), 0.45% (1.8year 1-2% literacy),0.15% (0.6year <1% literacy)  
-# family_values depends on irreligion and literacy <5% 1.25% <20% 0.7%
+# family_values depends on secularism and literacy <5% 1.25% <20% 0.7%
 
 #Max: 1.5+1.25+1.25=4
 
@@ -24,7 +24,7 @@ country_event = { # one_point_five_children
 	picture = "one_point_five_children"
 	
 	trigger = {
-		OR = { literacy = 0.6 AND = { literacy = 0.20 pop_majority_religion = irreligion NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
+		OR = { literacy = 0.6 AND = { literacy = 0.20 pop_majority_religion = secularism NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
 		NOT = { has_country_modifier = one_point_five_children }
 	}
 	
@@ -50,7 +50,7 @@ country_event = { # two_children
 	
 	trigger = {
 		literacy = 0.20
-		NOT = { OR = { literacy = 0.6 pop_majority_religion = irreligion NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
+		NOT = { OR = { literacy = 0.6 pop_majority_religion = secularism NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
 		NOT = { has_country_modifier = two_children }
 	}
 	
@@ -162,7 +162,7 @@ country_event = { # family_values
 	
 	trigger = {
 		NOT = { has_country_modifier = demographics_culture }
-       	NOT = {	pop_majority_religion = irreligion }
+       	NOT = {	pop_majority_religion = secularism }
 	}
 
 	mean_time_to_happen = {
@@ -225,7 +225,7 @@ country_event = { # pre_demographic_transition
 			limit = {
 				literacy = 0.02
 				NOT = { has_province_modifier = pre_demographic_transition }
-				NOT = { pop_majority_religion = irreligion } 
+				NOT = { pop_majority_religion = secularism } 
 				OR = {
 					AND = { # Demographic transition in E/S-Asia in the 60th-
 						NOT = { year = 1960 } 
@@ -262,7 +262,7 @@ country_event = { # pre_demographic_transition
 			limit = {
 				literacy = 0.01 NOT = { literacy = 0.02 }
 				NOT = { has_province_modifier = pre_demographic_transition }
-				NOT = { pop_majority_religion = irreligion } 
+				NOT = { pop_majority_religion = secularism } 
 				OR = {
 					AND = { # Demographic transition in E/S-Asia in the 60th-
 						NOT = { year = 1960 } 
@@ -299,7 +299,7 @@ country_event = { # pre_demographic_transition
 			limit = {
 				NOT = { literacy = 0.01 }
 				NOT = { has_province_modifier = pre_demographic_transition }
-				NOT = { pop_majority_religion = irreligion } 
+				NOT = { pop_majority_religion = secularism } 
 				OR = {
 					AND = { # Demographic transition in E/S-Asia in the 60th-
 						NOT = { year = 1960 } 
