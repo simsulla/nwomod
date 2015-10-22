@@ -134,11 +134,11 @@ country_event = { #The New Regime - populist or dictatorship
 		}
 	}
 }
-country_event = { #The New Regime- islamist
+country_event = { #The New Regime- traditionalist
 	id = 800041
 	title = "EVTNAME800051"   # Fascist
 	desc = "EVTDESC800051"
-	picture = "islamist"
+	picture = "traditionalist"
 	is_triggered_only = yes
 
 	option = {
@@ -152,20 +152,20 @@ country_event = { #The New Regime- islamist
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { ruling_party_ideology = islamist }
+					NOT = { ruling_party_ideology = traditionalist }
 				}
 			}
-			owner = { ruling_party_ideology = islamist }
+			owner = { ruling_party_ideology = traditionalist }
 		}
 		capital_scope = {
 			any_pop = {
 				limit = { is_primary_culture = yes }
-				ideology = { factor = 0.1 value = islamist }
+				ideology = { factor = 0.1 value = traditionalist }
 			}
 		}
 		any_pop = {
-			limit = { pop_majority_ideology = islamist }
-			ideology = { factor = 0.1 value = islamist }
+			limit = { pop_majority_ideology = traditionalist }
+			ideology = { factor = 0.1 value = traditionalist }
 		}
 		any_pop = {
 			scaled_militancy = {
@@ -177,7 +177,7 @@ country_event = { #The New Regime- islamist
 				factor = -4
 			}
 			scaled_militancy = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = -8
 			}
 			scaled_militancy = {
@@ -260,7 +260,7 @@ country_event = { #The New Regime- islamist
 			}
 			any_pop = {
 				scaled_militancy = {
-					ideology = islamist
+					ideology = traditionalist
 					factor = 5
 				}
 			}
@@ -361,7 +361,7 @@ country_event = { #The New Regime- islamist
 		}
 		any_country = {
 			change_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 1
 			}
 		}
@@ -369,7 +369,7 @@ country_event = { #The New Regime- islamist
 			limit = {
 				alliance_with = THIS
 				NOT = {
-					ruling_party_ideology = islamist
+					ruling_party_ideology = traditionalist
 					vassal_of = THIS
 					substate_of = THIS
 					in_sphere = THIS
@@ -413,7 +413,7 @@ country_event = { # The New Regime - Communist
 		}
 		any_pop = {
 			scaled_militancy = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = 4
 			}
 			scaled_militancy = {
@@ -812,7 +812,7 @@ country_event = { #The New Regime - populist or dictatorship
 		
 	}
 }
-country_event = { #The New Regime- islamist
+country_event = { #The New Regime- traditionalist
 
 	id = 800051
 
@@ -820,7 +820,7 @@ country_event = { #The New Regime- islamist
 
 	title = "EVTNAME800051"   # Fascist
 	desc = "EVTDESC800051"
-	picture = "islamist"
+	picture = "traditionalist"
 
 	option = {
 		name = "EVTOPTA800051"

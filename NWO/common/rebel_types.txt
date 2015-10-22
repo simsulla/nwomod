@@ -35,7 +35,7 @@ islamist_rebels = {
 	independence = none				# Does not strive for independence
 	defect_delay = 18
 	
-	ideology = islamist
+	ideology = traditionalist
 	
 	allow_all_cultures = yes
 	allow_all_religions = no
@@ -73,7 +73,6 @@ islamist_rebels = {
 			war_exhaustion = 8
 			factor = 0.95
 		}
-		
 	}
 	
 	# The rebel type with the highest modifier for this pop gets picked
@@ -86,7 +85,7 @@ islamist_rebels = {
 		}		
 		modifier = {
 			factor = 0.01
-			NOT = { pop_majority_ideology = islamist }
+			NOT = { pop_majority_ideology = traditionalist }
 		}
 		modifier = {
 			factor = 0
@@ -97,7 +96,7 @@ islamist_rebels = {
 		}		
 		modifier = {
 			factor = 1.0115
-			pop_majority_ideology = islamist
+			pop_majority_ideology = traditionalist
 		}
 		modifier = {
 			factor = 1.0115
@@ -722,7 +721,7 @@ separatist_rebels = {
 		}
 		modifier = {
 			factor = 1.09
-			pop_majority_ideology = islamist
+			pop_majority_ideology = traditionalist
 		}
 		modifier = {
 			factor = 1.11

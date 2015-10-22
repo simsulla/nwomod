@@ -1698,9 +1698,9 @@ country_event = {
 	picture = "Celebration"
 	
 	trigger = {
-		is_ideology_enabled = islamist
+		is_ideology_enabled = traditionalist
 		socialist = 5
-		NOT = { islamist = 5 }
+		NOT = { traditionalist = 5 }
 		civilized = yes
 		OR = {
 			government = democracy
@@ -1801,14 +1801,14 @@ country_event = {
 		modifier = {
 			factor = 1.5
 			check_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 10
 			}
 		}
 		modifier = {
 			factor = 1.5
 			check_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 20
 			}
 		}
@@ -1829,11 +1829,11 @@ country_event = {
 					}
 				}
 				ideology = {
-					value = islamist
+					value = traditionalist
 					factor = 0.1
 				}
 				scaled_militancy = {
-					ideology = islamist
+					ideology = traditionalist
 					factor = 3
 				}
 			}
@@ -1859,11 +1859,11 @@ country_event = {
 					factor = 0.10
 				}
 				ideology = {
-					value = islamist
+					value = traditionalist
 					factor = 0.05
 				}
 				scaled_militancy = {
-					ideology = islamist
+					ideology = traditionalist
 					factor = 2
 				}
 			}
@@ -1883,7 +1883,7 @@ country_event = {
 	picture = "Fascist"
 	
 	trigger = {
-		is_ideology_enabled = islamist
+		is_ideology_enabled = traditionalist
 		civilized = yes
 		internet_infrastructure = open_unregulated
 		NOT = { has_country_flag = paramilitaries_outlawed }
@@ -1904,7 +1904,7 @@ country_event = {
 		any_owned_province = {
 			is_colonial = no
 			is_primary_culture = yes
-			islamist = 5
+			traditionalist = 5
 			NOT = { has_province_modifier = black_shirts }
 		}
 	}
@@ -1988,14 +1988,14 @@ country_event = {
 		modifier = {
 			factor = 2
 			check_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 5
 			}
 		}
 		modifier = {
 			factor = 2
 			check_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 10
 			}
 		}
@@ -2009,12 +2009,12 @@ country_event = {
 				any_owned_province = {
 					NOT = { has_province_modifier = black_shirts }
 					is_primary_culture = yes
-					islamist = 5
+					traditionalist = 5
 				}
 			}
 			any_pop = {
 				scaled_militancy = {
-					ideology = islamist
+					ideology = traditionalist
 					factor = 5
 				}
 			}
@@ -2029,7 +2029,7 @@ country_event = {
 				any_owned_province = {
 					NOT = { has_province_modifier = black_shirts }
 					is_primary_culture = yes
-					islamist = 5
+					traditionalist = 5
 				}
 			}
 			any_pop = {
@@ -2040,14 +2040,14 @@ country_event = {
 					}
 				}
 				ideology = {
-					value = islamist
+					value = traditionalist
 					factor = 0.05
 				}
 			}
 			any_owned = {
 				limit = {
 					is_primary_culture = yes
-					islamist = 5
+					traditionalist = 5
 				}
 				add_province_modifier = {
 					name = black_shirts
@@ -2066,7 +2066,7 @@ country_event = {
 	picture = "propaganda"
 	
 	trigger = {
-		is_ideology_enabled = islamist
+		is_ideology_enabled = traditionalist
 		civilized = yes
 		publishing_rights = unregulated_publishing
 		OR = {
@@ -2186,7 +2186,7 @@ country_event = {
 					}
 				}
 				ideology = {
-					value = islamist
+					value = traditionalist
 					factor = 0.05
 				}
 				militancy = 1
@@ -2210,7 +2210,7 @@ country_event = {
 					}
 				}
 				ideology = {
-					value = islamist
+					value = traditionalist
 					factor = 0.1
 				}
 				militancy = 1
@@ -2228,7 +2228,7 @@ country_event = {
 	picture = "Riot"
 	
 	trigger = {
-		is_ideology_enabled = islamist
+		is_ideology_enabled = traditionalist
 		civilized = yes
 		OR = {
 			government = democracy
@@ -2238,7 +2238,7 @@ country_event = {
 		any_owned_province = {
 			has_province_modifier = black_shirts
 			NOT = { has_province_modifier = the_massacre }
-			islamist = 15
+			traditionalist = 15
 			liberal = 5
 			average_militancy = 4
 		}
@@ -2333,13 +2333,13 @@ country_event = {
 				any_owned_province = {
 					has_province_modifier = black_shirts
 					NOT = { has_province_modifier = the_massacre }
-					islamist = 15
+					traditionalist = 15
 					liberal = 5
 					average_militancy = 4
 				}
 			}
 			any_pop = {
-				limit = { pop_majority_ideology = islamist }
+				limit = { pop_majority_ideology = traditionalist }
 				reduce_pop = 0.95
 			}				
 			any_pop = {
@@ -2363,7 +2363,7 @@ country_event = {
 				any_owned_province = {
 					has_province_modifier = black_shirts
 					NOT = { has_province_modifier = the_massacre }
-					islamist = 15
+					traditionalist = 15
 					liberal = 5
 					average_militancy = 4
 				}
@@ -2394,9 +2394,9 @@ country_event = {
 	picture = "propaganda"
 	
 	trigger = {
-		is_ideology_enabled = islamist
+		is_ideology_enabled = traditionalist
 		civilized = yes
-		islamist = 10
+		traditionalist = 10
 		OR = {
 			government = democracy
 			government = hms_government
@@ -2501,14 +2501,14 @@ country_event = {
 		modifier = {
 			factor = 2
 			check_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 10
 			}
 		}
 		modifier = {
 			factor = 2
 			check_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 20
 			}
 		}
@@ -2525,11 +2525,11 @@ country_event = {
 				}
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.03
 			}
 			scaled_militancy = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = 3
 			}
 		}
@@ -2561,7 +2561,7 @@ country_event = {
 				factor = 0.15
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.05
 			}
 		}
@@ -2580,12 +2580,12 @@ country_event = {
 	picture = "Parade"
 	
 	trigger = {
-		is_ideology_enabled = islamist
+		is_ideology_enabled = traditionalist
 		NOT = {
 			has_country_flag = paramilitaries_outlawed
 		}
 		civilized = yes
-		islamist = 10
+		traditionalist = 10
 		OR = {
 			government = democracy
 			government = hms_government
@@ -2683,14 +2683,14 @@ country_event = {
 		modifier = {
 			factor = 2
 			check_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 5
 			}
 		}
 		modifier = {
 			factor = 2
 			check_variable = {
-				which = successful_islamist_rebellions
+				which = successful_traditionalist_rebellions
 				value = 10
 			}
 		}
@@ -2712,7 +2712,7 @@ country_event = {
 						}
 					}
 					ideology = {
-						value = islamist
+						value = traditionalist
 						factor = 0.2
 					}
 					militancy = 3
@@ -2733,7 +2733,7 @@ country_event = {
 				}
 			}
 			scaled_militancy = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = 10
 			}
 		}
@@ -2752,7 +2752,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
-		is_ideology_enabled = islamist
+		is_ideology_enabled = traditionalist
 		is_ideology_enabled = socialist
 		civilized = yes
 		NOT = { gender_rights = gender_role_based }
@@ -2764,7 +2764,7 @@ country_event = {
 		any_owned_province = {
 			is_colonial = no
 			is_primary_culture = yes
-			islamist = 10
+			traditionalist = 10
 			NOT = { has_province_modifier = militant_trade_union }
 		}
 	}
@@ -2862,7 +2862,7 @@ country_event = {
 				is_colonial = no
 				any_owned_province = {
 					is_primary_culture = yes
-					islamist = 10
+					traditionalist = 10
 					NOT = { has_province_modifier = militant_trade_union }
 				}
 			}
@@ -2886,7 +2886,7 @@ country_event = {
 					}
 				}
 				scaled_militancy = {
-					ideology = islamist
+					ideology = traditionalist
 					factor = 8
 				}
 			}
@@ -2900,7 +2900,7 @@ country_event = {
 				is_colonial = no
 				any_owned_province = {
 					is_primary_culture = yes
-					islamist = 10
+					traditionalist = 10
 					NOT = { has_province_modifier = militant_trade_union }
 				}
 			}
@@ -2912,7 +2912,7 @@ country_event = {
 					}
 				}
 				ideology = {
-					value = islamist
+					value = traditionalist
 					factor = 0.05
 				}
 			}

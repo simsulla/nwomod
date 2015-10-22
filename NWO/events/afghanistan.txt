@@ -335,7 +335,7 @@ country_event = {
 		tag = AFG
 		has_country_flag = soviet_intervention_in_afghanistan
 		OR = { 
-			NOT = { ideology  = islamist }
+			NOT = { ideology  = traditionalist }
 			NOT = { has_country_modifier = sharia }
 		}
 		NOT = { year = 1996 }
@@ -367,7 +367,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		OR = { 
-			NOT = { ideology  = islamist }
+			NOT = { ideology  = traditionalist }
 			NOT = { has_country_modifier = sharia }
 		}
 		year = 1996

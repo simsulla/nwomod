@@ -905,7 +905,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		is_ideology_enabled = islamist
+		is_ideology_enabled = traditionalist
 		NOT = {
 			publishing_rights = censored_publishing
 			political_parties = parties_not_allowed
@@ -913,8 +913,8 @@ country_event = {
 			has_country_modifier = party_scandal_evidence
 		}
 		OR = {
-			islamist = 10
-			any_owned_province = { islamist = 20 }
+			traditionalist = 10
+			any_owned_province = { traditionalist = 20 }
 		}
 	}
 	
@@ -926,13 +926,13 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			ruling_party_ideology = islamist
+			ruling_party_ideology = traditionalist
 			NOT = { publishing_rights = unregulated_publishing }
 		}
 		modifier = {
 			factor = 0.5
 			election = yes
-			ruling_party_ideology = islamist
+			ruling_party_ideology = traditionalist
 		}
 		modifier = {
 			factor = 1.5
@@ -956,53 +956,53 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.8
-			islamist = 25
+			traditionalist = 25
 		}
 		modifier = {
 			factor = 0.8
-			islamist = 50
+			traditionalist = 50
 		}
 		modifier = {
 			factor = 0.8
-			islamist = 75
+			traditionalist = 75
 		}	
 		modifier = {
 			factor = 1.2
-			NOT = {	ruling_party_ideology = islamist }
+			NOT = {	ruling_party_ideology = traditionalist }
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { ruling_party_ideology = islamist }
+			NOT = { ruling_party_ideology = traditionalist }
 			political_parties = parties_only_nominated
 		}
 		modifier = {
 			factor = 0.8
-			NOT = { ruling_party_ideology = islamist }
+			NOT = { ruling_party_ideology = traditionalist }
 			political_parties = parties_allowed
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { ruling_party_ideology = islamist }
+			NOT = { ruling_party_ideology = traditionalist }
 			political_parties = parties_promote_democratic
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { ruling_party_ideology = islamist }
+			NOT = { ruling_party_ideology = traditionalist }
 			publishing_rights = firewall_publishing
 		}
 		modifier = {
 			factor = 1.5
-			ruling_party_ideology = islamist
+			ruling_party_ideology = traditionalist
 			political_parties = parties_only_nominated
 		}
 		modifier = {
 			factor = 1.2
-			ruling_party_ideology = islamist
+			ruling_party_ideology = traditionalist
 			political_parties = parties_allowed
 		}
 		modifier = {
 			factor = 1.1
-			ruling_party_ideology = islamist
+			ruling_party_ideology = traditionalist
 			political_parties = parties_promote_democratic
 		}
 	}
@@ -1011,7 +1011,7 @@ country_event = {
 		name = "EVTOPTA880190"
 		random_owned = {
 			limit = {
-				owner = { ruling_party_ideology = islamist }
+				owner = { ruling_party_ideology = traditionalist }
 			}
 			owner = {
 				prestige = -5
@@ -1025,10 +1025,10 @@ country_event = {
 		any_pop = {
 			limit = {
 				location = { is_colonial = no }
-				islamist = 10
+				traditionalist = 10
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = -0.1
 			}
 		}	
@@ -1037,7 +1037,7 @@ country_event = {
 				location = { is_colonial = no }
 			}
 			scaled_consciousness = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = 5
 			}
 		}

@@ -1508,7 +1508,7 @@ country_event = {
 						OR = { religion = sunni religion = shiite }
 					}
 					ideology = {
-						value = islamist
+						value = traditionalist
 						factor = 0.05
 					}
 				}
@@ -1968,8 +1968,8 @@ country_event = {
 				NOT = { socialist = 0.25 }
 			}
 			AND = {
-				ruling_party_ideology = islamist
-				NOT = { islamist = 0.25 }
+				ruling_party_ideology = traditionalist
+				NOT = { traditionalist = 0.25 }
 			}
 			AND = {
 				ruling_party_ideology = communist
@@ -2091,13 +2091,13 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
-				country = { ruling_party_ideology = islamist }
+				country = { ruling_party_ideology = traditionalist }
 				location = { has_province_modifier = support_the_government }
 				is_primary_culture = yes
 				NOT = { unemployment = 0.01 }
 				NOT = { militancy = 0.5 }
 			}
-			ideology = { value = islamist factor = 0.05 }
+			ideology = { value = traditionalist factor = 0.05 }
 		}
 		any_pop = {
 			limit = {
@@ -2209,7 +2209,7 @@ country_event = {
 		clr_country_flag = election_riots
 		clr_country_flag = socialist_surge
 		clr_country_flag = communist_surge
-		clr_country_flag = islamist_surge
+		clr_country_flag = traditionalist_surge
 		clr_country_flag = liberal_surge
 		clr_country_flag = populist_surge
 		clr_country_flag = conservative_surge
@@ -2234,7 +2234,7 @@ country_event = {
 				clr_country_flag = socialist_election_win
 				clr_country_flag = liberal_election_win
 				clr_country_flag = communist_election_win
-				clr_country_flag = islamist_election_win
+				clr_country_flag = traditionalist_election_win
 				clr_country_flag = populist_election_win
 				clr_country_flag = nationalist_election_win
 				clr_country_flag = progressive_election_win
@@ -2396,7 +2396,7 @@ country_event = {
 		clr_country_flag = election_riots
 		clr_country_flag = socialist_surge
 		clr_country_flag = communist_surge
-		clr_country_flag = islamist_surge
+		clr_country_flag = traditionalist_surge
 		clr_country_flag = liberal_surge
 		clr_country_flag = populist_surge
 		clr_country_flag = conservative_surge
@@ -2421,7 +2421,7 @@ country_event = {
 				set_country_flag = socialist_election_win
 				clr_country_flag = liberal_election_win
 				clr_country_flag = communist_election_win
-				clr_country_flag = islamist_election_win
+				clr_country_flag = traditionalist_election_win
 				clr_country_flag = populist_election_win
 				clr_country_flag = nationalist_election_win
 				clr_country_flag = progressive_election_win
@@ -2583,7 +2583,7 @@ country_event = {
 		clr_country_flag = election_riots
 		clr_country_flag = socialist_surge
 		clr_country_flag = communist_surge
-		clr_country_flag = islamist_surge
+		clr_country_flag = traditionalist_surge
 		clr_country_flag = liberal_surge
 		clr_country_flag = populist_surge
 		clr_country_flag = conservative_surge
@@ -2608,7 +2608,7 @@ country_event = {
 				clr_country_flag = socialist_election_win
 				set_country_flag = liberal_election_win
 				clr_country_flag = communist_election_win
-				clr_country_flag = islamist_election_win
+				clr_country_flag = traditionalist_election_win
 				clr_country_flag = populist_election_win
 				clr_country_flag = nationalist_election_win
 				clr_country_flag = progressive_election_win
@@ -2773,7 +2773,7 @@ country_event = {
 		clr_country_flag = election_riots
 		clr_country_flag = socialist_surge
 		clr_country_flag = communist_surge
-		clr_country_flag = islamist_surge
+		clr_country_flag = traditionalist_surge
 		clr_country_flag = liberal_surge
 		clr_country_flag = populist_surge
 		clr_country_flag = conservative_surge
@@ -2798,7 +2798,7 @@ country_event = {
 				clr_country_flag = socialist_election_win
 				clr_country_flag = liberal_election_win
 				set_country_flag = communist_election_win
-				clr_country_flag = islamist_election_win
+				clr_country_flag = traditionalist_election_win
 				clr_country_flag = populist_election_win
 				clr_country_flag = nationalist_election_win
 				clr_country_flag = progressive_election_win
@@ -2941,7 +2941,7 @@ country_event = {
 	trigger = {
 		election = no
 		has_country_flag = election_initialized
-		ruling_party_ideology = islamist
+		ruling_party_ideology = traditionalist
 		NOT = {
 			government = hms_government
 		}
@@ -2963,7 +2963,7 @@ country_event = {
 		clr_country_flag = election_riots
 		clr_country_flag = socialist_surge
 		clr_country_flag = communist_surge
-		clr_country_flag = islamist_surge
+		clr_country_flag = traditionalist_surge
 		clr_country_flag = liberal_surge
 		clr_country_flag = populist_surge
 		clr_country_flag = conservative_surge
@@ -2981,14 +2981,14 @@ country_event = {
 		remove_country_modifier = party_scandal_evidence
 		random_owned = {
 			limit = {
-				owner = { NOT = { has_country_flag = islamist_election_win } }
+				owner = { NOT = { has_country_flag = traditionalist_election_win } }
 			}
 			owner = {
 				clr_country_flag = tory_election_win
 				clr_country_flag = socialist_election_win
 				clr_country_flag = liberal_election_win
 				clr_country_flag = communist_election_win
-				set_country_flag = islamist_election_win
+				set_country_flag = traditionalist_election_win
 				clr_country_flag = populist_election_win
 				clr_country_flag = nationalist_election_win
 				clr_country_flag = progressive_election_win
@@ -3031,15 +3031,15 @@ country_event = {
 						OR = { religion = shiite religion = sunni }
 					}
 					ideology = {
-						value = islamist
+						value = traditionalist
 						factor = 0.02
 					}
 					scaled_militancy = {
-						ideology = islamist
+						ideology = traditionalist
 						factor = -2
 					}
 					scaled_consciousness = {
-						ideology = islamist
+						ideology = traditionalist
 						factor = -2
 					}
 				}
@@ -3063,15 +3063,15 @@ country_event = {
 						OR = { religion = shiite religion = sunni }
 					}
 					ideology = {
-						value = islamist
+						value = traditionalist
 						factor = 0.02
 					}
 					scaled_militancy = {
-						ideology = islamist
+						ideology = traditionalist
 						factor = -2
 					}
 					scaled_consciousness = {
-						ideology = islamist
+						ideology = traditionalist
 						factor = -2
 					}
 				}
@@ -3094,15 +3094,15 @@ country_event = {
 						OR = { religion = shiite religion = sunni }
 					}
 					ideology = {
-						value = islamist
+						value = traditionalist
 						factor = 0.02
 					}
 					scaled_militancy = {
-						ideology = islamist
+						ideology = traditionalist
 						factor = -2
 					}
 					scaled_consciousness = {
-						ideology = islamist
+						ideology = traditionalist
 						factor = -2
 					}
 				}
@@ -3144,7 +3144,7 @@ country_event = {
 		clr_country_flag = election_riots
 		clr_country_flag = socialist_surge
 		clr_country_flag = communist_surge
-		clr_country_flag = islamist_surge
+		clr_country_flag = traditionalist_surge
 		clr_country_flag = liberal_surge
 		clr_country_flag = populist_surge
 		clr_country_flag = conservative_surge
@@ -3169,7 +3169,7 @@ country_event = {
 				clr_country_flag = socialist_election_win
 				clr_country_flag = liberal_election_win
 				clr_country_flag = communist_election_win
-				clr_country_flag = islamist_election_win
+				clr_country_flag = traditionalist_election_win
 				set_country_flag = populist_election_win
 				clr_country_flag = nationalist_election_win
 				clr_country_flag = progressive_election_win
@@ -3331,7 +3331,7 @@ country_event = {
 		clr_country_flag = election_riots
 		clr_country_flag = socialist_surge
 		clr_country_flag = communist_surge
-		clr_country_flag = islamist_surge
+		clr_country_flag = traditionalist_surge
 		clr_country_flag = liberal_surge
 		clr_country_flag = populist_surge
 		clr_country_flag = conservative_surge
@@ -3356,7 +3356,7 @@ country_event = {
 				clr_country_flag = socialist_election_win
 				clr_country_flag = liberal_election_win
 				clr_country_flag = communist_election_win
-				clr_country_flag = islamist_election_win
+				clr_country_flag = traditionalist_election_win
 				clr_country_flag = populist_election_win
 				clr_country_flag = nationalist_election_win
 				set_country_flag = progressive_election_win
@@ -4219,7 +4219,7 @@ country_event = {
 			limit = { type = clergymen OR = { religion = sunni religion = shiite } }
 			militancy = 4
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.15
 			}
 		}
@@ -4817,7 +4817,7 @@ country_event = {
 					is_accepted_culture = yes
 				}
 				country = {
-					NOT = { is_ideology_enabled = islamist }
+					NOT = { is_ideology_enabled = traditionalist }
 				}
 			}
 			ideology = {
@@ -4832,11 +4832,11 @@ country_event = {
 					is_accepted_culture = yes
 				}
 				country = {
-					is_ideology_enabled = islamist
+					is_ideology_enabled = traditionalist
 				}
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.20
 			}
 		}
@@ -4858,7 +4858,7 @@ country_event = {
 					is_accepted_culture = yes
 				}
 				country = {
-					not = { is_ideology_enabled = islamist }
+					not = { is_ideology_enabled = traditionalist }
 				}
 			}
 			ideology = {
@@ -4878,11 +4878,11 @@ country_event = {
 					is_accepted_culture = yes
 				}
 				country = {
-					is_ideology_enabled = islamist
+					is_ideology_enabled = traditionalist
 				}
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.10
 			}
 		}
@@ -5746,11 +5746,11 @@ country_event = {
 				location = { is_colonial = no }
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.05
 			}
 			scaled_consciousness = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = -4
 			}
 		}
@@ -5758,7 +5758,7 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 2
-				ruling_party_ideology = islamist
+				ruling_party_ideology = traditionalist
 			}
 			modifier = {
 				factor = 0.5
@@ -5794,7 +5794,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				OR = { ruling_party_ideology = populist ruling_party_ideology = islamist }
+				OR = { ruling_party_ideology = populist ruling_party_ideology = traditionalist }
 			}
 		}
 	}
@@ -5858,7 +5858,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				OR = { ruling_party_ideology = populist ruling_party_ideology = islamist }
+				OR = { ruling_party_ideology = populist ruling_party_ideology = traditionalist }
 			}
 		}
 	}
@@ -6521,7 +6521,7 @@ country_event = {
 	id = 999036
 	title = "EVTNAME999036"
 	desc = "EVTDESC999036"
-	picture = "islamist"
+	picture = "traditionalist"
 	
 	trigger = {
 		has_country_flag = election_initialized
@@ -6529,12 +6529,12 @@ country_event = {
 		OR = {
 			socialist = 30
 			liberal = 30
-			islamist = 5
+			traditionalist = 5
 		}
-		NOT = { ruling_party_ideology = islamist }
+		NOT = { ruling_party_ideology = traditionalist }
 		NOT = { has_country_modifier = election_cooldown }
-		NOT = { has_country_flag = islamist_surge }
-		NOT = { is_ideology_enabled = islamist }
+		NOT = { has_country_flag = traditionalist_surge }
+		NOT = { is_ideology_enabled = traditionalist }
 	}
 	
 	mean_time_to_happen = {
@@ -6588,7 +6588,7 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = islamist_surge
+		set_country_flag = traditionalist_surge
 	}
 	
 	option = {
@@ -6603,11 +6603,11 @@ country_event = {
 				is_primary_culture = yes
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.15
 			}
 			scaled_consciousness = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = -6
 			}
 		}
@@ -6621,11 +6621,11 @@ country_event = {
 				is_primary_culture = yes
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.05
 			}
 			scaled_consciousness = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = -3
 			}
 		}
@@ -7391,11 +7391,11 @@ country_event = {
 			}
 			scaled_militancy = { 
 				factor = 3 
-				ideology = islamist
+				ideology = traditionalist
 			}				
 			scaled_consciousness = { 
 				factor = 3
-				ideology = islamist 
+				ideology = traditionalist 
 			}
 		}		
 		any_pop = { 
@@ -7549,12 +7549,12 @@ country_event = {
 			}		
 			scaled_militancy = { 
 				factor = 3
-				ideology = islamist
+				ideology = traditionalist
 			}	
 			
 			scaled_consciousness = { 
 				factor = 3
-				ideology = islamist
+				ideology = traditionalist
 			}
 		}
 		any_pop = { 
@@ -7708,12 +7708,12 @@ country_event = {
 			}
 			scaled_militancy = { 
 				factor = 3
-				ideology = islamist
+				ideology = traditionalist
 			}	
 			
 			scaled_consciousness = { 
 				factor = 3
-				ideology = islamist
+				ideology = traditionalist
 			}
 		}
 		any_pop = { 
@@ -7787,7 +7787,7 @@ country_event = {
 		
 		modifier = {
 			factor = 1.2
-			is_ideology_enabled = islamist
+			is_ideology_enabled = traditionalist
 		}
 		
 		modifier = {
@@ -7929,7 +7929,7 @@ country_event = {
 				OR = { religion = sunni religion = shiite }
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.025
 			}
 		}
@@ -8076,12 +8076,12 @@ country_event = {
 				OR = { religion = sunni religion = shiite }
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.05
 			}		
 			scaled_consciousness = { 
 				factor = 3
-				ideology = islamist
+				ideology = traditionalist
 			}
 		}
 	}
@@ -8111,7 +8111,7 @@ country_event = {
 			}
 			scaled_militancy = { 
 				factor = 3
-				ideology = islamist
+				ideology = traditionalist
 			}
 		}
 	}
@@ -8260,7 +8260,7 @@ country_event = {
 				value = no_child_care
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.05
 			}
 		}
@@ -8478,7 +8478,7 @@ country_event = {
 				value = minorities_oppression
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.05
 			}
 		}
@@ -8599,7 +8599,7 @@ country_event = {
 				OR = { religion = sunni religion = shiite }
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.10
 			}
 		}
@@ -8622,7 +8622,7 @@ country_event = {
 			}
 			scaled_militancy = { 
 				factor = 3
-				ideology = islamist
+				ideology = traditionalist
 			}
 		}
 	}
@@ -8758,7 +8758,7 @@ country_event = {
 				value = quota_immigration
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.05
 			}
 		}
@@ -8861,7 +8861,7 @@ country_event = {
 				OR = { religion = sunni religion = shiite } 
 			}
 			ideology = {
-				value = islamist
+				value = traditionalist
 				factor = 0.10
 			}
 		}
@@ -8873,7 +8873,7 @@ country_event = {
 			}
 			scaled_militancy = { 
 				factor = 3
-				ideology = islamist
+				ideology = traditionalist
 			}
 		}
 	}
