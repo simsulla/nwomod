@@ -302,21 +302,7 @@ country_event = {
 				value = pro_military
 			}
 			scaled_militancy = {
-				issue = anti_military
-				factor = 0.2
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC14040"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.1
-				value = anti_military
-			}
-			scaled_militancy = {
-				issue = pro_military
+				issue = pacifism
 				factor = 0.2
 			}
 		}
@@ -1255,7 +1241,7 @@ country_event = {
 				value = pro_military
 			}
 			scaled_militancy = {
-				issue = anti_military
+				issue = jingoism
 				factor = 0.2
 			}
 		}
@@ -1269,7 +1255,7 @@ country_event = {
 				value = pro_military
 			}
 			scaled_militancy = {
-				issue = anti_military
+				issue = pacifism
 				factor = 0.2
 			}
 		}
@@ -1321,7 +1307,7 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.30
-				value = anti_military
+				value = pacifism
 			}
 			scaled_militancy = {
 				issue = pro_military
@@ -1335,10 +1321,10 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.25
-				value = anti_military
+				value = pacifism
 			}
 			scaled_militancy = {
-				issue = pro_military
+				issue = jingoism
 				factor = 0.2
 			}
 		}
@@ -1349,30 +1335,11 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.15
-				value = anti_military
+				value = pacifism
 			}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTD14200"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.10
-				value = anti_military
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTE14200"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.05
-				value = anti_military
-			}
-		}
-	}
 }
 
 #Words or Violence
@@ -3557,7 +3524,7 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.10
-				value = anti_military
+				value = pro_military
 			}
 		}
 		any_pop = {
@@ -3575,7 +3542,7 @@ country_event = {
 				any_pop = {
 					dominant_issue = {
 						factor = 0.10
-						value = anti_military
+						value = pro_military
 					}
 				}
 			}
@@ -3597,7 +3564,7 @@ country_event = {
 	option = {	#Added by GAGA
 		name = "EVTOPTD140001"
 		random_list = {
-			50 = {
+			75 = {
 				any_pop = {
 					dominant_issue = {
 						factor = 0.10
@@ -3605,18 +3572,6 @@ country_event = {
 					}
 					scaled_consciousness = {
 						issue = pro_military
-						factor = 2
-					}
-				}
-			}
-			25 = {
-				any_pop = {
-					dominant_issue = {
-						factor = 0.10
-						value = anti_military
-					}
-					scaled_consciousness = {
-						issue = anti_military
 						factor = 2
 					}
 				}
@@ -3675,18 +3630,6 @@ country_event = {
 				any_pop = {
 					dominant_issue = {
 						factor = 0.10
-						value = anti_military
-					}
-					scaled_consciousness = {
-						issue = anti_military
-						factor = 2
-					}
-				}
-			}
-			25 = {
-				any_pop = {
-					dominant_issue = {
-						factor = 0.10
 						value = pro_military
 					}
 					scaled_consciousness = {
@@ -3695,7 +3638,7 @@ country_event = {
 					}
 				}
 			}
-			25 = {
+			50 = {
 				any_pop = {
 					dominant_issue = {
 						factor = 0.10
@@ -3774,19 +3717,19 @@ country_event = {
 		farmers = {
 			dominant_issue = {
 				factor = 0.30
-				value = anti_military
+				value = pro_military
 			}
 		}
 		craftsmen = {
 			dominant_issue = {
 				factor = 0.30
-				value = anti_military
+				value = pro_military
 			}
 		}
 		labourers = {
 			dominant_issue = {
 				factor = 0.30
-				value = anti_military
+				value = pro_military
 			}
 		}
 		soldiers = {
@@ -3812,7 +3755,7 @@ country_event = {
 			25 = {
 				any_pop = {
 					scaled_militancy = {
-						issue = anti_military
+						issue = pro_military
 						factor = 4
 					}
 					dominant_issue = {
@@ -3825,19 +3768,19 @@ country_event = {
 				farmers = {
 					dominant_issue = {
 						factor = 0.10
-						value = anti_military
+						value = pro_military
 					}
 				}
 				craftsmen = {
 					dominant_issue = {
 						factor = 0.10
-						value = anti_military
+						value = pro_military
 					}
 				}
 				labourers = {
 					dominant_issue = {
 						factor = 0.10
-						value = anti_military
+						value = pro_military
 					}
 				}
 				soldiers = {
@@ -3857,10 +3800,6 @@ country_event = {
 			scaled_militancy = {
 				issue = pro_military
 				factor = -3
-			}
-			scaled_militancy = {
-				issue = anti_military
-				factor = 3
 			}
 			scaled_militancy = {
 				issue = pacifism
@@ -3925,7 +3864,7 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.25
-				value = anti_military
+				value = jingoism
 			}
 			dominant_issue = {
 				factor = 0.05
@@ -3965,7 +3904,7 @@ country_event = {
 			}
 			dominant_issue = {
 				factor = 0.10
-				value = anti_military
+				value = jingoism
 			}
 		}
 	}
@@ -5686,10 +5625,6 @@ country_event = {
 				factor = 3
 			}
 			scaled_militancy = {
-				issue = anti_military
-				factor = 2
-			}
-			scaled_militancy = {
 				issue = pro_military
 				factor = 1
 			}
@@ -5715,40 +5650,7 @@ country_event = {
 				factor = 2
 			}
 			scaled_militancy = {
-				issue = anti_military
-				factor = 1
-			}
-			scaled_militancy = {
 				issue = jingoism
-				factor = 1
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC999004"
-		add_country_modifier = {
-			name = election_cooldown
-			duration = 30 
-		} 
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			dominant_issue = {
-				factor = 0.05
-				value = anti_military
-			}
-			scaled_militancy = {
-				issue = jingoism
-				factor = 2
-			}
-			scaled_militancy = {
-				issue = pro_military
-				factor = 1
-			}
-			scaled_militancy = {
-				issue = pacifism
 				factor = 1
 			}
 		}
@@ -5775,10 +5677,6 @@ country_event = {
 			scaled_militancy = {
 				issue = pro_military
 				factor = 2
-			}
-			scaled_militancy = {
-				issue = anti_military
-				factor = 1
 			}
 		}
 	}

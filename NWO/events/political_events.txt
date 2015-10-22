@@ -2610,7 +2610,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		war_policy = anti_military
+		war_policy = pacifism
 	}
 	
 	mean_time_to_happen = {
@@ -2629,7 +2629,7 @@ country_event = {
 		name = "EVTOPTA4408"
 		any_pop = {
 			dominant_issue = {
-				value = anti_military
+				value = pacifism
 				factor = 0.05
 			}
 		}
@@ -2651,10 +2651,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		war_policy = pacifism
-		OR = {
-			pacifism = 10
-			anti_military = 15
-		}
+		pacifism = 10
 	}
 	
 	mean_time_to_happen = {
