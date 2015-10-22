@@ -243,7 +243,7 @@ province_event = {
 	trigger = {
 		year = 1972
 		pop_majority_religion = sunni 
-		owner = { NOT = { government = islamist_dictatorship }  OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
+		owner = { NOT = { government = theocracy }  OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
 		NOT = { is_core = ISI } # 1014840 in isis.txt completes the ISI core
 		NOT = { has_province_modifier = salafi_supressed }
 		NOT = { has_province_modifier = salafi_movement }
@@ -295,7 +295,7 @@ province_event = {
 	trigger = {
 		year = 1972
 		pop_majority_religion = sunni 
-		owner = { NOT = { government = islamist_dictatorship } OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
+		owner = { NOT = { government = theocracy } OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
 		NOT = { is_core = ISI } # 1014840 in isis.txt complets the ISI core
 		has_province_modifier = salafi_supressed
 	}

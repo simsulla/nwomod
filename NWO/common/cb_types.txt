@@ -998,7 +998,7 @@ territorial_dispute = {
 		OR = { 
 			# Israel alone in the Arab world
 			AND = { tag = ISR exists = ISR THIS = { OR  = { primary_culture = sunni_arab primary_culture = shia_arab } } } 
-			AND = { tag = ISR exists = ISR THIS = { government = islamist_dictatorship OR = { pop_majority_religion = sunni pop_majority_religion = shiite } } } 
+			AND = { tag = ISR exists = ISR THIS = { government = theocracy OR = { pop_majority_religion = sunni pop_majority_religion = shiite } } } 
 			# Africa
 			AND = { tag = ERI exists = ERI THIS = { tag = ETH } } AND = { tag = ETH exists = ETH THIS = { tag = ERI } } # Badme
 			AND = { tag = CMR exists = CMR THIS = { tag = NGE } } AND = { tag = NGE exists = NGE THIS = { tag = CMR } } # Bakassi
@@ -1236,7 +1236,7 @@ install_authoritarian_regime = {
 				is_secondary_power = yes
 			}
 			NOT = { government = proletarian_dictatorship }
-			NOT = { government = islamist_dictatorship }
+			NOT = { government = theocracy }
 		}
 		is_vassal = no
 		civilized = yes
@@ -1284,7 +1284,7 @@ install_theocratic_regime = {
 
 	can_use = {
 		THIS = {
-			government = islamist_dictatorship
+			government = theocracy
 			NOT = { war_policy = pacifism }
 		}
 		is_vassal = no

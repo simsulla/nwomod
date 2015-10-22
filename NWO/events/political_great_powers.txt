@@ -914,7 +914,7 @@ country_event = {
                                                 government = nationalist_dictatorship
                                                 government = populist_dictatorship
                                                 government = proletarian_dictatorship
-                                                government = islamist_dictatorship
+                                                government = theocracy
                                         }
                                 }
                         }
@@ -983,14 +983,14 @@ country_event = {
                 }
                 random_owned = {
                         limit = {
-                                FROM = { government = islamist_dictatorship }
+                                FROM = { government = theocracy }
                                 owner = {
                                         civilized = yes
-                                        NOT = { government = islamist_dictatorship }
+                                        NOT = { government = theocracy }
                                 }
                         }
                         owner = {
-                                government = islamist_dictatorship
+                                government = theocracy
                                 ruling_party_ideology = islamist
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
@@ -1699,7 +1699,7 @@ country_event = {
 	
 	option = {
 		name = "EVT_96089_OPTA"
-		government = islamist_dictatorship country_event = 800051
+		government = theocracy country_event = 800051
 		ruling_party_ideology = islamist
 		clr_country_flag = tory_election_win
 		clr_country_flag = socialist_election_win
