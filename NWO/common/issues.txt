@@ -395,11 +395,11 @@ political_reforms = {
 	minorities_reform = {
 		next_step_only = yes
 		minorities_oppression = { #oppression
-			rules = { primary_culture_voting = yes }
+			rules = { culture_voting = yes } # primary_culture_voting
 			global_immigrant_attract = -0.1
 		}
 		minorities_equal_rights = { # limited
-			rules = { culture_voting = yes }
+			rules = { all_voting = yes }
 			allow = { not = { citizenship_policy = residency } }
 		}
 		minorities_affirmative_action = { # protected
