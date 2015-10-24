@@ -168,60 +168,48 @@ political_reforms = {
 	vote_franschise = {
 		next_step_only = yes
 		none_voting = {
-			rules = { largest_share = yes }
 			rich_vote = 0
 			middle_vote = 0
 			poor_vote = 0
-			cb_generation_speed_modifier = 0.3
 		}
 		registered_voting = { # landed_voting  
-			rules = { largest_share = yes }
-			rich_vote = 1
-			middle_vote = 1
-			poor_vote = 0
-			global_immigrant_attract = 0.15
-			cb_generation_speed_modifier = -0.1
-		}
-		universal_weighted_voting = { # wealth_weighted_voting 
 			rich_vote = 2
 			middle_vote = 1
 			poor_vote = 0
-			
+			global_immigrant_attract = 0.01
+		}
+		universal_weighted_voting = { # wealth_weighted_voting 
+			rich_vote = 1
+			middle_vote = 1
+			poor_vote = 0
 			global_immigrant_attract = 0.02
 		}
 		universal_voting = { # wealth_voting
 			rich_vote = 1
 			middle_vote = 1
-			poor_vote = 0
-			
+			poor_vote = 1
 			global_immigrant_attract = 0.03
 		}
 		promoted_voting = { # universal_voting
-			rich_vote = 1
-			rules = { largest_share = yes }
+			rich_vote = 2
 			middle_vote = 1
 			poor_vote = 1
-			global_immigrant_attract = 0.25
-			cb_generation_speed_modifier = -0.3
+			global_immigrant_attract = 0.04
 		}
 	}
-
 	political_opinions = { # upper_house_composition
 		next_step_only = yes
-		administrative = yes
 		ruling_party_opinion = { # party_appointed
 			rules = { same_as_ruling_party = yes }
 		}
 		regulated_opinion = { # appointed
 			rules = { rich_only = yes }
-			global_immigrant_attract = 0.01
 		}
 		open_opinion = { # state_equal_weight
 			rules = { state_vote = yes }
 			allow = { 
 				NOT = { vote_franschise = none_voting }
 			}
-			global_immigrant_attract = 0.02
 		}
 		free_opinion = { # population_equal_weight
 			rules = { population_vote = yes }
@@ -236,7 +224,6 @@ political_reforms = {
 			}
 		}
 	}
-
 	religious_rights = { 
 		next_step_only = yes
 		state_religion = { 
@@ -246,23 +233,26 @@ political_reforms = {
 		secularism_religion = { 
 		}
 	}
-
 	internet_infrastructure = { # public_meetings
 		next_step_only = yes
 		quality_of_service = { # no_meeting 	
-			suppression_points_modifier = 0.25
 		}
 		open_unregulated = { # yes_meeting
-			issue_change_speed = 0.25
+			issue_change_speed = 1.0
+			global_immigrant_attract = 0.01
+			suppression_points_modifier = -0.25
 		}
 		net_neutrality = { # 
-		issue_change_speed = 0.5
+			issue_change_speed = 1.2
+			global_immigrant_attract = 0.01
+			suppression_points_modifier = -0.25
 		}
 		sponsored_access = { # 
-			issue_change_speed = -0.25
+			issue_change_speed = 0.5
+			global_immigrant_attract = -0.01
+			suppression_points_modifier = 0.25
 		}
 	}
-
 	publishing_rights = { # press_rights
 		next_step_only = yes
 		censored_publishing = { # state_press 
@@ -306,7 +296,6 @@ political_reforms = {
 			global_population_growth = -0.01
 		}
 	}
-
 	political_parties = {
 		next_step_only = yes
 		parties_not_allowed = { # underground_parties
@@ -339,7 +328,6 @@ political_reforms = {
 			}
 		}
 	}
-
 	immigration_policy = {
 		next_step_only = yes
 		
@@ -391,7 +379,6 @@ political_reforms = {
 		}
 		
 	}
-	
 	minorities_reform = {
 		next_step_only = yes
 		minorities_oppression = { #oppression
@@ -408,8 +395,8 @@ political_reforms = {
 			global_immigrant_attract = 0.1
 		}
 	}
-	
 	voting_system = {
+		next_step_only = yes
 		first_past_the_post = {
 			rules = { largest_share = yes }
 			allow = { 
@@ -436,7 +423,7 @@ political_reforms = {
 # Social reforms.
 ##########################################
 social_reforms = {
-	# wage and work hours
+
 	wage_and_work_hours = { # wage_reform
 		administrative = yes
 		next_step_only = yes
@@ -577,7 +564,6 @@ social_reforms = {
 			tax_efficiency = -0.20
 		}
 	}
-	
 	pensions = {
 		next_step_only = yes
 		no_pensions = {
@@ -628,7 +614,6 @@ social_reforms = {
 			global_pop_consciousness_modifier = -0.02
 		}
 	}
-
 	pollution = {
 		administrative = yes
 		next_step_only = yes
@@ -651,7 +636,6 @@ social_reforms = {
 			administrative_multiplier = 4
 		}
 	}
-	
 	education = {
 		next_step_only = yes
 		administrative = yes
@@ -678,7 +662,6 @@ social_reforms = {
 			administrative_multiplier = 4
 		}
 	}
-	
 	social_service_reform = { # arts_endowment
 		administrative = yes
 		next_step_only = yes
@@ -701,6 +684,7 @@ social_reforms = {
 			global_pop_consciousness_modifier = -0.04
 		}
 	}
+
 }
 
 ##########################################
