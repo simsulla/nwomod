@@ -127,7 +127,7 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19003_A
 		FROM = { add_casus_belli = { target = THIS type = install_communist_gov_cb months = 12  } diplomatic_influence = { who = THIS value = -100 } }
-		ai_chance = { factor = 0 modifier = { factor = 1 tag = FIN } }
+		ai_chance = { factor = 0.1 modifier = { factor = 10 tag = FIN } }
 	}
 	
 	option = {

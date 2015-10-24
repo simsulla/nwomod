@@ -30,6 +30,7 @@ country_event = {
     war = { target = ENG attacker_goal = { casus_belli = acquire_core_state state_province_id = 1755 } defender_goal = { casus_belli = status_quo } }
 	# Only if ISR exist shall this kick of
 	random_country = { limit = { tag = ENG exists = ISR } country_event = 8500302 }
+	1496 = { add_province_modifier = { name = embankment_dam duration = 3500 } }
 	ai_chance = { factor = 100 }
   }
 
@@ -37,6 +38,7 @@ country_event = {
     name = EVT_8500301_B
 	relation = { who = USA value = 100 } 
 	relation = { who = ENG value = 100 } 
+	1496 = { add_province_modifier = { name = embankment_dam duration = 365 } }
 	ai_chance = { factor = 0 }
   }
 }

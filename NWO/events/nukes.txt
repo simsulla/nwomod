@@ -23,7 +23,7 @@ country_event = {
 	any_country = { limit = { war_with = THIS } add_country_modifier = { name = task_nuke duration = 60 } }
 	add_country_modifier = { name = nukes_enabled duration = 350 } 
 	badboy = 5
-	ai_chance = { factor = 0 modifier = { factor = 1 NOT = { badboy = 15 } } }
+	ai_chance = { factor = 0.1 modifier = { factor = 10 NOT = { badboy = 15 } } }
   }
   option = {
     name = EVT_8233000_B
