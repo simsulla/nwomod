@@ -687,7 +687,6 @@ issues =
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.80 } }
 	}
 	secularism_religion = {
-		factor = 1
 		factor = 1.0
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = secularism_religion } NOT = { religion = secularism } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
@@ -729,7 +728,7 @@ issues =
 	}
 	sponsored_access = {
 		factor = 1
-		modifier = { factor = 0 OR = { is_next_reform = sponsored_access } }
+		modifier = { factor = 0 is_next_reform = sponsored_access }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }
