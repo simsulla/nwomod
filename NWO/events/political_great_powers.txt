@@ -127,13 +127,13 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19003_A
 		FROM = { add_casus_belli = { target = THIS type = install_communist_gov_cb months = 12  } diplomatic_influence = { who = THIS value = -100 } }
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 0 modifier = { factor = 1 tag = FIN } }
 	}
 	
 	option = {
 		name = EVT_19003_B
 		government = proletarian_dictatorship country_event = 800052
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 1 modifier = { factor = 0 tag = FIN } }
 	}
 }
 country_event = { # Demand install democracy
@@ -146,13 +146,13 @@ country_event = { # Demand install democracy
 	option = {
 		name = EVT_19004_A
 		FROM = { add_casus_belli = { target = THIS type = install_democracy months = 12  } diplomatic_influence = { who = THIS value = -100 } }
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 0 modifier = { factor = 0 tag = YUG }}
 	}
 	
 	option = {
 		name = EVT_19004_B
 		government = democracy country_event = 800054
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 1 modifier = { factor = 0 tag = YUG } }
 	}
 }
 country_event = {
