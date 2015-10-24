@@ -242,9 +242,7 @@ country_event = {
   option = {
     name = EVT_8218011_A
 	any_pop = { militancy = 0.5 }
-	release = SYR 
-	release = JOR 
-	release = IRQ 
+	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } } country_event = 8212010 }
 	change_tag = EGY
   }
   # TODO how to avoid this?
