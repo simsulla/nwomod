@@ -4,8 +4,10 @@ political_decisions = {
 		picture = "claim_greater_korea"
 		potential = {
 			OR = {
-				is_sphere_leader_of = SKO
-				is_sphere_leader_of = NKO
+				SKO = { part_of_sphere = no }
+				NKO = { part_of_sphere = no }
+				tag = SKO
+				tag = NKO
 			}
 			NOT = { exists = KOR }
 			NOT = { has_country_flag = allow_form_korea }
