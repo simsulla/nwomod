@@ -46,7 +46,7 @@ country_event = {
 
   trigger = {
     tag = JOR
-    year = 1946 NOT = { year = 1947 }
+    year = 1946 NOT = { year = 1990 }
     OR = { government = absolute_monarchy government = hms_government }
   }
 
@@ -68,7 +68,7 @@ country_event = {
 
   trigger = {
     tag = JOR
-    year = 1951 NOT = { year = 1952 }
+    year = 1951 NOT = { year = 1990 }
   }
 
   mean_time_to_happen = { months = 11 }
@@ -88,7 +88,7 @@ country_event = {
 
   trigger = {
     tag = JOR
-    year = 1952 NOT = { year = 1953 }
+    year = 1952 NOT = { year = 1990 }
   }
 
   mean_time_to_happen = { months = 8 }
@@ -99,5 +99,38 @@ country_event = {
 	prestige = 5
 	relation = { who = SAA value = 100 }
 	relation = { who = EGY value = 100 }
+  }
+}
+
+country_event = {
+  id = 8007911
+  title = EVT_8007911_NAME 
+  # EVT_8007911_NAME;Black September
+  desc = EVT_8007911_DESC 
+  # EVT_8007911_DESC;The term Black September refers to the Jordanian Civil War that began in September 1970 and ended in July of 1971. The conflict was fought between the Palestine Liberation Organisation (PLO) under the leadership of Yasser Arafat, and the Jordanian Armed Forces under the leadership of King Hussein. At its core the civil war sought to determine if Jordan would be ruled by the Palestine Liberation Organisation or the Hashemite Monarchy.
+  picture = "nwo2_king_talal"
+  fire_only_once = yes
+
+  trigger = {
+    tag = JOR
+	exists = ISR
+    OR = { government = absolute_monarchy government = hms_government }
+    year = 1970 NOT = { year = 1990 }
+  }
+
+  mean_time_to_happen = { months = 8 }
+
+  option = {
+    name = EVT_8007911_A 
+	# EVT_8007911_A;Drive out the PLO
+	any_owned = { limit = { is_capital = no } change_controller = REB }
+	prestige = -5
+	ai_chance = { value = 100 }
+  }
+  option = {
+    name = EVT_8007911_B 
+	# EVT_8007911_B;End the Hashemite Monarchy
+	any_owned = { change_controller = REB }
+	ai_chance = { value = 0 }
   }
 }
