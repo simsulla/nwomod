@@ -175,14 +175,14 @@ country_event = {
 
   option = {
     name = EVT_8012213_A
-	add_casus_belli = { target = RHO type = install_democracy months = 24 }
+	casus_belli = { target = RHO type = install_democracy months = 24 }
 	random_country = { limit = { tag = ZAM vassal_of = RHO } war = { target = RHO attacker_goal = { casus_belli = release_puppet } defender_goal = { casus_belli = status_quo }  } }
 	ai_chance = { factor = 0 }
   }
   option = {
     name = EVT_8012213_A
 	prestige = -10
-	add_casus_belli = { target = RHO type = install_democracy months = 24 }
+	casus_belli = { target = RHO type = install_democracy months = 24 }
 	ai_chance = {factor = 100 }
 }  
   

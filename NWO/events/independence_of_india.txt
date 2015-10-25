@@ -236,7 +236,7 @@ country_event = {
 		HND = { release_vassal = THIS } 
 		HND = { leave_alliance = THIS }
 		ENG = { diplomatic_influence = { who = THIS value = -100 } }
-		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
+		HND = { casus_belli = { target = THIS type = annex_core_country } }
 		# TODO inform HND about this
 		ai_chance = { factor = 0 }
 	}
@@ -275,7 +275,7 @@ country_event = {
 		HND = { release_vassal = THIS } 
 		HND = { leave_alliance = THIS }
 		ENG = { diplomatic_influence = { who = THIS value = -100 } }
-		PAK = { add_casus_belli = { target = THIS type = annex_core_country } }
+		PAK = { casus_belli = { target = THIS type = annex_core_country } }
 		# TODO inform PAK about this
 		# TODO inform HND about this
 		ai_chance = { factor = 0 }
@@ -322,7 +322,7 @@ country_event = {
 		HND = { release_vassal = THIS } 
 		HND = { leave_alliance = THIS }
 		ENG = { diplomatic_influence = { who = THIS value = -100 } }
-		HND = { add_casus_belli = { target = THIS type = annex_core_country } }
+		HND = { casus_belli = { target = THIS type = annex_core_country } }
 		# TODO inform HND about this # will trigger 8007229
 		ai_chance = { factor = 100 }
 	}

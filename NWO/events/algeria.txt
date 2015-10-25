@@ -292,7 +292,7 @@ country_event = { # Philippeville massacre
 		release_vassal = MOR
 		MOR = { country_event = 8009927 }
 		FRA = { diplomatic_influence = { who = MOR value = -200 } }
-		FRA = { add_casus_belli = { target = MOR type = make_puppet months = 24 } }
+		FRA = { casus_belli = { target = MOR type = make_puppet months = 24 } }
 	}
 	prestige = -10
 	ai_chance = { factor = 0 }
@@ -344,7 +344,7 @@ country_event = { # Battle of Algiers
 		release_vassal = TUN
 		TUN = { country_event = 8015409 }
 		FRA = { diplomatic_influence = { who = TUN value = -200 } }
-		FRA = { add_casus_belli = { target = TUN type = make_puppet months = 24 } }
+		FRA = { casus_belli = { target = TUN type = make_puppet months = 24 } }
 	}
 	prestige = -10
 	ai_chance = { factor = 0 }

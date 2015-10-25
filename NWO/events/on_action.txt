@@ -107,7 +107,7 @@ country_event = {
 		name = "EVTOPTB70006" # become_independent
 		FROM = { release_vassal = THIS }
 		relation = { who = FROM value = -100 }
-		add_casus_belli = {
+		casus_belli = {
 			target = FROM
 			type  = make_puppet
 			months = 24
