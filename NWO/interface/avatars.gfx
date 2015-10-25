@@ -60,6 +60,317 @@ objectTypes = {
 		scale = 1.7
 	}	
 	
+	# GENERIC AIRPOWER ##############################################
+	EMFXActorType = {
+		name = "GenericFighter"
+		actorfile = "gfx\anims\GenericFighter.xac"
+		
+		idle   = "gfx\anims\FighterMove.xsm"
+		move   = "gfx\anims\FighterMove.xsm"
+		attack = "gfx\anims\FighterAirAttack.xsm"
+		scale = 2.25
+	}
+
+	EMFXActorType = {
+		name = "PrussianGCFighter"
+		actorfile = "gfx\anims\GermanFighter.xac"
+		
+		idle   = "gfx\anims\FighterMove.xsm"
+		move   = "gfx\anims\FighterMove.xsm"
+		attack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}
+	
+	EMFXActorType = {
+		name = "JapaneseGCFighter"
+		actorfile = "gfx\anims\JapaneseFighter.xac"
+		
+		idle   = "gfx\anims\FighterMove.xsm"
+		move   = "gfx\anims\FighterMove.xsm"
+		attack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}
+	
+	EMFXActorType = {
+		name = "BritishGCFighter"
+		actorfile = "gfx\anims\BritishFighter.xac"
+		
+		idle   = "gfx\anims\FighterMove.xsm"
+		move   = "gfx\anims\FighterMove.xsm"
+		attack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}
+	
+	EMFXActorType = {
+		name = "UsGCFighter"
+		actorfile = "gfx\anims\UsFighter.xac"
+		
+		idle   = "gfx\anims\FighterMove.xsm"
+		move   = "gfx\anims\FighterMove.xsm"
+		attack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}
+	
+	
+	EMFXActorType = {
+		name = "RussianGCFighter"
+		actorfile = "gfx\anims\SovietFighter.xac"
+		
+		idle   = "gfx\anims\FighterMove.xsm"
+		move   = "gfx\anims\FighterMove.xsm"
+		attack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}
+	
+	EMFXActorType = {
+		name = "ItalianGCFighter"
+		actorfile = "gfx\anims\ItalianFighter.xac"
+		
+		idle   = "gfx\anims\FighterMove.xsm"
+		move   = "gfx\anims\FighterMove.xsm"
+		attack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}
+	
+	EMFXActorType = {
+		name = "FrenchGCFighter"
+		actorfile = "gfx\anims\FrenchFighter.xac"
+		
+		idle   = "gfx\anims\FighterMove.xsm"
+		move   = "gfx\anims\FighterMove.xsm"
+		attack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.3
+	}
+	
+	EMFXActorType = {
+		name = "UsGCBomber"
+		actorfile = "gfx\anims\UsBomber.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 2.5
+		
+		animation = {
+			name = "rotate"
+			file = "gfx\anims\FighterRotate.xsm"
+		}
+	}
+	
+	EMFXActorType = {
+		name = "ItalianGCBomber"
+		actorfile = "gfx\anims\ItalianBomber.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 2.5
+		
+		animation = {
+			name = "rotate"
+			file = "gfx\anims\FighterRotate.xsm"
+		}
+	}
+	
+	EMFXActorType = {
+		name = "FrenchGCBomber"
+		actorfile = "gfx\anims\FrenchBomber.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 2.5
+		
+		animation = {
+			name = "rotate"
+			file = "gfx\anims\FighterRotate.xsm"
+		}
+	}
+	
+	EMFXActorType = {
+		name = "BritishGCBomber"
+		actorfile = "gfx\anims\BritishBomber.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 2.5
+		
+		animation = {
+			name = "rotate"
+			file = "gfx\anims\FighterRotate.xsm"
+		}
+	}
+	
+	EMFXActorType = {
+		name = "PrussianGCBomber"
+		actorfile = "gfx\anims\GermanBomber.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 2.4
+						
+		animation = {
+			name = "rotate"
+			file = "gfx\anims\FighterRotate.xsm"
+		}
+	}
+	
+	EMFXActorType = {
+		name = "GenericBomber"
+		actorfile = "gfx\anims\GenericBomber.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 2.5
+		
+		animation = {
+			name = "rotate"
+			file = "gfx\anims\FighterRotate.xsm"
+		}
+	}	
+	
+	EMFXActorType = {
+		name = "RussianGCBomber"
+		actorfile = "gfx\anims\SovietBomber.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 2.35
+		
+		animation = {
+			name = "rotate"
+			file = "gfx\anims\FighterRotate.xsm"
+		}
+	}	
+	
+	EMFXActorType = {
+		name = "JapaneseGCBomber"
+		actorfile = "gfx\anims\JapaneseBomber.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 2.5
+		
+		animation = {
+			name = "rotate"
+			file = "gfx\anims\FighterRotate.xsm"
+		}
+	}	
+
+	EMFXActorType = {
+		name = "GenericMissile"
+		actorfile = "gfx\anims\v1.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 1.75
+
+	}	
+	
+	EMFXActorType = {
+		name = "UsGCMissile"
+		actorfile = "gfx\anims\jb2.xac"
+		
+		idle   = "gfx\anims\bomberflying.xsm"
+		move   = "gfx\anims\bomberflying.xsm"
+		attack = "gfx\anims\bomberunderattack.xsm"
+		scale = 1.75
+
+	}		
+	
+	EMFXActorType = {
+		name = "PrussianGCTactical"
+		actorfile = "gfx\anims\GermanTactical.xac"
+		
+		idle   = "gfx\anims\tactical_flying.xsm"
+		move   = "gfx\anims\tactical_flying.xsm"
+		attack = "gfx\anims\tactical_flying.xsm"
+		#attack = "gfx\anims\FighterAirAttack.xsm"
+		# bombattack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}	
+	
+	EMFXActorType = {
+		name = "JapaneseGCTactical"
+		actorfile = "gfx\anims\JapaneseTactical.xac"
+		
+		idle   = "gfx\anims\tactical_flying.xsm"
+		move   = "gfx\anims\tactical_flying.xsm"
+		attack = "gfx\anims\tactical_flying.xsm"
+		#attack = "gfx\anims\FighterAirAttack.xsm"
+		# bombattack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}	
+	
+	EMFXActorType = {
+		name = "UsGCTactical"
+		actorfile = "gfx\anims\UsTactical.xac"
+		
+		idle   = "gfx\anims\tactical_flying.xsm"
+		move   = "gfx\anims\tactical_flying.xsm"
+		attack = "gfx\anims\tactical_flying.xsm"
+		#attack = "gfx\anims\FighterAirAttack.xsm"
+		# bombattack = "gfx\anims\FighterBombAttack.xsm"
+		scale = 2.25
+	}
+	
+		
+	EMFXActorType = {
+		name = "ItalianGCTactical"
+		actorfile = "gfx\anims\ItalianTactical.xac"
+		
+		idle   = "gfx\anims\tactical_flying.xsm"
+		move   = "gfx\anims\tactical_flying.xsm"
+		attack = "gfx\anims\tactical_flying.xsm"
+		scale = 2.25
+	}
+	
+	EMFXActorType = {
+		name = "RussianGCTactical"
+		actorfile = "gfx\anims\SovietTactical.xac"
+		
+		idle   = "gfx\anims\tactical_flying.xsm"
+		move   = "gfx\anims\tactical_flying.xsm"
+		attack = "gfx\anims\tactical_flying.xsm"
+		scale = 2.25
+	}
+	
+	EMFXActorType = {
+		name = "BritishGCTactical"
+		actorfile = "gfx\anims\BritishTactical.xac"
+		
+		idle   = "gfx\anims\tactical_flying.xsm"
+		move   = "gfx\anims\tactical_flying.xsm"
+		attack = "gfx\anims\tactical_flying.xsm"
+		scale = 2.25
+	}
+
+	EMFXActorType = {
+		name = "GenericTactical"
+		actorfile = "gfx\anims\GenericTactical.xac"
+		
+		idle   = "gfx\anims\tactical_flying.xsm"
+		move   = "gfx\anims\tactical_flying.xsm"
+		attack = "gfx\anims\tactical_flying.xsm"
+		scale = 2.25
+	}
+	
+	EMFXActorType = {
+		name = "FrenchGCTactical"
+		actorfile = "gfx\anims\FrenchTactical.xac"
+		
+		idle   = "gfx\anims\tactical_flying.xsm"
+		move   = "gfx\anims\tactical_flying.xsm"
+		attack = "gfx\anims\tactical_flying.xsm"
+		scale = 2.25
+	}
+	
 	#  TANKS ##############################################
 	EMFXActorType = {
 		name = "GenericTank"
@@ -814,317 +1125,6 @@ objectTypes = {
 		scale = 0.53
 	}
 
-	# GENERIC AIRPOWER ##############################################
-	EMFXActorType = {
-		name = "GenericFighter"
-		actorfile = "gfx\anims\GenericFighter.xac"
-		
-		idle   = "gfx\anims\FighterMove.xsm"
-		move   = "gfx\anims\FighterMove.xsm"
-		attack = "gfx\anims\FighterAirAttack.xsm"
-		scale = 2.25
-	}
-
-	EMFXActorType = {
-		name = "PrussianGCFighter"
-		actorfile = "gfx\anims\GermanFighter.xac"
-		
-		idle   = "gfx\anims\FighterMove.xsm"
-		move   = "gfx\anims\FighterMove.xsm"
-		attack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}
-	
-	EMFXActorType = {
-		name = "JapaneseGCFighter"
-		actorfile = "gfx\anims\JapaneseFighter.xac"
-		
-		idle   = "gfx\anims\FighterMove.xsm"
-		move   = "gfx\anims\FighterMove.xsm"
-		attack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}
-	
-	EMFXActorType = {
-		name = "BritishGCFighter"
-		actorfile = "gfx\anims\BritishFighter.xac"
-		
-		idle   = "gfx\anims\FighterMove.xsm"
-		move   = "gfx\anims\FighterMove.xsm"
-		attack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}
-	
-	EMFXActorType = {
-		name = "UsGCFighter"
-		actorfile = "gfx\anims\UsFighter.xac"
-		
-		idle   = "gfx\anims\FighterMove.xsm"
-		move   = "gfx\anims\FighterMove.xsm"
-		attack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}
-	
-	
-	EMFXActorType = {
-		name = "RussianGCFighter"
-		actorfile = "gfx\anims\SovietFighter.xac"
-		
-		idle   = "gfx\anims\FighterMove.xsm"
-		move   = "gfx\anims\FighterMove.xsm"
-		attack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}
-	
-	EMFXActorType = {
-		name = "ItalianGCFighter"
-		actorfile = "gfx\anims\ItalianFighter.xac"
-		
-		idle   = "gfx\anims\FighterMove.xsm"
-		move   = "gfx\anims\FighterMove.xsm"
-		attack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}
-	
-	EMFXActorType = {
-		name = "FrenchGCFighter"
-		actorfile = "gfx\anims\FrenchFighter.xac"
-		
-		idle   = "gfx\anims\FighterMove.xsm"
-		move   = "gfx\anims\FighterMove.xsm"
-		attack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.3
-	}
-	
-	EMFXActorType = {
-		name = "UsGCBomber"
-		actorfile = "gfx\anims\UsBomber.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 2.5
-		
-		animation = {
-			name = "rotate"
-			file = "gfx\anims\FighterRotate.xsm"
-		}
-	}
-	
-	EMFXActorType = {
-		name = "ItalianGCBomber"
-		actorfile = "gfx\anims\ItalianBomber.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 2.5
-		
-		animation = {
-			name = "rotate"
-			file = "gfx\anims\FighterRotate.xsm"
-		}
-	}
-	
-	EMFXActorType = {
-		name = "FrenchGCBomber"
-		actorfile = "gfx\anims\FrenchBomber.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 2.5
-		
-		animation = {
-			name = "rotate"
-			file = "gfx\anims\FighterRotate.xsm"
-		}
-	}
-	
-	EMFXActorType = {
-		name = "BritishGCBomber"
-		actorfile = "gfx\anims\BritishBomber.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 2.5
-		
-		animation = {
-			name = "rotate"
-			file = "gfx\anims\FighterRotate.xsm"
-		}
-	}
-	
-	EMFXActorType = {
-		name = "PrussianGCBomber"
-		actorfile = "gfx\anims\GermanBomber.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 2.4
-						
-		animation = {
-			name = "rotate"
-			file = "gfx\anims\FighterRotate.xsm"
-		}
-	}
-	
-	EMFXActorType = {
-		name = "GenericBomber"
-		actorfile = "gfx\anims\GenericBomber.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 2.5
-		
-		animation = {
-			name = "rotate"
-			file = "gfx\anims\FighterRotate.xsm"
-		}
-	}	
-	
-	EMFXActorType = {
-		name = "RussianGCBomber"
-		actorfile = "gfx\anims\SovietBomber.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 2.35
-		
-		animation = {
-			name = "rotate"
-			file = "gfx\anims\FighterRotate.xsm"
-		}
-	}	
-	
-	EMFXActorType = {
-		name = "JapaneseGCBomber"
-		actorfile = "gfx\anims\JapaneseBomber.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 2.5
-		
-		animation = {
-			name = "rotate"
-			file = "gfx\anims\FighterRotate.xsm"
-		}
-	}	
-
-	EMFXActorType = {
-		name = "GenericMissile"
-		actorfile = "gfx\anims\v1.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 1.75
-
-	}	
-	
-	EMFXActorType = {
-		name = "UsGCMissile"
-		actorfile = "gfx\anims\jb2.xac"
-		
-		idle   = "gfx\anims\bomberflying.xsm"
-		move   = "gfx\anims\bomberflying.xsm"
-		attack = "gfx\anims\bomberunderattack.xsm"
-		scale = 1.75
-
-	}		
-	
-	EMFXActorType = {
-		name = "PrussianGCTactical"
-		actorfile = "gfx\anims\GermanTactical.xac"
-		
-		idle   = "gfx\anims\tactical_flying.xsm"
-		move   = "gfx\anims\tactical_flying.xsm"
-		attack = "gfx\anims\tactical_flying.xsm"
-		#attack = "gfx\anims\FighterAirAttack.xsm"
-		# bombattack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}	
-	
-	EMFXActorType = {
-		name = "JapaneseGCTactical"
-		actorfile = "gfx\anims\JapaneseTactical.xac"
-		
-		idle   = "gfx\anims\tactical_flying.xsm"
-		move   = "gfx\anims\tactical_flying.xsm"
-		attack = "gfx\anims\tactical_flying.xsm"
-		#attack = "gfx\anims\FighterAirAttack.xsm"
-		# bombattack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}	
-	
-	EMFXActorType = {
-		name = "UsGCTactical"
-		actorfile = "gfx\anims\UsTactical.xac"
-		
-		idle   = "gfx\anims\tactical_flying.xsm"
-		move   = "gfx\anims\tactical_flying.xsm"
-		attack = "gfx\anims\tactical_flying.xsm"
-		#attack = "gfx\anims\FighterAirAttack.xsm"
-		# bombattack = "gfx\anims\FighterBombAttack.xsm"
-		scale = 2.25
-	}
-	
-		
-	EMFXActorType = {
-		name = "ItalianGCTactical"
-		actorfile = "gfx\anims\ItalianTactical.xac"
-		
-		idle   = "gfx\anims\tactical_flying.xsm"
-		move   = "gfx\anims\tactical_flying.xsm"
-		attack = "gfx\anims\tactical_flying.xsm"
-		scale = 2.25
-	}
-	
-	EMFXActorType = {
-		name = "RussianGCTactical"
-		actorfile = "gfx\anims\SovietTactical.xac"
-		
-		idle   = "gfx\anims\tactical_flying.xsm"
-		move   = "gfx\anims\tactical_flying.xsm"
-		attack = "gfx\anims\tactical_flying.xsm"
-		scale = 2.25
-	}
-	
-	EMFXActorType = {
-		name = "BritishGCTactical"
-		actorfile = "gfx\anims\BritishTactical.xac"
-		
-		idle   = "gfx\anims\tactical_flying.xsm"
-		move   = "gfx\anims\tactical_flying.xsm"
-		attack = "gfx\anims\tactical_flying.xsm"
-		scale = 2.25
-	}
-
-	EMFXActorType = {
-		name = "GenericTactical"
-		actorfile = "gfx\anims\GenericTactical.xac"
-		
-		idle   = "gfx\anims\tactical_flying.xsm"
-		move   = "gfx\anims\tactical_flying.xsm"
-		attack = "gfx\anims\tactical_flying.xsm"
-		scale = 2.25
-	}
-	
-	EMFXActorType = {
-		name = "FrenchGCTactical"
-		actorfile = "gfx\anims\FrenchTactical.xac"
-		
-		idle   = "gfx\anims\tactical_flying.xsm"
-		move   = "gfx\anims\tactical_flying.xsm"
-		attack = "gfx\anims\tactical_flying.xsm"
-		scale = 2.25
-	}
-	
 	# ARTILLERY ###################################################
 		EMFXActorType = {
 		name = "PrussianGCArtillery3"
