@@ -291,497 +291,87 @@ demotion_chance =
 
 #general migration chance mtth, same for all pops
 migration_chance = {
-    factor = 0.02
-	group = {
-		modifier = {
-			factor = 0.1
-			not = { life_needs = 0.8 }
-		}
-		modifier = {
-			factor = 0.1
-			not = { life_needs = 0.7 }
-		}
-		modifier = {
-			factor = 0.1
-			not = { life_needs = 0.6 }
-		}
-		modifier = {
-			factor = 0.3
-			not = { life_needs = 0.5 }
-		}
-	}
-	group = {
-		modifier = {
-			factor = -0.1
-			not = { literacy = 0.2 }
-		}
-		modifier = {
-			factor = -0.1
-			not = { literacy = 0.15 }
-		}
-		modifier = {
-			factor = -0.1
-			not = { literacy = 0.1 }
-		}
-		modifier = {
-			factor = -0.1
-			not = { literacy = 0.05 }
-		}
-	}
-	modifier = {
-		factor = -0.3
-		state_scope = {
-			has_factories = yes
-			}
-	}
-	modifier = {
-		factor = -100
-		NOT = { 
-			location = { controlled_by = owner }
-		}
-	}
-	modifier = {
-		factor = -1
-		strata = rich
-	}
-	group = {
-		modifier = {
-			factor = 0.2
-			unemployment = 0.1
-		}
-		modifier = {
-			factor = 0.2
-			unemployment = 0.2
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.2
-			unemployment = 0.3
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.3
-			unemployment = 0.4
-			location = { controlled_by = owner }
-		}		
-	}
-	modifier = {
-		# prevent mass migration to minority areas (like chines to autonomous regions ) THIS DOES NOT WORK!?
-		factor = -90
-		is_primary_culture  = yes
-		location = { NOT = { is_primary_culture = yes } }
-	}
-	
+	factor = 0.5
+	# un-consciousness tend to stay
+	modifier = { factor = 0.1 consciousness = 6 }
+	# no inter colony migration
+	modifier = { factor = -10.0 state_scope = { is_colonial = yes } }
+	# no life needs - leave!
+	modifier = { factor = 0.1 NOT = { life_needs = 1.0 } }
+	modifier = { factor = -0.25 state_scope = { has_factories = yes } }
+	modifier = { factor = 0.25 unemployment = 0.2 }
+	# prevent popolus masters (like chines) from swamping minority areas, by making them more likely to migrate
+	modifier = { factor = 0.25 OR = { is_primary_culture = yes is_accepted_culture = yes } location = { is_primary_culture = no is_accepted_culture = no } }
 }
 
 #general colonial migration mtth, same for all pops
-colonialmigration_chance = {
-	factor = 0.25
-	group = {
-		modifier = {
-			factor = 0.25
-			not = { life_needs = 0.7 }
-		}
-		modifier = {
-			factor = 0.5
-			not = { life_needs = 0.6 }
-		}
-		modifier = {
-			factor = 0.75
-			not = { life_needs = 0.5 }
-		}
-	}
-	group = {
-		modifier = {
-			factor = -50
-			luxury_needs = 0.9 
-		}
-		modifier = {
-			factor = -1
-			luxury_needs = 0.8
-		}
-		modifier = {
-			factor = -1
-			luxury_needs = 0.7
-		}
-		modifier = {
-			factor = -1
-			luxury_needs = 0.6
-		}
-	}
-	# rich more likely to migrate - due to only emigrate from dictatorships
-	modifier = {
-		factor = 0.2
-		strata = rich
-	}
-	# roundabout way to mod that only refugees emigrate / nobody_gets_out and democracises
-	modifier = {
-		factor = -10
-		country = { immigration_policy = nobody_gets_out }
-	}
-	modifier = { 
-		factor = -10
-		country = { 
-			OR = {
-				government = hms_government
-				government = democracy
-			}
-		}
-	}
-	modifier = { # roundabout way to mod that only people with money can emigrate
-		factor = -10
-		strata = poor
-	}
-	modifier = {
-		factor = -100
-		not = { 
-			location = { controlled_by = owner }
-		}
-	}
-	modifier = {
-		factor = 0.2
-		country = { citizenship_policy = residency }
-		is_primary_culture = no
-	}
-	modifier = {
-		factor = -0.2
-		country = { citizenship_policy = residency }
-		is_primary_culture = yes
-	}
-	modifier = {
-		factor = -0.1
-		country = { citizenship_policy = limited_citizenship }
-		is_primary_culture = yes
-	}
-	modifier = {
-		factor = 0.1
-		country = { citizenship_policy = limited_citizenship }
-		is_primary_culture = no
-		is_accepted_culture = no
-	}
-	modifier = {
-		factor = -0.1
-		country = { citizenship_policy = limited_citizenship }
-		is_primary_culture = no
-		is_accepted_culture = yes
-	}
-	modifier = {
-		factor = -0.5
-		country = { citizenship_policy = full_citizenship }
-	}
-	group = {
-		modifier = {
-			factor = 0.2
-			militancy = 5
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-		modifier = {
-			factor = 0.2
-			militancy = 6
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-		modifier = {
-			factor = 0.2
-			militancy = 7
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-		modifier = {
-			factor = 0.2
-			militancy = 8
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-		modifier = {
-			factor = 0.2
-			militancy = 9
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-	}
-
-	group = {
-		modifier = {
-			factor = 0.1
-			unemployment = 0.1
-		}
-		modifier = {
-			factor = 0.1
-			unemployment = 0.2
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.1
-			unemployment = 0.3
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.1
-			unemployment = 0.4
-			location = { controlled_by = owner }
-		}		
-		modifier = {
-			factor = 0.1
-			unemployment = 0.5
-			location = { controlled_by = owner }
-		}		
-		modifier = {
-			factor = 0.1
-			unemployment = 0.6
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.5
-			unemployment = 0.7
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.75
-			unemployment = 0.8
-			location = { controlled_by = owner }
-		}		
-		modifier = {
-			factor = 0.75
-			unemployment = 0.9
-			location = { controlled_by = owner }
-		}		
-	}
+colonialmigration_chance = 
+{
+	factor = 0.12 # 0
+	# once settled we don't leave the colony
+	modifier = { factor = -0.5 is_primary_culture = no is_accepted_culture = no }
+	# un-consciousness tend to stay
+	modifier = { factor = 0.1 consciousness = 6 }
+	# no inter colony migration
+	modifier = { factor = -10.0 state_scope = { is_colonial = yes } }
+	# no life needs - leave!
+	modifier = { factor = 0.1 NOT = { life_needs = 1.0 } }
+	modifier = { factor = -0.25 state_scope = { has_factories = yes } }
+	modifier = { factor = 0.25 unemployment = 0.2 }
 }
 
 #general emigration chance
 emigration_chance = 
 {
-	factor = 0.04 
-	modifier = {
-		factor = -2.0
-		state_scope = { is_colonial = yes }
-	}
-	group = {
-		modifier = {
-			factor = 0.25
-			not = { life_needs = 0.7 }
-		}
-		modifier = {
-			factor = 0.5
-			not = { life_needs = 0.6 }
-		}
-		modifier = {
-			factor = 0.75
-			not = { life_needs = 0.5 }
-		}
-	}
-	group = {
-		modifier = {
-			factor = -50
-			luxury_needs = 0.9 
-		}
-		modifier = {
-			factor = -1
-			luxury_needs = 0.8
-		}
-		modifier = {
-			factor = -1
-			luxury_needs = 0.7
-		}
-		modifier = {
-			factor = -1
-			luxury_needs = 0.6
-		}
-	}
-	modifier = {
-		factor = -2.0
-		NOT = { year = 1970 }
-		state_scope = { NOT = { continent = europe } }
-		country = { NOT = { tag = MEX } }
+	factor = 0.25
+	# no inter colony migration
+	modifier = { factor = -10.0 state_scope = { is_colonial = yes } }
+	# no life needs - leave!
+	modifier = { factor = 0.25 NOT = { life_needs = 1.0 } }
+	modifier = { factor = -0.25 state_scope = { has_factories = yes } }
+	modifier = { factor = 0.25 unemployment = 0.2 }
+	modifier = { 
+		factor = -0.5
+		NOT = { year = 1970 } 
+		location = { NOT = { continent = europe } NOT = { is_core  = MEX } } 
 	}
 	modifier = { 
-		factor = 2
-		year = 1980  
-		OR = { 
-			country = { tag = MEX }
-			country = { tag = YUG }
-			is_culture_group = arabic 
-			is_culture_group = turko_semitic 
-			is_culture_group = east_african
-			is_culture_group = african_diaspora_cultures
-		} 
-	}
-	modifier = { 
-		factor = 2
+		factor = -0.5
 		NOT = { year = 1980 }
-		country = { tag = MEX }
-		country = { tag = YUG }
-		country = { NOT = { tag = BRZ } }
-		is_culture_group = latin_american_cultures
+		location = { NOT = { OR = { continent = south_america continent = north_america continent = europe } } } 
 	}
-	# rich more likely to migrate - due to only emigrate from dictatorships
-	modifier = {
-		factor = 0.2
-		strata = rich
+	# ugly but need to limit pop fragmentation and sino indian swamping
+	modifier = { 
+		factor = -0.1
+		OR = { 
+			is_culture_group = south_asian 
+			is_culture_group = southeast_asian 
+			is_culture_group = east_asian
+		}
 	}
+	# ugly but need to promote muslims going to europe, and mexicans going to US
+	modifier = { factor = 0.1 is_primary_culture = yes OR = { culture = mestizo culture = white_spanish culture = sunni_arab } }
 	# roundabout way to mod that mostly refugees emigrate
 	modifier = { 
-		factor = -1.2
+		factor = -0.2
 		country = {
 			NOT = { tag = MEX }
 			OR = {
 				government = absolute_monarchy
 				government = hms_government
 				government = democracy
-				government = proletarian_dictatorship
 			}
 		}
 	} 
 	modifier = { 
-		factor = -0.4
+		factor = -0.1
 		country = { immigration_policy = nobody_gets_out }
 	}	
-	modifier = { # roundabout way to mod that only people with money can emigrate
-		factor = -0.1
-		country = {  NOT = { tag = MEX } }
-		strata = poor
-	}
-	modifier = {
-		factor = -10
-		NOT = { 
-			location = { controlled_by = owner }
-		}
-	}
-	modifier = {
-		factor = 0.2
-		country = { citizenship_policy = residency }
-		is_primary_culture = no
-	}
-	modifier = {
-		factor = -0.2
-		country = { citizenship_policy = residency }
-		is_primary_culture = yes
-	}
-	modifier = {
-		factor = -0.1
-		country = { citizenship_policy = limited_citizenship }
-		is_primary_culture = yes
-	}
-	modifier = {
-		factor = 0.1
-		country = { citizenship_policy = limited_citizenship }
-		is_primary_culture = no
-		is_accepted_culture = no
-	}
-	modifier = {
-		factor = -0.1
-		country = { citizenship_policy = limited_citizenship }
-		is_primary_culture = no
-		is_accepted_culture = yes
-	}
-	modifier = {
-		factor = -0.5
-		country = { citizenship_policy = full_citizenship }
-	}
-	group = {
-		modifier = {
-			factor = 0.2
-			militancy = 5
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-		modifier = {
-			factor = 0.2
-			militancy = 6
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-		modifier = {
-			factor = 0.2
-			militancy = 7
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-		modifier = {
-			factor = 0.2
-			militancy = 8
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-		modifier = {
-			factor = 0.2
-			militancy = 9
-			location = {
-				NOT = { any_core = { is_primary_culture = THIS } }
-			}
-		}
-	}
-
-	group = {
-		modifier = {
-			factor = 0.1
-			unemployment = 0.1
-		}
-		modifier = {
-			factor = 0.1
-			unemployment = 0.2
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.1
-			unemployment = 0.3
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.1
-			unemployment = 0.4
-			location = { controlled_by = owner }
-		}		
-		modifier = {
-			factor = 0.1
-			unemployment = 0.5
-			location = { controlled_by = owner }
-		}		
-		modifier = {
-			factor = 0.1
-			unemployment = 0.6
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.5
-			unemployment = 0.7
-			location = { controlled_by = owner }
-		}
-		modifier = {
-			factor = 0.75
-			unemployment = 0.8
-			location = { controlled_by = owner }
-		}		
-		modifier = {
-			factor = 0.75
-			unemployment = 0.9
-			location = { controlled_by = owner }
-		}		
-	}
 	modifier = {
 		factor = 200
 		is_primary_culture = no
 		is_accepted_culture = no
 		country = { has_country_flag = ethnic_cleansing }
-	}
-	# ugly but need to limit pop fragmentation and sino indian swamping
-	modifier = { 
-		factor = -1.1
-		OR = { 
-			is_culture_group = south_asian 
-			is_culture_group = east_asian
-		}
 	}
 }
 
