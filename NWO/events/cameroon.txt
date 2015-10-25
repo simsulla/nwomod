@@ -17,13 +17,13 @@ country_event = { # Southern Cameroons Plebiscite
 
   option = {
     name = "EVT_8002500_A"
-	release_vassal = CMR
+	any_owned = { limit = { is_core = CMR } secede_province = CMR } 
 	prestige = 5
 	ai_chance = { factor = 100 }
   }
   option = {
     name = "EVT_8002500_B"
-	badboy = 5
+	badboy = 1
 	prestige = -10
 	any_owned = { limit = { is_core = CMR } secede_province = NGE } 
 	ai_chance = { factor = 0 }
