@@ -2738,6 +2738,8 @@ country_event = {
 			remove_province_modifier = loss_of_support
 			remove_province_modifier = support_the_government
 		}
+		change_variable = { which = sectarian_division value = -1 }
+		random_country = { limit = { tag = THIS NOT = { check_variable = { which = sectarian_division value = -3 } } } clr_country_flag = sectarianism }
 	}
 }
 
@@ -3112,6 +3114,8 @@ country_event = {
 			remove_province_modifier = loss_of_support
 			remove_province_modifier = support_the_government
 		}
+		change_variable = { which = sectarian_division value = 1 }
+		random_country = { limit = { tag = THIS check_variable = { which = sectarian_division value = 4 } } set_country_flag = sectarianism }
 	}
 }
 
@@ -3299,6 +3303,8 @@ country_event = {
 			remove_province_modifier = loss_of_support
 			remove_province_modifier = support_the_government
 		}
+		change_variable = { which = sectarian_division value = 1 }
+		random_country = { limit = { tag = THIS check_variable = { which = sectarian_division value = 4 } } set_country_flag = sectarianism }
 	}
 }
 
