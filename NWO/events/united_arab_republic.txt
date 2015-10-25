@@ -233,7 +233,7 @@ country_event = {
   trigger = {
     tag = UAR
 	exists = UAR
-    year = 1961 NOT = { year = 1963 }
+    year = 1961 NOT = { year = 1990 }
 	war = no
   }
 
@@ -242,8 +242,8 @@ country_event = {
   option = {
     name = EVT_8218011_A
 	any_pop = { militancy = 0.5 }
-	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } } country_event = 8212010 }
 	change_tag = EGY
+	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } } country_event = 8212010 }
   }
   # TODO how to avoid this?
 }
