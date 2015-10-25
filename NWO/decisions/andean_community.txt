@@ -221,7 +221,7 @@ political_decisions = {
 				government = hms_government
 			}
 			election = no
-			is_greater_power = yes 
+			OR = { is_greater_power = yes is_secondary_power = yes } 
 			political_polarization = 1
             war = no
 			capital_scope = { has_province_modifier = defence_union } 
@@ -245,9 +245,7 @@ political_decisions = {
 				add_core = XAC
 			}
 			change_tag = XAC
-			primary_culture = european
-			add_accepted_culture = white_anglo
-			add_accepted_culture = white_french
+			primary_culture = mestizo
 			add_accepted_culture = white_spanish
 			clr_country_flag = in_trade_block
 		}
@@ -275,7 +273,7 @@ political_decisions = {
 				government = hms_government
 			}
 			election = no
-			is_greater_power = yes 
+			OR = { is_greater_power = yes is_secondary_power = yes } 
 			political_polarization = 1
             war = no
 		}

@@ -201,6 +201,7 @@ political_decisions = {
 				is_greater_power = yes
 				is_secondary_power = yes
 				sphere_owner = { has_country_flag = xec_ambition }
+				
 			}
 		}
 		effect = {
@@ -222,7 +223,7 @@ political_decisions = {
 				government = hms_government
 			}
 			election = no
-			is_greater_power = yes 
+			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1
             war = no
 			capital_scope = { has_province_modifier = defence_union } 
@@ -275,7 +276,7 @@ political_decisions = {
 				government = hms_government
 			}
 			election = no
-			is_greater_power = yes 
+			OR = { is_greater_power = yes is_secondary_power = yes } 
 			political_polarization = 1
             war = no
 		}
