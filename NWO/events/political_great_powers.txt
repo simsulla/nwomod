@@ -1397,7 +1397,8 @@ country_event = {
 
 	major = yes
 	
-	is_triggered_only = yes
+	is_triggered_only = yes # victorious attacker of nuclear/nuclear umbrella country
+	# FROM attacked country
 
 	immediate = {
 		end_war = FROM
@@ -1415,13 +1416,14 @@ country_event = {
 	desc = "EVTDESC19381"
 	picture = "nuclear_peace"
 
-	is_triggered_only = yes
+	is_triggered_only = yes # nuclear super power
+	# FROM attacked country
 	
 	option = {
 		name = "EVTOPTA19381"
 		any_country = {
 			limit = { war_with = FROM }
-			FROM = { country_event = 19380 }
+			country_event = 19382
 		}
 	}
 
@@ -1429,6 +1431,61 @@ country_event = {
 		name = "EVTOPTB19381"
 	}
 	
+}
+
+country_event = {
+	id = 19382
+	title = "EVTNAME19382"
+	# EVTNAME19382;Nuclear Peace
+	desc = "EVTDESC19382"
+	# EVTDESC19382;$FROMCOUNTRY$ requests us to agree to a status quo peace under threat of MAD. In military strategy, assured destruction is where behaviors or choices are deterred because they will lead to overwhelming punitive consequences. It was most often discussed as mutually assured destruction (MAD), assuming there are exactly two parties in the conflict.
+	picture = "nuclear_peace"
+
+	is_triggered_only = yes # victorious attacker of nuclear/nuclear umbrella country
+	# FROM nuclear super power
+	
+	option = {
+		name = "EVTOPTA19382"
+		# EVTOPTA19382;Ok, accept status quo peace, to avoid MAD
+		any_country = {
+			limit = { war_with = THIS has_country_modifier = nuclear_peace }
+			end_war = THIS
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19382"
+		# EVTOPTB19382;Buy time to negotiate peace - before nuclear_peace is enforced by $FROMCOUNTRY$
+		add_country_modifier = { name = stall_nuclear_peace duration = 30 }		
+		set_country_flag = stall_nuclear_peace
+	}
+	
+}
+
+country_event = {
+	id = 19383
+	title = "EVTNAME19383"
+	# EVTNAME19382;Nuclear Peace Enforced
+	desc = "EVTDESC19383"
+	# EVTDESC19383;$FROMCOUNTRY$ requested us to agree to a status quo peace under threat of MAD. In military strategy, assured destruction is where behaviors or choices are deterred because they will lead to overwhelming punitive consequences. It was most often discussed as mutually assured destruction (MAD), assuming there are exactly two parties in the conflict. The matter will now be settled peacefully.
+	picture = "nuclear_peace"
+
+	trigger = {
+		has_country_flag = stall_nuclear_peace
+		NOT = { has_country_modifier = stall_nuclear_peace }
+	}
+	
+	immediate = { clr_country_flag = stall_nuclear_peace }
+	
+	option = {
+		name = "EVTOPTA19383"
+		# EVTOPTA19383;Ok, we have to accept peace to avoid MAD
+		any_country = {
+			limit = { has_country_modifier = nuclear_peace war_with = THIS }
+			country_event = 19380
+		}
+	}
+
 }
 
 #################################################################################
