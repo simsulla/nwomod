@@ -228,9 +228,8 @@ country_event = {
 
   option = {
     name = EVT_FULLINDEPENDENCE_A
-	random_country = { limit = { THIS = { exists = no } tag = FROM } release = THIS } # Incorrect Validator Warning 
-	random_country = { limit = { is_our_vassal = THIS tag = FROM } release_vassal = THIS }
-	random_country = { limit = { tag = FROM part_of_sphere = yes } sphere_owner = { diplomatic_influence = { who = THIS value = 200 } } }
-	random_country = { limit = { tag = FROM is_greater_power = yes } diplomatic_influence = { who = THIS value = 200 } }
+	any_country = { limit = { THIS = { exists = no } tag = FROM } release = THIS } # Incorrect Validator Warning 
+	any_country = { limit = { is_our_vassal = THIS tag = FROM } release_vassal = THIS }
+	any_greater_power = { limit = { tag = FROM } diplomatic_influence = { who = THIS value = 200 } }
   }
 }

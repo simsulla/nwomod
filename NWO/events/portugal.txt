@@ -17,9 +17,13 @@ country_event = {
     name = EVT_8011705_A
 	government = democracy country_event = 800054
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
+	sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
 	# Timor -> indonesia.txt events
 	# African colonies release unconditionally
-	any_country = { limit = { exists = no OR = { tag = ANG tag = MOZ tag = GUB tag = STP tag = CPV } } country_event = 8212010 }
+	any_country = { 
+		limit = { exists = no OR = { tag = ANG tag = MOZ tag = GUB tag = STP tag = CPV } }
+		country_event = 8212010
+	}
 	set_country_flag = carnation_revolution
 	ai_chance = { factor = 100 }
   }
@@ -27,6 +31,7 @@ country_event = {
   option = {
     name = EVT_8011705_B
 	any_pop = { militancy = 2.0 }
+	any_pop = { limit = { NOT = { couture = portuguese } } militancy = 5.0  }
 	ai_chance = { factor = 0 }
   }
 }
