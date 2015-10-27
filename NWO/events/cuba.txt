@@ -12,8 +12,8 @@ country_event = {
 	clr_country_flag = castro_rebellion 
 	relation = { who = USA value = -100 } 
 	relation = { who = RUS value = 100 } 
-	diplomatic_influence = { who = USA value = -200 }
-	diplomatic_influence = { who = RUS value = 200 }
+	USA = { diplomatic_influence = { who = CUB value = -200 } }
+	RUS = { diplomatic_influence = { who = CUB value = 200 } }
   }
 }
 country_event = {
@@ -54,7 +54,7 @@ country_event = {
     tag = CUB
 	year = 1954 NOT = { year = 1990 }
     NOT = { government = proletarian_dictatorship }
-    has_country_flag = castro_rebellion
+    OR = { AND = { year = 1956 NOT = { year = 1960 } } has_country_flag = castro_rebellion }
   }
 
   mean_time_to_happen = { months = 10 }
