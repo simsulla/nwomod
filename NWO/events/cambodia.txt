@@ -49,7 +49,7 @@ country_event = {
   trigger = {
     tag = CAM
 	year = 1975 NOT = { year = 1980 }
-    OR = { government = hms_government government = absolute_monarchy } 
+    OR = { NOT = { government = proletarian_dictatorship } 
   }
 
   mean_time_to_happen = { months = 4 }
@@ -57,14 +57,15 @@ country_event = {
   option = {
     name = EVT_8003123_A
     define_general = { name = "Pol Pot" personality = energetic background = no_background }
-	government = proletarian_dictatorship  country_event = 800052
-	country_event =  { id = 8003124 days = 360 } 
+	government = proletarian_dictatorship  country_event = 800042
+	country_event =  { id = 8003124 days = 360 }
+	diplomatic_influence = { who = CHI value = 100 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8003123_B
-	any_pop = { militancy = 3.0 }
+	any_pop = { militancy = 5.0 }
 	ai_chance = { factor = 0 }
   }
 }
