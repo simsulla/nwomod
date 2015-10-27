@@ -385,7 +385,7 @@ political_decisions = {
 		}
 		effect = { 
 			add_country_modifier = { name = wb_loan duration = 700 }
-			random_country = { 
+			any_country = { 
 				limit = { 
 					is_greater_power = yes
 					OR = { has_country_flag = world_bank has_country_flag = the_imf has_country_flag = dev_bank }
@@ -414,8 +414,8 @@ political_decisions = {
 		}
 		effect = {
 			add_country_modifier = { name = wb_credit_facillity duration = 700 } # every second year
-			any_country = { limit = { money = 120000 in_sphere = USA } country_event = 15601 }
-			random_country = { limit = { money = 120000 has_country_flag = the_imf } USA = { treasury = 100000 } country_event = 15609 } 
+			any_country = { limit = { money = 120000 in_sphere = USA } USA = { treasury = 100000 } country_event = 15601 }
+			any_country = { limit = { money = 120000 has_country_flag = the_imf } USA = { treasury = 100000 } country_event = 15609 } 
 		}
 		ai_will_do = { factor = 1 }
 	}

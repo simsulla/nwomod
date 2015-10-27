@@ -7,14 +7,14 @@ country_event = {
 	desc = EVT_15600_DESC
 	picture = world_bank
 
-	is_triggered_only = yes # the_imf or world_bank
+	is_triggered_only = yes # the_imf or world_bank or deb_bank
 	
 	option = {
 		name = EVT_15600_A
 		relation = { who = FROM value = 50 }
 		diplomatic_influence = { who = FROM value = 50 }
-		treasury = -100000
-		FROM = { treasury = 100000 }
+		treasury = -10000
+		FROM = { treasury = 10000 }
 		ai_chance = { factor = 10 modifier = { factor = 0 FROM = { ai = no } } modifier = { factor = 0 NOT = { money = 200000 } } }
 	}
 	option = {
@@ -39,7 +39,6 @@ country_event = {
 		name = EVT_15601_A
 		relation = { who = FROM value = -10 }
 		treasury = -100000
-		FROM = { treasury = 100000 }
 	}
 	option = {
 		name = EVT_15601_B
@@ -47,6 +46,7 @@ country_event = {
 		diplomatic_influence = { who = FROM value = -25 }
 		remove_country_modifier = bretton_system
 		add_country_modifier = { name = bretton_system_excluded duration = 1700 }
+		FROM = { treasury = -100000 }
 	}	
 }
 
