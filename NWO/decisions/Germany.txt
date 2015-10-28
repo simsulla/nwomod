@@ -235,6 +235,7 @@ political_decisions = {
 		potential = {
 			tag = GER
 			exists = yes
+			government = democracy
 			NOT = { has_country_flag = end_of_sonderweg }
 		}
 
@@ -374,41 +375,20 @@ political_decisions = {
 		}
 	}
 	
-	form_germany = {
+	become_east_germany = {
+		picture = "become_east_germany"
 		potential = {
-			is_culture_group = germanic
-			NOT = {
-				exists = GER
-				tag = ISR
-			}
+			tag = GER
+			government = proletarian_dictatorship
 		}
 		
 		allow = {
-			is_greater_power = yes
-			prestige = 45
 			war = no
-			GER = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-						}
-					}
-				}
-			}
 		}
 		
 		effect = {
 			prestige = 20
-			change_tag = GER
-			any_country = {
-				limit = {
-					is_culture_group = germanic
-					in_sphere = THIS
-				}
-				country_event = { id=11101 days=0 }
-			}
+			change_tag = DDR
 		}
 		ai_will_do = {
 			factor = 1
