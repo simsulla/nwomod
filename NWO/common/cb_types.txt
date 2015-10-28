@@ -950,6 +950,16 @@ humiliate = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
+		THIS = {
+			OR = { 
+				ai = no
+				AND = { 
+					NOT = { war_policy = pacifism }
+					NOT = {	has_country_flag = international_court_of_justice }
+					NOT = { OR = { government = democracy government = hms_government } }
+				}
+			}
+		}
  	}	
 	on_add = {
 		move_issue_percentage = { 
