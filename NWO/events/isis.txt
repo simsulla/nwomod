@@ -7,14 +7,18 @@ country_event = {
 
 	option = {
 		name = EVT_1014800_A
-		release = ISI
+		release_vassal = ISI
 		casus_belli = {
 			target = ISI
 			type = acquire_core_state
-			months = 12
+			months = 60
 		}
-		# TODO does V2 know which province is requested?
-		war = { target = ISI attacker_goal = { casus_belli = acquire_core_state } defender_goal = { casus_belli = conquest } }
+		ISI = { 
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest }
+			}
+		}
 	}
 }
 
