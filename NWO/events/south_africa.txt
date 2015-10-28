@@ -96,6 +96,7 @@ country_event = {
     name = EVT_8012625_A
 	any_country = { limit = { NOT = { tag = THIS } } relation = { who = THIS value = -50 } } 
 	any_pop = { limit = { is_primary_culture = no is_accepted_culture = no } militancy = 1.0 }
+	add_country_modifier = { name = apartheid duration = -1 } # 1990 start date must set
   }
 
 }
