@@ -51,7 +51,16 @@ political_decisions = {
 		potential = {
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			NOT = { has_country_modifier = special_drawing_rights }
-			NOT = { AND = { has_country_flag = world_bank OR = { has_country_flag = the_imf  has_country_flag = dev_bank } } }
+			NOT = { # must not have all
+				has_country_flag = world_bank 
+				OR = { has_country_flag = the_imf  has_country_flag = dev_bank } 
+				ENG = { capital_scope = { NOT = { trade_goods = credit } } }
+			}
+			NOT = { # must not have all, except wb but not be rank = 1
+				rank = 1
+				OR = { has_country_flag = the_imf  has_country_flag = dev_bank } 
+				ENG = { capital_scope = { NOT = { trade_goods = credit } } }
+			}			
 			year = 1968
 		}
 		allow = {
@@ -63,7 +72,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = financial_attack
 			add_country_modifier = { name = special_drawing_rights duration = 3500 } 
-			random_country = { # first take on London
+			any_country = { # first take on London
 				limit = {
 					tag = ENG
 					capital_scope = { trade_goods = credit }
@@ -71,15 +80,15 @@ political_decisions = {
 				}
 				country_event = 15606
 			}	
-			random_country = { # than the IMF (or Dev Bank)
+			any_country = { # then the IMF (or Dev Bank)
 				limit = {
 					OR = { has_country_flag = the_imf has_country_flag = dev_bank }
 					NOT = { tag = THIS }
-					NOT = { tag = ENG capital_scope = { trade_goods = credit } }
+					ENG = { capital_scope = { NOT = { trade_goods = credit } } }
 				}
 				country_event = 15606
 			}
-			random_country = { # them the World Bank
+			any_country = { # them the World Bank
 				limit = {
 					has_country_flag = world_bank
 					NOT = { tag = THIS }

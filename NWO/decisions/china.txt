@@ -80,7 +80,7 @@ political_decisions = {
 				AND = {
 					relation =  { who = ENG value = 100 } 
 					rank = 3
-					NOT = { ENG = { rank = 2 } }
+					ENG = { NOT = { rank = 2 } }
 				}
 			}
 		}
@@ -120,7 +120,7 @@ political_decisions = {
 						has_country_flag = the_return_of_hong_kong
 					}
 					rank = 4
-					NOT = { POR = { rank = 4 } }
+					POR = { NOT = { rank = 4 } }
 				}
 			}
 		}
