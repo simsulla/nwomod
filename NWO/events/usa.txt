@@ -61,20 +61,18 @@ country_event = {
 	
 	immediate = { 
 		AFG = { badboy = 25 } 
-		any_country = { limit = { NOT = { ruling_party_ideology = traditionalist } } relation = { who = AFG value = -100 } } 
-		military_access = PAK
+		any_country = { limit = { NOT = { ruling_party_ideology = traditionalist } } relation = { who = AFG value = -200 } } 
+		random_country = { limit = { tag = PAK  ai = yes } create_alliance = USA }
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 11
 		modifier = { factor = 0.5 AFG = { government = theocracy } }
 	}
 
 	option = {
 		name = EVT_1015802_A 
 		ai_chance = { factor = 100 }
-		random_country = { limit = { tag = PAK  PAK = { ai = no } } create_alliance = USA }
-		any_country = { relation = { who = AFG value = -200 } }
 		war = {
 			target = AFG
 			attacker_goal = { casus_belli = install_democracy }
