@@ -6,35 +6,20 @@ political_decisions = {
 					has_global_flag = initial_atomb_bomb_setup
 					year = 1968
 					NOT = { has_country_modifier = non_proliferation_treaty }
-					NOT = { OR = { is_greater_power = yes is_secondary_power = yes } }
-                    NOT =  { 
-						any_neighbor_country = { has_country_modifier = has_the_atomic_bomb }
-						OR = { 
-							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
-						}
+					is_greater_power = no 
+					OR = { 
+						is_secondary_power = no
+						AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+						AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
 					}
-					
                 }
 
                 allow = {
-					NOT = { has_country_modifier = non_proliferation_treaty }
-					NOT = { OR = { is_greater_power = yes is_secondary_power = yes } }
-                    NOT =  { 
-						any_neighbor_country = { has_country_modifier = has_the_atomic_bomb }
-						OR = { 
-							AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = warsaw_pact RUS = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
-							AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
-						}
-					}
+					cold_war = 1
                 }
 
                 effect = {
