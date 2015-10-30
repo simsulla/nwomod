@@ -67,11 +67,10 @@ country_event = {
 		ai_chance = { factor = 100 }
 		prestige = -2
 		release = ISR
-		ISR= { country_event = 8007624 }
+		ISR = { country_event = 8007624 }
 		USA = { country_event = 1007603 }
 		release = PAL
 		PAL = { country_event = 8007626 }
-		PAL = { country_event = 1007604 }
 		end_military_access = EGY
 	}
 	
@@ -104,7 +103,6 @@ country_event = {
 		add_country_modifier =  { name = stock_market_crash duration = 365 }
 		release = PAL
 		PAL = { country_event = 8007626 }
-		PAL = { country_event = 1007604 }
 	}	
 }
 
@@ -204,7 +202,7 @@ country_event = {
   option = {
     name = EVT_DEATH
 	prestige = 10
-	diplomatic_influence  = { who = USA value = 50 }
+	USA = { diplomatic_influence  = { who = ISR value = 50 } }
   }
 }
 country_event = {
@@ -261,6 +259,7 @@ country_event = {
   option = {
     name = "OK"
 	any_pop = { militancy = -0.3 }
+	country_event = { id = 1007604 days = 60 }
   }
 }
 country_event = {
@@ -366,7 +365,7 @@ country_event = {
   trigger = {
     tag = JOR
     year = 1948 NOT = { year = 1963 }
-    EGY = { war_with = ISR }
+    exists = ISR
   }
 
   mean_time_to_happen = { months = 1  }
@@ -394,7 +393,7 @@ country_event = {
   trigger = {
     tag = SYR
     year = 1948 NOT = { year = 1963 }
-    EGY = { war_with = ISR }
+    exists = ISR
   }
 
   mean_time_to_happen = { months = 1  }
@@ -422,7 +421,7 @@ country_event = {
   trigger = {
     tag = LEB
     year = 1948 NOT = { year = 1963 }
-    EGY = { war_with = ISR }
+    exists = ISR
   }
 
   mean_time_to_happen = { months = 1  }
@@ -450,7 +449,7 @@ country_event = {
   trigger = {
     tag = IRQ
     year = 1948 NOT = { year = 1963 }
-    EGY = { war_with = ISR }
+    exists = ISR
   }
 
   mean_time_to_happen = { months = 1  }
@@ -536,6 +535,16 @@ country_event = {
 
   option = {
     name = EVT_8007660_A
+	any_pop = { limit = { culture = jewish strata = farmers } } move_pop = 200 } # Tampa 
+	any_pop = { limit = { culture = jewish strata = middle } } move_pop = 232 } # New York
+	any_pop = { limit = { culture = jewish strata = labourers } } move_pop = 89 } # Los Angeles
+	any_pop = { limit = { culture = jewish strata = rich } } move_pop = 300 } # London
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007660_B
+	ai_chance = { factor = 0 }
   }
 
 }
