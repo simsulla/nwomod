@@ -34,7 +34,7 @@ political_decisions = {
 		alert = no
 		potential = {
 			part_of_sphere = yes
-			
+			OR = { ai = no sphere_owner = { NOT = { relation = { who = THIS value = -101 } } } }
 		}
 		allow = {
 			is_secondary_power = yes
