@@ -658,7 +658,7 @@ country_event = {
 
   trigger = {
     tag = EGY
-    year = 1966 NOT = { year = 1967 }
+    year = 1966 NOT = { year = 1970 }
     exists = ISR
 	government = presidential_dictatorship
     war = no
@@ -668,16 +668,16 @@ country_event = {
 
   option = {
     name = EVT_8007671_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -2 }
 	badboy = 1
-	inherit = GAZ
+	prestige = 10
 	ISR = { country_event = 8007672 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007671_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -696,6 +696,8 @@ country_event = {
 	random_country = { limit = { EGY = { owns = 920 } tag = ISR } war = { target = EGY attacker_goal = { casus_belli = acquire_core_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } }
 	random_country = { limit = { SYR = { owns = 2687 } tag = ISR } war = { target = SYR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo }} }
 	random_country = { limit = { JOR = { owns = 917 } tag = ISR } war = { target = JOR attacker_goal = { casus_belli = acquire_core_state state_province_id = 917 } defender_goal = { casus_belli = status_quo }} }
+	EGY = { add_country_modifier = { name = visionary_thinker duration = 700 } }
+	SYR = { add_country_modifier = { name = visionary_thinker duration = 700 } }
 	casus_belli = { target = EGY type = acquire_state months = 48 }
 	any_pop = { militancy = -0.5 }
 	badboy = 15 
@@ -719,6 +721,7 @@ country_event = {
   option = {
     name = EVT_8007673_A
 	war = { target = ISR defender_goal = { casus_belli = acquire_core_state state_province_id = 920 } attacker_goal = { casus_belli = conquest } }
+	add_country_modifier = { name = visionary_thinker duration = 700 }
 	any_pop = { militancy = -1.0 }
 	badboy = 5 
 	SYR = { country_event = 8007674 }
@@ -742,6 +745,7 @@ country_event = {
   option = {
     name = EVT_8007674_A
 	war = { target = ISR defender_goal = { casus_belli = acquire_state state_province_id = 2687 } attacker_goal = { casus_belli = conquest } }
+	add_country_modifier = { name = visionary_thinker duration = 700 }
 	create_alliance = EGY 
 	any_pop = { militancy = -1.0 }
 	badboy = 5 
@@ -820,6 +824,7 @@ country_event = {
     name = EVT_8007683_A
 	random_country = { limit = { owns = 920 ISR = { owns = 1756 } tag = EGY } war = { target = ISR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } }
 	random_country = { limit = { ISR = { owns = 1756 } tag = EGY } war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 1756 } defender_goal = { casus_belli = status_quo } } }
+	EGY = { add_country_modifier = { name = visionary_thinker duration = 700 } }
 	ISR = { country_event = 8007684 } 
 	SYR = { country_event = 8007685 }
 	ai_chance = { factor = 100 }
@@ -853,6 +858,7 @@ country_event = {
   option = {
     name = EVT_8007685_A
 	war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 2687 } defender_goal = { casus_belli = status_quo }} 
+	add_country_modifier = { name = visionary_thinker duration = 700 }
 	create_alliance = EGY 
 	any_pop = { militancy = -0.5 }
 	badboy = 5 
