@@ -535,10 +535,10 @@ country_event = {
 
   option = {
     name = EVT_8007660_A
-	any_pop = { limit = { culture = jewish strata = farmers } } move_pop = 200 } # Tampa 
-	any_pop = { limit = { culture = jewish strata = middle } } move_pop = 232 } # New York
-	any_pop = { limit = { culture = jewish strata = labourers } } move_pop = 89 } # Los Angeles
-	any_pop = { limit = { culture = jewish strata = rich } } move_pop = 300 } # London
+	any_pop = { limit = { culture = jewish type = farmers } move_pop = 200 } # Tampa 
+	any_pop = { limit = { culture = jewish strata = middle } move_pop = 232 } # New York
+	any_pop = { limit = { culture = jewish type = labourers } move_pop = 89 } # Los Angeles
+	any_pop = { limit = { culture = jewish strata = rich } move_pop = 300 } # London
 	ai_chance = { factor = 100 }
   }
 
@@ -559,13 +559,14 @@ country_event = {
     tag = EGY
     year = 1949 NOT = { year = 1963 }
     exists = GAZ
+	GAZ = { ai = yes }
   }
   
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8007661_A
-	create_vassal = GAZ
+	inherit = GAZ
   }
 
 }
@@ -590,6 +591,33 @@ country_event = {
   }
 }
 country_event = {
+  id = 8007669
+  title = EVT_8007669_NAME
+  desc = EVT_8007669_DESC
+  picture = "nwo2_law_of_return"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1949 NOT = { year = 1990 }
+    war = no
+	owns = 919 # Tel Aviv
+	owns = 921 # Southern District
+	owns = 916 # Haifa
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+  option = {
+    name = EVT_8007669_A
+	916 = { any_pop = { limit = { culture = christian_arab } move_pop = 913 } } # Beirut
+	919 = { any_pop = { limit = { culture = christian_arab } move_pop = 902 } } # Damascus
+	921 = { any_pop = { limit = { culture = sunni_arab strata = poor } move_pop = 918 } } # West Bank
+	916 = { any_pop = { limit = { culture = sunni_arab OR = { strata = rich strata = middle } } move_pop = 908 } } # Amman
+	919 = { any_pop = { limit = { culture = sunni_arab strata = poor } move_pop = 920 } } # Gaza
+  }
+}
+country_event = {
   id = 8007670
   title = EVT_8007670_NAME
   desc = EVT_8007670_DESC
@@ -598,18 +626,26 @@ country_event = {
 
   trigger = {
     tag = ISR
-    year = 1948 NOT = { year = 1990 }
+    year = 1949 NOT = { year = 1990 }
     war = no
+	owns = 919 # Tel Aviv
+	owns = 921 # Southern District
+	owns = 916 # Haifa
   }
 
-  mean_time_to_happen = { months = 11 }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8007670_A
-	any_pop = { limit = { OR = { culture = jewish culture = haredim_jewish } } reduce_pop = 4.0 }
-	916 = { any_pop = { limit = { culture = sunni_arab } reduce_pop = 0.3 } }
-	919 = { any_pop = { limit = { culture = sunni_arab } reduce_pop = 0.1 } }
-	921 = { any_pop = { limit = { culture = sunni_arab } reduce_pop = 0.01 } }
+	any_pop = { limit = { culture = haredim_jewish } reduce_pop = 1.4 }
+	POL = { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 919 } }
+	ROM = { any_pop = { limit = { culture = jewish } move_pop = 919 } }
+	MOR = { any_pop = { limit = { culture = jewish } move_pop = 919 } }
+	IRQ = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
+	YEM = { any_pop = { limit = { culture = jewish } move_pop = 921 } }
+	TUN = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
+	LIB = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
+	EGY = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
   }
 }
 # TODO add solider pops and miliary spending and money to israel through USA decition and ISR event
@@ -749,16 +785,18 @@ country_event = {
 
   trigger = {
     tag = ISR
-    year = 1967 NOT = { year = 1968 }
+    year = 1967 NOT = { year = 1990 }
     exists = POL
+	POL = { government = proletarian_dictatorship }
     war = no
+	owns = 917
   }
 
   mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8007682_A
-	POL = { any_pop = { limit = { culture = jewish } move_pop = 919 }}
+	POL = { any_pop = { limit = { culture = jewish } move_pop = 917 }}
   }
 }
 country_event = {
