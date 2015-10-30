@@ -535,73 +535,15 @@ conversion_chance =
 {
 	factor = 0.02
 
-	group = {
-		modifier = {
-			factor = 2
-			literacy = 0.1
-		}
-		modifier = {
-			factor = 2
-			literacy = 0.2
-		}
-		modifier = {
-			factor = 2
-			literacy = 0.3
-		}
-		modifier = {
-			factor = 2
-			literacy = 0.4
-		}
-		modifier = {
-			factor = 2
-			literacy = 0.5
-		}
-		modifier = {
-			factor = 2
-			literacy = 0.6
-		}
-	}
-	modifier = {
-		factor = -0.5
-		country = { religious_policy = moralism }
-	}
-	modifier = {
-		factor = 0.1
-		country = { religious_policy = pro_atheism }
-	}
-	modifier = {
-		factor = 2
-		country = { religious_policy = secularized }
-	}
-	
-	modifier = {
-		factor = 10
-		country = { government = proletarian_dictatorship }
-	}	
-
-	modifier = {
-		factor = 2
-		culture = THIS
-	}
-
-	modifier = {
-		factor = -20
-		has_pop_religion = jewish
-	}
-	modifier = {
-		factor = -4
-		has_pop_religion = mennonite
-	}	
-    modifier = {
-        factor = -20
-        has_pop_religion = secularism
-    }
-    modifier = {
-        factor = -4
-        has_pop_religion = sunni
-    }
-    modifier = {
-       factor = -4
-       has_pop_religion = shiite
-    }
+	modifier = { factor = 1.2 literacy = 0.1 }
+	modifier = { factor = 1.2 literacy = 0.2 }
+	modifier = { factor = 1.2 literacy = 0.4 }
+	modifier = { factor = 1.2 literacy = 0.6 }
+	modifier = { factor = 1.2 literacy = 0.8 }
+	modifier = { factor = -2 is_state_religion = yes has_pop_religion = secularism country = { religious_policy = moralism } }
+	modifier = { factor = 2 NOT = { has_pop_religion = secularism } country = { OR = { religious_policy = pro_atheism religious_policy = secularized } } }
+	modifier = { factor = 2 NOT = { has_pop_religion = secularism } country = { government = proletarian_dictatorship } }	
+	modifier = { factor = 2 NOT = { has_pop_religion = secularism } culture = THIS }
+	modifier = { factor = -4 OR = { has_pop_religion = jewish has_pop_religion = mennonite has_pop_religion = secularism } }
+	modifier = { factor = -4 OR = { has_pop_religion = sunni has_pop_religion = shiite } }
 }
