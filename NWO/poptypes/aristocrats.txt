@@ -263,11 +263,10 @@ promote_to = {
 	artisans = { factor = 0.01 modifier = { factor = 2 } }
 }
 
-
 ideologies = {
 	populist = { # pragmatic social reformist and revert reforms militancy
 		factor = 0.1
-		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism } }
+		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship } } }
 		modifier = { factor = 4 country = { ruling_party_ideology = populist } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = populist } NOT = { everyday_needs = 0.5 } }
 		modifier = { factor = 0.5 NOT = { militancy = 6 } }
@@ -282,7 +281,7 @@ ideologies = {
 		factor = 0.1
 		modifier = { factor = 2 OR = { location = { pop_majority_religion = sunni } location = { pop_majority_religion = shiite } } }
 		modifier = { factor = 0.1 religion = secularism }
-		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism } }
+		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship }} }
 		modifier = { factor = 4 country = { ruling_party_ideology = traditionalist } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = traditionalist } NOT = { everyday_needs = 0.5 } }
 		modifier = { factor = 1.1 social_reform_want = 0.02 }
@@ -303,7 +302,7 @@ ideologies = {
 	conservative = { # pragmatic social reformist
 		factor = 0.1
 		modifier = { factor = 0.1 religion = secularism }
-		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism } }
+		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship }} }
 		modifier = { factor = 4 country = { ruling_party_ideology = conservative } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = conservative } NOT = { everyday_needs = 0.5 } }
 		modifier = { factor = 1.1 social_reform_want = 0.02 }
@@ -323,7 +322,7 @@ ideologies = {
 	}
 	liberal = { # political reformist
 		factor = 0.2
-		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism } }
+		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship }} }
 		modifier = { factor = 4 country = { ruling_party_ideology = liberal } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = liberal } NOT = { everyday_needs = 0.5 } }
 		modifier = { factor = 0.1 ruling_party_ideology = liberal }
@@ -345,7 +344,7 @@ ideologies = {
 
 	socialist = { # pragmatic social reformist
 		factor = 0.2
-		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism } }
+		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship } } }
 		modifier = { factor = 4 country = { ruling_party_ideology = socialist } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = socialist } NOT = { everyday_needs = 0.5 } }
 		modifier = { factor = 0.5 NOT = { militancy = 6 } }
@@ -363,10 +362,12 @@ ideologies = {
 		modifier = { factor = 1.1 consciousness = 5 }
 		modifier = { factor = 1.1 consciousness = 4 }
 		modifier = { factor = 0.5 militancy = 6 }
+		# in a sectarian regime the "minority" culture has seized power. i.e. become primary. All  
+		modifier = { factor = 10 is_primary_culture = yes country = { government = nationalist_dictatorship } }
 	}
 	communist = { # social reformist militancy
 		factor = 0.1
-		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism } }
+		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship } } }
 		modifier = { factor = 4 country = { ruling_party_ideology = communist } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = communist } NOT = { everyday_needs = 0.5 } }
 		modifier = { factor = 0.1 NOT = { militancy = 6 } }
@@ -383,7 +384,7 @@ ideologies = {
 	}
 	progressive = { # political reformist
 		factor = 0.1
-		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism } }
+		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship } } }
 		modifier = { factor = 4 country = { ruling_party_ideology = progressive } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = progressive } NOT = { everyday_needs = 0.5 } }
 		modifier = { factor = 0.1 ruling_party_ideology = liberal }
