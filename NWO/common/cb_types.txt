@@ -976,15 +976,17 @@ territorial_dispute = {
 	is_triggered_only = yes
 	months = 12
 
-	badboy_factor = 1.5
-	prestige_factor = 1
-	peace_cost_factor = 15
+	construction_speed = 0.8
+	
+	badboy_factor = 0
+	prestige_factor = 5
+	peace_cost_factor = 0.7
 	penalty_factor = 1
 	always = yes
-	
-	break_truce_prestige_factor = 1
-	break_truce_infamy_factor = 1
-	break_truce_militancy_factor = 1
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
 	truce_months = 0
 	
 	good_relation_prestige_factor = 1
@@ -993,18 +995,18 @@ territorial_dispute = {
 	
 	po_remove_prestige = yes
 
-	tws_battle_factor = 2.0
-	
 	war_name = WAR_HUMILIATE_NAME
 
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
 		THIS = {
+			NOT = { war_policy = pro_military }
 			NOT = { war_policy = pacifism }
 			NOT = {	has_country_flag = international_court_of_justice }
 			NOT = { OR = { government = democracy government = hms_government } }
 		}
+		THIS = { OR = { AND = { NOT = { war_policy = pro_military } NOT = { war_policy = pacifism } } war = yes } }
 		OR = { 
 			# Israel alone in the Arab world
 			AND = { tag = ISR exists = ISR THIS = { OR  = { primary_culture = sunni_arab primary_culture = shia_arab } } } 
