@@ -164,12 +164,12 @@ country_event = {
 	picture = "Upperhouse"
 	
 	trigger = {
-		is_ideology_enabled = socialist
+		is_ideology_enabled = progressive
 		political_reform_want = 0.1
 		average_militancy = 4
 		NOT = {
 			upper_house = {
-				ideology = socialist
+				ideology = progressive
 				value = 0.1
 			}
 			gender_rights = feminist
@@ -183,7 +183,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA18040"
 		upper_house = {
-			ideology = socialist
+			ideology = progressive
 			value = 0.2
 		}
 	}
@@ -191,7 +191,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB18040"
 		upper_house = {
-			ideology = socialist
+			ideology = progressive
 			value = 0.1
 		}
 		scaled_militancy = {
@@ -256,7 +256,7 @@ country_event = {
 	trigger = {
 		NOT = {
 			upper_house = {
-				ideology = populist
+				ideology = traditionalist
 				value = 0.1
 			}
 		}
@@ -277,7 +277,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA18050"
 		upper_house = {
-			ideology = populist
+			ideology = traditionalist
 			value = 0.05
 		}
 	}
@@ -285,7 +285,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB18050"
 		upper_house = {
-			ideology = populist
+			ideology = traditionalist
 			value = 0.1
 		}
 	}
@@ -301,9 +301,9 @@ country_event = {
 		NOT = {
 			political_opinions = ruling_party_opinion
 		}
-		ruling_party_ideology = populist
+		ruling_party_ideology = traditionalist
 		upper_house = {
-			ideology = populist
+			ideology = traditionalist
 			value = 0.3
 		}
 	}
@@ -575,12 +575,12 @@ country_event = {
 	
 	trigger = {
 		upper_house = {	
-			ideology = traditionalist
+			ideology = populist
 			value = 0.1
 		}
 		NOT = {
 			upper_house = {
-				ideology = traditionalist
+				ideology = populist
 				value = 0.4
 			}
 		}
@@ -594,7 +594,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA18140"
 		upper_house = {
-			ideology = traditionalist
+			ideology = populist
 			value = 0.2
 		}
 	}
@@ -602,7 +602,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB18140"
 		scaled_militancy = {
-			ideology = traditionalist
+			ideology = populist
 			factor = 4
 		}
 	}		

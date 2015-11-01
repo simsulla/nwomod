@@ -604,7 +604,7 @@ country_event = {
 	# EVT_8022748_A;Sign the Agreement
 	government = democracy country_event = 800054
 	prestige = 10
-	random_country = { limit = { tag = RSR exists = RSR owns = 789 } 789 = { secede_province = BOS } }
+	any_country = { limit = { tag = RSR owns = 789 } 789 = { secede_province = BOS } }
 	ai_chance = { factor = 100 }
   }
 
@@ -617,7 +617,7 @@ country_event = {
 	leave_alliance = CRO
 	release_vassal = RSR
 	release = HZB
-	random_country = { limit = { tag = RSR exists = RSR owns = 789 } 789 = { secede_province = HZB } }
+	any_country = { limit = { tag = RSR owns = 789 } 789 = { secede_province = HZB } }
 	CRO = { create_vassal = HZB } 
 	ai_chance = { factor = 0 }
   }

@@ -1056,7 +1056,7 @@ country_event = {
 	news_desc_long = "EVTDESC17560_NEWS_LONG"
 	news_desc_medium = "EVTDESC17560_NEWS_MEDIUM"
 	news_desc_short = "EVTDESC17560_NEWS_SHORT"
-	picture = "Unite"
+	picture = "may_day"
 	
 	trigger = {
 		is_ideology_enabled = socialist
@@ -1331,7 +1331,7 @@ country_event = {
 	id = 17580
 	title = "EVTNAME17580"
 	desc = "EVTDESC17580"
-	picture = "Spies"
+	picture = "union_busting"
 	
 	trigger = {
 		is_ideology_enabled = socialist
@@ -1695,9 +1695,10 @@ country_event = {
 	id = 17600
 	title = "EVTNAME17600"
 	desc = "EVTDESC17600"
-	picture = "Celebration"
+	picture = "Fascist"
 	
 	trigger = {
+		OR = { pop_majority_religion = sunni pop_majority_religion = shiite }
 		is_ideology_enabled = traditionalist
 		socialist = 5
 		NOT = { traditionalist = 5 }
@@ -1884,6 +1885,7 @@ country_event = {
 	
 	trigger = {
 		is_ideology_enabled = traditionalist
+		OR = { pop_majority_religion = sunni pop_majority_religion = shiite }
 		civilized = yes
 		internet_infrastructure = open_unregulated
 		NOT = { has_country_flag = paramilitaries_outlawed }
@@ -2394,7 +2396,7 @@ country_event = {
 	picture = "propaganda"
 	
 	trigger = {
-		is_ideology_enabled = traditionalist
+		is_ideology_enabled = populist
 		civilized = yes
 		traditionalist = 10
 		OR = {
@@ -2403,7 +2405,6 @@ country_event = {
 			government = absolute_monarchy
 		}
 		OR = {
-			nationalvalue = nv_islamic
 			any_core = {
 				empty = no
 				NOT = { owned_by = THIS }
@@ -2525,11 +2526,11 @@ country_event = {
 				}
 			}
 			ideology = {
-				value = traditionalist
+				value = populist
 				factor = 0.03
 			}
 			scaled_militancy = {
-				ideology = traditionalist
+				ideology = populist
 				factor = 3
 			}
 		}
@@ -2561,14 +2562,14 @@ country_event = {
 				factor = 0.15
 			}
 			ideology = {
-				value = traditionalist
+				value = populist
 				factor = 0.05
 			}
 		}
 	}
 }
 
-#Fascist March
+#Islamist March
 country_event = {
 	id = 17680
 	title = "EVTNAME17680"
@@ -2577,7 +2578,7 @@ country_event = {
 	news_desc_long = "EVTDESC17680_NEWS_LONG"
 	news_desc_medium = "EVTDESC17680_NEWS_MEDIUM"
 	news_desc_short = "EVTDESC17680_NEWS_SHORT"
-	picture = "Parade"
+	picture = "islamist_march"
 	
 	trigger = {
 		is_ideology_enabled = traditionalist
@@ -3339,6 +3340,12 @@ country_event = {
 						factor = 0.05
 					}
 				}
+				middle_strata = {
+					ideology = {
+						value = traditionalist
+						factor = 0.05
+					}
+				}				
 			}
 		}
 	}
@@ -3501,6 +3508,10 @@ country_event = {
 					ideology = communist
 					factor = 6
 				}
+				scaled_militancy = {
+					ideology = traditionalist
+					factor = 6
+				}				
 			}
 		}
 	}
@@ -3527,6 +3538,13 @@ country_event = {
 					}
 					consciousness = 3
 				}
+				middle_strata = {
+					ideology = {
+						value = traditionalist
+						factor = 0.1
+					}
+					consciousness = 3
+				}				
 				any_pop = {
 					scaled_militancy = {
 						ideology = socialist
@@ -3547,6 +3565,7 @@ province_event = {
 	trigger = {
 		is_ideology_enabled = communist
 		is_colonial = no
+		owner = { NOT = {	OR = { pop_majority_religion = sunni pop_majority_religion = shiite } } }
 		NOT = { controlled_by = REB }
 		OR = {
 			socialist = 20
