@@ -1,18 +1,18 @@
-#TODO make thisabout drugs,not alcohol
+#TODO make this about drugs,not alcohol
 
 #Temperance League
 country_event = {
 	id = 100
 	title = "EVTNAME100"
 	desc = "EVTDESC100"
-	picture = "TemperanceLeague"
+	picture = "anti_drug_timeline"
 	
 	trigger = {
 		civilized = yes
 		NOT = {
 			OR = {
 				has_country_modifier = libertine_culture
-				has_country_modifier = temperance_league
+				has_country_modifier = anti_drug
 				poor_strata_life_needs = 0.9
 			}
 		}
@@ -53,13 +53,13 @@ country_event = {
 	option = {
 		name = "EVTOPTB100"
 		add_country_modifier = {
-			name = temperance_league
+			name = anti_drug
 			duration = -1
 		}
 	}
 }
 
-#Beer Hall Opening
+#Drug liberalization
 country_event = {
 	id = 110
 	title = "EVTNAME110"
@@ -68,12 +68,6 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		NOT = {
-			OR = {
-				religion = sunni
-				religion = shiite
-			}
-		}
 		NOT = {
 			poor_strata_life_needs = 0.95
 		}
@@ -95,7 +89,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			has_country_modifier = temperance_league
+			has_country_modifier = anti_drug
 		}
 	}
 	
@@ -106,7 +100,7 @@ country_event = {
 				is_colonial = no
 			}
 			add_province_modifier = {
-				name = beer_halls
+				name = gangs
 				duration = -1
 			}
 		}
@@ -125,14 +119,14 @@ country_event = {
 	}
 }
 
-#Drunken Riots
+#Drug Gangs
 province_event = {
 	id = 120
 	title = "EVTNAME120"
 	desc = "EVTDESC120"
 
 	trigger = {
-		has_province_modifier = beer_halls
+		has_province_modifier = gangs
 	}
 
 	mean_time_to_happen = {
@@ -169,7 +163,7 @@ province_event = {
 	desc = "EVTDESC130"
 	
 	trigger = {
-		has_province_modifier = beer_halls
+		has_province_modifier = gangs
 		state_scope = {
 			any_owned_province = {
 				NOT = {
@@ -205,7 +199,7 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTA130"
-		remove_province_modifier = beer_halls
+		remove_province_modifier = gangs
 		state_scope = {
 			any_pop = {
 				militancy = 3
@@ -231,14 +225,14 @@ province_event = {
 	}
 }
 
-#Saloon Picketed
+#Gang War
 province_event = {
 	id = 140
 	title = "EVTNAME140"
 	desc = "EVTDESC140"
 		
 	trigger = {
-		has_province_modifier = beer_halls
+		has_province_modifier = gangs
 	}
 
 	mean_time_to_happen = {
@@ -246,7 +240,7 @@ province_event = {
 		modifier = {
 			factor = 0.9
 			owner = {
-				has_country_modifier = temperance_league
+				has_country_modifier = anti_drug
 			}
 		}
 		modifier = {
@@ -284,7 +278,7 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTA140"
-		remove_province_modifier = beer_halls
+		remove_province_modifier = gangs
 		poor_strata = {
 			militancy = 1
 			consciousness = 1
@@ -306,23 +300,21 @@ province_event = {
 	}
 }
 
-#Religious Temperance
+#Religious Vigilante 
 country_event = {
 	id = 150
 	title = "EVTNAME150"
 	desc = "EVTDESC150"
-	picture = "god"
+	picture = "pagad"
 
 	trigger = {
 		civilized = yes
-		NOT = {
-			OR = {
-				religion = sunni
-				religion = shiite
-			}
+		OR = {
+			religion = sunni
+			religion = shiite
 		}
 		moralism = 10
-		conservative = 20
+		traditionalsit = 20
 	}
 	
 	mean_time_to_happen = {
@@ -379,12 +371,12 @@ country_event = {
 	}
 }
 	
-#Licensing Act
+#War on Drugs
 country_event = {
 	id = 160
 	title = "EVTNAME160"
 	desc = "EVTDESC160"
-	picture = "liquor"
+	picture = "war_on_drugs"
 		
 	trigger = {
 		civilized = yes
@@ -394,7 +386,7 @@ country_event = {
 				religion = shiite
 			}
 		}
-		has_country_modifier = temperance_league
+		has_country_modifier = anti_drug
 	}
 
 	mean_time_to_happen = {
@@ -421,7 +413,7 @@ country_event = {
 		name = "EVTOPTA160"
 		random_state = {
 			any_owned = {
-				remove_province_modifier = beer_halls
+				remove_province_modifier = gangs
 			}
 			poor_strata = {
 				militancy = 0.5
@@ -451,7 +443,7 @@ country_event = {
 	}
 }
 
-# Temperance & Labour
+# Drug liberalization
 country_event = {
 	id = 170
 	title = "EVTNAME170"
@@ -460,13 +452,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		NOT = {
-			OR = {
-				religion = sunni
-				religion = shiite
-			}
-		}
-		socialist = 20
+		progressive = 20
 	}
 
 	mean_time_to_happen = {
@@ -483,7 +469,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.8
-			socialist = 50
+			progressive = 50
 		}
 		modifier = {
 			factor = 1.5
@@ -520,16 +506,15 @@ country_event = {
 	}
 }
 
-
-#Viticultural Association
+#Cannabis political parties
 country_event = {
 	id = 190
 	title = "EVTNAME190"
 	desc = "EVTDESC190"
-	picture = "meeting3"
+	picture = "drug_liberalization"
 	
 	trigger = {
-		has_country_modifier = temperance_league
+		has_country_modifier = anti_drug
 	}
 
 	mean_time_to_happen = {
@@ -556,15 +541,15 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA190"
-		remove_country_modifier = temperance_league
+		remove_country_modifier = anti_drug
 		random_owned = {
 			limit = {
 				NOT = {
-					has_province_modifier = beer_halls
+					has_province_modifier = gangs
 				}
 			}
 			add_province_modifier = {
-				name = beer_halls
+				name = gangs
 				duration = -1
 			}
 		}
