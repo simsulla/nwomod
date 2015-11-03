@@ -598,7 +598,7 @@ issues = {
 # vote_franschise
 	#none_voting
 	registered_voting = {
-		factor = 1.2
+		factor = 2.0
 		modifier = { factor = 0.0 OR = { NOT = { is_next_reform = registered_voting } everyday_needs = 1.0 NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 1 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
@@ -615,7 +615,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	universal_weighted_voting = {
-		factor = 0.8
+		factor = 1.8
 		modifier = { factor = 0.0 OR = { NOT = { is_next_reform = universal_weighted_voting } everyday_needs = 1.0 NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 1 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
@@ -633,7 +633,7 @@ issues = {
 
 	}			
 	universal_voting = {
-		factor = 0.4
+		factor = 1.4
 		modifier = { factor = 0.0 OR = { NOT = { is_next_reform = universal_voting } everyday_needs = 1.0 NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 1 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
@@ -650,7 +650,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	promoted_voting = {
-		factor = 1.2
+		factor = 0.6
 		modifier = { factor = 0.0 OR = { NOT = { is_next_reform = promoted_voting } everyday_needs = 1.0 NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 1 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
@@ -687,7 +687,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	open_opinion = {
-		factor = 0.4
+		factor = 1.0
 		modifier = { factor = 0.0 OR = { NOT = { is_next_reform = open_opinion } everyday_needs = 1.0 NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 1 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
@@ -704,7 +704,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	free_opinion = {
-		factor = 1.2
+		factor = 1.0
 		modifier = { factor = 0.0 OR = { NOT = { is_next_reform = free_opinion } everyday_needs = 1.0 NOT = { consciousness = 7 } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 1 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
@@ -752,7 +752,7 @@ issues = {
 # internet_infrastructure
 	# quality_of_service
 	open_unregulated = {
-		factor = 1
+		factor = 0.6
 		modifier = { factor = 0 OR = { is_next_reform = open_unregulated NOT = { consciousness = 5 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
@@ -768,7 +768,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	net_neutrality = {
-		factor = 1
+		factor = 0.4
 		modifier = { factor = 0 OR = { is_next_reform = net_neutrality NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
@@ -783,7 +783,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	sponsored_access = {
-		factor = 1
+		factor = 0.2
 		modifier = { factor = 0 is_next_reform = sponsored_access }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -799,7 +799,7 @@ issues = {
 # publishing_rights
 	# censored_publishing
 	firewall_publishing = {
-		factor = 1 
+		factor = 0.6 
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = firewall_publishing } luxury_needs =  0.3 } NOT = { consciousness = 4 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -817,7 +817,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	unregulated_publishing = {
-		factor = 1 
+		factor = 0.4
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = unregulated_publishing } luxury_needs =  0.3 } NOT = { consciousness = 7 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -832,7 +832,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}	
 	responsible_publishing = {
-		factor = 1
+		factor = 0.2
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = responsible_publishing } } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -848,7 +848,7 @@ issues = {
 # gender_rights
 	# gender_role_based
 	gender_equal = {
-		factor = 1
+		factor = 0.6
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = gender_equal } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -865,7 +865,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	gender_promotive = {
-		factor = 1
+		factor = 0.4
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = gender_promotive } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -881,7 +881,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	feminist = {
-		factor = 1
+		factor = 0.2
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = feminist } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -899,7 +899,7 @@ issues = {
 # political_parties
 	# parties_not_allowed
 	parties_only_nominated = {
-		factor = 1
+		factor = 1.6
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = parties_only_nominated } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -916,7 +916,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	parties_allowed = {
-		factor = 1
+		factor = 1.2
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = parties_allowed } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -932,7 +932,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	parties_promote_democratic = {
-		factor = 1
+		factor = 0.8
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = parties_promote_democratic } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -947,7 +947,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	parties_restrict_non_democratic = {
-		factor = 1
+		factor = 0.4
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = parties_restrict_non_democratic } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -1027,7 +1027,7 @@ issues = {
 # lgbt_rights
 	# lgbt_outlawed
 	lgbt_allowed = {
-		factor = 1
+		factor = 0.4
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = lgbt_equal_rights } luxury_needs = 0.2 } consciousness = 3 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1047,7 +1047,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	lgbt_equal_rights = {
-		factor = 1
+		factor = 0.3
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = lgbt_equal_rights } luxury_needs = 0.2 } consciousness = 6 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1064,7 +1064,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	gender_neutrallity = {
-		factor = 1
+		factor = 0.2
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = gender_neutrallity } luxury_needs = 0.2 } consciousness = 7 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1080,7 +1080,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	lgbt_promoted = {
-		factor = 1
+		factor = 0.1
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = lgbt_promoted } luxury_needs = 0.2 } consciousness = 8 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1098,7 +1098,7 @@ issues = {
 # minorities_reform
 	# minorities_oppression
 	minorities_equal_rights = {
-		factor = 1
+		factor = 0.8
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = minorities_equal_rights } luxury_needs = 0.2 } }
 		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 0.6 OR = { is_primary_culture = yes is_accepted_culture = yes } }
@@ -1122,7 +1122,7 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
 	minorities_affirmative_action = {
-		factor = 1
+		factor = 0.4
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = minorities_affirmative_action } luxury_needs = 0.2 } consciousness = 7 }
 		modifier = { factor = 0.1 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 0.6 OR = { is_primary_culture = yes is_accepted_culture = yes } }
@@ -1142,13 +1142,13 @@ issues = {
 # voting_system
 	# first_past_the_post
 	jefferson_method = {
-		factor = 1
+		factor = 0.4
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = jefferson_method } NOT = { life_needs = 1 } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.80 } }
 	}
 	proportional_representation = {
-		factor = 1
+		factor = 0.4
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = proportional_representation } NOT = { life_needs = 1 } } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.80 } }
