@@ -196,7 +196,7 @@ country_event = {
 		tag = CHI
 		exists = yes
 		war = no
-		capital_scope = { NOT = { province_id = 1612 } }
+		capital_scope = { NOT = { province_id = 1612 } NOT = { province_id = 2221 } }
 		owns = 1612
 	}
 
@@ -333,7 +333,7 @@ country_event = {
 		tag = CHI
 		exists = yes
 		war = no
-		capital_scope = { NOT = { province_id = 1612 } }
+		capital_scope = { NOT = { province_id = 1612 } NOT = { province_id = 2221 } }
 		any_owned_province = { province_id = 1612 }
 	}
 
@@ -342,6 +342,30 @@ country_event = {
 		capital = 1612
 	}
 }
+
+country_event = {
+	title = "EVT_90907_NAME"
+	desc = "EVT_90907_DESC"
+	picture = "kmt_victory"
+	id = 90907
+	fire_only_once = yes
+
+	trigger = {
+		tag = KMT
+		exists = KMT
+		CHI = { exists = no }
+		war = no
+		owns = 1612
+	}
+	
+	mean_time_to_happen = { months = 24 }
+
+	option = {				
+		name = "EVT_90907_A"
+		change_tag = CHI
+	}
+}
+
 country_event = {
   id = 8002809
   title = EVT_8002809_NAME
