@@ -28,4 +28,63 @@ political_decisions = {
 		}
 	}
 	
+	deportation_of_germans = {
+		picture = "deportation_of_germans"
+		potential = {
+			tag = RUS
+			year = 1947 NOT = { year = 1990 }
+			NOT = { has_country_flag = deportation_of_germans }
+		}
+
+		allow = {
+			OR = { NOT = { exists = GER } NOT = { relation = { who = GER value = 100 } } }
+			marshall_plan = 1
+		}
+
+		effect = {
+			set_country_flag = deportation_of_germans
+			relation = { who = GER value = -200 } 
+			any_pop = { limit = { location = { province_id = 695 } culture = german } move_pop = 1061 } # E.Prussia -> Siberia
+			any_pop = { limit = { location = { province_id = 698 } culture = german } move_pop = 1184 } # E.Prussia -> Kazakstan
+			any_pop = { limit = { location = { province_id = 697 } culture = german } move_pop = 2686 } # E.Prussia -> Siberia
+			any_pop = { limit = { strata = poor location = { province_id = 949 } culture = russian } move_pop = 697 } # -> E.Prussia
+			any_pop = { limit = { strata = poor location = { province_id = 941 } culture = russian } move_pop = 695 } #  -> E.Prussia
+		}
+	}
+
+	polish_population_transfers = {
+		picture = "polish_population_transfers"
+		potential = {
+			tag = RUS
+			year = 1947 NOT = { year = 1990 }
+			has_country_flag = allow_polish_population_transfers
+			NOT = { has_country_flag = polish_population_transfers }
+		}
+
+		allow = {
+			marshall_plan = 1
+		}
+
+		effect = {
+			set_country_flag = polish_population_transfers
+			relation = { who = POL value = -100 } 
+			any_pop = { limit = { NOT = { strata = poor } location = { province_id = 360 } culture = polish } move_pop = 690 } # Vilnius -> Danzig
+			any_pop = { limit = { NOT = { strata = poor } location = { province_id = 947 } culture = polish } move_pop = 680 } # Pastavy -> Koslin
+			any_pop = { limit = { NOT = { strata = poor } location = { province_id = 938 } culture = polish } move_pop = 679 } # Lida -> Kolberg
+			any_pop = { limit = { location = { province_id = 939 } culture = polish } move_pop = 692 } # Baranovichi -> Kuslin
+			any_pop = { limit = { location = { province_id = 949 } culture = polish } move_pop = 681 } # Pinsk -> D.Krone
+			any_pop = { limit = { location = { state_id = 937 } culture = polish } move_pop = 682 } # Brest Litovsk -> Breslau
+			any_pop = { limit = { location = { state_id = 957 } culture = polish } move_pop = 684 } # Kovel -> Liegnitz
+	
+			any_pop = { limit = { location = { province_id = 705 } culture = ukrainian } move_pop = 952 } # 
+			any_pop = { limit = { location = { province_id = 719 } culture = byelorussian } move_pop = 697 } # -> E.Prussia
+			any_pop = { limit = { location = { province_id = 707 } culture = byelorussian } move_pop = 695 } #  -> E.Prussia
+
+			any_pop = { limit = { location = { province_id = 702 } culture = polish } move_pop = 682 } # Lvov -> Breslau
+			any_pop = { limit = { location = { province_id = 952 } culture = polish } move_pop = 546 } # Ternipol -> Stettin
+			any_pop = { limit = { location = { province_id = 951 } culture = polish } move_pop = 690 } # Styri -> Danzig
+			
+		}
+	}	
+	
 }

@@ -105,6 +105,26 @@ country_event = {
   }
 }
 country_event = {
+  id = 8231005
+  title = EVT_8231005_NAME
+  desc = EVT_8231005_DESC
+  picture = "expulsion_of_germans"
+
+  trigger = {
+    OR = { tag = GER tag = DDR }
+    NOT = { year = 1990 }
+	OR = { CZH = { has_country_flag = expulsion_of_sudeten_germans } POL = { has_country_flag = expulsion_of_germans } }
+  }
+
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = EVT_8231005_A
+	set_country_flag = expulsion_of_germans
+	add_country_modifier = { name = german_scientists duration = 365 }
+  }
+}
+country_event = {
   id = 8231011
   title = EVT_8231011_NAME
   desc = EVT_8231011_DESC
