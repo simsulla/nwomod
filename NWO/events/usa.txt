@@ -704,7 +704,7 @@ country_event = {
 
   trigger = {
     tag = USA
-	year = 1971 NOT = { year = 1972 }
+	year = 1972 NOT = { year = 1990 }
     war = no
   }
 
@@ -713,7 +713,7 @@ country_event = {
   option = {
     name = EVT_8015850_A
 	any_pop = { consciousness = 0.5 }
-	country_event = { id = 8015851 days = 30 }
+	country_event = { id = 8015851 days = 300 }
   }
 }
 country_event = {
@@ -726,7 +726,7 @@ country_event = {
   option = {
     name = EVT_8015851_A
 	any_pop = { militancy = 0.5 }
-	country_event = { id = 8015852 days = 130 }
+	country_event = { id = 8015852 days = 150 }
   }
 }
 country_event = {
@@ -763,7 +763,6 @@ country_event = {
   desc = EVT_8015853_DESC
   picture = "nwo2_impeachment"
   is_triggered_only = yes # USA
-
 
   option = {
     name = EVT_8015853_A
