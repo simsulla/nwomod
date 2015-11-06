@@ -48,7 +48,8 @@ country_event = { # Somalia Independence
   fire_only_once = yes
 
   trigger = {
-    exists = SOM
+	tag = ITA
+	exists = SOM
 	is_our_vassal = SOM
     year = 1960 NOT = { year = 1990 }
   }
@@ -57,7 +58,7 @@ country_event = { # Somalia Independence
 
   option = {
     name = EVT_8014102_A
-	release = SOM 
+	release_vassal = SOM 
 	random_country = { limit = { owns = 1873 } country_event = 8014103 } # ENG
   }
 }
