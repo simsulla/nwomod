@@ -258,7 +258,6 @@ country_event = {
     tag = PER
     year = 1978 NOT = { year = 1990 }
   }
-  immediate = { set_global_flag = event_fired_8011416 }
 
   mean_time_to_happen = { months = 12 }
 
@@ -279,12 +278,11 @@ country_event = {
   trigger = {
     tag = PER
     year = 1979 NOT = { year = 1990 }
-    has_global_flag = event_fired_8011432
+    government = theocracy 
   }
-  immediate = { set_global_flag = event_fired_8011417 }
 
   mean_time_to_happen = { months = 6  }
-
+  
   option = {
     name = EVT_8011417_A
 	any_pop = { dominant_issue = { value = moralism factor = 0.35 } } 
@@ -381,11 +379,10 @@ country_event = {
   trigger = {
     tag = PER
     year = 1978 NOT = { year = 1990 }
-	has_leader = "Mohammad Reza Pahlavi"
+	NOT = { government = theocracy }
   }
-  immediate = { set_global_flag = event_fired_8011431 }
 
-  mean_time_to_happen = { months = 12 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_8011431_A
@@ -398,9 +395,9 @@ country_event = {
     name = EVT_8011431_B
 	badboy = 25 
 	relation = { who = USA value = -150 } 
-	any_pop = { militancy = 6.0 }
-	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.45 } } }
-	country_event =  { id = 8011432 days = 30 } 
+	any_pop = { dominant_issue = { value = state_religion factor = 0.45 } }
+	any_pop = { limit = { issue = state_religion } militancy = 6.0 }
+	country_event =  { id = 8011432 days = 150 } 
   }
 }
 country_event = {
@@ -414,15 +411,18 @@ country_event = {
 
   option = {
     name = EVT_8011432_A
-	any_pop = { militancy = 0.5 }
-	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.55 } } }
+	any_pop = { limit = { issue = state_religion } militancy = -6 }
+	badboy = 25 relation = { who = USA value = -150 } 
+	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.10 } } }
+	government = theocracy country_event = 800051
+	country_event =  { id = 8011417 days = 10 } 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8011432_A
-	badboy = 25 relation = { who = USA value = -150 } 
-	any_pop = { militancy = 2.5 }
+	any_pop = { limit = { issue = state_religion } militancy = 2 }
 	any_pop = { dominant_issue = { value = state_religion factor = 0.45 } }
-	country_event =  { id = 8011417 days = 1 } 
+	ai_chance = { factor = 0 }
   }
 }
