@@ -65,36 +65,29 @@ country_event = {
   title = EVT_8011021_NAME
   desc = EVT_8011021_DESC
   picture = "nwo2_islamabad"
-  fire_only_once = yes
-
-  trigger = {
-    tag = PAK
-    year = 1960
-	capital = 1230
-	money = 10000
-  }
-
-  mean_time_to_happen = { months = 5  }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8011021_A
 	capital = 1230 
+	change_province_name  = "Islamabad"
 	prestige = 10
-	treasury = -10000 
+	treasury = -5000 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8011021_B
 	capital = 1229 
+	change_province_name  = "Islamabad"
 	prestige = 10
-	treasury = -5000 
+	treasury = -10000 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8011021_C
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
