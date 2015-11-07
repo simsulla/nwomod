@@ -466,12 +466,23 @@ political_decisions = {
 			NOT = { has_country_modifier = comecon_aid_rejected }
 		}
 		allow = {
-			government = proletarian_dictatorship
+			OR = { 
+				government = proletarian_dictatorship 
+				AND = { NOT = { government = democracy } NOT = { government = hms_government } ruling_party_ideology  = socialist } 
+				ruling_party_ideology  = communist
+			}
 			NOT = { money = 1000 }
 		}
 		effect = { # give expl text will get 100000 and need good relation with Soviet
-			add_country_modifier = { name = comecon_aid duration = 350 }
-			RUS = { country_event = 15610 }
+			add_country_modifier = { name = comecon_aid duration = 700 }
+			any_country = { 
+				limit = { 
+					is_greater_power = yes
+					tag = RUS
+					money = 220000
+				}
+				country_event = 15610 
+			}
 			prestige = -5
 		}
 		ai_will_do = { factor = 1 }
