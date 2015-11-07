@@ -396,7 +396,7 @@ country_event = {
 	badboy = 25 
 	relation = { who = USA value = -150 } 
 	any_pop = { dominant_issue = { value = state_religion factor = 0.45 } }
-	any_pop = { limit = { issue = state_religion } militancy = 6.0 }
+	any_pop = { militancy = 6.0 }
 	country_event =  { id = 8011432 days = 150 } 
   }
 }
@@ -411,7 +411,7 @@ country_event = {
 
   option = {
     name = EVT_8011432_A
-	any_pop = { limit = { issue = state_religion } militancy = -6 }
+	any_pop = { militancy = -6 }
 	badboy = 25 relation = { who = USA value = -150 } 
 	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.10 } } }
 	government = theocracy country_event = 800051
@@ -421,7 +421,7 @@ country_event = {
 
   option = {
     name = EVT_8011432_A
-	any_pop = { limit = { issue = state_religion } militancy = 2 }
+	any_pop = { militancy = 2 }
 	any_pop = { dominant_issue = { value = state_religion factor = 0.45 } }
 	ai_chance = { factor = 0 }
   }
