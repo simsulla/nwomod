@@ -69,16 +69,14 @@ country_event = {
 	id = 19001
 	title = EVT_19001_NAME
 	desc = EVT_19001_DESC
-	picture = "greatpowers"
+	picture = "super_powers"
 
 	trigger = {
 		part_of_sphere = yes
 		is_vassal = no
 		NOT = { has_country_flag = accept_differances_in_gov }
-		OR = { 
-			AND = { sphere_owner = { NOT = { government = proletarian_dictatorship } } government = proletarian_dictatorship }  
-			AND = { sphere_owner = { government = proletarian_dictatorship } NOT = { government = proletarian_dictatorship } }
-		}
+		sphere_owner = { NOT = { government = proletarian_dictatorship } } 
+		government = proletarian_dictatorship
 	}
 
 	mean_time_to_happen = {
@@ -87,33 +85,51 @@ country_event = {
 
 	option = {
 		name = EVT_19001_A
-		random_country = { limit = { is_sphere_leader_of = THIS } country_event = 19002 }
-		ai_chance = { factor = 100 }
+		sphere_owner = { country_event = 19003 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = EVT_19001_B
-		random_country = { limit = { is_sphere_leader_of = THIS } diplomatic_influence = { who = THIS value = -25 } relation = { who = THIS value = -25 } }
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = -50 } 
+			add_casus_belli = { target = THIS type = install_democracy months = 12  }
+			relation = { who = THIS value = -25 } 
+		}
 		ai_chance = { factor = 0 }
 	}
 }
-country_event = { # $FROMCOUNTRY$ request premistion to maintain ther current form of government
+country_event = { 
 	id = 19002
 	title = EVT_19002_NAME
 	desc = EVT_19002_DESC
-	picture = "greatpowers"
-	is_triggered_only = yes
+	picture = "super_powers"
+
+	trigger = {
+		part_of_sphere = yes
+		is_vassal = no
+		NOT = { has_country_flag = accept_differances_in_gov }
+		sphere_owner = { government = proletarian_dictatorship } 
+		NOT = { government = proletarian_dictatorship }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
 
 	option = {
 		name = EVT_19002_A
-		any_country = { limit = { is_sphere_leader_of = FROM FROM = { NOT = { government = proletarian_dictatorship } } government = proletarian_dictatorship } country_event = 19003 } # THIS
-		any_country = { limit = { is_sphere_leader_of = FROM NOT = { government = proletarian_dictatorship } FROM = { government = proletarian_dictatorship } } country_event = 19004 } # THIS
-		ai_chance = { factor = 100 }
+		sphere_owner = { country_event = 19004 }
+		ai_chance = { factor = 1 }
 	}
-	
+
 	option = {
 		name = EVT_19002_B
-		FROM = { set_country_flag = accept_differances_in_gov }
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = -50 } 
+			add_casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
+			relation = { who = THIS value = -25 } 
+		}
 		ai_chance = { factor = 0 }
 	}
 }
@@ -121,38 +137,38 @@ country_event = { # Demand install communist in-power
 	id = 19003
 	title = EVT_19003_NAME
 	desc = EVT_19003_DESC
-	picture = "greatpowers"
-	is_triggered_only = yes
+	picture = "super_powers"
+	is_triggered_only = yes # sphere_leader
 
 	option = {
 		name = EVT_19003_A
-		FROM = { casus_belli = { target = THIS type = install_communist_gov_cb months = 12  } diplomatic_influence = { who = THIS value = -100 } }
-		ai_chance = { factor = 0.1 modifier = { factor = 10 tag = FIN } }
+		FROM = { set_country_flag = accept_differances_in_gov }
+		ai_chance = { factor = 0.5 modifier = { factor = 10 FROM = { tag = FIN } } }
 	}
 	
 	option = {
 		name = EVT_19003_B
-		government = proletarian_dictatorship country_event = 800052
-		ai_chance = { factor = 1 modifier = { factor = 0 tag = FIN } }
+		FROM = { country_event = 19006 }
+		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { tag = FIN } } }
 	}
 }
 country_event = { # Demand install democracy
 	id = 19004
 	title = EVT_19004_NAME
 	desc = EVT_19004_DESC
-	picture = "greatpowers"
-	is_triggered_only = yes
+	picture = "super_powers"
+	is_triggered_only = yes # sphere_leader
 
 	option = {
 		name = EVT_19004_A
-		FROM = { casus_belli = { target = THIS type = install_democracy months = 12  } diplomatic_influence = { who = THIS value = -100 } }
-		ai_chance = { factor = 0 modifier = { factor = 0 tag = YUG }}
+		FROM = { set_country_flag = accept_differances_in_gov }
+		ai_chance = { factor = 0.5 modifier = { factor = 10 FROM = { tag = YUG } } }
 	}
 	
 	option = {
 		name = EVT_19004_B
-		government = democracy country_event = 800054
-		ai_chance = { factor = 1 modifier = { factor = 0 tag = YUG } }
+		FROM = { country_event = 19007 }
+		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { tag = YUG } } }
 	}
 }
 country_event = {
@@ -181,7 +197,52 @@ country_event = {
 		prestige = -5
 	}
 }
+country_event = { # Demand install communist in-power
+	id = 19006
+	title = EVT_19006_NAME
+	desc = EVT_19006_DESC
+	picture = "super_powers"
+	is_triggered_only = yes # sphere_leader
 
+	option = {
+		name = EVT_19006_A
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = -50 } 
+			add_casus_belli = { target = THIS type = install_democracy months = 12  }
+			relation = { who = THIS value = -25 } 
+		}
+		ai_chance = { factor = 0.5  }
+	}
+	
+	option = {
+		name = EVT_19006_B
+		government = proletarian_dictatorship country_event = 800042
+		ai_chance = { factor = 0.5 }
+	}
+}
+country_event = { # Demand install democracy
+	id = 19007
+	title = EVT_19007_NAME
+	desc = EVT_19007_DESC
+	picture = "super_powers"
+	is_triggered_only = yes # in soi
+
+	option = {
+		name = EVT_19007_A
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = -50 } 
+			add_casus_belli = { target = THIS type = install_democracy months = 12  }
+			relation = { who = THIS value = -25 } 
+		}		
+		ai_chance = { factor = 0.5 }
+	}
+	
+	option = {
+		name = EVT_19004_B
+		government = democracy country_event = 800044
+		ai_chance = { factor = 0.5 }
+	}
+}
 # Parade
 country_event = {
 	id = 19010
