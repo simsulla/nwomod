@@ -137,7 +137,16 @@ left_group = {
 		add_political_reform = { base = 1 }
 		remove_political_reform = { base = 0 }
 
-		add_social_reform = { base = 0 }
+		add_social_reform = { 
+			base = 0.5
+			group = {
+				modifier = { factor = 0.1 OR = { militancy = 1 social_movement_strength = 0.1 } }
+				modifier = { factor = 0.1 OR = { militancy = 2 social_movement_strength = 0.2 } }
+				modifier = { factor = 0.1 OR = { militancy = 3 social_movement_strength = 0.3 } }
+				modifier = { factor = 0.1 OR = { militancy = 4 social_movement_strength = 0.4 } }
+				modifier = { factor = 0.1 OR = { militancy = 5 social_movement_strength = 0.5 } }
+			}			
+		}
 		remove_social_reform = { base = 0 }
 
 		add_military_reform = { base = 0.5 }
