@@ -394,8 +394,9 @@ political_decisions = {
 		}
 		effect = { 
 			add_country_modifier = { name = wb_loan duration = 700 }
-			any_country = { 
+			random_country = { 
 				limit = { 
+					OR = { is_sphere_leader_of = THIS part_of_sphere  = no }
 					is_greater_power = yes
 					OR = { has_country_flag = world_bank has_country_flag = the_imf has_country_flag = dev_bank }
 					money = 220000
