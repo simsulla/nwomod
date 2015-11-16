@@ -14,6 +14,7 @@ join_communist_bloc = {
 			exists = RUS
 			NOT = { has_country_flag = joincomm }
 			has_global_flag = blocsenabled 
+			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
 			OR = { government = proletarian_dictatorship ruling_party_ideology = communist }
@@ -29,7 +30,6 @@ join_communist_bloc = {
 			RUS =  { diplomatic_influence =  { who = THIS value = 25 } }
 			any_country = { limit = { has_country_flag = joincomm } country_event = 19809 }
 			add_country_modifier = { name = communist_bloc duration = 999999 }
-			remove_country_modifier = independent_bloc
 		}
 	}
 
@@ -45,6 +45,7 @@ join_democratic_bloc = {
 			exists = RUS
 			NOT = { has_country_flag = joindemo }
 			has_global_flag = blocsenabled
+			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
 			OR = {   
@@ -64,7 +65,6 @@ join_democratic_bloc = {
 			USA =  { diplomatic_influence =  { who = THIS value = 25 } }
 			any_country = { limit = { has_country_flag = joindemo } country_event = 19809 }
 			add_country_modifier = { name = democratic_bloc duration = 999999 }
-			remove_country_modifier = independent_bloc
 		}
 
 
@@ -83,8 +83,11 @@ join_nam_bloc = {
 			NOT = { has_country_flag = joinnam }
 			has_global_flag = blocsenabled
 			has_global_flag = namformed
+			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
+			NOT = { relation = { who = USA value = 100 } }
+			NOT = { relation = { who = RUS value = 100 } }
 			NOT = { has_country_flag = joindemo }
 			NOT = { has_country_flag = joincomm }
 		}
@@ -96,7 +99,6 @@ join_nam_bloc = {
 			USA =  { diplomatic_influence =  { who = THIS value = -50 } }
 			RUS =  { diplomatic_influence =  { who = THIS value = -50 } }
 			add_country_modifier = { name = nam_bloc duration = 999999 }
-			remove_country_modifier = independent_bloc
 		}
 	}
 
@@ -112,9 +114,10 @@ leave_communist_bloc = {
 			exists = RUS
 			has_country_flag = joincomm
 			has_global_flag = blocsenabled
+			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
-			OR = { NOT = { government = proletarian_dictatorship } ai = no }
+			NOT = { government = proletarian_dictatorship }
 			NOT = { has_country_flag = joindemo }
 			NOT = { has_country_flag = joinnam }
 		}
@@ -126,7 +129,7 @@ leave_communist_bloc = {
 			RUS =  { diplomatic_influence =  { who = THIS value = -200 } }
 			USA =  { diplomatic_influence =  { who = THIS value = 10 } }
 			any_country = { limit = { has_country_flag = joincomm } country_event = 19810 }
-			add_country_modifier = { name = independent_bloc duration = 999999 }
+			add_country_modifier = { name = independent_bloc duration = 3500 }
 			remove_country_modifier = communist_bloc
 		}
 		alert = no
@@ -145,9 +148,10 @@ leave_democratic_bloc = {
 			exists = RUS
 			has_country_flag = joindemo
 			has_global_flag = blocsenabled
+			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
-			OR = { government = proletarian_dictatorship ai = no}
+			government = proletarian_dictatorship
 			NOT = { has_country_flag = joincomm }
 			NOT = { has_country_flag = joinnam }
 		}
@@ -159,7 +163,7 @@ leave_democratic_bloc = {
 			RUS =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = -200 } }
 			any_country = { limit = { has_country_flag = joindemo } country_event = 19810 }
-			add_country_modifier = { name = independent_bloc duration = 999999 }
+			add_country_modifier = { name = independent_bloc duration = 3500 }
 			remove_country_modifier = democratic_bloc
 		}
 		alert = no
@@ -179,9 +183,15 @@ leave_nam_bloc = {
 			has_country_flag = joinnam
 			has_global_flag = blocsenabled
 			NOT = { government = proletarian_dictatorship }
+			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
-			OR = { relation = { who = USA value = 150 } ai = no }
+			relation = { who = USA value = 150 }
+			OR = {   
+				ruling_party_ideology = liberal 
+				ruling_party_ideology = socialist
+				ruling_party_ideology = conservative 
+			}
 			NOT = { has_country_flag = joincomm }
 			NOT = { has_country_flag = joindemo }
 		}
@@ -192,7 +202,7 @@ leave_nam_bloc = {
 			relation = { who = USA value = 25 }
 			RUS =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = 10 } }
-			add_country_modifier = { name = independent_bloc duration = 999999 }
+			add_country_modifier = { name = independent_bloc duration = 3500 }
 			remove_country_modifier = nam_bloc
 		}
 		alert = no
@@ -212,12 +222,12 @@ leave_nam_bloc_comm = {
 			has_country_flag = joinnam
 			has_global_flag = blocsenabled
 			government = proletarian_dictatorship
+			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
-			OR = { relation = { who = RUS value = 150 } ai = no }
+			relation = { who = RUS value = 150 }
 			NOT = { has_country_flag = joincomm }
 			NOT = { has_country_flag = joindemo }
-			ai = no
 		}
 		effect = {
 			clr_country_flag = joinnam
@@ -226,7 +236,7 @@ leave_nam_bloc_comm = {
 			relation = { who = USA value = 20 }
 			RUS =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = -10 } }
-			add_country_modifier = { name = independent_bloc duration = 999999 }
+			add_country_modifier = { name = independent_bloc duration = 3500 }
 			remove_country_modifier = nam_bloc
 		}
 		alert = no
