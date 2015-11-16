@@ -17,9 +17,9 @@ country_event = {
 
   option = {
     name = EVT_8231000_A
-	RUS = { random_pop = { limit = { culture = german } move_pop = 2348 } } # Buenos Aires
-	POL = { random_pop = { limit = { culture = german } move_pop = 2348 } } # Buenos Aires
-	POL = { random_pop = { limit = { culture = german } move_pop = 2351 } } # La Plata
+	RUS = { random_pop = { limit = { strata = rich culture = german } move_pop = 2348 } } # Buenos Aires
+	POL = { random_pop = { limit = { strata = rich culture = german } move_pop = 2348 } } # Buenos Aires
+	POL = { random_pop = { limit = { strata = rich culture = german } move_pop = 2351 } } # La Plata
 	add_country_modifier = { name = economic_boom duration = 365 }
 	ai_chance = { factor = 100 }
   }
@@ -51,7 +51,7 @@ country_event = {
   option = {
     name = EVT_8231001_A
 	badboy = 1 
-	POL = { random_pop = { limit = { culture = german } move_pop = 487 } } # Madrid
+	POL = { random_pop = { limit = { strata = rich culture = german } move_pop = 487 } } # Madrid
 	add_country_modifier = { name = economic_boom duration = 365 }
 	country_event = { id = 8231010 days = 350 }
   }
@@ -81,9 +81,9 @@ country_event = {
   option = {
     name = EVT_8231004_A
 	badboy = 1 
-	POL = { random_pop = { limit = { culture = german } move_pop = 2463 } } # Porto Alegre
-	POL = { random_pop = { limit = { culture = german } move_pop = 2450 } } # Sao Paulo
-	POL = { random_pop = { limit = { culture = german } move_pop = 2459 } } # Lajes
+	POL = { random_pop = { limit = { strata = rich culture = german } move_pop = 2463 } } # Porto Alegre
+	POL = { random_pop = { limit = { strata = rich culture = german } move_pop = 2450 } } # Sao Paulo
+	POL = { random_pop = { limit = { strata = rich culture = german } move_pop = 2459 } } # Lajes
 	add_country_modifier = { name = economic_boom duration = 365 }
   }
 
@@ -113,6 +113,7 @@ country_event = {
   trigger = {
     OR = { tag = GER tag = DDR }
     NOT = { year = 1990 }
+	NOT = { has_country_flag = expulsion_of_germans }
 	OR = { CZH = { has_country_flag = expulsion_of_sudeten_germans } POL = { has_country_flag = expulsion_of_germans } }
   }
 
