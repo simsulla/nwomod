@@ -106,9 +106,8 @@ country_event = {
 		prestige = 2
 		release_vassal = RAJ
 		random_country = { limit = { tag = UAE vassal_of = RAJ } RAJ = { release_vassal = UAE } ENG = { create_vassal = UAE } }
-		any_country = { limit = { vassal_of = RAJ } country_event = 8214019 }
+		any_country = { limit = { OR = { vassal_of = RAJ tag = TIB tag = NET tag = SIK } } country_event = 8214019 }
 		RAJ = { country_event = { id = 8214013 days = 10 } }
-		TIB = { country_event = 8214019 }
 	}
 
 	option = {
@@ -184,7 +183,7 @@ country_event = {
 	desc = EVT_8214019_DESC
 	# EVT_8214019_DESC;Neither paramountcy nor the subsidiary alliances could continue after Indian independence. The British took the view that because they had been established directly between the British crown and the princely states, they could not be transferred to the newly independent dominions of India and Pakistan.[11] At the same time, the alliances imposed obligations on Britain that it was not prepared to continue to carry out, such as the obligation to maintain troops in India for the defence of the princely states. The British government therefore decided that paramountcy, together with all treaties between them and the princely states, would come to an end upon the British departure from India.
 	picture = "princely_states"
-	is_triggered_only = yes # RAJ
+	is_triggered_only = yes # ENG
 	
 	option = {
 		name = EVT_8214019_A 
