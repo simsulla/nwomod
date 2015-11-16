@@ -1,6 +1,6 @@
-#irregular
+#irregular - infantry
 irregular = {
-	icon = 17
+	icon = 7
 	
 	type = land
 	sprite = Infantry
@@ -11,30 +11,28 @@ irregular = {
 	#Core Abilities
 	priority = 5
 	max_strength = 3
-	default_organisation = 30
+	default_organisation = 20
 	maximum_speed = 4.00
-	weighted_value = 0.5 #halved because militia, function is "basevalue/2"
+	weighted_value = 1.0
 
-
-	#Building Costs
-	build_time = 60
+	build_time = 45
+	# 0.5B
 	build_cost = {
-		small_arms = 5
-		grain = 25
+		clothes = 100
+		small_arms = 200
 	}
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		small_arms = 0.1
+		small_arms = 0.04
 	}
-	
 
 	#Land Abilties
 	reconnaissance = 0
-	attack = 1
-	defence = 1
-	discipline = 0.9
+	attack = 2
+	#siege = 1
+	defence = 2 # inventions improve this
+	discipline = 1
 	support = 0.0
 	maneuver = 1
-	siege = 0.25
 }
