@@ -97,12 +97,12 @@ country_event = {
 	
 	trigger = {
 		tag = ENG
-		exists = ZAM
-		exists = MLW
+		OR = { 
+			AND = { exists = ZAM ZAM = { vassal_of = RHO } }
+			AND = { exists = MLW MLW = { vassal_of = RHO } }
+		}
 		exists = RHO
-		is_our_vassal = RHO
-		ZAM = { vassal_of = RHO }
-		MLW = { vassal_of = RHO }
+		#is_our_vassal = RHO
 		year = 1963 NOT = { year = 1990 }
 		exists = TAN
 	}
@@ -112,6 +112,7 @@ country_event = {
     option = {
 	  name = EVT_8012210_A
 	  RHO = { country_event = 8012212 }
+	  prestige = 5
   	  ai_chance = { factor = 100 }
     }
     option = {
@@ -127,13 +128,13 @@ country_event = { # Unilateral Declaration of Independence
   title = EVT_8012212_NAME
   desc = EVT_8012212_DESC
   picture = "nwo2_rhodesian_udi"
-  is_triggered_only = yes
+  is_triggered_only = yes # RHO
 
   option = {
     name = EVT_8012212_A
 	any_pop = { militancy = 0.5 }
-	release = ZAM
-    release = MLW
+	release_vassal = ZAM
+    release_vassal = MLW
 	ZAM = { primary_culture = black_anglo }
 	MLW = { primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
@@ -144,7 +145,7 @@ country_event = { # Unilateral Declaration of Independence
   option = {
     name = EVT_8012212_B
 	any_pop = { militancy = 0.5 }
-    release = MLW
+    release_vassal = MLW
 	MLW = { primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
 	badboy = 20
@@ -154,8 +155,8 @@ country_event = { # Unilateral Declaration of Independence
   option = {
     name = EVT_8012212_C
 	any_pop = { militancy = 0.5 }
-	release = ZAM
-    release = MLW
+	release_vassal = ZAM
+    release_vassal = MLW
 	ZAM = { primary_culture = black_anglo }
 	MLW = { primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
