@@ -130,7 +130,44 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
-
+country_event = {
+	id = 44201
+	title = "EVT_44201_NAME" # Israel Requests Support
+	desc= "EVT_44201_DESC" # Bilateral relations have evolved from an initial US policy of sympathy and support for the creation of a Jewish homeland in 1948 to an unusual partnership that links a small but militarily powerful Israel, dependent on the United States for its economic and military strength, with the American superpower trying to balance other competing interests in the region. Others maintain that Israel is a strategic ally, and that US relations with Israel strengthen the US presence in the Middle East.[1] Israel is one of the United States' two original major non-NATO allies in the Middle East. The main expression of Congressional support for Israel has been foreign aid. Shall we shall foster a good relation with Israel?
+	picture = "us_israel_relations"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_44201_A" # support Israel
+		prestige = 5
+		treasury = -50000
+		fuel = -200
+		cement = -200
+		machine_parts = -200
+		random_country = { limit = { tag = USA ruling_party_ideology  = socialist } ideology  = { factor = 0.2  value = socialist } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = liberal } ideology  = { factor = 0.2  value = liberal } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = conservative } ideology  = { factor = 0.2  value = conservative } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = populist } ideology  = { factor = 0.2  value = populist } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = traditionalist } ideology  = { factor = 0.2  value = traditionalist } }
+		ISR = { 
+			treasury = 50000 
+			fuel = 200
+			cement = 200
+			machine_parts = 200
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = "EVT_44201_B" # do not support them
+		random_country = { limit = { tag = USA ruling_party_ideology  = socialist } ideology  = { factor = -0.2  value = socialist } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = liberal } ideology  = { factor = -0.2  value = liberal } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = conservative } ideology  = { factor = -0.2  value = conservative } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = populist } ideology  = { factor = -0.2  value = populist } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = traditionalist } ideology  = { factor = -0.2  value = traditionalist } }
+		prestige = -30
+		ai_chance = { factor = 0 }
+	}
+}
 
 
 #9/11

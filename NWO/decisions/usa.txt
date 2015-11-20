@@ -7,7 +7,7 @@ political_decisions = {
 			ISR = { exists = no }
 			919 = { owned_by = ENG } 
 			NOT = { 
-				has_country_flag = support_zionism 
+				has_country_modifier = support_zionism 
 				ENG = { has_country_modifier = stock_market_crash } 
 			}
 		}
@@ -17,7 +17,7 @@ political_decisions = {
 			is_vassal = no
 			part_of_sphere = no
 			NOT = {
-				has_country_flag = support_zionism
+				has_country_modifier = support_zionism
 			}
 			OR = {
 				AND = {
@@ -33,9 +33,46 @@ political_decisions = {
 		}
 
 		effect = {
-			set_country_flag = support_zionism
+			add_country_modifier = { name = support_zionism duration = 3500 }
 			ENG = { country_event = 1007601 }
 		}
 	}
 	
+	aipac = {
+		# aipac_title;American Israel Public Affairs Committee
+		# apiac_desc;The American Israel Public Affairs Committee is a lobbying group that advocates pro-Israel policies to the Congress and Executive Branch of the United States. The "vital core" of AIPAC membership—American Jews[19]—made up less than 3% of the US population and were concentrated in only nine states. But while AIPAC would not be able to deliver significant numbers of Jewish voters to most elected officials, it could deliver campaign contributions. AIPAC strongly supports substantial US aid to Israel.
+		picture = "aipac"
+		potential = {
+			year = 1950
+			tag = USA
+			exists = ISR
+			NOT = { has_country_modifier = support_zionism }
+		}
+
+		allow = {
+ 		    tag = USA
+			rank = 1
+			OR = { relation = { who = ISR value = 150 } AND = { ai = yes ISR = { ai = yes } } }
+			government = democracy
+			OR = { 
+				AND = { compulsory_secondary_education = 1 NOT = { year = 1950 } }
+				AND = { tripartite_system = 1 NOT = { year = 1960 } }
+				AND = { comprehensive_education = 1 NOT = { year = 1970 } }
+				AND = { telephone_exchange = 1 NOT = { year = 1980 } }
+				AND = { preschool_education = 1 NOT = { year = 1990 } }
+				AND = { global_enrollment = 1 NOT = { year = 2000 } }
+				AND = { informatization_education = 1 NOT = { year = 2010 } }
+			}
+		}
+
+		effect = {
+			add_country_modifier = { name = support_zionism duration = 3500 }
+			prestige = 5
+			random_country = { limit = { tag = USA ruling_party_ideology  = socialist } ideology  = { factor = 0.2  value = socialist } }
+			random_country = { limit = { tag = USA ruling_party_ideology  = liberal } ideology  = { factor = 0.2  value = liberal } }
+			random_country = { limit = { tag = USA ruling_party_ideology  = conservative } ideology  = { factor = 0.2  value = conservative } }
+			random_country = { limit = { tag = USA ruling_party_ideology  = populist } ideology  = { factor = 0.2  value = populist } }
+			random_country = { limit = { tag = USA ruling_party_ideology  = traditionalist } ideology  = { factor = 0.2  value = traditionalist } }
+		}
+	}	
 }
