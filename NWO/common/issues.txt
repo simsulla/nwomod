@@ -201,24 +201,41 @@ political_reforms = {
 		next_step_only = yes
 		ruling_party_opinion = { # party_appointed
 			rules = { same_as_ruling_party = yes }
+			global_immigrant_attract = -0.05
+			global_pop_consciousness_modifier = -0.02
+			ruling_party_support = 0.1
+			issue_change_speed = -0.8			
 		}
 		regulated_opinion = { # appointed
-			rules = { rich_only = yes }
+			rules = { population_vote = yes }		
+			global_pop_consciousness_modifier = -0.01
+			ruling_party_support = 0.1
+			issue_change_speed = -0.4
+			global_immigrant_attract = -0.02
 		}
 		open_opinion = { # state_equal_weight
-			rules = { state_vote = yes }
+			rules = { population_vote = yes }
+			issue_change_speed = 0.4
+			global_pop_consciousness_modifier = 0.01			
 			allow = { 
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 		free_opinion = { # population_equal_weight
 			rules = { population_vote = yes }
+			global_pop_consciousness_modifier = 0.02
+			issue_change_speed = 0.8
+			global_immigrant_attract = 0.02			
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 		democratic_opinion = { # appointed
-			rules = { rich_only = yes }
+			rules = { population_vote = yes }
+			global_pop_consciousness_modifier = 0.01
+			issue_change_speed = 0.6
+			global_immigrant_attract = 0.01
+			global_pop_militancy_modifier = -0.01			
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
@@ -272,10 +289,10 @@ political_reforms = {
 			global_immigrant_attract = 0.05
 		}
 		responsible_publishing = { 
+			literacy_con_impact = 0.5		
 			suppression_points_modifier = 0.25
 			cb_generation_speed_modifier = 0.1
 			issue_change_speed = -0.1
-			global_immigrant_attract = -0.01
 		}		
 	}
 	gender_rights = { # trade_unions
@@ -593,11 +610,12 @@ social_reforms = {
 		no_health_care = {
 		}
 		trinket_health_care = {
-			global_population_growth = 0.0005
+			global_population_growth = 0.0001
 			global_immigrant_attract = 0.05
 			administrative_multiplier = 1
 		}
 		low_health_care = {
+			global_population_growth = 0.0002
 			global_immigrant_attract = 0.1
 			administrative_multiplier = 2
 		}
@@ -618,6 +636,7 @@ social_reforms = {
 		administrative = yes
 		next_step_only = yes
 		no_controls = {
+			factory_throughput = 0.01
 		}
 		trinket_envir = {
 			factory_maintenance = 0.1
@@ -625,14 +644,17 @@ social_reforms = {
 		}
 		low_envir = {
 			factory_maintenance = 0.2
+			factory_throughput = -0.04			
 			administrative_multiplier = 2
 		}
 		acceptable_envir = {
 			factory_maintenance = 0.3
+			factory_throughput = -0.02			
 			administrative_multiplier = 3
 		}
 		good_envir = {
 			factory_maintenance = 0.4
+			factory_throughput = -0.04			
 			administrative_multiplier = 4
 		}
 	}
