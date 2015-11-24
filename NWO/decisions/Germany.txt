@@ -51,18 +51,7 @@ political_decisions = {
 
 		allow = {
 			tag = FRA 574 = { owned_by = FRA }
-			NOT = { has_country_flag = monnet_plan }
-			OR = {
-				AND = {
-					year = 1947
-					ai = yes
-				}
-				AND = {
-					marshall_plan = 1
-					#public_switched_telephone_network = 1
-					ai = no
-				}
-			}
+			marshall_plan = 1
 		}
 
 		effect = {

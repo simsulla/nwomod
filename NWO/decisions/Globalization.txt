@@ -61,12 +61,13 @@ political_decisions = {
 				OR = { has_country_flag = the_imf  has_country_flag = dev_bank } 
 				ENG = { capital_scope = { NOT = { trade_goods = credit } } }
 			}			
-			year = 1968
+			#year = 1968
 		}
 		allow = {
 			OR = { NOT = { government = proletarian_dictatorship } has_country_flag = market_communism }
 			is_greater_power = yes
 			has_recently_lost_war = no
+			NOT = { has_country_modifier = in_bankrupcy }
 			money = 1900000
 		}
 		effect = {
