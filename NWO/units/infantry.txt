@@ -1,38 +1,41 @@
 #======= WW2 =========
 infantry = {
-	icon = 7
+	icon = 1
 	
 	type = land
-	sprite = Infantry
+	sprite = Infantry # Motor
 	active = yes
 	unit_type = infantry
 	floating_flag = no
-	
+	primary_culture = yes
 	#Core Abilities
 	priority = 5
 	max_strength = 3
-	default_organisation = 20
-	maximum_speed = 4.00
-	weighted_value = 1.0
+	default_organisation = 30
+	maximum_speed = 8.00
+	weighted_value = 2.0
 
-	build_time = 45
+	build_time = 90
 	# 0.5B
 	build_cost = {
 		clothes = 100
 		small_arms = 200
+		weaponry = 50
 	}
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		small_arms = 0.04
+		small_arms = 0.02
+		fuel = 0.04
+		weaponry = 0.02
 	}
 
 	#Land Abilties
-	reconnaissance = 0
+	reconnaissance = 1
 	attack = 2
-	#siege = 1
-	defence = 2 # inventions improve this
-	discipline = 1
+	siege = 1
+	defence = 4
 	support = 0.0
+	discipline = 1
 	maneuver = 1
 }
