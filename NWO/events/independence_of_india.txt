@@ -198,6 +198,16 @@ country_event = {
   picture = "nwo2_independence_of_india"
   is_triggered_only = yes # RAJ
 
+	trigger = { # either by trigger event call or if UK does not allow indian independance, when the RAJ becomes a GP
+		tag = RAJ
+		exists = RAJ
+		is_greater_power = yes
+		is_vassal = no
+		NOT = { exists = HND }
+		war = no
+		RAJ = { owns = 1236 } # Delhi
+	}
+	
   option = {
     name = EVT_8007205_A
 	release_vassal = NEP
