@@ -6,16 +6,14 @@ political_decisions = {
 	trade_block_ambition = {
 		picture = "trade_block_ambition"
 		potential = {
-			OR = { has_country_flag = schuman_declaration year = 1960 }
 			NOT = { has_country_flag = trade_block_ambition }		
-			NOT = { government = proletarian_dictatorship has_country_flag = market_communism }		
 		}
 
 		allow = {
 			war = no
 			election = yes
 			trade_policy = free_trade
-			new_synthesis = 1
+			OR = { has_country_flag = schuman_declaration new_synthesis = 1 }
 		}
 		
 		effect = {

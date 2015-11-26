@@ -1,44 +1,4 @@
 country_event = {
-  id = 8232000
-  title = EVT_8232000_NAME
-  desc = EVT_8232000_DESC
-  picture = "nwo2_schuman_declaration"
-  fire_only_once = yes
-
-  trigger = {
-    tag = FRA
-    year = 1950 NOT = { year = 1951 }
-	NOT = { has_country_flag = schuman_declaration }
-    has_global_flag = cold_war
-    war = no
-  }
-
-  mean_time_to_happen = { months = 1  }
-
-  option = {
-    name = EVT_8232000_B
-	set_country_flag = schuman_declaration
-	prestige = 20
-	any_neighbor_country = { 
-		limit = { capital_scope = { continent = europe } NOT = { OR = { tag = SPA tag = SWI } }  }
-		country_event = 8232001
-	}
-	NET = { country_event = 8232001  }
-	ai_chance = { factor = 100 }
-  }
-
-  option = {
-    name = EVT_8232000_C
-	relation = { who = GER value = -50 } 
-	relation = { who = ITA value = -50 } 
-	relation = { who = BEL value = -50 } 
-	relation = { who = NET value = -50 } 
-	relation = { who = LUX value = -50 } 
-	any_pop = { militancy = 0.1 }
-	ai_chance = { factor = 0 }
-  }
-}
-country_event = {
   id = 8232001
   title = EVT_8232000_NAME
   desc = EVT_8232000_DESC
@@ -59,43 +19,7 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
-country_event = {
-  id = 8232040
-  title = EVT_8232040_NAME
-  desc = EVT_8232040_DESC
-  picture = "nwo2_european_coal_and_steel_community"
-  fire_only_once = yes
 
-  trigger = {
-    tag = FRA
-    year = 1952 NOT = { year = 1990 }
-    has_global_flag = cold_war
-  }
-
-  mean_time_to_happen = { months = 1  }
-
-  option = {
-    name = EVT_8232040_A
-	set_global_flag = european_coal_and_steel_community
-	set_country_flag = trade_block_ambition
-	prestige = 20
-	any_neighbor_country = { 
-		limit = { capital_scope = { continent = europe } OR = { government = democracy government = hms_government } NOT = {tag = SWI }  }
-		country_event = 8232041
-	}
-	NET = { country_event = 8232041  }
-	ai_chance = { factor = 100 }
-  }
-
-  option = {
-    name = EVT_8232040_B
-	relation = { who = GER value = -50 } 
-	relation = { who = ITA value = -50 } 
-	relation = { who = BEL value = -50 } 
-	relation = { who = NET value = -50 } 
-	relation = { who = LUX value = -50 } 
-  }
-}
 country_event = {
   id = 8232041
   title = EVT_8232041_NAME
@@ -127,9 +51,9 @@ country_event = {
   major = yes
 
   trigger = {
-    tag = FRA
+	is_greater_power = yes
+	has_global_flag = european_coal_and_steel_community
 	has_country_flag = xeu_ambition
-    year = 1957 NOT = { year = 1990 }
     has_global_flag = cold_war
   }
 
@@ -137,11 +61,14 @@ country_event = {
 
   option = {
     name = EVT_8232050_A
-	relation = { who = GER value = 200 } 
-	relation = { who = ITA value = 200 } 
-	relation = { who = BEL value = 200 } 
-	relation = { who = NET value = 200 } 
-	relation = { who = LUX value = 200 } 
+	any_neighbor_country = { 
+		limit = { has_country_flag = trade_block_ambition  }
+		relation = { who = THIS value = 200 } 
+	}
   }
+  
+  option = {
+    name = EVT_8232050_B
+  }  
 
 }
