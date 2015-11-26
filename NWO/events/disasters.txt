@@ -985,11 +985,15 @@ province_event = {
 	
 	trigger = {
 		OR = { 
-			OR = { NOT = { continent = africa } is_core = MOR is_core = ALG is_core = TRI is_core = TUN is_core = EGY }
-			OR = { NOT = { continent = europe } is_core = ITA is_core = SPA is_core = POR is_core = GRE }
-			NOT = { is_core = BRZ }
-			NOT = { is_core = CAN }
+			continent = mena 
+			continent = asia 
+			continent = north_america 
+			continent = south_america
+			AND = { continent = europe OR = { is_core = ITA is_core = SPA is_core = POR is_core = GRE } }
 		}
+		NOT = { is_core = MGL }
+		NOT = { is_core = BRZ }
+		NOT = { is_core = CAN }
 	}
 
 	mean_time_to_happen = {

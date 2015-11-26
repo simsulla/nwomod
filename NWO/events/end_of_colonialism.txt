@@ -128,7 +128,7 @@ country_event = {
 	exists = no
 	OR = { 
 		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes continent = asia } check_variable = { which = end_of_colonialism value = 1 } } 
-		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes OR = { is_core = MOR is_core = ALG is_core = TUN is_core = TRI is_core = EGY is_core = SUD } } check_variable = { which = end_of_colonialism value = 3 } }
+		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes continent = mena } check_variable = { which = end_of_colonialism value = 3 } }
 		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes is_overseas = yes continent = africa NOT = { owned_by = SAF } NOT = { OR = { is_core = MOZ is_core = ZIM is_core = ZAM is_core = MLW is_core = ANG } } } check_variable = { which = end_of_colonialism value = 4 } }
 		AND = { any_core = { OR = { has_province_modifier = colonial_unrest has_province_modifier = colonial_promise } is_colonial = yes OR = { continent = oceania continent = africa } } check_variable = { which = end_of_colonialism value = 5 } } 
 	}
