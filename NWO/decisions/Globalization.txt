@@ -51,6 +51,12 @@ political_decisions = {
 		potential = {
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			NOT = { has_country_modifier = special_drawing_rights }
+			OR = { # must have one of the institutions
+				has_country_flag = world_bank 
+				has_country_flag = the_imf  
+				has_country_flag = dev_bank
+				capital_scope = { trade_goods = credit } # ENG
+			}
 			NOT = { # must not have all
 				has_country_flag = world_bank 
 				OR = { has_country_flag = the_imf  has_country_flag = dev_bank } 
@@ -336,6 +342,7 @@ political_decisions = {
 				is_secondary_power = yes
 				is_greater_power = yes
 			}
+			beijing_consensus = 1
 		}
 		allow = {
 			end_of_money = 1
@@ -361,6 +368,7 @@ political_decisions = {
 		alert = no
 		potential = {
 			NOT = { has_country_flag = international_court_of_justice }
+			#detente = 1
 		}
 		allow = {
 			globalization = 1
@@ -369,7 +377,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = international_court_of_justice
-			prestige = -20
+			prestige = 10
 		}
 		ai_will_do = { factor = 1 }
 	}

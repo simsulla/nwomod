@@ -12,15 +12,15 @@ join_communist_bloc = {
 			USA = { government = democracy }
 			exists = USA
 			exists = RUS
+			NOT = { has_country_flag = joindemo }
 			NOT = { has_country_flag = joincomm }
+			NOT = { has_country_flag = joinnam }
 			has_global_flag = blocsenabled 
 			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
 			OR = { government = proletarian_dictatorship ruling_party_ideology = communist }
 			relation = { who = RUS value = 100 }
-			NOT = { has_country_flag = joindemo }
-			NOT = { has_country_flag = joinnam }
 		}
 		effect = {
 			set_country_flag = joincomm
@@ -44,6 +44,8 @@ join_democratic_bloc = {
 			exists = USA
 			exists = RUS
 			NOT = { has_country_flag = joindemo }
+			NOT = { has_country_flag = joincomm }
+			NOT = { has_country_flag = joinnam }
 			has_global_flag = blocsenabled
 			NOT = { has_country_modifier = independent_bloc }
 		}
@@ -54,8 +56,6 @@ join_democratic_bloc = {
 				ruling_party_ideology = conservative 
 			}
 			relation = { who = USA value = 150 }
-			NOT = { has_country_flag = joincomm }
-			NOT = { has_country_flag = joinnam }
 		}
 		effect = {
 			set_country_flag = joindemo
@@ -81,6 +81,8 @@ join_nam_bloc = {
 			exists = USA
 			exists = RUS
 			NOT = { has_country_flag = joinnam }
+			NOT = { has_country_flag = joindemo }
+			NOT = { has_country_flag = joincomm }
 			has_global_flag = blocsenabled
 			has_global_flag = namformed
 			NOT = { has_country_modifier = independent_bloc }
@@ -88,8 +90,6 @@ join_nam_bloc = {
 		allow = {
 			NOT = { relation = { who = USA value = 100 } }
 			NOT = { relation = { who = RUS value = 100 } }
-			NOT = { has_country_flag = joindemo }
-			NOT = { has_country_flag = joincomm }
 		}
 		effect = {
 			set_country_flag = joinnam
@@ -118,8 +118,6 @@ leave_communist_bloc = {
 		}
 		allow = {
 			NOT = { government = proletarian_dictatorship }
-			NOT = { has_country_flag = joindemo }
-			NOT = { has_country_flag = joinnam }
 		}
 		effect = {
 			clr_country_flag = joincomm
@@ -152,8 +150,6 @@ leave_democratic_bloc = {
 		}
 		allow = {
 			government = proletarian_dictatorship
-			NOT = { has_country_flag = joincomm }
-			NOT = { has_country_flag = joinnam }
 		}
 		effect = {
 			clr_country_flag = joindemo
@@ -192,8 +188,6 @@ leave_nam_bloc = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = conservative 
 			}
-			NOT = { has_country_flag = joincomm }
-			NOT = { has_country_flag = joindemo }
 		}
 		effect = {
 			clr_country_flag = joinnam
@@ -226,8 +220,6 @@ leave_nam_bloc_comm = {
 		}
 		allow = {
 			relation = { who = RUS value = 150 }
-			NOT = { has_country_flag = joincomm }
-			NOT = { has_country_flag = joindemo }
 		}
 		effect = {
 			clr_country_flag = joinnam

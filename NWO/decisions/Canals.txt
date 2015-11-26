@@ -95,14 +95,15 @@ political_decisions = {
 			NOT = { is_canal_enabled = 5 }
 			is_canal_enabled = 3
 			is_greater_power = yes
+			money = 800000
 		}
 		allow = {
-			money = 20000
+			money = 1400000
 			NOT = { OR = { owns = 1723 1723 = { owner = { in_sphere = THIS } } } }
 			OR = { owns = 2198 2198 = { owner = { in_sphere = THIS } } }
 		}
 		effect = {
-			treasury = -12000
+			treasury = -1000000
 			enable_canal = 5
 			prestige = 10
 		}

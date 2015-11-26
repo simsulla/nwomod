@@ -4,32 +4,17 @@ political_decisions = {
 		picture = "support_zionism"
 		potential = {
 			tag = USA
+			rank = 1
 			ISR = { exists = no }
 			919 = { owned_by = ENG } 
-			NOT = { 
-				has_country_modifier = support_zionism 
-				ENG = { has_country_modifier = stock_market_crash } 
-			}
+			NOT = { has_country_modifier = support_zionism }
 		}
 
 		allow = {
  		    tag = USA
-			is_vassal = no
-			part_of_sphere = no
-			NOT = {
-				has_country_modifier = support_zionism
-			}
-			OR = {
-				AND = {
-					year = 1947
-					ai = yes
-				}
-				AND = {
-					ai = no
-					rank = 1
-					relation =  { who = ENG value = 0 } 
-				}
-			}
+			year = 1947
+			rank = 1
+			relation =  { who = ENG value = 0 } 
 		}
 
 		effect = {
