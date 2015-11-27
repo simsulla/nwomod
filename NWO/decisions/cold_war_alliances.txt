@@ -30,6 +30,7 @@ join_communist_bloc = {
 			RUS =  { diplomatic_influence =  { who = THIS value = 25 } }
 			any_country = { limit = { has_country_flag = joincomm } country_event = 19809 }
 			add_country_modifier = { name = communist_bloc duration = 999999 }
+			RUS  = { country_event = 8225000 }
 		}
 	}
 
@@ -129,6 +130,7 @@ leave_communist_bloc = {
 			any_country = { limit = { has_country_flag = joincomm } country_event = 19810 }
 			add_country_modifier = { name = independent_bloc duration = 3500 }
 			remove_country_modifier = communist_bloc
+			RUS  = { country_event = 8225001 }
 		}
 		alert = no
 

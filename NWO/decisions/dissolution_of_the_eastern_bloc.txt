@@ -1,26 +1,28 @@
 political_decisions = {
 
-	communism_gets_weaker = {
-		picture = "communism_gets_weaker"
+	dissolution_of_the_eastern_bloc = {
+		picture = "dissolution_of_the_eastern_bloc"
 		potential = {
-			is_greater_power = yes
-			RUS = { government = proletarian_dictatorship }
-			OR = { tag = CHI NOT = { government = proletarian_dictatorship } }
+			NOT = { has_global_flag = autumn_of_nations }
+			NOT = { government = proletarian_dictatorship }
+			NOT = { has_country_flag = dissolution_of_the_eastern_bloc }
 		}
 
 		allow = {
-			has_global_flag = soviet_control_cee
-			RUS = { NOT = { check_variable = { which = soviet_control_cee value = 6 } } }			
+			is_greater_power = yes
+			RUS = { 
+				check_variable = { which = soviet_control_cee value = 6 }
+				government = proletarian_dictatorship
+			}
+			OR = { 
+				has_global_flag = dissolution_of_the_eastern_bloc
+				RUS = {has_country_modifier = in_bankrupcy }
+			}
 		}
 
 		effect = {
-			clr_global_flag = soviet_control_cee
-			RUS = { 
-				change_variable = {
-					which = soviet_control_cee
-					value = 1
-				}
-			}
+			set_country_flag = dissolution_of_the_eastern_bloc
+			RUS = { country_event = 8014243 } # autumn_of_nations
 		}
 	}
 }
