@@ -7,7 +7,7 @@ country_event = {
 	trigger = {
 		OR = {
 			primary_culture = sunni_arab
-			primary_culture = shia_arab
+			capital_scope = { pop_majority_culture = sunni_arab }
 		}
 		NOT = { has_country_flag = arab_league }
 	}
@@ -48,7 +48,7 @@ country_event = {
 		primary_culture = sunni_arab
 		# has_country_modifier = denied_independence
 		is_vassal = yes
-		overlord = { NOT = { has_country_modifier = xal_ambition } }
+		overlord = { NOT = { capital_scope = { continent = mena } } }
 	}
 
 	mean_time_to_happen = {

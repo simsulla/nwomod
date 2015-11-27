@@ -6,12 +6,11 @@ political_decisions = {
 	xsa_ambition = {
 		picture = "xsa_ambition"
 		potential = {
-			new_synthesis = 1
-			has_country_flag = trade_block_ambition 
-			NOT = { exists = XEW exists = XEC exists = XEF exists = XAU  } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
+			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
 			NOT = { has_country_flag = xsa_ambition } 
 		}
 		allow = {
+			has_country_flag = trade_block_ambition 
 			NOT = { has_country_modifier = in_bankrupcy } 
 			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xsa_ambition } } } }
 			OR = { government = democracy government = hms_government }
@@ -79,11 +78,10 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			NOT = { exists = XEW exists = XEC exists = XEF exists = XAU  } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
+			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
 		}
 		allow = {
 			has_country_flag = xsa_ambition
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
 			OR = {
 				government = democracy
 				government = hms_government
@@ -101,7 +99,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			capital_scope = { continent = europe } NOT = { tag = RUS } # Union Scope
+			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
 		}
 		allow = {
 			has_country_flag = xsa_ambition
@@ -124,7 +122,7 @@ political_decisions = {
 		picture = "xsa_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XSA } }
-			NOT = { exists = XEW exists = XEC exists = XEF exists = XAU  } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
+			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
 		}
 		allow = {
 			has_country_flag = xsa_ambition
@@ -144,7 +142,7 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			NOT = { exists = XEW exists = XEC exists = XEF exists = XAU  } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
+			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
 		}
 		allow = {
 			has_country_flag = xsa_ambition
@@ -168,7 +166,7 @@ political_decisions = {
 		picture = "xsa_parlament"
 		potential = {
 			XSA = { exists = no }
-			NOT = { exists = XEW exists = XEC exists = XEF exists = XAU  } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
+			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } OR = { tag = SAF tag = NAM tag = BOT tag = CNG tag = LES tag = MLW tag = MAU tag = MOZ tag = SEY tag = SWA tag = TAN tag = ZIM tag = ZAM }
 		}
 		allow = {
 			has_country_flag = xsa_ambition

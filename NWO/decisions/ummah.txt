@@ -6,26 +6,15 @@ political_decisions = {
 	xum_ambition = {
 		picture = "xum_ambition"
 		potential = {
-			year = 1993
-			#has_country_flag = trade_block_ambition 
-			OR = { 
-				AND = { pop_majority_religion = shiite government = theocracy } 
-				AND = { pop_majority_religion = shiite government = democracy } 
-				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
-				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
-				AND = { government = nationalist_dictatorship primary_culture = hazara } 
-			}
-			NOT = { has_country_flag = xum_ambition has_country_flag = in_trade_block tag = XUM }
-			NOT = { has_country_modifier = in_bankrupcy } 
-			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xum_ambition } } } }
+			OR = { pop_majority_religion = shiite primary_culture = shia_arab primary_culture = indian_shia primary_culture = hazara }
+			NOT = { has_country_flag = xum_ambition } 
 		}
 		allow = {
-			OR = {
-				ruling_party_ideology = traditionalist
-				ruling_party_ideology = populist
-			}
+			#has_country_flag = trade_block_ambition 
+			NOT = { has_country_modifier = in_bankrupcy } 
+			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xum_ambition } } } }
+			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
 			bank_for_international_settlements = 1
-			election = no
 			war = no
 		}
 		effect = {
@@ -48,19 +37,15 @@ political_decisions = {
 
 	end_xum_ambition = {
 		picture = "xum_parlament"
+		alert = no
 		potential = {
 			has_country_flag = xum_ambition
-			OR = { 
-				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xum_ambition } } }
-				NOT = { OR = { government = democracy government = hms_government } }
-				has_country_modifier = in_bankrupcy
-			}
 		}
 		allow = {
-			OR = {
-				ruling_party_ideology = communist
-				has_country_modifier = in_bankrupcy
+			OR = { 
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xum_ambition } } }
+				NOT = { OR = { government = nationalist_dictatorship pop_majority_religion = shiite } }
+				has_country_modifier = in_bankrupcy
 			}
 			war = no
 		}
@@ -68,19 +53,22 @@ political_decisions = {
 			clr_country_flag = xum_ambition
 			clr_country_flag = in_trade_block
 			all_core = { remove_core = XUM }
-			capital_scope = { 
-				remove_province_modifier = single_market			
-				remove_province_modifier = currency_union_province
-				remove_province_modifier = defence_union
-			}
-			remove_country_modifier = currency_union
 			any_pop = {
 				scaled_militancy = {
 					issue = free_trade
 					factor = 3
 				}
+				scaled_consciousness = {
+					issue = free_trade
+					factor = 3
+				}
 			}
-			tech_school = traditional_academic			
+			tech_school = traditional_academic
+			capital_scope = { 
+				remove_province_modifier = single_market			
+				remove_province_modifier = currency_union_province
+				remove_province_modifier = defence_union
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -88,29 +76,13 @@ political_decisions = {
 	xum_single_market= {
 		picture = "single_market"
 		potential = {
-			OR = { 
-				AND = { pop_majority_religion = shiite government = theocracy } 
-				AND = { pop_majority_religion = shiite government = democracy } 
-				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
-				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
-				AND = { government = nationalist_dictatorship primary_culture = hazara } 
-			}
-			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
 			NOT = { capital_scope = { has_province_modifier = single_market } }
+			OR = { pop_majority_religion = shiite primary_culture = shia_arab primary_culture = indian_shia primary_culture = hazara }
 		}
 		allow = {
 			has_country_flag = xum_ambition
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
 			capitalism = 1
-			election = no
 			war = no
 		}
 		effect = {
@@ -122,153 +94,82 @@ political_decisions = {
 	xum_currency_union = {
 		picture = "currency_union"
 		potential = {
-			OR = { 
-				AND = { pop_majority_religion = shiite government = theocracy } 
-				AND = { pop_majority_religion = shiite government = democracy } 
-				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
-				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
-				AND = { government = nationalist_dictatorship primary_culture = hazara } 
-			}
-			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
-			NOT = { has_country_modifier = currency_union }
+			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
+			OR = { pop_majority_religion = shiite primary_culture = shia_arab primary_culture = indian_shia primary_culture = hazara }
 		}
 		allow = {
 			has_country_flag = xum_ambition
 			capital_scope = { has_province_modifier = single_market }
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
 			economic_globalization = 1
 			election = no
 			war = no
 		}
 		effect = {
-			# add core to capital
-			add_country_modifier = {
-				name = currency_union
-				duration = -1
-			}
 			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
 		}
-		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+		ai_will_do = { factor = 1 } 
 	}
 
 	xum_political_union = {
 		picture = "xum_ambition"
 		potential = {
-			OR = { 
-				AND = { pop_majority_religion = shiite government = theocracy } 
-				AND = { pop_majority_religion = shiite government = democracy } 
-				AND = { government = nationalist_dictatorship primary_culture = shia_arab } 
-				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
-				AND = { government = nationalist_dictatorship primary_culture = hazara } 
-			}
 			NOT = { capital_scope = { is_core = XUM } }
-			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
+			OR = { pop_majority_religion = shiite primary_culture = shia_arab primary_culture = indian_shia primary_culture = hazara }
 		}
 		allow = {
 			has_country_flag = xum_ambition
-			has_country_modifier = currency_union
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			capital_scope = { has_province_modifier = currency_union_province }
+			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
 			election = no
+			has_unclaimed_cores = no
 			war = no
 			commodities_and_credit = 1
 		}
 		effect = {
-			# add core to all provinces
 			all_core = { add_core = XUM }
 		}
 		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+	}
+	xum_defence_union = {
+		picture = "defence_union"
+		potential = {
+			NOT = { capital_scope = { has_province_modifier = defence_union } }
+			OR = { pop_majority_religion = shiite primary_culture = shia_arab primary_culture = indian_shia primary_culture = hazara }
+		}
+		allow = {
+			has_country_flag = xum_ambition
+			capital_scope = { is_core = XUM }
+			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
+			election = no
+			war = no
+			age_of_protests = 1
+			has_unclaimed_cores = no
+		}
+		effect = {
+			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
+		}
+		ai_will_do = { factor = 1 } 
 	}
 
 #
 # Leader Decision: Political Union
 #
-	xum_defence_union = {
-		picture = "defence_union"
-		potential = {
-			OR = { 
-				AND = { pop_majority_religion = shiite government = theocracy } 
-				AND = { pop_majority_religion = shiite government = democracy } 
-				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
-				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
-				AND = { government = nationalist_dictatorship primary_culture = hazara } 
-			}
-			is_vassal = no
-			NOT = { capital_scope = { has_province_modifier = defence_union } }
-		}
-		allow = {
-			capital_scope = { is_core = XUM }
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-			election = no
-			war = no
-			age_of_protests = 1
-			has_unclaimed_cores = no
-			OR = { 
-				is_greater_power = yes
-				is_secondary_power = yes
-				sphere_owner = { has_country_flag = xum_ambition }
-			}
-		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
-		}
-		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
-	}
-
 	xum_form_union = {
 		picture = "xum_parlament"
 		potential = {
-			OR = { 
-				AND = { pop_majority_religion = shiite government = theocracy } 
-				AND = { pop_majority_religion = shiite government = democracy } 
-				AND = { government = nationalist_dictatorship primary_culture = shia_arab has_country_flag = arab_spring } 
-				AND = { government = nationalist_dictatorship primary_culture = indian_shia } 
-				AND = { government = nationalist_dictatorship primary_culture = hazara } 
-			}
-			has_country_flag = xum_ambition
 			XUM = { exists = no }
+			OR = { pop_majority_religion = shiite primary_culture = shia_arab primary_culture = indian_shia primary_culture = hazara }
 		}
 		allow = {
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			has_country_flag = xum_ambition
+			capital_scope = { has_province_modifier = defence_union } 
+			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
 			election = no
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1
             war = no
-			capital_scope = { has_province_modifier = defence_union } 
-			has_unclaimed_cores = no
-            XUM = {
-                all_core = {
-                    owner = {
-                        war = no
-						OR = {
-							tag = THIS
-							in_sphere = THIS
-						}
-						has_country_flag = xum_ambition
-                    }
-                }
-            }
+            XUM = { all_core = { owner = { war = no OR = { tag = THIS in_sphere = THIS vassal_of = THIS } has_country_flag = xum_ambition } } }
 		}
 		effect = {
 			prestige = 20
@@ -276,13 +177,7 @@ political_decisions = {
 				add_core = XUM
 			}
 			change_tag = XUM
-			primary_culture = persian
-			add_accepted_culture = indian_shia
-			add_accepted_culture = shia_arab
-			add_accepted_culture = hazara
-			add_accepted_culture = aimat
-			add_accepted_culture = azerbaijani
-			clr_country_flag = in_trade_block
+			add_accepted_culture = european
 		}
 		ai_will_do = {
 			factor = 1
@@ -292,29 +187,19 @@ political_decisions = {
 	xum_enlarge_union = {
 		picture = "xum_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition 
-			has_country_flag = xum_ambition
 			tag = XUM
+			any_neighbor_country = { has_country_flag = xum_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
 		}
 		allow = {
-			any_neighbor_country = { 
-				has_country_flag = xum_ambition 
-				in_sphere = THIS 
-				NOT = { has_country_modifier = rejected_union } 
-				has_unclaimed_cores = no
-			}
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
 			election = no
-			is_greater_power = yes 
+			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1
             war = no
 		}
 		effect = {
 			prestige = 20
-			any_neighbor_country = { limit = { has_country_flag = xum_ambition in_sphere = THIS } country_event = 11106 }
+			any_neighbor_country = { limit = { has_country_flag = xum_ambition OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
 		}
 		ai_will_do = {
 			factor = 1

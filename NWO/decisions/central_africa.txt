@@ -6,12 +6,11 @@ political_decisions = {
 	xec_ambition = {
 		picture = "xec_ambition"
 		potential = {
-			new_synthesis = 1
-			has_country_flag = trade_block_ambition 
-			NOT = { exists = XEW exists = XSA exists = XEF exists = XAU  } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
+			NOT = { OR = { exists = XEW exists = XSA exists = XEF exists = XAU } } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 			NOT = { has_country_flag = xec_ambition } 
 		}
 		allow = {
+			has_country_flag = trade_block_ambition 
 			NOT = { has_country_modifier = in_bankrupcy } 
 			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xec_ambition } } } }
 			OR = { government = democracy government = hms_government }
@@ -79,11 +78,10 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			NOT = { exists = XEW exists = XSA exists = XEF exists = XAU  } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
+			NOT = { OR = { exists = XEW exists = XSA exists = XEF exists = XAU } } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 		}
 		allow = {
 			has_country_flag = xec_ambition
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
 			OR = {
 				government = democracy
 				government = hms_government
@@ -101,7 +99,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			capital_scope = { continent = europe } NOT = { tag = RUS } # Union Scope
+			NOT = { OR = { exists = XEW exists = XSA exists = XEF exists = XAU } } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 		}
 		allow = {
 			has_country_flag = xec_ambition
@@ -124,7 +122,7 @@ political_decisions = {
 		picture = "xec_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XEC } }
-			NOT = { exists = XEW exists = XSA exists = XEF exists = XAU  } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
+			NOT = { OR = { exists = XEW exists = XSA exists = XEF exists = XAU } } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 		}
 		allow = {
 			has_country_flag = xec_ambition
@@ -144,7 +142,7 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			NOT = { exists = XEW exists = XSA exists = XEF exists = XAU  } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
+			NOT = { OR = { exists = XEW exists = XSA exists = XEF exists = XAU } } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 		}
 		allow = {
 			has_country_flag = xec_ambition
@@ -168,7 +166,7 @@ political_decisions = {
 		picture = "xec_parlament"
 		potential = {
 			XEC = { exists = no }
-			NOT = { exists = XEW exists = XSA exists = XEF exists = XAU  } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
+			NOT = { OR = { exists = XEW exists = XSA exists = XEF exists = XAU } } OR = { tag = CAM tag = CAR tag = CHA tag = ROC tag = EQG tag = GAB tag = CNG tag = ANG }
 		}
 		allow = {
 			has_country_flag = xec_ambition

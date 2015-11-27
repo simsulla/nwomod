@@ -6,24 +6,16 @@ political_decisions = {
 	xan_ambition = {
 		picture = "xan_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
-			NOT = { has_country_flag = xan_ambition has_country_flag = in_trade_block tag = XAN }
-			NOT = { has_country_modifier = in_bankrupcy } 
-			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xan_ambition } } } }
+			new_synthesis = 1
+			OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
+			NOT = { has_country_flag = xan_ambition } 
 		}
 		allow = {
-			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			has_country_flag = trade_block_ambition 
+			NOT = { has_country_modifier = in_bankrupcy } 
+			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xan_ambition } } } }
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
 			bank_for_international_settlements = 1
-			election = no
 			war = no
 		}
 		effect = {
@@ -46,21 +38,16 @@ political_decisions = {
 
 	end_xan_ambition = {
 		picture = "xan_parlament"
+		alert = no
 		potential = {
 			has_country_flag = xan_ambition
-			OR = { 
-				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xan_ambition } } }
-				NOT = { OR = { government = democracy government = hms_government } }
-				has_country_modifier = in_bankrupcy
-			}
 		}
 		allow = {
-			OR = {
-				ruling_party_ideology = communist
-				ruling_party_ideology = populist
-				ruling_party_ideology = traditionalist
-				has_country_modifier = in_bankrupcy
+			OR = { 
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xan_ambition } } }
+				NOT = { OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } } }
+				has_country_modifier = in_bankrupcy
+				exists = XAL exists = XGC
 			}
 			war = no
 		}
@@ -68,19 +55,22 @@ political_decisions = {
 			clr_country_flag = xan_ambition
 			clr_country_flag = in_trade_block
 			all_core = { remove_core = XAN }
-			capital_scope = { 
-				remove_province_modifier = single_market			
-				remove_province_modifier = currency_union_province
-				remove_province_modifier = defence_union
-			}
-			remove_country_modifier = currency_union
 			any_pop = {
 				scaled_militancy = {
 					issue = free_trade
 					factor = 3
 				}
+				scaled_consciousness = {
+					issue = free_trade
+					factor = 3
+				}
 			}
-			tech_school = traditional_academic			
+			tech_school = traditional_academic
+			capital_scope = { 
+				remove_province_modifier = single_market			
+				remove_province_modifier = currency_union_province
+				remove_province_modifier = defence_union
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -88,23 +78,13 @@ political_decisions = {
 	xan_single_market= {
 		picture = "single_market"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
-			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
 			NOT = { capital_scope = { has_province_modifier = single_market } }
+			OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 		}
 		allow = {
 			has_country_flag = xan_ambition
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
 			capitalism = 1
-			election = no
 			war = no
 		}
 		effect = {
@@ -116,129 +96,82 @@ political_decisions = {
 	xan_currency_union = {
 		picture = "currency_union"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
-			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
-			NOT = { has_country_modifier = currency_union }
+			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
+			OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 		}
 		allow = {
 			has_country_flag = xan_ambition
 			capital_scope = { has_province_modifier = single_market }
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
 			economic_globalization = 1
 			election = no
 			war = no
 		}
 		effect = {
-			# add core to capital
-			add_country_modifier = {
-				name = currency_union
-				duration = -1
-			}
 			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
 		}
-		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+		ai_will_do = { factor = 1 } 
 	}
 
 	xan_political_union = {
 		picture = "xan_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 			NOT = { capital_scope = { is_core = XAN } }
-			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = conservative
-				ruling_party_ideology = liberal
-			}
+			OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 		}
 		allow = {
 			has_country_flag = xan_ambition
-			has_country_modifier = currency_union
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			capital_scope = { has_province_modifier = currency_union_province }
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
 			election = no
+			has_unclaimed_cores = no
 			war = no
 			commodities_and_credit = 1
 		}
 		effect = {
-			# add core to all provinces
 			all_core = { add_core = XAN }
 		}
 		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+	}
+	xan_defence_union = {
+		picture = "defence_union"
+		potential = {
+			NOT = { capital_scope = { has_province_modifier = defence_union } }
+			OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
+		}
+		allow = {
+			has_country_flag = xan_ambition
+			capital_scope = { is_core = XAN }
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
+			election = no
+			war = no
+			age_of_protests = 1
+			has_unclaimed_cores = no
+		}
+		effect = {
+			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
+		}
+		ai_will_do = { factor = 1 } 
 	}
 
 #
 # Leader Decision: Political Union
 #
-	xan_defence_union = {
-		picture = "defence_union"
-		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
-			is_vassal = no
-			NOT = { capital_scope = { has_province_modifier = defence_union } }
-		}
-		allow = {
-			capital_scope = { is_core = XAN }
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-			election = no
-			war = no
-			age_of_protests = 1
-			has_unclaimed_cores = no
-			OR = { 
-				is_greater_power = yes
-				is_secondary_power = yes
-				sphere_owner = { has_country_flag = xan_ambition }
-			}
-		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
-		}
-		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
-	}
-
 	xan_form_union = {
 		picture = "xan_parlament"
 		potential = {
-			has_country_flag = trade_block_ambition OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
-			has_country_flag = xan_ambition
 			XAN = { exists = no }
+			OR = { tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = LUA tag = BRU tag = SNG tag = PHI }
 		}
 		allow = {
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			has_country_flag = xan_ambition
+			capital_scope = { has_province_modifier = defence_union } 
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
 			election = no
-			is_greater_power = yes 
+			is_greater_power = yes
 			political_polarization = 1
             war = no
-			capital_scope = { has_province_modifier = defence_union } 
-			has_unclaimed_cores = no
-            XAN = {
-                all_core = {
-                    owner = {
-                        war = no
-						OR = {
-							tag = THIS
-							in_sphere = THIS
-						}
-						has_country_flag = xan_ambition
-                    }
-                }
-            }
+            XAN = { all_core = { owner = { war = no OR = { tag = THIS in_sphere = THIS vassal_of = THIS } has_country_flag = xan_ambition } } }
 		}
 		effect = {
 			prestige = 20
@@ -246,13 +179,7 @@ political_decisions = {
 				add_core = XAN
 			}
 			change_tag = XAN
-			primary_culture = indonesian
-			add_accepted_culture = malay
-			add_accepted_culture = thai
-			add_accepted_culture = filipino
-			add_accepted_culture = vietnamese
-			add_accepted_culture = burmese
-			clr_country_flag = in_trade_block
+			add_accepted_culture = european
 		}
 		ai_will_do = {
 			factor = 1
@@ -262,29 +189,19 @@ political_decisions = {
 	xan_enlarge_union = {
 		picture = "xan_ambition"
 		potential = {
-			has_country_flag = trade_block_ambition
-			has_country_flag = xan_ambition
 			tag = XAN
+			any_neighbor_country = { has_country_flag = xan_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
 		}
 		allow = {
-			any_neighbor_country = { 
-				has_country_flag = xan_ambition 
-				in_sphere = THIS 
-				NOT = { has_country_modifier = rejected_union } 
-				has_unclaimed_cores = no
-			}
-			OR = {
-				government = democracy
-				government = hms_government
-			}
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
 			election = no
-			is_greater_power = yes 
+			is_greater_power = yes
 			political_polarization = 1
             war = no
 		}
 		effect = {
 			prestige = 20
-			any_neighbor_country = { limit = { has_country_flag = xan_ambition in_sphere = THIS } country_event = 11106 }
+			any_neighbor_country = { limit = { has_country_flag = xan_ambition OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
 		}
 		ai_will_do = {
 			factor = 1

@@ -6,16 +6,15 @@ political_decisions = {
 	xeu_ambition = {
 		picture = "xeu_ambition"
 		potential = {
-			OR = { new_synthesis = 1 has_global_flag = european_coal_and_steel_community }
-			has_country_flag = trade_block_ambition 
-			capital_scope = { continent = europe } NOT = { tag = RUS } # Union Scope
+			capital_scope = { continent = europe } NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
 			NOT = { has_country_flag = xeu_ambition } 
 		}
 		allow = {
+			OR = { new_synthesis = 1 has_global_flag = european_coal_and_steel_community }
+			has_country_flag = trade_block_ambition 
 			NOT = { has_country_modifier = in_bankrupcy } 
 			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
 			OR = { government = democracy government = hms_government }
-			bank_for_international_settlements = 1
 			war = no
 		}
 		effect = {
@@ -78,11 +77,11 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			capital_scope = { continent = europe } NOT = { tag = RUS } # Union Scope
+			capital_scope = { continent = europe } NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
 		}
 		allow = {
 			has_country_flag = xeu_ambition
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS }
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = europe } tag = TUR } NOT = { tag = RUS } NOT = { tag = BYE }
 			OR = {
 				government = democracy
 				government = hms_government
@@ -100,7 +99,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			capital_scope = { continent = europe } NOT = { tag = RUS } # Union Scope
+			capital_scope = { continent = europe } NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
 		}
 		allow = {
 			has_country_flag = xeu_ambition
@@ -123,7 +122,7 @@ political_decisions = {
 		picture = "xeu_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XEU } }
-			capital_scope = { continent = europe } NOT = { tag = RUS } # Union Scope
+			capital_scope = { continent = europe } NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
 		}
 		allow = {
 			has_country_flag = xeu_ambition
@@ -143,7 +142,7 @@ political_decisions = {
 		picture = "defence_union_xeu"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			capital_scope = { continent = europe } NOT = { tag = RUS } # Union Scope
+			capital_scope = { continent = europe } NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
 		}
 		allow = {
 			has_country_flag = xeu_ambition
@@ -167,7 +166,7 @@ political_decisions = {
 		picture = "xeu_parlament"
 		potential = {
 			XEU = { exists = no }
-			capital_scope = { continent = europe } NOT = { tag = RUS } # Union Scope
+			capital_scope = { continent = europe } NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
 		}
 		allow = {
 			has_country_flag = xeu_ambition
