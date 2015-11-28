@@ -21,7 +21,7 @@ country_event = {
   option = {
     name = EVT_8218000_A
 	SYR = { country_event =  8218001 } 
-	any_country = { limit = { tag = THIS NOT = { tag = UAR }  } country_event = 8218010 }
+	country_event = 8218010
 	ai_chance = { factor = 100 }
   }
 
@@ -232,20 +232,20 @@ country_event = {
     year = 1961 NOT = { year = 1990 }
 	war = no
   }
-
+  
   mean_time_to_happen = { months = 1  }
-
+  
   option = {
     name = EVT_8218011_A
 	any_pop = { militancy = 0.5 }
+	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } country_event = 8212010 }
 	change_tag = EGY
-	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } } country_event = 8212010 }
 	ai_chance = { factor = 100 }
   }
   option = {
     name = EVT_8218011_B
 	any_pop = { militancy = 0.5 }
-	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } add_casus_belli = { target = UAR type = annex_core_country months = 12 } }
+	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } country_event = 8212010 add_casus_belli = { target = UAR type = annex_core_country months = 12 } }
 	ai_chance = { factor = 0 }
   }
 }
