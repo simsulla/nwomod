@@ -48,7 +48,8 @@ country_event = {
 			limit = {
 				OR = { culture = tigre culture = afar }
 			}
-			militancy = 10
+			consciousness = 5
+			militancy = 8
 		}
 		badboy = 10
 		add_country_modifier = { name = denied_independence duration = 365 }
@@ -85,7 +86,7 @@ country_event = {
 				OR = { culture = tigre culture = tigray }
 			}
 			consciousness = 2
-			militancy = 10
+			militancy = 8
 		}
 		ERI = {annex_to = THIS }
 	}
@@ -120,7 +121,7 @@ country_event = {
 
   option = {
     name = EVT_8005303_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
 

@@ -19,14 +19,14 @@ country_event = {
 
   option = {
     name = EVT_8017040_A
-	any_pop = { limit = { culture = bengali } militancy = 2.5 }
+	any_pop = { limit = { culture = bengali } militancy = 2.5 consciousness = 3 }
 	HND = { country_event =  8017050 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8017040_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { consciousness = 1.0 }
 	release_vassal = BNG
 	ai_chance = { factor = 0 }
   }
@@ -67,7 +67,7 @@ country_event = {
 
   option = {
     name = EVT_8017051_A
-	any_pop = { militancy = -1.5 }
+	any_pop = { militancy = -1.5  consciousness = 2}
 	HND = { country_event = 8017052 }
   }
 }
@@ -80,7 +80,7 @@ country_event = {
 
   option = {
     name = EVT_8017052_A
-	any_pop = { militancy = 1.5 }
+	any_pop = { consciousness = 0.5 }
   }
 }
 
@@ -101,7 +101,7 @@ country_event = {
 
   option = {
     name = EVT_8017053_A
-	any_owned = { limit = { is_core = BNG } any_pop = { militancy = 3 } } 
+	any_owned = { limit = { is_core = BNG } any_pop = { militancy = 3 consciousness = 2 } } 
  }
 }
 country_event = {
@@ -145,6 +145,6 @@ country_event = {
 
   option = {
     name = EVT_8017055_A
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5 consciousness = 2 }
   }
 }

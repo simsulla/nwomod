@@ -406,7 +406,7 @@ country_event = {
 
   option = {
     name = EVT_8002810_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 
@@ -439,7 +439,7 @@ country_event = {
 
   option = {
     name = EVT_8002813_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -466,7 +466,7 @@ country_event = {
 
   option = {
     name = EVT_8002814_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -493,7 +493,7 @@ country_event = {
 
   option = {
     name = EVT_8002815_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -520,7 +520,7 @@ country_event = {
 
   option = {
     name = EVT_8002816_B
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0 consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -542,7 +542,7 @@ country_event = {
   option = {
     name = EVT_8002817_A
 	add_country_modifier = { name = stock_market_crash duration = 1700 }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
   }
 }
 country_event = {
@@ -573,13 +573,13 @@ country_event = {
 
   option = {
     name = EVT_8002818_B
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8002818_C
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -592,7 +592,7 @@ country_event = {
 
   option = {
     name = EVT_8002819_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -1 }
 	relation = { who = CHI value = -100 } 
 	prestige = -10
 	ai_chance = { factor = 100 }
@@ -600,7 +600,7 @@ country_event = {
 
   option = {
     name = EVT_8002819_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { consciousness = 2 }
 	prestige = -20
 	ai_chance = { factor = 0 }
   }
@@ -645,7 +645,7 @@ country_event = {
 
   option = {
     name = EVT_8002821_A
-	any_pop = { militancy = -0.8 }
+	any_pop = { consciousness = 2 }
 	RUS = { country_event = 8002822 }
 	ai_chance = { factor = 100 }
   }
@@ -665,7 +665,7 @@ country_event = {
 
   option = {
     name = EVT_8002822_A
-	any_pop = { militancy = -0.8 }
+	any_pop = { militancy = -1 }
 	relation = { who = CHI value = -120 } 
 	CHI = { country_event = 8002824 }
 	ai_chance = { factor = 100 }
@@ -673,7 +673,7 @@ country_event = {
 
   option = {
     name = EVT_8002822_B
-	any_pop = { militancy = 0.8 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -687,7 +687,7 @@ country_event = {
 
   option = {
     name = EVT_8002824_A
-	any_pop = { militancy = -0.8 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 100 }
 	country_event = 8002827
 	RUS  = { country_event = 8002826 }
@@ -696,7 +696,7 @@ country_event = {
   option = {
     name = EVT_8002824_B
 	RUS = { country_event = 8002825 } 
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -730,7 +730,7 @@ country_event = {
 
   option = {
     name = EVT_8002826_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 2 }
   }
 }
 country_event = {
@@ -742,7 +742,7 @@ country_event = {
 
   option = {
     name = EVT_8002827_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 2 }
   }
 }
 country_event = {
@@ -784,7 +784,7 @@ country_event = {
   option = {
     name = EVT_8002831_A
 	remove_country_modifier = stock_market_crash
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 1 }
   }
 }
 country_event = {
@@ -842,7 +842,7 @@ country_event = {
 
   option = {
     name = EVT_8002840_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	country_event =  8002841
 	ai_chance = { factor = 0 }
   }
@@ -865,14 +865,14 @@ country_event = {
 
   option = {
     name = EVT_8002841_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 2 }
 	country_event =  { id = 8002842 days = 10 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8002841_B
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -894,7 +894,7 @@ country_event = {
 
   option = {
     name = EVT_8002842_A
-	any_pop = { militancy = 1.5 }
+	any_pop = { consciousness = 2 }
 	country_event =  { id = 8002843 days = 10 } 
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.65 } } }
 	ai_chance = { factor = 100 }
@@ -922,7 +922,7 @@ country_event = {
 
   option = {
     name = EVT_8002843_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
 }
@@ -935,7 +935,7 @@ country_event = {
 
   option = {
     name = EVT_8002844_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 1 }
 	relation = { who = KMT value = 50 } 
 	government = democracy  country_event = 800054
 	ruling_party_ideology = communist
@@ -976,21 +976,21 @@ country_event = {
 
   option = {
     name = EVT_8002845_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 consciousness = -2 }
 	ruling_party_ideology = socialist
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8002845_B
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -1 }
 	ruling_party_ideology = conservative
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8002845_C
-	any_pop = { militancy = -3.0 }
+	any_pop = { militancy = -3.0 consciousness = -2 }
 	ruling_party_ideology = communist
 	ai_chance = { factor = 0 }
   }
@@ -1081,7 +1081,7 @@ country_event = {
 
   option = {
     name = EVT_8002852_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -1 consciousness = 1 }
 	set_global_flag = CHI_in_UNSC 
   }
 }
@@ -1095,7 +1095,7 @@ country_event = {
 
   option = {
     name = EVT_8002853_A
-	any_pop = { militancy = 1.0 }relation = { who = USA value = -100 } 
+	any_pop = { militancy = 1.0 consciousness = 2 }relation = { who = USA value = -100 } 
   }
 }
 country_event = {

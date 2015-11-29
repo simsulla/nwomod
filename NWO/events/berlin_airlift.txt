@@ -143,7 +143,7 @@ country_event = { # Putsch is organized
 
   option = {
     name = EVT_8500605_A
-	any_pop = { militancy = -0.2 }
+	any_pop = { consciousness = 1 }
 	country_event = 8500606
 	ai_chance = { factor = 100 }
   }
@@ -184,7 +184,7 @@ country_event = { # End of Berlin Airlift RUS
 
   option = {
     name = EVT_8500607_A
-	any_pop = { militancy = 0.3 }
+	any_pop = { consciousness = 1 }
 	USA = { country_event = 8500608 }
 	GER = { country_event = 8500609 }
 	RUS  = { country_event = 8225001 } 
@@ -199,7 +199,7 @@ country_event = { # End of Berlin Airlift USA
 
   option = {
     name = EVT_8500608_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 consciousness = -1 }
   }
 }
 country_event = { # End of Berlin Airlift GER
@@ -211,6 +211,6 @@ country_event = { # End of Berlin Airlift GER
 
   option = {
     name = EVT_8500609_A
-	any_pop = { militancy = -3.0 }
+	any_pop = { militancy = -3.0 consciousness = -2  }
   }
 }

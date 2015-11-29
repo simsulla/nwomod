@@ -26,7 +26,7 @@ country_event = {
 
   option = {
     name = EVT_8234000_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { consciousness = 1 }
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.15 } } }
 	ai_chance = { factor = 0 }
   }
@@ -40,7 +40,7 @@ country_event = {
 
   option = {
     name = EVT_8234001_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 1 }
 	money = -5000 
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.15 } } }
 	relation = { who = ARG value = -100 } 
@@ -50,7 +50,7 @@ country_event = {
 
   option = {
     name = EVT_8234001_B
-	any_pop = { militancy = 0.1 }
+	any_pop = { consciousness = 2 }
 	2131 = { secede_province = ARG }
 	relation = { who = ARG value = 50 } 
 	ai_chance = { factor = 0 }
@@ -58,7 +58,7 @@ country_event = {
 
   option = {
     name = EVT_8234001_C
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 1 }
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.15 } } }
 	2131 = { secede_province = ARG }
 	relation = { who = ARG value = 100 } 
@@ -83,7 +83,7 @@ country_event = {
 
   option = {
     name = EVT_8234002_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	ARG = { country_event = 8234003 }
   }
 
@@ -97,7 +97,7 @@ country_event = {
 
   option = {
     name = EVT_8234003_A
-	any_pop = { militancy = 0.2 }
+	any_pop = { consciousness = 1 }
   }
 }
 country_event = {
@@ -117,7 +117,7 @@ country_event = {
   
   option = {
     name = EVT_8234004_B
-	any_pop = { militancy = -0.2 }
+	any_pop = { consciousness = 0.4 }
   }
 }
 
@@ -138,7 +138,7 @@ country_event = {
 
   option = {
     name = EVT_8234005_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = -0.5 }
 	country_event = 8234006 
   }
 
@@ -152,7 +152,7 @@ country_event = {
 
   option = {
     name = EVT_8234006_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.1 }
   }
 }
 country_event = {
@@ -193,7 +193,7 @@ country_event = {
 
   option = {
     name = EVT_8234020_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -0.5 consciousness = 0.5 }
   }
 
 }
@@ -216,7 +216,7 @@ country_event = {
 
   option = {
     name = EVT_8234021_A
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5 consciousness = 2 }
   }
 
 }
@@ -239,7 +239,7 @@ country_event = {
 
   option = {
     name = EVT_8234022_A
-	any_pop = { militancy = 0.2 }
+	any_pop = { militancy = 0.2 consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 
@@ -264,14 +264,14 @@ country_event = {
   
   option = {
     name = EVT_8234030_A
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5 consciousness = 2 }
 	1162 = { secede_province = ENG } 
 	ai_chance = { factor = 1 modifier = { factor = 100 OR = { vassal_of = USA in_sphere = USA } } }
   }
 
   option = {
     name = EVT_8234030_B
-	any_pop = { militancy = 4.0 }
+	any_pop = { militancy = 4.0 consciousness = 1 }
 	1162 = { secede_province = ENG } 
 	war = { target = ENG attacker_goal = { casus_belli = acquire_core_state state_province_id = 2131 } defender_goal = { casus_belli = status_quo } }
 	badboy = 10

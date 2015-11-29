@@ -41,7 +41,7 @@ country_event = {
   option = {
     name = "EVT_8002916_B"
     ai_chance = { factor = 0 }
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 1 }
   }
 }
 country_event = {
@@ -79,7 +79,7 @@ country_event = {
     name = EVT_8002920_C
     ai_chance = { factor = 0 }
 	RUS = { country_event = 8002922 }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
   }
 }
 country_event = {
@@ -112,7 +112,7 @@ country_event = {
 
   option = {
     name = EVT_8002922_A
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 1 }
 	create_alliance = KMT 
 	relation = { who = KMT value = 200 } 
 	KMT = { country_event = 8002923 }
@@ -194,7 +194,7 @@ country_event = {
 
   option = {
     name = EVT_8002924_B
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 1 militancy = 0.5 }
     ai_chance = { factor = 0 }
   }
 }
@@ -209,7 +209,7 @@ country_event = {
 
   option = {
     name = EVT_8002925_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5  consciousness = 1 }
     ai_chance = { factor = 100 }
   }
 
@@ -242,7 +242,7 @@ country_event = {
 
   option = {
     name = EVT_8002926_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
 	casus_belli = { target = KMT type = humiliate }
 	ai_chance = { factor = 0 }
   }
@@ -276,7 +276,7 @@ country_event = {
 
   option = {
     name = EVT_8002927_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
     ai_chance = { factor = 0 }
   }
 }
@@ -290,7 +290,7 @@ country_event = {
 
   option = {
     name = EVT_8002928_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { consciousness = 2 }
 	RUS = { country_event = 8002930 } 
 	ai_chance = { factor = 100 }
   }
@@ -318,7 +318,7 @@ country_event = {
 
   option = {
     name = EVT_8002929_A
-	any_pop = { militancy = 0.1 }
+	any_pop = {  consciousness = 1 }
     ai_chance = { factor = 100 }
   }
 
@@ -338,7 +338,7 @@ country_event = {
 
   option = {
     name = EVT_8002930_A
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
@@ -370,7 +370,7 @@ country_event = {
 
   option = {
     name = EVT_8002940_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
     ai_chance = { factor = 100 }
   }
 
@@ -418,7 +418,7 @@ country_event = {
 
   option = {
     name = EVT_8002942_A
-	any_pop = { militancy = 1.0 }
+	any_pop = {  consciousness = 1 }
 	add_country_modifier = { name = economic_boom duration = 365 }
 	remove_country_modifier = great_depression
     ai_chance = { factor = 100 }
@@ -446,7 +446,7 @@ country_event = {
 
   option = {
     name = EVT_8002943_A
-	any_pop = { militancy = 1.0 }
+	any_pop = {  consciousness = 1 }
 	government = democracy  country_event = 800054
 	ai_chance = { factor = 100 }
   }
@@ -473,7 +473,7 @@ country_event = {
 
   option = {
     name = EVT_8002944_A
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 1 }
 	prestige = 10 
 	ai_chance = { factor = 100 }
   }
@@ -501,7 +501,7 @@ country_event = {
 
   option = {
     name = EVT_8002945_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	money = -1000 
 	ai_chance = { factor = 100 }
   }
@@ -529,7 +529,7 @@ country_event = {
 
   option = {
     name = EVT_8002946_A
-	any_pop = { militancy = -1.5 }
+	any_pop = { militancy = -1.5  consciousness = 1 }
 	add_country_modifier = { name = stock_market_crash duration = 3500 }
 	ai_chance = { factor = 100 }
   }
@@ -555,7 +555,7 @@ country_event = {
 
   option = {
     name = EVT_8002948_A
-	any_pop = { militancy = -2.0 }
+	any_pop = { militancy = -2.0  consciousness = -2 }
 	add_country_modifier = { name = economic_boom duration = 365 }
   }
 }
@@ -649,13 +649,13 @@ country_event = {
 
   option = {
     name = EVT_8002953_A
-	any_pop = { militancy = 1.0 }
 	money = -5000 
     ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8002953_B
+	any_pop = { militancy = 1.0 }
     ai_chance = { factor = 0 }
   }
 }

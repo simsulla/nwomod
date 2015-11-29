@@ -24,7 +24,7 @@ country_event = {
     name = "EVT_8003402_B"
 	ai_chance = { factor = 0 }
 	government = presidential_dictatorship  country_event = 800050
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
   }
 }
 country_event = {
@@ -50,7 +50,7 @@ country_event = {
 
   option = {
     name = "EVT_8003403_B"
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -70,13 +70,13 @@ country_event = {
 
   option = {
     name = "EVT_8003414_A"
-	any_pop = { limit = { OR = { type = officers type = soldiers } } militancy = 10.0 }
+	any_pop = { limit = { OR = { type = officers type = soldiers } } militancy = 8.0 consciousness = 6 }
 	ai_chance = { factor = 100 }
   }
   
   option = {
     name = "EVT_8003414_B"
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0 consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }

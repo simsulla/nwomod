@@ -62,7 +62,7 @@ country_event = {
 
   option = {
     name = EVT_8500203_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	RUS  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
@@ -76,7 +76,7 @@ country_event = {
 
   option = {
     name = EVT_8500204_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 2 }
 	relation = { who = RUS value = -50 } 
 	RUS = { country_event = { id = 8500207 days = 10 } }
 	ai_chance = { factor = 100 }
@@ -92,7 +92,7 @@ country_event = {
 
   option = {
     name = EVT_8500204_C
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5 consciousness = 1 }
 	relation = { who = RUS value = -10 } 
 	RUS = { country_event = { id = 8500205 days = 10 } }
 	ai_chance = { factor = 0 }
@@ -102,7 +102,7 @@ country_event = {
     name = EVT_8500204_D
 	war = CUB 
 	relation = { who = RUS value = -200 } 
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	RUS = { country_event = { id = 8500206 days = 10 } }
 	ai_chance = { factor = 0 }
   }
@@ -123,7 +123,7 @@ country_event = {
 
   option = {
     name = EVT_8500205_B
-	any_pop = { militancy = 0.3 }
+	any_pop = {consciousness = 1 }
 	clr_global_flag = missiles_in_cuba 
 	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }
@@ -139,7 +139,7 @@ country_event = {
   option = {
     name = EVT_8500206_A
 	badboy = 10 
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 1 }
 	USA = { war = { target = CUB  attacker_goal = { casus_belli = install_democracy } } } 
 	ai_chance = { factor = 100 }
   }
@@ -209,7 +209,7 @@ country_event = {
   option = {
     name = EVT_8500208_C
 	USA = { war = { target = CUB  attacker_goal = { casus_belli = install_democracy } } } 
-	any_pop = { militancy = 1.2 }
+	any_pop = { militancy = 1.2 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -244,7 +244,7 @@ country_event = {
   option = {
     name = EVT_8500209_D
 	relation = { who = USA value = -200 } 
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -264,7 +264,7 @@ country_event = {
 
   option = {
     name = EVT_8500210_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	country_event =  { id = 8500213 days = 10 } 
 	country_event =  { id = 8500214 days = 10 } 
 	ai_chance = { factor = 0 }
@@ -288,14 +288,14 @@ country_event = {
   option = {
     name = EVT_8500211_B
 	relation = { who = RUS value = 100 } 
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8500211_C
 	war = RUS 
-	any_pop = { militancy = 0.4 }
+	any_pop = { consciousness = 1 }
 	RUS = { country_event =  { id = 8500213 days = 10 } }
 	USA = { country_event =  { id = 8500214 days = 10 } }
 	ai_chance = { factor = 100 }
@@ -334,7 +334,7 @@ country_event = {
 
   option = {
     name = EVT_8500213_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	RUS  = { country_event = 8225001 } 
   }
 }
@@ -347,7 +347,7 @@ country_event = {
 
   option = {
     name = EVT_8500214_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 consciousness = -1}
   }
 }
 country_event = {
@@ -368,6 +368,6 @@ country_event = {
 
   option = {
     name = EVT_8500215_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
   }
 }

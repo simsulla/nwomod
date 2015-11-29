@@ -34,13 +34,13 @@ country_event = {
 
   option = {
     name = EVT_8004802_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	government = presidential_dictatorship country_event = 800050
   }
 
   option = {
     name = EVT_8004802_B
-	any_pop = { militancy = -0.1 }
+	any_pop = { consciousness = 1 }
 	define_general = { name = "Gala Plazo" personality = energetic background = no_background }
 	government = democracy country_event = 800054
 	ai_chance = { factor = 100 }
@@ -48,7 +48,7 @@ country_event = {
 
   option = {
     name = "EVT_ELECTIONS_NOCHANGE"
-	any_pop = { militancy = 0.3 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }

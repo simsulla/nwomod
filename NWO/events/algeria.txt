@@ -37,7 +37,7 @@ country_event = {
 
   option = {
     name = EVT_8000313_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.1 } } }
 	define_general = { name = "Houari Boumediene" personality = energetic background = no_background }
@@ -62,7 +62,7 @@ country_event = {
 
   option = {
     name = OK
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.1 } } }
 	define_general = { name = "Chadli Bendjedid" personality = energetic background = no_background }
@@ -85,7 +85,7 @@ country_event = {
 
   option = {
     name = OK
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.1 } } }
 	define_general = { name = "Abdelhamid Brahimi" personality = energetic background = no_background }
@@ -109,7 +109,7 @@ country_event = {
 
   option = {
     name = OK
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.1 } } }
 	define_general = { name = "Kasdi Merbah" personality = energetic background = no_background }
@@ -132,7 +132,7 @@ country_event = {
 
   option = {
     name = OK
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.1 } } }
 	define_general = { name = "Mouloud Hamrouche" personality = energetic background = no_background }
@@ -158,7 +158,7 @@ country_event = {
   option = {
     name = EVT_8000318_A
 	# EVT_8000318_A;Prevent Islamist takeover
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	define_general = { name = "Abdelaziz Bouteflika" personality = energetic background = no_background }
 	any_owned = { 
 		limit = { NOT = { province_id = 1708 province_id = 1709 province_id = 1700 province_id = 1704 } NOT = { region = ALD_1714 region = ALD_1718 } }
@@ -171,7 +171,7 @@ country_event = {
   option = {
     name = EVT_8000318_B
 	# EVT_8000318_B;Follow the will of the people
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	government = theocracy country_event = 800051
 	badboy = 10
 	random_country = { limit = { tag = ALG part_of_sphere = yes } sphere_owner = { diplomatic_influence = { who = ALG value = -200 } } }
@@ -242,7 +242,7 @@ country_event = { # Toussaint Rouge
   
     option = {
     name = EVT_8000321_B
-	any_pop = { limit = { culture = sunni_arab } militancy = 0.2 }
+	any_pop = { limit = { culture = sunni_arab } consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 

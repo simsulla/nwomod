@@ -47,14 +47,14 @@ country_event = {
   option = {
     name = EVT_8003008_A
 	add_country_modifier = { name = economic_boom duration = 3500 }
-	any_pop = { consciousness = 0.5 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8003008_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = -1 }
+	any_pop = { militancy = -1  consciousness = 2 }
   }
 }
 country_event = {
@@ -73,7 +73,7 @@ country_event = {
 
   option = {
     name = EVT_8003009_A
-	any_pop = { militancy = -1.0 }
+	any_pop = {  consciousness = 2 }
 	government = democracy  country_event = 800054
 	ai_chance = { factor = 0 }
   }

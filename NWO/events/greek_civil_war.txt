@@ -74,7 +74,7 @@ country_event = {
 
   option = {
     name = EVT_8500501_C
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -126,7 +126,7 @@ country_event = {
     name = EVT_8500503_D
 	USA = { country_event = 8500504 }
 	UGR = { country_event = 8500521 }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -148,7 +148,7 @@ country_event = {
   option = {
     name = EVT_8500504_B
 	GRE = {country_event = 8500509 } 
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
 
   }
@@ -196,7 +196,7 @@ country_event = {
   option = {
     name = EVT_8500506_B
 	prestige = -10
-	any_pop = { militancy = 0.1 }
+	any_pop = { consciousness = 2 }
 	GRE = { country_event = 8500509 }
 	ai_chance = { factor = 0 }
   }
@@ -254,7 +254,7 @@ country_event = {
 
   option = {
     name = EVT_8500520_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 1 }
 	treasury = 1000
   }
 }
@@ -268,7 +268,7 @@ country_event = {
 
   option = {
     name = EVT_8500521_A
-	any_pop = { militancy = -0.6 }
+	any_pop = { militancy = -0.5 consciousness = -1 }
 	treasury = 1000
   }
 }
@@ -282,14 +282,14 @@ country_event = {
   option = {
     name = EVT_8500522_A
 	create_alliance = RUS 
-	any_pop = { militancy = -0.6 }
+	any_pop = { militancy = -0.5 consciousness = -1 }
 	diplomatic_influence = { who = RUS value = 100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500522_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { consciousness = 2 }
 	relation = { who = RUS value = -150 } 
 	ai_chance = { factor = 0 }
   }
@@ -312,14 +312,14 @@ country_event = {
   option = {
     name = EVT_8500523_A
 	GRE = { country_event = 8500524 } 
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 1 }
 	relation = { who = RUS value = -100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500523_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 1 }
 	relation = { who = RUS value = 50 } 
 	ai_chance = { factor = 0 }
   }
@@ -333,7 +333,7 @@ country_event = {
 
   option = {
     name = EVT_8500524_A
-	any_pop = { militancy = -0.4 }
+	any_pop = { consciousness = 1 }
 	treasury = 250 
   }
 }
@@ -377,7 +377,7 @@ country_event = {
 
   option = {
     name = EVT_8500540_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	war_exhaustion = 50 
   }
 }
@@ -399,7 +399,7 @@ country_event = {
 
   option = {
     name = EVT_8500541_A
-	any_pop = { militancy = -2.5 }
+	any_pop = { militancy = -2.5 consciousness = -1}
 	change_tag = GRE
 	RUS  = { country_event = 8225000 } 
   }
@@ -428,7 +428,7 @@ country_event = {
 
   option = {
     name = EVT_8500550_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1}
 	ai_chance = { factor = 100 }
   }
 }
@@ -441,7 +441,7 @@ country_event = {
 
   option = {
     name = EVT_8500551_A
-	any_pop = { militancy = 0.2 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
 
@@ -467,7 +467,7 @@ country_event = {
 
   option = {
     name = EVT_8500552_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -496,7 +496,7 @@ country_event = {
 
   option = {
     name = EVT_8500553_B
-	any_pop = { militancy = -0.2 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -510,7 +510,7 @@ country_event = {
 
   option = {
     name = EVT_8500554_A
-	any_pop = { militancy = 0.2 }
+	any_pop = { consciousness = 1 }
 	end_war = GRE 
 	ai_chance = { factor = 100 }
   }
@@ -532,7 +532,7 @@ country_event = {
 
   option = {
     name = EVT_8500555_B
-	any_pop = { militancy = 0.4 }
+	any_pop = { militancy = 0.4 consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
 

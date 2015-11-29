@@ -74,7 +74,7 @@ country_event = {
   option = {
     name = EVT_8000109_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0 consciousness = 2 }
 	random_country = {
 		limit = { tag = AFG is_vassal = yes overlord = { NOT = { government = proletarian_dictatorship } } }
 		overlord = { country_event =  8000111 }
@@ -240,7 +240,7 @@ country_event = {
   option = {
     name = EVT_8176110_A
 	relation = { who = AFG value = -150 } 
-	any_pop = { militancy = -0.7 }
+	any_pop = { consciousness = 2  }
 	badboy = 2
 	random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.4 } } }
 	AFG = { country_event =  8000110 }
@@ -249,7 +249,7 @@ country_event = {
 
   option = {
     name = EVT_8176110_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 1 }
 	country_event = 8225001 # communism_gets_weaker 
 	AFG = { country_event =  8176111 }
 	ai_chance = { factor = 0 }
@@ -264,7 +264,7 @@ country_event = {
 
   option = {
     name = EVT_8176111_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 2  }
   }
 }
 country_event = {
@@ -307,7 +307,7 @@ country_event = {
   
   option = {
     name = EVT_8176113_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 1 }
 	country_event = 8225001
   }
 
@@ -321,7 +321,7 @@ country_event = {
 
   option = {
     name = EVT_8176114_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 1 }
 	RUS  = { country_event = 8225001 } 
   }
 }
@@ -352,6 +352,7 @@ country_event = {
 				is_primary_culture = no
 			}
             militancy = 5
+			consciousness = 2 
 		}
 	}
 
@@ -385,6 +386,7 @@ country_event = {
 				has_pop_religion = sunni
 			}
             militancy = -10
+			consciousness = -5 
 		}
 		government = theocracy  country_event = 800051
 		add_country_modifier = { name = sharia duration = 1750 }
@@ -398,6 +400,7 @@ country_event = {
 				has_pop_religion = sunni
 			}
             militancy = 4
+			consciousness = 2 
 		}
 		ai_chance = { factor = 0 }
 	}

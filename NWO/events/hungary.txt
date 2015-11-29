@@ -66,7 +66,7 @@ country_event = {
 
   option = {
     name = EVT_8021318_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
   }
 }
 country_event = {
@@ -86,7 +86,7 @@ country_event = {
 
   option = {
     name = EVT_8021319_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -1 }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.1 } } }
 	government = democracy country_event = 800054
 	ai_chance = { factor = 0 }
@@ -114,7 +114,7 @@ country_event = {
 
   option = {
     name = EVT_8021320_B
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5 consciousness = 1 }
 	overlord = { release_vassal = THIS } 
   }
 }

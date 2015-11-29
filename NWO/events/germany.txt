@@ -77,7 +77,7 @@ country_event = {
 
   option = {
     name = EVT_8004523_A
-	any_pop = { militancy = -0.1 }
+	any_pop = { consciousness = 1 }
 	ai_chance= { factor = 195 }
   }
 
@@ -96,14 +96,14 @@ country_event = {
 
   option = {
     name = EVT_8004524_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 1 }
 	country_event = 8004525 
 	ai_chance = { factor = 60 }
   }
 
   option = {
     name = EVT_8004524_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 } 
 	ai_chance = { factor = 40 }
   }
 }
@@ -117,7 +117,7 @@ country_event = {
 
   option = {
     name = EVT_8004525_A
-	any_pop = { militancy = 0.3 }
+	any_pop = { consciousness = 2 }
 	relation = { who = RUS value = -50 } 
 	relation = { who = DDR value = -50 } 
 	ai_chance = { factor = 100 }
@@ -155,7 +155,7 @@ country_event = {
 
   option = {
     name = EVT_8004526_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	relation = { who = DDR value = 100 } 
 	relation = { who = RUS value = 20 } 
   }
@@ -184,7 +184,7 @@ country_event = {
 
   option = {
     name = EVT_8004527_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 1 }
 	badboy = -10 
 	ai_chance = { factor = 100 }
   }
@@ -215,13 +215,13 @@ country_event = {
 	RUS = { country_event = 8004321 } 
 	ENG = { country_event = 8004321 } 
 	GER = { country_event = { id = 8004325 days = 30 } }
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8004311_B
-	any_pop = { militancy = -0.1 }
+	any_pop = { consciousness = 1 }
 	any_owned = { add_core = GER }
 	ai_chance = { factor = 0 }
   }
@@ -264,14 +264,14 @@ country_event = { # East German Uprising of 1953
 
   option = {
     name = EVT_8004313_A
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 0.8 consciousness = 1 }
 	add_country_modifier = { name = central_planning_inflexibility2 duration = 600 }
 	ai_chance = { factor = 70 }
   }
 
   option = {
     name = EVT_8004313_B
-	any_pop = { militancy = 0.4 }
+	any_pop = { consciousness = 2 }
 	add_country_modifier = { name = central_planning_inflexibility2 duration = 300 }
 	ai_chance = { factor = 20 }
   }
@@ -375,7 +375,7 @@ country_event = { # Brain drain flight_to_west_germany
 
   option = {
     name = EVT_8004317_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	add_country_modifier = { name = one_point_five_children duration = 16000 }
   }
 }
@@ -468,7 +468,7 @@ country_event = { # Reunification of Germany
 
   option = {
     name = EVT_8004321_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	relation = { who = GER value = 50 } 
 	ai_chance = { factor = 100 }
   }
@@ -476,7 +476,7 @@ country_event = { # Reunification of Germany
   option = {
     name = EVT_8004321_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 0.1 }
+	any_pop = { consciousness = 1 }
 	relation = { who = GER value = -100 } 
 	casus_belli = { target = GER type = liberate_country months = 24 }
   }
@@ -496,6 +496,6 @@ country_event = { # Reunification of Germany
 
   option = {
     name = EVT_8004325_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { consciousness = 1 }
   }
 }

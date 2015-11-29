@@ -84,7 +84,7 @@ country_event = {
   }
   option = {
     name = EVT_8000204_B
-	any_pop = { militancy = 5.0 }
+	any_pop = { militancy = 5.0 consciousness = 2 }
 	define_general = { name = "Fatos Nano" personality = energetic background = no_background }
   }
 }
@@ -200,7 +200,7 @@ country_event = {
 	relation = { who = CHI value = 200 }
 	diplomatic_influence = { who = CHI value = 200 }
 	diplomatic_influence = { who = RUS value = -100 }
-	any_pop = { militancy = -0.2 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 100 } 
   }
 
@@ -231,13 +231,13 @@ country_event = {
     name = EVT_8022807_A
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.5 } } }
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.06 } } }
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8022807_B
-	any_pop = { militancy = 0.2 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }

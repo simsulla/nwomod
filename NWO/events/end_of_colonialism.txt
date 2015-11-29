@@ -84,7 +84,7 @@ province_event = { # Colonial unrest in $PROVINCENAME$
 
   option = {
     name = EVT_COLONIALUNREST_SUPPRESS
-	any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } militancy = 0.5 }
+	any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } consciousness = 1 militancy = 0.5 }
 	add_province_modifier = { name = colonial_unrest duration = -1 }
 	ai_chance = { factor = 1 modifier = { factor = 100 owner = { NOT = { government = democracy government = hms_government } } } }
   }
@@ -113,7 +113,7 @@ province_event = { # Colonials in $PROVINCENAME$ accuses us of breaking promises
 
   option = {
     name = EVT_COLONIAL_PROMISE_BROKEN_A
-	any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } militancy = 1.0 }
+	any_pop = { limit = { is_accepted_culture = no is_primary_culture = no } consciousness = 1 militancy = 1.0 }
 	add_province_modifier = { name = colonial_unrest duration = -1 }
 	remove_province_modifier = colonial_promise 
   }
@@ -168,6 +168,7 @@ country_event = {
 		any_pop = { 
 			limit = { is_accepted_culture = no is_primary_culture = no }
 			militancy = 1.0 
+			consciousness = 1
 		}
 	}
 	ai_chance = { factor = 0 }

@@ -27,7 +27,7 @@ country_event = { # Independence of Ghana
     name = EVT_8010700_B
 	release_vassal = GHA
 	diplomatic_influence = { who = GHA value = 200 } 
-	any_pop = { limit = { OR = { culture = ewe culture = african_minor } } militancy = 2 }
+	any_pop = { limit = { OR = { culture = ewe culture = african_minor } } militancy = 2 consciousness = 2 }
 	create_alliance = GHA
 	ai_chance = { factor = 0 }
   }  
@@ -35,7 +35,7 @@ country_event = { # Independence of Ghana
   option = {
     name = EVT_8010700_B
 	prestige = -10
-	any_pop = { limit = { OR = { culture = ewe culture = african_minor } } militancy = 10 }
+	any_pop = { limit = { OR = { culture = ewe culture = african_minor } } militancy = 7 consciousness = 5 }
 	# TODO GHA UDI
 	ai_chance = { factor = 0 }
   }
@@ -69,7 +69,7 @@ country_event = { # Independence of Ghana
   option = {
     name = EVT_8010701_B
 	prestige = -10
-	any_pop = { limit = { culture = ewe } militancy = 5 }
+	any_pop = { limit = { culture = ewe } militancy = 5 consciousness = 4 }
 	ai_chance = { factor = 0 }
   }
   

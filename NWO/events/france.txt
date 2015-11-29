@@ -17,7 +17,7 @@ country_event = { # Fall of the Fourth Republic
 
   option = {
     name = EVT_8005730_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 consciousness = 1 }
 	define_general = { name = "Charles de Gaulle" personality = energetic background = no_background }
 	election = yes
 	prestige = -10
@@ -28,7 +28,7 @@ country_event = { # Fall of the Fourth Republic
 
   option = {
     name = EVT_8005730_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ruling_party_ideology = socialist
 	any_owned = { limit = { NOT = { is_core = ALG } is_colonial = no  }  secede_province = UFR }
 	capital = 1700 # Algiers
@@ -41,7 +41,7 @@ country_event = { # Fall of the Fourth Republic
   
   option = {
     name = EVT_8005730_C
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
 	ruling_party_ideology = conservative
 	government = presidential_dictatorship country_event = 800050
 	any_owned = { limit = { NOT = { is_core = ALG } is_colonial = no }  secede_province = UFR  }
@@ -228,7 +228,7 @@ country_event = { # FROM = GER THIS = FRA
 				culture = german
 			}
 			consciousness = 2
-			militancy = 10
+			militancy = 8
 		}		
 		GER = {
 			casus_belli = {

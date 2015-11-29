@@ -27,14 +27,14 @@ country_event = {
   option = {
     name = EVT_8006304_A
 	government = presidential_dictatorship country_event = 800050
-	any_pop = { limit = { strata = poor } militancy = 2.0 }
+	any_pop = { limit = { strata = poor } militancy = 2.0 consciousness = 1 }
 	relation = { who = USA value = 100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8006304_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 2 }
 	relation = { who = USA value = -100 } 
 	ai_chance = { factor = 0 }
   }
@@ -83,7 +83,7 @@ country_event = {
 
   option = {
     name = EVT_8006317_A
-	any_pop = { militancy = -2.0 }
+	any_pop = { militancy = -2.0 consciousness = -1 }
 	any_owned = { limit = { is_capital = no } change_controller = REB }
   }
 }
@@ -116,7 +116,7 @@ country_event = { # Belize Independence
     name = EVT_8006350_B
 	badboy = 2
 	prestige = -10
-	any_pop = { limit = { location = { is_core = BLZ } }  militancy = 2 }
+	any_pop = { limit = { location = { is_core = BLZ } }  militancy = 2 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
