@@ -26,7 +26,7 @@ country_event = {
 
   option = {
     name = EVT_8020300_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3  consciousness = 1.0 }
 	badboy = 10 
 	relation = { who = YUG value = -150 } 
 	relation = { who = RUS value = -50 } 
@@ -64,7 +64,7 @@ country_event = {
   option = {
     name = EVT_8020301_B
 	USA = { country_event = 8020303 }
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3  consciousness = 1.0 }
 	badboy = 5 
 	relation = { who = ITA value = -150 } 
 	relation = { who = USA value = -50 } 
@@ -83,13 +83,13 @@ country_event = {
     name = EVT_8020302_A
 	ITA = { country_event = 8020305 }
 	relation = { who = ITA value = 100 } 
-	any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2  consciousness = -0.1 }
 	ai_chance = { factor = 100 }
   }
   option = {
     name = EVT_8020302_B
 	relation = { who = ITA value = -100 } 
-	any_pop = { militancy = 0.2 }
+	any_pop = { militancy = 0.2  consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
   
@@ -104,13 +104,13 @@ country_event = {
 
   option = {
     name = EVT_8020303_A
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3  consciousness = 1.0 }
   }
 
   option = {
     name = EVT_8020303_B
 	YUG = { country_event = 8020304 }
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 0.5 }
 	relation = { who = YUG value = 100 } 
 	relation = { who = ITA value = -100 } 
 	relation = { who = RUS value = 25 } 

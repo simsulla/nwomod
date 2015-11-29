@@ -21,10 +21,12 @@ political_decisions = {
 		effect = {
 			set_country_flag = trade_block_ambition
 			artisans = {
-				militancy = 1
+				militancy = 0.5
+				consciousness = 1
 			}
 			capitalists = {
-				consciousness = -2
+				militancy = -0.5
+				consciousness = -1
 			}
 			any_pop = {
 				dominant_issue = {

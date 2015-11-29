@@ -23,7 +23,7 @@ country_event = {
 	ai_chance = { factor = 100 }
 	overlord = { release_vassal = THIS } # RUS release NKO
 	SKO = { country_event =  8500801 } 
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = 2 }
   }
 
   option = {
@@ -142,7 +142,7 @@ country_event = {
 
   option = {
     name = EVT_8500803_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { consciousness = 2 }
 	country_event = 8500804 
 	RUS = { country_event =  { id = 8500805 days = 1 } }
 	ai_chance = { factor = 100 }
@@ -150,7 +150,7 @@ country_event = {
 
   option = {
     name = EVT_8500803_B
-	any_pop = { militancy = 0.1 }
+	any_pop = { consciousness = 1 }
 	money = -3000 
 	ai_chance = { factor = 0 }
   }
@@ -170,7 +170,7 @@ country_event = {
 
   option = {
     name = EVT_8500804_A
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 1 }
 	diplomatic_influence = { who = SKO value = 100 }
   }
 }
@@ -183,14 +183,14 @@ country_event = {
 
   option = {
     name = EVT_8500805_A
-	any_pop = { militancy = 0.3 }
+	any_pop = {  consciousness = 0.5 }
 	USA = { country_event = 8500806  }
     ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500805_B
-	any_pop = { militancy = -0.5 }
+	any_pop = { consciousness = -0.5 }
 	country_event = 8500809 
 	money = -3000 
     ai_chance = { factor = 0 }
@@ -212,7 +212,7 @@ country_event = {
 
   option = {
     name = EVT_8500806_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 0.5 }
 	country_event = 8500804 
 	NKO = { country_event = 8500809 }
 	ai_chance = { factor = 100 }
@@ -220,7 +220,7 @@ country_event = {
 
   option = {
     name = EVT_8500806_B
-	any_pop = { militancy = 1.0 }
+	any_pop = {  consciousness = 1 }
 	RUS = { country_event = 8500807 } 
 	SKO = { country_event = 8500808 } 
 	ai_chance = { factor = 0 }
@@ -242,7 +242,7 @@ country_event = {
 
   option = {
     name = EVT_8500807_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -255,7 +255,7 @@ country_event = {
 
   option = {
     name = EVT_8500808_A
-	any_pop = { militancy = -2.5 }
+	any_pop = { militancy = -2.5  consciousness = 2 }
 	create_alliance = USA 
 	country_event = 8500804 
 	ai_chance = { factor = 100 }
@@ -263,7 +263,7 @@ country_event = {
 
   option = {
     name = EVT_8500808_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -276,7 +276,7 @@ country_event = {
 
   option = {
     name = EVT_8500809_A
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = -1 militancy = -0.3 }
   }
 }
 country_event = {
@@ -307,7 +307,7 @@ country_event = {
   option = {
     name = EVT_8500810_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 0.1 }
+	any_pop = {  consciousness = 2 }
   }
 }
 country_event = {
@@ -321,7 +321,7 @@ country_event = {
     name = EVT_8500811_A
 	relation = { who = CHI value = 100 }
 	create_alliance  = CHI
-	any_pop = { militancy = -4.0 }
+	any_pop = { militancy = -4.0  consciousness = -1 }
   }
 }
 country_event = {
@@ -342,7 +342,7 @@ country_event = {
 
   option = {
     name = EVT_8500820_A
-	any_pop = { militancy = -1.0 }
+	any_pop = {  consciousness = 1 militancy = -1.0 }
 	RUS  = { country_event = 8225000 } 
   }
 }
@@ -365,7 +365,7 @@ country_event = {
   option = {
     name = EVT_8500821_A
 	prestige = 20
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = 1 }
 	RUS  = { country_event = 8225001 } 
   }
 }
@@ -425,7 +425,7 @@ country_event = {
 
   option = {
     name = EVT_8500830_A
-	any_pop = { militancy = -2.5 }
+	any_pop = { militancy = -2.5  consciousness = -1 }
   }
 }
 country_event = {
@@ -445,7 +445,7 @@ country_event = {
 
   option = {
     name = EVT_8500831_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 1  consciousness = 1 }
   }
 }
 country_event = {
@@ -484,7 +484,7 @@ country_event = {
 
   option = {
     name = EVT_8500833_A
-	any_pop = { militancy = -5.0 }
+	any_pop = { militancy = -5.0  consciousness = -1 }
   }
 }
 country_event = {
@@ -505,7 +505,7 @@ country_event = {
 
   option = {
     name = EVT_8500834_A
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0  consciousness = 1 }
   }
 }
 country_event = {
@@ -526,7 +526,7 @@ country_event = {
 
   option = {
     name = EVT_8500835_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = 1 }
   }
 }
 country_event = {
@@ -546,7 +546,7 @@ country_event = {
 
   option = {
     name = EVT_8500836_A
-	any_pop = { militancy = -2.5 }
+	any_pop = { militancy = -2.5  consciousness = -1 }
   }
 }
 country_event = {

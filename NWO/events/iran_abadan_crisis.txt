@@ -69,13 +69,13 @@ country_event = {
   option = {
     name = EVT_8501003_A # Sanctions are successful
 	add_country_modifier = { name = stock_market_crash duration = 365 }
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 80 }
   }
 
   option = {
     name = EVT_8501003_B # Sanctions are a failure
-	any_pop = { militancy = 0.1 }
+	any_pop = {  consciousness = 2 }
 	country_event =  { id = 8501004 days = 30 } 
 	country_event =  { id = 8501020 days = 60 } # Operation Ajax
 	ai_chance = { factor = 20 }
@@ -184,13 +184,13 @@ country_event = {
 	casus_belli = { target = RUS type = humiliate months = 24 }
 	war = RUS 
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
   }
 
   option = {
     name = EVT_8501008_B
 	ai_chance =  { factor = 100 }
-	any_pop = { militancy = 0.1 }
+	any_pop = {  consciousness = 2 }
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.05 } } }
   }
 }
@@ -205,7 +205,7 @@ country_event = {
 
   option = {
     name = EVT_8501010_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5  consciousness = -1 }
   }
 }
 
@@ -222,14 +222,14 @@ country_event = {
 
   option = {
     name = EVT_8501020_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
 	country_event =  { id = 8501022 days = 360 } 
 	country_event = { id = 8011407 days = 360 }  
   }
 
   option = {
     name = EVT_8501020_B
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = -1 }
 	country_event = { id = 8011407 days = 360 } 
   }
 }
@@ -251,7 +251,7 @@ country_event = {
 
   option = {
     name = EVT_8501021_A
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 2 }
   }
 }
 country_event = {
@@ -272,6 +272,6 @@ country_event = {
 
   option = {
     name = EVT_8501022_A
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 1 }
   }
 }

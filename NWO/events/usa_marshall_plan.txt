@@ -29,7 +29,7 @@ country_event = {
 	} 
 	relation = { who = FRA value = 150 } 
 	relation = { who = ENG value = 150 } 
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	set_global_flag = marshall_plan_west_only 
 	treasury = -6000
 	ai_chance = { factor = 0 }
@@ -40,7 +40,7 @@ country_event = {
 	any_country = { 
 		limit = { capital_scope = { continent = europe } NOT = { government = proletarian_dictatorship } } 
 		relation = { who = USA value = -50 } 
-		any_pop = { militancy = 2.0 }
+		any_pop = { militancy = 2.0 consciousness = 1 }
 	} 
 	ai_chance = { factor = 0 }
   }
@@ -57,7 +57,7 @@ country_event = {
   option = {
     name = EVT_8202002_A
 	relation = { who = USA value = -50 } 
-	any_pop = { militancy = 0.1 }
+	any_pop = { militancy = 0.1 consciousness = 0.5 }
 	set_global_flag = marshall_plan_west_only 
 	ai_chance = { factor = 0 }
   }
@@ -104,7 +104,7 @@ country_event = {
 		diplomatic_influence  = { who = USA value = 100 } 
 		USA = { treasury = -20000 }
 		country_event = 8202020
-		any_pop = { militancy = -0.2 }
+		any_pop = { militancy = -0.2 consciousness = -0.1 }
 	} 
 	any_country = { 
 		limit = { has_global_flag = marshall_plan_for_all capital_scope = { continent = europe }  } 
@@ -112,7 +112,7 @@ country_event = {
 		treasury = 20000
 		USA = { treasury = -20000 }
 		country_event = 8202020
-		any_pop = { militancy = -0.2 }
+		any_pop = { militancy = -0.2 consciousness = -0.1 }
 	} 
 	any_country = { 
 		limit = { has_global_flag = marshall_plan_west_plus_two capital_scope = { continent = europe } OR = { NOT = { government = proletarian_dictatorship } tag = CZH tag = POL } } 
@@ -120,7 +120,7 @@ country_event = {
 		treasury = 20000
 		USA = { treasury = -20000 }
 		country_event = 8202020
-		any_pop = { militancy = -0.2 }
+		any_pop = { militancy = -0.2 consciousness = -0.1 }
 	} 
   }
 

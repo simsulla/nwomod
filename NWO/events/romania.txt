@@ -35,7 +35,7 @@ country_event = {
 
   option = {
     name = EVT_8023013_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = 1 }
 	relation = { who = USA value = 50 } 
 	relation = { who = ENG value = 50 } 
 	relation = { who = FRA value = 50 } 
@@ -59,7 +59,7 @@ country_event = {
 
   option = {
     name = EVT_8023014_A
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0  consciousness = 2 }
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
   }
 }
@@ -80,13 +80,13 @@ country_event = {
 
   option = {
     name = EVT_8023015_A
-	any_pop = { militancy = 3.0 }
+	any_pop = { militancy = 3.0  consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8023015_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 2 }
 	country_event = 8012302 
 	ai_chance = { factor = 0 }
   }
@@ -108,14 +108,14 @@ country_event = {
 
   option = {
     name = EVT_8023016_A
-	any_pop = { militancy = -3.0 }
+	any_pop = { militancy = -3.0  consciousness = 2 }
 	country_event = 8012302 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8023016_B
-	any_pop = { militancy = 5.0 }
+	any_pop = { militancy = 5.0  consciousness = 4 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -151,7 +151,7 @@ country_event = { # Transnistria War
   option = {
     name = EVT_8023020_A
 	# EVT_8023020_A;Retake control over our country
-	any_pop = { militancy = -3.0 }
+	any_pop = { militancy = -3.0  consciousness = -1 }
 	war = { target = TRD attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
@@ -159,7 +159,7 @@ country_event = { # Transnistria War
   option = {
     name = EVT_8023020_B
 	# EVT_8023020_B No,this is to dangerous
-	any_pop = { militancy = 5.0 }
+	any_pop = { militancy = 5.0  consciousness = 4 }
 	ai_chance = { factor = 0 }
   }
 }

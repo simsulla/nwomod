@@ -18,7 +18,7 @@ country_event = {
   option = {
     name = EVT_8500401_A
 	relation = { who = KMT value = -100 } 
-	any_pop = { militancy = -0.1 }
+	any_pop = { militancy = -0.1  consciousness = -0.1 }
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.1 } } }
 	ai_chance = { factor = 0 }
   }
@@ -26,7 +26,7 @@ country_event = {
   option = {
     name = EVT_8500401_B
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.15 } } }
-	relation = { who = KMT value = 50 } any_pop = { militancy = 0.3 }
+	relation = { who = KMT value = 50 } any_pop = { militancy = 0.3  consciousness = 0.1 }
 	USA = { country_event =  8500402 }
 	ai_chance = { factor = 100 }
   }
@@ -73,7 +73,7 @@ country_event = {
   option = {
     name = EVT_8500403_B
 	CHI = { country_event = { id = 8500404 days = 30 } }
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -93,7 +93,7 @@ country_event = {
   option = {
     name = EVT_8500404_B
 	relation = { who = CHI value = 50 } 
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1.0 }
   }
 }
 country_event = { # Communists try an all-out war, American guarantee is in place
@@ -150,7 +150,7 @@ country_event = {
 
   option = {
     name = EVT_8500406_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3  consciousness = 6.0 }
 	ai_chance = { factor = 0 }
   }
 
@@ -223,7 +223,7 @@ country_event = {
 	relation = { who = KMT value = -100 } 
 	relation = { who = CHI value = 100 } 
 	relation = { who = USA value = -50 } 
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5  consciousness = 3.0 }
 	badboy = 15 
 	USA = { country_event = 8500413 }
 	ai_chance = { factor = 0 }
@@ -239,7 +239,7 @@ country_event = {
   option = {
     name = EVT_8500413_A
 	end_war = CHI 
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0  consciousness = 1.0 }
 	KMT = { country_event = 8500420 }
 	ai_chance = { factor = 0 }
   }
@@ -265,7 +265,7 @@ country_event = {
 
   option = {
     name = EVT_8500414_B
-    any_pop = { militancy = 2.0 }
+    any_pop = { militancy = 0.2  consciousness = 0.5 }
   }
 }
 country_event = {
@@ -282,7 +282,7 @@ country_event = {
 
   option = {
     name = EVT_8500415_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.2  consciousness = 0.6 }
   }
 }
 country_event = {
@@ -294,6 +294,6 @@ country_event = {
 
   option = {
     name = EVT_8500420_A
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 0.5  consciousness = 1.0 }
   }
 }

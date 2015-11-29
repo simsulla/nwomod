@@ -33,7 +33,7 @@ country_event = {
 	option = {
 		name = EVT_1014200_B
 		# EVT_1014200_B;Stay in power
-		any_pop = { militancy = 3 }
+		any_pop = { militancy = 3 consciousness = 2 }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -90,7 +90,7 @@ country_event = {
 	option = {
 		name = EVT_1014202_B
 		# EVT_1014202_B;Stay in power
-		any_pop = { militancy = 3 }
+		any_pop = { militancy = 3 consciousness = 1 }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -155,6 +155,10 @@ country_event = {
 		# EVT_1014204_B;Never mind
 		any_pop = {
 			scaled_militancy = {
+				ideology = populist
+				factor = 2
+			}
+			scaled_consciousness = {
 				ideology = populist
 				factor = 2
 			}

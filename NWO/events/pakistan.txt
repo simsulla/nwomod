@@ -56,7 +56,7 @@ country_event = {
 
   option = {
     name = EVT_8011017_A
-	any_pop = { militancy = 0.7 }
+	any_pop = { militancy = 0.7 consciousness = 2 }
 	government = presidential_dictatorship country_event = 800050
   }
 }
@@ -107,7 +107,7 @@ country_event = {
 
   option = {
     name = EVT_8011022_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
   }
 }
 country_event = {
@@ -150,7 +150,7 @@ country_event = {
 	relation = { who = RUS value = -25 } 
 	relation = { who = EGY value = -25 } 
 	relation = { who = CHI value = -25 } 
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
   }
 }
 country_event = {
@@ -194,7 +194,7 @@ country_event = {
 
   option = {
     name = EVT_8011026_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	USA = { end_military_access = THIS } 
 	relation = { who = RUS value = -75 } 
 	relation = { who = HND value = -25 } 
@@ -242,13 +242,13 @@ country_event = {
 
   option = {
     name = EVT_8011028_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8011028_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 0.5 }
 	country_event = 8011029 
 	ai_chance = { factor = 0 }
   }
@@ -269,7 +269,7 @@ country_event = {
 
   option = {
     name = EVT_8011029_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1 }
   }
 }
 country_event = {
@@ -288,7 +288,7 @@ country_event = {
 
   option = {
     name = EVT_8011030_A
-	any_pop = { limit = { culture = bengali } militancy = -0.5 }
+	any_pop = { limit = { culture = bengali } militancy = -0.5 consciousness = 2 }
   }
 }
 country_event = {
@@ -313,7 +313,7 @@ country_event = {
 
   option = {
     name = EVT_8011031_B
-	any_pop = { limit = { NOT = { culture = bengali } } militancy = 1.0 }
+	any_pop = { limit = { NOT = { culture = bengali } } militancy = 1.0 consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }

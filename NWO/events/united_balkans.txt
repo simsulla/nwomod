@@ -40,7 +40,7 @@ country_event = {
     name = EVT_8216011_A
 	relation = { who = YUG value = 100 } 
 	add_country_modifier = { name = economic_boom duration = 365 }
-	any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 consciousness = -0.1 }
   }
 }
 country_event = {
@@ -66,7 +66,7 @@ country_event = {
 	relation = { who = YUG value = -200 } 
 	overlord = { release_vassal = THIS } 
 	YUG = { country_event =  { id = 8216013 days = 1 }  }
-	any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 consciousness = -0.1 }
 	ai_chance = { factor = 100 }
   }
 
@@ -97,7 +97,7 @@ country_event = {
     name = EVT_8216013_B
 	relation = { who = RUS value = 50 } 
 	relation = { who = ALB value = -50 } 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	RUS = { country_event =  { id = 8216014 days = 30 }  }
 	ai_chance = { factor = 100 }
   }
@@ -141,7 +141,7 @@ country_event = {
     name = EVT_8216015_B
 	relation = { who = RUS value = -200 } 
 	relation = { who = YUG value = -200 } 
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0 consciousness = 1.0 }
 	ai_chance = { factor = 100 }
   }
 }
@@ -178,7 +178,7 @@ country_event = {
     name = EVT_8216020_A
 	relation = { who = BUL value = 100 } 
 	relation = { who = RUS value = 50 } 
-	any_pop = { militancy = -0.1 }
+	any_pop = { militancy = -0.1 consciousness = -0.1 }
 	ai_chance = { factor = 0 }
   }
 
@@ -186,7 +186,7 @@ country_event = {
     name = EVT_8216020_B
 	relation = { who = RUS value = -50 } 
 	relation = { who = BUL value = -50 } 
-	any_pop = { militancy = 0.2 }
+	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	BUL = { country_event =  { id = 8216021 days = 7 } }
 	ai_chance = { factor = 100 }
   }
@@ -202,7 +202,7 @@ country_event = {
     name = EVT_8216021_A
 	relation = { who = YUG value = 100 } 
 	relation = { who = RUS value = 50 } 
-	any_pop = { militancy = -0.1 }
+	any_pop = { militancy = -0.1 consciousness = -0.1 }
 	ai_chance = { factor = 0 }
   }
 
@@ -210,7 +210,7 @@ country_event = {
     name = EVT_8216021_B
 	relation = { who = RUS value = -50 } 
 	relation = { who = YUG value = -50 } 
-	any_pop = { militancy = 0.2 }
+	any_pop = { militancy = 0.2 consciousness = 0.4}
 	YUG = { country_event =  { id = 8216022 days = 360 } }
 	ai_chance = { factor = 100 }
   }
@@ -235,7 +235,7 @@ country_event = {
 	ai_chance = { factor = 100 }
 	relation = { who = RUS value = 50 } 
 	relation = { who = BUL value = -50 } 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	RUS = { country_event =  { id = 8216023 days = 30 } }
   }
 }
@@ -279,7 +279,7 @@ country_event = {
 	ai_chance = { factor = 0 }
 	relation = { who = RUS value = -200 } 
 	relation = { who = YUG value = -200 } 
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1.0 }
   }
 }
 country_event = {

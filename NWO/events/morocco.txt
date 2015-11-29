@@ -28,7 +28,7 @@ country_event = {
 
   option = {
     name = EVT_8009922_B
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 0.8 consciousness = 2.0 }
 	badboy = 5 
 	ai_chance = { factor = 0 }
   }
@@ -42,7 +42,7 @@ country_event = {
 
   option = {
     name = EVT_8009923_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -1.0 }
 	prestige = 5
   }
 }
@@ -67,7 +67,7 @@ country_event = {
     name = EVT_8009924_A
 	1773 = { secede_province = MOR } 
 	1774 = { secede_province = MOR } 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	relation = { who = MOR value = 100 } 
 	MOR = {country_event = 8009925 }
 	ai_chance = { factor = 100 }
@@ -75,7 +75,7 @@ country_event = {
 
   option = {
     name = EVT_8009924_B
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 0.8 consciousness = 2.0 }
 	relation = { who = MOR value = -200 } 
 	release = WSA
 	MOR = {country_event = 8009926 }
@@ -84,7 +84,7 @@ country_event = {
   
   option = {
     name = EVT_8009924_C
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 0.8 consciousness = 2.0 }
 	badboy = 20 
 	relation = { who = MOR value = -200 } 
 	relation = { who = ALG value = -100 } 
@@ -112,6 +112,7 @@ country_event = {
   option = {
     name = EVT_8009926_A
 	casus_belli = { target = WSA type = conquest }
+	any_pop = { consciousness = 2.0 }
 	badboy = 10 
 	relation = { who = ALG value = -200 } 
 	relation = { who = WSA value = -200 } 
@@ -120,7 +121,7 @@ country_event = {
 
   option = {
     name = EVT_8009926_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
   
@@ -142,7 +143,7 @@ province_event = { # Morocco
 
   option = {
     name = OK
-	any_pop = { militancy = 3.0 }
+	any_pop = { militancy = 3.0 consciousness = 1.0 }
   }
 }
 country_event = { # Independent Morocco
@@ -154,7 +155,7 @@ country_event = { # Independent Morocco
 
   option = {
     name = EVT_8009927_A
-	any_pop = { militancy = -2 }
+	any_pop = { militancy = -2 consciousness = -1.0 }
 	prestige = 5
   }
 }

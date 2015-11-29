@@ -82,7 +82,7 @@ country_event = {
   option = {
 	name = EVT_8012210_B
 	prestige = -10
-	any_pop = { limit = { location = { OR = { is_core = ZAM is_core = MLW } } } militancy = 10 }
+	any_pop = { limit = { location = { OR = { is_core = ZAM is_core = MLW } } } militancy = 8 consciousness = 5  }
 	# TODO ZAM and MLW UDI
 	ai_chance = { factor = 0 }
   }	
@@ -118,7 +118,7 @@ country_event = {
     option = {
 	  name = EVT_8012210_B
 	  prestige = -10
-	  any_pop = { limit = { location = { OR = { is_core = ZAM is_core = MLW } } } militancy = 10 }
+	  any_pop = { limit = { location = { OR = { is_core = ZAM is_core = MLW } } } militancy = 8 consciousness = 5 }
 	  # TODO ZAM and MLW UDI
 	  ai_chance = { factor = 0 }
     }	
@@ -132,7 +132,7 @@ country_event = { # Unilateral Declaration of Independence
 
   option = {
     name = EVT_8012212_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	release_vassal = ZAM
     release_vassal = MLW
 	ZAM = { primary_culture = black_anglo }
@@ -144,7 +144,7 @@ country_event = { # Unilateral Declaration of Independence
   }
   option = {
     name = EVT_8012212_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
     release_vassal = MLW
 	MLW = { primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
@@ -215,7 +215,7 @@ country_event = {
 
   option = {
     name = EVT_8012214_B
-	any_pop = { militancy = 3.0 }
+	any_pop = { militancy = 3.0 consciousness = 4 }
 	ai_chance = { factor = 0 }
   }
 }

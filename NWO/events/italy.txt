@@ -44,7 +44,7 @@ country_event = {
 
   option = {
     name = EVT_8007734_A
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 1 }
 	set_country_flag = moderate_ICP 
 	ai_chance = { factor = 100 }
   }
@@ -75,7 +75,7 @@ country_event = {
   option = {
     name = EVT_8007735_A
 	ai_chance = { factor = 100 }
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 1 }
 	set_country_flag = very_moderate_ICP 
   }
 
@@ -102,13 +102,13 @@ country_event = {
 
   option = {
     name = EVT_8007736_A
-	any_pop = { militancy = -0.1 }
+	any_pop = {  consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007736_B
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 1 }
 	country_event = 8007742 
 	ai_chance = { factor = 0 }
   }
@@ -149,13 +149,13 @@ country_event = {
 
   option = {
     name = EVT_8007738_A
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007738_B
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 1 }
 	country_event = 8007741 
 	ai_chance = { factor = 0 }
   }
@@ -185,13 +185,13 @@ country_event = {
 
   option = {
     name = EVT_8007739_A
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007739_B
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 1 }
 	country_event = 8007741 
 	ai_chance = { factor = 0 }
   }
@@ -221,7 +221,7 @@ country_event = {
 
   option = {
     name = EVT_8007740_A
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0  consciousness = 1 }
 	relation = { who = USA value = 100 } 
 	country_event = 8007742 
   }
@@ -235,7 +235,7 @@ country_event = {
 
   option = {
     name = EVT_8007741_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
 	country_event = { id = 8007743 days = 7 }
   }
 }
@@ -299,7 +299,7 @@ country_event = {
 
   option = {
     name = EVT_8007734_B
-	any_pop = { militancy = 0.7 }
+	any_pop = { militancy = 1  consciousness = 2 }
 	ITA = { country_event = 8007748 }
 	ai_chance = { factor = 0 }	
   }
@@ -314,7 +314,7 @@ country_event = {
   option = {
     name = EVT_8007746_A
 	war = { target = ITA attacker_goal = { casus_belli = install_democracy } defender_goal = { casus_belli = status_quo } } 
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
@@ -373,7 +373,7 @@ country_event = {
 
   option = {
     name = EVT_8007750_A
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 2 }
   }
 }
 #Pavorotti Dies

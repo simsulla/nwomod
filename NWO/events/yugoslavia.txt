@@ -56,7 +56,7 @@ country_event = {
 
   option = {
     name = EVT_8022724_A
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3 consciousness = 0.6 }
 	relation = { who = RUS value = -50 } 
 	add_country_modifier = { name = comecon_excluded duration = -1 }
 	RUS = { country_event =  { id = 8022726 days = 30 } }
@@ -65,7 +65,7 @@ country_event = {
 
   option = {
     name = EVT_8022724_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 0.5 }
 	relation = { who = RUS value = 100 } 
 	RUS = { country_event = 8022725 }
 	ai_chance = { factor = 0 }
@@ -94,7 +94,7 @@ country_event = {
 
   option = {
     name = EVT_8022726_A
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3 consciousness = 0.6 }
 	relation = { who = YUG value = -100 } 
 	set_global_flag = tito_stalin_split 
 	RUS  = { country_event = 8225001 } 
@@ -103,14 +103,14 @@ country_event = {
 
   option = {
     name = EVT_8022726_B
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5 consciousness = 1 }
 	relation = { who = YUG value = 50 } 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8022726_C
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5 consciousness = 2 }
 	badboy = 10 
 	YUG = { country_event = 8022727  }
 	ai_chance = { factor = 0 }
@@ -125,7 +125,7 @@ country_event = {
 
   option = {
     name = EVT_8022727_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.5 }
 	RUS = { country_event = 8022728 }
   }
 }
@@ -138,7 +138,7 @@ country_event = {
 
   option = {
     name = EVT_8022728_A
-	any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 consciousness = -0.1 }
 	war = { target = YUG  attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo } }
 	set_country_flag = military_intervention_aginst_tito
   }
@@ -162,7 +162,7 @@ country_event = {
 
   option = {
     name = EVT_8022731_A
-	any_pop = { militancy = -0.7 }
+	any_pop = { militancy = -0.7 consciousness = -0.5 }
 	RUS = { country_event = 8225000 } # dissolution_of_the_eastern_bloc.txt
 	YUG = { country_event = 8022734 } 
   }
@@ -185,7 +185,7 @@ country_event = {
 
   option = {
     name = EVT_8022732_A
-	any_pop = { militancy = -0.7 }
+	any_pop = { militancy = -0.7 consciousness = -0.5 }
 	RUS  = { country_event = 8225001 } 
   }
 }
@@ -210,7 +210,7 @@ country_event = {
 
   option = {
     name = EVT_8022733_A
-	any_pop = { militancy = 0.7 }
+	any_pop = { militancy = 0.7 consciousness = 0.5 }
 	release_vassal = HUN 
 	release_vassal = BUL 
 	release_vassal = ROM 
@@ -230,7 +230,7 @@ country_event = {
 
   option = {
     name = EVT_8022734_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 0.2 }
   }
 }
 country_event = {
@@ -252,7 +252,7 @@ country_event = {
 
   option = {
     name = EVT_8022729_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.8 }
 	relation = { who = USA value = 50 } 
 	relation = { who = FRA value = 50 } 
 	relation = { who = ENG value = 50 } 
@@ -284,7 +284,7 @@ country_event = {
 
   option = {
     name = EVT_8022730_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	relation = { who = HND value = 100 } 
 	relation = { who = EGY value = 100 } 
 	relation = { who = IDO value = 100 } 
@@ -315,7 +315,7 @@ country_event = {
   option = {
     name = EVT_8022740_A
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.1 } } }
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1.0 }
 	release_vassal = SLO
 	release_vassal = CRO
 	release_vassal = BOS
@@ -326,7 +326,7 @@ country_event = {
 
   option = {
     name = EVT_8022740_B
-	any_pop = { militancy = 5.0 }
+	any_pop = { militancy = 5.0 consciousness = 2.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -348,7 +348,7 @@ country_event = {
   option = {
     name = EVT_8022741_A
 	change_tag = SER
-	any_pop = { limit = { NOT = { culture = serb } } militancy = 5.0 }
+	any_pop = { limit = { NOT = { culture = serb } } militancy = 5.0 consciousness = 2.0 }
   }
 
 }
@@ -369,7 +369,7 @@ country_event = {
 
   option = {
     name = EVT_8022742_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 0.8 }
 	release_vassal = SLO
 	release_vassal = CRO
 	release_vassal = MON
@@ -394,7 +394,7 @@ country_event = {
 
   option = {
     name = EVT_8022742_B
-	any_pop = { militancy = 3.0 }
+	any_pop = { militancy = 3.0 consciousness = 2.0 }
 	release = SLO
 	release = CRO
 	release = BOS
@@ -419,7 +419,7 @@ country_event = {
   option = {
     name = EVT_8022743_A
 	# EVT_8022743_A;Bosnia is a unified Muslim Nation
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 0.8 }
 	government = populist_dictatorship country_event = 800050
 	release_vassal = HZB
 	war = { target = RSR attacker_goal = { casus_belli = annex_core_country country = RSR } defender_goal = { casus_belli = status_quo } }
@@ -429,7 +429,7 @@ country_event = {
   option = {
     name = EVT_8022743_B
 	# EVT_8022743_B;Accept the division of Bosnia
-	any_pop = { militancy = 3.0 }
+	any_pop = { militancy = 3.0  consciousness = 1 }
 	release = HZB
 	ai_chance = { factor = 0 }
   }
@@ -455,7 +455,7 @@ country_event = {
   option = {
     name = EVT_8022744_A
 	# EVT_8022744_A;Become independent
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1.0 }
 	war = { target = BOS attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli = annex_core_country } }
 	ai_chance = { factor = 100 }
   }
@@ -539,7 +539,7 @@ country_event = {
   option = {
     name = EVT_8022746_B
 	# EVT_8022746_B;Avoid war
-	any_pop = { militancy = 3.0 }
+	any_pop = { militancy = 3.0 consciousness = 2.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -575,7 +575,7 @@ country_event = {
   option = {
     name = EVT_8022747_B
 	# EVT_8022747_B;Avoid war
-	any_pop = { militancy = 3.0 }
+	any_pop = { militancy = 3.0 consciousness = 2.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -650,7 +650,7 @@ country_event = {
   option = {
     name = EVT_8022749_A
 	# EVT_8022749_A;War is inevitable!
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 0.3 }
 	release = KOS
 	release_vassal = MON
 	war = { target = KOS attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }

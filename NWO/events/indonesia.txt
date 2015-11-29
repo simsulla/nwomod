@@ -27,7 +27,8 @@ country_event = {
 				location = { province_id = 1446 }
 				culture = ambon-timor
 			}
-			militancy = 10
+			militancy = 6
+			consciousness = 5
 		}
 	}
 
@@ -82,7 +83,7 @@ country_event = {
 
   option = {
     name = EVT_8007314_A
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5  consciousness = 2 }
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
   }
 }
@@ -127,7 +128,7 @@ country_event = {
 
   option = {
     name = EVT_8007320_A
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = 2 }
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
   }
 }
@@ -150,7 +151,7 @@ country_event = {
 
   option = {
 		name = EVT_8007321_A
-		any_pop = { militancy = -0.5 }
+		any_pop = {  consciousness = 2 }
 		IDO = { country_event = 8007322 }
 		ai_chance = { factor = 100 }
   }
@@ -173,7 +174,7 @@ country_event = {
   
   option = {
 		name = EVT_8007322_A
-		any_pop = { militancy = -0.5 }
+		any_pop = { militancy = -0.5  consciousness = 1.0 }
 		1446 = { secede_province = IDO } 
 		badboy = 10
 		ai_chance = { factor = 100 }
@@ -181,7 +182,7 @@ country_event = {
 
   option = {
     name = EVT_8007322_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	POR = { release = TIM }
 	ai_chance = { factor = 0 }
   }

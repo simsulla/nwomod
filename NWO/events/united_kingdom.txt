@@ -73,7 +73,7 @@ country_event = {
 
   option = {
     name = EVT_8005017_A
-	any_pop = { militancy = 0.3 }
+	any_pop = { limit = { is_primary_culture = yes } militancy = 0.3 consciousness = 0.6 }
 	country_event = 8005006
   }
 }
@@ -94,7 +94,7 @@ country_event = {
   option = {
     name = EVT_8005018_A
 	set_country_flag = george_vi_funeral
-	any_pop = { militancy = -1.0 }
+	any_pop = { limit = { is_primary_culture = yes } militancy = -1.0 consciousness = -0.5 }
   }
 }
 country_event = {
@@ -114,7 +114,7 @@ country_event = {
 
   option = {
     name = EVT_8005019_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.5 }
 	prestige = 10
   }
 }
@@ -155,7 +155,7 @@ country_event = {
 
   option = {
     name = EVT_8005021_A
-	any_pop = { militancy = 1.2 }
+	any_pop = { limit = { is_primary_culture = yes } militancy = 1.2 consciousness = 2.0 }
   }
 }
 country_event = {
@@ -175,13 +175,13 @@ country_event = {
 
   option = {
     name = EVT_8005022_A
-	any_pop = { militancy = 0.4 }
+	any_pop = { limit = { is_primary_culture = yes }  militancy = 0.4 consciousness = 0.2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8005022_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { limit = { is_primary_culture = yes }  militancy = 0.3 consciousness = 0.6 }
 	money = -50000 
 	ai_chance = { factor = 0 }
   }

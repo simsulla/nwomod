@@ -22,7 +22,7 @@ country_event = {
 
   option = {
     name = "EVT_8204000_B"
-	any_pop = { limit = { culture = german } militancy = 5 }
+	any_pop = { limit = { culture = german } militancy = 5 consciousness = 2 }
 	badboy = 10
     ai_chance = { factor = 0 }
   }
@@ -52,7 +52,7 @@ country_event = {
 
   option = {
     name = "EVT_8204001_B"
-	any_pop = { limit = { culture = german } militancy = 5 }
+	any_pop = { limit = { culture = german } militancy = 5 consciousness = 2  }
 	badboy = 10 
     ai_chance = { factor = 0 }
   }
@@ -133,7 +133,7 @@ country_event = {
 
   option = {
     name = "EVT_8204004_A"
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = 2 }
   }
 }
 country_event = {
@@ -152,7 +152,7 @@ country_event = {
 
   option = {
     name = "EVT_8204005_A"
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = 1 }
   }
 }
 country_event = {
@@ -173,7 +173,7 @@ country_event = {
 
   option = {
     name = EVT_8204010_A
-	any_pop = { limit = { culture = german } militancy = 0.5 }
+	any_pop = { limit = { culture = german } consciousness = 2  }
 	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 1000 } }
     ai_chance = { factor = 100 }
   }
@@ -217,7 +217,7 @@ country_event = {
 
   option = {
     name = "EVT_8204011_B"
-	any_pop = { limit = { culture = german } militancy = 0.5 }
+	any_pop = { limit = { culture = german } consciousness = 2 }
 	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 1000 } }
     ai_chance = { factor = 100 }
   }
@@ -274,7 +274,7 @@ country_event = {
 
   option = {
     name = EVT_8204020_B
-	any_pop = { limit = { culture = german } militancy = 0.5 }
+	any_pop = { limit = { culture = german } consciousness = 2 }
 	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 1000 } }
     ai_chance = { factor = 0 }
   }
@@ -407,7 +407,7 @@ country_event = {
   option = {
     name = "EVT_8204038_A"
 	inherit = SAL 
-	any_pop = { militancy = -0.3 }
+	any_pop = { militancy = -0.5 consciousness = 1 }
   }
 }
 country_event = {
@@ -915,14 +915,14 @@ country_event = {
     name = EVT_8204080_A
 	relation = { who = RUS value = 25 }
 	badboy = -5 
-	any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 consciousness = 2  }
 	country_event = 8204081
     ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8204080_B
-	any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 consciousness = 2 }
 	relation = { who = RUS value = 50 }
 	badboy = -3 
 	country_event = 8204082
@@ -931,7 +931,7 @@ country_event = {
 
   option = {
     name = EVT_8204080_C
-	any_pop = { militancy = 0.2 }
+	any_pop = { militancy = 0.2 consciousness = 2 }
 	relation = { who = RUS value = -100 } 
 	country_event = 8204083
 	badboy = 2
@@ -960,7 +960,7 @@ country_event = {
 
   option = {
     name = EVT_8204082_A
-	any_pop = { limit = { culture = german } militancy = 2.5 }
+	any_pop = { limit = { culture = german } militancy = 2.5 consciousness = 2  }
   }
 }
 country_event = {
@@ -972,7 +972,7 @@ country_event = {
 
   option = {
     name = EVT_8204083_A
-	any_pop = { limit = { culture = german } militancy = -2.0 }
+	any_pop = { limit = { culture = german } militancy = -2.0 consciousness = -1 }
   }
 }
 country_event = {

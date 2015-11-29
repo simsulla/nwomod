@@ -17,12 +17,13 @@ country_event = {
   option = {
     name = "EVT_8203000_A"
 	release = AUS 
+	any_pop = { consciousness = 2  }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = "EVT_8203000_B"
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 2  }
 	badboy = 15 
 	ai_chance = { factor = 0 }
   }
@@ -51,7 +52,7 @@ country_event = {
 
   option = {
     name = "EVT_8203001_B"
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 1 consciousness = 2 }
 	badboy = 15 
 	ai_chance = { factor = 0 }
   }
@@ -139,7 +140,7 @@ country_event = {
 
   option = {
     name = "EVT_8203005_B"
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 1 consciousness = 2 }
 	badboy = 5 
 	ai_chance = { factor = 0 }
   }
@@ -177,7 +178,7 @@ country_event = {
 
   option = {
     name = "EVT_8203011_A"
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	badboy = 1 
 	relation = { who = AUS value = -100 } 
 	ai_chance = { factor = 30 }
@@ -186,7 +187,7 @@ country_event = {
 
   option = {
     name = "EVT_8203011_B"
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 1 }
 	badboy = 2 
 	relation = { who = AUS value = -250 } 
 	ai_chance = { factor = 35 }
@@ -239,7 +240,7 @@ country_event = {
 
   option = {
     name = "EVT_8203014_B"
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	badboy = 10 
 	overlord = { country_event = 8203015 }
 	ai_chance = { factor = 0 }
@@ -254,7 +255,7 @@ country_event = {
 
   option = {
     name = "EVT_8203015_A"
-	any_pop = { militancy = -0.1 }
+	any_pop = { militancy = -0.1 consciousness = 1 }
 	AUS = { country_event = 8203016 }
   }
 }
@@ -267,7 +268,7 @@ country_event = {
 
   option = {
     name = "EVT_8203016_A"
-	any_pop = { militancy = -2.0 }
+	any_pop = { militancy = -2.0 consciousness = -2 }
 	overlord = { release_vassal = THIS } 
 	neutrality = yes
   }

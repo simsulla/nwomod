@@ -38,7 +38,7 @@ country_event = {
 
   option = {
     name = EVT_8015104_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1.0 }
 	relation = { who = CHI value = -100 } 
 	CHI = { military_access = THIS create_vassal = THIS } 
 	ai_chance = { factor = 0 }	
@@ -86,7 +86,7 @@ country_event = {
 
   option = {
     name = EVT_8015106_B
-	any_pop = { militancy = 5.0 }
+	any_pop = { militancy = 5.0  consciousness = 2.0 }
 	CHI = { country_event = 8015107 }
 	ai_chance = { factor = 0 }	
   }
@@ -189,7 +189,7 @@ country_event = {
 
   option = {
     name = EVT_8015111_A
-	any_pop = { militancy = -2.5 }
+	any_pop = { militancy = -2.5  consciousness = -1.0 }
   }
 }
 country_event = {
@@ -215,7 +215,7 @@ country_event = {
 
   option = {
     name = EVT_8015120_B
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 0.8  consciousness = 1.0 }
 	all_core = { limit = { controlled_by = TIB } remove_core = KMT }  
   }
 }
@@ -266,7 +266,7 @@ country_event = {
 
   option = {
     name = "OK"
-	any_pop = { militancy = -2.5 }
+	any_pop = { militancy = -2.5  consciousness = -1.0 }
   }
 }
 

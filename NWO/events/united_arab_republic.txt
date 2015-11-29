@@ -27,7 +27,7 @@ country_event = {
 
   option = {
     name = EVT_8218000_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -49,7 +49,7 @@ country_event = {
     name = EVT_8218001_B
 	relation = { who = FROM value = -100 } 
 	set_country_flag = reject_uar
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 2.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -62,7 +62,7 @@ country_event = {
 
   option = {
     name = EVT_8218002_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = 0.5 }
 	inherit = SYR 
   }
 }
@@ -93,7 +93,7 @@ country_event = {
 
   option = {
     name = EVT_8218003_B
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 0.8 consciousness = 1.6 }
 	ai_chance = { factor = 100 }
   }
 }
@@ -107,7 +107,7 @@ country_event = {
   option = {
     name = EVT_8218004_A
 	relation = { who = UAR value = -100 } 
-	any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 consciousness = -0.1 }
 	set_country_flag = reject_uar
 	ai_chance = { factor = 0.99 modifier = { government = presidential_dictatorship factor = 0 } }
   }
@@ -128,7 +128,7 @@ country_event = {
   
   option = {
     name = EVT_8218005_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	inherit = IRQ
   }
 }
@@ -159,7 +159,7 @@ country_event = {
 
   option = {
     name = EVT_8218006_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	ai_chance = { factor = 0.01 modifier = { government = presidential_dictatorship factor = 100 } }
   }
 }
@@ -181,7 +181,7 @@ country_event = {
   option = {
     name = EVT_8218007_B
 	relation = { who = EGY value = -100 } 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	set_country_flag = reject_uar
 	ai_chance = { factor = 100 }
   }
@@ -195,7 +195,7 @@ country_event = {
   
   option = {
     name = EVT_8218008_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	inherit = JOR
   }
 }
@@ -208,14 +208,14 @@ country_event = {
 
   option = {
     name = EVT_8218010_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	change_tag = UAR 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8218010_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { limit = { location = { NOT = { is_core = EGY } } } militancy = 4.0 consciousness = 2.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -237,14 +237,14 @@ country_event = {
   
   option = {
     name = EVT_8218011_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } country_event = 8212010 }
 	change_tag = EGY
 	ai_chance = { factor = 100 }
   }
   option = {
     name = EVT_8218011_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } country_event = 8212010 add_casus_belli = { target = UAR type = annex_core_country months = 12 } }
 	ai_chance = { factor = 0 }
   }
@@ -276,7 +276,7 @@ country_event = {
 
   option = {
     name = EVT_8218020_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -297,7 +297,7 @@ country_event = {
   option = {
     name = EVT_8218021_B
 	relation = { who = UAR value = -100 } 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -1 }
 	set_country_flag = reject_uar
 	ai_chance = { factor = 0.99 modifier = { government = presidential_dictatorship factor = 0 } }
   }
@@ -311,7 +311,7 @@ country_event = {
 
   option = {
     name = EVT_8218022_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -1 }
 	inherit = LEB
   }
 }
@@ -340,7 +340,7 @@ country_event = {
 
   option = {
     name = EVT_8218023_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
  }
 }
@@ -361,7 +361,7 @@ country_event = {
   option = {
     name = EVT_8218024_B
 	relation = { who = UAR value = -100 } 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	set_country_flag = reject_uar
 	ai_chance = { factor = 0 }
   }
@@ -375,7 +375,7 @@ country_event = {
 
   option = {
     name = EVT_8218025_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	inherit = PAL
   }
 }
@@ -400,6 +400,6 @@ country_event = {
 
   option = {
     name = EVT_8218030_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
   }
 }

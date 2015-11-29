@@ -55,7 +55,7 @@ country_event = { # Singapore independence
     name = EVT_8009702_A
 	prestige = -10
 	badboy = 2
-	1384 = { any_pop = { militancy = 5 } }
+	1384 = { any_pop = { militancy = 5 consciousness = 2 } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -94,7 +94,7 @@ country_event = {
 
   option = {
     name = EVT_8009719_A
-	any_pop = { limit = { culture = chinese } militancy = 4 }
+	any_pop = { limit = { culture = chinese } militancy = 4 consciousness = 2 }
   }
 }
 country_event = {
@@ -122,7 +122,7 @@ country_event = {
 
   option = {
     name = EVT_8009720_B
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3 consciousness = 2 }
 	relation = { who = MSY value = -100 }
 	ai_chance = { factor = 0 }
   }
@@ -137,7 +137,7 @@ country_event = {
   option = {
     name = EVT_8009721_A
 	inherit = SNG 
-	any_pop = { militancy = -0.3 }
+	any_pop = { militancy = -0.3  consciousness = -1 }
   }
 }
 country_event = {
@@ -158,7 +158,7 @@ country_event = {
   option = {
     name = EVT_8009722_A
 	relation = { who = MSY value = 100 } 
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 2 }
 	MSY = { country_event =  8009723 }
 	any_owned = { limit = { OR = { province_id = 1394 province_id = 1395 province_id = 1396 province_id = 1397 } } secede_province = MSY } 
 	release = MSY
@@ -171,7 +171,7 @@ country_event = {
   option = {
     name = EVT_8009722_B
 	relation = { who = MSY value = -200 } 
-	any_pop = { limit = { culture = malay } militancy = 10 }
+	any_pop = { limit = { culture = malay } militancy = 6 consciousness = 5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -185,7 +185,7 @@ country_event = {
   option = {
     name = EVT_8009723_A
 	government = democracy country_event = 800054
-	any_pop = { militancy = -0.3 }
+	any_pop = { militancy = -0.3  consciousness = 1 }
   }
 }
 country_event = {
@@ -205,7 +205,7 @@ country_event = {
 
   option = {
     name = EVT_8009724_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5  consciousness = 2 }
 	badboy = 15 
 	money = -500 
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.43 } } }
@@ -215,7 +215,7 @@ country_event = {
 
   option = {
     name = EVT_8009724_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -228,7 +228,7 @@ country_event = {
 
   option = {
     name = EVT_8009725_A
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 2 }
 	IDO = { country_event = 8009726 }
 	ai_chance = { factor = 100 }
   }
@@ -256,7 +256,7 @@ country_event = {
   option = {
     name = EVT_8009726_B
 	war = { target = MSY attacker_goal = { casus_belli = acquire_state state_province_id = 1397 } defender_goal = { casus_belli  = status_quo } }
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -276,7 +276,7 @@ country_event = { # Independence of Singapore
 
   option = {
     name = EVT_8009727_A
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = 2 }
 	release = SNG
 	badboy = -1
 	USA = { diplomatic_influence = { who = SNG value = 200 } }
@@ -310,7 +310,7 @@ country_event = {
 
   option = {
     name = EVT_8009728_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
   }
 }
 country_event = {

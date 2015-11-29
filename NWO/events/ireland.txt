@@ -22,7 +22,7 @@ country_event = {
   option = {
     name = EVT_8007430_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 2 }
   }
 }
 country_event = {
@@ -42,14 +42,14 @@ country_event = {
 
   option = {
     name = EVT_8007431_A
-	any_pop = { militancy = 0.7 }
+	any_pop = { militancy = 1 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007431_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = -0.3 }
+	any_pop = {  consciousness = 2 }
 	relation = { who = IRE value = -50 }
 	diplomatic_influence = { who = IRE value = -50 }
   }
@@ -80,7 +80,7 @@ country_event = {
   option = {
     name = EVT_8007432_B
 	ai_chance = { factor = 0 }
-	any_pop = { limit = { culture = irish } militancy = 0.3 }
+	any_pop = { limit = { culture = irish }  consciousness = 2 }
 	diplomatic_influence = { who = IRE value = -50 }
   }
 }
@@ -111,7 +111,7 @@ country_event = {
   option = {
     name = EVT_8007433_B
 	ai_chance = { factor = 0 }
-	any_pop = { limit = { culture = irish } militancy = 0.5 }
+	any_pop = { limit = { culture = irish }  consciousness = 2 }
 	relation = { who = ENG value = -50 }
 	set_global_flag = ira_is_ignored 
   }
@@ -152,7 +152,7 @@ country_event = {
   option = {
     name = EVT_8007434_B
 	ai_chance = { factor = 0 }
-	any_pop = { limit = { culture = irish } militancy = 0.3 }
+	any_pop = { limit = { culture = irish }  consciousness = 2 }
 	diplomatic_influence = { who = IRE value = -50 }
   }
 }
@@ -173,7 +173,7 @@ country_event = {
   option = {
     name = EVT_8007435_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = 2 }
 	relation = { who = IRE value = -150 } 
 	release_vassal = NIR 
 	create_alliance = NIR 
@@ -222,7 +222,7 @@ country_event = {
   option = {
     name = EVT_8007436_B
 	ai_chance = { factor = 0 }
-	any_pop = { limit = { culture = irish } militancy = 0.3 }
+	any_pop = { limit = { culture = irish }  consciousness = 2 }
 	diplomatic_influence = { who = IRE value = -50 }
   }
 }
@@ -243,7 +243,7 @@ country_event = {
   option = {
     name = EVT_8007437_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = 2 }
 	relation = { who = IRE value = -150 } 
 	release_vassal = NIR 
 	create_alliance = NIR 
@@ -285,14 +285,14 @@ country_event = {
  option = {
     name = EVT_8007436_A
 	ai_chance = { factor = 100 }
-	any_pop = { limit = { culture = irish } militancy = 0.5 }
+	any_pop = { limit = { culture = irish } militancy = 1 }
 	country_event = 8007439 
   }
 
   option = {
     name = EVT_8007436_B
 	ai_chance = { factor = 0 }
-	any_pop = { limit = { culture = irish } militancy = 0.3 }
+	any_pop = { limit = { culture = irish }  consciousness = 2 }
 	diplomatic_influence = { who = IRE value = -50 }
   }
 }
@@ -313,7 +313,7 @@ country_event = {
   option = {
     name = EVT_8007437_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = 2 }
 	relation = { who = IRE value = -150 } 
 	release_vassal = NIR 
 	create_alliance = NIR 
@@ -382,7 +382,7 @@ country_event = {
   option = {
     name = EVT_8007441_B
 	ai_chance = { factor = 0 }
-	any_pop = { limit = { culture = irish } militancy = 0.5 }
+	any_pop = { limit = { culture = irish }  consciousness = 2 }
 	ENG = { country_event =  { id = 8007443 days = 1 } } 
   }
 }
@@ -395,7 +395,7 @@ country_event = {
 
   option = {
     name = EVT_8007442_A
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 2 }
 	country_event = 8007445 
 	country_event = 8007450 
 	ai_chance = { factor = 100 }
@@ -441,7 +441,7 @@ country_event = {
   option = {
     name = EVT_8007443_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = 2 }
 	country_event = 8007445 
 	country_event =  { id = 8007450 days = 1 } 
   }

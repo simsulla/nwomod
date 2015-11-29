@@ -146,7 +146,7 @@ country_event = {
 	name = EVT_1027011_B
 	release_vassal = UGA
 	diplomatic_influence = { who = UGA value = 200 } 
-	any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 2 }
+	any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 2 consciousness = 4.0 }
 	create_alliance = UGA
 	ai_chance = { factor = 0 }
   }  
@@ -154,7 +154,7 @@ country_event = {
   option = {
 	name = EVT_1027011_C
 	prestige = -10
-	any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 10 }
+	any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 5 consciousness = 2.0 }
 	# TODO UGA UDI
 	ai_chance = { factor = 0 }
   }	
@@ -202,7 +202,7 @@ country_event = {
     option = {
 	  name = EVT_1027013_A
 	  any_pop = { limit = { culture = indian } move_pop = 300 } # London
-	  any_pop = { limit = { NOT = { culture = african_minor } } militancy = 5 } 
+	  any_pop = { limit = { NOT = { culture = african_minor } } militancy = 5  consciousness = 5.0 } 
 	  badboy = 15
 	  add_country_modifier = { name = great_depression duration = 3500 }
 	  ai_chance = { factor = 100 }
@@ -241,7 +241,7 @@ country_event = {
 	
 	option = {
 	  name = EVT_1027014_B
-	  any_pop = { limit = { NOT = { culture = african_minor } } militancy = 5 } 
+	  any_pop = { limit = { NOT = { culture = african_minor } } militancy = 5 consciousness = 5.0 } 
 	  ai_chance = { factor = 0 }
 	}
 	

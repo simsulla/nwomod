@@ -16,14 +16,14 @@ country_event = {
     name = EVT_8018013_A
 	define_general = { name = "Ngo Dinh Diem" personality = energetic background = no_background }
 	government = nationalist_dictatorship
-	any_pop = { militancy = -0.3 }
+	any_pop = { militancy = -0.3  consciousness = 1.0 }
 	relation = { who = USA value = 100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8018013_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -55,7 +55,7 @@ country_event = {
 
   option = {
     name = EVT_8018020_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 2.0 }
 	set_country_flag = self_immolation
   }
 }
@@ -83,7 +83,7 @@ country_event = {
 
   option = {
     name = EVT_8018021_B
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5  consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -125,6 +125,6 @@ country_event = {
 
   option = {
     name = EVT_8018023_A
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5  consciousness = 1.0 }
   }
 }

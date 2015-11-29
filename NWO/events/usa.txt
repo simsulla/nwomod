@@ -227,7 +227,7 @@ country_event = {
 
   option = {
     name = EVT_8015801_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1.0 }
 	any_pop = { ideology = { factor = 0.2 value = conservative } }
 	ai_chance = { factor = 0 }
   }
@@ -256,7 +256,7 @@ country_event = {
 
   option = {
     name = EVT_8015802_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	any_pop = { ideology = { factor = 0.2 value = liberal } }
 	ai_chance = { factor = 0 }
   }
@@ -285,7 +285,7 @@ country_event = {
 
   option = {
     name = EVT_8015803_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	any_pop = { ideology = { factor = 0.2 value = liberal } }
 	ai_chance = { factor = 0 }
   }
@@ -315,7 +315,7 @@ country_event = {
   option = {
     name = EVT_8015804_B
 	any_pop = { ideology = { factor = 0.2 value = conservative } }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -335,7 +335,7 @@ country_event = {
 
   option = {
     name = EVT_8015805_A
-	any_pop = { militancy = -2.0 }
+	any_pop = { militancy = -2.0 consciousness = 0.1 }
   }
 }
 country_event = {
@@ -363,7 +363,7 @@ country_event = {
   option = {
     name = EVT_8015806_B
 	any_pop = { ideology = { factor = 0.2 value = conservative } }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.2 consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -393,7 +393,7 @@ country_event = {
     name = EVT_8015807_B
 	ai_chance = { factor = 0 }
 	any_pop = { ideology = { factor = 0.2 value = liberal } }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.2 consciousness = 1.0 }
   }
 }
 country_event = {
@@ -415,14 +415,14 @@ country_event = {
   option = {
     name = EVT_8015808_A
 	any_pop = { ideology = { factor = 0.2 value = conservative } }
-	any_pop = { militancy = -1.2 }
+	any_pop = { militancy = -0.2 consciousness = -1 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8015808_B
 	any_pop = { ideology = { factor = 0.2 value = liberal } }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.1 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -448,7 +448,7 @@ country_event = {
   option = {
     name = EVT_8015809_B
 	prestige = -10
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -461,7 +461,7 @@ country_event = {
 
   option = {
     name = EVT_8015810_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.1 consciousness = 1.0 }
 	set_country_flag = nixon_resigns
   }
 }
@@ -484,14 +484,14 @@ country_event = {
   option = {
     name = EVT_8015811_A
 	any_pop = { ideology = { factor = 0.2 value = liberal } }
-	any_pop = { militancy = -0.6 }
+	any_pop = { militancy = -0.6 consciousness = -0.2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8015811_B
 	any_pop = { ideology = { factor = 0.2 value = conservative } }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -514,14 +514,14 @@ country_event = {
   option = {
     name = EVT_8015812_A
 	any_pop = { ideology = { factor = 0.2 value = conservative } }
-	any_pop = { militancy = -1.2 }
+	any_pop = { militancy = -1.2 consciousness = -0.6 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8015812_B
 	any_pop = { ideology = { factor = 0.2 value = liberal } }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -550,7 +550,7 @@ country_event = {
   option = {
     name = EVT_8015813_B
 	any_pop = { ideology = { factor = 0.2 value = liberal } }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.1 consciousness = 0.4 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -572,12 +572,12 @@ country_event = {
     name = EVT_8015840_A
 	ai_chance = { factor = 100 }
 	country_event =  { id = 8015841 days = 360 } 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
   }
 
   option = {
     name = EVT_8015840_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 0.6 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -590,7 +590,7 @@ country_event = {
 
   option = {
     name = EVT_8015841_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = -0.5 consciousness = -1 }
   }
 }
 country_event = {
@@ -610,7 +610,7 @@ country_event = {
   option = {
     name = EVT_8015842_A
 	add_country_modifier = { name = economic_boom duration = 3500 }
-	any_pop = { militancy = -1.5 }
+	any_pop = { militancy = -1.5 consciousness = -2.0 }
   }
 }
 country_event = {
@@ -630,7 +630,7 @@ country_event = {
 
   option = {
     name = EVT_8015843_A
-	any_pop = { militancy = -0.2 }
+	any_pop = { militancy = -0.2 consciousness = -0.1 }
 	relation = { who = RUS value = -25 } 
 	ai_chance = { factor = 100 }
   }
@@ -638,7 +638,7 @@ country_event = {
   option = {
     name = EVT_8015843_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 0.1 }
+	any_pop = { militancy = 0.1 consciousness = 0.2 }
   }
 }
 country_event = {
@@ -657,7 +657,7 @@ country_event = {
 
   option = {
     name = EVT_8015844_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 1.0 }
 	add_accepted_culture = black_anglo
 	ai_chance = { factor = 0 }
   }
@@ -708,7 +708,7 @@ country_event = {
 
   option = {
     name = EVT_8015846_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	add_country_modifier = { name = great_society duration = -1 }
   }
 }
@@ -728,7 +728,7 @@ country_event = {
 
   option = {
     name = EVT_8015847_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	add_country_modifier = { name = economic_boom duration = 1700 }
   }
 }
@@ -762,7 +762,7 @@ country_event = {
 
   option = {
     name = EVT_8015851_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 0.1 }
 	country_event = { id = 8015852 days = 150 }
   }
 }
@@ -775,21 +775,21 @@ country_event = {
 
   option = {
     name = EVT_8015852_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	country_event = 8015810 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8015852_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
 	country_event = 8015853 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8015852_C
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5 consciousness = 0.5 }
 	country_event = 8015854 
 	ai_chance = { factor = 0 }
   }
@@ -809,7 +809,7 @@ country_event = {
 
   option = {
     name = EVT_8015853_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -829,7 +829,7 @@ country_event = {
   option = {
     name = EVT_8015854_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0 consciousness = 1 }
   }
 }
 country_event = {
@@ -870,7 +870,7 @@ country_event = {
 
   option = {
     name = EVT_8015856_B
-	any_pop = { militancy = 0.2 }
+	any_pop = { militancy = 0.1 consciousness = 0.2 }
 	relation = { who = PAK value = -75 } 
 	ai_chance = { factor = 0 }
   }

@@ -24,7 +24,7 @@ country_event = { # Kuwait Independence
   option = {
     name = EVT_8007601_B
 	prestige = -10
-	any_pop = { limit = { culture = sunni_arab } militancy = 10 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 8  consciousness = 4 }
 	diplomatic_influence = { who = KUW value = -200 } 
 	USA = { diplomatic_influence = { who = KUW value = 100 } } 
 	KUW = { country_event = 8007603 }
@@ -50,12 +50,12 @@ country_event = { # Operation Vantage
   option = {
     name = EVT_8007602_A
 	diplomatic_influence = { who = KUW value = 200 } # this will trigger ai status quo intervention
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = 1 }
   }
 
   option = {
     name = EVT_8007602_B
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = 1 }
   }
 }
 
@@ -77,7 +77,7 @@ country_event = { # Kuwait Independence
   option = {
     name = EVT_8007603_B
 	prestige = -10
-	any_pop = { limit = { culture = sunni_arab } militancy = 5 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 5  consciousness = 4 }
 	ai_chance = { factor = 0 }
   }
 

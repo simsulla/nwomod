@@ -14,7 +14,7 @@ country_event = {
 
   option = {
     name = EVT_8007223_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	country_event = 8007272
   }
 }
@@ -34,7 +34,7 @@ country_event = { # Army of India
 
   option = {
     name = OK
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
   }
 }
 country_event = {
@@ -64,7 +64,7 @@ country_event = {
 
   option = {
     name = EVT_8007229_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 2 }
 	set_country_flag = princely_states 
 	ai_chance = { factor = 0 }
   }
@@ -161,7 +161,7 @@ country_event = {
 
   option = {
     name = EVT_8007233_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -193,7 +193,7 @@ country_event = {
 
   option = {
     name = EVT_8007235_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -212,7 +212,7 @@ country_event = {
 
   option = {
     name = EVT_8007236_B
-    any_pop = { militancy = 0.5 }
+    any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -231,7 +231,7 @@ country_event = {
 
   option = {
     name = EVT_8007237_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -259,7 +259,7 @@ country_event = {
 
   option = {
     name = EVT_8007238_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -287,7 +287,7 @@ country_event = {
 
   option = {
     name = EVT_8007239_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -431,7 +431,7 @@ country_event = {
 
   option = {
     name = EVT_8007251_A
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	1303 = { secede_province = HND } 
 	HND = { country_event = 8007252 }
 	ai_chance = { factor = 100 }
@@ -439,7 +439,7 @@ country_event = {
 
   option = {
     name = EVT_8007251_B
-	any_pop = { militancy = -0.3 }
+	any_pop = {consciousness = 2 }
 	HND = { country_event = 8007253 }
 	ai_chance = { factor = 0 }
   }
@@ -453,7 +453,7 @@ country_event = {
 
   option = {
     name = EVT_8007252_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	prestige = 10
   }
 }
@@ -466,7 +466,7 @@ country_event = {
 
   option = {
     name = EVT_8007253_A
-	any_pop = { militancy = 0.3 }
+	any_pop = { consciousness = 2 }
   }
 }
 country_event = {
@@ -503,7 +503,7 @@ country_event = {
 			set_country_flag = second_kashmir_war_girgit
 		}
 	}
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 consciousness = -2 }
 	USA = { country_event = 8015858 }
 	ai_chance = { factor = 100 }
   }
@@ -533,7 +533,7 @@ country_event = {
   option = {
     name = EVT_8007261_A
 	HND = { country_event = 8007262 }
-	any_pop = { militancy = -0.5 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
@@ -553,13 +553,13 @@ country_event = {
   option = {
     name = EVT_8007262_A
 	end_war = PAK
-	any_pop = { militancy = -0.5 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007262_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	badboy = 5 
 	relation = { who = USA value = -150 } 
 	relation = { who = ENG value = -150 } 
@@ -590,7 +590,7 @@ country_event = {
 
   option = {
     name = EVT_8007263_A
-	any_pop = { militancy = -1.5 }
+	any_pop = { militancy = -1.5 consciousness = -1 }
 	HND = { country_event = 8007264 }
   }
 }
@@ -603,7 +603,7 @@ country_event = {
 
   option = {
     name = EVT_8007264_A
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5 consciousness = 2 }
 	prestige = -50
   }
 }
@@ -687,7 +687,7 @@ country_event = {
 
   option = {
     name = EVT_8007270_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { consciousness = 2 }
 	1252 = { any_pop = { dominant_issue = { value = planned_economy factor = 0.5 } } }
 	# TODO seed for the Naxalite rebellion 
   }
@@ -715,7 +715,7 @@ country_event = {
 
   option = {
     name = EVT_8007271_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
   }
 }
 country_event = {
@@ -729,7 +729,7 @@ country_event = {
 
   option = {
     name = EVT_8007272_A
-	any_pop = { limit = { culture = sikh } militancy = 5.0 } 
+	any_pop = { limit = { culture = sikh } militancy = 5.0 consciousness = 2 } 
   }
 }
 country_event = {
@@ -749,7 +749,7 @@ country_event = {
 
   option = {
     name = EVT_8007273_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { consciousness = 2 }
 	add_country_modifier = { name = central_planning_inflexibility2 duration = 3500 }
   }
 }

@@ -122,6 +122,7 @@ country_event = {
   option = {
     name = EVT_8010412_A
 	relation = { who = USA value = -100 } 
+	any_pop = { consciousness = 2.0 }
 	add_country_modifier = { name = great_depression duration = 365 }
 	ai_chance = { factor = 100 }
   }
@@ -151,7 +152,7 @@ country_event = {
 
   option = {
     name = EVT_8010413_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0 consciousness = 1.0 }
 	government = democracy country_event = 800054
   }
 }

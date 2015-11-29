@@ -86,7 +86,7 @@ country_event = {
 
   option = {
     name = EVT_8009216_B
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0 consciousness = 2.0 }
 	release = SEN
 	war = { 
 		target = SEN 
@@ -113,13 +113,13 @@ country_event = {
   option = {
     name = EVT_8009217_A
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
-	any_pop = { militancy = 3 }
+	any_pop = { militancy = 3 consciousness = 2.0 }
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8009217_B
-	any_pop = { militancy = -1 }
+	any_pop = { militancy = -1 consciousness = -1 }
 	ai_chance = { factor = 100 }
   }
 }

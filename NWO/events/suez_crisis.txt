@@ -78,7 +78,7 @@ country_event = {
     name = EVT_8500302_C
 	relation = { who = EGY value = 100 } 
 	1755 = { secede_province = EGY }
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1.0 }
 	badboy = -2 
 	ai_chance = { factor = 0 }
   }
@@ -95,13 +95,13 @@ country_event = {
 	set_country_flag = operation_kadesh
 	war = { target = EGY attacker_goal = { casus_belli = acquire_state state_province_id = 1756 } defender_goal = { casus_belli  = status_quo } } 
 	badboy = 5 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5  consciousness = -0.2 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500303_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -117,13 +117,13 @@ country_event = {
 	set_country_flag = operation_kadesh
 	war = { target = EGY attacker_goal = { casus_belli = acquire_state state_province_id = 1756 } defender_goal = { casus_belli  = status_quo } } 
 	badboy = 5 
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5  consciousness = 1.0 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500304_B
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -144,7 +144,7 @@ country_event = {
 
   option = {
     name = EVT_8500305_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5  consciousness = -0.1 }
   }
 }
 country_event = {
@@ -176,7 +176,7 @@ country_event = {
 	relation = { who = ISR value = 150 } 
 	relation = { who = EGY value = -150 } 
 	badboy = 10 
-	any_pop = { militancy = 0.8 }
+	any_pop = { militancy = 0.8  consciousness = 1.6 }
 	ISR = { country_event = 8500315 }
 	ai_chance = { factor = 0 }
   }
@@ -225,7 +225,7 @@ country_event = {
     name = EVT_8500313_A
 	relation = { who = EGY value = -100 } 
 	relation = { who = USA value = 10 } 
-	any_pop = { militancy = 0.7 }
+	any_pop = { militancy = 0.7  consciousness = 1.0 }
 	ai_chance = { factor = 100 }
   }
 
@@ -248,13 +248,13 @@ country_event = {
     name = EVT_8500314_A
 	create_alliance = EGY 
 	relation = { who = EGY value = 200 } # who to get Russia involved?
-	any_pop = { militancy = 0.3 }
+	any_pop = { militancy = 0.3  consciousness = 0.5 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500314_B
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5  consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -267,7 +267,7 @@ country_event = {
 
   option = {
     name = EVT_8500315_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = -0.2 }
   }
 }
 country_event = {
@@ -279,7 +279,7 @@ country_event = {
 
   option = {
     name = EVT_8500316_A
-	any_pop = { militancy = -0.5 }
+	any_pop = { militancy = -0.5  consciousness = -0.1 }
   }
 }
 country_event = {
@@ -323,7 +323,7 @@ country_event = {
 
   option = {
     name = EVT_8500323_A
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 2.0  consciousness = 1.0 }
   }
 }
 

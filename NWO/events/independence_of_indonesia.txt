@@ -58,7 +58,7 @@ country_event = {
 
   option = {
     name = EVT_8206003_A
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0 consciousness = 2 }
 	war = { 
 		target = NET
 		attacker_goal = { casus_belli = acquire_core_state state_province_id = 1413 }
@@ -124,7 +124,7 @@ country_event = {
 
   option = {
     name = EVT_8206006_A
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 
@@ -151,7 +151,7 @@ country_event = {
   }
   option = {
     name = EVT_8206007_B
-	any_pop = { militancy = -0.3 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 100 }
   }
 }
@@ -169,7 +169,7 @@ country_event = { # Indonesians agree to the Federated Indonesia proposal
   option = {
     name = EVT_8206008_A
 	IDO = { country_event = 8206009 }
-	any_pop = { militancy = 2 }
+	any_pop = { militancy = 2 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 
@@ -209,7 +209,7 @@ country_event = {
 
   option = {
     name = EVT_8206030_A
-	any_pop = { militancy = -0.6 }
+	any_pop = { consciousness = 2 }
   }
 }
 country_event = { 
@@ -231,7 +231,7 @@ country_event = {
     name = EVT_8206031_A
 	all_core = { 
 		limit = { NOT = { controlled_by = IDO } } 
-		any_pop = { limit = { culture = indonesian } militancy = 5  } 
+		any_pop = { limit = { culture = indonesian } militancy = 5 consciousness = 2 } 
 	}
   }
 }
@@ -275,7 +275,7 @@ country_event = { # Linggajati Agreement
 	
   option = {
     name = EVT_8206033_A
-	any_pop = { limit = { culture = indonesian } militancy = 0.7 }
+	any_pop = { limit = { culture = indonesian } consciousness = 2 }
 	NET = { country_event = 8206014 }
 	ai_chance = { factor = 100 }
   }
@@ -318,7 +318,7 @@ country_event = {
 
   option = {
     name = EVT_8206035_A
-	any_pop = { limit = { culture = indonesian } militancy = -1.0 }
+	any_pop = { limit = { culture = indonesian } militancy = -1.0 consciousness = -1 }
   }
 }
 country_event = {
@@ -399,7 +399,7 @@ country_event = {
   option = {
     name = EVT_8206060_A
 
-		any_pop = { militancy = 0.3 }
+		any_pop = { consciousness = 2 }
 		badboy = 4 
     }
 }
@@ -422,7 +422,7 @@ country_event = {
   option = {
     name = EVT_8206068_A
 	country_event = 8206030 
-	any_pop = { militancy = -0.5 }
+	any_pop = { consciousness = 2 }
   }
 
 }
@@ -517,7 +517,7 @@ country_event = {
 
   option = {
     name = EVT_8206081_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 2 }
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.65 } } }
   }
 }

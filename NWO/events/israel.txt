@@ -246,7 +246,7 @@ country_event = {
 
   option = {
     name = "OK"
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = -1}
   }
 }
 country_event = {
@@ -258,7 +258,7 @@ country_event = {
 
   option = {
     name = "OK"
-	any_pop = { militancy = -0.3 }
+	any_pop = { militancy = -0.5  consciousness = -0.5 }
 	country_event = { id = 1007604 days = 60 }
   }
 }
@@ -304,7 +304,7 @@ country_event = {
   option = {
     name = EVT_8007641_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5  consciousness = 1 }
 	# TODO peace
   }
 }
@@ -352,7 +352,7 @@ country_event = {
   option = {
     name = EVT_8007650_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
   }
 }
 country_event = {
@@ -380,7 +380,7 @@ country_event = {
   option = {
     name = EVT_8007651_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 1.0 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
   }
 }
 country_event = {
@@ -408,7 +408,7 @@ country_event = {
   option = {
     name = EVT_8007651_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 0.7 }
+	any_pop = { militancy = 1  consciousness = 1 }
   }
 }
 country_event = {
@@ -436,7 +436,7 @@ country_event = {
   option = {
     name = EVT_8007651_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 0.7 }
+	any_pop = { militancy = 1 consciousness = 1 }
   }
 }
 country_event = {
@@ -464,7 +464,7 @@ country_event = {
   option = {
     name = EVT_8007651_B
 	ai_chance = { factor = 0 }
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 2 }
   }
 }
 country_event = {
@@ -668,7 +668,7 @@ country_event = {
 
   option = {
     name = EVT_8007671_A
-	any_pop = { militancy = -2 }
+	any_pop = { militancy = -2  consciousness = -1 }
 	badboy = 1
 	prestige = 10
 	ISR = { country_event = 8007672 } 
@@ -677,7 +677,7 @@ country_event = {
 
   option = {
     name = EVT_8007671_B
-	any_pop = { militancy = 1 }
+	any_pop = { militancy = 1  consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -699,7 +699,7 @@ country_event = {
 	EGY = { add_country_modifier = { name = visionary_thinker duration = 700 } }
 	SYR = { add_country_modifier = { name = visionary_thinker duration = 700 } }
 	casus_belli = { target = EGY type = acquire_state months = 48 }
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = 2 }
 	badboy = 15 
 	ai_chance = { factor = 100 }
   }
@@ -722,7 +722,7 @@ country_event = {
     name = EVT_8007673_A
 	war = { target = ISR defender_goal = { casus_belli = acquire_core_state state_province_id = 920 } attacker_goal = { casus_belli = conquest } }
 	add_country_modifier = { name = visionary_thinker duration = 700 }
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = -1 }
 	badboy = 5 
 	SYR = { country_event = 8007674 }
 	JOR = { country_event = 8007675 }
@@ -731,7 +731,7 @@ country_event = {
 
   option = {
     name = EVT_8007673_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -747,14 +747,14 @@ country_event = {
 	war = { target = ISR defender_goal = { casus_belli = acquire_state state_province_id = 2687 } attacker_goal = { casus_belli = conquest } }
 	add_country_modifier = { name = visionary_thinker duration = 700 }
 	create_alliance = EGY 
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = -1.0  consciousness = -1 }
 	badboy = 5 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007674_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { militancy = 0.5  consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -776,7 +776,7 @@ country_event = {
 
   option = {
     name = EVT_8007675_B
-	any_pop = { militancy = 0.5 }
+	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -844,7 +844,7 @@ country_event = {
 
   option = {
     name = EVT_8007684_A
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 2 }
 	country_event = { id = 8007686 days = 10 } 
   }
 }
@@ -860,7 +860,7 @@ country_event = {
 	war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 2687 } defender_goal = { casus_belli = status_quo }} 
 	add_country_modifier = { name = visionary_thinker duration = 700 }
 	create_alliance = EGY 
-	any_pop = { militancy = -0.5 }
+	any_pop = {  consciousness = -1 }
 	badboy = 5 
 	ai_chance = { factor = 100 }
   }
@@ -880,7 +880,7 @@ country_event = {
 
   option = {
     name = EVT_8007686_A
-	any_pop = { militancy = -0.4 }
+	any_pop = {  consciousness = 2 }
   }
 }
 country_event = {
@@ -916,7 +916,7 @@ country_event = {
 
   option = {
     name = EVT_8007689_A
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5  consciousness = 2 }
   }
 }
 country_event = {
@@ -943,7 +943,7 @@ country_event = {
 
   option = {
     name = EVT_8007690_A
-	any_pop = { militancy = -2.5 }
+	any_pop = { militancy = -2.5  consciousness = -1 }
 	ISR = { country_event = 8007691 }
   }
 }
@@ -957,7 +957,7 @@ country_event = {
 
   option = {
     name = EVT_8007691_A
-	any_pop = { militancy = 2.5 }
+	any_pop = { militancy = 2.5  consciousness = 2 }
   }
 }
 country_event = {
@@ -1006,7 +1006,7 @@ country_event = {
 
   option = {
     name = EVT_8007693_B
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5  consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -1025,7 +1025,7 @@ country_event = {
 
   option = {
     name = EVT_8007694_B
-	any_pop = { militancy = 1.5 }
+	any_pop = { militancy = 1.5  consciousness = 2 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -1094,7 +1094,7 @@ country_event = {
 
   option = {
     name = EVT_8007697_A
-	any_pop = { militancy = 0.5 }
+	any_pop = {  consciousness = 2 }
 	any_owned = { limit = { OR = { province_id = 920 province_id = 918 } } secede_province = PAL }
 	ai_chance = { factor = 0 }
   }
@@ -1119,7 +1119,7 @@ country_event = {
   
   mean_time_to_happen = { months = 8 }
   
-  immediate = { any_pop = { limit = { culture = sunni_arab } militancy = 10 } }
+  immediate = { any_pop = { limit = { culture = sunni_arab } militancy = 7  consciousness = 5 } }
 
   option = {
     name = EVT_8007698_A
@@ -1146,7 +1146,7 @@ country_event = {
   option = {
     name = EVT_8007698_C
 	# EVT_8007698_C;Accept a divided Palestine
-	any_pop = { militancy = 2 }
+	any_pop = { militancy = 2  consciousness = 2 }
 	any_owned = { limit = { OR = { province_id = 916  province_id = 919 province_id = 921 } } remove_core = PAL }
 	release_vassal = PAL
 	badboy = -5

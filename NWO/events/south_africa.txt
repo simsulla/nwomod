@@ -16,7 +16,7 @@ country_event = {
 
   option = {
     name = EVT_8012621_A
-	any_pop = { limit = { NOT = { culture = afrikaaner } militancy = 1.0 } }
+	any_pop = { limit = { NOT = { culture = afrikaaner } militancy = 1.0  consciousness = 2.0 } }
 	any_pop = { limit = { culture = afrikaaner } ideology = { value = populist factor = 0.9 } }
 	ruling_party_ideology = populist
 	add_country_modifier = { name = apartheid duration = -1 }
@@ -95,7 +95,7 @@ country_event = {
   option = {
     name = EVT_8012625_A
 	any_country = { limit = { NOT = { tag = THIS } } relation = { who = THIS value = -50 } } 
-	any_pop = { limit = { is_primary_culture = no is_accepted_culture = no } militancy = 1.0 }
+	any_pop = { limit = { is_primary_culture = no is_accepted_culture = no } militancy = 1.0  consciousness = 2.0 }
 	add_country_modifier = { name = apartheid duration = -1 } # 1990 start date must set
   }
 
@@ -136,7 +136,7 @@ country_event = { # Botswana Independence
     option = {
 	  name = EVT_8012670_B
 	  prestige = -10
-	  any_pop = { limit = { location = { is_core = BOT } } militancy = 10 }
+	  any_pop = { limit = { location = { is_core = BOT } } militancy = 8  consciousness = 5.0 }
 	  # TODO BOT UDI
 	  ai_chance = { factor = 0 }
     }
