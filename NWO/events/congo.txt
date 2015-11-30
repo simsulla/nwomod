@@ -251,6 +251,7 @@ country_event = {
 
   option = {
     name = EVT_8003332_A
+	all_core = {  add_core = UCS }
 	any_owned = { limit = { OR = { region = BEL_1996 region = BEL_1990 province_id = 1989 province_id = 1992 } } secede_province = UCS }
 	release = KAT
 	UCS = { capital = 1996 }
@@ -423,7 +424,7 @@ country_event = {
 	exists = KAT
   }
 
-  mean_time_to_happen = { months = 24  }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8003340_A
@@ -445,10 +446,11 @@ country_event = {
 	owns = 1987
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 6  }
 
   option = {
     name = EVT_8003341_A
+	capital = 1982 # Leopoldville
 	change_tag_no_core_switch = CNG
 	government = proletarian_dictatorship  country_event = 800042
 	RUS = { diplomatic_influence = { who = CNG value = 100 } }
