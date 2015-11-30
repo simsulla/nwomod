@@ -42,7 +42,7 @@ country_event = { #"Hungarian Neutrality"
     tag = HUN
 	year = 1956 NOT = { year = 1957 }
     has_global_flag = hungarian_revolution_1956
-    has_global_flag = cold_war
+	vassal_of = RUS
     war = no
   }
 
@@ -115,9 +115,9 @@ country_event = {
   trigger = {
     tag = HUN
 	war = no
-	year = 1958 NOT = { year = 1959 }
-	NOT = { government = democracy }
-	is_vassal = no
+	year = 1958 NOT = { year = 1960 }
+	has_global_flag = hungarian_revolution_1956
+	government = proletarian_dictatorship
   }
 
   option = {
@@ -232,7 +232,7 @@ country_event = { # USA intervention
   title = EVT_8501111_NAME
   desc = EVT_8501111_DESC
   picture = "nwo2_united_nations"
-  is_triggered_only = yes
+  is_triggered_only = yes # USA
 
   option = {
     name = EVT_8501111_A

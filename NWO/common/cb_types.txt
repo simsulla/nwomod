@@ -1250,9 +1250,8 @@ install_authoritarian_regime = {
 			NOT = { government = proletarian_dictatorship }
 			NOT = { government = theocracy }
 		}
-		is_vassal = no
+		OR = { is_vassal = no is_our_vassal = THIS }
 		civilized = yes
-		NOT = { is_our_vassal = THIS }
 	}
 	
 	po_remove_prestige = yes
@@ -1299,9 +1298,8 @@ install_theocratic_regime = {
 			government = theocracy
 			NOT = { war_policy = pacifism }
 		}
-		is_vassal = no
+		OR = { is_vassal = no is_our_vassal = THIS }
 		civilized = yes
-		NOT = { is_our_vassal = THIS }
 	}
 	
 	po_remove_prestige = yes
@@ -1366,6 +1364,8 @@ install_communist_gov_cb = {
 		NOT = {
 			government = proletarian_dictatorship
 		}
+
+		OR = { is_vassal = no is_our_vassal = THIS }
 		
 		# If reciever is not a great power
 		is_greater_power = no
