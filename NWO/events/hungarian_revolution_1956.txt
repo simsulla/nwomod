@@ -8,7 +8,7 @@ country_event = { # Hungarian Revolution 1956
   trigger = {
     tag = HUN
 	year = 1956 NOT = { year = 1957 }
-    has_global_flag = cold_war
+    
 	is_vassal = yes
 	vassal_of = RUS
     war = no
@@ -206,7 +206,7 @@ country_event = {
     tag = RUS
 	year = 1956 NOT = { year = 1957 }
     has_global_flag = event_fired_8510806 # united_nations.txt
-    has_global_flag = cold_war
+    
     RUS = { war_with = HUN }
   }
 
@@ -263,7 +263,7 @@ country_event = {
     OR = { NOT = { exists = KMT } NOT = { has_global_flag = CHI_in_UNSC } has_global_flag = event_fired_8510808 }
     OR = { NOT = { exists = RUS } has_global_flag = event_fired_8510805 has_global_flag = un_soviet_boycott }
     has_global_flag = un_hungary_totalveto
-    has_global_flag = cold_war
+    
     RUS = { war_with = HUN }
   }
 

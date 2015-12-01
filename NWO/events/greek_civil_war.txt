@@ -29,7 +29,7 @@ country_event = {
   trigger = {
     tag = GRE
     year = 1946 NOT = { year = 1990 }
-    has_global_flag = cold_war
+    
 	NOT = { exists = UGR }
 	NOT = { government = proletarian_dictatorship }
 	war = no
@@ -54,7 +54,7 @@ country_event = {
     tag = UGR
 	year = 1947 NOT = { year = 1950 }
  	war_with = GRE
-    has_global_flag = cold_war
+    
 	government = proletarian_dictatorship
   }
 
@@ -226,7 +226,7 @@ country_event = {
     tag = GRE
 	year = 1946 NOT = { year = 1963 }
     exists = GRE
-    has_global_flag = cold_war
+    
 	any_owned_province = { controlled_by = UGR }
   }
 
@@ -370,7 +370,7 @@ country_event = {
     tag = UGR
 	year = 1948 NOT = { year = 1955 }
 	war_with = GRE
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 2  }

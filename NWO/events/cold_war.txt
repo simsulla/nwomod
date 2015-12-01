@@ -159,20 +159,15 @@ country_event = {
 
 	trigger = {
 		ai = no # in an multi player env this may fire multiple times but no worry as it only sets flags
-		NOT = { has_global_flag = cold_war }
-		NOT = { has_global_flag = cold_war_pacific }
+		NOT = {  }
+		
 		RUS = { government = proletarian_dictatorship }
 		USA = { government = democracy }
 	}
 
-	immediate = {
-		set_global_flag = cold_war
-		set_global_flag = cold_war_pacific
-		set_global_flag = blocsenabled
-	}
-	
 	option = {
 		name = "EVT_19804_A"
+		set_global_flag = blocsenabled
 		ENG = { relation = { who = USA value = 200 } }
 		FRA = { relation = { who = USA value = 200 } }
 		CAN = { relation = { who = USA value = 200 } }
@@ -198,7 +193,7 @@ country_event = {
 		year = 1950
 		NOT = { year = 1991 }
 		exists = HND
-		has_global_flag = cold_war
+		
 		NOT = { has_country_flag = joindemo }
 		NOT = { has_country_flag = namformformed }
 		NOT = { has_country_flag = joincomm }
@@ -226,8 +221,8 @@ country_event = {
 	picture = "endofcoldwar"
 
 	trigger = {
-		OR = { has_global_flag = cold_warussr has_global_flag = cold_warusa }
-		has_global_flag = cold_war
+		OR = { RUS = { NOT = { government = proletarian_dictatorship } } USA = { NOT = { government = democracy } } }
+		
 		NOT = { has_country_flag = endofthecoldwar }
 	}
 
@@ -260,7 +255,7 @@ country_event = {
 	trigger = {
 		RUS = { government = proletarian_dictatorship }
 		NOT = { USA = { government = democracy } }
-		has_global_flag = cold_war
+		
 		NOT = { has_country_flag = cold_warussr1 }
 		has_global_flag = blocsenabled
 		ai = no
@@ -289,7 +284,7 @@ country_event = {
 	trigger = {
 		USA = { government = democracy }
 		NOT = { RUS = { government = proletarian_dictatorship } }
-		has_global_flag = cold_war
+		
 		NOT = { has_country_flag = cold_warusa1 }
 		has_global_flag = blocsenabled
 		ai = no

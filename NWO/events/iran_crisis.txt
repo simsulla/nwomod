@@ -8,7 +8,7 @@ country_event = {
   trigger = {
     tag = RUS
 	year = 1945 NOT = { year = 1946 }
-    has_global_flag = cold_war
+    
     any_owned_province = { province_id = 1110  }  
   }
 	immediate = { set_global_flag = event_fired_8500901 }
@@ -230,7 +230,7 @@ country_event = {
 	year = 1954 NOT = { year = 1947 }
     NOT = { exists = KUR }
     exists = PER
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 1  }
@@ -250,7 +250,7 @@ country_event = {
   trigger = {
     tag = PER
 	year = 1946 NOT = { year = 1947 }
-    has_global_flag = cold_war
+    
     is_vassal = yes
   }
 

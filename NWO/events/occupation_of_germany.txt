@@ -8,7 +8,7 @@ country_event = {
   trigger = {
 	OR = { government = democracy government = hms_government }
 	year = 1960 NOT = { year = 1963 }
-    has_global_flag = cold_war
+    
     GER = { any_core = { owned_by = THIS } } 
   }
 
@@ -37,7 +37,7 @@ country_event = {
   trigger = {
 	government = proletarian_dictatorship
 	year = 1960 NOT = { year = 1963 }
-    has_global_flag = cold_war
+    
     GER = { any_core = { owned_by = THIS } }
   }
 
@@ -69,7 +69,7 @@ country_event = {
 	NOT = { exists = GER }
     NOT = { exists = IAR }
     NOT = { exists = DDR }
-    has_global_flag = cold_war
+    
 	NOT = {has_country_flag = occupation_zones_in_germany }
   }
 
@@ -107,7 +107,7 @@ country_event = {
 	NOT = { exists = GER }
     NOT = { exists = IAR }
     NOT = { exists = DDR }
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 1  }
@@ -165,7 +165,7 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1946 NOT = { year = 1963 }
-    has_global_flag = cold_war
+    
 	NOT = { exists = GER }
   }
 
@@ -200,7 +200,7 @@ country_event = {
   trigger = {
     OR = { tag = ENG tag = FRA }
 	year = 1954 NOT = { year = 1959 }
-    has_global_flag = cold_war
+    
 	NOT = { has_country_flag = morgenthau_plan }
   }
 
@@ -238,7 +238,7 @@ country_event = {
   trigger = {
     tag = GER
 	year = 1944 NOT = { year = 1955 }
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 2  }
@@ -260,7 +260,7 @@ country_event = {
     tag = RUS
 	year = 1946 NOT = { year = 1963 }
     NOT = { exists = DDR }
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 2 }
@@ -294,7 +294,7 @@ country_event = {
   trigger = {
     tag = DDR
 	year = 1944 NOT = { year = 1955 }
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 2  }
@@ -422,7 +422,7 @@ country_event = {
 	year = 1948 NOT = { year = 1949 }
     NOT = { exists = GER }
     NOT = { exists = DDR }
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 1  }
@@ -586,7 +586,7 @@ country_event = {
   trigger = {
     tag = GER
 	year = 1944 NOT = { year = 1963 }
-    has_global_flag = cold_war
+    
 	NOT = { owns = 551 } # East Berlin
   }
 
@@ -608,7 +608,7 @@ country_event = {
   trigger = {
     tag = DDR
 	year = 1944 NOT = { year = 1963 }
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 1  }
@@ -734,7 +734,7 @@ country_event = {
     tag = RUS
 	year = 1952 NOT = { year = 1953 }
     exists = DDR
-    has_global_flag = cold_war
+    
 	exists = GER
   }
 
@@ -807,7 +807,7 @@ country_event = {
 	USA = { OR = { has_country_flag = stalins_note_ok_nato has_country_flag = stalins_note_ok } }
 	ENG = { OR = { has_country_flag = stalins_note_ok_nato has_country_flag = stalins_note_ok } }
 	FRA = { OR = { has_country_flag = stalins_note_ok_nato has_country_flag = stalins_note_ok } }
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 1  }
@@ -842,7 +842,7 @@ country_event = {
 	USA = { has_country_flag = stalins_note_ok }
 	ENG = { has_country_flag = stalins_note_ok }
 	FRA = { has_country_flag = stalins_note_ok }
-    has_global_flag = cold_war
+    
   }
 
   mean_time_to_happen = { months = 1  }
