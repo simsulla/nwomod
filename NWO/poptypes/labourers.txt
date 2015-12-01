@@ -416,9 +416,11 @@ promote_to =
 			modifier = { factor = -2 state_scope = { bureaucrats = 0.015 } }
 			modifier = { factor = -2 state_scope = { bureaucrats = 0.02 } }
 		}
-		modifier = { factor = -5 NOT = { literacy = 0.01 } }
-		modifier = { factor = -2 NOT = { literacy = 0.02 } }
-		modifier = { factor = -2 NOT = { literacy = 0.03 } }
+		modifier = { factor = -2.5 NOT = { literacy = 0.1 } }
+		modifier = { factor = -1.5 NOT = { literacy = 0.15 } }
+		modifier = { factor = -1 NOT = { literacy = 0.2 } }
+		modifier = { factor = -1 NOT = { literacy = 0.25 } }
+		modifier = { factor = -1 NOT = { literacy = 0.3 } }
 		group = {
 			modifier = { factor =  0.25 literacy = 0.40 }
 			modifier = { factor =  0.25 literacy = 0.50 }
@@ -434,7 +436,7 @@ promote_to =
 	{
 		factor = 0.01
 		group = {
-			modifier = { factor = 10 state_scope = { NOT = { clergymen = 0.024 } } }
+			modifier = { factor = 6 state_scope = { NOT = { clergymen = 0.024 } } }
 			modifier = { factor = -2 state_scope = { clergymen = 0.024 } }
 			modifier = { factor = -2 state_scope = { clergymen = 0.032 } }
 			modifier = { factor = -2 state_scope = { clergymen = 0.04 } }
