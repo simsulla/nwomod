@@ -397,5 +397,51 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	
+	german_reunification = {
+		picture = "german_reunification"
+		potential = {
+			exists = DDR
+			exists = GER
+			OR = { tag = DDR tag = GER }
+			NOT = { has_global_flag = german_reunification }
+		}
+		allow = {
+			DDR = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}		
+			GER = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+			OR = { 
+				AND = { GER = { government = proletarian_dictatorship } DDR = { government = proletarian_dictatorship} } 
+				AND = { GER = { government = democracy } DDR = { government = democracy} } 
+			}
+		}
+		effect = {
+			set_global_flag = german_reunification
+			prestige = 20
+			random_country = { limit = { NOT = { tag = THIS } OR = { tag = GER tag = DDR } } country_event = 11101 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 		
 }

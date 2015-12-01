@@ -214,7 +214,7 @@ country_event = {
 	FRA = { country_event = 8004321 } 
 	RUS = { country_event = 8004321 } 
 	ENG = { country_event = 8004321 } 
-	GER = { country_event = { id = 8004325 days = 30 } }
+	country_event = { id = 8004325 days = 30 }
 	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
@@ -299,7 +299,7 @@ country_event = { # Construction of the Berlin Wall;
 	}
     exists = GER
   }
-  immediate = { set_global_flag = event_fired_8004314 } # used in # Fall of the Berlin Wall
+  immediate = { set_global_flag = berlin_wall } # used in # Fall of the Berlin Wall
 
   mean_time_to_happen = { months = 6  }
 
@@ -366,7 +366,7 @@ country_event = { # Brain drain flight_to_west_germany
     tag = DDR
 	year = 1952
     NOT = { year = 1963 }
-    NOT = { has_global_flag = event_fired_8004314 }
+    NOT = { has_global_flag = berlin_wall }
     exists = GER
     any_owned_province = { province_id = 155 }  
   }
@@ -433,11 +433,10 @@ country_event = { # Fall of the Berlin Wall
     tag = DDR
     year = 1989
 	NOT = { year = 1992 }
-    has_global_flag = event_fired_8004314
+    has_global_flag = berlin_wall
     exists = GER
     has_global_flag = autumn_of_nations
   }
-  immediate = { set_global_flag = event_fired_8004320 }
 
   mean_time_to_happen = { months = 10 }
 
@@ -486,16 +485,18 @@ country_event = { # Reunification of Germany
   title = EVT_8004325_NAME
   desc = EVT_8004325_DESC
   picture = "nwo2_united_germany"
-  is_triggered_only = yes
+  is_triggered_only = yes # DDR
 
   option = {
     name = EVT_8004325_A
 	any_pop = { militancy = -2.0 }
-	inherit = DDR 
+	any_greater_power = { limit = { tag = GER } diplomatic_influence = { who = DDR value = 200 } }
+	government = democracy country_event = 800054 # this will trigger reunification decision
   }
 
   option = {
     name = EVT_8004325_B
+	any_pop = { militancy = 5.0 }
 	any_pop = { consciousness = 1 }
   }
 }
