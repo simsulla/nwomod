@@ -20,7 +20,6 @@ country_event = {
 
   option = {
     name = EVT_8218000_A
-	SYR = { country_event =  8218001 } 
 	country_event = 8218010
 	ai_chance = { factor = 100 }
   }
@@ -36,12 +35,12 @@ country_event = {
   title = EVT_8218001_NAME
   desc = EVT_8218001_DESC
   picture = "nwo2_united_arab_republic"
-  is_triggered_only = yes # EGY
+  is_triggered_only = yes # SYR
 
   option = {
     name = EVT_8218001_A
-	relation = { who = FROM value = 200 } 
-	FROM = { country_event = 8218002 }
+	relation = { who = UAR value = 200 } 
+	UAR = { country_event = 8218002 }
 	ai_chance = { factor = 100 }
   }
 
@@ -210,6 +209,7 @@ country_event = {
     name = EVT_8218010_A
 	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	change_tag = UAR 
+	SYR = { country_event =  8218001 } 
 	ai_chance = { factor = 100 }
   }
 

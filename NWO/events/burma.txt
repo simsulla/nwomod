@@ -7,6 +7,7 @@ country_event = {
 
 	trigger = {
 		tag = ENG
+		year = 1947
 		NOT = { exists = BUR }
 		war = no
 		NOT = { year = 1990 }
@@ -14,14 +15,14 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 16
+		months = 4
 	}
 
 	option = {
 		name = EVT_1214001_A # Promise Burmese Independence
 		ai_chance = { factor = 100 }
 		prestige = -2 
-		country_event = { id = 1214002 days = 300 } 
+		country_event = { id = 1214002 days = 100 } 
 	}
 	
 	option = {
@@ -36,7 +37,7 @@ country_event = {
 			militancy = 2
 		}
 		ai_chance = { factor = 0 }
-		country_event = { id = 1214003 days = 300 } 
+		country_event = { id = 1214003 days = 100 } 
 	}
 
 	option = {

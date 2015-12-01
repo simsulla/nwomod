@@ -17,7 +17,7 @@ country_event = {
 
   option = {
     name = EVT_8020300_A
-	release = TRE 
+	release_vassal = TRE 
 	badboy = -5 
 	relation = { who = YUG value = 100 } 
 	relation = { who = RUS value = 25 } 
@@ -45,7 +45,7 @@ country_event = {
     year = 1954 NOT = { year = 1990 }
     NOT = { YUG = { war_with = ITA } }
     exists = TRE
-    
+    USA = { is_our_vassal = TRE }
     TRE = { ai = yes }
 	TRE = { is_vassal = yes } 
   }
