@@ -1000,25 +1000,27 @@ country_event = {
   title = EVT_8002846_NAME
   desc = EVT_8002846_DESC
   picture = "nwo2_united_china"
-  is_triggered_only = yes
+  is_triggered_only = yes # KMT
 
   option = {
     name = EVT_8002846_A
 	any_pop = { militancy = -0.5 }
+	inherit = CHI
+	change_tag = CHI
   }
-
 }
 country_event = {
   id = 8002847
   title = EVT_8002847_NAME
   desc = EVT_8002847_DESC
   picture = "nwo2_united_china"
-  is_triggered_only = yes
+  is_triggered_only = yes # CHI
 
 
   option = {
     name = EVT_8002847_A
 	any_pop = { militancy = -1.0 } 
+	inherit = KMT
   }
 }
 country_event = {

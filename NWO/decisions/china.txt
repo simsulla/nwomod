@@ -139,10 +139,9 @@ political_decisions = {
 	chinese_reunification = {
 		picture = "chinese_reunification"
 		potential = {
-			OR = {
-				tag = KMT
-				tag = CHI
-			}
+			exists = KMT
+			exists = CHI
+			OR = { tag = KMT tag = CHI }
 			NOT = { has_global_flag = chinese_reunification }
 		}
 		allow = {
@@ -178,17 +177,7 @@ political_decisions = {
 			prestige = 20
 			KMT = { country_event = 8002846 } 
 			CHI = { country_event = 8002847 } 
-			change_tag = CHI
-			any_country = {
-				limit = {
-					any_core = {is_core = CHI}
-					OR = {
-						in_sphere = THIS
-						vassal_of = THIS
-					}
-				}
-				country_event = { id=11101 days=0 }
-			}
+			random_country = { limit = { NOT = { tag = THIS } OR = { tag = CHI tag = KMT } } country_event = 11101 }
 		}
 		ai_will_do = {
 			factor = 1
