@@ -259,7 +259,8 @@ petroleum_fuel_factory = {
 		petroleum = 24
 	} 
 	output_goods = fuel 
-	value = 92
+	# make this more profitable than coal fuel
+	value = 100
 	bonus = {
 		trigger = { trade_goods_in_state = petroleum }
 		value = 0.25
@@ -272,7 +273,8 @@ gas_fuel_factory = {    # liquefied natural gas
 		gas = 24
 	} 
 	output_goods = fuel 
-	value = 92
+	# make this more profitable than coal fuel
+	value = 100
 	bonus = {
 		trigger = { trade_goods_in_state = gas }
 		value = 0.25
@@ -386,7 +388,8 @@ petroleum_plastics_factory = {
 		petroleum = 47.00	
 	}
 	output_goods = plastics 
-	value = 49
+	# make this more profitable than rubber plastics 10%
+	value = 55
 	bonus = {
 		trigger = { trade_goods_in_state = petroleum }
 		value = 0.25
