@@ -27,7 +27,7 @@ country = {
 	COLONIAL_RANK = 16, -- Minimum rank a nation must have to send colonists
 	COLONY_TO_STATE_PRESTIGE_GAIN = 2, -- Prestige gain when turning colony to state
 	COLONIAL_LIFERATING = 35,
-	BASE_GREATPOWER_DAILY_INFLUENCE = 0.1, -- Influence value which is distributed each day
+	BASE_GREATPOWER_DAILY_INFLUENCE = 0.5, -- Influence value which is distributed each day
 	AI_SUPPORT_REFORM = 0.025, -- At least this many % needs to support a reform for the AI to take it
 	BASE_MONTHLY_DIPLOPOINTS = 0.3, -- Base value gain for diplomatic actions each month
 	DIPLOMAT_TRAVEL_TIME = 14,
@@ -515,8 +515,8 @@ diplomacy = {
 	BASE_TRUCE_MONTHS = 60,
 	MAX_INFLUENCE = 100,
 	WARSUBSIDIES_PERCENT = 1.00, -- TODO How many percent of imports you are going to pay each day(mil. constructions and mil. maintainence)
-	NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.50, -- Bonus to neighbouring countries when influencing
-	SPHERE_NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.2, -- Bonus to countries in your sphere neighbouring when influencing
+	NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.60, -- Bonus to neighbouring countries when influencing
+	SPHERE_NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.3, -- Bonus to countries in your sphere neighbouring when influencing
 	OTHER_CONTINENT_BONUS_INFLUENCE_PERCENT = -0.1, -- TODO Bonus to neighbouring countries when influencing
 	PUPPET_BONUS_INFLUENCE_PERCENT = 1.0, -- bonus if they are our puppet
 	
@@ -606,7 +606,7 @@ diplomacy = {
 	TWS_FULFILLED_IDLE_SPACE = 0.75, -- How much % the CB fulfillment must done, so TWS starts ticking.
 	TWS_BATTLE_MIN_COUNT = 0, -- At least X battles before the aspect of wins will count
 	TWS_BATTLE_MAX_ASPECT = 50.0, -- Max allowed battle wins aspect for TWS
-	LARGE_POPULATION_INFLUENCE_PENALTY = -0.1,
+	LARGE_POPULATION_INFLUENCE_PENALTY = 0.01,
 },  
 
 
