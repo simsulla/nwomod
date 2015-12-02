@@ -115,38 +115,6 @@ country_event = {
   }
 }
 country_event = {
-  id = 8002016
-  title = "EVT_8002016_NAME"
-  desc = "EVT_8002016_DESC"
-  picture = "nwo2_building_brasilia"
-  fire_only_once = yes
-
-  trigger = {
-    tag = BRZ
- 	year = 1956
-    NOT = { year = 1959 }
-  }
-
-  mean_time_to_happen = { months = 7 }
-
-  option = {
-    name = "EVT_8002016_A"
-	treasury = -5000 
-	ai_chance = { factor = 100 }
-	2446 = { 
-		add_province_modifier = { name = baby_boom duration = 1500 } 
-		add_province_modifier = { name = economic_boom duration = 1500 } 
-	}
-  }
-
-  option = {
-    name = "EVT_8002016_B"
-	any_pop = {  consciousness = 1 }
-	money = 1000 
-	ai_chance = { factor = 0 }
-  }
-}
-country_event = {
   id = 8002017
   title = "EVT_8002017_NAME"
   desc = "EVT_8002017_DESC"
