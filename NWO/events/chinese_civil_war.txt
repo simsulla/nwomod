@@ -580,12 +580,11 @@ country_event = {
 
   trigger = {
     tag = USA
-    year = 1948 NOT = { year = 1949 }
+    year = 1946 NOT = { year = 1990 }
     NOT = { has_global_flag = CHI_won_civil_war }
     NOT = { has_global_flag = CHC_won_civil_war }
-    
     KMT = { war_with = CHI }
-	money = 50000
+	money = 120000
   }
 
   mean_time_to_happen = { months = 1  }
@@ -594,7 +593,7 @@ country_event = {
     name = "EVT_8200044_A"
 	relation = { who = KMT value = 100 } 
 	relation = { who = CHI value = -150 } 
-	treasury = -50000 
+	treasury = -100000 
 	KMT = { country_event = 8200046 }
 	ai_chance = { factor = 100 }
   }
@@ -645,7 +644,7 @@ country_event = {
 
   option = {
     name = "EVT_8200046_A"
-	money = 50000 
+	treasury = 100000 
 	any_pop = { militancy = -1.2 consciousness = -1 }
   }
 }

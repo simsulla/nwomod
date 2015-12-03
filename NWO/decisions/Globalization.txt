@@ -289,31 +289,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}		
 
-	comecon = {
-		picture = "comecon"
-		potential = {
-			government = proletarian_dictatorship
-			RUS = { is_greater_power = yes government = proletarian_dictatorship }
-			NOT = { has_country_modifier = comecon }
-			NOT = { has_country_modifier = comecon_excluded }
-			NOT = { has_country_modifier = bretton_system }
-		}
-		allow = {
-			containment = 1
-			OR = { 
-				war = no
-				tag = RUS
-				relation = { who = RUS value = 150 } # enables other communist to join
-				overlord = { tag = RUS } 
-				sphere_owner = { tag = RUS } 
-			}
-		}
-		effect = {
-			add_country_modifier = { name = comecon duration = -1 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-
 	market_communism = {
 		picture = "market_communism"
 		potential = {
@@ -441,91 +416,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	gulag = {
-		picture = "gulag"
-		potential = {
-			tag = RUS
-			NOT = { year = 1956 }
-			NOT = { has_country_modifier = forced_labour }
-		}
-		allow = {
-			government = proletarian_dictatorship
-			war = no
-			NOT = { money = 10000 }
-		}
-		effect = {
-			add_country_modifier = { name = forced_labour duration = 350 }
-			random_owned = { limit = { owner = { coal = 0 } trade_goods = coal } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { timber = 0 } trade_goods = timber } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { petroleum = 0 } trade_goods = petroleum } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { gas = 0 } trade_goods = gas } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { iron = 0 } trade_goods = iron } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { copper = 0 } trade_goods = copper } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { bauxite = 0 } trade_goods = bauxite } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { other_minerals = 0 } trade_goods = other_minerals } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	comecon_aid = {
-		picture = "comecon_aid"
-		potential = {
-			NOT = { has_country_modifier = comecon_excluded }
-			RUS = { is_greater_power = yes government = proletarian_dictatorship money = 200000 }
-			NOT = { is_greater_power = yes }
-			NOT = { tag = RUS }
-			NOT = { has_country_modifier = comecon_aid }
-			NOT = { has_country_modifier = comecon_aid_rejected }
-		}
-		allow = {
-			OR = { 
-				government = proletarian_dictatorship 
-				AND = { NOT = { government = democracy } NOT = { government = hms_government } ruling_party_ideology  = socialist } 
-				ruling_party_ideology  = communist
-			}
-			NOT = { money = 1000 }
-		}
-		effect = { # give expl text will get 100000 and need good relation with Soviet
-			add_country_modifier = { name = comecon_aid duration = 700 }
-			any_country = { 
-				limit = { 
-					is_greater_power = yes
-					tag = RUS
-					money = 220000
-				}
-				country_event = 15610 
-			}
-			prestige = -5
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	laogai = {
-		picture = "laogai"
-		potential = {
-			tag = CHI
-			NOT = { year = 1976 }
-			NOT = { has_country_modifier = forced_labour }
-		}
-		allow = {
-			government = proletarian_dictatorship
-			war = no
-			NOT = { money = 10000 }
-		}
-		effect = {
-			add_country_modifier = { name = forced_labour duration = 350 }
-			random_owned = { limit = { owner = { coal = 0 } trade_goods = coal } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { timber = 0 } trade_goods = timber } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { petroleum = 0 } trade_goods = petroleum } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { gas = 0 } trade_goods = gas } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { iron = 0 } trade_goods = iron } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { copper = 0 } trade_goods = copper } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { bauxite = 0 } trade_goods = bauxite } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-			random_owned = { limit = { owner = { other_minerals = 0 } trade_goods = other_minerals } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
-		}
-		ai_will_do = { factor = 1 }	
-	}
-
 	uk_war_debt = {
 		picture = "uk_war_debt"
 		potential = {

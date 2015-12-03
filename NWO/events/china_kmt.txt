@@ -597,7 +597,8 @@ country_event = {
 
   trigger = {
     tag = KMT
-	year = 1946 NOT = { year = 1959 }
+	year = 1946 NOT = { year = 1990 }
+	money = 1100000
     NOT = { has_country_flag  = loans_repaid }
     has_global_flag = CHI_won_civil_war
   }
@@ -606,7 +607,7 @@ country_event = {
 
   option = {
     name = EVT_8002951_A
-	money = -25000 
+	treasury = -1000000 
 	set_country_flag = loans_repaid 
 	USA = { country_event = 8002952  }
     ai_chance = { factor = 100 }
@@ -627,7 +628,7 @@ country_event = {
 
   option = {
     name = EVT_8002952_A
-	money = 25000 
+	treasury = 1000000 
 	relation = { who = KMT value = 100 } 
   }
 }
