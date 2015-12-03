@@ -45,19 +45,19 @@ political_decisions = {
 	monnet_plan = {
 		picture = "monnet_plan"
 		potential = {
-			tag = FRA 574 = { owned_by = FRA } 
+			owns = 574
+			574 = { NOT = { is_core = THIS } }
 			NOT = { has_country_flag = monnet_plan }
 		}
 
 		allow = {
-			tag = FRA 574 = { owned_by = FRA }
 			marshall_plan = 1
 		}
 
 		effect = {
 			set_country_flag = monnet_plan
 			any_owned = { 
-				limit = { owned_by = GER NOT = { province_id = 573 } }
+				limit = { is_core = GER NOT = { province_id = 573 } }
 				add_province_modifier = { name = colonial_exploitation duration = 700 }
 			}
 		}
@@ -69,27 +69,20 @@ political_decisions = {
 	saar_protectorate = {
 		picture = "saar_protectorate"
 		potential = {
-			has_country_flag = monnet_plan
-			tag = FRA 573 = { owned_by = FRA }
+			owns = 573
+			573 = { NOT = { is_core = THIS } }
 			NOT = { has_country_flag = saar_protectorate }
 		}
 
 		allow = {
 			tag = FRA 573 = { owned_by = FRA }
 			NOT = { has_country_flag = saar_protectorate }
-			OR = {
-				AND = {
-					year = 1947
-					ai = yes
-				}
-				AND = {
-					NOT = { relation = { who = USA value = -50 } }
-					ai = no
-				}
-			}
+			has_country_flag = monnet_plan
+			marshall_plan = 1
 		}
 
 		effect = {
+			prestige = 10
 			set_country_flag = saar_protectorate
 			release_vassal = SAL
 			country_event = 8204036

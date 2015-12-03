@@ -7,16 +7,24 @@ political_decisions = {
 			NOT = { government = proletarian_dictatorship }
 			NOT = { has_country_flag = dissolution_of_the_eastern_bloc }
 			OR = { is_secondary_power = yes is_greater_power = yes }
+			is_greater_power = yes
 		}
 
 		allow = {
-			is_greater_power = yes
-			RUS = { 
-				check_variable = { which = soviet_control_cee value = 6 }
-				government = proletarian_dictatorship
-			}
 			OR = { 
-				has_global_flag = dissolution_of_the_eastern_bloc
+				RUS = { 
+					check_variable = { which = soviet_control_cee value = -3 }
+					check_variable = { which = soviet_control_cee value = -2 }
+					check_variable = { which = soviet_control_cee value = -1 }
+					check_variable = { which = soviet_control_cee value = 0 }
+					check_variable = { which = soviet_control_cee value = 1 }
+					check_variable = { which = soviet_control_cee value = 2 }
+					check_variable = { which = soviet_control_cee value = 3 }
+					check_variable = { which = soviet_control_cee value = 4 }
+					check_variable = { which = soviet_control_cee value = 5 }
+					check_variable = { which = soviet_control_cee value = 6 }
+					government = proletarian_dictatorship
+				}
 				RUS = {has_country_modifier = in_bankrupcy }
 			}
 		}
