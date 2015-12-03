@@ -225,3 +225,27 @@ country_event = {
 	}
 }
 
+country_event = {
+  id = 15503
+  title = EVT_15503_NAME
+  # EVT_15503_NAME;Demand Immediate Repay 1mil of WW2 War Dept!
+  desc = EVT_15503_DESC
+  # EVT_15503_DESC;$FROMCOUNTRY$ has large WW2 war debt bods owed by us. Some of these bonds are expiring. They demand repayment. 
+  picture = "ww2_war_debt"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_15503_A
+	# EVT_15503_A;We have to repay!
+	treasury = -1000000 
+	change_variable = { which = ww2_war_debt value = 1 }
+	relation = { who = FROM value = -10 }
+	ai_chance = { factor = 1 }
+  }
+  
+}
+
+# If as a consequence of 15503 we are bancryot we have to give all countrie we previously denied independance independance.
+
+
+

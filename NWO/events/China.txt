@@ -221,18 +221,16 @@ country_event = {
 		war = yes
 		war_with = CHI
 		OR = { 
-			CHI = { brigades_compare = 2 }
 			national_provinces_occupied = 0.8
+			CHI = { brigades_compare = 2 }
 		}
 		NOT = { year = 1952 }
-		controls  = 1485 # we must still control Taibei
 		1485 = { is_capital = no } # must not already have happned
 	}
 	
 	option = {				
 		name = "EVTOPTA90903" # flee to Taiwan
 		ai_chance = { factor = 100 }
-		any_country = { limit = { war_with = THIS NOT = { tag = CHI } NOT = { tag = KMT } exists = yes } end_war = THIS }
 		end_war = CHI
 		any_owned = { 
 			limit = { controlled_by = CHI NOT = { province_id = 1485 } NOT = { province_id = 1499 } NOT = { province_id = 2576 } NOT = { province_id = 2562 } }
@@ -241,7 +239,7 @@ country_event = {
 		any_owned = { 
 			limit = { NOT = { controlled_by = CHI } NOT = { province_id = 1485 } NOT = { province_id = 1499 } NOT = { province_id = 2576 } NOT = { province_id = 2562 } }
 			secede_province = CHI
-			change_controller = REB
+			change_controller = KMT
 		}
 		any_owned = { 
 			limit = { controlled_by = KMT province_id = 1485 }
@@ -262,8 +260,7 @@ country_event = {
 	title = "EVTNAME90904"
 	desc = "EVTDESC90904"
 	picture = "kmt_flees_to_taiwan"
-
-	is_triggered_only = yes
+	is_triggered_only = yes # CHI
 
 	option = {
 		name = "EVTOPTA90904" # continue the war
@@ -278,11 +275,13 @@ country_event = {
 				casus_belli = status_quo
 			}
 		}
-		relation = { who = FROM value = -200 }
+		relation = { who = KMT value = -200 }
 	}
 
 	option = {				
 		name = "EVTOPTB90904" # accept KMT escaped
+		any_country = { limit = { war_with = KMT NOT = { tag = CHI } NOT = { tag = KMT } exists = yes } end_war = KMT }
+		end_war = KMT
 		ai_chance = { factor = 0 }		
 	}
 
