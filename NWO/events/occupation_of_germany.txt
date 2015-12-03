@@ -69,7 +69,7 @@ country_event = {
 	NOT = { exists = GER }
     NOT = { exists = IAR }
     NOT = { exists = DDR }
-    
+    OR = { owns = 579 owns = 583 owns = 565 }
 	NOT = {has_country_flag = occupation_zones_in_germany }
   }
 
@@ -79,21 +79,9 @@ country_event = {
     name = "EVT_8204002_A"
 	set_country_flag = occupation_zones_in_germany
 	prestige = 10
-	random_country = { limit = { any_owned = { tag = GER } tag = THIS } country_event = 8204014 }
   }
 }
-country_event = {
-  id = 8204014
-  title = "EVT_8204002_NAME"
-  desc = "EVT_8204002_DESC"
-  picture = "nwo2_occupation_zones_in_germany"
-  is_triggered_only = yes 
 
-  option = {
-    name = "EVT_8204002_A"
-	prestige = 10
-  }
-}
 country_event = {
   id = 8204003
   title = "EVT_8204003_NAME"

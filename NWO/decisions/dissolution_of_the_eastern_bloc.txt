@@ -12,17 +12,17 @@ political_decisions = {
 
 		allow = {
 			OR = { 
-				RUS = { 
-					check_variable = { which = soviet_control_cee value = -3 }
-					check_variable = { which = soviet_control_cee value = -2 }
-					check_variable = { which = soviet_control_cee value = -1 }
-					check_variable = { which = soviet_control_cee value = 0 }
-					check_variable = { which = soviet_control_cee value = 1 }
-					check_variable = { which = soviet_control_cee value = 2 }
-					check_variable = { which = soviet_control_cee value = 3 }
-					check_variable = { which = soviet_control_cee value = 4 }
-					check_variable = { which = soviet_control_cee value = 5 }
-					check_variable = { which = soviet_control_cee value = 6 }
+				AND = {
+					RUS = { check_variable = { which = soviet_control_cee value = -3 } }
+					RUS = { check_variable = { which = soviet_control_cee value = -2 } }
+					RUS = { check_variable = { which = soviet_control_cee value = -1 } }
+					RUS = { check_variable = { which = soviet_control_cee value = 0 } }
+					RUS = { check_variable = { which = soviet_control_cee value = 1 } }
+					RUS = { check_variable = { which = soviet_control_cee value = 2 } }
+					RUS = { check_variable = { which = soviet_control_cee value = 3 } }
+					RUS = { check_variable = { which = soviet_control_cee value = 4 } }
+					RUS = { check_variable = { which = soviet_control_cee value = 5 } }
+					RUS = { check_variable = { which = soviet_control_cee value = 6 } }
 					government = proletarian_dictatorship
 				}
 				RUS = {has_country_modifier = in_bankrupcy }
