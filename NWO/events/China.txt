@@ -231,7 +231,6 @@ country_event = {
 	option = {				
 		name = "EVTOPTA90903" # flee to Taiwan
 		ai_chance = { factor = 100 }
-		end_war = CHI
 		any_owned = { 
 			limit = { controlled_by = CHI NOT = { province_id = 1485 } NOT = { province_id = 1499 } NOT = { province_id = 2576 } NOT = { province_id = 2562 } }
 			secede_province = CHI
@@ -245,7 +244,8 @@ country_event = {
 			limit = { controlled_by = KMT province_id = 1485 }
 			owner = { capital = 1485 }
 		}
-		random_country = { limit = { tag = CHI KMT = { owns = 1499 } } country_event = 90904 }
+		end_war = CHI
+		CHI = { country_event = 90904 }
 		country_event = 8200101
 	}
 	
@@ -272,7 +272,7 @@ country_event = {
 				   state_province_id = 1499
 			}
 			defender_goal = {
-				casus_belli = status_quo
+				casus_belli = civil_war
 			}
 		}
 		relation = { who = KMT value = -200 }
@@ -280,8 +280,6 @@ country_event = {
 
 	option = {				
 		name = "EVTOPTB90904" # accept KMT escaped
-		any_country = { limit = { war_with = KMT NOT = { tag = CHI } NOT = { tag = KMT } exists = yes } end_war = KMT }
-		end_war = KMT
 		ai_chance = { factor = 0 }		
 	}
 
