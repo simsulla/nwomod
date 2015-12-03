@@ -29,8 +29,12 @@ join_communist_bloc = {
 			relation = { who = USA value = -100 }
 			RUS =  { diplomatic_influence =  { who = THIS value = 25 } country_event = 19809 }
 			add_country_modifier = { name = communist_bloc duration = 999999 }
-			RUS  = { country_event = 8225000 }
+			random_country = { limit = { tag = RUS year = 1947 } country_event = 8225000 }
 		}
+		ai_will_do = {
+			factor = 1
+		}		
+		
 	}
 
 ###################Join democratic Bloc#########################
@@ -66,6 +70,9 @@ join_democratic_bloc = {
 			add_country_modifier = { name = democratic_bloc duration = 999999 }
 		}
 
+		ai_will_do = {
+			factor = 1
+		}		
 
 	}
 
@@ -99,6 +106,9 @@ join_nam_bloc = {
 			RUS =  { diplomatic_influence =  { who = THIS value = -50 } }
 			add_country_modifier = { name = nam_bloc duration = 999999 }
 		}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 ########################Leave Communist bloc########################
@@ -131,7 +141,9 @@ leave_communist_bloc = {
 			RUS  = { country_event = 8225001 }
 		}
 		alert = no
-
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 ########################Leave Demo bloc#######################
@@ -163,7 +175,9 @@ leave_democratic_bloc = {
 			remove_country_modifier = democratic_bloc
 		}
 		alert = no
-
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 ########################Leave NAM bloc for non communists#######################
@@ -200,7 +214,9 @@ leave_nam_bloc = {
 			remove_country_modifier = nam_bloc
 		}
 		alert = no
-
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 ########################Leave NAM bloc for communists #######################
@@ -232,7 +248,9 @@ leave_nam_bloc_comm = {
 			remove_country_modifier = nam_bloc
 		}
 		alert = no
-
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	######################## Alliances #######################
@@ -301,6 +319,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	leave_alliance_nato = {
@@ -341,6 +362,9 @@ leave_nam_bloc_comm = {
 				}
 				
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	#Inter-American Treaty of Reciprocal Assistance
@@ -403,6 +427,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	leave_rio_pact = {
@@ -438,6 +465,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	#Warsaw Pact
@@ -498,6 +528,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	leave_warsaw_pact = {
@@ -533,6 +566,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	# CSTO
@@ -581,6 +617,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	leave_csto_alliance = {
@@ -616,6 +655,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	#ANZUS
@@ -679,6 +721,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	leave_anzus_alliance = {
@@ -714,6 +759,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	# SCO
@@ -764,6 +812,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 	leave_sco_pact = {
@@ -798,6 +849,9 @@ leave_nam_bloc_comm = {
 					duration = 3650
 				}
 			}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 }

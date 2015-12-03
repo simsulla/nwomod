@@ -1161,3 +1161,2022 @@ country_event = {
 	define_general = { name = "Deng Xiaoping" personality = energetic background = no_background }
   }
 }
+country_event = {
+  id = 8200000
+  title = "EVT_8200000_NAME"
+  desc = "EVT_8200000_DESC"
+  picture = "nwo2_manchurian_offensive"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1945 NOT = { year = 1963 }
+	war = no
+    NOT = { RUS = { war_with = CHI } }
+    NOT = { exists = MCK }
+    NOT = { exists = IMN }
+    exists = CHI
+    
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200000_A"
+	release = CHI
+	prestige = 10
+	CHI = { country_event = 8200005 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200000_B"
+	relation = { who = CHI value = -100 } 
+	relation = { who = KMT value = -100 } 
+	badboy = 10 
+	prestige = -50
+	any_pop = { limit = { culture = chinese } militancy = 5 consciousness = 2 }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = "EVT_8200000_C"
+	relation = { who = CHI value = -100 } 
+	relation = { who = KMT value = -100 } 
+	badboy = 10 
+	prestige = -50
+	any_pop = { limit = { culture = chinese } militancy = 5 consciousness = 2 }
+	release_vassal = MCK
+	ai_chance = { factor = 0 }
+  }
+
+  
+}
+country_event = {
+  id = 8200005
+  title = "EVT_8200005_NAME"
+  desc = "EVT_8200005_DESC"
+  picture = "nwo2_manchurian_offensive"
+  is_triggered_only = yes
+
+  option = {
+    name = "OK"
+	# Port Aurthur remains in Russian hands
+	1481 = { secede_province = RUS }
+	random_country = { limit = { exists = KMT tag = KMT war_with = THIS } 2613 = { change_controller = KMT } 1479 = { change_controller = KMT } 45 = { change_controller = KMT } 1555 = { change_controller = KMT } }
+	relation = { who = RUS value = 50 } 
+	relation = { who = MGL value = 25 } 
+  }
+}
+country_event = {
+  id = 8200006
+  title = "EVT_8200006_NAME"
+  desc = "EVT_8200006_DESC"
+  picture = "nwo2_mao_with_stalin"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1946 NOT = { year = 1950 }
+    NOT = { has_global_flag = CHI_won_civil_war }
+    
+    CHI = { war_with = KMT }
+	exists = CHI
+	money = 10000
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200006_A"
+	relation = { who = CHI value = 50 } 
+	treasury = -5000 
+	small_arms = -200
+	weaponry = -100
+	CHI = { country_event = 8200007 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200006_B"
+	relation = { who = CHI value = -100 } 
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = "EVT_8200006_C"
+	relation = { who = CHI value = 100 } 
+	badboy = 10 
+	treasury = -5000
+	small_arms = -500
+	weaponry = -500
+	any_pop = { consciousness = 2 }
+	CHI = { country_event = 8200008 }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = "EVT_8200006_D"
+	relation = { who = CHI value = 150 } 
+	badboy = 4 
+	treasury = -10000
+	small_arms = -1000
+	weaponry = -1000
+	any_pop = { militancy = 1 consciousness = 1 }
+	CHI = { country_event = 8200009 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200007
+  title = "EVT_8200007_NAME"
+  desc = "EVT_8200007_DESC"
+  picture = "nwo2_soviets_in_ccw"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "EVT_8200007_A"
+	money = 5000 
+	small_arms = 200
+	weaponry = 100
+  }
+}
+country_event = {
+  id = 8200008
+  title = "EVT_8200008_NAME"
+  desc = "EVT_8200008_DESC"
+  picture = "nwo2_soviets_in_ccw"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "EVT_8200008_A"
+	money = 10000 
+	small_arms = 500
+	weaponry = 500
+  }
+}
+country_event = {
+  id = 8200009
+  title = "EVT_8200009_NAME"
+  desc = "EVT_8200009_DESC"
+  picture = "nwo2_mao_with_stalin_poster"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "EVT_8200009_A"
+	USA = { country_event = 8500101 } # nwo2_chinese_civil_war_interventions.txt
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200009_B"
+	money = 10000 
+	small_arms = 1000
+	weaponry = 1000
+	RUS = { country_event = 8200121 } # nwo2_chinese_civil_war_interventions.txt
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200010
+  title = "EVT_8200010_NAME"
+  desc = "EVT_8200010_DESC"
+  picture = "nwo2_marshall_mission"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1946 NOT = { year = 1947 }
+    CHI = { war_with = KMT }
+    NOT = { has_global_flag = CHI_won_civil_war }
+    
+  }
+
+  option = {
+    name = "EVT_8200010_A"
+	relation = { who = CHI value = 50 } 
+	relation = { who = CHI value = 150 } 
+	CHI = { country_event = 8200011 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200010_B"
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200011
+  title = "EVT_8200011_NAME"
+  desc = "EVT_8200011_DESC"
+  picture = "nwo2_marshall_mission"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "EVT_8200011_A"
+	any_pop = { militancy = -1.0 consciousness = -1 }
+	KMT = { country_event =  { id = 8200012 days = 10 } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200011_B"
+	any_pop = { consciousness = 1 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200012
+  title = "EVT_8200012_NAME"
+  desc = "EVT_8200012_DESC"
+  picture = "nwo2_marshall_mission"
+  is_triggered_only = yes # KMT 
+
+  option = {
+    name = "EVT_8200011_A"
+	any_pop = { consciousness = 2 }
+	CHI = { country_event =  { id = 8200013 days = 10 } }
+	set_country_flag = block_army_limiting 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200011_B"
+	any_pop = { militancy = 3.0 }
+	ai_chance = { factor = 0 }
+	badboy = 3
+  }
+}
+country_event = {
+  id = 8200013
+  title = "EVT_8200013_NAME"
+  desc = "EVT_8200013_DESC"
+  picture = "nwo2_marshall_mission"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "EVT_8200013_A"
+	country_event =  { id = 8200014 days = 30 }
+	USA = { country_event =  { id = 8200020 days = 90 } }
+	KMT = { country_event =  { id = 8200014 days = 30 } }
+  }
+}
+country_event = {
+  id = 8200014
+  title = "EVT_8200014_NAME"
+  desc = "EVT_8200014_DESC"
+  picture = "nwo2_marshall_mission_ends"
+  is_triggered_only = yes # CHI KMT
+
+  option = {
+    name = "EVT_8200014_A"
+	prestige = -20
+  }
+}
+country_event = {
+  id = 8200020
+  title = "EVT_8200020_NAME"
+  desc = "EVT_8200020_DESC"
+  picture = "nwo2_marshall_mission"
+  is_triggered_only = yes # USA 
+  
+  option = {
+    name = "EVT_8200020_A"
+	relation = { who = CHI value = 20 } 
+	treasury = -1500 
+	KMT = { country_event =  { id = 8200021 days = 10 } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200020_B"
+	relation = { who = CHI value = -20 } 
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.1 } } }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200021
+  title = "EVT_8200021_NAME"
+  desc = "EVT_8200021_DESC"
+  picture = "nwo2_mao_with_chiang"
+  is_triggered_only = yes # KMT 
+
+  option = {
+    name = "EVT_8200021_A"
+	relation = { who = CHI value = -50 } 
+ 	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = "EVT_8200021_B"
+	relation = { who = CHI value = 20 } 
+	any_pop = { consciousness = 2 }
+    CHI = { country_event =  { id = 8200023 days = 30 } }
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = {
+  id = 8200023
+  title = "EVT_8200023_NAME"
+  desc = "EVT_8200023_DESC"
+  picture = "nwo2_mao_with_chiang_toast"
+  is_triggered_only = yes # CHI 
+
+  option = {
+    name = "EVT_8200023_A"
+	set_global_flag = chinese_unity_govt 
+	relation = { who = KMT value = 100 } 
+	KMT = { country_event =  { id = 8200024 days = 30 } }
+	any_pop = { militancy = 1.0 consciousness = 1 }
+  }
+}
+country_event = {
+  id = 8200024
+  title = "EVT_8200024_NAME"
+  desc = "EVT_8200024_DESC"
+  picture = "nwo2_chiang_address"
+  is_triggered_only = yes # KMT 
+
+  option = {
+    name = "EVT_8200024_A"
+	relation = { who = CHI value = -100 } 
+	clr_global_flag = chinese_unity_govt 
+	CHI = { limit = { exists = KMT } country_event =  { id = 8200025 days = 30 } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200024_B"
+	relation = { who = CHI value = 20 } 
+	any_pop = { militancy = 1.0 consciousness = 1 }
+	CHI = { limit = { exists = KMT } country_event =  { id = 8200026 days = 30 } }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200025
+  title = "EVT_8200025_NAME"
+  desc = "EVT_8200025_DESC"
+  picture = "nwo2_chiang_address"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "EVT_8200025_A"
+	relation = { who = KMT value = -150 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200025_B"
+	clr_global_flag = chinese_unity_govt 
+	relation = { who = KMT value = -150 } 
+	country_event = 8200028 
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = "EVT_8200025_C"
+	end_war = KMT
+	KMT = { country_event = 8200027 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200026
+  title = "EVT_8200026_NAME"
+  desc = "EVT_8200026_DESC"
+  picture = "nwo2_chiang_address"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "EVT_8200026_A"
+	clr_global_flag = chinese_unity_govt 
+	relation = { who = CHI value = -150 } 
+	country_event = 8200028 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200026_B"
+	end_war = KMT
+	KMT = { country_event = 8200027 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200027
+  title = "EVT_8200027_NAME"
+  desc = "EVT_8200027_DESC"
+  picture = "nwo2_chiang_smiling"
+  is_triggered_only = yes # KMT
+
+  option = {
+    name = "EVT_8200026_A"
+	inherit = CHI 
+	set_global_flag = CHI_won_civil_war
+	capital = 2221 
+	any_pop = { militancy = -3.0 consciousness = -1 }
+  }
+}
+country_event = {
+  id = 8200028
+  title = "EVT_8200028_NAME"
+  desc = "EVT_8200028_DESC"
+  picture = "nwo2_chiang_thinking"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "OK"
+	any_pop = { consciousness = 1 }
+  }
+}
+country_event = {
+  id = 8200030
+  title = "EVT_8200030_NAME"
+  desc = "EVT_8200030_DESC"
+  picture = "nwo2_chinese_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1947 NOT = { year = 1963 }
+    NOT = { has_global_flag = chinese_unity_govt }
+    NOT = { has_global_flag = CHI_won_civil_war }
+	NOT = { has_global_flag = CHC_won_civil_war }
+    
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = "EVT_8200030_A"
+  }
+}
+country_event = {
+  id = 8200031
+  title = "EVT_8200031_NAME"
+  desc = "EVT_8200031_DESC"
+  picture = "nwo2_chinese_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+    year = 1947 NOT = { year = 1963 }
+    NOT = { has_global_flag = chinese_unity_govt }
+    NOT = { has_global_flag = CHI_won_civil_war }
+	NOT = { has_global_flag = CHC_won_civil_war }
+    
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = "EVT_8200030_A"
+	country_event = { id = 8230031 days = 90 }
+  }
+
+}
+country_event = {
+  id = 8200039
+  title = EVT_8200039_NAME
+  desc = EVT_8200039_DESC
+  picture = "nwo2_ija_withdrawal"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1945 NOT = { year = 1949 }
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200039_A"
+  }
+}
+country_event = {
+  id = 8200040
+  title = "EVT_8200040_NAME"
+  desc = "EVT_8200040_DESC"
+  picture = "nwo2_chiang_radio"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+    year = 1948 NOT = { year = 1949 }
+    NOT = { has_global_flag = CHI_won_civil_war }
+    
+    war_with = CHI
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200040_A"
+	any_pop = { consciousness = 1 }
+  }
+}
+country_event = {
+  id = 8200041
+  title = "EVT_8200041_NAME"
+  desc = "EVT_8200041_DESC"
+  picture = "nwo2_mao_leads"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1948 NOT = { year = 1949 }
+    NOT = { has_global_flag = CHC_won_civil_war }
+    
+    war_with = KMT
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200040_A"
+	country_event = { id = 8200042 days = 30 }
+  }
+}
+country_event = {
+  id = 8200042
+  title = "EVT_8200042_NAME"
+  desc = "EVT_8200042_DESC"
+  picture = "nwo2_chiang_radio"
+  is_triggered_only = yes
+
+  option = {
+    name = "EVT_8200042_A"
+	add_country_modifier = { name = raving_loon duration = 365 }
+  }
+}
+country_event = {
+  id = 8200043
+  title = "EVT_8200043_NAME"
+  desc = "EVT_8200043_DESC"
+  picture = "nwo2_kmt_white_terror"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+    year = 1948 NOT = { year = 1949 }
+    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = CHC_won_civil_war }
+    
+    war_with = CHI
+  }
+
+  mean_time_to_happen = { months = 6  }
+
+  option = {
+    name = "EVT_8200043_A"
+	any_pop = { militancy = 1.0 consciousness = 1 }
+  }
+}
+country_event = {
+  id = 8200044
+  title = "EVT_8200044_NAME"
+  desc = "EVT_8200044_DESC"
+  picture = "nwo2_kmt_troops_in_shermans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1946 NOT = { year = 1990 }
+    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = CHC_won_civil_war }
+    KMT = { war_with = CHI }
+	money = 120000
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200044_A"
+	relation = { who = KMT value = 100 } 
+	relation = { who = CHI value = -150 } 
+	treasury = -100000 
+	KMT = { country_event = 8200046 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200044_B"
+	relation = { who = KMT value = -20 } 
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = "EVT_8200044_C"
+	relation = { who = KMT value = 20 } 
+	relation = { who = CHI value = -50 } 
+	treasury = -10000 
+	KMT = { country_event = 8200045 }
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = "EVT_8200044_D"
+	relation = { who = KMT value = 150 } 
+	relation = { who = CHI value = -200 }
+	any_pop = { militancy = 0.5 consciousness = 1 }
+	KMT = { country_event = 8200047 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200045
+  title = "EVT_8200045_NAME"
+  desc = "EVT_8200045_DESC"
+  picture = "nwo2_kmt_troops_in_shermans"
+  is_triggered_only = yes # KMT
+
+  option = {
+    name = "EVT_8200045_A"
+	money = 10000 
+	any_pop = { militancy = -0.6 consciousness = -1 }
+  }
+}
+country_event = {
+  id = 8200046
+  title = "EVT_8200046_NAME"
+  desc = "EVT_8200046_DESC"
+  picture = "nwo2_kmt_troops_in_shermans"
+  is_triggered_only = yes # KMT
+
+  option = {
+    name = "EVT_8200046_A"
+	treasury = 100000 
+	any_pop = { militancy = -1.2 consciousness = -1 }
+  }
+}
+country_event = {
+  id = 8200047
+  title = "EVT_8200047_NAME"
+  desc = "EVT_8200047_DESC"
+  picture = "nwo2_chiang_with_stilwell"
+  is_triggered_only = yes # KMT
+
+  option = {
+    name = "EVT_8200047_A"
+	RUS = { country_event = 8500111 }  # nwo2_chinese_civil_war_interventions.txt
+	money = 50000 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200047_B"
+	money = 50000 
+	USA = { country_event =  8200120 }  # nwo2_chinese_civil_war_interventions.txt
+	any_pop = { militancy = -1.2 consciousness = -1 }
+	ai_chance = { factor = 0 }
+  }
+}
+province_event = {
+  id = 8200050
+  title = "EVT_8200050_NAME"
+  desc = "EVT_8200050_DESC"
+  picture = "nwo2_maoist_partisans"
+
+  trigger = {
+	owned_by = KMT
+    controlled_by = KMT
+    year = 1946 NOT = { year = 1952 }
+    NOT = { has_global_flag = CHC_won_civil_war }
+    owner = { war = yes  war_with = CHI }
+	has_national_minority = no
+	NOT = { country_units_in_province = KMT }
+	NOT = { region = CHI_1578 } # no rebellion in Sichuan
+	NOT = { region = CHI_1579 } 
+	NOT = { region = RUS_1065 }
+	NOT = { region = CHI_1485 } # not in Taiwan
+	NOT = { province_id = 1499 } # not on other islands
+	NOT = { province_id = 2576 } # not on other islands
+  }
+
+  mean_time_to_happen = { months = 180 }
+
+  option = {
+    name = "EVT_8200050_A"
+	change_controller = CHI
+  }
+
+}
+country_event = {
+  id = 8200100
+  title = "EVT_8200100_NAME"
+  desc = "EVT_8200100_DESC"
+  picture = "nwo2_chiang_smiling"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+    year = 1948 NOT = { year = 1963 }
+    NOT = { exists = CHI }
+    NOT = { has_global_flag = CHI_won_civil_war }
+    
+	war = no
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200100_A"
+	any_pop = { militancy = -0.5 consciousness = 1 }
+	capital = 2221 
+	set_global_flag = CHI_won_civil_war 
+  }
+}
+country_event = {
+  id = 8200101
+  title = "EVT_8200101_NAME"
+  desc = "EVT_8200101_DESC"
+  picture = "nwo2_chiang_crying"
+  is_triggered_only = yes #KMT
+
+
+  option = {
+    name = "EVT_8200101_A"
+	CHI = { country_event = 8200104 }
+  }
+}
+country_event = {
+  id = 8200103
+  title = "EVT_8200103_NAME"
+  desc = "EVT_8200103_DESC"
+  picture = "nwo2_mao_announces_prc"
+  fire_only_once = yes
+  
+  major = yes
+
+  trigger = {
+    tag = CHI
+	war = no
+	owns = 1612
+	1612 = { is_capital = no } 
+  }
+
+  option = {
+    name = "EVT_8200103_A"
+	set_global_flag = CHC_won_civil_war 
+	capital = 1612 
+	any_pop = { militancy = -1.0 consciousness = 1  }
+	RUS  = { country_event = 8225000 } 
+  }
+}
+country_event = {
+  id = 8200104
+  title = "EVT_8200104_NAME"
+  desc = "EVT_8200104_DESC"
+  picture = "nwo2_mao_announces_prc"
+  is_triggered_only = yes # CHI
+
+  option = {
+    name = "EVT_8200104_A"
+	set_global_flag = CHC_won_civil_war 
+	any_pop = { militancy = -2.0 consciousness = 1 }
+  }
+
+}
+country_event = {
+  id = 8200110
+  title = EVT_8200110_NAME
+  desc = EVT_8200110_DESC
+  picture = "nwo2_united_china"
+
+  trigger = {
+    OR = { tag = KMT tag = CHI }
+    year = 1950 NOT = { year = 1963 }
+	war = no
+	OR = { 
+		has_global_flag = CHI_won_civil_war
+		has_global_flag = CHC_won_civil_war
+	}
+	any_neighbor_country = { 
+		war = no
+		is_vassal = no
+		NOT = { truce_with = THIS } 
+		is_cultural_union = THIS
+		part_of_sphere = no
+		OR = { tag = FUJ tag = KWA tag = YNN tag = NGX tag = GGX tag = ETS }
+	}
+  }
+
+  mean_time_to_happen = { months = 6  }
+
+  option = {
+    name = "EVT_8200110_A"
+    random_country = {
+        limit = {
+			war = no
+			is_vassal = no
+			NOT = { truce_with = THIS } 
+			OR = { tag = FUJ tag = KWA tag = YNN tag = NGX tag = GGX tag = ETS }
+        }
+		country_event = 8200111
+    }
+	badboy = 2
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = "EVT_8200110_B"
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200111
+  title = "EVT_8200111_NAME"
+  desc = "EVT_8200111_DESC"
+  picture = "nwo2_united_china"
+  is_triggered_only = yes
+
+  option = {
+    name = "EVT_8200111_A"
+	FROM = { inherit = THIS }
+	ai_chance = { factor = 0 }
+  }
+  option = {
+    name = "EVT_8200111_B"
+	FROM = { war = { target = THIS attacker_goal = { casus_belli = annex_core_country }  defender_goal = { casus_belli = status_quo } } }
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = {
+  id = 8200130
+  title = "EVT_8200130_NAME"
+  desc = "EVT_8200130_DESC"
+  picture = "nwo2_soldiers_return_home"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    NOT = { year = 1963 }
+    has_global_flag = CHC_won_civil_war
+    war = no
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200130_A"
+	any_pop = { consciousness = 2 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8200130_B"
+	any_pop = { militancy = 1.5 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200140
+  title = "EVT_8200140_NAME"
+  desc = "EVT_8200140_DESC"
+  picture = "nwo2_mao_with_stalin"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1944 NOT = { year = 1946 }
+    
+    CHI = { vassal_of = RUS }
+  }
+
+  mean_time_to_happen = { months = 2  }
+
+  option = {
+    name = EVT_8200140_A
+	CHI = { country_event = 8200141 }
+	any_pop = { consciousness = 2 }
+	badboy = -5 
+	relation = { who = CHI value = 150 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8200140_B
+	any_pop = { militancy = 0.5  }
+	badboy = 15 
+	relation = { who = CHI value = -100 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8200141
+  title = "EVT_8200141_NAME"
+  desc = "EVT_8200141_DESC"
+  picture = "nwo2_mao_with_stalin"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8200141_A
+	overlord = { release_vassal = THIS } 
+  }
+}
+country_event = {
+  id = 8200152
+  title = EVT_8200152_NAME
+  desc = EVT_8200152_DESC
+  picture = "nwo2_chinese_civil_war"
+
+  trigger = {
+    tag = CHI
+	war = no
+	exists = CHI
+	exists = KMT
+    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = CHC_won_civil_war }
+	NOT = { year = 1992 }
+	NOT = { casus_belli = KMT }
+  }
+  
+  mean_time_to_happen = {months = 1 }
+
+  option = {
+    name = EVT_8200152_A
+	casus_belli = { target = KMT type = civil_war months = 48 }
+	relation = { who = KMT value = -200 }
+  }
+}
+country_event = {
+  id = 8200162
+  title = EVT_8200152_NAME
+  desc = EVT_8200152_DESC
+  picture = "nwo2_chinese_civil_war"
+
+  trigger = {
+    tag = KMT
+	war = no
+	exists = CHI
+	exists = KMT
+    NOT = { has_global_flag = CHC_won_civil_war }
+    NOT = { has_global_flag = CHI_won_civil_war }
+	NOT = { year = 1992 }
+	NOT = { casus_belli = KMT }
+  }
+  
+  mean_time_to_happen = {months = 1 }
+
+  option = {
+    name = EVT_8200152_A
+	casus_belli = { target = CHI type = civil_war months = 48 }
+	relation = { who = CHI value = -200 }
+  }
+}
+country_event = {
+  id = 8200171
+  title = EVT_8200161_NAME
+  desc = EVT_8200161_DESC
+  picture = "nwo2_chinese_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    OR = { tag = CHI tag = KMT }
+    NOT = { year = 1963 }
+	war = no
+    OR = { 
+      has_global_flag = CHI_won_civil_war
+      has_global_flag = CHC_won_civil_war
+    }
+	has_country_flag = block_army_limiting
+  }
+
+  mean_time_to_happen = { months = 2  }
+
+  option = {
+    name = EVT_8200161_A
+	clr_country_flag = block_army_limiting 
+  }
+}
+country_event = {
+  id = 8500101
+  title = EVT_8500101_NAME
+  desc = EVT_8500101_DESC
+  picture = "nwo2_mao_with_stalin_poster"
+
+  is_triggered_only = yes # chinese_civil_war.txt as USA
+
+  option = {
+    name = EVT_8500101_A
+	relation = { who = RUS value = 50 } 
+	relation = { who = KMT value = -200 } 
+	set_global_flag = ccw_american_nonintervention 
+	prestige = -5
+	CHI = { country_event = 8500104 }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500101_B
+	relation = { who = RUS value = -100 } 
+	relation = { who = CHI value = -100 } 
+	relation = { who = KMT value = 100 } 
+	RUS = { country_event = 8500102 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500102
+  title = EVT_8500102_NAME
+  desc = EVT_8500102_DESC
+  picture = "nwo2_mao_with_stalin_poster"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8500102_A
+	relation = { who = USA value = 50 } 
+	set_global_flag = ccw_soviet_nonintervention 
+  }
+
+  option = {
+    name = EVT_8500102_B
+	relation = { who = USA value = -50 } 
+	relation = { who = CHI value = 100 } 
+	relation = { who = KMT value = -100 } 
+	CHI = { country_event = 8500104 }
+	USA = { country_event = 8500103 }
+  }
+}
+country_event = {
+  id = 8500103
+  title = EVT_8500103_NAME
+  desc = EVT_8500103_DESC
+  picture = "nwo2_mao_with_stalin_poster"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8500103_A
+	create_alliance = KMT 
+	relation = { who = CHI value = -100 } 
+	relation = { who = KMT value = 100 } 
+  }
+
+  option = {
+    name = EVT_8500103_B
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
+	any_pop = { consciousness = 1 }
+	set_global_flag = ccw_american_nonintervention 
+  }
+}
+country_event = {
+  id = 8500104
+  title = EVT_8500104_NAME
+  desc = EVT_8500104_DESC
+  picture = "nwo2_mao_with_stalin_poster"
+  is_triggered_only = yes 
+
+  option = {
+    name = EVT_8500104_A
+	create_alliance = RUS 
+  }
+}
+country_event = {
+  id = 8500111
+  title = EVT_8500111_NAME
+  desc = EVT_8500111_DESC
+  picture = "nwo2_kmt_troops_in_shermans"
+
+  is_triggered_only = yes # chinese_civil_war.txt as RUS
+  
+  option = {
+    name = EVT_8500111_A
+	relation = { who = USA value = 50 } 
+	relation = { who = CHI value = -200 } 
+	set_global_flag = ccw_soviet_nonintervention 
+	KMT = { country_event = 8500114 } 
+	prestige = -5
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500111_B
+	relation = { who = USA value = -100 } 
+	relation = { who = KMT value = -100 } 
+	relation = { who = CHI value = 150 } 
+	USA = { country_event = 8500112 } 
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500112
+  title = EVT_8500112_NAME
+  desc = EVT_8500112_DESC
+  picture = "nwo2_kmt_troops_in_shermans"
+
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500102_A
+	relation = { who = RUS value = 50 } 
+	set_global_flag = ccw_american_nonintervention 
+  }
+
+  option = {
+    name = EVT_8500102_B
+	relation = { who = RUS value = -50 } 
+	RUS = { country_event = 8500113 }
+	country_event = 8500114 
+  }
+}
+country_event = {
+  id = 8500113
+  title = EVT_8500113_NAME
+  desc = EVT_8500113_DESC
+  picture = "nwo2_kmt_troops_in_shermans"
+
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500113_A
+	create_alliance = CHI 
+	relation = { who = RUS value = 100 } 
+  }
+
+  option = {
+    name = EVT_8500113_B
+	any_pop = { consciousness = 1 }
+	set_global_flag = ccw_soviet_nonintervention 
+  }
+}
+country_event = {
+  id = 8500114
+  title = EVT_8500114_NAME
+  desc = EVT_8500114_DESC
+  picture = "nwo2_kmt_troops_in_shermans"
+
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8500104_A
+	create_alliance = USA 
+  }
+}
+country_event = {
+  id = 8200120
+  title = "EVT_8200120_NAME"
+  desc = "EVT_8200120_DESC"
+  picture = "nwo2_kmt_flees_to_taiwan"
+  is_triggered_only = yes # USA
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "EVT_8200120_A"
+	prestige = -20
+  }
+}
+country_event = {
+  id = 8200121
+  title = "EVT_8200121_NAME"
+  desc = "EVT_8200121_DESC"
+  picture = "nwo2_failed_intervention"
+  is_triggered_only = yes
+
+  option = {
+    name = "EVT_8200121_A"
+	prestige = -20
+  }
+}
+country_event = {
+  id = 8002910
+  title = EVT_8002910_NAME
+  desc = EVT_8002910_DESC
+  picture = "nwo2_death_chiang_kai_shek"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1975 NOT = { year = 1977 }
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8002910_A
+	prestige = 10
+  }
+}
+country_event = {
+  id = 8002916
+  title = EVT_8002916_NAME
+  desc = EVT_8002916_DESC
+  picture = "nwo2_taiwan_land_reform"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1948 NOT = { year = 1963 }
+    has_global_flag = CHC_won_civil_war
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = "EVT_8002916_A"
+	add_country_modifier = { name = economic_boom duration = 365 }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8002916_B"
+    ai_chance = { factor = 0 }
+	any_pop = {  consciousness = 1 }
+  }
+}
+country_event = {
+  id = 8002920
+  title = EVT_8002920_NAME
+  desc = EVT_8002920_DESC
+  picture = "nwo2_chiang_smiling"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1954 NOT = { year = 1990 }
+    has_global_flag = CHI_won_civil_war
+	war = no
+	RUS = { war = no }
+	USA = { war = no }
+	MGL = { war = no }
+	ETS = { war = no }
+  }
+
+  mean_time_to_happen = { months = 3  }
+
+  option = {
+    name = EVT_8002920_A
+    ai_chance = { factor = 100 }
+	USA = { country_event = 8002921 }
+  }
+
+  option = {
+    name = EVT_8002920_B
+    ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002920_C
+    ai_chance = { factor = 0 }
+	RUS = { country_event = 8002922 }
+	any_pop = { militancy = 1.0  consciousness = 1 }
+  }
+}
+country_event = {
+  id = 8002921
+  title = EVT_8002921_NAME
+  desc = EVT_8002921_DESC
+  picture = "nwo2_chiang_smiling"
+  is_triggered_only = yes # USA
+
+  option = {
+    name = EVT_8002921_A
+	create_alliance = KMT 
+	relation = { who = KMT value = 200 } 
+	KMT = { country_event = 8002932 }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002921_B
+	relation = { who = KMT value = -150 } 
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002922
+  title = EVT_8002922_NAME
+  desc = EVT_8002922_DESC
+  picture = "nwo2_chiang_smiling"
+  is_triggered_only = yes # RUS
+
+  option = {
+    name = EVT_8002922_A
+	any_pop = {  consciousness = 1 }
+	create_alliance = KMT 
+	relation = { who = KMT value = 200 } 
+	KMT = { country_event = 8002923 }
+    ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002922_B
+	relation = { who = KMT value = -150 } 
+	KMT = { country_event = 8002932 }
+    ai_chance = { factor = 100 }
+  }
+}
+country_event = {
+  id = 8002923
+  title = EVT_8002923_NAME
+  desc = EVT_8002923_DESC
+  picture = "nwo2_mongolia"
+  is_triggered_only = yes # KMT
+
+  option = {
+    name = EVT_8002923_A
+    random_country = { limit = { tag = MGL MGL = { ai = yes } } inherit = MGL }
+    random_country = { limit = { tag = ETS ETS = { ai = yes } } inherit = ETS }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002923_B
+    random_country = { limit = { tag = MGL MGL = { ai = yes } } inherit = MGL } 
+    ai_chance = { factor = 0 }
+ }
+
+  option = {
+    name = EVT_8002923_C
+    random_country = { limit = { tag = ETS ETS = { ai = yes } } inherit = ETS }
+    ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002923_D
+  }
+}
+country_event = { 
+  id = 8002932
+  title = EVT_8002932_NAME
+  desc = EVT_8002932_DESC
+  picture = "nwo2_sino_russian_unequal_treaties"
+  is_triggered_only = yes # KMT
+
+  option = {
+    name = EVT_8002932_A
+	1469 = { add_core =  THIS }
+	MGL = { all_core = { add_core =  THIS } }
+  }
+}
+country_event = {
+  id = 8002924
+  title = EVT_8002924_NAME
+  desc = EVT_8002924_DESC
+  picture = "nwo2_kmt_sovietunion"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+	year = 1954 NOT = { year = 1990 }
+    has_global_flag = CHI_won_civil_war
+    KMT = { alliance_with = RUS }
+  }
+
+  mean_time_to_happen = { months = 3  }
+
+  option = {
+    name = EVT_8002924_A
+	KMT = { country_event = 8002925 }
+	badboy = 10 
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002924_B
+	any_pop = {  consciousness = 1 militancy = 0.5 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002925
+  title = EVT_8002925_NAME
+  desc = EVT_8002925_DESC
+  picture = "nwo2_chiang_thinking"
+  fire_only_once = yes
+  is_triggered_only = yes # KMT
+
+
+  option = {
+    name = EVT_8002925_A
+	any_pop = { militancy = -0.5  consciousness = 1 }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002925_B
+    ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002925_C
+	RUS = { country_event = 8002926 }
+	create_alliance = USA 
+	any_pop = { militancy = 2.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002926
+  title = EVT_8002926_NAME
+  desc = EVT_8002926_DESC
+  picture = "nwo2_kmt_unitedstates"
+  is_triggered_only = yes # RUS
+
+
+  option = {
+    name = EVT_8002926_A
+	prestige = -40
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002926_B
+	any_pop = { militancy = 1.0  consciousness = 1 }
+	casus_belli = { target = KMT type = humiliate }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002927
+  title = EVT_8002927_NAME
+  desc = EVT_8002927_DESC
+  picture = "nwo2_kmt_unitedstates"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+	government = proletarian_dictatorship
+	year = 1945 NOT = { year = 1959 }
+    exists = MGL
+    has_global_flag = CHI_won_civil_war
+    MGL = { ai = yes }
+    MGL = { vassal_of = RUS }
+    KMT = { alliance_with = USA }
+  }
+
+  mean_time_to_happen = { months = 3  }
+
+  option = {
+    name = EVT_8002927_A
+	KMT = { country_event = 8002928 } 
+	badboy = 10 
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002927_B
+	any_pop = { militancy = 0.5  consciousness = 1 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002928
+  title = EVT_8002928_NAME
+  desc = EVT_8002928_DESC
+  picture = "nwo2_chiang_thinking"
+  fire_only_once = yes
+  is_triggered_only = yes # KMT
+
+  option = {
+    name = EVT_8002928_A
+	any_pop = { consciousness = 2 }
+	RUS = { country_event = 8002930 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002928_B
+	RUS = { country_event = 8002930 } 
+    ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8002928_C
+	USA = { country_event = 8002929 } 
+	create_alliance = RUS 
+	any_pop = { militancy = 2.0 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002929
+  title = EVT_8002929_NAME
+  desc = EVT_8002929_DESC
+  picture = "nwo2_kmt_sovietunion"
+  is_triggered_only = yes # USA
+
+  option = {
+    name = EVT_8002929_A
+	any_pop = {  consciousness = 1 }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002929_B
+	any_pop = { militancy = 1.0 }
+	casus_belli = { target = KMT type = humiliate }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002930
+  title = EVT_8002930_NAME
+  desc = EVT_8002930_DESC
+  picture = "nwo2_new_chinese_soviet"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8002930_A
+	any_pop = {  consciousness = 2 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002930_B
+	# TODO war KMT
+	any_pop = { militancy = 1.5 }
+	badboy = 20 
+	money = -2000 
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002940
+  title = EVT_8002940_NAME
+  desc = EVT_8002940_DESC
+  picture = "nwo2_chinese_communist_partisans"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1945 NOT = { year = 1990 }
+    has_global_flag = CHC_won_civil_war
+    political_reform_want = 0.3
+    ruling_party_ideology = populist
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8002940_A
+	any_pop = { militancy = 0.5 consciousness = 1 }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002940_B
+	any_pop = { militancy = 1.2 }
+	prestige = 2
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002941
+  title = EVT_8002941_NAME
+  desc = EVT_8002941_DESC
+  picture = "nwo2_old_chinese_dollar"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1945 NOT = { year = 1959 }
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8002941_A
+	any_pop = { militancy = 1.2 }
+	add_country_modifier = { name = great_depression duration = 1700 }
+  }
+}
+country_event = {
+  id = 8002942
+  title = EVT_8002942_NAME
+  desc = EVT_8002942_DESC
+  picture = "nwo2_new_chinese_dollar"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1954 NOT = { year = 1959 }
+    has_global_flag = CHI_won_civil_war
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8002942_A
+	any_pop = {  consciousness = 1 }
+	add_country_modifier = { name = economic_boom duration = 365 }
+	remove_country_modifier = great_depression
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002942_B
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002943
+  title = EVT_8002943_NAME
+  desc = EVT_8002943_DESC
+  picture = "nwo2_kmt_political_reform"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1945 NOT = { year = 1959 }
+    has_global_flag = CHI_won_civil_war
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8002943_A
+	any_pop = {  consciousness = 1 }
+	government = democracy  country_event = 800054
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002943_B
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002944
+  title = EVT_8002944_NAME
+  desc = EVT_8002944_DESC
+  picture = "nwo2_kmt_end_of_martial_law"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1954 NOT = { year = 1990 }
+	government = democracy
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8002944_A
+	any_pop = {  consciousness = 1 }
+	prestige = 10 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002944_B
+    ai_chance = { factor = 0 }
+	prestige = -50 
+  }
+}
+country_event = {
+  id = 8002945
+  title = EVT_8002945_NAME
+  desc = EVT_8002945_DESC
+  picture = "nwo2_petitioning_law"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1959 NOT = { year = 1990 }
+	government = democracy
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8002945_A
+	any_pop = { militancy = 0.5  consciousness = 1 }
+	money = -1000 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002945_B
+	any_pop = { militancy = 1.0 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002946
+  title = EVT_8002946_NAME
+  desc = EVT_8002946_DESC
+  picture = "nwo2_taiwan_land_reform"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1954 NOT = { year = 1990 }
+	NOT = { government = democracy }
+  }
+
+  mean_time_to_happen = { months = 8  }
+
+  option = {
+    name = EVT_8002946_A
+	any_pop = { militancy = -1.5  consciousness = 1 }
+	add_country_modifier = { name = stock_market_crash duration = 3500 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002946_B
+	any_pop = { militancy = 1.0 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002948
+  title = EVT_8002948_NAME
+  desc = EVT_8002948_DESC
+  picture = "nwo2_kmt_end_of_instability"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1960 NOT = { year = 1990 }
+	war = no
+  }
+
+  option = {
+    name = EVT_8002948_A
+	any_pop = { militancy = -2.0  consciousness = -2 }
+	add_country_modifier = { name = economic_boom duration = 365 }
+  }
+}
+country_event = {
+  id = 8002950
+  title = EVT_8002950_NAME
+  desc = EVT_8002950_DESC
+  picture = "nwo2_chinese_vietnam"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1945 NOT = { year = 1990 }
+	owns = 1369 # Hanoi
+	NOT = { exists = DAI }
+  }
+
+  mean_time_to_happen = { months = 3  }
+
+  option = {
+    name = EVT_8002950_A
+	release = DAI
+	DAI = { government = nationalist_dictatorship  country_event = 800050 }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002950_B
+	badboy = 10 
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002951
+  title = EVT_8002951_NAME
+  desc = EVT_8002951_DESC
+  picture = "nwo2_new_chinese_dollar"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1946 NOT = { year = 1990 }
+	money = 1100000
+    NOT = { has_country_flag  = loans_repaid }
+    has_global_flag = CHI_won_civil_war
+  }
+
+  mean_time_to_happen = { months = 6  }
+
+  option = {
+    name = EVT_8002951_A
+	treasury = -1000000 
+	set_country_flag = loans_repaid 
+	USA = { country_event = 8002952  }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002951_B
+	relation = { who = USA value = -100 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002952
+  title = EVT_8002952_NAME
+  desc = EVT_8002952_DESC
+  picture = "nwo2_new_chinese_dollar"
+  is_triggered_only = yes # USA
+
+  option = {
+    name = EVT_8002952_A
+	treasury = 1000000 
+	relation = { who = KMT value = 100 } 
+  }
+}
+country_event = {
+  id = 8002953
+  title = EVT_8002953_NAME
+  desc = EVT_8002953_DESC
+  picture = "nwo2_new_chinese_dollar"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1946 NOT = { year = 1959 }
+    has_global_flag = event_fired_8002948
+    has_global_flag = CHI_won_civil_war
+  }
+
+  mean_time_to_happen = { months = 3  }
+
+  option = {
+    name = EVT_8002953_A
+	money = -5000 
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002953_B
+	any_pop = { militancy = 1.0 }
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8002954
+  title = EVT_8002954_NAME
+  desc = EVT_8002954_DESC
+  picture = "nwo2_kmt_end_of_instability"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+	year = 1964 NOT = { year = 1990 }
+    has_global_flag = CHI_won_civil_war
+  }
+
+  mean_time_to_happen = { months = 3  }
+
+  option = {
+    name = EVT_8002954_A
+	money = -5000 
+	add_country_modifier = { name = backroom_boy duration = 365 }
+    ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8002954_B
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = { # # China in United Nations Security Council
+  id = 8207000
+  title = EVT_8207000_NAME
+  desc = EVT_8207000_DESC
+  picture = "nwo2_communist_china_in_unsc"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+	year = 1954 
+	OR = { 
+		year = 1992
+		NOT = { exists = KMT }
+	}
+    war = no
+	NOT = { has_global_flag = CHI_in_UNSC }
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = EVT_8207000_A
+	set_global_flag = CHI_in_UNSC 
+  }
+}
+country_event = {
+  id = 8207001
+  title = EVT_8207001_NAME
+  desc = EVT_8207001_DESC
+  picture = "nwo2_communist_china_in_unsc"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+	year = 1944 NOT = { year = 1990 }
+    NOT = { has_global_flag = CHI_in_UNSC }
+    exists = CHI
+    has_global_flag = CHC_won_civil_war
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = EVT_8207001_A
+	country_event = 8207002 
+	relation = { who = CHI value = 200 }
+	ai_chance = { factor = 1 modifier = { factor = 100 NOT = { exists = KMT } } }
+  }
+
+  option = {
+    name = EVT_8207001_B
+	relation = { who = CHI value = -200 }
+	ai_chance = { factor = 10 }
+  }
+}
+country_event = {
+  id = 8207002
+  title = EVT_8207002_NAME
+  desc = EVT_8207002_DESC
+  picture = "nwo2_communist_china_in_unsc"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8207002_A
+	set_global_flag = CHI_in_UNSC 
+	any_pop = {  consciousness = 1 }
+  }
+}
+country_event = {
+  id = 8207003
+  title = EVT_8207003_NAME
+  desc = EVT_8207003_DESC
+  picture = "nwo2_soviet_boycott_of_unsc"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1949 NOT = { year = 1950 }
+    NOT = { has_global_flag = CHI_in_UNSC }
+    exists = CHI
+    has_global_flag = CHC_won_civil_war
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = EVT_8207003_A
+	prestige = -10 
+	USA = { country_event = 8207004 } 
+	set_global_flag = un_soviet_boycott 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8207003_B
+	prestige = -50 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8207004
+  title = EVT_8207004_NAME
+  desc = EVT_8207004_DESC
+  picture = "nwo2_soviet_boycott_of_unsc"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8207004_A
+	relation = { who = CHI value = -100 } 
+	relation = { who = RUS value = -20 } 
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8207004_B
+	CHI = { country_event = 8207002 } 
+	clr_global_flag = un_soviet_boycott 
+	relation = { who = CHI value = 200 } 
+	relation = { who = RUS value = 50 } 
+	relation = { who = KMT value = -50 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8207005
+  title = EVT_8207005_NAME
+  desc = EVT_8207005_DESC
+  picture = "nwo2_soviet_boycott_of_unsc"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1950 NOT = { year = 1990 }
+    has_global_flag = un_soviet_boycott
+	has_global_flag = korea_war # TODO what flag?
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = EVT_8207005_A
+	clr_global_flag = un_soviet_boycott 
+	relation = { who = RUS value = 50 } 
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8207005_B
+	ai_chance = { factor = 0 }
+	any_pop = {  consciousness = 1 }
+  }
+}

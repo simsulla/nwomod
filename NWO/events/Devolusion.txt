@@ -12,6 +12,7 @@ country_event = {
 			OR = {
 				owner = { has_country_modifier = sectarian_divide }
 				minorities_reform = minorities_equal_rights
+				is_colonial = yes
 			}
 			has_national_minority = yes
 			any_core = { NOT = { tag = THIS } }
@@ -29,7 +30,7 @@ country_event = {
 		modifier = {
 			factor = 0.8
 			any_owned_province = {
-				state_scope = { flashpoint_tension  = 20 }
+				state_scope = { flashpoint_tension  = 10 }
 			}
 		}
 		# a dominating primary culture makes us more likely to request autonomy

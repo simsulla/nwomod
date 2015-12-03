@@ -15,21 +15,15 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = {
-				small_arms = 1000
-				weaponry = 1000
-				ships = 1000
-				aeroplanes = 1000
-			}
+			small_arms = 1000
 		}
 
 		effect = {
 			remove_country_modifier = call_for_support_against_democracy
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_democracy THIS = { small_arms = 1000 } } small_arms = 1000 THIS = { small_arms = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_democracy THIS = { weaponry = 1000 } } weaponry = 1000 THIS = { weaponry = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_democracy THIS = { ships = 1000 } } ships = 1000 THIS = { ships = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_democracy THIS = { aeroplanes = 1000 } } aeroplanes = 1000 THIS = { aeroplanes = -1000 } }
+			small_arms = -1000
+			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_democracy THIS = { small_arms = 1000 } } small_arms = 1000 }
 		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	war_support_against_communism = {
@@ -41,21 +35,15 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = {
-				small_arms = 1000
-				weaponry = 1000
-				ships = 1000
-				aeroplanes = 1000
-			}
+			small_arms = 1000
 		}
 
 		effect = {
 			remove_country_modifier = call_for_support_against_communism
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_communism THIS = { small_arms = 1000 } } small_arms = 1000 THIS = { small_arms = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_communism THIS = { weaponry = 1000 } } weaponry = 1000 THIS = { weaponry = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_communism THIS = { ships = 1000 } } ships = 1000 THIS = { ships = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_communism THIS = { aeroplanes = 1000 } } aeroplanes = 1000 THIS = { aeroplanes = -1000 } }
+			small_arms = -1000
+			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_communism THIS = { small_arms = 1000 } } small_arms = 1000 }
 		}
+		ai_will_do = { factor = 1 }
 	}
 
 	war_support_against_dictatorship = {
@@ -76,11 +64,10 @@ political_decisions = {
 
 		effect = {
 			remove_country_modifier = call_for_support_against_dictatorship
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_dictatorship THIS = { small_arms = 1000 } } small_arms = 1000 THIS = { small_arms = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_dictatorship THIS = { weaponry = 1000 } } weaponry = 1000 THIS = { weaponry = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_dictatorship THIS = { ships = 1000 } } ships = 1000 THIS = { ships = -1000 } }
-			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_dictatorship THIS = { aeroplanes = 1000 } } aeroplanes = 1000 THIS = { aeroplanes = -1000 } }
+			small_arms = -1000
+			any_country = { limit = { war = yes has_country_modifier = call_for_support_against_dictatorship THIS = { small_arms = 1000 } } small_arms = 1000 }
 		}
+		ai_will_do = { factor = 1 }
 	}	
 
 }
