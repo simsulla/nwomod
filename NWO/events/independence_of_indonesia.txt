@@ -60,10 +60,15 @@ country_event = {
   option = {
     name = EVT_8206003_A
 	any_pop = { militancy = 1.0 consciousness = 2 }
+	casus_belli = { target = IDO type = make_puppet months = 12 }
 	war = { 
 		target = IDO
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1413 }
-		attacker_goal = { casus_belli = conquest }
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1399 }
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1406 }
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1420 }
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1417 }
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1415 }
+		attacker_goal = { casus_belli = make_puppet }
 	}
 	ai_chance = { factor = 100 }
   }
