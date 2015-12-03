@@ -8,11 +8,10 @@ country_event = {
   trigger = { # ai = no by decition egypt.txt
     tag = EGY
 	ai = yes
-    year = 1958 NOT = { year = 1963 }
+    year = 1958 NOT = { year = 1990 }
 	government = presidential_dictatorship # nasser
     exists = SYR
-	SYR = { is_vassal = no part_of_sphere = no }
-    
+	SYR = { is_vassal = no part_of_sphere = no war = no }
     war = no
   }
 
