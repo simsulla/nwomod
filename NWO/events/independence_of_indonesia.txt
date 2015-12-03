@@ -47,9 +47,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = IDO
+    tag = NET
     year = 1945 NOT = { year = 1990 }
-	is_vassal = no
+	exists = IDO
+	IDO = { owns = 1416 }
     war = no
     
   }
@@ -60,9 +61,9 @@ country_event = {
     name = EVT_8206003_A
 	any_pop = { militancy = 1.0 consciousness = 2 }
 	war = { 
-		target = NET
-		attacker_goal = { casus_belli = acquire_core_state state_province_id = 1413 }
-		defender_goal = { casus_belli = conquest }
+		target = IDO
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1413 }
+		attacker_goal = { casus_belli = conquest }
 	}
 	ai_chance = { factor = 100 }
   }
@@ -83,7 +84,7 @@ country_event = {
   
   option = {
     name = EVT_8206004_A
-	NET = { inherit = IDO }
+	release_vassal = IDO
   }
 }
 country_event = { # Ceasefire of 1945
