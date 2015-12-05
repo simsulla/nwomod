@@ -286,9 +286,10 @@ country_event = {
 
   trigger = {
     tag = CZH
-    year = 1989 NOT = { year = 1990 }
     has_global_flag = autumn_of_nations
 	government = proletarian_dictatorship
+	OR = { vassal_of = RUS is_vassal = no }
+	war = no
   }
 
   mean_time_to_happen = { months = 1  }
@@ -297,13 +298,13 @@ country_event = {
     name = EVT_8023130_A
 	any_pop = { militancy = -1.0  consciousness = 1 }
 	government = democracy  country_event = 800054
+	overlord = { country_event = 8014250 } 
 	ai_chance = { factor  = 100 }
   }
 
   option = {
     name = EVT_8023130_B
-	any_pop = { militancy = 2.5 }
-	random_country = { limit = { tag = CZH is_vassal = yes } overlord = { release_vassal = CZH } }
+	any_pop = { militancy = 3 consciousness = 3 }
 	ai_chance = { factor  = 0 }
   }
 }

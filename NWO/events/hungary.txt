@@ -1,35 +1,4 @@
 country_event = {
-  id = 8021308
-  title = EVT_8021308_NAME
-  desc = EVT_8021308_DESC
-  picture = "nwo2_hungarian_revolution_1956_victory"
-  is_triggered_only = yes
-
-  option = {
-    name = EVT_8021308_A
-	government = democracy
-	ai_chance = { factor = 100 }
-  }
-
-  option = {
-    name = EVT_8021308_B
-	government = democracy country_event = 800054
-	ruling_party_ideology  = communist
-	ai_chance = { factor = 0 }
-  }
-}
-country_event = {
-  id = 8021309
-  title = EVT_8021309_NAME
-  desc = EVT_8021309_DESC
-  picture = "nwo2_hungarian_revolution_1956_aftermath"
-  is_triggered_only = yes
-
-  option = {
-    name = EVT_8021309_A
-  }
-}
-country_event = {
   id = 8021317
   title = EVT_8021317_NAME
   desc = EVT_8021317_DESC
@@ -78,8 +47,10 @@ country_event = {
 
   trigger = {
     tag = HUN
-    year = 1989 NOT = { year = 1991 }
+	OR = { vassal_of = RUS is_vassal = no }
+	government = proletarian_dictatorship
     has_global_flag = autumn_of_nations
+	war = no
   }
 
   mean_time_to_happen = { months = 1  }
@@ -87,8 +58,8 @@ country_event = {
   option = {
     name = EVT_8021319_A
 	any_pop = { militancy = -0.5 consciousness = -1 }
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.1 } } }
 	government = democracy country_event = 800054
+	overlord = { country_event = 8014250 } 
 	ai_chance = { factor = 0 }
   }
 
@@ -108,8 +79,9 @@ country_event = {
 
   option = {
     name = EVT_8021320_A
-	country_event = 8006905 
+	any_pop = { militancy = -5 }
 	government = democracy country_event = 800054
+	overlord = { country_event = 8014250 } 
   }
 
   option = {

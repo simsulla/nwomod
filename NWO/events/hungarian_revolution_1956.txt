@@ -123,7 +123,7 @@ country_event = {
   option = {
     name = EVT_8501104_A
 	relation = { who = RUS value = -100 } 
-	country_event = 8021308 # communist_hungary.txt
+	country_event = 8021308 
   }
 }
 country_event = {
@@ -301,5 +301,36 @@ country_event = {
     name = EVT_8501113_B
 	any_pop = { militancy = 1.5 }
 	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8021308
+  title = EVT_8021308_NAME
+  desc = EVT_8021308_DESC
+  picture = "nwo2_hungarian_revolution_1956_victory"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8021308_A
+	government = democracy
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8021308_B
+	government = democracy country_event = 800054
+	ruling_party_ideology  = communist
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8021309
+  title = EVT_8021309_NAME
+  desc = EVT_8021309_DESC
+  picture = "nwo2_hungarian_revolution_1956_aftermath"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8021309_A
   }
 }

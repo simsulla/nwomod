@@ -1,66 +1,3 @@
-### The levels of Soviet control over Eastern Europe is set by the Variable soviet_control_cee:
-#soviet_control_cee = 5 --> USSR starts here
-# As a democracy/hms_government GP (US/ENG..) you want to decrease the soviet_control_cee till it;
-# Reaches 1: When this happens springtime_of_nations is set, and the Russia release its vassals
-# Reaches 0: Russia devolves
-# As USSR you want to increase your control, and avoid disruptive events.
-# 
-#
-#The following walks are made:
-#8500607 - Berlin Airlift succeeds: -1 (historical)
-#8500606 and earlier - Berlin Airlift fails: +1
-#8500702 and others - Berlin Crisis makes Americans leave: +1
-#8500702 and others - Berlin Crisis fails to make Americans leave: -1 (historical)
-#8004307 - Stasi is founded: +1 (historical)
-#8004305 - Berlin Wall is built: +1 (historical)
-#8021308 - Hungarian Revolution succeeds: -3
-#8021309 - Hungarian Revolution fails: +2 (historical)
-#8023223 - Polish Thaw happens: -1 (historical)
-#8004306 - East German uprising is dispersed with big problems: -1
-#8022726 - Tito-Stalin split happens: -1 (historical)
-#8022726 - Tito-Stalin split happens and Yugoslavia wins: -3
-#8022726 - Tito-Stalin split happens and USSR wins: +2
-#8500213 - Cuban Missile Crisis fails for USSR: -1 (historical)
-#8500208 and others - Cuban Missile Crisis succeeds for USSR: +1
-#8500541 - communist victory in Greek Civil War: +1
-#8500820 - North Korea wins Korean War: +1
-#8500821 - South Korea wins Korean War: -1
-#8202002 - USSR allows Marshall Plan for Poland and Czechoslovakia: -1
-#8202002 - USSR allows Marshall Plan for everybody: -2
-#8014261 - United Germany: -1
-#8014228 - 20th Party Congress: -1 (historical)
-#8200105 and earlier - Mao wins civil war: +1 (historical)
-#8216016 - Albania joins Yugoslavia: -1
-#8216025 - Bulgaria joins Yugoslavia: -1
-#Italy becomes communist under Togliatti: +1 
-#
-#Historical path: -1
-#
-## Levels of Soviet control in respective scenarios:
-#
-# 1945 - soviet_control_cee_0
-#		Berlin Airlift succeeds: -1
-#		Tito-Stalin split happens: -1
-#		Mao wins civil war: +1
-# 1950 - soviet_control_cee_1
-#		Stasi is founded: +1
-# 1953 - soviet_control_cee_0
-# 1956 - soviet_control_cee_0
-#		Hungarian Revolution fails: +2
-#		Polish Thaw happens: -1
-#		20th Party Congress: -1
-# 1959 - soviet_control_cee_2
-#       Berlin Crisis fails to make Americans leave: -1
-#		Berlin Wall is built: +1
-#       Cuban Missile Crisis fails for USSR: -1
-# 1963 - soviet_control_cee_3
-# 		Prague Spring happens: -1
-# 		Prague Spring fails: +1
-#		War in Afghanistan: +1
-#		withdrawal from Afghanistan: -1
-#		Solidarity: -1
-#		Polish martial law: +1
-
 ### Soviet control over CEE gets higher
 country_event = {
   id = 8225000
@@ -86,36 +23,11 @@ country_event = {
   is_triggered_only = yes # RUS
 
   option = {
-    name = EVT_8225000_A
+    name = EVT_8225001_A
     change_variable = {
 		which = soviet_control_cee
 		value = 1
 	}	
-	# finally if we hit the bottom -> anable dissolution_of_the_eastern_bloc decision
-	random_country = { limit = { check_variable = { which = soviet_control_cee value = 6 } } set_global_flag = dissolution_of_the_eastern_bloc }
-  }
-}
-country_event = {
-  id = 8225002
-  title = EVT_8225002_NAME
-  desc = EVT_8225002_DESC
-  picture = "nwo2_masses_at_the_lenin_statue"
-
-  trigger = {
-    has_global_flag = depuppetize_warsaw_pact
-    THIS = { vassal_of = RUS }
-	capital_scope = { continent = europe  }
-	NOT = { has_country_flag = depuppetize_warsaw_pact }
-  }
-
-  mean_time_to_happen = { months = 1  }
-
-  immediate = { set_country_flag = depuppetize_warsaw_pact }
-
-  option = {
-    name = EVT_8225002_A
-	relation = {who = RUS value = -100 }
-	overlord = { release_vassal = THIS } 
   }
 }
 country_event = {
@@ -126,24 +38,17 @@ country_event = {
 
   trigger = {
     has_global_flag = dissolve_warsaw_pact
-	capital_scope = { has_province_modifier = warsaw_pact }
 	NOT = { has_country_flag = dissolve_warsaw_pact }
+	has_country_modifier = warsaw_pact
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 4  }
 
-  immediate = { set_country_flag = dissolve_warsaw_pact }
-  
   option = {
     name = EVT_8225003_A
-	relation = {who = RUS value = -100 }
-	RUS = { diplomatic_influence = { who = THIS value = -200 } }
+	remove_country_modifier = warsaw_pact
+	set_country_flag = dissolve_warsaw_pact
 	ai_chance = { factor = 100}
-  }
-  option = {
-    name = EVT_8225003_B
-	any_pop = { militancy = 1.0 consciousness = 1 }
-	ai_chance = { factor = 0}
   }
 }
 country_event = {
@@ -151,29 +56,31 @@ country_event = {
   title = EVT_8225004_NAME
   desc = EVT_8225004_DESC
   picture = "nwo2_masses_at_the_lenin_statue"
-  fire_only_once = yes
 
   trigger = {
-    has_global_flag = democratize_warsaw_pact
+    has_global_flag = depuppetize_warsaw_pact
 	government = proletarian_dictatorship
-	capital_scope = { has_province_modifier = warsaw_pact }
-	NOT = { has_country_flag = democratize_warsaw_pact }
+	OR = { vassal_of = RUS is_vassal = no }
+	capital_scope = { continent = europe  }
+	NOT = { has_country_flag = depuppetize_warsaw_pact }
   }
 
-  mean_time_to_happen = { months = 2  }
+  mean_time_to_happen = { months = 24 }
   
-  immediate = { set_country_flag = democratize_warsaw_pact }
-
   option = {
     name = EVT_8225004_A
+	overlord = { country_event = 8014250 } 
 	government = democracy country_event = 800054
 	election = yes
+	set_country_flag = depuppetize_warsaw_pact
   }
 
   option = {
     name = EVT_8225004_B
+	overlord = { country_event = 8014250 } 
 	government = democracy country_event = 800054
 	ruling_party_ideology = communist
+	set_country_flag = depuppetize_warsaw_pact
   }
 }
 country_event = {
@@ -186,11 +93,7 @@ country_event = {
   trigger = {
     tag = RUS
 	government = proletarian_dictatorship
-    year = 1963 
-    OR = {
-		has_global_flag = breakup_of_ussr # DH alt history
-		has_global_flag = novus_ordo_seclorum
-    }
+	has_global_flag = breakup_of_ussr # DH alt history
   }
 
   mean_time_to_happen = { months = 1  }
@@ -200,7 +103,6 @@ country_event = {
 	any_pop = { militancy = 1.0 consciousness = 1 }
 	set_global_flag = depuppetize_warsaw_pact 
 	set_global_flag = dissolve_warsaw_pact 
-	set_global_flag = democratize_warsaw_pact 
   }
 }
 country_event = {
@@ -217,7 +119,7 @@ country_event = {
 	OR = { exists = LAT exists = LIT exists = EST }
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 6  }
 
   option = {
     name = EVT_8225006_A
@@ -225,3 +127,30 @@ country_event = {
 	set_global_flag = dissolve_warsaw_pact 
   }
 }
+country_event = { 
+  id = 8014250
+  title = EVT_8014250_NAME
+  desc = EVT_8014250_DESC
+  picture = "loss_of_satellite_states"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8014250_A
+	release_vassal = FROM
+	diplomatic_influence = { who = FROM value = -100 }
+	relation = { who = FROM value = -100 }
+	ai_chance = { factor = 100 }
+  }	
+
+  option = {
+    name = EVT_8014250_B
+	release_vassal = FROM
+	diplomatic_influence = { who = FROM value = -200 }
+	relation = { who = FROM value = -200 }
+	casus_belli = { target = FROM type = make_puppet months = 12 }
+	casus_belli = { target = FROM type = install_communist_gov_cb months = 12 }
+	ai_chance = { factor = 0 }
+  }	
+  
+}
+

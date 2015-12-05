@@ -385,7 +385,6 @@ country_event = {
     name = EVT_8023239_A
 	relation = { who = RUS value = -100 } 
 	any_pop = { militancy = -2.0 consciousness = -2 }
-	clr_country_flag = block_ideology_switch 
   }
 }
 country_event = {
@@ -413,7 +412,6 @@ country_event = {
     name = EVT_8023241_A
 	any_pop = { militancy = 2.5 consciousness = 3 }
 	relation = { who = RUS value = 50 } 
-	clr_country_flag = block_ideology_switch 
   }
 }
 country_event = {
@@ -425,22 +423,25 @@ country_event = {
 
   trigger = {
     tag = POL
-	year = 1988 NOT = { year = 1990 }
     has_global_flag = autumn_of_nations
+	government = proletarian_dictatorship
+	OR = { vassal_of = RUS is_vassal = no }
+	war = no
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8023243_A
-	any_pop = { militancy = -0.5 consciousness = 0.5 }
+	any_pop = { militancy = -2 consciousness = 0.5 }
+	country_event =  { id = 8023244 days = 90 } 
+	overlord = { country_event = 8014250 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8023243_B
 	any_pop = { militancy = 3.0 consciousness = 2 }
-	country_event =  { id = 8023244 days = 1 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -449,30 +450,19 @@ country_event = {
   title = EVT_8023244_NAME
   desc = EVT_8023244_DESC
   picture = "nwo2_poland_1989"
-  fire_only_once = yes
-
-  trigger = {
-    tag = POL
-	year = 1989 NOT = { year = 1990 }
-    has_global_flag = autumn_of_nations
-	government = proletarian_dictatorship
-  }
-
-  mean_time_to_happen = { months = 1  }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8023244_A
-	any_pop = { militancy = -0.5 consciousness = 0.5 }
-	set_country_flag = block_ideology_switch 
-	ai_chance = { factor = 0 }
+	any_pop = { militancy = -2 consciousness = 0.5 }
+	country_event = 8023245
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8023244_B
 	any_pop = { militancy = 3.0 consciousness = 2 }
-	country_event =  { id = 8023245 days = 30 } 
-	overlord = { release_vassal = THIS } 
-	ai_chance = { factor = 100 }	
+	ai_chance = { factor = 0 }	
   }
 }
 country_event = {

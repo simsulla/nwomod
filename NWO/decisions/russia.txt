@@ -6,6 +6,8 @@ political_decisions = {
 			tag = RUS
 			NOT = { year = 1956 }
 			NOT = { has_country_modifier = forced_labour }
+			NOT = { has_country_modifier = in_bankrupcy }
+		    NOT = { check_variable = { which = soviet_control_cee value = 2 } }
 		}
 		allow = {
 			government = proletarian_dictatorship
@@ -25,7 +27,7 @@ political_decisions = {
 			random_owned = { limit = { owner = { bauxite = 0 } trade_goods = bauxite } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
 			random_owned = { limit = { owner = { other_minerals = 0 } trade_goods = other_minerals } add_province_modifier = { name = blood_and_iron_mine duration = 3500 } } 
 		}
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 1 modifier = { factor = 0 check_variable = { which = soviet_control_cee value = 5 } } }
 	}
 
 	comecon = {

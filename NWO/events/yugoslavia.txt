@@ -361,48 +361,55 @@ country_event = {
 
   trigger = {
     tag = YUG
-	year = 1991 NOT = { year = 1992 }
     has_global_flag = autumn_of_nations
+	OR = { vassal_of = RUS is_vassal = no }
+	government = proletarian_dictatorship
+	war = no
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 11  }
 
   option = {
     name = EVT_8022742_A
 	any_pop = { militancy = 0.5 consciousness = 0.8 }
-	release_vassal = SLO
-	release_vassal = CRO
-	release_vassal = MON
-	release_vassal = MAC	
+	government = populist_dictatorship
 	release = SLO
 	release = CRO
 	release = MAC
+	release = BOS
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	MAC = {	government = democracy country_event = 800054 }
 	BOS = { release = RSR }
+	RSR = { 786 = { secede_province = BOS } } # Tuzla 
 	create_alliance = RSR
-	release_vassal = BOS
-	release = BOS
 	relation = { who = RSR value = 200 }
 	relation = { who = BOS value = -200 }
-	change_tag_no_core_switch = SER
+	change_tag = SER
 	war = { target = CRO attacker_goal = { casus_belli = liberate_country country = SRK } defender_goal = { casus_belli = status_quo } }
 	BOS = { country_event = 8022743 }
+	overlord = { country_event = 8014250 }
+	country_event = 800050 # government = populist_dictatorship
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8022742_B
 	any_pop = { militancy = 3.0 consciousness = 2.0 }
+	change_tag = SER
+	government = democracy
 	release = SLO
 	release = CRO
 	release = BOS
+	release = MAC	
+	CRO = {	government = democracy country_event = 800054 }
+	SLO = {	government = democracy country_event = 800054 }
+	MAC = {	government = democracy country_event = 800054 }
 	release_vassal = MON
 	release_vassal = KOS
 	release_vassal = VOJ
-	release = MAC	
-	change_tag_no_core_switch = SER
+	country_event = 800054
+	overlord = { country_event = 8014250 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -422,6 +429,8 @@ country_event = {
 	any_pop = { militancy = 0.5 consciousness = 0.8 }
 	government = populist_dictatorship country_event = 800050
 	release_vassal = HZB
+	HZB = { 2688 = { secede_province = BOS } }
+	# release = RSR in calling event
 	war = { target = RSR attacker_goal = { casus_belli = annex_core_country country = RSR } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }

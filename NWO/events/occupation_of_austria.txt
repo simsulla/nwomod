@@ -7,8 +7,8 @@ country_event = {
 
   trigger = {
     year = 1944 NOT = { year = 1963 }
-    
 	AUS = { exists = no }
+	NOT = { government = proletarian_dictatorship }
 	owns = 619 # Wien
   }
 
@@ -16,14 +16,14 @@ country_event = {
 
   option = {
     name = "EVT_8203000_A"
-	release = AUS 
+	country_event = 8203002
 	any_pop = { consciousness = 2  }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = "EVT_8203000_B"
-	any_pop = { militancy = 2  }
+	any_pop = { limit = { culture = german } militancy = 5  }
 	badboy = 15 
 	ai_chance = { factor = 0 }
   }
@@ -37,8 +37,8 @@ country_event = {
 
   trigger = {
     tag = RUS
-	year = 1944 NOT = { year = 1963 }
-    
+	year = 1944 
+	government = proletarian_dictatorship
 	owns = 619 # Wien
   }
 
@@ -46,45 +46,39 @@ country_event = {
 
   option = {
     name = "EVT_8203001_A"
-	release = AUS 
+	country_event = 8203002
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = "EVT_8203001_B"
-	any_pop = { militancy = 1 consciousness = 2 }
+	any_pop = { limit = { culture = german } militancy = 4 consciousness = 2 }
 	badboy = 15 
 	ai_chance = { factor = 0 }
   }
 }
 country_event = {
   id = 8203002
-  title = "EVT_8203002_NAME"
+  title = "EVT_8203002_NAME" # Renner's cabinet
   desc = "EVT_8203002_DESC"
   picture = "nwo2_karl_renner"
-  fire_only_once = yes
-
-  trigger = {
-    tag = RUS
-	year = 1944 NOT = { year = 1963 }
-    
-  }
-
+  is_triggered_only = yes 
+  
   mean_time_to_happen = { months = 3  }
 
   option = {
     name = "EVT_8203002_A"
-	country_event =  8203003
-	any_country = { limit = { any_owned_province = { is_core = AUS } } country_event =  { id = 8203003 days = 90 } } 
+	release = AUS
+	diplomatic_influence = { who = AUS value = 100 }
+	any_country = { limit = { any_owned_province = { is_core = AUS } NOT = { tag = THIS } } country_event = { id = 8203003 days = 90 } } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = "EVT_8203002_B"
-	release = AUS 
-	create_vassal = AUS 
-	create_alliance = AUS 
-	AUS = { country_event =  8203004 } 
+	release_vassal = AUS
+	AUS = { country_event = { id = 8203004 days = 180 } } 
+	prestige = -10
 	badboy = 5 
 	ai_chance = { factor = 0 }
   }
@@ -98,22 +92,23 @@ country_event = {
 
   option = {
     name = "EVT_8203003_A"
-	AUS = { country_event = 8203010 }
 	release = AUS
-	#any_owned = { limit = { is_core = AUS } secede_province = AUS }
-	prestige = -10
+	diplomatic_influence = { who = AUS value = 100 }
+	AUS = { country_event = 8203010 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = "EVT_8203003_B"
 	AUS = { country_event = 8203004 } 
+	prestige = -10
+	badboy = 5 
 	ai_chance = { factor = 0 }
   }
 }
 country_event = {
   id = 8203004
-  title = "EVT_8203004_NAME"
+  title = "EVT_8203004_NAME" # Lack of recognition
   desc = "EVT_8203004_DESC"
   picture = "nwo2_soviet_occupation_of_austria"
   is_triggered_only = yes
@@ -121,28 +116,7 @@ country_event = {
   option = {
     name = "EVT_8203004_A"
 	government = proletarian_dictatorship country_event = 800054
-	any_country = { limit = { any_owned_province = { is_core = AUS }NOT = { tag = THIS } } country_event = 8203005 } 
-  }
-}
-country_event = {
-  id = 8203005
-  title = "EVT_8203005_NAME"
-  desc = "EVT_8203005_DESC"
-  picture = "nwo2_allied_occupation_of_austria"
-  is_triggered_only = yes
-
-  option = {
-    name = "EVT_8203005_A"
-	release = AUS
-	prestige = -10
-	ai_chance = { factor = 100 }
-  }
-
-  option = {
-    name = "EVT_8203005_B"
-	any_pop = { militancy = 1 consciousness = 2 }
-	badboy = 5 
-	ai_chance = { factor = 0 }
+	AUS = { all_core = { add_core = GER } }
   }
 }
 country_event = {

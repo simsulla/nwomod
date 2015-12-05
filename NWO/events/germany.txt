@@ -204,18 +204,17 @@ country_event = {
   title = EVT_8004311_NAME
   desc = EVT_8004311_DESC
   picture = "nwo2_elections"
-  is_triggered_only = yes
+  is_triggered_only = yes # DDR
 
   option = {
     name = EVT_8004311_A
-	election = yes
 	any_owned = { add_core = GER }
+	government = democracy country_event = 800054 
 	USA = { country_event = 8004321 } 
 	FRA = { country_event = 8004321 } 
 	RUS = { country_event = 8004321 } 
 	ENG = { country_event = 8004321 } 
-	country_event = { id = 8004325 days = 30 }
-	any_pop = { consciousness = 1 }
+	GER = { country_event = 8004325 } # reunification
 	ai_chance = { factor = 100 }
   }
 
@@ -223,6 +222,7 @@ country_event = {
     name = EVT_8004311_B
 	any_pop = { consciousness = 1 }
 	any_owned = { add_core = GER }
+	government = democracy country_event = 800054 
 	ai_chance = { factor = 0 }
   }
 }
@@ -431,11 +431,11 @@ country_event = { # Fall of the Berlin Wall
 
   trigger = {
     tag = DDR
-    year = 1989
-	NOT = { year = 1992 }
-    has_global_flag = berlin_wall
+	exists = DDR
     exists = GER
     has_global_flag = autumn_of_nations
+	OR = { vassal_of = RUS is_vassal = no }
+	war = no
   }
 
   mean_time_to_happen = { months = 10 }
@@ -444,17 +444,17 @@ country_event = { # Fall of the Berlin Wall
     name = EVT_8004320_A
 	any_pop = { militancy = -2.0 }
 	relation = { who = GER value = 200 } 
+	overlord = { country_event = 8014250 } 
 	country_event = { id = 8004311 days = 30 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8004320_B
-	any_pop = { militancy = 5.0 }
+	any_pop = { militancy = 5.0 consciousness = 4 }
 	any_pop = { dominant_issue = { value = free_opinion factor = 0.2 } }
 	relation = { who = GER value = -50 } 
-	clr_country_flag = block_ideology_change 
-	overlord = { release_vassal = THIS } 
+	overlord = { country_event = 8014250 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -485,18 +485,20 @@ country_event = { # Reunification of Germany
   title = EVT_8004325_NAME
   desc = EVT_8004325_DESC
   picture = "nwo2_united_germany"
-  is_triggered_only = yes # DDR
+  is_triggered_only = yes # GER
 
   option = {
     name = EVT_8004325_A
 	any_pop = { militancy = -2.0 }
-	any_greater_power = { limit = { tag = GER } diplomatic_influence = { who = DDR value = 200 } }
-	government = democracy country_event = 800054 # this will trigger reunification decision
+	diplomatic_influence = { who = DDR value = 200 }
+	create_vassal = DDR
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8004325_B
 	any_pop = { militancy = 5.0 }
 	any_pop = { consciousness = 1 }
+	ai_chance = { factor = 0 }
   }
 }

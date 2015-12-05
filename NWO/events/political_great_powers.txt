@@ -85,7 +85,7 @@ country_event = { # Country is sphered change government
 
 	option = {
 		name = EVT_19001_A
-		sphere_owner = { country_event = 19003 }
+		sphere_owner = { country_event = 19004 }
 		ai_chance = { factor = 1 }
 	}
 
@@ -119,7 +119,7 @@ country_event = {
 
 	option = {
 		name = EVT_19002_A
-		sphere_owner = { country_event = 19004 }
+		sphere_owner = { country_event = 19003 }
 		ai_chance = { factor = 1 }
 	}
 
@@ -143,13 +143,13 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19003_A
 		FROM = { set_country_flag = accept_differances_in_gov }
-		ai_chance = { factor = 0.5 modifier = { factor = 10 FROM = { tag = FIN } } }
+		ai_chance = { factor = 0.8 modifier = { factor = 100 FROM = { tag = FIN } } }
 	}
 	
 	option = {
 		name = EVT_19003_B
-		FROM = { country_event = 19007 }
-		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { tag = FIN } } }
+		FROM = { country_event = 19006 }
+		ai_chance = { factor = 0.2 }
 	}
 }
 country_event = { # Demand install democracy
@@ -162,13 +162,13 @@ country_event = { # Demand install democracy
 	option = {
 		name = EVT_19004_A
 		FROM = { set_country_flag = accept_differances_in_gov }
-		ai_chance = { factor = 0.5 modifier = { factor = 10 FROM = { tag = YUG } } }
+		ai_chance = { factor = 0.1 modifier = { factor = 100 FROM = { tag = YUG } } }
 	}
 	
 	option = {
 		name = EVT_19004_B
-		FROM = { country_event = 19006 }
-		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { tag = YUG } } }
+		FROM = { country_event = 19007 }
+		ai_chance = { factor = 0.9 modifier = { factor = 0 FROM = { tag = YUG } } }
 	}
 }
 country_event = {
@@ -208,7 +208,7 @@ country_event = { # Demand install communist in-power
 		name = EVT_19006_A
 		sphere_owner = { 
 			diplomatic_influence = { who = THIS value = -50 } 
-			add_casus_belli = { target = THIS type = install_democracy months = 12  }
+			casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
 			relation = { who = THIS value = -25 } 
 		}
 		ai_chance = { factor = 0.5  }
@@ -231,7 +231,7 @@ country_event = { # Demand install democracy
 		name = EVT_19007_A
 		sphere_owner = { 
 			diplomatic_influence = { who = THIS value = -50 } 
-			add_casus_belli = { target = THIS type = install_democracy months = 12  }
+			casus_belli = { target = THIS type = install_democracy months = 12  }
 			relation = { who = THIS value = -25 } 
 		}		
 		ai_chance = { factor = 0.5 }

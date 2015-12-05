@@ -7,8 +7,7 @@ country_event = {
 
   trigger = {
     tag = ROM
-    year = 1944 NOT = { year = 1951 }
-    
+    year = 1944 NOT = { year = 1990 }
   }
 
   mean_time_to_happen = { months = 12 }
@@ -27,7 +26,7 @@ country_event = {
 
   trigger = {
     tag = ROM
-    year = 1968 NOT = { year = 1974 }
+    year = 1968 NOT = { year = 1990 }
     
   }
 
@@ -51,8 +50,8 @@ country_event = {
 
   trigger = {
     tag = ROM
-    year = 1980 NOT = { year = 1984 }
-    
+    year = 1980 NOT = { year = 1990 }
+    government = proletarian_dictatorship
   }
 
   mean_time_to_happen = { months = 2 }
@@ -72,8 +71,9 @@ country_event = {
 
   trigger = {
     tag = ROM
-    year = 1989 NOT = { year = 1991 }
     has_global_flag = autumn_of_nations
+	OR = { vassal_of = RUS is_vassal = no }
+	government = proletarian_dictatorship
   }
 
   mean_time_to_happen = { months = 1  }
@@ -87,7 +87,8 @@ country_event = {
   option = {
     name = EVT_8023015_B
 	any_pop = { militancy = 1.0 consciousness = 2 }
-	country_event = 8012302 
+	overlord = { country_event = 8014250 } 
+	government = democracy country_event = 800054
 	ai_chance = { factor = 0 }
   }
 }
@@ -100,16 +101,19 @@ country_event = {
 
   trigger = {
     tag = ROM
-	year = 1990 NOT = { year = 1991 }
     has_global_flag = autumn_of_nations
+	OR = { vassal_of = RUS is_vassal = no }
+	government = proletarian_dictatorship
+	war = no
   }
 
-  mean_time_to_happen = { months = 1 }
+  mean_time_to_happen = { months = 8 }
 
   option = {
     name = EVT_8023016_A
 	any_pop = { militancy = -3.0  consciousness = 2 }
-	country_event = 8012302 
+	government = democracy country_event = 800054
+	overlord = { country_event = 8014250 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -118,18 +122,6 @@ country_event = {
 	any_pop = { militancy = 5.0  consciousness = 4 }
 	ai_chance = { factor = 0 }
   }
-}
-country_event = {
-	id = 8012302
-	title = EVT_GOVTCHANGE_NAME
-	desc = EVT_GOVTCHANGE_DESC
-	picture = nwo2_govt_change
-	is_triggered_only = yes
-
-	option = {
-		name = OK
-		government = democracy country_event = 800054
-	}
 }
 
 country_event = { # Transnistria War
