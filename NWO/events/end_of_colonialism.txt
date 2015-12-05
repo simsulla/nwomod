@@ -234,3 +234,255 @@ country_event = {
 	any_greater_power = { limit = { tag = FROM } diplomatic_influence = { who = THIS value = 200 } }
   }
 }
+
+country_event = {
+	id = 15500
+	title = "EVTNAME15500" # demand_autonomy
+	desc = "EVTDESC15500"
+	picture = "demand_autonomy"
+	
+	trigger = {
+		any_owned_province = { 
+			is_primary_culture = no
+			is_accepted_culture = no
+			controlled_by = owner
+			OR = {
+				owner = { has_country_modifier = sectarian_divide }
+				minorities_reform = minorities_equal_rights
+				is_colonial = yes
+			}
+			has_national_minority = yes
+			any_core = { NOT = { tag = THIS } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			any_owned_province = {
+				has_province_modifier = promised_autonomy
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_owned_province = {
+				state_scope = { flashpoint_tension  = 10 }
+			}
+		}
+		# a dominating primary culture makes us more likely to request autonomy
+		modifier = {
+			factor = 0.5
+			capital_scope = {
+				is_primary_culture = yes
+			}
+		}
+		# a dominating majority primary culture makes us even more likely to request autonomy
+		#modifier = {
+		#	factor = 0.5
+		#	is_primary_culture = no
+		#}
+		modifier = {
+			factor = 0.9
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				AND = {
+					average_consciousness = 5
+					average_militancy = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { age_of_protests = 1 }
+		}
+		modifier = {
+			factor = 4
+			NOT = { minorities_reform = minorities_equal_rights }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA15500"		#Deny Autonomy
+		any_owned = { 
+			limit = {
+				is_primary_culture = no
+				is_accepted_culture = no
+				controlled_by = owner
+				OR = {
+					owner = { has_country_modifier = sectarian_divide }
+					minorities_reform = minorities_equal_rights
+				}
+				has_national_minority = yes
+				any_core = { NOT = { tag = THIS } }
+			}
+			any_pop = {
+				militancy = 5
+				consciousness = 5
+			}
+		}
+		add_country_modifier = { name = denied_independence duration = 1080 }
+		ai_chance = { factor = 1 modifier = { minorities_reform = minorities_equal_rights factor = 0 } }
+	}
+	option = {
+		name = "EVTOPTB15500"		# Promised autonomy
+		any_owned = { 
+			limit = {
+				is_primary_culture = no
+				is_accepted_culture = no
+				controlled_by = owner
+				OR = {
+					owner = { has_country_modifier = sectarian_divide }
+					minorities_reform = minorities_equal_rights
+				}
+				has_national_minority = yes
+				any_core = { NOT = { tag = THIS } }
+			}
+			any_pop = {
+				militancy = -2
+				consciousness = 2
+			}
+			add_province_modifier = { name = promised_autonomy duration = 1800 }
+		}
+		ai_chance = { factor = 1 modifier = { NOT = { minorities_reform = minorities_equal_rights } factor = 0  } }
+	}
+}
+
+country_event = {
+	id = 15501
+	title = "EVTNAME15501"
+	desc = "EVTDESC15501"
+	picture = "deny_autonomy"
+	
+	trigger = {
+		any_owned_province = { has_province_modifier = promised_autonomy }
+		NOT = { has_country_modifier = denied_independence }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		# a dominating primary culture makes us more likely to request autonomy
+		modifier = {
+			factor = 0.5
+			capital_scope = {
+				is_primary_culture = yes
+			}
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				AND = {
+					average_consciousness = 5
+					average_militancy = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { age_of_protests = 1 }
+		}
+		modifier = {
+			factor = 4
+			NOT = { minorities_reform = minorities_equal_rights }
+		}
+	}	
+	
+	option = {
+		name = "EVTOPTA15501"		#Accept
+        any_country = {
+			limit = { 
+				any_core = { 
+					owned_by = THIS 
+					has_province_modifier = promised_autonomy
+				} 
+				NOT = { tag = THIS }
+			}
+            country_event = 15502
+		}		
+		ai_chance = { factor = 1 modifier = { NOT = { minorities_equal_rights = 1 } factor = 0 } }
+	}
+	option = {
+		name = "EVTOPTB15501"		#Reject
+		ai_chance = { factor = 1 modifier = { minorities_equal_rights = 1 factor = 0 } }
+	}
+}
+
+country_event = {
+	id = 15502
+	title = "EVTNAME15502"
+	desc = "EVTDESC15502"
+	picture = "separation"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA15502"		
+		all_core = { 
+			limit = {
+				owned_by = FROM
+				has_province_modifier = promised_autonomy
+			}
+			secede_province = THIS
+			remove_province_modifier = promised_autonomy
+		} 
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 0 any_core = { is_core = FROM } }
+		}
+	}
+
+	option = {
+		name = "EVTOPTB15502"		# 
+		all_core = { 
+			limit = {
+				owned_by = FROM
+				has_province_modifier = promised_autonomy
+			}
+			remove_province_modifier = promised_autonomy
+		} 
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 10 NOT = { any_core = { is_core = FROM } } }
+		}		
+	}
+}
+
+country_event = {
+  id = 15503
+  title = EVT_15503_NAME
+  # EVT_15503_NAME;Demand Immediate Repay 1mil of WW2 War Dept!
+  desc = EVT_15503_DESC
+  # EVT_15503_DESC;$FROMCOUNTRY$ has large WW2 war debt bods owed by us. Some of these bonds are expiring. They demand repayment. 
+  picture = "ww2_war_debt"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_15503_A
+	# EVT_15503_A;We have to repay!
+	treasury = -1000000 
+	change_variable = { which = ww2_war_debt value = 1 }
+	relation = { who = FROM value = -10 }
+	ai_chance = { factor = 1 }
+  }
+  
+}
+
+# If as a consequence of 15503 we are bancryot we have to give all countrie we previously denied independance independance.
+
+
+

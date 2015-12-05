@@ -118,12 +118,12 @@ political_decisions = {
 			prestige = 5
 			any_country = { 
 				limit = { has_country_flag = colonial_peristance } 
-				country_event = 15503
+				country_event = 15503 # distribute 1000000
 				clr_country_flag = colonial_peristance
 				relation = { who = THIS value = -10 }
 			}
-			# keep the money in the system c12 pops. 
-			any_pop = { limit = { culture = jewish } money = 83000 }
+			# keep the money in the system c 12 jewish capitalist pops. 
+			any_pop = { limit = { type = capitalist culture = jewish } money = 83000 }
 		}
 		alert = no
 		ai_will_do = { factor = 1 }	
