@@ -208,13 +208,13 @@ country_event = {
 
   option = {
     name = EVT_8004311_A
-	any_owned = { add_core = GER }
+	all_core = { add_core = GER }
 	government = democracy country_event = 800054 
 	USA = { country_event = 8004321 } 
 	FRA = { country_event = 8004321 } 
 	RUS = { country_event = 8004321 } 
 	ENG = { country_event = 8004321 } 
-	GER = { country_event = 8004325 } # reunification
+	GER = { country_event = { id = 8004325 days = 30 } } # reunification
 	ai_chance = { factor = 100 }
   }
 

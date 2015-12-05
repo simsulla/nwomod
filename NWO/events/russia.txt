@@ -984,7 +984,7 @@ country_event = { # Mikhail Gorbachev
   picture = "nwo2_mikhail_gorbachev"
   fire_only_once = yes
 
-  trigger = { # or 8014243 Structural Weaknesses of the Eastern Bloc
+  trigger = { 
     tag = RUS
 	government = proletarian_dictatorship
     has_country_modifier = in_bankrupcy
@@ -995,7 +995,7 @@ country_event = { # Mikhail Gorbachev
   option = {
     name = EVT_8014237_A
 	define_general = { name = "Mikhail Gorbachev" personality = energetic background = no_background }
-	set_country_flag = perestroika
+	country_event = 8014243
 	ai_chance = { factor = 100 }
   }
 
@@ -1003,7 +1003,7 @@ country_event = { # Mikhail Gorbachev
     name = EVT_8014237_B
 	add_country_modifier = { name = dour_economist duration = 3605 }
 	any_pop = { militancy = 1.5 consciousness = 2 }
-	country_event = 8014248 
+	country_event = 8014239 
 	ai_chance = { factor = 0 }
   }
 }
@@ -1108,7 +1108,7 @@ country_event = { # Structural Weaknesses of the Eastern Bloc
   option = {
     name = EVT_8014243_A
 	any_pop = { militancy = -0.5  consciousness = -0.1 }
-	country_event = { id = 8014237 days = 180 }
+	set_country_flag = perestroika
 	ai_chance = { factor = 100 }
   }
 
@@ -1134,7 +1134,7 @@ country_event = { # Structural Weaknesses of the Eastern Bloc
 	relation = { who = ENG value = -20 } 
 	relation = { who = FRA value = -20 } 
 	relation = { who = GER value = -20 } 
-	country_event = { id = 8014237 days = 180 }
+	country_event = { id = 8014239 days = 180 }
   }
 
 }
