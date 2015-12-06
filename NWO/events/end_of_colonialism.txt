@@ -127,7 +127,13 @@ province_event = { # Separatists demands freedom
 	
 	option = {
 		name = "EVT_15501_A"		#Accept
-		any_country = { limit = { any_core = { has_province_modifier = promised_autonomy owned_by = THIS } } country_event = 15502 }
+		random_country = { 
+			limit = { 
+				NOT = { tag = THIS }
+				any_core = { has_province_modifier = promised_autonomy owned_by = THIS }
+			} 
+			country_event = 15502 
+		}
 		ai_chance = { factor = 0.1 }
 	}
 	option = {
@@ -245,7 +251,13 @@ province_event = { # $PROVINCECULTURE$ Demands Independence
 
   option = {
     name = EVT_15402_A
-	any_country = { limit = { any_core = { controlled_by_rebels = yes has_province_modifier = colonial_unrest owned_by = THIS } } country_event = 15403 }
+	random_country = { 
+		limit = { 
+			NOT = { tag = THIS } 
+			any_core = { controlled_by_rebels = yes has_province_modifier = colonial_unrest owned_by = THIS } 
+		} 
+		country_event = 15403 
+	}
   }
 }
 country_event = { # Self-rule of $FROMCOUNTRY$ 
@@ -257,14 +269,8 @@ country_event = { # Self-rule of $FROMCOUNTRY$
 
   option = {
     name = EVT_15402_A
-	all_core = { 
-		limit = { 
-			# same condition as in 8212005
-			controlled_by_rebels = yes
-			has_province_modifier = colonial_unrest
-		}
-		owner = { set_country_flag = colonial_peristance country_event = 15404 }
-	}
+	FROM = { set_country_flag = colonial_peristance country_event = 15404 }
+	
   }
 }  
   
