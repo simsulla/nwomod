@@ -237,14 +237,14 @@ country_event = {
   option = {
     name = EVT_8218011_A
 	any_pop = { militancy = 0.5 consciousness = 1 }
-	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } country_event = 8212010 }
+	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } country_event = 15410 }
 	change_tag = EGY
 	ai_chance = { factor = 100 }
   }
   option = {
     name = EVT_8218011_B
 	any_pop = { militancy = 0.5 consciousness = 1 }
-	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } country_event = 8212010 add_casus_belli = { target = UAR type = annex_core_country months = 12 } }
+	any_country = { limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no } country_event = 15410 add_casus_belli = { target = UAR type = annex_core_country months = 12 } }
 	ai_chance = { factor = 0 }
   }
 }
