@@ -220,10 +220,7 @@ country_event = {
 		exists = KMT
 		war = yes
 		war_with = CHI
-		OR = { 
-			national_provinces_occupied = 0.8
-			CHI = { brigades_compare = 2 }
-		}
+		national_provinces_occupied = 0.5
 		NOT = { year = 1952 }
 		1485 = { is_capital = no } # must not already have happned
 	}
@@ -1248,8 +1245,9 @@ country_event = {
     name = "EVT_8200006_A"
 	relation = { who = CHI value = 50 } 
 	treasury = -5000 
-	small_arms = -200
-	weaponry = -100
+	small_arms = -1000
+	weaponry = -1000
+	fuel = -1000
 	CHI = { country_event = 8200007 }
 	ai_chance = { factor = 100 }
   }
@@ -1263,10 +1261,11 @@ country_event = {
   option = {
     name = "EVT_8200006_C"
 	relation = { who = CHI value = 100 } 
-	badboy = 10 
-	treasury = -5000
-	small_arms = -500
-	weaponry = -500
+	badboy = 4 
+	treasury = -20000
+	small_arms = -2000
+	weaponry = -2000
+	fuel = -2000
 	any_pop = { consciousness = 2 }
 	CHI = { country_event = 8200008 }
 	ai_chance = { factor = 0 }
@@ -1275,10 +1274,11 @@ country_event = {
   option = {
     name = "EVT_8200006_D"
 	relation = { who = CHI value = 150 } 
-	badboy = 4 
-	treasury = -10000
-	small_arms = -1000
-	weaponry = -1000
+	badboy = 8 
+	treasury = -100000
+	small_arms = -2000
+	weaponry = -2000
+	fuel = -2000
 	any_pop = { militancy = 1 consciousness = 1 }
 	CHI = { country_event = 8200009 } 
 	ai_chance = { factor = 0 }
@@ -1294,8 +1294,9 @@ country_event = {
   option = {
     name = "EVT_8200007_A"
 	money = 5000 
-	small_arms = 200
-	weaponry = 100
+	small_arms = 1000
+	weaponry = 1000
+	fuel = 1000
   }
 }
 country_event = {
@@ -1307,9 +1308,10 @@ country_event = {
 
   option = {
     name = "EVT_8200008_A"
-	money = 10000 
-	small_arms = 500
-	weaponry = 500
+	money = 20000 
+	small_arms = 2000
+	weaponry = 2000
+	fuel = 2000
   }
 }
 country_event = {
@@ -1327,9 +1329,10 @@ country_event = {
 
   option = {
     name = "EVT_8200009_B"
-	money = 10000 
-	small_arms = 1000
-	weaponry = 1000
+	money = 100000 
+	small_arms = 2000
+	weaponry = 2000
+	fuel = 2000
 	RUS = { country_event = 8200121 } # nwo2_chinese_civil_war_interventions.txt
 	ai_chance = { factor = 0 }
   }
@@ -3112,7 +3115,7 @@ country_event = {
 
   option = {
     name = EVT_8207003_A
-	prestige = -10 
+	prestige = 10 
 	USA = { country_event = 8207004 } 
 	set_global_flag = un_soviet_boycott 
 	ai_chance = { factor = 100 }
@@ -3167,7 +3170,7 @@ country_event = {
   option = {
     name = EVT_8207005_A
 	clr_global_flag = un_soviet_boycott 
-	relation = { who = RUS value = 50 } 
+	prestige = -10
 	ai_chance = { factor = 0 }
   }
 

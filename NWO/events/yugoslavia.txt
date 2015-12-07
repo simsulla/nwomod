@@ -96,6 +96,7 @@ country_event = {
     name = EVT_8022726_A
 	any_pop = { militancy = 0.3 consciousness = 0.6 }
 	relation = { who = YUG value = -100 } 
+	diplomatic_influence = { who = YUG value = -100 } 
 	set_global_flag = tito_stalin_split 
 	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 100 }
@@ -104,7 +105,10 @@ country_event = {
   option = {
     name = EVT_8022726_B
 	any_pop = { militancy = 1.5 consciousness = 1 }
-	relation = { who = YUG value = 50 } 
+	set_global_flag = tito_stalin_split 
+	RUS  = { country_event = 8225001 } 
+	relation = { who = YUG value = -50 } 
+	diplomatic_influence = { who = YUG value = -50 } 
 	ai_chance = { factor = 0 }
   }
 
