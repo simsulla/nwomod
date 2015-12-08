@@ -140,7 +140,7 @@ province_event = { # Separatists demands freedom
 		name = "EVT_15501_B" #Reject
 		remove_province_modifier = promised_autonomy
 		add_province_modifier = { name = denied_independence duration = 1080 }
-		ai_chance = { factor = 0.9 modifier = { NOT = { country = { OR = { government = democracy government = hms_government } } } factor = 10 } }
+		ai_chance = { factor = 0.9 modifier = { owner = { minorities_reform = minorities_equal_rights citizenship_policy = full_citizenship } factor = 0 } }
 	}
 }
 country_event = { # $FROMCOUNTRY$ offers the return of provinces
