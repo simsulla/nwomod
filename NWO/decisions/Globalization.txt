@@ -363,13 +363,7 @@ political_decisions = {
 		picture = "wb_loan"
 		potential = {
 			# these institution may move - but hard coded of performance reasons
-			OR = {
-				USA = { is_greater_power = yes has_country_flag = world_bank money = 220000 }
-				GER = { is_greater_power = yes has_country_flag = the_imf money = 220000 }
-				FRA = { is_greater_power = yes has_country_flag = the_imf money = 220000 }
-				CHI = { is_greater_power = yes has_country_flag = dev_bank money = 220000 }
-				JAP = { is_greater_power = yes has_country_flag = dev_bank money = 220000 }
-			}
+			USA = { is_greater_power = yes has_country_flag = world_bank money = 220000 }
 			NOT = { is_greater_power = yes }
 			NOT = { has_country_modifier = wb_loan }
 			NOT = { has_country_modifier = wb_loan_rejected }
@@ -380,16 +374,8 @@ political_decisions = {
 		}
 		effect = { 
 			add_country_modifier = { name = wb_loan duration = 700 }
-			random_country = { 
-				limit = { 
-					OR = { is_sphere_leader_of = THIS THIS = { part_of_sphere  = no } }
-					is_greater_power = yes
-					OR = { has_country_flag = world_bank has_country_flag = the_imf has_country_flag = dev_bank }
-					money = 220000
-				}
-				country_event = 15600 
-			}
-			prestige = -5
+			USA = { country_event = 15600 }
+			prestige = -2
 		}
 		ai_will_do = { factor = 1 }
 	}
