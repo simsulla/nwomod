@@ -11,16 +11,16 @@ country_event = {
 	
 	option = {
 		name = EVT_15600_A
-		relation = { who = FROM value = 50 }
-		diplomatic_influence = { who = FROM value = 50 }
+		relation = { who = FROM value = 10 }
+		diplomatic_influence = { who = FROM value = 10 }
 		treasury = -10000
 		FROM = { treasury = 10000 }
 		ai_chance = { factor = 10 modifier = { factor = 0 FROM = { ai = no } } modifier = { factor = 0 NOT = { money = 200000 } } }
 	}
 	option = {
 		name = EVT_15600_B
-		relation = { who = FROM value = -25 }
-		diplomatic_influence = { who = FROM value = -25 }
+		relation = { who = FROM value = -10 }
+		diplomatic_influence = { who = FROM value = -10 }
 		FROM = { add_country_modifier = { name = wb_loan_rejected duration = 3500 } }
 		ai_chance = { factor = 1 }
 	}	
@@ -266,8 +266,8 @@ country_event = {
 	
 	option = {
 		name = EVT_15609_A
-		relation = { who = FROM value = -10 }
-		treasury = -100000
+		relation = { who = FROM value = -5 }
+		treasury = -200000
 	}
 }
 

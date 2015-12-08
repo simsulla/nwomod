@@ -382,7 +382,7 @@ political_decisions = {
 			add_country_modifier = { name = wb_loan duration = 700 }
 			random_country = { 
 				limit = { 
-					OR = { is_sphere_leader_of = THIS part_of_sphere  = no }
+					OR = { is_sphere_leader_of = THIS THIS = { part_of_sphere  = no } }
 					is_greater_power = yes
 					OR = { has_country_flag = world_bank has_country_flag = the_imf has_country_flag = dev_bank }
 					money = 220000
@@ -398,6 +398,7 @@ political_decisions = {
 		picture = "wb_credit_facillity"
 		potential = {
 			tag = USA
+			rank = 1
 			# avoid start year ugly! How about 1992?
 			year = 1948 
 			NOT = { has_country_modifier = wb_credit_facillity }
@@ -411,7 +412,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = { name = wb_credit_facillity duration = 700 } # every second year
 			any_country = { limit = { money = 120000 in_sphere = USA } USA = { treasury = 100000 } country_event = 15601 }
-			any_country = { limit = { money = 120000 has_country_flag = the_imf } USA = { treasury = 100000 } country_event = 15609 } 
+			any_country = { limit = { money = 210000 has_country_flag = the_imf rank = 1 } USA = { treasury = 200000 } country_event = 15609 } 
 		}
 		ai_will_do = { factor = 1 }
 	}
