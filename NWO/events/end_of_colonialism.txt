@@ -269,8 +269,7 @@ country_event = { # Self-rule of $FROMCOUNTRY$
 
   option = {
     name = EVT_15402_A
-	FROM = { set_country_flag = colonial_peristance country_event = 15404 }
-	
+	FROM = { country_event = 15404 }
   }
 }  
   
@@ -279,7 +278,7 @@ country_event = { # Self-rule of $FROMCOUNTRY$
   title = EVT_15403_NAME
   desc = EVT_15403_DESC
   picture = "colonialism_self_rule"
-  is_triggered_only = yes
+  is_triggered_only = yes # colonial power. FROM freed colony
 
   option = {
     name = EVT_liberate
@@ -292,7 +291,7 @@ country_event = { # Self-rule of $FROMCOUNTRY$
 		# tend to remains violent at its core
 		set_country_flag = full_independance
 	}
-	ai_chance = { factor = 0.5 } # TODO?
+	ai_chance = { factor = 1.0 } # TODO?
   }
   option = {
     name = EVT_dontliberate
@@ -304,8 +303,10 @@ country_event = { # Self-rule of $FROMCOUNTRY$
 			consciousness = 1
 		}
 	}
+	set_country_flag = colonial_peristance
+	# if we are bancrupt they will go anyhow
 	any_country = { limit = { tag = FROM THIS = { has_country_modifier = in_bankrupcy } } country_event = 15410 }
-	ai_chance = { factor = 0.5 } # TODO?
+	ai_chance = { factor = 0 } # TODO?
   }
 }
 country_event = { # Full independence of $COUNTRY$
