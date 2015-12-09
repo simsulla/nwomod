@@ -921,16 +921,18 @@ country_event = {
 
   trigger = {
     tag = DAI
-    year = 1959 NOT = { year = 1963 }
     NOT = { war_with = LUA }
     exists = LUA
-    war_with = SVI
+	government = proletarian_dictatorship
+    owns = 1380 # Saigon
   }
 
   mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8228200_A
+	casus_belli = { target = LUA type = make_puppet months = 24 }
+	casus_belli = { target = LUA type = install_communist_gov_cb months = 24 }
 	LUA = { country_event = 8228201 }
 	ai_chance = { factor = 100 }
    }
