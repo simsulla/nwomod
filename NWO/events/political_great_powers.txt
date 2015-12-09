@@ -697,8 +697,11 @@ country_event = {
 			}
 			set_country_flag = recognized_government
 		}
-		
-		ENG = { relation = { who = THIS value = 200 } }
+		USA = { remove_accepted_culture = german } # due to literacy Vic2 mod limitations
+		FRA = { remove_accepted_culture = german }
+		SPA = { remove_accepted_culture = catalan remove_accepted_culture = basque }
+		RUS = { remove_accepted_culture = german remove_accepted_culture= estonian remove_accepted_culture = latvian remove_accepted_culture = lithuanian }
+		ENG = { remove_accepted_culture = german relation = { who = THIS value = 200 } }
 	}
 }
 
