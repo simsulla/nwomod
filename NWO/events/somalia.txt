@@ -37,6 +37,7 @@ country_event = {
   option = {
     name = EVT_8014101_A
 	release_vassal = SOM
+	SOM = { government = hms_government country_event = 800054 }
 	create_vassal = SOM # some strange bug makes SOM UK vassal!!
   }
 }
@@ -59,6 +60,7 @@ country_event = { # Somalia Independence
   option = {
     name = EVT_8014102_A
 	release_vassal = SOM 
+	SOM = { government = democracy }
 	random_country = { limit = { owns = 1873 } country_event = 8014103 } # ENG
   }
 }
