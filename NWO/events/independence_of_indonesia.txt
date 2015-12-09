@@ -426,7 +426,6 @@ country_event = {
 
   option = {
     name = EVT_8206068_A
-	any_owned = { limit = { is_core = WPA } remove_core = IDO }
 	country_event = 8206031 
 	any_pop = { consciousness = 2 }
   }
@@ -465,7 +464,7 @@ country_event = { # End of the Indonesian National Revolution IDO victory
   option = {
     name = EVT_8206071_A
 	release_vassal = IDO
-	any_owned = { limit = { is_core = IDO } secede_province = IDO }
+	any_owned = { limit = { is_core = IDO NOT = { is_core = WPA }  } secede_province = IDO }
 	any_pop = { militancy = -2.0 }
   }
 }
