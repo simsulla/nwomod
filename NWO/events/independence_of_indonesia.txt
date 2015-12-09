@@ -8,14 +8,12 @@ country_event = { # Indonesia prepares for independence war
   trigger = {
     tag = IDO
     year = 1944 NOT = { year = 1990 }
-    
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8206001_A
-	define_general = { name = "Sukarno" personality = energetic background = no_background }
 	add_country_modifier = { name = military_reform duration = 1000 }
   }
 }
@@ -29,7 +27,6 @@ country_event = {
   trigger = {
     tag = NET
     year = 1944 NOT = { year = 1990 }
-    
   }
 
   mean_time_to_happen = { months = 1  }
@@ -51,25 +48,25 @@ country_event = {
     year = 1945 NOT = { year = 1990 }
 	exists = IDO
 	NOT = { is_our_vassal = IDO }
-	IDO = { owns = 1416 }
+	IDO = { owns = 1416 } # Yogykarta
     war = no
-    
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8206003_A
-	any_pop = { militancy = 1.0 consciousness = 2 }
+	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	casus_belli = { target = IDO type = make_puppet months = 12 }
 	war = { 
 		target = IDO
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1399 }
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1406 }
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1420 }
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1417 }
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1415 }
 		attacker_goal = { casus_belli = make_puppet }
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1413 } # Java
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1417 }
+		defender_goal = { casus_belli = acquire_core_state state_province_id = 1420 }
+		#defender_goal = { casus_belli = acquire_core_state state_province_id = 1399 } # Sumatra
+		#defender_goal = { casus_belli = acquire_core_state state_province_id = 1406 }
+		#defender_goal = { casus_belli = acquire_core_state state_province_id = 1402 }
 	}
 	ai_chance = { factor = 100 }
   }
@@ -131,13 +128,13 @@ country_event = {
 
   option = {
     name = EVT_8206006_A
-	any_pop = { consciousness = 2 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8206006_B
-	any_pop = { militancy = -1.0 }
+	any_pop = { militancy = 1 }
 	NET = { country_event =  8206008 }
 	ai_chance = { factor = 0 }
   }
@@ -152,13 +149,13 @@ country_event = {
 
   option = {
     name = EVT_8206007_A
-	any_pop = { militancy = 3 }
+	any_pop = { militancy = 1 }
 	NET = { country_event = 8206008 }
 	ai_chance = { factor = 0 }
   }
   option = {
     name = EVT_8206007_B
-	any_pop = { consciousness = 2 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 100 }
   }
 }
@@ -176,14 +173,14 @@ country_event = { # Indonesians agree to the Federated Indonesia proposal
   option = {
     name = EVT_8206008_A
 	IDO = { country_event = 8206009 }
-	any_pop = { militancy = 2 consciousness = 1 }
+	any_pop = { limit = { culture = indonesian } militancy = 2 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8206008_B
 	set_global_flag = federated_indonesia 
-	NET = { country_event = 8206030 }
+	NET = { country_event = 8206032 }
 	ai_chance = { factor = 100 }
   }
 }
@@ -197,6 +194,7 @@ country_event = {
 
   option = {
     name = EVT_8206009_A
+	any_pop = { limit = { culture = indonesian } militancy = -1 }
   }
 }
 country_event = {
@@ -237,7 +235,7 @@ country_event = {
   option = {
     name = EVT_8206031_A
 	all_core = { 
-		limit = { NOT = { controlled_by = IDO } } 
+		limit = { NOT = { owned_by = IDO } } 
 		any_pop = { limit = { culture = indonesian } militancy = 5 consciousness = 2 } 
 	}
   }
@@ -268,7 +266,7 @@ country_event = { # Linggajati Agreement
   option = {
     name = EVT_8206032_B
 	any_pop = { limit = { culture = indonesian } militancy = 2.5 } 
-	badboy = 25 
+	badboy = 20 
 	ai_chance = { factor = 0 }
   }
 }
@@ -282,7 +280,7 @@ country_event = { # Linggajati Agreement
 	
   option = {
     name = EVT_8206033_A
-	any_pop = { limit = { culture = indonesian } consciousness = 2 }
+	any_pop = { limit = { culture = indonesian } consciousness = 1 }
 	NET = { country_event = 8206014 }
 	ai_chance = { factor = 100 }
   }
@@ -311,7 +309,7 @@ country_event = {
   option = {
     name = EVT_8206034_B
 	set_global_flag = federated_indonesia 
-	country_event = 8206030 
+	country_event = 8206032 
 	ai_chance = { factor = 0 }
   }
 }
@@ -351,7 +349,7 @@ country_event = {
 
   option = {
     name = EVT_8206036_B
-	badboy = -2 relation = { who = IDO value = 20 } 
+	badboy = -2
 	ai_chance = { factor = 0 }
   }
 }
@@ -365,7 +363,7 @@ country_event = {
 
   option = {
     name = EVT_8206037_A
-	any_pop = { militancy = -1.0 }
+	any_pop = { limit = { culture = indonesian } militancy = -1.0 }
   }
 }
 country_event = { 
@@ -405,7 +403,6 @@ country_event = {
 
   option = {
     name = EVT_8206060_A
-
 		any_pop = { consciousness = 2 }
 		badboy = 4 
     }
@@ -422,13 +419,15 @@ country_event = {
     year = 1949 NOT = { year = 1990 }
 	war = no
     exists = IDO
+	NOT = { owns = 1413 }
   }
 
   mean_time_to_happen = { months = 3  }
 
   option = {
     name = EVT_8206068_A
-	country_event = 8206030 
+	any_owned = { limit = { is_core = WPA } remove_core = IDO }
+	country_event = 8206031 
 	any_pop = { consciousness = 2 }
   }
 
@@ -438,38 +437,49 @@ country_event = { # End of the Indonesian National Revolution
   title = EVT_8206070_NAME
   desc = EVT_8206070_DESC
   picture = "nwo2_end_of_indonesian_national_revolution"
+  fire_only_once = yes
 
-  is_triggered_only = yes # NET
+  trigger = {
+    tag = NET
+    year = 1949 NOT = { year = 1990 }
+	war = no
+	owns = 1413 
+	NOT = { has_global_flag = federated_indonesia }
+  }
+  
+   mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8206070_A
-	any_owned = { limit = { is_core = IDO NOT = { is_core = WPA } } secede_province = IDO }
-	random_country = { limit = { tag = IDO has_global_flag = federated_indonesia } country_event = 8206032 } 
-	random_country = { limit = { tag = IDO NOT = { has_global_flag = federated_indonesia } } country_event = 8206031 } 
+	# we won - IDO is vassal_of or does not exists of just peace
+	any_pop = { limit = { culture = indonesian } consciousness = 2 militancy = 3 }
   }
 }
-country_event = { # End of the Indonesian National Revolution
+country_event = { # End of the Indonesian National Revolution IDO victory
   id = 8206031
   title = EVT_8206071_NAME
   desc = EVT_8206071_DESC
   picture = "nwo2_end_of_indonesian_national_revolution"
-  
   is_triggered_only = yes
 
   option = {
     name = EVT_8206071_A
+	release_vassal = IDO
+	any_owned = { limit = { is_core = IDO } secede_province = IDO }
 	any_pop = { militancy = -2.0 }
   }
 }
-country_event = {
+country_event = { # End of the Indonesian National Revolution federated_indonesia
   id = 8206032
   title = EVT_8206072_NAME
   desc = EVT_8206072_DESC
   picture = "nwo2_federated_indonesia"
-  is_triggered_only = yes # IDO
+  allow_multiple_instances  = yes
+  is_triggered_only = yes # NET
 
   option = {
     name = EVT_8206072_A
+	any_owned = { limit = { is_core = WPA } remove_core = IDO }
 	release_vassal = EID # East Indonesia
 	release_vassal = DYA # Dyak
 	#create_vassal = WJA # West Java
@@ -485,9 +495,11 @@ country_event = {
 
   trigger = {
     tag = NET
+	owns = 1453
     year = 1962 NOT = { year = 1990 }
     NOT = { has_global_flag = federated_indonesia }
     IDO = { exists = yes }
+	NOT = { is_our_vassal = IDO }
   }
 
   mean_time_to_happen = { months = 1 }
@@ -517,7 +529,7 @@ country_event = {
     name = EVT_8206081_A
 	war = { 
 		target = NET
-		attacker_goal = { casus_belli = acquire_core_state state_province_id = 1453 }
+		attacker_goal = { casus_belli = acquire_state state_province_id = 1453 }
 		defender_goal = { casus_belli = status_quo }
 	}
   }
@@ -571,10 +583,8 @@ country_event = {
 
   trigger = {
     tag = NET
-    year = 1961 NOT = { year = 1990 }
-    NOT = { has_global_flag = federated_indonesia }
+    year = 1968 NOT = { year = 1990 } # later than 8206040
     exists = IDO
-    
     NOT = { exists = WPA }
 	1452 = { owned_by = THIS }
 	war = no

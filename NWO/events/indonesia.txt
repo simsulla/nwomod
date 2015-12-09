@@ -98,15 +98,12 @@ country_event = {
     tag = IDO
     year = 1967
   }
-  immediate = { set_global_flag = event_fired_8007315 }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8007315_A
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.35 } } }
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.3 } } }
-	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.3 } } }
+	any_pop = { consciousness = 1  }
   }
 }
 country_event = {
@@ -122,14 +119,12 @@ country_event = {
     NOT = { government = proletarian_dictatorship }
     war = no
   }
-  immediate = { set_global_flag = event_fired_8007320 }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8007320_A
-	any_pop = {  consciousness = 2 }
-	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
+	any_pop = { consciousness = 0.5 militancy = 0.5 }
   }
 }
 
@@ -198,9 +193,7 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1946
-    has_global_flag = event_fired_8007303
   }
-  immediate = { set_global_flag = event_fired_8299001 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -220,15 +213,12 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1947
-    has_global_flag = event_fired_8007304
   }
-  immediate = { set_global_flag = event_fired_8299002 }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = OK
-	define_general = { name = "Sukarno" personality = energetic background = no_background }
 	define_general = { name = "Amir Sjarifuddin" personality = energetic background = no_background }
   }
 }
@@ -242,9 +232,7 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1949
-    has_global_flag = event_fired_8007305
   }
-  immediate = { set_global_flag = event_fired_8299003 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -263,9 +251,7 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1950
-    has_global_flag = event_fired_8007306
   }
-  immediate = { set_global_flag = event_fired_8299004 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -284,9 +270,7 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1951
-    has_global_flag = event_fired_8007307
   }
-  immediate = { set_global_flag = event_fired_8299005 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -306,15 +290,7 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1951
-    OR = {
-    NOT = {
-    }
-    NOT = {
-    }
-    }
-    has_global_flag = event_fired_8007314
   }
-  immediate = { set_global_flag = event_fired_8299006 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -333,15 +309,7 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1952
-    OR = {
-    NOT = {
-    }
-    NOT = {
-    }
-    }
-    has_global_flag = event_fired_8007308
   }
-  immediate = { set_global_flag = event_fired_8299007 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -360,10 +328,7 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1954
-
-    has_global_flag = event_fired_8007309
   }
-  immediate = { set_global_flag = event_fired_8299008 }
 
   mean_time_to_happen = { months = 1  }
 
@@ -382,9 +347,7 @@ country_event = {
   trigger = {
     tag = IDO
     year = 1955
-    has_global_flag = event_fired_8007310
   }
-  immediate = { set_global_flag = event_fired_8299009 }
 
   mean_time_to_happen = { months = 1  }
 
