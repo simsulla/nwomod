@@ -29,7 +29,7 @@ province_event = { # Demographic Transition
 	}
 	
 	mean_time_to_happen = {
-		months = 120 # 10 years)
+		months = 240 # 20 years)
 		modifier = {
 			factor = 0.1
 			any_neighbor_province = { has_province_modifier = demographic_transition }
@@ -63,7 +63,7 @@ province_event = { # Demographic Transition
 
 country_event = { # Demographic Transition - Initial setup
 	id = 2260601
-	title = EVT_2260600_NAME # The Demographic Transition
+	title = EVT_2260601_NAME # The Demographic Transition and Modernization
 	desc = EVT_2260600_DESC
 	picture = "demographic_transition"
 	
@@ -78,17 +78,14 @@ country_event = { # Demographic Transition - Initial setup
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 1
 	}
 
 	option = {
 		name = OK
 		any_owned = {
 			limit = {
-				OR = { 
-					AND = { year = 1992 NOT = { continent = mena } NOT = { continent = africa } }
-					AND = { year = 1946 OR = { continent = europe is_core = USA is_core = CAN is_core = AST is_core = NZL } }
-				}
+				is_colonial = no
 			}
 			add_province_modifier = {
 				name = demographic_transition 
