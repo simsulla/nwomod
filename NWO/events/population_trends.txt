@@ -4,334 +4,164 @@
 #															#
 #############################################################
 
-## Country modifiers
-# one_point_five_children literacy > 60% -0.5%
-# two_children literacy literacy > 20% 0.1%
-# two_point_five_children literacy > 15% 0.8%
-# three_children literacy > 10% 1.5%
-# four_children literacy < 10% 1.5%
-## Province modifiers set every 10 years for subset of period
-# pre_demographic_transition hard coded year and geography 2.5%->1.25% (5year >2% literacy), 0.45% (1.8year 1-2% literacy),0.15% (0.6year <1% literacy)  
-# family_values depends on secularism and literacy <5% 1.25% <20% 0.7%
-
-#Max: 1.5+1.25+1.25=4
-
-# consciousness, literacy and bad economy cause low birth rates
-country_event = { # one_point_five_children
-	id = 2260603
-	title = EVTNAME226063 # "Birth Rate Low!"
-	desc = EVTDESC226063
-	picture = "one_point_five_children"
+# Demographic factors
+# 1. Demographic transition - Y|N positive - transition dependent on is_primary, accepted vs not, is_colonial
+# 2.a literacy - linear revers relation and 
+# 2.b secular pop majority - Y|N negative
+# 3. special - haredim_jewish, roma and mennonites and not prim/accept
+province_event = { # Demographic Transition
+	id = 2260600
+	title = EVT_2260600_NAME # The Demographic Transition
+	desc = EVT_2260600_DESC
+	picture = "demographic_transition"
 	
 	trigger = {
-		OR = { literacy = 0.6 AND = { literacy = 0.20 pop_majority_religion = secularism NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
-		NOT = { has_country_modifier = one_point_five_children }
-	}
-	
-	option = {
-		name = EVTOPTA226063
-		remove_country_modifier = one_point_five_children
-		remove_country_modifier = two_children 
-		remove_country_modifier = two_point_five_children
-		remove_country_modifier = three_children
-		add_country_modifier = {
-			name = one_point_five_children 
-			duration = 3500
-		}
-	}
-}
-
-# consciousness, literacy and bad economy cause low birth rates
-country_event = { # two_children
-	id = 2260604
-	title = EVTNAME226064 # "Birth Rate Stable!"
-	desc = EVTDESC226064
-	picture = "one_point_five_children"
-	
-	trigger = {
-		literacy = 0.20
-		NOT = { OR = { literacy = 0.6 pop_majority_religion = secularism NOT = { tag = USA } NOT = { tag = CAN } NOT = { tag = AST } } }
-		NOT = { has_country_modifier = two_children }
-	}
-	
-	option = {
-		name = EVTOPTA226064
-		remove_country_modifier = one_point_five_children
-		remove_country_modifier = two_children 
-		remove_country_modifier = two_point_five_children
-		remove_country_modifier = three_children
-		remove_country_modifier = four_children
-		add_country_modifier = {
-			name = two_children 
-			duration = 3500
-		}
-	}
-}
-
-# consciousness, literacy and bad economy cause low birth rates
-country_event = { # two_point_five_children
-	id = 2260605
-	title = EVTNAME226065 # "Birth Rate Positive!"
-	desc = EVTOPTA226065
-	picture = "pre_demographic_transition"
-	
-	trigger = {
+		NOT = { has_province_modifier = demographic_transition }
 		OR = { 
-			AND = { capital_scope = { NOT = { continent = europe } } literacy = 0.15 NOT = { literacy = 0.2 } } 
-			AND = { capital_scope = { continent = europe } literacy = 0.11 NOT = { literacy = 0.2 } } 
+			AND = { continent = europe year = 1890 }
+			AND = { OR = { is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
+			AND = { OR = { continent = north_america continent = south_america } year = 1970 }
+			AND = { continent = asia year = 1960 }
+			AND = { continent = oceania year = 1980 }
+			AND = { continent = mena year = 1990 }
+			AND = { continent = africa year = 2000 }
 		}
-		NOT = { has_country_modifier = two_point_five_children }
-	}
-	
-	option = {
-		name = EVTOPTA226065
-		remove_country_modifier = one_point_five_children
-		remove_country_modifier = two_children 
-		remove_country_modifier = two_point_five_children
-		remove_country_modifier = three_children
-		remove_country_modifier = four_children
-		add_country_modifier = {
-			name = two_point_five_children
-			duration = 3500
-		}
-	}
-}
-
-country_event = { # three_children
-	id = 2260606
-	title = EVTNAME226066 # "Birth Rate High!"
-	desc = EVTDESC226066
-	picture = "pre_demographic_transition"
-	
-	trigger = {
-		OR = { 
-			AND = { capital_scope = { NOT = { continent = europe } } literacy = 0.1 NOT = { literacy = 0.15 } } 
-			AND = { capital_scope = { continent = europe } literacy = 0.07 NOT = { literacy = 0.11 } } 
-		}
-		NOT = { has_country_modifier = three_children }
-	}
-	
-	option = {
-		name = EVTOPTA226066
-		remove_country_modifier = one_point_five_children
-		remove_country_modifier = two_children 
-		remove_country_modifier = two_point_five_children
-		remove_country_modifier = three_children
-		remove_country_modifier = four_children
-		add_country_modifier = {
-			name = three_children
-			duration = 3500
-		}
-	}
-}
-
-country_event = { # four_children 
-	id = 2260607
-	title = EVTNAME226067 # "Birth Rate High!"
-	desc = EVTDESC226067
-	picture = "pre_demographic_transition"
-	
-	trigger = {
-		OR = { 
-			AND = { capital_scope = { NOT = { continent = europe } } NOT = { literacy = 0.1 } } 
-			AND = { capital_scope = { continent = europe } NOT = { literacy = 0.07 } } 
-		}
-		NOT = { has_country_modifier = four_children }
-	}
-	
-	option = {
-		name = EVTOPTA226066
-		remove_country_modifier = one_point_five_children
-		remove_country_modifier = two_children 
-		remove_country_modifier = two_point_five_children
-		remove_country_modifier = three_children
-		remove_country_modifier = four_children
-		add_country_modifier = {
-			name = four_children
-			duration = 3500
-		}
-	}
-}
-
-# 0.001 gives 2.5% pop growth per year. set every 10 year active for 5 -> 1.2%
-country_event = { # family_values
-	id = 2260610
-	title = EVTNAME2260610 # "Family values!"
-	desc = EVTDESC2260610
-	picture = "family_values"
-	
-	trigger = {
-		NOT = { has_country_modifier = demographics_culture }
-       	NOT = {	pop_majority_religion = secularism }
-	}
-
-	mean_time_to_happen = {
-        months = 1
-	}
-	
-	option = {
-		name = EVTOPTA2260610
-		add_country_modifier = {
-			name = demographics_culture
-			duration = 3600
-		}
-		any_owned = {
-			limit = {
-				NOT = { has_province_modifier = family_values }
-				literacy =  0.05
-				NOT = { literacy =  0.2 }
-			}
-			add_province_modifier = {
-				name = family_values
-				duration = 912
-			}
-		}
-		any_owned = {
-			limit = {
-				NOT = { has_province_modifier = family_values }
-				NOT = { literacy =  0.05 }
-			}
-			add_province_modifier = {
-				name = family_values
-				duration = 1825
-			}
-		}
-	}
-}
-
-# 0.001 gives 2.5% pop growth per year. set every 10 year active for 5 -> 1.2%
-# 1.2% (5year), 0.4% (1.8year),0.1% (0.6year)  
-country_event = { # pre_demographic_transition
-	id = 2260611
-	title = EVT_2260611_NAME 
-	desc = EVT_2260611_DESC
-	picture = "pre_demographic_transition"
-	
-	trigger = {
-		NOT = { has_country_modifier = demographics }
 	}
 	
 	mean_time_to_happen = {
-        months = 1
+		months = 120 # 10 years)
+		modifier = {
+			factor = 0.1
+			any_neighbor_province = { has_province_modifier = demographic_transition }
+		}
+		modifier = {
+			factor = 0.2
+			OR = { is_accepted_culture = yes is_primary_culture = yes }
+		}
+		modifier = {
+			factor = 0.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 0.9
+			is_coastal = yes
+		}
+		modifier = {
+			factor = 1.6
+			is_colonial = yes
+		}
 	}
 	
 	option = {
-		name = EVT_2260611_OPTA
-		add_country_modifier = {
-			name = demographics
-			duration = 3650
+		name = OK
+		add_province_modifier = {
+			name = demographic_transition 
+			duration = -1
 		}
+	}
+}
+
+country_event = { # Demographic Transition - Initial setup
+	id = 2260601
+	title = EVT_2260600_NAME # The Demographic Transition
+	desc = EVT_2260600_DESC
+	picture = "demographic_transition"
+	
+	trigger = {
+		capital_scope = {
+			NOT = { has_province_modifier = demographic_transition }
+			OR = { 
+				AND = { year = 1992 NOT = { continent = mena } NOT = { continent = africa } }
+				AND = { year = 1946 OR = { continent = europe is_core = USA is_core = CAN is_core = AST is_core = NZL } }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = OK
 		any_owned = {
 			limit = {
-				literacy = 0.02
-				NOT = { has_province_modifier = pre_demographic_transition }
-				NOT = { pop_majority_religion = secularism } 
-				OR = {
-					AND = { # Demographic transition in E/S-Asia in the 60th-
-						NOT = { year = 1960 } 
-						OR = { continent = asia continent = oceania }
-						NOT = { OR = { is_core = NZL is_core = JAP is_core = AST } }
-					}
-					AND = { # Demographic transition in Latin America in the 70th-
-						NOT = { year = 1970 } 
-						OR = { continent = south_america continent = north_america continent = mena }
-						NOT = { OR = { is_core = USA is_core = CAN } }
-					}
-					AND = { 
-						NOT = { year = 2000 } 
-						pop_majority_religion = sunni 
-					}
-					AND = { 
-						NOT = { year = 2018 } 
-						continent = africa
-					}
-					AND = { 
-						NOT = { year = 2028 } 
-						continent = africa 
-						pop_majority_religion = sunni 
-					}
+				OR = { 
+					AND = { year = 1992 NOT = { continent = mena } NOT = { continent = africa } }
+					AND = { year = 1946 OR = { continent = europe is_core = USA is_core = CAN is_core = AST is_core = NZL } }
 				}
 			}
 			add_province_modifier = {
-				name = pre_demographic_transition
-				duration = 1825
-			}
-		}
-		any_owned = {
-			limit = {
-				literacy = 0.01 NOT = { literacy = 0.02 }
-				NOT = { has_province_modifier = pre_demographic_transition }
-				NOT = { pop_majority_religion = secularism } 
-				OR = {
-					AND = { # Demographic transition in E/S-Asia in the 60th-
-						NOT = { year = 1960 } 
-						OR = { continent = asia continent = oceania }
-						NOT = { OR = { is_core = NZL is_core = JAP is_core = AST } }
-					}
-					AND = { # Demographic transition in Latin America in the 70th-
-						NOT = { year = 1970 } 
-						OR = { continent = south_america continent = north_america continent = mena }
-						NOT = { OR = { is_core = USA is_core = CAN } }
-					}
-					AND = { 
-						NOT = { year = 2000 } 
-						pop_majority_religion = sunni 
-					}
-					AND = { 
-						NOT = { year = 2018 } 
-						continent = africa 
-					}
-					AND = { 
-						NOT = { year = 2028 } 
-						continent = africa 
-						pop_majority_religion = sunni 
-					}
-				}
-			}
-			add_province_modifier = {
-				name = pre_demographic_transition
-				duration = 657
-			}
-		}
-		any_owned = {
-			limit = {
-				NOT = { literacy = 0.01 }
-				NOT = { has_province_modifier = pre_demographic_transition }
-				NOT = { pop_majority_religion = secularism } 
-				OR = {
-					AND = { # Demographic transition in E/S-Asia in the 60th-
-						NOT = { year = 1960 } 
-						OR = { continent = asia continent = oceania }
-						NOT = { OR = { is_core = NZL is_core = JAP is_core = AST } }
-					}
-					AND = { # Demographic transition in Latin America in the 70th-
-						NOT = { year = 1970 } 
-						OR = { continent = south_america continent = north_america continent = mena }
-						NOT = { OR = { is_core = USA is_core = CAN } }
-					}
-					AND = { 
-						NOT = { year = 2000 } 
-						pop_majority_religion = sunni 
-					}
-					AND = { 
-						NOT = { year = 2018 } 
-						continent = africa 
-					}
-					AND = { 
-						NOT = { year = 2028 } 
-						continent = africa 
-						pop_majority_religion = sunni 
-					}
-				}
-			}
-			add_province_modifier = {
-				name = pre_demographic_transition
-				duration = 219
+				name = demographic_transition 
+				duration = -1
 			}
 		}
 	}
 }
 
+country_event = { # Total Fertility Rate
+	id = 2260602
+	title = EVT_2260602_NAME #  Total Fertility Rate
+	desc = EVT_2260602_DESC
+	picture = "total_fertility_rate"
+	
+	trigger = {}
+	
+	mean_time_to_happen = {
+		months = 120 # 10 years)
+		modifier = {
+			factor = 0.1
+			NOT = { has_country_flag = total_fertility_rate_initial_setup } 
+		}
+	}
+	
+	option = {
+		name = OK
+		set_country_flag = total_fertility_rate_initial_setup
+
+		any_owned = {
+			limit = { NOT = { literacy = 0.01 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = family_values duration = 3150 } # 9 +45%
+		}
+		any_owned = {
+			limit = { literacy = 0.01 NOT = { literacy = 0.05 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = family_values duration = 2450 } #7 +35%
+		}
+		any_owned = {
+			limit = { literacy = 0.01 NOT = { literacy = 0.1 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = family_values duration = 1400 } # 4 +20%
+		}
+		any_owned = {
+			limit = { literacy = 0.1 NOT = { literacy = 0.4 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = family_values duration = 700 } # 2 +10%
+		}
+		any_owned = {
+			limit = { literacy = 0.4 is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = family_values duration = 350 } # 1 +5%
+		}
+
+		any_owned = {
+			limit = { NOT = { literacy = 0.01 } OR = { is_state_religion = yes has_province_modifier = demographic_transition } } 
+			add_province_modifier = { name = total_fertility_rate duration = 3150 } # 9 +22.5%
+		}
+		any_owned = {
+			limit = { literacy = 0.01 NOT = { literacy = 0.05 } OR = { is_state_religion = yes has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = total_fertility_rate duration = 1400 } # 4 +10%
+		}
+		any_owned = {
+			limit = { literacy = 0.01 NOT = { literacy = 0.1 } OR = { is_state_religion = yes has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = total_fertility_rate duration = 700 } # 2 +5%
+		}
+		any_owned = {
+			limit = { literacy = 0.1 NOT = { literacy = 0.4 } OR = { is_state_religion = yes has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = self_values duration = 350 } # 1 -2.5%
+		}
+		any_owned = {
+			limit = { literacy = 0.4 OR = { is_state_religion = yes has_province_modifier = demographic_transition } }
+			add_province_modifier = { name = self_values duration = 1400 } # 4 -10%
+		}
+		
+	}
+}
 
 province_event = { # haredim_jewish
 	id = 2260612
