@@ -179,7 +179,8 @@ country_event = {
 	relation = { who = BUL value = 100 } 
 	relation = { who = RUS value = 50 } 
 	any_pop = { militancy = -0.1 consciousness = -0.1 }
-	ai_chance = { factor = 0 }
+	BUL = { country_event =  { id = 8216021 days = 7 } }
+	ai_chance = { factor = 100 }
   }
 
   option = {
@@ -187,8 +188,7 @@ country_event = {
 	relation = { who = RUS value = -50 } 
 	relation = { who = BUL value = -50 } 
 	any_pop = { militancy = 0.2 consciousness = 0.5 }
-	BUL = { country_event =  { id = 8216021 days = 7 } }
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -203,7 +203,8 @@ country_event = {
 	relation = { who = YUG value = 100 } 
 	relation = { who = RUS value = 50 } 
 	any_pop = { militancy = -0.1 consciousness = -0.1 }
-	ai_chance = { factor = 0 }
+	YUG = { country_event =  { id = 8216022 days = 360 } }
+	ai_chance = { factor = 100 }
   }
 
   option = {
@@ -211,8 +212,7 @@ country_event = {
 	relation = { who = RUS value = -50 } 
 	relation = { who = YUG value = -50 } 
 	any_pop = { militancy = 0.2 consciousness = 0.4}
-	YUG = { country_event =  { id = 8216022 days = 360 } }
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -224,19 +224,19 @@ country_event = {
 
   option = {
     name = EVT_8216022_A #"We invite people of Bulgaria"
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 100 }
 	relation = { who = BUL value = 50 } 
 	relation = { who = RUS value = -50 } 
+	RUS = { country_event =  { id = 8216023 days = 30 } }
 	badboy = 1
   }
 
   option = {
     name = EVT_8216022_B #"Not really"
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0 }
 	relation = { who = RUS value = 50 } 
 	relation = { who = BUL value = -50 } 
 	any_pop = { militancy = -0.5 consciousness = -0.1 }
-	RUS = { country_event =  { id = 8216023 days = 30 } }
   }
 }
 country_event = {
@@ -247,15 +247,15 @@ country_event = {
   is_triggered_only = yes
 
   option = {
-    name = EVT_8216023_A #"Let them"
-	ai_chance = { factor = 100 }
+    name = EVT_8216023_A #"No"
+	ai_chance = { factor = 90 }
 	relation = { who = BUL value = -50 } 
 	relation = { who = YUG value = -50 } 
   }
 
   option = {
-    name = EVT_8216023_B #"Not really"
-	ai_chance = { factor = 0 }
+    name = EVT_8216023_B #"Let them"
+	ai_chance = { factor = 10 }
 	prestige = -10
 	diplomatic_influence = { who = YUG value = -100 } 
 	relation = { who = BUL value = 50 } 
