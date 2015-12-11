@@ -175,8 +175,8 @@ country_event = { # The Federation of South Arabia
 	any_pop = { limit = { culture = sunni_arab } militancy = 5.0 consciousness = 4.0 }
 	release = SYE
 	SYE = { government = proletarian_dictatorship country_event = 800052 }
-	casus_belli = { target = SYE casus_belli = conquest }
-	war = { target = SYE attacker_goal = conquest defender_goal = statis_quo }
+	casus_belli = { target = SYE type = conquest }
+	war = { target = SYE attacker_goal = { casus_belli = conquest } defender_goal = { casus_belli  = status_quo } }
 	ai_chance = { factor = 0 }
   }
   
