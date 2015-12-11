@@ -104,7 +104,6 @@ country_event = {
 		exists = RHO
 		#is_our_vassal = RHO
 		year = 1963 NOT = { year = 1990 }
-		exists = TAN
 	}
 	
 	mean_time_to_happen = { months = 3 }
@@ -119,7 +118,8 @@ country_event = {
 	  name = EVT_8012210_B
 	  prestige = -10
 	  any_pop = { limit = { location = { OR = { is_core = ZAM is_core = MLW } } } militancy = 8 consciousness = 5 }
-	  # TODO ZAM and MLW UDI
+	  random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } add_casus_belli = { target = RHO type = make_puppet } primary_culture = black_anglo }
+	  random_country = { limit = { is_vassal = yes tag = MLW } release_vassal = MLW MLW = { government = democracy country_event = 800054 } add_casus_belli = { target = RHO type = make_puppet } primary_culture = chewa }
 	  ai_chance = { factor = 0 }
     }	
 }
@@ -133,10 +133,8 @@ country_event = { # Unilateral Declaration of Independence
   option = {
     name = EVT_8012212_A
 	any_pop = { militancy = 0.5 consciousness = 1 }
-	release_vassal = ZAM
-    release_vassal = MLW
-	ZAM = { primary_culture = black_anglo }
-	MLW = { primary_culture = chewa }
+	random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } primary_culture = black_anglo }
+	random_country = { limit = { is_vassal = yes tag = MLW } release_vassal = MLW MLW = { government = democracy country_event = 800054 } primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
 	badboy = 5
 	government = populist_dictatorship country_event = 800050 
@@ -145,8 +143,7 @@ country_event = { # Unilateral Declaration of Independence
   option = {
     name = EVT_8012212_B
 	any_pop = { militancy = 0.5 consciousness = 1 }
-    release_vassal = MLW
-	MLW = { primary_culture = chewa }
+	random_country = { limit = { is_vassal = yes tag = MLW } release_vassal = MLW MLW = { government = democracy country_event = 800054 } primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
 	badboy = 20
 	government = populist_dictatorship country_event = 800050
@@ -155,10 +152,8 @@ country_event = { # Unilateral Declaration of Independence
   option = {
     name = EVT_8012212_C
 	any_pop = { militancy = 0.5 }
-	release_vassal = ZAM
-    release_vassal = MLW
-	ZAM = { primary_culture = black_anglo }
-	MLW = { primary_culture = chewa }
+	random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } primary_culture = black_anglo }
+	random_country = { limit = { is_vassal = yes tag = MLW } release_vassal = MLW MLW = { government = democracy country_event = 800054 } primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
 	government = democracy country_event = 800054
 	primary_culture = shona
