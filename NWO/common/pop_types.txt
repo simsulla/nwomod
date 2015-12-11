@@ -1,5 +1,4 @@
-promotion_chance = 
-{
+promotion_chance = { # 0.4
 	factor = 0.4
 	group = {
 		modifier = {
@@ -111,8 +110,7 @@ promotion_chance =
 	
 }
 
-demotion_chance = 
-{
+demotion_chance = { # 1
 	factor = 1
 	modifier = {
 		factor = -0.1
@@ -290,7 +288,7 @@ demotion_chance =
 }
 
 #general migration chance mtth, same for all pops
-migration_chance = {
+migration_chance = { # 1
 	factor = 1
 	
 	group = {
@@ -324,8 +322,7 @@ migration_chance = {
 }
 
 #general colonial migration mtth, same for all pops
-colonialmigration_chance = 
-{
+colonialmigration_chance = { # 0.25
 	factor = 0.25
 
 	modifier = { factor = -0.5 is_primary_culture = no }
@@ -352,8 +349,7 @@ colonialmigration_chance =
 }
 
 #general emigration chance
-emigration_chance = 
-{
+emigration_chance = { # 0.5
 	factor = 0.5 
 	modifier = { factor = -2.0 state_scope = { is_colonial = yes } }
 
@@ -411,69 +407,8 @@ emigration_chance =
 }
 
 #general assimilation mtth, same for all pops
-assimilation_chance = 
-{
-	factor = 0.01
-	group = {
-		modifier = {
-			factor = 2
-			luxury_needs = 0.9
-		}
-		modifier = {
-			factor = 2
-			luxury_needs = 0.8
-		}
-		modifier = {
-			factor = 2
-			luxury_needs = 0.7
-		}
-		modifier = {
-			factor = 2
-			luxury_needs = 0.6
-		}
-		modifier = {
-			factor = 2
-			luxury_needs = 0.5
-		}
-		modifier = {
-			factor = 2
-			luxury_needs = 0.4
-		}
-		modifier = {
-			factor = 2
-			luxury_needs = 0.3
-		}
-		modifier = {
-			factor = 2
-			luxury_needs = 0.2
-		}
-		modifier = {
-			factor = 2
-			luxury_needs = 0.1
-		}
-	}
-	group = {
-		modifier = {
-			factor = 0.5
-			everyday_needs = 0.9
-		}
-		modifier = {
-			factor = 0.5
-			everyday_needs = 0.8
-		}
-		modifier = {
-			factor = 0.5
-			everyday_needs = 0.7
-		}
-		modifier = {
-			factor = 0.5
-			everyday_needs = 0.6
-		}
-		modifier = {
-			factor = 0.5
-			everyday_needs = 0.5
-		}
-	}
+assimilation_chance = { # 0.1
+	factor = 0.1
 	group = {
 		modifier = {
 			factor = -1
@@ -524,10 +459,6 @@ assimilation_chance =
 		country = { citizenship_policy = full_citizenship }
 	}
 	modifier = {
-		factor = 3
-		has_pop_religion = secularism
-	}
-	modifier = {
     	factor = -100
 		location = {
        		any_core = { is_primary_culture = THIS }
@@ -539,46 +470,44 @@ assimilation_chance =
 			location = { controlled_by = owner }
 		}
 	}
-	group = {
-		modifier = {
-			factor = 0.5
-			NOT = { unemployment = 0.1 }
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { unemployment = 0.05 }
-		}
-	}
 	# assimilation via secularism
 	modifier = {
 		factor = -100
-		not = { religion = this }
+		NOT = { religion = THIS }
 	}
 	modifier = {
 		factor = -100
-		not = { religion = secularism }
+		NOT = { religion = secularism }
 	}
 	# TODO easier to assimilate into "open linguistic cultures" like for africans to become black_anglo.
 	modifier = {
 		factor = -10
-		NOT = { is_culture_group = this }
+		NOT = { is_culture_group = THIS }
 	}
 }
 
 #general conversion mtth, same for all pops
-conversion_chance = 
-{
-	factor = 0.02
+conversion_chance = { # 0.75
+	factor = 0.75
 
-	modifier = { factor = 1.2 literacy = 0.1 }
-	modifier = { factor = 1.2 literacy = 0.2 }
-	modifier = { factor = 1.2 literacy = 0.4 }
-	modifier = { factor = 1.2 literacy = 0.6 }
-	modifier = { factor = 1.2 literacy = 0.8 }
+	group = {
+		modifier = { factor = 0.05 literacy = 0.1 }
+		modifier = { factor = 0.05 literacy = 0.2 }
+		modifier = { factor = 0.05 literacy = 0.3 }
+		modifier = { factor = 0.05 literacy = 0.4 }
+		modifier = { factor = 0.05 literacy = 0.5 }
+		modifier = { factor = 0.05 literacy = 0.6 }
+	}	
+
+	group = {
+		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { religious_policy = pro_atheism religious_policy } }
+		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { religious_policy = secularized } }
+		modifier = { factor = 0.4 NOT = { has_pop_religion = secularism } country = { government = proletarian_dictatorship } }
+	}
+
+	modifier = { factor = 0.5 NOT = { has_pop_religion = secularism } culture = THIS }
+
 	modifier = { factor = -2 country = { religious_policy = moralism } }
-	modifier = { factor = 2 NOT = { has_pop_religion = secularism } country = { OR = { religious_policy = pro_atheism religious_policy = secularized } } }
-	modifier = { factor = 2 NOT = { has_pop_religion = secularism } country = { government = proletarian_dictatorship } }	
-	modifier = { factor = 2 NOT = { has_pop_religion = secularism } culture = THIS }
-	modifier = { factor = -4 OR = { has_pop_religion = jewish has_pop_religion = mennonite has_pop_religion = secularism } }
-	modifier = { factor = -4 OR = { has_pop_religion = sunni has_pop_religion = shiite } }
+	modifier = { factor = -2 OR = { has_pop_religion = jewish has_pop_religion = mennonite has_pop_religion = secularism } }
+	modifier = { factor = -1.5 OR = { has_pop_religion = sunni has_pop_religion = shiite } }
 }
