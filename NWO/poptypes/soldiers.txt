@@ -120,6 +120,30 @@ country_migration_target = {
 
 	modifier = { factor = 2.0 has_pop_culture = THIS }
 
+	# Europenas to europe, north_america and oceania
+	modifier = {
+		factor = 2.0
+		THIS = { is_culture_group = european }
+		OR = { continent = north_america continent = europe continent = oceania }
+	}
+	modifier = {
+		factor = 0.01
+		THIS = { is_culture_group = european }
+		NOT = { continent = north_america } NOT = { continent = europe continent = oceania }
+	}
+
+	# Neo_Europenas to north_america and oceania
+	modifier = {
+		factor = 2.0
+		THIS = { is_culture_group = neo_european_cultures }
+		OR = { continent = north_america continent = south_america continent = oceania }
+	}
+	modifier = {
+		factor = 0.01
+		THIS = { is_culture_group = neo_european_cultures }
+		NOT = { continent = north_america } NOT = { continent = south_america } NOT = { continent = oceania }
+	}
+
 	# Latin migrate to America
 	modifier = {
 		factor = 2.0
