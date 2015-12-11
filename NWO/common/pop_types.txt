@@ -360,9 +360,9 @@ emigration_chance = { # 0.5
 	# no life needs - leave!
 	modifier = { factor = 0.2 NOT = { life_needs = 1.0 } }
 
-	modifier = { factor = -0.3 location = { is_state_capital = yes } }
+	modifier = { factor = -0.4 location = { is_state_capital = yes } }
 
-	modifier = { factor = -0.3 OR = { type = farmers type = labourers } }
+	modifier = { factor = -0.4 OR = { type = farmers type = labourers } }
 
 	modifier = { factor = 0.1 unemployment = 0.2 }
 	modifier = { factor = 0.1 unemployment = 0.3 }
@@ -373,7 +373,7 @@ emigration_chance = { # 0.5
 
 	# ugly but need to limit pop fragmentation and sino indian swamping
 	modifier = { 
-		factor = -0.3
+		factor = -0.35
 		OR = { 
 			is_culture_group = south_asian 
 			is_culture_group = southeast_asian 
@@ -383,7 +383,7 @@ emigration_chance = { # 0.5
 
 	# roundabout way to mod that mostly refugees emigrate
 	modifier = { 
-		factor = -0.3
+		factor = -0.2
 		country = {
 			OR = {
 				government = absolute_monarchy
@@ -500,7 +500,7 @@ conversion_chance = { # 0.75
 	}	
 
 	group = {
-		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { religious_policy = pro_atheism religious_policy } }
+		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { religious_policy = pro_atheism } }
 		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { religious_policy = secularized } }
 		modifier = { factor = 0.4 NOT = { has_pop_religion = secularism } country = { government = proletarian_dictatorship } }
 	}
