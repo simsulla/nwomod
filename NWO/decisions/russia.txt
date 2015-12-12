@@ -165,9 +165,11 @@ political_decisions = {
 		effect = {
 			set_country_flag = polish_population_transfers
 			relation = { who = POL value = -100 } 
-			any_pop = { limit = { NOT = { strata = poor } location = { province_id = 360 } culture = polish } move_pop = 690 } # Vilnius -> Danzig
-			any_pop = { limit = { NOT = { strata = poor } location = { province_id = 947 } culture = polish } move_pop = 680 } # Pastavy -> Koslin
-			any_pop = { limit = { NOT = { strata = poor } location = { province_id = 938 } culture = polish } move_pop = 679 } # Lida -> Kolberg
+			any_pop = { limit = { type = farmers religion = catholic location = { province_id = 360 } culture = polish } move_pop = 690 } # Vilnius -> Danzig
+			any_pop = { limit = { type = farmers religion = catholic  location = { province_id = 947 } culture = polish } move_pop = 680 } # Pastavy -> Koslin
+			any_pop = { limit = { NOT = { type = farmers  religion = catholic } location = { province_id = 947 } culture = polish } move_pop = 938 } # Pastavy -> Lida
+			any_pop = { limit = { type = farmers  religion = catholic  location = { province_id = 938 } culture = polish } move_pop = 679 } # Lida -> Kolberg
+			any_pop = { limit = { type = farmers  religion = catholic location = { province_id = 936 } culture = polish } move_pop = 696 } # Grodono -> Kolberg
 			any_pop = { limit = { location = { province_id = 939 } culture = polish } move_pop = 692 } # Baranovichi -> Kuslin
 			any_pop = { limit = { location = { province_id = 949 } culture = polish } move_pop = 681 } # Pinsk -> D.Krone
 			any_pop = { limit = { location = { state_id = 937 } culture = polish } move_pop = 682 } # Brest Litovsk -> Breslau
@@ -177,10 +179,15 @@ political_decisions = {
 			any_pop = { limit = { location = { province_id = 719 } culture = byelorussian } move_pop = 697 } # -> E.Prussia
 			any_pop = { limit = { location = { province_id = 707 } culture = byelorussian } move_pop = 695 } #  -> E.Prussia
 
-			any_pop = { limit = { location = { province_id = 702 } culture = polish } move_pop = 682 } # Lvov -> Breslau
+			any_pop = { limit = { OR = { type = farmers type = aristocrats } location = { province_id = 702 } culture = polish } move_pop = 682 } # Lvov -> Breslau
 			any_pop = { limit = { location = { province_id = 952 } culture = polish } move_pop = 546 } # Ternipol -> Stettin
-			any_pop = { limit = { location = { province_id = 951 } culture = polish } move_pop = 690 } # Styri -> Danzig
-			
+			any_pop = { limit = { OR = { type = farmers type = aristocrats }  location = { province_id = 951 } culture = polish } move_pop = 690 } # Styri -> Danzig
+
+			POL = { 
+				random_pop = { limit = { culture = polish religion = secularism } move_pop = 681 } 
+				random_pop = { limit = { culture = polish religion = secularism } move_pop = 679 } 
+				random_pop = { limit = { culture = polish religion = secularism } move_pop = 680 } 
+			}
 		}
 		ai_will_do = {
 			factor = 1
