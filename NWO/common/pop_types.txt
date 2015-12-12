@@ -472,19 +472,17 @@ assimilation_chance = { # 0.1
 	}
 	# assimilation via secularism
 	modifier = {
-		factor = -10
+		factor = -100
 		NOT = { religion = THIS }
 	}
 	modifier = {
-		factor = -10
+		factor = -100
 		NOT = { religion = secularism }
 	}
 	# TODO easier to assimilate into "open linguistic cultures" like for africans to become black_anglo.
 	modifier = {
 		factor = -10
 		NOT = { is_culture_group = THIS }
-		NOT = { is_culture_group = african_diaspora_cultures THIS = { is_culture_group = african } }
-		NOT = { is_culture_group = neo_european_cultures THIS = { is_culture_group = european } }
 	}
 }
 
