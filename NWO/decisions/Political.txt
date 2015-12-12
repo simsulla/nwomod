@@ -4,22 +4,13 @@ political_decisions = {
 	five_year_plan = {
 			picture = "five_year_plan"
 			potential = {
-				OR = {
-					continent = asia
-					continent = africa
-					continent = mena
-					government = proletarian_dictatorship
-					tag = ARG
-				}
+				government = proletarian_dictatorship
 				NOT = { tag = JAP }
 				NOT = { has_country_modifier = five_year_plan }
 			}
 
 			allow = {
-				OR = {
-					government = proletarian_dictatorship
-					AND = { NOT = { year = 1992 } ruling_party_ideology = socialist }
-				}
+				government = proletarian_dictatorship
 				public_switched_telephone_network = 1
 				war = no
 			}
