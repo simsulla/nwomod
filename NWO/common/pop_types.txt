@@ -318,7 +318,7 @@ migration_chance = { # 1
 		modifier = { factor = 0.3 unemployment = 0.6 location = { controlled_by = owner } }	
 	}
 	# prevent popolus masters (like chines) from swamping minority areas, by making them more likely to migrate
-	modifier = { factor = 0.3 OR = { is_primary_culture = yes is_accepted_culture = yes } location = { is_primary_culture = no is_accepted_culture = no } }
+	modifier = { factor = -0.3 OR = { is_primary_culture = no is_accepted_culture = no } location = { is_primary_culture = no is_accepted_culture = no } }
 }
 
 #general colonial migration mtth, same for all pops
