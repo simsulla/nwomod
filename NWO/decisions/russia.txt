@@ -89,7 +89,6 @@ political_decisions = {
 	}
 
 
-# first decision if CHI AI: else decision sino_soviet_friendship done by china
 	sino_soviet_friendship = {
 		picture = "sino_soviet_friendship"
 		potential = {
@@ -98,14 +97,14 @@ political_decisions = {
 			government = proletarian_dictatorship
 			NOT = { has_country_flag = sino_soviet_friendship }
 			CHI = { exists = yes }
-			CHI = { ai = no } 
 			tag = RUS
 		}
 
 		allow = {
 			is_greater_power = yes
-			CHI = { war = no }
+			CHI = { war = no government = proletarian_dictatorship }
 			relation =  { who = CHI value = 100 } 
+			containment = 1
 		}
 
 		effect = {

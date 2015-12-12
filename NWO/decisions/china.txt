@@ -27,21 +27,20 @@ political_decisions = {
 	}
 
 
-# first decision if RUS(CHI) AI: else decision sino_soviet_friendship done by russia
 	sino_soviet_friendship_chi = {
 		picture = "sino_soviet_friendship"
 		potential = {
 			RUS = { war = no government = proletarian_dictatorship }
+			RUS = { has_country_flag = sino_soviet_friendship }
 			war = no
-			government = proletarian_dictatorship
 			NOT = { has_country_flag = sino_soviet_friendship }
-			OR = { RUS = { ai = yes } AND =  { RUS = { ai = yes } CHI = { ai = yes } }  }
 			tag = CHI
 		}
 
 		allow = {
-			CHI = { war = no }
-			OR = { relation = { who = RUS value = 100 } ai = yes }
+			war = no
+			government = proletarian_dictatorship
+			containment = 1
 		}
 
 		effect = {
@@ -60,18 +59,16 @@ political_decisions = {
 	the_return_of_port_arthur = {
 		picture = "the_return_of_port_arthur"
 		potential = {
-			has_country_flag = sino_soviet_friendship
-			NOT = { has_country_modifier = comecon_excluded }
 			NOT = { has_country_flag = the_return_of_port_arthur }
 			tag = CHI
 			RUS = { war = no government = proletarian_dictatorship }
-			CHI = { war = no government = proletarian_dictatorship }
+			CHI = { war = no  }
 			1481 = { owned_by = RUS }
 		}
 
 		allow = {
-			NOT = { has_country_modifier = comecon }
-			OR = { relation = { who = RUS value = 180 } ai = yes }
+			has_country_flag = sino_soviet_friendship
+			cold_war = 1
 		}
 
 		effect = {
