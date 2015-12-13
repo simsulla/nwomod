@@ -258,16 +258,19 @@ political_reforms = {
 			issue_change_speed = 1.0
 			global_immigrant_attract = 0.01
 			suppression_points_modifier = -0.25
+			allow = { strd_internet = 1 }
 		}
 		net_neutrality = { # 
 			issue_change_speed = 1.2
 			global_immigrant_attract = 0.01
 			suppression_points_modifier = -0.25
+			allow = { strd_internet = 1 }
 		}
 		sponsored_access = { # 
 			issue_change_speed = 0.5
 			global_immigrant_attract = -0.01
 			suppression_points_modifier = 0.25
+			allow = { strd_internet = 1 }
 		}
 	}
 	publishing_rights = { # press_rights
@@ -280,6 +283,7 @@ political_reforms = {
 		}
 		firewall_publishing = { # censored_press
 			literacy_con_impact = 0.5
+			allow = { strd_internet = 1 }
 		}
 		unregulated_publishing = { # free_press
 			literacy_con_impact = 1
@@ -287,12 +291,14 @@ political_reforms = {
 			cb_generation_speed_modifier = -0.1
 			issue_change_speed = 0.1
 			global_immigrant_attract = 0.05
+			allow = { strd_internet = 1 }
 		}
 		responsible_publishing = { 
 			literacy_con_impact = 0.5		
 			suppression_points_modifier = 0.25
 			cb_generation_speed_modifier = 0.1
 			issue_change_speed = -0.1
+			allow = { war_on_terror = 1 }
 		}		
 	}
 	gender_rights = { # trade_unions
@@ -303,14 +309,17 @@ political_reforms = {
 		gender_equal = { # state_controlled
 			social_reform_desire = 0.1
 			global_population_growth = -0.001
+			allow = { seventies_subcultures = 1 }
 		}
 		gender_promotive = { # non_socialist
 			social_reform_desire = 0.2
 			global_population_growth = -0.005
+			allow = { seventies_subcultures = 1 }
 		}
 		feminist = { # all_trade_unions
 			social_reform_desire = 0.3
 			global_population_growth = -0.01
+			allow = { cultural_imperialism = 1 }
 		}
 	}
 	political_parties = {
@@ -335,12 +344,14 @@ political_reforms = {
 		parties_promote_democratic = { # non_secret_ballots
 			ruling_party_support = 0.05
 			allow = {
+				cultural_imperialism = 1
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 		parties_restrict_non_democratic = { # secret_ballots
 			ruling_party_support = 0.1
 			allow = {
+				colour_revolution = 1
 				NOT = { vote_franschise = none_voting }
 			}
 		}
@@ -353,15 +364,19 @@ political_reforms = {
 		}
 		quota_immigration = {
 			global_immigrant_attract = -0.1
+			allow = { OR = { government = democracy government = hms_government decolonization = 1 } }
 		}
 		open_immigration = {
 			global_immigrant_attract = 0.25
+			allow = { OR = { tag = USA tag = CAN tag = AST tag = NZL tag = ARG wars_of_national_liberation = 1 }
 		}
 		naturalization = {
 			global_immigrant_attract = 0.50
+			allow = { seventies_subcultures = 1 }
 		}
 		promoted_immigration = { #
 			global_immigrant_attract = 0.80
+			allow = { seventies_subcultures = 1 }
 		}
 
 	}
@@ -381,18 +396,21 @@ political_reforms = {
 			mobilisation_size = 0.02
 			mobilisation_economy_impact = 1
 			global_population_growth = -0.001
+			allow = { seventies_subcultures = 1 }
 		}
 		gender_neutrallity = { # one_year_draft
 			mobilisation_size = 0.01
 			mobilisation_economy_impact = 0.5
 			global_pop_militancy_modifier = -0.02
 			global_population_growth = -0.001
+			allow = { seventies_subcultures = 1 }
 		}
 		lgbt_promoted = { # no_draft
 			mobilisation_size = 0.005
 			global_pop_militancy_modifier = -0.03
 			mobilisation_economy_impact = 0.1
 			global_population_growth = -0.005
+			allow = { cultural_imperialism = 1 }
 		}
 		
 	}
@@ -410,6 +428,7 @@ political_reforms = {
 			allow = { citizenship_policy = full_citizenship } 
 			rules = { all_voting = yes }
 			global_immigrant_attract = 0.1
+			allow = { seventies_subcultures = 1 }
 		}
 	}
 	voting_system = {
@@ -481,18 +500,21 @@ social_reforms = {
 		security_data_cohesion = { # twelve_hours
 			administrative_multiplier = 2
 			global_pop_militancy_modifier = -0.02
+			allow = { war_on_terror = 1 }
 		}
 		security_clearance_for_gov_services = { # ten_hours
 			factory_throughput = -0.05
 			administrative_multiplier = 3
 			global_pop_consciousness_modifier = -0.01
 			global_pop_militancy_modifier = -0.03
+			allow = { war_on_terror = 1 }
 		}
 		preemptive_security_actions = { # eight_hours
 			factory_throughput = -0.10
 			administrative_multiplier = 4
 			global_pop_consciousness_modifier = -0.02
 			global_pop_militancy_modifier = -0.04
+			allow = { political_polarization = 1 }
 		}
 	}
 	safety_regulations = {
