@@ -368,7 +368,7 @@ political_reforms = {
 		}
 		open_immigration = {
 			global_immigrant_attract = 0.25
-			allow = { OR = { tag = USA tag = CAN tag = AST tag = NZL tag = ARG wars_of_national_liberation = 1 }
+			allow = { OR = { tag = USA tag = CAN tag = AST tag = NZL tag = ARG wars_of_national_liberation = 1 } }
 		}
 		naturalization = {
 			global_immigrant_attract = 0.50
@@ -425,10 +425,9 @@ political_reforms = {
 			allow = { not = { citizenship_policy = residency } }
 		}
 		minorities_affirmative_action = { # protected
-			allow = { citizenship_policy = full_citizenship } 
+			allow = { citizenship_policy = full_citizenship seventies_subcultures = 1 } 
 			rules = { all_voting = yes }
 			global_immigrant_attract = 0.1
-			allow = { seventies_subcultures = 1 }
 		}
 	}
 	voting_system = {
