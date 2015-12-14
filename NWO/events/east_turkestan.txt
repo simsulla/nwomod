@@ -64,9 +64,10 @@ country_event = {
 
   option = {
     name = EVT_8013802_A
-	create_vassal = ETS 
-	any_pop = { militancy = 0.5 consciousness = 1 }
+	#create_vassal = ETS 
+	any_pop = { militancy = 0.5 consciousness = 0.1 }
 	badboy = 10 
+	diplomatic_influence = { who = ETS value = 200 } 
 	relation = { who = KMT value = -100 } 
 	relation = { who = CHI value = -100 } 
     ai_chance = { factor = 1  modifier = { factor = 0 exists = CHI } }
