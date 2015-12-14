@@ -29,7 +29,7 @@ province_event = { # Demographic Transition
 	}
 	
 	mean_time_to_happen = {
-		months = 240 # 20 years)
+		months = 120 # 10 years)
 		modifier = {
 			factor = 0.1
 			any_neighbor_province = { has_province_modifier = demographic_transition }
@@ -69,10 +69,11 @@ country_event = { # Demographic Transition - Initial setup
 	
 	trigger = {
 		NOT = { has_country_flag = demographic_init }
+		exitst = yes
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 1
 	}
 
 	option = {
@@ -98,22 +99,27 @@ country_event = { # Total Fertility Rate
 	title = EVT_2260602_NAME #  Total Fertility Rate
 	desc = EVT_2260602_DESC
 	picture = "demographic_transition"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
 	
 	trigger = {
 		has_country_flag = demographic_init
+		exists = yes
+		NOT = { has_country_modifier = demographic_timer }
 	}
 	
-	mean_time_to_happen = {
-		months = 120 # 10 years)
-		modifier = {
-			factor = 0.1
-			NOT = { has_country_flag = total_fertility_rate_initial_setup } 
-		}
-	}
+	#mean_time_to_happen = {
+	#	months = 120 # 10 years)
+	#	modifier = {
+	#		factor = 0.1
+	#		NOT = { has_country_flag = total_fertility_rate_initial_setup } 
+	#	}
+	#}
 	
 	option = {
 		name = OK
-		set_country_flag = total_fertility_rate_initial_setup
+		#set_country_flag = total_fertility_rate_initial_setup
+		add_country_modifier = { name = demographic_timer duration = 3400 }
 
 		any_owned = {
 			limit = { NOT = { literacy = 0.01 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
@@ -121,19 +127,19 @@ country_event = { # Total Fertility Rate
 		}
 		any_owned = {
 			limit = { literacy = 0.01 NOT = { literacy = 0.05 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
-			add_province_modifier = { name = family_values duration = 2800 } #8 +40%
+			add_province_modifier = { name = family_values duration = 3150 } #9 +45%
 		}
 		any_owned = {
 			limit = { literacy = 0.05 NOT = { literacy = 0.1 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
-			add_province_modifier = { name = family_values duration = 2100 } # 6 +30%
+			add_province_modifier = { name = family_values duration = 2800 } # 8 +40%
 		}
 		any_owned = {
 			limit = { literacy = 0.1 NOT = { literacy = 0.4 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
-			add_province_modifier = { name = total_fertility_rate duration = 3500 } # 10 +25%
+			add_province_modifier = { name = total_fertility_rate duration = 2450 } # 7 +35%
 		}
 		any_owned = {
 			limit = { literacy = 0.4 is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
-			add_province_modifier = { name = total_fertility_rate duration = 2100 } # 6 +15%
+			add_province_modifier = { name = total_fertility_rate duration = 3500 } # 10 +25%
 		}
 
 		any_owned = {
