@@ -742,6 +742,7 @@ issues = {
 	# quality_of_service
 	open_unregulated = {
 		factor = 0.6
+		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
 		modifier = { factor = 0 OR = { is_next_reform = open_unregulated NOT = { consciousness = 5 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
@@ -758,6 +759,7 @@ issues = {
 	}
 	net_neutrality = {
 		factor = 0.4
+		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
 		modifier = { factor = 0 OR = { is_next_reform = net_neutrality NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
@@ -773,6 +775,7 @@ issues = {
 	}
 	sponsored_access = {
 		factor = 0.2
+		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
 		modifier = { factor = 0 is_next_reform = sponsored_access }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -789,6 +792,7 @@ issues = {
 	# censored_publishing
 	firewall_publishing = {
 		factor = 0.6 
+		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = firewall_publishing } luxury_needs =  0.3 } NOT = { consciousness = 4 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -807,6 +811,7 @@ issues = {
 	}
 	unregulated_publishing = {
 		factor = 0.4
+		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = unregulated_publishing } luxury_needs =  0.3 } NOT = { consciousness = 7 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -822,6 +827,7 @@ issues = {
 	}	
 	responsible_publishing = {
 		factor = 0.2
+		modifier = { factor = 0 country = { NOT = { war_on_terror = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = responsible_publishing } } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -838,6 +844,7 @@ issues = {
 	# gender_role_based
 	gender_equal = {
 		factor = 0.6
+		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = gender_equal } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -855,6 +862,7 @@ issues = {
 	}
 	gender_promotive = {
 		factor = 0.4
+		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = gender_promotive } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -871,6 +879,7 @@ issues = {
 	}
 	feminist = {
 		factor = 0.2
+		modifier = { factor = 0 country = { NOT = { cultural_imperialism = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = feminist } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -922,6 +931,7 @@ issues = {
 	}
 	parties_promote_democratic = {
 		factor = 0.8
+		modifier = { factor = 0 country = { NOT = { cultural_imperialism = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = parties_promote_democratic } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -937,6 +947,7 @@ issues = {
 	}
 	parties_restrict_non_democratic = {
 		factor = 0.4
+		modifier = { factor = 0 country = { NOT = { colour_revolution = 1 } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = parties_restrict_non_democratic } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -953,6 +964,7 @@ issues = {
 	# nobody_gets_out
 	quota_immigration = {
 		factor = 1
+		modifier = { factor = 0 country = { NOT = { decolonization = 1 } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = quota_immigration } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -970,6 +982,7 @@ issues = {
 	}
 	open_immigration = {
 		factor = 1
+		modifier = { factor = 0 country = { NOT = { wars_of_national_liberation = 1 } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = open_immigration } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -986,6 +999,7 @@ issues = {
 	}
 	naturalization = {
 		factor = 1
+		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = naturalization } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -1001,6 +1015,7 @@ issues = {
 	}
 	promoted_immigration = {
 		factor = 1
+		modifier = { factor = 0 country = { NOT = { cultural_imperialism = 1 } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = promoted_immigration } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -1037,6 +1052,7 @@ issues = {
 	}
 	lgbt_equal_rights = {
 		factor = 0.3
+		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = lgbt_equal_rights } luxury_needs = 0.2 } consciousness = 6 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1054,6 +1070,7 @@ issues = {
 	}
 	gender_neutrallity = {
 		factor = 0.2
+		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = gender_neutrallity } luxury_needs = 0.2 } consciousness = 7 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1070,6 +1087,7 @@ issues = {
 	}
 	lgbt_promoted = {
 		factor = 0.1
+		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = lgbt_promoted } luxury_needs = 0.2 } consciousness = 8 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1112,6 +1130,7 @@ issues = {
 	}
 	minorities_affirmative_action = {
 		factor = 0.4
+		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = minorities_affirmative_action } luxury_needs = 0.2 } consciousness = 7 }
 		modifier = { factor = 0.1 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 0.6 OR = { is_primary_culture = yes is_accepted_culture = yes } }
@@ -1132,13 +1151,14 @@ issues = {
 	# first_past_the_post
 	jefferson_method = {
 		factor = 0.4
-		modifier = { factor = 0 OR = { NOT = { is_next_reform = jefferson_method } NOT = { life_needs = 1 } } }
+		modifier = { factor = 0 country = { tag = USA tag = ENG } } # TODO more jeffersonian countries
+		modifier = { factor = 0 NOT = { life_needs = 1 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.80 } }
 	}
 	proportional_representation = {
 		factor = 0.4
-		modifier = { factor = 0 OR = { NOT = { is_next_reform = proportional_representation } NOT = { life_needs = 1 } } }
+		modifier = { factor = 0 NOT = { life_needs = 1 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.90 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.80 } }
 	}
@@ -1225,6 +1245,7 @@ issues = {
 	}
 	security_data_cohesion = {
 		factor = 1
+		modifier = { factor = 0 country = { NOT = { war_on_terror = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = security_data_cohesion } } }
 		modifier = { factor = 1.25 country = { has_unclaimed_cores = yes } }
 		modifier = { factor = 1.25 country = { has_recently_lost_war = yes } }
@@ -1244,6 +1265,7 @@ issues = {
 	}
 	security_clearance_for_gov_services = {
 		factor = 1
+		modifier = { factor = 0 country = { NOT = { war_on_terror = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = security_clearance_for_gov_services } } }
 		modifier = { factor = 1.25 country = { has_unclaimed_cores = yes } }
 		modifier = { factor = 1.25 country = { has_recently_lost_war = yes } }
@@ -1261,6 +1283,7 @@ issues = {
 	}
 	preemptive_security_actions = {
 		factor = 1
+		modifier = { factor = 0 country = { NOT = { political_polarization = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = preemptive_security_actions } } }
 		modifier = { factor = 1.25 country = { has_unclaimed_cores = yes } }
 		modifier = { factor = 1.25 country = { has_recently_lost_war = yes } }
