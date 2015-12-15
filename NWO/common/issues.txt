@@ -435,18 +435,46 @@ political_reforms = {
 		first_past_the_post = {
 			rules = { largest_share = yes }
 			allow = { 
+				OR = { 
+					tag = AAB tag = AZB tag = BAH tag = BAR tag = BNG tag = BLZ tag = BEU tag = BOT tag = CAN tag = CYI tag = IVC
+					tag = COI tag = DMC tag = ERI tag = ETH tag = GAB tag = GAM tag = HND tag = JAM tag = KEN tag = KUW tag = LEB 
+					tag = LUA tag = STL tag = LIB tag = MAR tag = BUR tag = MAL tag = MLW tag = MSY tag = MIC tag = NGE tag = NIU 
+					tag = OMA tag = PAL tag = SKN tag = SVG tag = SAM tag = SNG tag = SOL tag = SEY tag = SRL tag = SWA tag = TAN
+					tag = TOG tag = TAT tag = TUV tag = UGA tag = ENG tag = USA tag = VIR tag = YEM tag = ZAM
+				}
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 		jefferson_method = {
 			rules = { dhont = yes }
 			allow = { 
+				OR = { 
+					tag = ALB tag = ARG tag = AUS tag = BEL tag = BRZ tag = BUL tag = CAM tag = CPV tag = CHL tag = CLM tag = CRO tag = CZH  
+					tag = DEN tag = TIM tag = ECU tag = EST tag = FIN tag = GUA tag = HUN tag = ICL tag = ISR tag = JAP tag = KOS tag = LUX 
+					tag = MAC tag = MOL tag = MON tag = NET tag = PRG tag = PEU tag = POL tag = POR tag = ROM tag = SCO tag = SER tag = SLO
+					tag = BOH tag = SPA tag = URU tag = WAE
+				}
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 		proportional_representation = {
 			rules = { sainte_laque = yes }
 			allow = { 
+				NOT = { 
+					OR = { 
+						# first_past_the_post
+						tag = AAB tag = AZB tag = BAH tag = BAR tag = BNG tag = BLZ tag = BEU tag = BOT tag = CAN tag = CYI tag = IVC
+						tag = COI tag = DMC tag = ERI tag = ETH tag = GAB tag = GAM tag = HND tag = JAM tag = KEN tag = KUW tag = LEB 
+						tag = LUA tag = STL tag = LIB tag = MAR tag = BUR tag = MAL tag = MLW tag = MSY tag = MIC tag = NGE tag = NIU 
+						tag = OMA tag = PAL tag = SKN tag = SVG tag = SAM tag = SNG tag = SOL tag = SEY tag = SRL tag = SWA tag = TAN
+						tag = TOG tag = TAT tag = TUV tag = UGA tag = ENG tag = USA tag = VIR tag = YEM tag = ZAM
+						# jefferson_method
+						tag = ALB tag = ARG tag = AUS tag = BEL tag = BRZ tag = BUL tag = CAM tag = CPV tag = CHL tag = CLM tag = CRO tag = CZH  
+						tag = DEN tag = TIM tag = ECU tag = EST tag = FIN tag = GUA tag = HUN tag = ICL tag = ISR tag = JAP tag = KOS tag = LUX 
+						tag = MAC tag = MOL tag = MON tag = NET tag = PRG tag = PEU tag = POL tag = POR tag = ROM tag = SCO tag = SER tag = SLO
+						tag = BOH tag = SPA tag = URU tag = WAE
+					}
+				}
 				NOT = { vote_franschise = none_voting }
 			}			
 		}
