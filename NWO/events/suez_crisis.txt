@@ -18,6 +18,7 @@ country_event = {
     tag = EGY
     year = 1954 NOT = { year = 1963 }
 	government = presidential_dictatorship
+	NOT = { owns = 1755 }
   }
 
   mean_time_to_happen = { months = 2  }
@@ -30,7 +31,7 @@ country_event = {
     war = { target = ENG attacker_goal = { casus_belli = acquire_core_state state_province_id = 1755 } defender_goal = { casus_belli = status_quo } }
 	# Only if ISR exist shall this kick of
 	random_country = { limit = { tag = ENG exists = ISR } country_event = 8500302 }
-	1496 = { add_province_modifier = { name = embankment_dam duration = 3500 } }
+	1766 = { add_province_modifier = { name = embankment_dam duration = 3500 } }
 	ai_chance = { factor = 100 }
   }
 
@@ -38,7 +39,7 @@ country_event = {
     name = EVT_8500301_B
 	relation = { who = USA value = 100 } 
 	relation = { who = ENG value = 100 } 
-	1496 = { add_province_modifier = { name = embankment_dam duration = 365 } }
+	1766 = { add_province_modifier = { name = embankment_dam duration = 365 } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -167,7 +168,6 @@ country_event = {
     name = EVT_8500311_A
 	relation = { who = ISR value = -50 } 
 	relation = { who = EGY value = 50 } 
-	RUS = {country_event =  8500312 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -178,6 +178,7 @@ country_event = {
 	badboy = 10 
 	any_pop = { militancy = 0.8  consciousness = 1.6 }
 	ISR = { country_event = 8500315 }
+	RUS = {country_event =  8500312 } 
 	ai_chance = { factor = 0 }
   }
 }
