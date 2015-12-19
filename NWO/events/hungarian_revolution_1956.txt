@@ -61,7 +61,7 @@ country_event = { #"Hungarian Neutrality"
 	any_pop = { militancy = 2.0 }
 	government = democracy country_event = 800054
 	diplomatic_influence = { who = RUS value = -100 }
-	RUS = { country_event =  { id = 8501103 days = 23 } }
+	RUS = { release_vassal = HUN country_event =  { id = 8501103 days = 23 } }
 	ai_chance = { factor = 100 }
   }
 }
@@ -70,12 +70,12 @@ country_event = {
   title = EVT_8501103_NAME
   desc = EVT_8501103_DESC
   picture = "nwo2_hungarian_revolution_1956"
-  is_triggered_only = yes
+  is_triggered_only = yes # RUS
 
   option = {
     name = EVT_8501103_A
 	any_pop = { consciousness = 2 }
-	war = { target = HUN attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = {  casus_belli = status_quo } }	
+	war = { target = HUN attacker_goal = { casus_belli = install_communist_gov_cb } attacker_goal = { casus_belli = make_puppet }  defender_goal = {  casus_belli = status_quo } }	
 	USA = { country_event =  { id = 8501114 days = 20 } }
 	ai_chance = { factor = 100 }
   }
@@ -91,7 +91,7 @@ country_event = {
   title = EVT_8501113_NAME
   desc = EVT_8501113_DESC
   picture = "nwo2_allied_intervention"
-  is_triggered_only = yes
+  is_triggered_only = yes # USA
 
  option = {
     name = EVT_8501113_A # Intervene
@@ -288,7 +288,7 @@ country_event = {
   title = EVT_8501113_NAME
   desc = EVT_8501113_DESC
   picture = "nwo2_allied_intervention"
-  is_triggered_only = yes
+  is_triggered_only = yes # RUS
 
   option = {
     name = EVT_8501113_A
