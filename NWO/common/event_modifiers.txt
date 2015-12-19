@@ -326,6 +326,11 @@ baby_boom = {
 	icon = 19
 }
 
+baby_bust = {
+	global_population_growth = -0.001
+	icon = 18
+}
+
 contraception_decay = {}
 
 loyal_askaris = {
@@ -866,15 +871,12 @@ war_torn = {
 ### Population Trends ###
 # population_growth = 0.001 => 2.5% per year
 
-demographic_timer = {}
-
 demographic_transition = {
-	local_factory_throughput = 0.05
+	population_growth = 0.001
 }
 
-
 family_values = {
-	population_growth = 0.003
+	population_growth = 0.002
 	icon = 17
 }
 
@@ -886,17 +888,6 @@ total_fertility_rate = {
 self_values = {
 	population_growth = -0.001
 	icon = 17
-}
-
-one_point_five_children = {
-	global_population_growth = -0.005
-	education_efficiency_modifier = 0.1
-	icon = 18
-}
-
-four_children = {
-	global_population_growth = 0.015
-	education_efficiency_modifier = -0.25
 }
 
 call_for_un_peacekeeping_mission = {}
