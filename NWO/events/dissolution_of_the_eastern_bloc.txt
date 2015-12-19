@@ -147,10 +147,25 @@ country_event = {
 	release_vassal = FROM
 	diplomatic_influence = { who = FROM value = -200 }
 	relation = { who = FROM value = -200 }
-	casus_belli = { target = FROM type = make_puppet months = 12 }
-	casus_belli = { target = FROM type = install_communist_gov_cb months = 12 }
+	FROM = { country_event = 80142501 }
 	ai_chance = { factor = 0 }
   }	
+  
+}
+
+country_event = { 
+  id = 80142501
+  title = EVT_80142501_NAME
+  desc = EVT_8014250_DESC
+  picture = "loss_of_satellite_states"
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_80142501_A
+	add_casus_belli = { target = FROM type = make_puppet months = 12 }
+	add_casus_belli = { target = FROM type = install_communist_gov_cb months = 12 } 
+	ai_chance = { factor = 0 }
+  }
   
 }
 
