@@ -23,9 +23,9 @@ political_decisions = {
 					RUS = { check_variable = { which = soviet_control_cee value = 3 } }
 					RUS = { check_variable = { which = soviet_control_cee value = 4 } }
 					RUS = { check_variable = { which = soviet_control_cee value = 5 } }
-					RUS = { check_variable = { which = soviet_control_cee value = 6 } }
+					RUS = { check_variable = { which = soviet_control_cee value = 6 } } # TODO add year or more levels see 8014243???
 				}
-				RUS = {has_country_modifier = in_bankrupcy }
+				AND = { year = 1971 RUS = {has_country_modifier = in_bankrupcy } }
 			}
 		}
 

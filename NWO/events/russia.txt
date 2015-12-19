@@ -1100,7 +1100,7 @@ country_event = { # Structural Weaknesses of the Eastern Bloc
   trigger = {
     tag = RUS
 	government = proletarian_dictatorship
-    check_variable = { which = soviet_control_cee value = 6 }
+    check_variable = { which = soviet_control_cee value = 6 } # TODO maby make this dependent on year as well see dissolution_of_the_eastern_bloc
   }
 
   mean_time_to_happen = { months = 12  }
@@ -1138,7 +1138,7 @@ country_event = { # Structural Weaknesses of the Eastern Bloc
   }
 
 }
-country_event = { # Regime bends under dissent # TODO russia to militancy 1951!!!
+country_event = { # Regime bends under dissent 
   id = 8014245
   title = EVT_8014245_NAME
   desc = EVT_8014245_DESC
@@ -1149,6 +1149,7 @@ country_event = { # Regime bends under dissent # TODO russia to militancy 1951!!
 	government = proletarian_dictatorship
     NOT = { has_global_flag = autumn_of_nations }
     average_militancy  = 8
+	year = 1971 # Nixon Shock
   }
 
   mean_time_to_happen = { months = 6  }
