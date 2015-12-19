@@ -5,9 +5,8 @@ country_event = {
   picture = "nwo2_united_arab_republic"
   fire_only_once = yes
 
-  trigger = { # ai = no by decition egypt.txt
+  trigger = { # alt. by decition egypt.txt
     tag = EGY
-	ai = yes
     year = 1958 NOT = { year = 1990 }
 	government = presidential_dictatorship # nasser
     exists = SYR
@@ -19,6 +18,8 @@ country_event = {
 
   option = {
     name = EVT_8218000_A
+	set_global_flag = united_arab_republic
+	change_tag = UAR 
 	country_event = 8218010
 	ai_chance = { factor = 100 }
   }
@@ -137,9 +138,8 @@ country_event = {
   picture = "nwo2_united_arab_republic"
   fire_only_once = yes
 
-  trigger = { # decition if ai = no
+  trigger = { 
     tag = UAR
-	ai = yes
     year = 1958 NOT = { year = 1963 }
     exists = JOR
 	NOT = { exists = SYR }
@@ -202,12 +202,11 @@ country_event = {
   title = EVT_8218010_NAME
   desc = EVT_8218010_DESC
   picture = "nwo2_nasser_diplomacy"
-  is_triggered_only = yes
+  is_triggered_only = yes # UAR
 
   option = {
     name = EVT_8218010_A
 	any_pop = { militancy = -0.5 consciousness = -0.1 }
-	change_tag = UAR 
 	SYR = { country_event =  8218001 } 
 	ai_chance = { factor = 100 }
   }
@@ -240,6 +239,7 @@ country_event = {
 		limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no }
 		country_event = 15410
 	}
+	change_tag = EGY
 	ai_chance = { factor = 100 }
   }
   option = {
@@ -279,9 +279,8 @@ country_event = {
   picture = "nwo2_united_arab_republic"
   fire_only_once = yes
 
-  trigger = { # decision if ai = no
+  trigger = { 
     tag = UAR
-	ai = yes
     year = 1958
     NOT = { year = 1963 }
     exists = LEB 

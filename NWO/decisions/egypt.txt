@@ -39,26 +39,15 @@ political_decisions = {
 	united_arab_republic = {
 		picture = "united_arab_republic"
 		potential = {
-			OR = { tag = UAR tag = EGY }
-			OR = { 
-				SYR = { war = no exists = SYR is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } }  
-				IRQ = { war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } }  
-				JOR = { war = no exists = JOR is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } }  
-				LEB = { war = no exists = LEB is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } }  
-				PAL = { war = no exists = PAL is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } }  
-			}
+			tag = EGY
+			NOT = { has_global_flag = united_arab_republic }
+			SYR = { war = no exists = SYR is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } }  
 			ai = no
 		}
 
 		allow = {
 			war = no
-			OR = { 
-				SYR = { war = no exists = SYR is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship }  
-				IRQ = { war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship }  
-				JOR = { war = no exists = JOR is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship }  
-				LEB = { war = no exists = LEB is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship }  
-				PAL = { war = no exists = PAL is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship }  
-			}
+			SYR = { war = no exists = SYR is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship }  
 			#is_secondary_power = yes
 			government = presidential_dictatorship
 			wars_of_national_liberation = 1
@@ -67,12 +56,8 @@ political_decisions = {
 
 		effect = {
 			prestige = 5
-			any_country = { limit = { tag = EGY } country_event = 8218010 }
-			any_country = { limit = { tag = SYR war = no exists = SYR is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship } country_event = 8218001 }
-			any_country = { limit = { tag = IRQ war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship } country_event = 8218004 }
-			any_country = { limit = { tag = JOR war = no exists = JOR is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship } country_event = 8218007 }
-			any_country = { limit = { tag = LEB war = no exists = LEB is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship } country_event = 8218021 }
-			any_country = { limit = { tag = PAL war = no exists = PAL is_vassal = no part_of_sphere = no NOT = { has_country_flag = reject_uar } government = presidential_dictatorship } country_event = 8218024 }
+			set_global_flag = united_arab_republic
+			country_event = 8218000
 		}
 	}	
 }
