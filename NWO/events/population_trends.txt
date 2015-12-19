@@ -50,13 +50,6 @@ country_event = { # Demographic Transition - Initial setup
 	trigger = {
 		NOT = { has_country_flag = demographic_init }
 		exists = yes
-		capital_scope = { 
-			NOT = { OR = { continent = europe is_core = USA is_core = CAN is_core = AST is_core = NZL } }
-			OR = { 
-				continent = mena
-				continent = africa
-			}
-		}
 	}
 
 	mean_time_to_happen = {
@@ -102,23 +95,23 @@ country_event = { # Total Fertility Rate
 		name = OK
 
 		any_owned = {
-			limit = { NOT = { literacy = 0.01 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			limit = { NOT = { literacy = 0.01 } is_state_religion = no has_province_modifier = demographic_transition }
 			add_province_modifier = { name = family_values duration = 3500 } # 10 +50%
 		}
 		any_owned = {
-			limit = { literacy = 0.01 NOT = { literacy = 0.05 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			limit = { literacy = 0.01 NOT = { literacy = 0.05 } is_state_religion = no has_province_modifier = demographic_transition }
 			add_province_modifier = { name = family_values duration = 3150 } #9 +45%
 		}
 		any_owned = {
-			limit = { literacy = 0.05 NOT = { literacy = 0.1 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			limit = { literacy = 0.05 NOT = { literacy = 0.1 } is_state_religion = no has_province_modifier = demographic_transition }
 			add_province_modifier = { name = family_values duration = 2800 } # 8 +40%
 		}
 		any_owned = {
-			limit = { literacy = 0.1 NOT = { literacy = 0.4 } is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			limit = { literacy = 0.1 NOT = { literacy = 0.4 } is_state_religion = no has_province_modifier = demographic_transition }
 			add_province_modifier = { name = total_fertility_rate duration = 2450 } # 7 +35%
 		}
 		any_owned = {
-			limit = { literacy = 0.4 is_state_religion = no NOT = { has_province_modifier = demographic_transition } }
+			limit = { literacy = 0.4 is_state_religion = no has_province_modifier = demographic_transition }
 			add_province_modifier = { name = total_fertility_rate duration = 3500 } # 10 +25%
 		}
 
