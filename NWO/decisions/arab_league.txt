@@ -202,7 +202,7 @@ political_decisions = {
 			is_greater_power = yes
 			political_polarization = 1
             war = no
-            XAL = { all_core = { owner = { war = no OR = { tag = THIS in_sphere = THIS vassal_of = THIS } has_country_flag = xal_ambition } } }
+            XAL = { any_core = { owner = { war = no OR = { tag = THIS in_sphere = THIS vassal_of = THIS } has_country_flag = xal_ambition } } }
 		}
 		effect = {
 			prestige = 20

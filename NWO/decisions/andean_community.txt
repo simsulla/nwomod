@@ -176,7 +176,7 @@ political_decisions = {
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1
             war = no
-            XAC = { all_core = { owner = { war = no OR = { tag = THIS in_sphere = THIS vassal_of = THIS } has_country_flag = xac_ambition } } }
+            XAC = { any_core = { owner = { war = no OR = { tag = THIS in_sphere = THIS vassal_of = THIS } has_country_flag = xac_ambition } } }
 		}
 		effect = {
 			prestige = 20
