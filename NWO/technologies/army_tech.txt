@@ -488,7 +488,7 @@ infantry = {
 	unit = 3 # sprites 3
 	activate_building = small_arms_factory
 
-	# combat_width = -1 # TODO reactivate
+	combat_width = -1 
 
 	ai_chance = {
 		factor = 1.1
@@ -529,7 +529,7 @@ guerrilla = {
 	cost = 5400
 	unciv_military = yes
 
-	# combat_width = -1 # TODO reactivate
+	combat_width = -1 
 
 	#unit = 2
 	ai_chance = {
@@ -1183,7 +1183,13 @@ second_generation_tanks = {
 	year = 1990
 	cost = 12600
 	unciv_military = yes
-
+	
+	tank = {
+		attack = 0.25
+		support = 0.5
+		supply_consumption = 0.35
+	}
+	
 	ai_chance = {
 		factor = 1.05
 		modifier = {
