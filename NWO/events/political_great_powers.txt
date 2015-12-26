@@ -75,8 +75,8 @@ country_event = { # Country is sphered change government
 		part_of_sphere = yes
 		is_vassal = no
 		NOT = { has_country_flag = accept_differances_in_gov_by_democracy }
-		sphere_owner = { NOT = { government = proletarian_dictatorship } } 
-		government = proletarian_dictatorship
+		sphere_owner = { OR = { government = democracy government = hms_government } } 
+		NOT = { OR = { government = democracy government = hms_government } }
 	}
 
 	mean_time_to_happen = {
