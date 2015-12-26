@@ -6,14 +6,33 @@ political_decisions = {
 	xea_ambition = {
 		picture = "xea_ambition"
 		potential = {
-			NOT = { exists = XTC } OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = UZB }
-			NOT = { has_country_flag = xea_ambition } 
+			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			NOT = { has_country_flag = xac_ambition } 
+			NOT = { has_country_flag = xal_ambition } 
+			NOT = { has_country_flag = xan_ambition } 
+			NOT = { has_country_flag = xau_ambition } 
+			NOT = { has_country_flag = xcc_ambition } 
+			NOT = { has_country_flag = xci_ambition } 
+			NOT = { has_country_flag = xec_ambition } 
+			NOT = { has_country_flag = xef_ambition } 
+			NOT = { has_country_flag = xeu_ambition } 
+			NOT = { has_country_flag = xew_ambition } 
+			NOT = { has_country_flag = xgc_ambition } 
+			NOT = { has_country_flag = xio_ambition } 
+			NOT = { has_country_flag = xms_ambition } 
+			NOT = { has_country_flag = xmu_ambition } 
+			NOT = { has_country_flag = xna_ambition } 
+			NOT = { has_country_flag = xpi_ambition } 
+			NOT = { has_country_flag = xsa_ambition } 
+			NOT = { has_country_flag = xsu_ambition } 
+			NOT = { has_country_flag = xtc_ambition } 
+			NOT = { has_country_flag = xum_ambition } 
 		}
 		allow = {
 			#has_country_flag = trade_block_ambition 
 			NOT = { has_country_modifier = in_bankrupcy } 
 			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xea_ambition } } } }
-			NOT = { government = proletarian_dictatorship }  #doubtful, as they proposed Vietnam to join 
+			#NOT = { government = proletarian_dictatorship }  #doubtful, as they proposed Vietnam to join 
 			bank_for_international_settlements = 1
 			war = no
 		}
@@ -44,7 +63,7 @@ political_decisions = {
 		allow = {
 			OR = { 
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xea_ambition } } }
-				NOT = { government = proletarian_dictatorship }
+				#NOT = { government = proletarian_dictatorship }
 				has_country_modifier = in_bankrupcy
 			}
 			war = no
@@ -77,11 +96,31 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			NOT = { exists = XTC } OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = UZB }
+			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			NOT = { has_country_flag = xac_ambition } 
+			NOT = { has_country_flag = xal_ambition } 
+			NOT = { has_country_flag = xan_ambition } 
+			NOT = { has_country_flag = xau_ambition } 
+			NOT = { has_country_flag = xcc_ambition } 
+			NOT = { has_country_flag = xci_ambition } 
+			NOT = { has_country_flag = xec_ambition } 
+			NOT = { has_country_flag = xef_ambition } 
+			NOT = { has_country_flag = xeu_ambition } 
+			NOT = { has_country_flag = xew_ambition } 
+			NOT = { has_country_flag = xgc_ambition } 
+			NOT = { has_country_flag = xio_ambition } 
+			NOT = { has_country_flag = xms_ambition } 
+			NOT = { has_country_flag = xmu_ambition } 
+			NOT = { has_country_flag = xna_ambition } 
+			NOT = { has_country_flag = xpi_ambition } 
+			NOT = { has_country_flag = xsa_ambition } 
+			NOT = { has_country_flag = xsu_ambition } 
+			NOT = { has_country_flag = xtc_ambition } 
+			NOT = { has_country_flag = xum_ambition } 
 		}
 		allow = {
 			has_country_flag = xea_ambition
-			NOT = { government = proletarian_dictatorship }
+			#NOT = { government = proletarian_dictatorship }
 			capitalism = 1
 			war = no
 		}
@@ -95,12 +134,32 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			NOT = { exists = XTC } OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = UZB }
+			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			NOT = { has_country_flag = xac_ambition } 
+			NOT = { has_country_flag = xal_ambition } 
+			NOT = { has_country_flag = xan_ambition } 
+			NOT = { has_country_flag = xau_ambition } 
+			NOT = { has_country_flag = xcc_ambition } 
+			NOT = { has_country_flag = xci_ambition } 
+			NOT = { has_country_flag = xec_ambition } 
+			NOT = { has_country_flag = xef_ambition } 
+			NOT = { has_country_flag = xeu_ambition } 
+			NOT = { has_country_flag = xew_ambition } 
+			NOT = { has_country_flag = xgc_ambition } 
+			NOT = { has_country_flag = xio_ambition } 
+			NOT = { has_country_flag = xms_ambition } 
+			NOT = { has_country_flag = xmu_ambition } 
+			NOT = { has_country_flag = xna_ambition } 
+			NOT = { has_country_flag = xpi_ambition } 
+			NOT = { has_country_flag = xsa_ambition } 
+			NOT = { has_country_flag = xsu_ambition } 
+			NOT = { has_country_flag = xtc_ambition } 
+			NOT = { has_country_flag = xum_ambition } 
 		}
 		allow = {
 			has_country_flag = xea_ambition
 			capital_scope = { has_province_modifier = single_market }
-			NOT = { government = proletarian_dictatorship }
+			#NOT = { government = proletarian_dictatorship }
 			economic_globalization = 1
 			election = no
 			war = no
@@ -115,12 +174,32 @@ political_decisions = {
 		picture = "xea_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XEA } }
-			NOT = { exists = XTC } OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = UZB }
+			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			NOT = { has_country_flag = xac_ambition } 
+			NOT = { has_country_flag = xal_ambition } 
+			NOT = { has_country_flag = xan_ambition } 
+			NOT = { has_country_flag = xau_ambition } 
+			NOT = { has_country_flag = xcc_ambition } 
+			NOT = { has_country_flag = xci_ambition } 
+			NOT = { has_country_flag = xec_ambition } 
+			NOT = { has_country_flag = xef_ambition } 
+			NOT = { has_country_flag = xeu_ambition } 
+			NOT = { has_country_flag = xew_ambition } 
+			NOT = { has_country_flag = xgc_ambition } 
+			NOT = { has_country_flag = xio_ambition } 
+			NOT = { has_country_flag = xms_ambition } 
+			NOT = { has_country_flag = xmu_ambition } 
+			NOT = { has_country_flag = xna_ambition } 
+			NOT = { has_country_flag = xpi_ambition } 
+			NOT = { has_country_flag = xsa_ambition } 
+			NOT = { has_country_flag = xsu_ambition } 
+			NOT = { has_country_flag = xtc_ambition } 
+			NOT = { has_country_flag = xum_ambition } 
 		}
 		allow = {
 			has_country_flag = xea_ambition
 			capital_scope = { has_province_modifier = currency_union_province }
-			NOT = { government = proletarian_dictatorship }
+			#NOT = { government = proletarian_dictatorship }
 			election = no
 			has_unclaimed_cores = no
 			war = no
@@ -135,12 +214,32 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			NOT = { exists = XTC } OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = UZB }
+			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			NOT = { has_country_flag = xac_ambition } 
+			NOT = { has_country_flag = xal_ambition } 
+			NOT = { has_country_flag = xan_ambition } 
+			NOT = { has_country_flag = xau_ambition } 
+			NOT = { has_country_flag = xcc_ambition } 
+			NOT = { has_country_flag = xci_ambition } 
+			NOT = { has_country_flag = xec_ambition } 
+			NOT = { has_country_flag = xef_ambition } 
+			NOT = { has_country_flag = xeu_ambition } 
+			NOT = { has_country_flag = xew_ambition } 
+			NOT = { has_country_flag = xgc_ambition } 
+			NOT = { has_country_flag = xio_ambition } 
+			NOT = { has_country_flag = xms_ambition } 
+			NOT = { has_country_flag = xmu_ambition } 
+			NOT = { has_country_flag = xna_ambition } 
+			NOT = { has_country_flag = xpi_ambition } 
+			NOT = { has_country_flag = xsa_ambition } 
+			NOT = { has_country_flag = xsu_ambition } 
+			NOT = { has_country_flag = xtc_ambition } 
+			NOT = { has_country_flag = xum_ambition } 
 		}
 		allow = {
 			has_country_flag = xea_ambition
 			capital_scope = { is_core = XEA }
-			NOT = { government = proletarian_dictatorship }
+			#NOT = { government = proletarian_dictatorship }
 			election = no
 			war = no
 			age_of_protests = 1
@@ -159,12 +258,32 @@ political_decisions = {
 		picture = "xea_parlament"
 		potential = {
 			XEA = { exists = no }
-			NOT = { exists = XTC } OR = { tag = RUS tag = BYE tag = KAZ tag = KYR tag = TAJ tag = ARM tag = MOL tag = UKR tag = TRD tag = UZB }
+			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			NOT = { has_country_flag = xac_ambition } 
+			NOT = { has_country_flag = xal_ambition } 
+			NOT = { has_country_flag = xan_ambition } 
+			NOT = { has_country_flag = xau_ambition } 
+			NOT = { has_country_flag = xcc_ambition } 
+			NOT = { has_country_flag = xci_ambition } 
+			NOT = { has_country_flag = xec_ambition } 
+			NOT = { has_country_flag = xef_ambition } 
+			NOT = { has_country_flag = xeu_ambition } 
+			NOT = { has_country_flag = xew_ambition } 
+			NOT = { has_country_flag = xgc_ambition } 
+			NOT = { has_country_flag = xio_ambition } 
+			NOT = { has_country_flag = xms_ambition } 
+			NOT = { has_country_flag = xmu_ambition } 
+			NOT = { has_country_flag = xna_ambition } 
+			NOT = { has_country_flag = xpi_ambition } 
+			NOT = { has_country_flag = xsa_ambition } 
+			NOT = { has_country_flag = xsu_ambition } 
+			NOT = { has_country_flag = xtc_ambition } 
+			NOT = { has_country_flag = xum_ambition } 
 		}
 		allow = {
 			has_country_flag = xea_ambition
 			capital_scope = { has_province_modifier = defence_union } 
-			NOT = { government = proletarian_dictatorship }
+			#NOT = { government = proletarian_dictatorship }
 			election = no
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1
@@ -189,10 +308,10 @@ political_decisions = {
 		picture = "xea_ambition"
 		potential = {
 			tag = XEA
-			any_neighbor_country = { has_country_flag = xea_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
+			any_country = { has_country_flag = xea_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
 		}
 		allow = {
-			NOT = { government = proletarian_dictatorship }
+			#NOT = { government = proletarian_dictatorship }
 			election = no
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1
@@ -200,7 +319,7 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 20
-			any_neighbor_country = { limit = { has_country_flag = xea_ambition OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
+			any_country = { limit = { has_country_flag = xea_ambition OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
 		}
 		ai_will_do = {
 			factor = 1
