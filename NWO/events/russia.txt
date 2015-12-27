@@ -1329,3 +1329,32 @@ country_event = {
 	HND = { country_event = 8007275 }
   }
 }
+
+country_event = {
+  id = 8000700
+  title = "Khodorkovsky Case"
+  desc = "In early July 2003, Platon Lebedev, Khodorkovsky's partner and the fourth largest shareholder in Yukos, was arrested on suspicion of illegally acquiring a stake in the state-owned fertilizer firm Apatit in 1994. The arrest was followed by purported investigations into taxation returns filed by Yukos, and a delay in the antitrust commission's approval of its merger with Sibneft.
+  
+  According to "Moscow Echo" radio poll, Khodorkovsky would gain 38% of votes in presidential elections, Putin - 14%. He refused to stop financing oppositional parties Yabloko, Union of Right Forces and the Communist Party when Putin demanded it from him.
+
+On the morning of 25 October 2003, Khodorkovsky was arrested at the Novosibirsk airport. He was taken to Moscow and charged with fraud, tax evasion, and other economic crimes. Gessen describes the trial as a “travesty” and “a Kafka-esque procedure,” with the government spending months “on an incoherent account of alleged violations that were criminalized after they were committed, or that were in fact legal activities.” In preparing the case, the government called in Yukos employees for questioning. Pavel Ivlev, a tax lawyer who went along as their attorney, later explained that officials had illegally interrogated him and threatened to arrest him. After leaving the prosecutor’s office, he immediately flew out of the country. He and his family ended up settling in the U.S."
+  picture = "nwo2_khodorkovsky"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 2003
+	government = democracy
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "Arrest him!"
+	government = presidential_dictatorship
+  }
+  
+  option = {
+  	name = "Leave him be"
+  	}
+}
