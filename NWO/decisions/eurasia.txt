@@ -8,6 +8,7 @@ political_decisions = {
 		potential = {
 			OR= { capital_scope = { continent = europe }  capital_scope = { continent = asia}}
 			# OR = { tag = ABK tag = ADJ tag = ALT tag = ARM tag = AZB tag = BAK tag = BYE tag = CHC tag = CHU tag = CIR tag = CRI tag = EST tag = FER tag = 
+			in_sphere = { OR = { tag = RUS tag = XEA } }
 			NOT = { has_country_flag = xac_ambition } 
 			NOT = { has_country_flag = xal_ambition } 
 			NOT = { has_country_flag = xan_ambition } 
@@ -99,6 +100,7 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
 			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			in_sphere = { OR = { tag = RUS tag = XEA } }
 			NOT = { has_country_flag = xac_ambition } 
 			NOT = { has_country_flag = xal_ambition } 
 			NOT = { has_country_flag = xan_ambition } 
@@ -137,6 +139,7 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
 			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			in_sphere = { OR = { tag = RUS tag = XEA } }
 			NOT = { has_country_flag = xac_ambition } 
 			NOT = { has_country_flag = xal_ambition } 
 			NOT = { has_country_flag = xan_ambition } 
@@ -177,6 +180,7 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { is_core = XEA } }
 			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			in_sphere = { OR = { tag = RUS tag = XEA } }
 			NOT = { has_country_flag = xac_ambition } 
 			NOT = { has_country_flag = xal_ambition } 
 			NOT = { has_country_flag = xan_ambition } 
@@ -217,6 +221,7 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			in_sphere = { OR = { tag = RUS tag = XEA } }
 			NOT = { has_country_flag = xac_ambition } 
 			NOT = { has_country_flag = xal_ambition } 
 			NOT = { has_country_flag = xan_ambition } 
@@ -300,6 +305,8 @@ political_decisions = {
 			change_tag = XEA
 			add_accepted_culture = russian
 			add_accepted_culture = kazak
+			add_accepted_culture = ukrainian
+			add_accepted_culture = belarusian
 		}
 		ai_will_do = {
 			factor = 1
