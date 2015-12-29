@@ -50,6 +50,10 @@ strategic_bomber = {
 	cost = 5400
 	unciv_military = yes
 
+	bomber = {
+	   reconnaissance = 0.5
+	}
+	
 	army_base = {
 		supply_consumption = 0.01
 	}
@@ -1659,7 +1663,12 @@ close_air_support = {
 	cost = 12600
 	unciv_military = yes
 	activate_unit = modern_fighter
-
+	    cavalry = { # fighter
+		support = 0.5
+	}
+	modern_fighter = {
+	    support = 0.5
+	}
 	army_base = {
 		default_organisation = 5
 		supply_consumption = 0.1
@@ -1875,6 +1884,11 @@ next_gen_bombers = {
 	area = jet_tech
 	year = 2070
 	cost = 25200
+	
+	bomber = {
+	    reconnaissance = 1
+	}
+	
 	army_base = {
 		default_organisation = 5
 		supply_consumption = 0.10

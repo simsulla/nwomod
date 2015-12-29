@@ -1459,8 +1459,109 @@ mech_prototypes = {
 	}
 }
 
+#third_generation_jet_fighters
+laser_guided_munition = {
+    limit = { third_generation_jet_fighters = 1 }
+	chance = {
+	    base = 2
+	    modifier = {
+		    factor = 3
+		    is_greater_power = yes
+	    }
+	}
+	effect = {
+	    bomber = {
+		    reconnaissance = 0.5
+		}
+		cavalry = { # fighter
+		    reconnaissance = 0.5
+		}
+		modern_fighter = {
+		    reconnaissance = 0.5
+		}
+	}
+}
+
+#stealth_aircraft
+supercruise = {
+	limit = { stealth_aircraft = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		bomber = {
+		    maneuver = 1
+		}
+		modern_fighter = {
+		    maneuver = 1
+		}
+	}
+}
+
+#fifth_generation_jets
+JDAM_smart_bomb_kit = {
+	limit = { fifth_generation_jets = 1 }
+	chance = {
+		base = -3
+		modifier = {
+			factor = 6
+			military_gps_system = 1
+		}
+		modifier = {
+		    factor = 2
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		bomber = {
+		    reconnaissance = 0.5
+		}
+	}
+}
+
+#sixth_generation_jets
+autonomous_drones = {
+    limit = { sixth_generation_jets = 1 }
+	chance = {
+	    base = 0
+	    modifier = {
+		    factor = 5
+		    artificial_intelligence = 1
+		}
+	}
+	effect = {
+	    tactical_drone = {
+            maneuver = 1	
+	    }
+	}
+}
+
 #next_gen_bombers
-drone_prototypes = {
+advanced_drone_ai = {
+	limit = { next_gen_bombers = 1 }
+	chance = {
+		base = -5
+		modifier = {
+			factor = 6
+			invention = autonomous_drones
+		}
+		modifier = {
+		    factor = 2
+            is_greater_power = yes		
+		}
+	}
+	effect = {
+		tactical_drone = {
+		    support = 0.5
+		}
+	}
+}
+
+hypercruise = {
 	limit = { next_gen_bombers = 1 }
 	chance = {
 		base = 5
@@ -1470,6 +1571,10 @@ drone_prototypes = {
 		}
 	}
 	effect = {
-		activate_unit = tactical_drone
+		modern_fighter = {
+		    maneuver = 1
+		}
 	}
 }
+
+
