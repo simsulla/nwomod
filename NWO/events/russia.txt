@@ -1330,3 +1330,142 @@ country_event = {
 	HND = { country_event = 8007275 }
   }
 }
+
+country_event = {
+  id = 8000700
+  title = "Khodorkovsky Case"
+  desc = "In early July 2003, Platon Lebedev, Khodorkovsky's partner and the fourth largest shareholder in Yukos, was arrested on suspicion of illegally acquiring a stake in the state-owned fertilizer firm Apatit in 1994. The arrest was followed by purported investigations into taxation returns filed by Yukos, and a delay in the antitrust commission's approval of its merger with Sibneft.
+  
+  According to "Moscow Echo" radio poll, Khodorkovsky would gain 38% of votes in presidential elections, Putin - 14%. He refused to stop financing oppositional parties Yabloko, Union of Right Forces and the Communist Party when Putin demanded it from him. He was the richest person in the country at the moment.
+
+On the morning of 25 October 2003, Khodorkovsky was arrested at the Novosibirsk airport. He was taken to Moscow and charged with fraud, tax evasion, and other economic crimes. Gessen describes the trial as a “travesty” and “a Kafka-esque procedure,” with the government spending months “on an incoherent account of alleged violations that were criminalized after they were committed, or that were in fact legal activities.” In preparing the case, the government called in Yukos employees for questioning. Pavel Ivlev, a tax lawyer who went along as their attorney, later explained that officials had illegally interrogated him and threatened to arrest him. After leaving the prosecutor’s office, he immediately flew out of the country. He and his family ended up settling in the U.S."
+  picture = "nwo2_khodorkovsky"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 2003
+	government = democracy
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "We had a deal, he broke it. Now let's see how he will get by without my protection and what the guys will do with him"
+	government = presidential_dictatorship
+	{ruiling_party_support=0.2 years=2}
+	
+	badboy = 3
+	
+	any_pop	{
+	ideology = {
+		factor = 30
+		value = conservative
+	}
+	
+	ideology = {
+		factor = 10
+		value = populist
+	}
+	
+	ideology = {
+		factor = 10
+		value = communist
+	}}
+	
+	scaled_militancy = {
+		factor = 3
+		ideology = liberal
+	}
+	scaled_militancy = {
+		factor = 2
+		ideology = progressive
+	}
+	scaled_militancy = {
+		factor = 1
+		ideology = socialist
+	}
+	scaled_consciousness = {
+		factor = 1
+		ideology = socialist
+	}
+	scaled_militancy = {
+		factor = 2
+		ideology = conservative
+	}
+	scaled_consciousness = {
+		factor = 2
+		ideology = communist
+	}
+	
+	national_value = nv_order
+	
+	political_reform = registered_voting
+	political_reform = regulated_opinion
+	political_reform = no_state_religion
+	political_reform = open_unregulated
+	political_reform = quality_of_service
+	political_reform = firewall_publishing
+	political_reform = gender_equal
+	political_reform = parties_only_nominated
+	political_reform = quota_immigration
+	political_reform = lgbt_outlawed
+	political_reform = minorities_equal_rights
+	political_reform = proportional_representation
+	
+	plurality = -20
+	
+	ai_chance = { factor = 70 }
+  }
+  
+  option = {
+  	name = "Leave him be!"
+  	
+  	{ruiling_party_support=-0.2 years=2}
+  	
+  	any_pop	{
+	ideology = {
+		factor = 10
+		value = liberal
+	}
+	
+	ideology = {
+		factor = 10
+		value = progressive
+	}
+	
+	ideology = {
+		factor = 10
+		value = socialist
+	}}
+  	
+  	scaled_consciousness = {
+		factor = 3
+		ideology = liberal
+	}
+	scaled_consciousness = {
+		factor = 2
+		ideology = progressive
+	}
+	scaled_consciousness = {
+		factor = 1
+		ideology = socialist
+	}
+	scaled_militancy = {
+		factor = 1
+		ideology = socialist
+	}
+	scaled_consciousness = {
+		factor = 2
+		ideology = conservative
+	}
+	scaled_militancy = {
+		factor = 2
+		ideology = communist
+	}
+	
+	plurality = 10
+  	
+  	ai_chance = { factor = 30 }
+  	}
+}
