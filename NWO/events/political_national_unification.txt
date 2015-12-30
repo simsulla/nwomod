@@ -12,6 +12,7 @@ country_event = {
 		any_owned = { add_core = FROM }
 		FROM = {
 			inherit = THIS
+			prestige = 20
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -25,6 +26,7 @@ country_event = {
 			value = -100
 		}
 		FROM = {
+			prestige = -20
 			diplomatic_influence = {
 				who = THIS
 				value = -50
