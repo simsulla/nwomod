@@ -6,7 +6,7 @@ political_decisions = {
 	xci_ambition = {
 		picture = "xci_ambition"
 		potential = {
-			NOT = { tag = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
+			NOT = { exists = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 			NOT = { has_country_flag = xci_ambition } 
 		}
 		allow = {
@@ -78,7 +78,7 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			NOT = { tag = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
+			NOT = { exists = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 		}
 		allow = {
 			has_country_flag = xci_ambition
@@ -99,7 +99,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			NOT = { tag = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
+			NOT = { exists = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 		}
 		allow = {
 			has_country_flag = xci_ambition
@@ -122,7 +122,7 @@ political_decisions = {
 		picture = "xci_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XCI } }
-			NOT = { tag = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
+			NOT = { exists = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 		}
 		allow = {
 			has_country_flag = xci_ambition
@@ -142,7 +142,7 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			NOT = { tag = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
+			NOT = { exists = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 		}
 		allow = {
 			has_country_flag = xci_ambition
@@ -166,7 +166,7 @@ political_decisions = {
 		picture = "xci_parlament"
 		potential = {
 			XCI = { exists = no }
-			NOT = { tag = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
+			NOT = { exists = XNA } OR = { tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ }
 		}
 		allow = {
 			has_country_flag = xci_ambition

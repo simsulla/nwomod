@@ -21,7 +21,7 @@ political_decisions = {
 	xcc_ambition = {
 		picture = "xcc_ambition"
 		potential = {
-			NOT = { tag = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
+			NOT = { exists = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
 			NOT = { has_country_flag = xcc_ambition } 
 		}
 		allow = {
@@ -93,7 +93,7 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			NOT = { tag = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
+			NOT = { exists = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
 		}
 		allow = {
 			has_country_flag = xcc_ambition
@@ -114,7 +114,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			NOT = { tag = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
+			NOT = { exists = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
 		}
 		allow = {
 			has_country_flag = xcc_ambition
@@ -137,7 +137,7 @@ political_decisions = {
 		picture = "xcc_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XCC } }
-			NOT = { tag = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
+			NOT = { exists = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
 		}
 		allow = {
 			has_country_flag = xcc_ambition
@@ -157,7 +157,7 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			NOT = { tag = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
+			NOT = { exists = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
 		}
 		allow = {
 			has_country_flag = xcc_ambition
@@ -181,7 +181,7 @@ political_decisions = {
 		picture = "xcc_parlament"
 		potential = {
 			XCC = { exists = no }
-			NOT = { tag = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
+			NOT = { exists = XNA } OR = { tag = GUY tag = SUR tag = BAH tag = JAM tag = HAI tag = DOM tag = DMC tag = VIR tag = PUR tag = AAB tag = TAT tag = SMA tag = SKN tag = STL tag = SVG tag = GRD tag = BAR }
 		}
 		allow = {
 			has_country_flag = xcc_ambition
