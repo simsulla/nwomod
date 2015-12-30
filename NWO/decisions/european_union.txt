@@ -209,7 +209,7 @@ political_decisions = {
 		picture = "xeu_ambition"
 		potential = {
 			tag = XEU
-			any_country = { has_country_flag = xeu_ambition OR = {in_sphere = THIS is_greater_power = yes }NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
+			any_neighbor_country = { has_country_flag = xeu_ambition OR = {in_sphere = THIS is_greater_power = yes }NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
 		}
 		allow = {
 			OR = { government = democracy government = hms_government }

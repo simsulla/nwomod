@@ -139,7 +139,7 @@ country_event = {
 }
 
 country_event = { 
-	id = 19002_P
+	id = 19102
 	title = EVT_19002_NAME
 	desc = EVT_19002_DESC
 	picture = "super_powers"
@@ -149,7 +149,7 @@ country_event = {
 		is_vassal = no
 		NOT = { has_country_flag = accept_differances_in_gov_by_communist }
 		sphere_owner = { government = presidential_dictatorship } 
-		OR = { government = democracy goverment = hms_govenment }
+		OR = { government = democracy government = hms_government }
 	}
 
 	mean_time_to_happen = {
@@ -160,7 +160,7 @@ country_event = {
 
 	option = {
 		name = EVT_19002_A
-		sphere_owner = { country_event = 19003_P }
+		sphere_owner = { country_event = 19103 }
 		ai_chance = { factor = 1 }
 	}
 
@@ -196,7 +196,7 @@ country_event = { # Demand install communist in-power
 }
 
 country_event = { # Demand adopt presidential dictatorship
-	id = 19003_P
+	id = 19103
 	title = EVT_19003_NAME
 	desc = EVT_19003_DESC
 	picture = "super_powers"
@@ -210,7 +210,7 @@ country_event = { # Demand adopt presidential dictatorship
 	
 	option = {
 		name = EVT_19003_B
-		FROM = { country_event = 19006_P }
+		FROM = { country_event = 19106 }
 		ai_chance = { factor = 0.2 }
 	}
 }
@@ -285,7 +285,7 @@ country_event = { # Demand install communist in-power
 }
 
 country_event = { # Demand install presidential dictatorship
-	id = 19006_P
+	id = 19106
 	title = EVT_19006_NAME
 	desc = EVT_19006_DESC
 	picture = "super_powers"
