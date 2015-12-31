@@ -34,6 +34,7 @@ political_decisions = {
 		potential = {
 			tag = FRA
 			exists = yes
+			NOT = { year = 1990 }
 			NOT = { has_global_flag = european_coal_and_steel_community }
 		}
 
@@ -53,9 +54,10 @@ political_decisions = {
 				country_event = 8232041
 			}
 			NET = { country_event = 8232041  }
-	}
+		}
 		ai_will_do = {
 			factor = 1
 		}		
-	}	
+	}
+	
 }

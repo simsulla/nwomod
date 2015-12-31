@@ -224,5 +224,38 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}		
+	}
+	
+	maastricht_treaty = {
+		picture = "maastricht_treaty"
+		potential = {
+			OR = { tag = FRA tag = SPA tag = POR tag = ITA tag = GER tag = BEL tag = LUX tag = NET tag = ENG tag = IRE tag = GRE tag = DEN }
+			exists = yes
+			year = 1992 
+			NOT = { has_global_flag = european_coal_and_steel_community } # prevent reexecution for a 1946 game
+			NOT = { has_country_flag = maastricht_treaty }
+		}
+
+		allow = {
+			OR = { government = democracy government = hms_government }
+			has_country_modifier = bretton_system
+			trust_busting = 1
+		}
+
+		effect = {
+			set_country_flag = maastricht_treaty
+			set_country_flag = trade_block_ambition
+			set_country_flag = xeu_ambition
+			set_country_flag = in_trade_block
+			capital_scope = {  add_province_modifier = { name = single_market duration = -1 } }	
+			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
+			all_core = { add_core = XEU }
+			prestige = 10
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+	
 }
