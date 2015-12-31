@@ -654,6 +654,10 @@ free_peoples = {
 	
 	can_use = {
 		NOT = { is_our_vassal = THIS }
+		OR = { 
+			ai = no
+			part_of_sphere = no # if we are part of spher the spher ruler guides policies - not us.
+		}
 	}
 
 	# THIS - us
@@ -978,7 +982,7 @@ territorial_dispute = {
 
 	construction_speed = 0.8
 	
-	badboy_factor = 0
+	badboy_factor = 1.5
 	prestige_factor = 5
 	peace_cost_factor = 0.7
 	penalty_factor = 1
@@ -1001,6 +1005,7 @@ territorial_dispute = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
 		THIS = {
+			part_of_sphere = no
 			NOT = { war_policy = pro_military }
 			NOT = { war_policy = pacifism }
 			NOT = {	has_country_flag = international_court_of_justice }
