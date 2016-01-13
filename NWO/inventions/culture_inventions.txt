@@ -317,19 +317,6 @@ hegelian_strd_internet = {
 		shared_prestige = 5 
 	}
 }
-proto_existentialism = {
-	limit = { strd_internet = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			informatization_education = 1
-		}
-	}
-	effect = {
-		shared_prestige = 5 
-	}
-}
 #high_speed_uni_network
 pragmatism = {
 	limit = { high_speed_uni_network = 1 }
@@ -474,23 +461,6 @@ existentialism = {
 	limit = { virtual_science = 1 }
 	chance = {
 		base = 2
-	}
-	effect = {
-		shared_prestige = 25 
-	}
-}
-nihilism_and_the_will = {
-	limit = { virtual_science = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = national_fraternity
-		}
-		modifier = {
-			factor = 2
-			invention = social_anthropology
-		}
 	}
 	effect = {
 		shared_prestige = 25 
