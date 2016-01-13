@@ -41,6 +41,36 @@ country_event = {
 	}
 }
 
+# Event to Inherit - causd by master
+country_event = {
+	id = 11100
+	title = "EVTNAME11100"
+	desc = "EVTDESC11100"
+	picture = "annexation_into_union"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA11101"
+		random_country = { limit = { NOT = { tag = THIS } OR = { tag = GER tag = DDR } } country_event = 11101 }
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = "EVTOPTB11101"
+		prestige = 1
+		relation = {
+			who = FROM
+			value = -100
+		}
+		any_pop = {
+			militancy = 3
+			consciousness = 2
+		}
+		ai_chance = { factor = 0 }
+	}	
+}
+
 
 # Event to Inherit
 country_event = {

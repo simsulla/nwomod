@@ -450,7 +450,8 @@ political_decisions = {
 		effect = {
 			set_global_flag = german_reunification
 			prestige = 20
-			random_country = { limit = { NOT = { tag = THIS } OR = { tag = GER tag = DDR } } country_event = 11101 }
+			random_country = { limit = { NOT = { tag = THIS } THIS = { OR = { tag = GER tag = DDR } } OR = { tag = GER tag = DDR } } country_event = 11101 }
+			random_country = { limit = { THIS = { NOT = { tag = GER } NOT = { tag = DDR } } OR = { tag = GER tag = DDR } } country_event = 11100 }
 		}
 		ai_will_do = {
 			factor = 1
