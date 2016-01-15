@@ -281,7 +281,6 @@ country_event = {
   trigger = {
     tag = YUG
 	year = 1961 NOT = { year = 1963 }
-    
   }
 
   mean_time_to_happen = { months = 8  }
@@ -344,7 +343,10 @@ country_event = {
   trigger = {
     tag = YUG
 	year = 1990 NOT = { year = 1991 }
-    
+	OR = {
+		NOT = { owns = 771 } # Zagreb
+		government = populist_dictatorship
+	}
   }
 
   mean_time_to_happen = { months = 1  }
@@ -416,6 +418,21 @@ country_event = {
 	overlord = { country_event = 8014250 } 
 	ai_chance = { factor = 0 }
   }
+  
+  option = {
+    name = EVT_8022742_C
+	any_pop = { NOT = { is_primary_culture = yes } militancy = 1.5 consciousness = 0.8 }
+	release = SLO
+	release = CRO
+	release = BOS
+	CRO = {	government = democracy country_event = 800054 }
+	SLO = {	government = democracy country_event = 800054 }
+	BOS = {	government = populist_dictatorship country_event = 800050 }
+	war = { target = CRO attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
+	war = { target = SLO attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
+	war = { target = BOS attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
+	ai_chance = { factor = 0 }
+  }  
 }
 
 country_event = {
