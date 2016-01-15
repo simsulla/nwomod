@@ -664,7 +664,7 @@ free_peoples = {
 	# FROM - country scope is possible match?
 	# war target country of goal is scope
 	allowed_countries = {
-		#number_of_states = 2 # the event prevents all cores beeing given
+		number_of_states = 2 # the event prevents all cores beeing given
 		NOT = {
 			tag = FROM
 			#this_culture_union = FROM	
@@ -676,9 +676,10 @@ free_peoples = {
 		any_owned_province = {
 			is_core = FROM
 			is_capital = no
-			# NOT = { is_core = THIS }
+			NOT = { is_core = THIS }
 		}
 		is_releasable_vassal = FROM
+		NOT = { relation = { who = THIS value = 0 } } # make ai less likely to start this
 	}
 
 	# THIS - us
