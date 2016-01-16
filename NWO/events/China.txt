@@ -1691,17 +1691,16 @@ country_event = {
 
   trigger = {
     tag = CHI
-    year = 1948 NOT = { year = 1949 }
+    year = 1946 NOT = { year = 1949 }
     NOT = { has_global_flag = CHC_won_civil_war }
-    
     war_with = KMT
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = "EVT_8200040_A"
-	country_event = { id = 8200042 days = 30 }
+	KMT = { country_event = 8200042 }
   }
 }
 country_event = {
@@ -1713,7 +1712,7 @@ country_event = {
 
   option = {
     name = "EVT_8200042_A"
-	add_country_modifier = { name = raving_loon duration = 365 }
+	add_country_modifier = { name = military_corruption duration = 1400 }
   }
 }
 country_event = {
@@ -1725,17 +1724,17 @@ country_event = {
 
   trigger = {
     tag = KMT
-    year = 1948 NOT = { year = 1949 }
+    year = 1947 NOT = { year = 1949 }
     NOT = { has_global_flag = CHI_won_civil_war }
     NOT = { has_global_flag = CHC_won_civil_war }
-    
     war_with = CHI
   }
 
-  mean_time_to_happen = { months = 6  }
+  mean_time_to_happen = { months = 1  }
 
   option = {
     name = "EVT_8200043_A"
+	add_country_modifier = { name = corruption duration = 700 }
 	any_pop = { militancy = 1.0 consciousness = 1 }
   }
 }
@@ -1860,7 +1859,7 @@ province_event = {
 	NOT = { province_id = 2576 } # not on other islands
   }
 
-  mean_time_to_happen = { months = 180 }
+  mean_time_to_happen = { months = 45 }
 
   option = {
     name = "EVT_8200050_A"
