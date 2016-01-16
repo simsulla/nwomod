@@ -31,6 +31,7 @@ country_event = { # Suicide of Vargas
   trigger = {
     tag = BRZ
 	year = 1954
+	OR = { government = presidential_dictatorship government = populist_dictatorship }
     NOT = { year = 1955 }
   }
 
@@ -114,24 +115,4 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
-country_event = {
-  id = 8002017
-  title = "EVT_8002017_NAME"
-  desc = "EVT_8002017_DESC"
-  picture = "nwo2_brasilia"
-  fire_only_once = yes
 
-  trigger = {
-    tag = BRZ
- 	year = 1956
-    NOT = { year = 1960 }
-  }
-
-  mean_time_to_happen = { months = 6 }
-
-  option = {
-    name = "EVT_8002017_A"
-	any_pop = {  consciousness = 1 }
-	capital = 2446 
-  }
-}

@@ -421,7 +421,7 @@ country_event = {
   
   option = {
     name = EVT_8022742_C
-	any_pop = { NOT = { is_primary_culture = yes } militancy = 1.5 consciousness = 0.8 }
+	any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 1.5 consciousness = 0.8 }
 	release = SLO
 	release = CRO
 	release = BOS
