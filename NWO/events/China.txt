@@ -1298,7 +1298,7 @@ country_event = {
 
   option = {
     name = "EVT_8200007_A"
-	money = 5000 
+	money = 105000 
 	small_arms = 1000
 	weaponry = 1000
 	fuel = 1000
@@ -1658,6 +1658,7 @@ country_event = {
 
   option = {
     name = "EVT_8200039_A"
+	add_country_modifier = { name = military_corruption duration = 1400 }
   }
 }
 country_event = {
@@ -1669,7 +1670,7 @@ country_event = {
 
   trigger = {
     tag = KMT
-    year = 1948 NOT = { year = 1949 }
+    year = 1947 NOT = { year = 1949 }
     NOT = { has_global_flag = CHI_won_civil_war }
     
     war_with = CHI

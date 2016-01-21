@@ -11,6 +11,7 @@ country_event = {
 		diplomatic_influence = { who = FROM value = -100 }
 		relation = { who = FROM value = -100 }
 		leave_alliance = FROM
+		treasury = -100000
 		FROM = { remove_country_modifier = comecon }
 		1481 = {
 			state_scope = {
@@ -25,6 +26,7 @@ country_event = {
 		diplomatic_influence = { who = FROM value = 100 }
 		relation = { who = FROM value = 100 }
 		create_alliance = FROM # CHI
+		CHI = { treasury = -100000 }
 		any_owned = { limit = { province_id = 1481 } 1481 = { secede_province = FROM } }
 		ai_chance = { factor = 100 }
 	}
