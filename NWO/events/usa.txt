@@ -59,12 +59,6 @@ country_event = {
 		AFG = { OR = { government = theocracy government = nationalist_dictatorship } }
 	}
 	
-	immediate = { 
-		AFG = { badboy = 25 } 
-		any_country = { limit = { NOT = { ruling_party_ideology = traditionalist } } relation = { who = AFG value = -200 } } 
-		random_country = { limit = { tag = PAK  ai = yes } create_alliance = USA }
-	}
-
 	mean_time_to_happen = {
 		months = 11
 		modifier = { factor = 0.5 AFG = { government = theocracy } }
@@ -72,7 +66,9 @@ country_event = {
 
 	option = {
 		name = EVT_1015802_A 
-		ai_chance = { factor = 100 }
+		AFG = { badboy = 25 } 
+		any_country = { limit = { NOT = { ruling_party_ideology = traditionalist } } relation = { who = AFG value = -200 } } 
+		random_country = { limit = { tag = PAK  ai = yes } create_alliance = USA }
 		war = {
 			target = AFG
 			attacker_goal = { casus_belli = install_democracy }
@@ -82,11 +78,14 @@ country_event = {
 		}
 		prestige = 20
 		badboy = 0.5
+		ai_chance = { factor = 100 }
 	}
 	
 	option = {
 		name = EVT_1015802_B 
-		ai_chance = { factor = 0 }
+		AFG = { badboy = 25 } 
+		any_country = { limit = { NOT = { ruling_party_ideology = traditionalist } } relation = { who = AFG value = -200 } } 
+		random_country = { limit = { tag = PAK  ai = yes } create_alliance = USA }
 		any_country = { relation = { who = AFG value = -200 } }
 		casus_belli = {
 			target = AFG
@@ -94,6 +93,7 @@ country_event = {
 			months = 60
 		}
 		prestige = -20
+		ai_chance = { factor = 0 }
 	}
 
 }
