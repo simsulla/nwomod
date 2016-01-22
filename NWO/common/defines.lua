@@ -655,7 +655,7 @@ pops = {
 	
 	POP_SAVINGS = 0.15, 
 	
-	STATE_CREATION_ADMIN_LIMIT = 0.01,
+	STATE_CREATION_ADMIN_LIMIT = 0.002, -- needed for China and India to transform into states.
 	MIL_TO_JOIN_REBEL = 7, -- Rebels over this will join a faction
 	MIL_TO_JOIN_RISING = 8, -- Rebels over this will join a general rising
 	MIL_TO_AUTORISE = 9, -- Rebels over this rise no matter what
