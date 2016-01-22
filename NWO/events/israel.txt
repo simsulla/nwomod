@@ -826,7 +826,7 @@ country_event = {
 	random_country = { limit = { ISR = { owns = 1756 } tag = EGY } war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 1756 } defender_goal = { casus_belli = status_quo } } }
 	EGY = { add_country_modifier = { name = visionary_thinker duration = 700 } }
 	ISR = { country_event = 8007684 } 
-	SYR = { country_event = 8007685 }
+	random_country = { limit = { tag = SYR NOT = { owns = 2687 } } country_event = 8007685 }
 	ai_chance = { factor = 100 }
   }
 
