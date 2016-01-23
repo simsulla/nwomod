@@ -888,6 +888,36 @@ country_event = { # The New Regime - Democracy
  }
 }
 
+country_event = { # The New Regime Form of Government
+
+	id = 800060
+
+	title = "EVT_800060_NAME"  
+	desc = "EVT_800060_DESC"
+	picture = "military_junta"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_800060_A"
+		government = presidential_dictatorship country_event = 800050 
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = "EVT_800060_B"
+		government = populist_dictatorship country_event = 800050 
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "EVT_800060_C"
+		government = nationalist_dictatorship country_event = 800050 
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
 # REM id = 810057 The Colonial Regime Overthrown!
 # REM 	id = 800147 Sepoys Victorious
 # REM 	id = 800148 Response in Indian Minors to Sepoy Rebellion
