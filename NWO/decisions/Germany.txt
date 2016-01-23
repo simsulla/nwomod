@@ -456,6 +456,27 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
+
+	capital_berlin = {
+		picture = "capital_berlin"
+		potential = {
+			exists = yes
+			NOT = { exists = DDR }
+			tag = GER
+			NOT = { capital = 549 }
+		}
+		
+		allow = {
+			owns = 551
+			owns = 549
+		}
+		
+		effect = {
+			capital = 549
+			551 = { change_province_name =  "Potsdam" }
+		}
+	
+	}
 		
 }
