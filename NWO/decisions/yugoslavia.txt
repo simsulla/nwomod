@@ -17,14 +17,12 @@ political_decisions = {
 				RSR = {
 					exists = yes
 					OR = {
-						AND = {
-							is_vassal = no
-							vassal_of = THIS
-						}
-						AND = {
-							part_of_sphere = no
-							in_sphere = THIS
-						}
+						is_vassal = no
+						vassal_of = THIS
+					}
+					OR = {
+						part_of_sphere = no
+						in_sphere = THIS
 					}
 					relation = { who = THIS value = 100 }
 					war = no
@@ -33,14 +31,12 @@ political_decisions = {
 				SRK = {
 					exists = yes
 					OR = {
-						AND = {
-							is_vassal = no
-							vassal_of = THIS
-						}
-						AND = {
-							part_of_sphere = no
-							in_sphere = THIS
-						}
+						is_vassal = no
+						vassal_of = THIS
+					}
+					OR = {
+						part_of_sphere = no
+						in_sphere = THIS
 					}
 					relation = { who = THIS value = 100 }
 					war = no
