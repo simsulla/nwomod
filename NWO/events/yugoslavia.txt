@@ -478,6 +478,7 @@ country_event = {
     tag = HZB
 	vassal_of = BOS
 	war = no
+	NOT = { truce_with = BOS }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -518,6 +519,8 @@ country_event = {
 	OR = { NOT = { exists = SRK } NOT = { truce_with = SRK } } # Prereq for new war with SRK
 	OR = { HZB = { vassal_of = BOS } NOT = { exists = HZB } } # Bosnia must win this war or Croatia don't what compromise
 	war = no
+	CRO = { NOT = { truce_with = SRK } }
+	BOS = { NOT = { truce_with = RSR } }
   }
 
   mean_time_to_happen = { months = 6  }
