@@ -9,11 +9,8 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA11106"
-		any_owned = { add_core = FROM }
-		FROM = {
-			inherit = THIS
-			prestige = 20
-		}
+		all_core = { add_core = FROM }
+		FROM = { country_event = 11107 }
 		ai_chance = { factor = 100 }
 	}
 
@@ -39,6 +36,23 @@ country_event = {
 		}
 		ai_chance = { factor = 0 }
 	}
+}
+
+country_event = {
+	id = 11107
+	title = "EVT_11107_NAME"
+	desc = "EVT_11107_DESC"
+	picture = "annexation_into_union"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_11107_A"
+		inherit = FROM
+		prestige = 20
+		ai_chance = { factor = 100 }
+	}
+
 }
 
 # Event to Inherit - causd by master
