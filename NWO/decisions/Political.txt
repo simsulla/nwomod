@@ -26,11 +26,12 @@ political_decisions = {
 		alert = no
 		potential = {
 			part_of_sphere = yes
-			OR = { ai = no sphere_owner = { NOT = { relation = { who = THIS value = -101 } } } }
+			OR = { ai = no sphere_owner = { NOT = { relation = { who = THIS value = -160 } } } }
 		}
 		allow = {
 			is_secondary_power = yes
-			sphere_owner = { NOT = { relation = { who = THIS value = -50 } } }
+			has_recently_lost_war = no
+			sphere_owner = { NOT = { relation = { who = THIS value = -100 } } }
 		}
 		effect = { 
 			sphere_owner = { country_event = { id = 13201 days = 0 } }
