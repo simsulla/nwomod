@@ -269,7 +269,7 @@ country_event = { # Self-rule of $FROMCOUNTRY$
   title = EVT_15403_NAME
   desc = EVT_15403_DESC
   picture = "colonialism_self_rule"
-  is_triggered_only = yes
+  is_triggered_only = yes # freed colony
 
   option = {
     name = EVT_15402_A
@@ -295,7 +295,7 @@ country_event = { # Self-rule of $FROMCOUNTRY$
 		# tend to remains violent at its core
 		set_country_flag = full_independance # TODO only militant should get...
 	}
-	ai_chance = { factor = 1.0 } # TODO?
+	ai_chance = { factor = 100 } # TODO?
   }
   option = {
     name = EVT_dontliberate
