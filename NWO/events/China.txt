@@ -1439,6 +1439,61 @@ country_event = {
   }
 }
 country_event = {
+  id = 8200015
+  title = "EVT_8200015_NAME"
+  desc = "EVT_8200015_DESC"
+  picture = "chinese_civil_war_generals"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHI
+    year = 1946 NOT = { year = 1947 }
+    CHI = { war_with = KMT }
+    NOT = { has_global_flag = CHI_won_civil_war }
+  }
+  
+  mean_time_to_happen = { days = 5 }
+
+  option = {
+    name = "EVT_8200015_A"
+	define_general = { name = "Mao Zedong" personality = inspiring background = natural_born_leader }
+	define_general = { name = "Zhou Enlai" personality = decisive background = brilliant_strategist }
+	define_general = { name = "Zhu De" personality = cool_minded background = war_college }
+	define_general = { name = "Lin Biao" personality = inspiring background = military_theoretician }
+	define_general = { name = "Peng Dehuai" personality = charismatic background = expert_raider }
+	ai_chance = { factor = 100 }
+  }
+
+}
+country_event = {
+  id = 8200016
+  title = "EVT_8200016_NAME"
+  desc = "EVT_8200016_DESC"
+  picture = "chinese_civil_war_kmt_generals"
+  fire_only_once = yes
+
+  trigger = {
+    tag = KMT
+    year = 1946 NOT = { year = 1947 }
+    KMT = { war_with = CHI }
+    NOT = { has_global_flag = CHI_won_civil_war }
+  }
+  
+  mean_time_to_happen = { days = 5 }
+
+  option = {
+    name = "EVT_8200016_A"
+	define_general = { name = "Chiang Kai-shek" personality = pusillanimous background = politician }
+	define_general = { name = "Bai Chongxi" personality = indifferent background = son_of_hero }
+	define_general = { name = "Chen Cheng" personality = timid background = megalomaniac }
+	define_general = { name = "Li Zongren" personality = dumb background = unlucky }
+	define_general = { name = "Yan Xishan" personality = spineless background = corrupt }
+	define_general = { name = "Sun Li-jen" personality = wretched background = career_man }
+	ai_chance = { factor = 100 }
+  }
+
+}
+country_event = {
   id = 8200020
   title = "EVT_8200020_NAME"
   desc = "EVT_8200020_DESC"
