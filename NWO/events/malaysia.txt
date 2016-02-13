@@ -199,6 +199,7 @@ country_event = {
     tag = IDO
     year = 1962 NOT = { year = 1965 }
     NOT = { owns = 1394 owns = 1397 }
+	MSY = { owns = 1394 owns = 1397 }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -224,7 +225,7 @@ country_event = {
   title = EVT_8009725_NAME
   desc = EVT_8009725_DESC
   picture = "nwo2_konfrontasi"
-  is_triggered_only = yes
+  is_triggered_only = yes # MSY
 
   option = {
     name = EVT_8009725_A
@@ -245,7 +246,7 @@ country_event = {
   desc = EVT_8009726_DESC
   picture = "nwo2_konfrontasi"
   fire_only_once = yes
-  is_triggered_only = yes
+  is_triggered_only = yes # IDO
 
   option = {
     name = EVT_8009726_A
