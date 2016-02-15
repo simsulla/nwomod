@@ -368,9 +368,6 @@ emigration_chance = { # 0.5
 	modifier = { factor = 0.1 unemployment = 0.3 }
 	modifier = { factor = 0.1 unemployment = 0.4 }
 
-	# no need to have extra migrants for demgraphic trasn and secular low growth country
-	modifier = { factor = -0.5 location = { has_province_modifier = demographic_transition is_state_religion = yes } }
-
 	# ugly but need to limit pop fragmentation and sino indian swamping
 	modifier = { 
 		factor = -0.35
@@ -400,8 +397,8 @@ emigration_chance = { # 0.5
 
 	modifier = {
 		factor = 200
-		is_primary_culture = no
-		is_accepted_culture = no
+		NOT = { is_primary_culture = yes }
+		NOT = { is_accepted_culture = yes }
 		country = { has_country_flag = ethnic_cleansing }
 	}
 }
