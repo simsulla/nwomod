@@ -29,12 +29,11 @@ country_event = { # Saud's handling of economy
     tag = SAA
     year = 1953 NOT = { year = 1963 }
   }
-  immediate = { set_global_flag = event_fired_8012905 }
 
   mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_8012905_A
-	any_owned = { limit = { produces = petroleum } add_province_modifier = { name = oil_field duration = -1 } }
+	any_owned = { limit = { produces = petroleum NOT = { has_province_modifier = oil_field } } add_province_modifier = { name = oil_field duration = -1 } }
   }
 }
