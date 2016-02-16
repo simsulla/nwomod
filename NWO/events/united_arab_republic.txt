@@ -246,7 +246,8 @@ country_event = {
 	any_pop = { militancy = 0.5 consciousness = 1 }
 	any_country = { 
 		limit = { OR = { tag = SYR tag = JOR tag = IRQ tag = LEB } exists = no }
-		country_event = 15410 add_casus_belli = { target = UAR type = conquest months = 12 } 
+		country_event = 15410
+		country_event = { id = 8218013 days = 5 }
 	}
 	ai_chance = { factor = 0 }
   }
@@ -264,14 +265,32 @@ country_event = {
 	exists = UAR
     year = 1962 NOT = { year = 1990 }
 	war = no
-	NOT = { OR = { owns = 908 owns = 926 owns = 902 owns = 913 } } 
+	NOT = { owns = 908 owns = 926 owns = 902 owns = 913 } 
   }
+  
+  mean_time_to_happen = { months = 24  }
   
   option = {
 	change_tag = EGY
     name = EVT_8218011_A
   }  
 }
+
+country_event = { # AI only
+  id = 8218013
+  title = EVT_8218013_NAME
+  desc = EVT_8218011_DESC
+  picture = "nwo2_egypt"
+
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8218011_A
+	any_owned = { add_core = UAR }
+	UAR = { war = { target = THIS attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = staus_quo } } 
+  }  
+}
+
 country_event = {
   id = 8218020
   title = EVT_8218020_NAME
