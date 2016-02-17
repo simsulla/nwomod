@@ -624,7 +624,11 @@ the_atomic_bomb = {
                 }
         }
         effect = {
-                permanent_prestige = 5
+            permanent_prestige = 5
+            rebel_org_gain = {
+                faction = separatist_rebels
+                value = 0.50
+            }
         }
 }
 
@@ -695,6 +699,10 @@ secularization = {
 	}
 	effect = {
 		plurality = 0.05
+        rebel_org_gain = {
+            faction = islamist_rebels
+            value = 0.50
+        }
 	}
 }
 social_conscience = {
@@ -776,15 +784,6 @@ biased_multiculturalism = {
 		colonial_migration = 0.05
 	}
 }
-#national_trauma = {
-#	limit = { age_of_protests = 1 }
-#	chance = {
-#		base = 5
-#	}
-#	effect = {
-#		plularity = 
-#	}
-#}
 #revanchism = {
 #	limit = { age_of_protests = 1 }
 #	chance = {
@@ -817,16 +816,24 @@ terrorism = {
 	}
 	effect = {
 		enable_crime = terrorist_cells 
+        rebel_org_gain = {
+            faction = islamist_rebels
+            value = 0.75
+        }		
 	}
 }
-#general_strikes = {
-#	limit = { political_polarization = 1 }
-#	chance = {
-#		base = 5
-#	}
-#	effect = { 
-#	}
-#}
+identity_politics = {
+	limit = { political_polarization = 1 }
+	chance = {
+		base = 5
+	}
+	effect = { 
+        rebel_org_gain = {
+            faction = populist_rebels
+            value = 0.75
+        }
+	}
+}
 secret_police = {
 	limit = { political_polarization = 1 }
 	chance = {
@@ -876,8 +883,19 @@ the_police_state = {
 			faction = all
 			value = -0.25
 		}
-		
 		suppression_points_modifier = 0.25
+	}
+}
+national_trauma = {
+	limit = { new_world_order = 1 }
+	chance = {
+		base = 5
+	}
+	effect = {
+        rebel_org_gain = {
+            faction = populist_rebels
+            value = 0.25
+        }		
 	}
 }
 #decolonization
@@ -898,6 +916,27 @@ separatism = {
 		seperatism = 0.5
 		rebel_org_gain = {
 			faction = separatist_rebels 
+			value = 0.33
+		}
+	}
+}
+anti_imperialism = {
+	limit = { decolonization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_militancy = 3
+		}
+		modifier = {
+			factor = 2
+			average_consciousness = 2
+		}
+	}
+	effect = {
+		seperatism = 0.5
+		rebel_org_gain = {
+			faction = communist_rebels 
 			value = 0.33
 		}
 	}
@@ -947,6 +986,10 @@ national_radio_networks = {
 	}
 	effect = { 
 		suppression_points_modifier = -0.05
+        rebel_org_gain = {
+            faction = communist_rebels
+            value = 0.25
+        }		
 	}
 	core_pop_consciousness_modifier = 0.01
 }
