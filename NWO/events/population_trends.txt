@@ -9,52 +9,72 @@
 # 2.a literacy - linear revers relation and 
 # 2.b secular pop majority - Y|N negative
 # 3. special - haredim_jewish, roma and mennonites and not prim/accept
-province_event = { # Demographic Transition
-	id = 2260600
-	title = EVT_2260600_NAME # The Demographic Transition
-	desc = EVT_2260600_DESC
-	
+country_event = { # Demographic Transition
+	id = 22600
+	title = EVT_22600_NAME # The Demographic Transition
+	desc = EVT_22600_DESC
+	is_triggered_only = yes # on_actions
+	allow_multiple_instances = yes
+
 	trigger = {
-		has_province_modifier = demographic_transition 
-		OR = { 
-			AND = { continent = europe year = 1890 }
-			AND = { OR = { is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
-			AND = { OR = { continent = north_america continent = south_america } year = 1970 }
-			AND = { continent = asia year = 1960 }
-			AND = { continent = oceania year = 1980 }
-			AND = { continent = mena year = 1990 }
-			AND = { continent = africa year = 2000 }
+		any_owned_province = {
+			has_province_modifier = demographic_transition 
+			OR = { 
+				AND = { continent = europe year = 1890 }
+				AND = { OR = { is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
+				AND = { OR = { continent = north_america continent = south_america } year = 1970 }
+				AND = { continent = asia year = 1960 }
+				AND = { continent = oceania year = 1980 }
+				AND = { continent = mena year = 1990 }
+				AND = { continent = africa year = 2000 }
+			}
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 240 # 20 years)
-		modifier = {
-			factor = 0.1
-			any_neighbor_province = { NOT = { has_province_modifier = demographic_transition } }
-		}
-	}
+	#mean_time_to_happen = {
+	#	months = 240 # 20 years)
+	#	modifier = {
+	#		factor = 0.1
+	#		any_neighbor_province = { NOT = { has_province_modifier = demographic_transition } }
+	#	}
+	#}
 	
 	option = {
 		name = OK
-		remove_province_modifier = demographic_transition 
+		any_owned = {
+			limit = { 
+				has_province_modifier = demographic_transition 
+				OR = { 
+					AND = { continent = europe year = 1890 }
+					AND = { OR = { is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
+					AND = { OR = { continent = north_america continent = south_america } year = 1970 }
+					AND = { continent = asia year = 1960 }
+					AND = { continent = oceania year = 1980 }
+					AND = { continent = mena year = 1990 }
+					AND = { continent = africa year = 2000 }
+				}
+			}
+			remove_province_modifier = demographic_transition 
+		}
 	}
 }
 
 country_event = { # Demographic Transition - Initial setup
-	id = 2260601
-	title = EVT_2260601_NAME # The Demographic Transition and Modernization
-	desc = EVT_2260600_DESC
+	id = 22601
+	title = EVT_22601_NAME # The Demographic Transition and Modernization
+	desc = EVT_22600_DESC
 	picture = "total_fertility_rate"
-	
+	is_triggered_only = yes # on_actions
+	allow_multiple_instances = yes
+
 	trigger = {
 		NOT = { has_country_flag = demographic_init }
 		exists = yes
 	}
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	#mean_time_to_happen = {
+	#	days = 20
+	#}
 
 	option = {
 		name = OK
@@ -72,15 +92,17 @@ country_event = { # Demographic Transition - Initial setup
 				duration = -1
 			}
 		}
-		country_event = 2260602
+		country_event = 22602
 	}
 }
 
 country_event = { # Total Fertility Rate
-	id = 2260602
-	title = EVT_2260602_NAME #  Total Fertility Rate
-	desc = EVT_2260602_DESC
+	id = 22602
+	title = EVT_22602_NAME #  Total Fertility Rate
+	desc = EVT_22602_DESC
 	picture = "demographic_transition"
+	is_triggered_only = yes # on_actions
+	allow_multiple_instances = yes
 	
 	trigger = {
 		has_country_flag = demographic_init
@@ -88,9 +110,9 @@ country_event = { # Total Fertility Rate
 		NOT = { has_country_modifier = fertility_timer }
 	}
 	
-	mean_time_to_happen = {
-		months = 1 # 10 years)
-	}
+	#mean_time_to_happen = {
+	#	months = 1 # 10 years)
+	#}
 	
 	option = {
 		name = OK
@@ -137,59 +159,73 @@ country_event = { # Total Fertility Rate
 			add_province_modifier = { name = self_values duration = 1400 } # 2 -5%
 		}
 		add_country_modifier = { 
-		name = fertility_timer 
-		duration = 3665 
+			name = fertility_timer 
+			duration = 3665 
 	    }
 		
 	}
 }
 
-province_event = { # haredim_jewish
-	id = 2260612
-	title = EVT_2260612_NAME 
-	desc = EVT_2260612_DESC
+country_event = { # haredim_jewish
+	id = 22612
+	title = EVT_22612_NAME 
+	desc = EVT_22612_DESC
 	picture = "haredim_jewish"
+	is_triggered_only = yes # on_actions
+	allow_multiple_instances = yes
 	
 	trigger = {
+		NOT = { has_country_modifier = demographic_haredim_jewish }
 		any_pop = { 
 			culture = haredim_jewish
 		}
 	}
 	
-	mean_time_to_happen = {
-        months = 120
-	}
+	#mean_time_to_happen = {
+    #    months = 120
+	#}
 	
 	option = {
-		name = EVT_2260612_OPTA
+		name = EVT_22612_OPTA
 		any_pop = { 
 			limit = { culture = haredim_jewish }
 			reduce_pop = 1.35
 		}
+		add_country_modifier = { 
+			name = demographic_haredim_jewish 
+			duration = 3665 
+	    }
 	}
 }
 
-province_event = { # mennonites
-	id = 2260613
-	title = EVT_2260613_NAME 
-	desc = EVT_2260613_DESC
+country_event = { # mennonites
+	id = 22613
+	title = EVT_22613_NAME 
+	desc = EVT_22613_DESC
 	picture = "family_values"
+	is_triggered_only = yes # on_actions
+	allow_multiple_instances = yes
 	
 	trigger = {
+		NOT = { has_country_modifier = demographic_mennonites }
 		any_pop = { 
 			culture = mennonites
 		}
 	}
 	
-	mean_time_to_happen = {
-        months = 120
-	}
+	#mean_time_to_happen = {
+    #    months = 120
+	#}
 	
 	option = {
-		name = EVT_2260613_OPTA
+		name = EVT_22613_OPTA
 		any_pop = { 
 			limit = { culture = mennonites }
 			reduce_pop = 1.35
 		}
+		add_country_modifier = { 
+			name = demographic_mennonites 
+			duration = 3665 
+	    }
 	}
 }
