@@ -403,3 +403,173 @@ country_event = {
 		}
 	}
 }
+
+######################################
+# Economical Difficulty Level Events #
+######################################
+country_event = {
+	id = 22700
+	title = EVT_22700_NAME
+	desc = EVT_22700_DESC
+	picture = "affluent_society"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	trigger = {
+		NOT = { has_country_modifier =  economy_timer }
+		# has_country_modifier = none
+		NOT = { has_country_modifier =  economy_very_easy }
+		NOT = { has_country_modifier =  economy_easy }
+		NOT = { has_country_modifier =  economy_normal }
+		NOT = { has_country_modifier =  economy_hard }
+		NOT = { has_country_modifier =  economy_very_hard }
+		OR = {
+			AND = { money = 200000 rank = 12 } 
+			AND = { money = 100000 rank = 24 } 
+			AND = { money = 50000 rank = 48 } 
+			AND = { money = 25000 rank = 96 } 
+			AND = { money = 12000 rank = 192 } 
+		}
+	}
+	
+	option = {
+		name = OK
+		# remove_country_modifier = economy_none
+		add_country_modifier = { name = economy_timer duration = 3500 }
+		add_country_modifier = { name = economy_very_easy duration = -1 }
+	}
+	
+}
+
+country_event = {
+	id = 22701
+	title = EVT_22700_NAME
+	desc = EVT_22700_DESC
+	picture = "affluent_society"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	trigger = {
+		NOT = { has_country_modifier =  economy_timer }
+		has_country_modifier = economy_very_easy
+		NOT = { has_country_modifier =  economy_easy }
+		NOT = { has_country_modifier =  economy_normal }
+		NOT = { has_country_modifier =  economy_hard }
+		NOT = { has_country_modifier =  economy_very_hard }
+		OR = {
+			AND = { money = 200000 rank = 12 } 
+			AND = { money = 100000 rank = 24 } 
+			AND = { money = 50000 rank = 48 } 
+			AND = { money = 25000 rank = 96 } 
+			AND = { money = 12000 rank = 192 } 
+		}
+	}
+	
+	option = {
+		name = OK
+		remove_country_modifier = economy_very_easy
+		add_country_modifier = { name = economy_timer duration = 3500 }
+		add_country_modifier = { name = economy_easy duration = -1 }
+	}
+	
+}
+
+country_event = {
+	id = 22702
+	title = EVT_22700_NAME
+	desc = EVT_22700_DESC
+	picture = "affluent_society"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	trigger = {
+		NOT = { has_country_modifier =  economy_timer }
+		NOT = { has_country_modifier =  economy_very_easy }
+		has_country_modifier = economy_easy
+		NOT = { has_country_modifier =  economy_normal }
+		NOT = { has_country_modifier =  economy_hard }
+		NOT = { has_country_modifier =  economy_very_hard }
+		OR = {
+			AND = { money = 200000 rank = 12 } 
+			AND = { money = 100000 rank = 24 } 
+			AND = { money = 50000 rank = 48 } 
+			AND = { money = 25000 rank = 96 } 
+			AND = { money = 12000 rank = 192 } 
+		}
+	}
+	
+	option = {
+		name = OK
+		remove_country_modifier = economy_easy
+		add_country_modifier = { name = economy_timer duration = 3500 }
+		add_country_modifier = { name = economy_normal duration = -1 }
+	}
+	
+}
+
+country_event = {
+	id = 22703
+	title = EVT_22700_NAME
+	desc = EVT_22700_DESC
+	picture = "affluent_society"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	trigger = {
+		NOT = { has_country_modifier =  economy_timer }
+		NOT = { has_country_modifier =  economy_very_easy }
+		NOT = { has_country_modifier =  economy_easy }
+		has_country_modifier = economy_normal
+		NOT = { has_country_modifier =  economy_hard }
+		NOT = { has_country_modifier =  economy_very_hard }
+		OR = {
+			AND = { money = 200000 rank = 12 } 
+			AND = { money = 100000 rank = 24 } 
+			AND = { money = 50000 rank = 48 } 
+			AND = { money = 25000 rank = 96 } 
+			AND = { money = 12000 rank = 192 } 
+		}
+	}
+	
+	option = {
+		name = OK
+		remove_country_modifier = economy_normal
+		add_country_modifier = { name = economy_timer duration = 3500 }
+		add_country_modifier = { name = economy_hard duration = -1 }
+	}
+	
+}
+
+country_event = {
+	id = 22704
+	title = EVT_22700_NAME
+	desc = EVT_22700_DESC
+	picture = "affluent_society"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	trigger = {
+		NOT = { has_country_modifier =  economy_timer }
+		NOT = { has_country_modifier =  economy_very_easy }
+		NOT = { has_country_modifier =  economy_easy }
+		NOT = { has_country_modifier =  economy_normal }
+		has_country_modifier = economy_hard
+		NOT = { has_country_modifier =  economy_very_hard }
+		OR = {
+			AND = { money = 200000 rank = 12 } 
+			AND = { money = 100000 rank = 24 } 
+			AND = { money = 50000 rank = 48 } 
+			AND = { money = 25000 rank = 96 } 
+			AND = { money = 12000 rank = 192 } 
+		}
+	}
+	
+	option = {
+		name = OK
+		remove_country_modifier = economy_hard
+		add_country_modifier = { name = economy_timer duration = -1 }
+		add_country_modifier = { name = economy_very_hard duration = -1 }
+	}
+	
+}
+
