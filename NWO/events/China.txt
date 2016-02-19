@@ -294,7 +294,7 @@ country_event = {
 		tag = USA
 		KMT = { 
 			exists = yes
-			capital_scope  = { province_id = 1485 } # fed to Taiwan
+			capital_scope  = { province_id = 1485 } # fled to Taiwan
 			is_greater_power = no
 			part_of_sphere = no
 		}
@@ -2839,7 +2839,8 @@ country_event = {
 
   trigger = {
     tag = KMT
-	year = 1945 NOT = { year = 1959 }
+	year = 2000
+	war = no
     has_global_flag = CHI_won_civil_war
   }
 
@@ -2867,7 +2868,6 @@ country_event = {
   trigger = {
     tag = KMT
 	year = 1954 NOT = { year = 1990 }
-	government = democracy
   }
 
   mean_time_to_happen = { months = 2 }
@@ -2895,7 +2895,6 @@ country_event = {
   trigger = {
     tag = KMT
 	year = 1959 NOT = { year = 1990 }
-	government = democracy
   }
 
   mean_time_to_happen = { months = 2 }
@@ -2923,7 +2922,6 @@ country_event = {
   trigger = {
     tag = KMT
 	year = 1954 NOT = { year = 1990 }
-	NOT = { government = democracy }
   }
 
   mean_time_to_happen = { months = 8  }
