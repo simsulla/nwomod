@@ -513,11 +513,11 @@ diplomacy = {
 	LIBERATE_STATE_RELATION_INCREASE = 50,
 	DISHONORED_CALLALLY_PRESTIGE_PENALTY = -1,
 	BASE_TRUCE_MONTHS = 60,
-	MAX_INFLUENCE = 100,
+	MAX_INFLUENCE = 101,
 	WARSUBSIDIES_PERCENT = 1.00, -- TODO How many percent of imports you are going to pay each day(mil. constructions and mil. maintainence)
-	NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.60, -- Bonus to neighbouring countries when influencing
-	SPHERE_NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.3, -- Bonus to countries in your sphere neighbouring when influencing
-	OTHER_CONTINENT_BONUS_INFLUENCE_PERCENT = -0.1, -- TODO Bonus to neighbouring countries when influencing
+	NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.20, -- Bonus to neighbouring countries when influencing
+	SPHERE_NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.40, -- Bonus to countries in your sphere neighbouring when influencing
+	OTHER_CONTINENT_BONUS_INFLUENCE_PERCENT = 0.0, -- TODO Bonus to neighbouring countries when influencing
 	PUPPET_BONUS_INFLUENCE_PERCENT = 1.0, -- bonus if they are our puppet
 	
 	-- effects of manually releasing a nation
