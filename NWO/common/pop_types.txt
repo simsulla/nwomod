@@ -516,12 +516,12 @@ conversion_chance = { # 1.0
 	}	
 
 	group = {
-		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { religious_policy = pro_atheism } }
-		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { religious_policy = secularized } }
-		modifier = { factor = 0.4 NOT = { has_pop_religion = secularism } country = { government = proletarian_dictatorship } }
+		modifier = { factor = 0.1 NOT = { has_pop_religion = secularism } country = { religious_policy = secularized } }
+		modifier = { factor = 0.2 NOT = { has_pop_religion = secularism } country = { religious_policy = pro_atheism } }
+		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { government = proletarian_dictatorship } }
 	}
 
-	modifier = { factor = 0.5 NOT = { has_pop_religion = secularism } culture = THIS }
+	modifier = { factor = 0.2 NOT = { has_pop_religion = secularism } culture = THIS }
 
 	modifier = { factor = -2 country = { religious_policy = moralism } }
 	modifier = { factor = -2 OR = { has_pop_religion = jewish has_pop_religion = mennonite has_pop_religion = secularism } }

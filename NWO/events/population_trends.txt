@@ -21,12 +21,17 @@ country_event = { # Demographic Transition
 			has_province_modifier = demographic_transition 
 			OR = { 
 				AND = { continent = europe year = 1890 }
-				AND = { OR = { is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
+				AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
+				AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1960 }
 				AND = { OR = { continent = north_america continent = south_america } year = 1970 }
-				AND = { continent = asia year = 1960 }
+				AND = { continent = asia year = 1950 is_core = JAP }
+				AND = { continent = asia year = 1970 owner = { government = proletarian_dictatorship NOT = { pop_majority_religion = sunni } } }
+				AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } year = 1980 }
 				AND = { continent = oceania year = 1980 }
-				AND = { continent = mena year = 1990 }
-				AND = { continent = africa year = 2000 }
+				AND = { continent = mena is_core = TUR year = 1980 }
+				AND = { continent = asia year = 2000 }
+				AND = { continent = mena year = 2000 }
+				AND = { continent = africa year = 2010 }
 			}
 		}
 	}
@@ -46,16 +51,22 @@ country_event = { # Demographic Transition
 				has_province_modifier = demographic_transition 
 				OR = { 
 					AND = { continent = europe year = 1890 }
-					AND = { OR = { is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
+					AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
+					AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1960 }
 					AND = { OR = { continent = north_america continent = south_america } year = 1970 }
-					AND = { continent = asia year = 1960 }
+					AND = { continent = asia year = 1950 is_core = JAP }
+					AND = { continent = asia year = 1970 owner = { government = proletarian_dictatorship NOT = { pop_majority_religion = sunni } } }
+					AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } year = 1980 }
 					AND = { continent = oceania year = 1980 }
-					AND = { continent = mena year = 1990 }
-					AND = { continent = africa year = 2000 }
+					AND = { continent = mena is_core = TUR year = 1980 }
+					AND = { continent = asia year = 2000 }
+					AND = { continent = mena year = 2000 }
+					AND = { continent = africa year = 2010 }
 				}
 			}
 			remove_province_modifier = demographic_transition 
 		}
+		remove_country_modifier = fertility_timer # triggers Total Fertility Rate
 	}
 }
 
@@ -84,7 +95,16 @@ country_event = { # Demographic Transition - Initial setup
 				OR = {
 					continent = mena
 					continent = africa
-					NOT = { OR = { year = 1992 continent = europe is_core = USA is_core = CAN is_core = AST is_core = NZL } }
+					AND = { NOT = { year = 1992 } continent = asia }
+					AND = { NOT = { year = 1992 } continent = oceania }
+					AND = { 
+						NOT = { year = 1992 } 
+						OR = { continent = north_america continent = south_america } 
+						NOT = { 
+							is_primary_culture = yes 
+							OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } 
+						}
+					}
 				}
 			}
 			add_province_modifier = {
@@ -130,37 +150,48 @@ country_event = { # Total Fertility Rate
 			add_province_modifier = { name = family_values duration = 3600 } # 8 +40%
 		}
 		any_owned = {
-			limit = { literacy = 0.1 NOT = { literacy = 0.4 } is_state_religion = no has_province_modifier = demographic_transition }
+			limit = { literacy = 0.1 NOT = { literacy = 0.2 } is_state_religion = no has_province_modifier = demographic_transition }
 			add_province_modifier = { name = family_values duration = 4900 } # 7 +35%
 		}
 		any_owned = {
-			limit = { literacy = 0.4 is_state_religion = no has_province_modifier = demographic_transition }
+			limit = { literacy = 0.2 is_state_religion = no has_province_modifier = demographic_transition }
+			remove_province_modifier = family_values
 			add_province_modifier = { name = total_fertility_rate duration = 7000 } # 10 +25%
 		}
 
 		any_owned = {
 			limit = { NOT = { literacy = 0.02 } OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } } 
+			remove_province_modifier = family_values
+			remove_province_modifier = total_fertility_rate
 			add_province_modifier = { name = total_fertility_rate duration = 7000 } # 10 +25%
 		}
 		any_owned = {
 			limit = { literacy = 0.02 NOT = { literacy = 0.05 } OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
+			remove_province_modifier = family_values
+			remove_province_modifier = total_fertility_rate
 			add_province_modifier = { name = total_fertility_rate duration = 4200 } # 6 +15%
 		}
 		any_owned = {
-			limit = { literacy = 0.05 NOT = { literacy = 0.2 } OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
+			limit = { literacy = 0.05 NOT = { literacy = 0.1 } OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
+			remove_province_modifier = family_values
+			remove_province_modifier = total_fertility_rate
 			add_province_modifier = { name = total_fertility_rate duration = 2800 } # 4 +10%
 		}
 		any_owned = {
-			limit = { literacy = 0.1 NOT = { literacy = 0.4 } OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
+			limit = { literacy = 0.1 NOT = { literacy = 0.2 } OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
+			remove_province_modifier = family_values
+			remove_province_modifier = total_fertility_rate
 			add_province_modifier = { name = total_fertility_rate duration = 1400 } # 2 5%
 		}
 		any_owned = {
-			limit = { literacy = 0.4 OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
+			limit = { literacy = 0.2 OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
+			remove_province_modifier = family_values
+			remove_province_modifier = total_fertility_rate
 			add_province_modifier = { name = self_values duration = 1400 } # 2 -5%
 		}
 		add_country_modifier = { 
 			name = fertility_timer 
-			duration = 3665 
+			duration = 7500 
 	    }
 		
 	}
