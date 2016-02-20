@@ -65,14 +65,14 @@ country_event = {
 	relation = { who = UAR value = -100 } 
 	any_pop = { militancy = -0.2 consciousness = -0.1 }
 	add_country_modifier = { name = reject_uar duration = 3500 }
-	ai_chance = { factor = 0.99 modifier = { government = nationalist_dictatorship factor = 0 } }
+	ai_chance = { factor = 0.9 modifier = { OR = { year = 1975 NOT = { government = nationalist_dictatorship } } factor = 0 } }
   }
 
   option = {
     name = EVT_8218004_B
 	relation = { who = UAR value = 200 } 
 	UAR = { country_event = 8218005 }
-	ai_chance = { factor = 0.01 modifier = { government = nationalist_dictatorship factor = 100 } }
+	ai_chance = { factor = 0.1 modifier = { government = nationalist_dictatorship factor = 10 } }
   }
 }
 country_event = {
@@ -100,15 +100,15 @@ country_event = {
     name = EVT_8218007_A
 	relation = { who = EGY value = 200 } 
 	UAR = { country_event = 8218008 }
-	ai_chance = { factor = 0.01 modifier = { government = presidential_dictatorship factor = 100 } }
+	ai_chance = { factor = 0.1 modifier = { government = presidential_dictatorship factor = 100 } }
   }
 
   option = {
     name = EVT_8218007_B
-	relation = { who = EGY value = -100 } 
+	relation = { who = UAR value = -100 } 
 	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	add_country_modifier = { name = reject_uar duration = 3500 }
-	ai_chance = { factor = 0.99 modifier = { government = presidential_dictatorship factor = 0 } }
+	ai_chance = { factor = 0.9 modifier = { NOT = { government = presidential_dictatorship } factor = 0 } }
   }
 }
 country_event = {
@@ -207,7 +207,7 @@ country_event = {
     name = EVT_8218021_A
 	relation = { who = UAR value = 200 } 
 	UAR = {country_event = 8218022  }
-	ai_chance = { factor = 0.01 modifier = { primary_culture = sunni_arab government = nationalist_dictatorship factor = 100 } }
+	ai_chance = { factor = 0.1 modifier = { OR = { primary_culture = sunni_arab government = presidential_dictatorship } factor = 10 } }
   }
 
   option = {
@@ -215,7 +215,7 @@ country_event = {
 	relation = { who = UAR value = -100 } 
 	any_pop = { militancy = -0.5 consciousness = -1 }
 	add_country_modifier = { name = reject_uar duration = 3500 }
-	ai_chance = { factor = 0.99 modifier = { government = nationalist_dictatorship factor = 0 } }
+	ai_chance = { factor = 0.9 modifier = { primary_culture = sunni_arab factor = 0 } }
   }
 }
 country_event = {
