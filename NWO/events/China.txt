@@ -1240,7 +1240,7 @@ country_event = {
   trigger = {
     tag = RUS
     year = 1946 NOT = { year = 1950 }
-    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
     
     CHI = { war_with = KMT }
 	exists = CHI
@@ -1356,7 +1356,7 @@ country_event = {
     tag = USA
     year = 1946 NOT = { year = 1947 }
     CHI = { war_with = KMT }
-    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
     
   }
 
@@ -1452,7 +1452,7 @@ country_event = {
     tag = CHI
     year = 1946 NOT = { year = 1947 }
     CHI = { war_with = KMT }
-    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
   }
   
   mean_time_to_happen = { days = 5 }
@@ -1479,7 +1479,7 @@ country_event = {
     tag = KMT
     year = 1946 NOT = { year = 1947 }
     KMT = { war_with = CHI }
-    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
   }
   
   mean_time_to_happen = { days = 5 }
@@ -1637,7 +1637,7 @@ country_event = {
   option = {
     name = "EVT_8200026_A"
 	inherit = CHI 
-	set_global_flag = CHI_won_civil_war
+	set_global_flag = KMT_won_civil_war
 	capital = 2221 
 	any_pop = { militancy = -3.0 consciousness = -1 }
   }
@@ -1665,8 +1665,8 @@ country_event = {
     tag = CHI
     year = 1947 NOT = { year = 1963 }
     NOT = { has_global_flag = chinese_unity_govt }
-    NOT = { has_global_flag = CHI_won_civil_war }
-	NOT = { has_global_flag = CHC_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
+	NOT = { has_global_flag = CHI_won_civil_war }
     
   }
 
@@ -1687,8 +1687,8 @@ country_event = {
     tag = KMT
     year = 1947 NOT = { year = 1963 }
     NOT = { has_global_flag = chinese_unity_govt }
-    NOT = { has_global_flag = CHI_won_civil_war }
-	NOT = { has_global_flag = CHC_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
+	NOT = { has_global_flag = CHI_won_civil_war }
     
   }
 
@@ -1729,7 +1729,7 @@ country_event = {
   trigger = {
     tag = KMT
     year = 1947 NOT = { year = 1949 }
-    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
     
     war_with = CHI
   }
@@ -1751,7 +1751,7 @@ country_event = {
   trigger = {
     tag = CHI
     year = 1946 NOT = { year = 1949 }
-    NOT = { has_global_flag = CHC_won_civil_war }
+    NOT = { has_global_flag = CHI_won_civil_war }
     war_with = KMT
   }
 
@@ -1784,8 +1784,8 @@ country_event = {
   trigger = {
     tag = KMT
     year = 1947 NOT = { year = 1949 }
+    NOT = { has_global_flag = KMT_won_civil_war }
     NOT = { has_global_flag = CHI_won_civil_war }
-    NOT = { has_global_flag = CHC_won_civil_war }
     war_with = CHI
   }
 
@@ -1807,8 +1807,8 @@ country_event = {
   trigger = {
     tag = USA
     year = 1946 NOT = { year = 1990 }
+    NOT = { has_global_flag = KMT_won_civil_war }
     NOT = { has_global_flag = CHI_won_civil_war }
-    NOT = { has_global_flag = CHC_won_civil_war }
     KMT = { war_with = CHI }
 	money = 120000
   }
@@ -1906,7 +1906,7 @@ province_event = {
 	owned_by = KMT
     controlled_by = KMT
     year = 1946 NOT = { year = 1952 }
-    NOT = { has_global_flag = CHC_won_civil_war }
+    NOT = { has_global_flag = CHI_won_civil_war }
     owner = { war = yes  war_with = CHI }
 	has_national_minority = no
 	NOT = { country_units_in_province = KMT }
@@ -1937,7 +1937,7 @@ country_event = {
     tag = KMT
     year = 1948 NOT = { year = 1963 }
     NOT = { exists = CHI }
-    NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
     
 	war = no
   }
@@ -1948,7 +1948,7 @@ country_event = {
     name = "EVT_8200100_A"
 	any_pop = { militancy = -0.5 consciousness = 1 }
 	capital = 2221 
-	set_global_flag = CHI_won_civil_war 
+	set_global_flag = KMT_won_civil_war 
   }
 }
 country_event = {
@@ -1982,7 +1982,7 @@ country_event = {
 
   option = {
     name = "EVT_8200103_A"
-	set_global_flag = CHC_won_civil_war 
+	set_global_flag = CHI_won_civil_war 
 	capital = 1612 
 	any_pop = { militancy = -1.0 consciousness = 1  }
 	RUS  = { country_event = 8225000 } 
@@ -1997,7 +1997,7 @@ country_event = {
 
   option = {
     name = "EVT_8200104_A"
-	set_global_flag = CHC_won_civil_war 
+	set_global_flag = CHI_won_civil_war 
 	any_pop = { militancy = -2.0 consciousness = 1 }
   }
 
@@ -2013,8 +2013,8 @@ country_event = {
     year = 1950 NOT = { year = 1963 }
 	war = no
 	OR = { 
+		has_global_flag = KMT_won_civil_war
 		has_global_flag = CHI_won_civil_war
-		has_global_flag = CHC_won_civil_war
 	}
 	any_neighbor_country = { 
 		war = no
@@ -2075,7 +2075,7 @@ country_event = {
   trigger = {
     tag = CHI
     NOT = { year = 1963 }
-    has_global_flag = CHC_won_civil_war
+    has_global_flag = CHI_won_civil_war
     war = no
   }
 
@@ -2149,8 +2149,8 @@ country_event = {
 	war = no
 	exists = CHI
 	exists = KMT
+    NOT = { has_global_flag = KMT_won_civil_war }
     NOT = { has_global_flag = CHI_won_civil_war }
-    NOT = { has_global_flag = CHC_won_civil_war }
 	NOT = { year = 1992 }
 	NOT = { casus_belli = KMT }
   }
@@ -2174,8 +2174,8 @@ country_event = {
 	war = no
 	exists = CHI
 	exists = KMT
-    NOT = { has_global_flag = CHC_won_civil_war }
     NOT = { has_global_flag = CHI_won_civil_war }
+    NOT = { has_global_flag = KMT_won_civil_war }
 	NOT = { year = 1992 }
 	NOT = { casus_belli = KMT }
   }
@@ -2200,8 +2200,8 @@ country_event = {
     NOT = { year = 1963 }
 	war = no
     OR = { 
+      has_global_flag = KMT_won_civil_war
       has_global_flag = CHI_won_civil_war
-      has_global_flag = CHC_won_civil_war
     }
 	has_country_flag = block_army_limiting
   }
@@ -2431,7 +2431,7 @@ country_event = {
   trigger = {
     tag = KMT
 	year = 1948 NOT = { year = 1963 }
-    has_global_flag = CHC_won_civil_war
+    has_global_flag = CHI_won_civil_war
   }
 
   mean_time_to_happen = { months = 2 }
@@ -2458,7 +2458,7 @@ country_event = {
   trigger = {
     tag = KMT
 	year = 1954 NOT = { year = 1990 }
-    has_global_flag = CHI_won_civil_war
+    has_global_flag = KMT_won_civil_war
 	war = no
 	RUS = { war = no }
 	USA = { war = no }
@@ -2583,7 +2583,7 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1954 NOT = { year = 1990 }
-    has_global_flag = CHI_won_civil_war
+    has_global_flag = KMT_won_civil_war
     KMT = { alliance_with = RUS }
   }
 
@@ -2663,7 +2663,7 @@ country_event = {
 	government = proletarian_dictatorship
 	year = 1945 NOT = { year = 1959 }
     exists = MGL
-    has_global_flag = CHI_won_civil_war
+    has_global_flag = KMT_won_civil_war
     MGL = { ai = yes }
     MGL = { vassal_of = RUS }
     KMT = { alliance_with = USA }
@@ -2763,9 +2763,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT tag = CHI }
 	year = 1945 NOT = { year = 1990 }
-    has_global_flag = CHC_won_civil_war
+    has_global_flag = CHI_won_civil_war
     political_reform_want = 0.3
     ruling_party_ideology = populist
   }
@@ -2813,9 +2813,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT tag = CHI }
 	year = 1954 NOT = { year = 1959 }
-    has_global_flag = CHI_won_civil_war
+    has_global_flag = KMT_won_civil_war
   }
 
   mean_time_to_happen = { months = 2 }
@@ -2841,10 +2841,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 2000
 	war = no
-    has_global_flag = CHI_won_civil_war
 	NOT = { government = democracy }
   }
 
@@ -2870,7 +2869,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1954 NOT = { year = 1990 }
   }
 
@@ -2897,7 +2896,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1959 NOT = { year = 1990 }
   }
 
@@ -2924,7 +2923,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1954 NOT = { year = 1990 }
   }
 
@@ -2951,7 +2950,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1960 NOT = { year = 1990 }
 	war = no
   }
@@ -2970,10 +2969,15 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1945 NOT = { year = 1990 }
-	owns = 1369 # Hanoi
-	NOT = { exists = DAI }
+	OR = { 
+		is_our_vassal = DAI 
+		AND = { 
+			owns = 1369 # Hanoi
+			NOT = { exists = DAI }
+		}
+	}
   }
 
   mean_time_to_happen = { months = 3  }
@@ -2999,11 +3003,11 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1946 NOT = { year = 1990 }
 	money = 1100000
     NOT = { has_country_flag  = loans_repaid }
-    has_global_flag = CHI_won_civil_war
+	war = no
   }
 
   mean_time_to_happen = { months = 6  }
@@ -3032,7 +3036,7 @@ country_event = {
   option = {
     name = EVT_8002952_A
 	treasury = 1000000 
-	relation = { who = KMT value = 100 } 
+	relation = { who = KMT value = 100 }
   }
 }
 country_event = {
@@ -3043,10 +3047,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1946 NOT = { year = 1959 }
     has_global_flag = event_fired_8002948
-    has_global_flag = CHI_won_civil_war
+    war = no
   }
 
   mean_time_to_happen = { months = 3  }
@@ -3071,9 +3075,8 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = KMT
+    OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1964 NOT = { year = 1990 }
-    has_global_flag = CHI_won_civil_war
   }
 
   mean_time_to_happen = { months = 3  }
@@ -3128,7 +3131,7 @@ country_event = {
 	year = 1944 NOT = { year = 1990 }
     NOT = { has_global_flag = CHI_in_UNSC }
     exists = CHI
-    has_global_flag = CHC_won_civil_war
+    has_global_flag = CHI_won_civil_war
   }
 
   mean_time_to_happen = { months = 1  }
@@ -3171,7 +3174,7 @@ country_event = {
     year = 1949 NOT = { year = 1950 }
     NOT = { has_global_flag = CHI_in_UNSC }
     exists = CHI
-    has_global_flag = CHC_won_civil_war
+    has_global_flag = CHI_won_civil_war
   }
 
   mean_time_to_happen = { months = 1  }
