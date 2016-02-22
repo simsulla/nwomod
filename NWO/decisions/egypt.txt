@@ -76,6 +76,8 @@ political_decisions = {
 		potential = {
 			tag = UAR
 			exists = yes
+			NOT = { year = 1970 }
+			NOT = { has_global_flag = end_of_uar }
 			OR = { 
 				SYR = { war = no exists = SYR is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } }  
 				IRQ = { war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } }  
