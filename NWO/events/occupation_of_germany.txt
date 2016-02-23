@@ -8,11 +8,11 @@ country_event = {
   trigger = {
 	OR = { government = democracy government = hms_government }
 	year = 1960 NOT = { year = 1963 }
-    
-    GER = { any_core = { owned_by = THIS } } 
+    owns = 549 # Berlin
+	war = no
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = "EVT_8204000_A"
@@ -36,12 +36,13 @@ country_event = {
 
   trigger = {
 	government = proletarian_dictatorship
+	tag = RUS
 	year = 1960 NOT = { year = 1963 }
-    
-    GER = { any_core = { owned_by = THIS } }
+    owns = 551 # East Berln
+	war = no
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 1 }
 
   option = {
     name = "EVT_8204001_A"
@@ -541,6 +542,7 @@ country_event = {
     has_global_flag = divided_berlin
 	NOT = { exists = GER }
 	NOT = { exists = DDR }
+	war = no
   }
 
   option = {
