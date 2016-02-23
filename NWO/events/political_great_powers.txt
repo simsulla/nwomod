@@ -94,9 +94,9 @@ country_event = { # Country is sphered change government
 	option = {
 		name = EVT_19001_B
 		sphere_owner = { 
-			diplomatic_influence = { who = THIS value = -50 } 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
 			add_casus_belli = { target = THIS type = install_democracy months = 12  }
-			relation = { who = THIS value = -25 } 
 		}
 		ai_chance = { factor = 0 }
 	}
@@ -124,15 +124,15 @@ country_event = {
 	option = {
 		name = EVT_19002_A
 		sphere_owner = { country_event = 19003 }
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 100 }
 	}
 
 	option = {
 		name = EVT_19002_B
 		sphere_owner = { 
-			diplomatic_influence = { who = THIS value = -50 } 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
 			add_casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
-			relation = { who = THIS value = -25 } 
 		}
 		ai_chance = { factor = 0 }
 	}
@@ -167,9 +167,9 @@ country_event = {
 	option = {
 		name = EVT_19002_B
 		sphere_owner = { 
-			diplomatic_influence = { who = THIS value = -50 } 
-			add_casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
-			relation = { who = THIS value = -25 } 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
+			add_casus_belli = { target = THIS type = install_authoritarian_regime months = 12  }
 		}
 		ai_chance = { factor = 0 }
 	}
@@ -270,9 +270,9 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19006_A
 		sphere_owner = { 
-			diplomatic_influence = { who = THIS value = -50 } 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
 			casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
-			relation = { who = THIS value = -25 } 
 		}
 		ai_chance = { factor = 0.5  }
 	}
@@ -294,9 +294,9 @@ country_event = { # Demand install presidential dictatorship
 	option = {
 		name = EVT_19006_A
 		sphere_owner = { 
-			diplomatic_influence = { who = THIS value = -50 } 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
 			casus_belli = { target = THIS type = install_authoritarian_regime months = 12  }
-			relation = { who = THIS value = -25 } 
 		}
 		ai_chance = { factor = 0.5  }
 	}
@@ -318,9 +318,9 @@ country_event = { # Demand install democracy
 	option = {
 		name = EVT_19007_A
 		sphere_owner = { 
-			diplomatic_influence = { who = THIS value = -50 } 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
 			casus_belli = { target = THIS type = install_democracy months = 12  }
-			relation = { who = THIS value = -25 } 
 		}		
 		ai_chance = { factor = 0.5 }
 	}
