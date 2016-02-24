@@ -204,6 +204,7 @@ country_event = { #The New Regime- traditionalist
 			limit = { 
 				is_sphere_leader_of = THIS
 				NOT = { is_our_vassal = THIS }
+				THIS = { NOT = { has_country_flag = soi_demand_install } }
 			}
 			diplomatic_influence = {
 				who = THIS
@@ -218,7 +219,7 @@ country_event = { #The New Regime- traditionalist
 			country_event = 800056
 		}
 		random_country = {
-			limit = { is_our_vassal = THIS }
+			limit = { is_our_vassal = THIS THIS = { NOT = { has_country_flag = soi_demand_install } } }
 			release_vassal = THIS
 			leave_alliance = THIS
 			diplomatic_influence = {
@@ -377,6 +378,7 @@ country_event = { #The New Regime- traditionalist
 			relation = { who = THIS value = -100 }
 			leave_alliance = THIS
 		}
+		clr_country_flag = soi_demand_install
 	}
 }
 country_event = { # The New Regime - Communist
@@ -440,6 +442,7 @@ country_event = { # The New Regime - Communist
 			limit = { 
 				is_sphere_leader_of = THIS
 				NOT = { is_our_vassal = THIS }
+				THIS = { NOT = { has_country_flag = soi_demand_install } }
 			}
 			diplomatic_influence = {
 				who = THIS
@@ -454,7 +457,7 @@ country_event = { # The New Regime - Communist
 			country_event = 800056
 		}
 		random_country = {
-			limit = { is_our_vassal = THIS }
+			limit = { is_our_vassal = THIS THIS = { NOT = { has_country_flag = soi_demand_install } } }
 			release_vassal = THIS
 			leave_alliance = THIS
 			diplomatic_influence = {
@@ -565,6 +568,7 @@ country_event = { # The New Regime - Communist
 			relation = { who = THIS value = -100 }
 			leave_alliance = THIS
 		}
+		clr_country_flag = soi_demand_install
 	}
 }
 country_event = { # The New Regime - Democracy
@@ -623,6 +627,7 @@ country_event = { # The New Regime - Democracy
 			limit = { 
 				is_sphere_leader_of = THIS
 				NOT = { is_our_vassal = THIS }
+				THIS = { NOT = { has_country_flag = soi_demand_install } }
 			}
 			diplomatic_influence = {
 				who = THIS
@@ -637,7 +642,7 @@ country_event = { # The New Regime - Democracy
 			country_event = 800056
 		}
 		random_country = {
-			limit = { is_our_vassal = THIS }
+			limit = { is_our_vassal = THIS THIS = { NOT = { has_country_flag = soi_demand_install } } }
 			release_vassal = THIS
 			leave_alliance = THIS
 			diplomatic_influence = {
@@ -785,6 +790,7 @@ country_event = { # The New Regime - Democracy
 			relation = { who = THIS value = -100 }
 			leave_alliance = THIS
 		}
+		clr_country_flag = soi_demand_install
 	}
 }
 country_event = { #The New Regime - populist or dictatorship
