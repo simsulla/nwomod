@@ -3,21 +3,20 @@ country_event = {
 	title = EVT_1014800_NAME
 	desc = EVT_1014800_DESC
 	picture = "isis"
-	is_triggered_only = yes # ISI
+	is_triggered_only = yes # county with ISI cores
 
 	option = {
 		name = EVT_1014800_A
-		release_vassal = ISI
+		any_owned = { limit = { is_core = ISI } secede_province = ISI }
+		all_core = { limit = { pop_majority_religion = sunni } add_core = ISI remove_province_modifier = salafi_movement }
 		casus_belli = {
 			target = ISI
 			type = acquire_core_state
 			months = 60
 		}
-		ISI = { 
-			war = {
-				target = THIS
-				attacker_goal = { casus_belli = conquest }
-			}
+		war = {
+			target = ISI
+			attacker_goal = { casus_belli = humiliate }
 		}
 	}
 }
