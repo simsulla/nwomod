@@ -170,11 +170,11 @@ country_event = { # Total Fertility Rate
 		}
 		any_owned = {
 			limit = { literacy = 0.05 NOT = { literacy = 0.1 } OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
-			add_province_modifier = { name = total_fertility_rate duration = 2800 } # 4 +10%
+			add_province_modifier = { name = total_fertility_rate duration = 2100 } # 3 +7.5%
 		}
 		any_owned = {
 			limit = { literacy = 0.1 NOT = { literacy = 0.2 } OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }
-			add_province_modifier = { name = total_fertility_rate duration = 1400 } # 2 5%
+			add_province_modifier = { name = total_fertility_rate duration = 700 } # 1 2.5%
 		}
 		any_owned = {
 			limit = { literacy = 0.2 OR = { is_state_religion = yes NOT = { has_province_modifier = demographic_transition } } }

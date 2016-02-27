@@ -504,7 +504,7 @@ assimilation_chance = { # 1
 
 #general conversion mtth, same for all pops
 conversion_chance = { # 1.0
-	factor = 1.0
+	factor = 0.5
 
 	group = {
 		modifier = { factor = 0.05 literacy = 0.1 }
@@ -516,9 +516,8 @@ conversion_chance = { # 1.0
 	}	
 
 	group = {
-		modifier = { factor = 0.1 NOT = { has_pop_religion = secularism } country = { religious_policy = secularized } }
 		modifier = { factor = 0.2 NOT = { has_pop_religion = secularism } country = { religious_policy = pro_atheism } }
-		modifier = { factor = 0.3 NOT = { has_pop_religion = secularism } country = { government = proletarian_dictatorship } }
+		modifier = { factor = 0.8 NOT = { has_pop_religion = secularism } country = { government = proletarian_dictatorship } }
 	}
 
 	modifier = { factor = 0.2 NOT = { has_pop_religion = secularism } culture = THIS }
