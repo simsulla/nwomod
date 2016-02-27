@@ -6,7 +6,7 @@ political_decisions = {
 	xio_ambition = {
 		picture = "xio_ambition"
 		potential = {
-			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
+			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
 			NOT = { has_country_flag = xio_ambition } 
 		}
 		allow = {
@@ -78,7 +78,7 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
+			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
 		}
 		allow = {
 			has_country_flag = xio_ambition
@@ -96,7 +96,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
+			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
 		}
 		allow = {
 			has_country_flag = xio_ambition
@@ -116,7 +116,7 @@ political_decisions = {
 		picture = "xio_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XIO } }
-			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
+			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
 		}
 		allow = {
 			has_country_flag = xio_ambition
@@ -136,7 +136,7 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
+			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
 		}
 		allow = {
 			has_country_flag = xio_ambition
@@ -160,7 +160,7 @@ political_decisions = {
 		picture = "xio_parlament"
 		potential = {
 			XIO = { exists = no }
-			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD }
+			OR = { tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
 		}
 		allow = {
 			has_country_flag = xio_ambition
