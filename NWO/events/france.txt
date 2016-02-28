@@ -20,6 +20,7 @@ country_event = { # Fall of the Fourth Republic
 	define_general = { name = "Charles de Gaulle" personality = energetic background = no_background }
 	election = yes
 	prestige = -10
+	set_country_flag = fifth_republic
 	ruling_party_ideology = conservative
 	country_event = 8005731
 	ai_chance = { factor = 100 }
@@ -102,25 +103,41 @@ country_event = { # Restore Unified France under the Fourth Republic
   
 }
 
-#2000 Concorde crash
-country_event = {
-	id = 8005733
-	title = "EVTNAME3"
-	desc= "EVTDESC3"
-	picture = "concorde"
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = FRA
-		year = 2000
-		month = 6
-	}
-	
-	option = {
-		name = "EVTOPTA3"
-		prestige = -5
-	}
+country_event = { # Common Programme of Socialists, Communists & MRG
+    id = 8005733
+    title = EVT_8005733_NAME
+    desc = EVT_8005733_DESC
+    picture = "common_programme"
+    fire_only_once = yes
+
+    trigger = {
+        tag = FRA
+        year =  1972
+        NOT = { year = 1990 }
+        government = democracy
+        # require a flag that the 5th Republic has been established
+		has_country_flag = fifth_republic # from event 8005730
+        OR = {
+            ruling_party_ideology = conservative
+            ruling_party_ideology = liberal
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = EVT_8005733_A
+        # make communists, socialists and left radicals more concious
+		any_pop = { 
+			limit = { 
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communists }
+			} 
+			consciousness = 0.4 
+		}
+    }
+
 }
 
 #1998 FIFA World Cup
@@ -145,6 +162,27 @@ country_event = {
 	option = {
 		name = "EVTOPTA4"
 		prestige = 10
+	}
+}
+
+#2000 Concorde crash
+country_event = {
+	id = 8005735
+	title = "EVTNAME3"
+	desc= "EVTDESC3"
+	picture = "concorde"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		year = 2000
+		month = 6
+	}
+	
+	option = {
+		name = "EVTOPTA3"
+		prestige = -5
 	}
 }
 
