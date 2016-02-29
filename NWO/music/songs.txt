@@ -5,12 +5,6 @@ song = {
 	}
 }
 song = {
-	name = "battlehymnoftherepublic.mp3"
-	chance = {
-		factor = 0
-	}
-}
-song = {
 	name = "buckinghampalace.mp3"
 	chance = {
 		factor = 0 #?
@@ -59,31 +53,7 @@ song = {
 	}
 }
 song = {
-	name = "jonnycomesmarchinghome.mp3"
-	chance = {
-		factor = 0
-	}
-}
-song = {
-	name = "lamentforthequeen_bonustrack.mp3"
-	chance = {
-		factor = 0
-	}
-}
-song = {
-	name = "marchingthroughgeorgia.mp3"
-	chance = {
-		factor = 0
-	}
-}
-song = {
 	name = "newworldanthem.mp3"
-	chance = {
-		factor = 0
-	}
-}
-song = {
-	name = "ohimagoodolrebel.mp3"
 	chance = {
 		factor = 0
 	}
@@ -267,8 +237,7 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-				any_core = {
-					owner = THIS
+				any_owned_province = {
 					controlled_by_rebels = yes
 				}
 			}
@@ -276,8 +245,7 @@ song = {
 
 		modifier = {
 			factor = 2
-			any_core = {
-				owner = THIS
+			any_owned_province = {
 				controlled_by_rebels = yes
 			}
 		}
@@ -323,30 +291,24 @@ song = {
 			factor = 0
 			NOT = {
 				war = yes
-				AND = {
-					any_greater_power = {
-						alliance_with = THIS
-						war = yes
-						war_with = any_greater_power
-					}
-					any_greater_power = {
-						war_with = THIS
-					}
+				any_greater_power = {
+					alliance_with = THIS
+					war = yes
+				}
+				any_greater_power = {
+					war_with = THIS
 				}
 			}
 		}
 		modifier = {
 			factor = 2
 			war = yes
-			AND = {
-				any_greater_power = {
-					alliance_with = THIS
-					war = yes
-					war_with = any_greater_power
-				}
-				any_greater_power = {
-					war_with = THIS
-				}
+			any_greater_power = {
+				alliance_with = THIS
+				war = yes
+			}
+			any_greater_power = {
+				war_with = THIS
 			}
 		}
 	}
@@ -360,30 +322,24 @@ song = {
 			factor = 0
 			NOT = {
 				war = yes
-				AND = {
-					any_greater_power = {
-						alliance_with = THIS
-						war = yes
-						war_with = any_greater_power
-					}
-					any_greater_power = {
-						war_with = THIS
-					}
+				any_greater_power = {
+					alliance_with = THIS
+					war = yes
+				}
+				any_greater_power = {
+					war_with = THIS
 				}
 			}
 		}
 		modifier = {
 			factor = 2
 			war = yes
-			AND = {
-				any_greater_power = {
-					alliance_with = THIS
-					war = yes
-					war_with = any_greater_power
-				}
-				any_greater_power = {
-					war_with = THIS
-				}
+			any_greater_power = {
+				alliance_with = THIS
+				war = yes
+			}
+			any_greater_power = {
+				war_with = THIS
 			}
 		}
 	}
@@ -832,7 +788,7 @@ song = {
 			war = yes
 			OR = {
 				has_country_modifier = task_nuke
-				any_province = {has_province_modifier = nuked}
+				any_owned_province = {has_province_modifier = nuked}
 			}
 		}
 		modifier = {
@@ -841,7 +797,7 @@ song = {
 		}
 		modifier = {
 			NOT = {has_country_modifier = task_nuke}
-			NOT = {any_province = {has_province_modifier = nuked}}
+			NOT = {any_owned_province = {has_province_modifier = nuked}}
 		}
 	}
 }
@@ -873,7 +829,7 @@ song = {
 		modifier = {
 			factor = 2
 			war = yes
-			any_country = {
+			any_neighbor_country = {
 				war_with = THIS
 				has_country_flag = nuclear_weapon_power
 			}
@@ -888,7 +844,7 @@ song = {
 			factor = 0
 			OR = {
 				NOT = {
-					any_country = {
+					any_neighbor_country = {
 						war_with = THIS
 						has_country_flag = nuclear_weapon_power
 					}
@@ -907,7 +863,7 @@ song = {
 	chance = {
 		modifier = {
 			factor = 2
-			any_country = {
+			any_neighbor_country = {
 				has_country_flag = nuclear_weapon_power
 				NOT = { relation = { who = THIS value = -150 } }
 			}
@@ -915,7 +871,7 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-				any_country = {
+				any_neighbor_country = {
 					has_country_flag = nuclear_weapon_power
 					NOT = { relation = { who = THIS value = -150 } }
 				}
@@ -946,7 +902,7 @@ song = {
 	chance = {
 		modifier = {
 			factor = 2
-			any_country = {
+			any_neighbor_country = {
 				has_country_flag = nuclear_weapon_power
 				NOT = { relation = { who = THIS value = -100 } }
 			}
@@ -954,7 +910,7 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-				any_country = {
+				any_neighbor_country = {
 					has_country_flag = nuclear_weapon_power
 					NOT = { relation = { who = THIS value = -100 } }
 				}
