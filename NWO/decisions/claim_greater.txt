@@ -1649,14 +1649,14 @@ political_decisions = {
 	claim_greater_taiwan = {
 			picture = "claim_greater_taiwan"
 			potential = {
-					tag = KMT
+					OR = { tag = CHI tag = KMT }
 					NOT = { has_country_flag = claim_greater_taiwan }
 					NOT = { has_country_flag = lesser_taiwan }
 					capital_scope = { province_id = 2221 } # Nanjing
 			}
 
 			allow = {
-				   tag = KMT
+					OR = { tag = CHI tag = KMT }
 					part_of_sphere = no
 					has_unclaimed_cores = no
 					NOT = {	
@@ -1677,34 +1677,34 @@ political_decisions = {
 					badboy = 12
 					set_country_flag = claim_greater_taiwan
 					1341 = { # Putao
-							add_core = KMT
+							add_core = THIS
 					}
 					1208 = { # Khorug
-							add_core = KMT
+							add_core = THIS
 					}
 					2945 = { #okiwawa 
-							add_core = KMT
+							add_core = THIS
 					}
 					2576 = { #spatly 
-							add_core = KMT
+							add_core = THIS
 					}
-					1467 = { add_core = KMT }
-					2207 = { add_core = KMT }
-					1465 = { add_core = KMT }
-					1466 = { add_core = KMT }
-					1468 = { add_core = KMT }
-					1478 = { add_core = KMT }
-					2608 = { add_core = KMT }
-					2679 = { add_core = KMT }
-					2678 = { add_core = KMT }
-					1469 = { add_core = KMT } #Kyzyl
+					1467 = { add_core = THIS }
+					2207 = { add_core = THIS }
+					1465 = { add_core = THIS }
+					1466 = { add_core = THIS }
+					1468 = { add_core = THIS }
+					1478 = { add_core = THIS }
+					2608 = { add_core = THIS }
+					2679 = { add_core = THIS }
+					2678 = { add_core = THIS }
+					1469 = { add_core = THIS } #Kyzyl
 			}
 
 	}
 	abandon_claim_greater_taiwan = {
 			picture = "claim_greater_taiwan"
 			potential = {
-					tag = KMT
+					OR = { tag = CHI tag = KMT }
 					has_country_flag = claim_greater_taiwan
 					OR = {
 							government = democracy
@@ -1731,7 +1731,7 @@ political_decisions = {
 					clr_country_flag = claim_greater_taiwan
 					all_core = { 
 							limit = { NOT = { owned_by = THIS } }
-							remove_core = KMT
+							remove_core = THIS
 					}
 			}
 
