@@ -281,6 +281,28 @@ socialist_contemporary_science = {
 		shared_prestige = 25 
 	}
 }
+# pstn_network
+satellite = {
+        limit = { pstn_network = 1 }
+        chance = {
+                base = 2
+                modifier = {
+                    factor = 12
+					OR = { 
+						tag = USA 
+						tag = RUS 
+					} 
+                }
+                modifier = {
+                        factor = 2
+                        is_greater_power = yes
+                }
+        }
+        effect = {
+            permanent_prestige = 2
+			education_efficiency = 0.25
+        }
+}
 #strd_internet
 neokantian_strd_internet = {
 	limit = { strd_internet = 1 }
@@ -629,6 +651,90 @@ the_atomic_bomb = {
                 faction = separatist_rebels
                 value = 0.50
             }
+        }
+}
+man_in_orbit = {
+        limit = { cold_war = 1 }
+        chance = {
+                base = 2
+                modifier = {
+                    factor = 12
+					OR = { 
+						tag = USA 
+						tag = RUS 
+					} 
+                }
+                modifier = {
+                        factor = 2
+                        is_greater_power = yes
+                }
+        }
+        effect = {
+            permanent_prestige = 2
+			education_efficiency = 0.25
+        }
+}
+spacewalk = {
+        limit = { cold_war = 1 }
+        chance = {
+                base = 2
+                modifier = {
+                    factor = 12
+					OR = { 
+						tag = USA 
+						tag = RUS 
+					} 
+                }
+                modifier = {
+                        factor = 2
+                        is_greater_power = yes
+                }
+        }
+        effect = {
+            permanent_prestige = 2
+			education_efficiency = 0.25
+        }
+}
+space_docking = {
+        limit = { detente = 1 }
+        chance = {
+                base = 2
+                modifier = {
+                    factor = 12
+					OR = { 
+						tag = USA 
+						tag = RUS 
+					} 
+                }
+                modifier = {
+                        factor = 2
+                        is_greater_power = yes
+                }
+        }
+        effect = {
+            permanent_prestige = 2
+			education_efficiency = 0.25
+        }
+}
+space_station = {
+        limit = { detente = 1 }
+        chance = {
+                base = 2
+                modifier = {
+                    factor = 12
+					OR = { 
+						tag = USA 
+						tag = RUS 
+					} 
+                }
+                modifier = {
+                        factor = 2
+                        is_greater_power = yes
+                }
+        }
+        effect = {
+            permanent_prestige = 2
+			education_efficiency = 0.25
         }
 }
 
