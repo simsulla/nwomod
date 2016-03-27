@@ -51,7 +51,17 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 10
-			release_vassal = PAL
+			random_country = { 
+				limit = { 
+					NOT = { exists = PAL } 
+					tag = THIS 
+				} 
+				release_vassal = PAL
+			}
+			any_owned = {
+				limit = { is_core = PAL }
+				secede_province = PAL
+			}
 		}
 		ai_will_do = { factor = 1 modifier = { factor = 0 exists = PAL owns = 917 } }
 	}
