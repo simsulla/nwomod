@@ -113,14 +113,13 @@ party_issues = {
 	}
 	religious_policy = {
 		pro_atheism = {
-			global_population_growth = -0.0005
+			global_population_growth = -0.001
 		}
 		secularized = {
-			global_population_growth = -0.0005
-			#no effect
+			global_population_growth = -0.001
 		}
 		moralism = {
-			global_population_growth = 0.0005
+			#no effect
 		}
 	}
 	citizenship_policy = {
@@ -405,7 +404,7 @@ political_reforms = {
 			mobilisation_size = 0.01
 			mobilisation_economy_impact = 0.5
 			global_pop_militancy_modifier = -0.02
-			global_population_growth = -0.001
+			global_population_growth = -0.002
 			allow = { year = 1968 } # seventies_subcultures = 1
 		}
 		lgbt_promoted = { # no_draft
@@ -609,25 +608,23 @@ social_reforms = {
 			factory_throughput = 0.05
 		}
 		limited_child_care = { # child_labor_restricted
-			global_population_growth = 0.002
 			factory_throughput = -0.05
 			global_immigrant_attract = 0.05
 			tax_efficiency = -0.02
 		}
 		supported_child_care = { # child_labor_illegal
-			global_population_growth = 0.004
 			factory_throughput = -0.05
 			global_immigrant_attract = 0.1
 			tax_efficiency = -0.04
 		}
 		parental_leave_child_care = { # 
-			global_population_growth = 0.006
+			global_population_growth = 0.001
 			factory_throughput = -0.10
 			global_immigrant_attract = 0.1
 			tax_efficiency = -0.10
 		}
 		state_provided_child_care = { # 
-			global_population_growth = 0.008
+			global_population_growth = 0.002
 			factory_throughput = -0.10
 			global_immigrant_attract = 0.1
 			tax_efficiency = -0.20
@@ -667,7 +664,6 @@ social_reforms = {
 			administrative_multiplier = 1
 		}
 		low_health_care = {
-			global_population_growth = 0.002
 			global_immigrant_attract = 0.1
 			administrative_multiplier = 2
 		}
@@ -678,7 +674,7 @@ social_reforms = {
 			global_pop_consciousness_modifier = -0.01
 		}
 		good_health_care = {
-			global_population_growth = -0.005
+			global_population_growth = -0.002
 			global_immigrant_attract = 0.2
 			administrative_multiplier = 4
 			global_pop_consciousness_modifier = -0.02
