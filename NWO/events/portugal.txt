@@ -35,3 +35,40 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
+
+# if Portugal become democratic earlier than the Canation Revolution they still should release there empire.
+country_event = {
+  id = 8011706
+  title = EVT_8011706_NAME
+  desc = EVT_8011706_DESC
+  picture = "nwo2_carnation_revolution"
+  fire_only_once = yes
+  
+  trigger = {
+    tag = POR
+	government = democracy
+	NOT = { has_country_flag = carnation_revolution }
+  }
+  
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = EVT_8011706_A
+	sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+	# Timor -> indonesia.txt events
+	# African colonies release unconditionally
+	any_country = { 
+		limit = { exists = no OR = { tag = ANG tag = MOZ tag = GUB tag = STP tag = CPV } }
+		country_event = 15410
+	}
+	set_country_flag = carnation_revolution
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8011706_B
+	any_pop = { militancy = 2.0 consciousness = 2 }
+	any_pop = { limit = { NOT = { culture = portuguese } } militancy = 5.0 consciousness = 4 }
+	ai_chance = { factor = 0 }
+  }
+}
