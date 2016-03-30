@@ -341,20 +341,25 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = YUG
-	year = 1990 NOT = { year = 1991 }
-	OR = {
-		NOT = { owns = 771 } # Zagreb
-		government = populist_dictatorship
-	}
+    tag = SER
+	year = 1993
+	NOT = { owns = 771 } # Zagreb
+	NOT = { government = populist_dictatorship }
+	war = yes
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 2  }
 
   option = {
     name = EVT_8022741_A
-	change_tag = SER
+	government = populist_dictatorship country_event = 800050
 	any_pop = { limit = { NOT = { culture = serb } } militancy = 5.0 consciousness = 2.0 }
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8022741_B
+	any_pop = { limit = { culture = serb } militancy = 2.0 consciousness = 1.0 }
+	ai_chance = { factor = 0 }
   }
 
 }
@@ -378,7 +383,6 @@ country_event = {
   option = {
     name = EVT_8022742_A
 	any_pop = { militancy = 0.5 consciousness = 0.8 }
-	government = populist_dictatorship
 	release = SLO
 	release = CRO
 	release = MAC
@@ -395,7 +399,6 @@ country_event = {
 	war = { target = CRO attacker_goal = { casus_belli = liberate_country country = SRK } defender_goal = { casus_belli = status_quo } }
 	BOS = { country_event = 8022743 }
 	overlord = { country_event = 8014250 }
-	country_event = 800050 # government = populist_dictatorship
 	ai_chance = { factor = 100 }
   }
 
@@ -403,7 +406,7 @@ country_event = {
     name = EVT_8022742_B
 	any_pop = { militancy = 3.0 consciousness = 2.0 }
 	change_tag = SER
-	government = democracy
+	government = democracy country_event = 800054
 	release = SLO
 	release = CRO
 	release = BOS
