@@ -49,6 +49,7 @@ country_event = {
 	owns = 1413 # Jakarta
 	IDO = { owns = 1416 } # Yogykarta
     war = no
+	NOT = { has_global_flag = USA_pressure_the_dutch_on_indonesia }
   }
 
   mean_time_to_happen = { months = 3  }
@@ -62,7 +63,7 @@ country_event = {
 
   option = {
     name = EVT_8206003_B
-	release_vassal = IDO
+	any_owned = { limit = { is_core = IDO NOT = { is_core = WPA } } secede_province = IDO }
 	country_event = 8206031
 	ai_chance = { factor = 0 }
   }
@@ -408,7 +409,7 @@ country_event = {
 
   option = {
     name = EVT_8206068_A
-	release_vassal = IDO
+	any_owned = { limit = { is_core = IDO NOT = { is_core = WPA } } secede_province = IDO }
 	country_event = 8206031 
 	any_pop = { consciousness = 2 }
   }
@@ -430,7 +431,6 @@ country_event = { # End of the Indonesian National Revolution NET victory
   option = {
     name = EVT_8206070_B
 	any_pop = { limit = { culture = indonesian } consciousness = -2 militancy = -3 }
-	create_vassal = IDO
 	any_owned = { limit = { is_core = WPA } remove_core = IDO }
 	any_owned = { limit = { is_core = IDO NOT = { OR = { is_core = WPA is_core = TIM } } } secede_province = IDO }
 	IDO = { country_event = 8206032 }
@@ -494,6 +494,7 @@ country_event = { # End of the Indonesian National Revolution NET victory
 	relation = { who = IDO value = 100 }
 	relation = { who = NET value = -50 }
 	NET = { country_event = 8206034 }
+	set_global_flag = USA_pressure_the_dutch_on_indonesia
 	ai_chance = { factor = 100 }
   }
   option = {
