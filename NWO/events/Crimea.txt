@@ -4,9 +4,9 @@ country_event = {
 
     trigger = {
         tag = RUS
-        UKR = exist
-        964 966 967 #need to check if this provinces belong to UKR
-        AND = {tag = RUS NOT = { government = proletarian_dictatorship }
+        exists = UKR
+        UKR = { owns = { 964 966 967 } } #need to check if this provinces belong to UKR
+        AND = { tag = RUS NOT = { government = proletarian_dictatorship }
         
        
     }
@@ -28,7 +28,10 @@ country_event = {
     option = {            
         name = "'Crimea is yours!'"     # Historical
         prestige = -50
-        #better relations
+        relation = {
+	        who = UKR
+	        value = 200
+        } #better relations
         #simulate migration
         #make the chain of events, possibly leading for sattellite state under Ukraine or supression of local politicians
         ai_chance = {
