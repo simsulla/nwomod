@@ -34,14 +34,14 @@ country_event = {
   option = {
     name = EVT_8003811_A
 	any_pop = { militancy = 1.0 }
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 50 }
   }
 
   option = {
     name = EVT_8003811_B
 	any_pop = { consciousness = 2 }
 	set_country_flag = castro_rebellion 
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 50 }
   }
 }
 country_event = {
@@ -62,19 +62,21 @@ country_event = {
   option = {
     name = EVT_8003812_A
 	any_pop = { militancy = 1.0 consciousness = 1 }
-	ai_chance = { factor = 0 }	
+	ai_chance = { factor = 50 }	
   }
 
   option = {
     name = EVT_8003812_B
 	country_event = 8003808
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 25 }
   }
 
   option = {
     name = EVT_8003812_C
+    	any_pop = { militancy = 2.0 consciousness = 1 }
+    	clr_country_flag = castro_rebellion 
 	country_event = 8003813
-	ai_chance = { factor = 0 }	
+	ai_chance = { factor = 25 }	
   }
   
 }
@@ -87,7 +89,7 @@ country_event = {
 
   option = {
     name = EVT_8003813_A
-	any_pop = { militancy = 2.0 consciousness = 1 }
+	#any_pop = { militancy = 2.0 consciousness = 1 }
   }
 }
 country_event = {
