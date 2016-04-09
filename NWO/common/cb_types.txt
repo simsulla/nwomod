@@ -1188,6 +1188,7 @@ install_democracy = {
 		}
 		is_vassal = no
 		civilized = yes
+		is_greater_power = no
 		NOT = { is_our_vassal = THIS }
 		NOT = { government = hms_government }
 		NOT = { government = democracy }
@@ -1258,7 +1259,7 @@ install_authoritarian_regime = {
 		}
 		OR = { is_vassal = no is_our_vassal = THIS }
 		civilized = yes
-		
+		is_greater_power = no
 	}
 	
 	po_remove_prestige = yes
@@ -1310,7 +1311,7 @@ install_theocratic_regime = {
 		
 		# There are some amount of traditionalist already in the country
 		traditionalist = 0.1
-			
+		is_greater_power = no
 		# If reciever current gov is not a theochracy
 		NOT = {
 			government = theocracy
@@ -1375,7 +1376,7 @@ install_communist_gov_cb = {
 		
 		# There are some amount of communist already in the country
 		communist = 0.1
-			
+		is_greater_power = no
 		# If reciever current gov is not proletarian_dictatorship
 		NOT = {
 			government = proletarian_dictatorship
@@ -1436,7 +1437,7 @@ uninstall_communist_gov_cb = {
 				ruling_party_ideology = communist
 			}
 		}
-		
+		is_greater_power = no
 		# If reciever current gov is proletarian_dictatorship
 		government = proletarian_dictatorship
 	}
