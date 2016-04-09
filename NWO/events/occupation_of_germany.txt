@@ -1,4 +1,25 @@
 country_event = {
+id = 8204085
+name = "EVT8204085"
+fire_only_once = yes
+trigger = { 
+  tag = GER
+  NOT = { year = 1956 }
+  or = { 
+  vassal_of = RUS
+  ai = no
+  } 
+  government = proletarian_dictatorship
+  NOT = { exists = DDR }
+}
+option = {
+  name = "EVT8204085_A"
+  change_tag = DDR
+  RUS = { creare_vassal = THIS } #As you do not act historically，The country can only get limited independence.
+  any_owned = { add_core = DDR }
+}
+}
+country_event = {
   id = 8204000
   title = "EVT_8204000_NAME"
   desc = "EVT_8204000_DESC"
