@@ -1,25 +1,4 @@
 country_event = {
-id = 8204085
-name = "EVT8204085"
-fire_only_once = yes
-trigger = { 
-  tag = GER
-  NOT = { year = 1956 }
-  or = { 
-  vassal_of = RUS
-  ai = no
-  } 
-  government = proletarian_dictatorship
-  NOT = { exists = DDR }
-}
-option = {
-  name = "EVT8204085_A"
-  change_tag = DDR
-  RUS = { creare_vassal = THIS } #As you do not act historically，The country can only get limited independence.
-  any_owned = { add_core = DDR }
-}
-}
-country_event = {
   id = 8204000
   title = "EVT_8204000_NAME"
   desc = "EVT_8204000_DESC"
@@ -1010,4 +989,31 @@ country_event = {
     name = EVT_8204084_A
 	any_pop = { dominant_issue = { value = jingoism factor = 0.25 } }
   }
+}
+country_event = {
+	id = 8204085
+	title = EVT_8204001_NAME
+	desc = EVT_8204001_DESC
+	picture = "nwo2_allied_occupation_of_germany"
+	fire_only_once = yes
+
+	trigger = { 
+	  tag = GER
+	  NOT = { year = 1956 }
+	  or = { 
+		  vassal_of = RUS
+		  ai = no
+	  } 
+	  government = proletarian_dictatorship
+	  NOT = { exists = DDR }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+	  name = EVT_8204001_A
+	  change_tag = DDR
+	  RUS = { create_vassal = THIS } #As you do not act historically，The country can only get limited independence.
+	  any_owned = { add_core = DDR }
+	}
 }
