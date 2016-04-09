@@ -80,7 +80,7 @@ country_event = {
 	desc = "EVT_1002801_DESC"
 	picture = "chinese_hongkong"
 
-	is_triggered_only = yes
+	is_triggered_only = yes # ENG
 
 	option = {
 		name = "EVT_1002801_A"
@@ -114,7 +114,7 @@ country_event = {
 	desc = "EVT_1002802_DESC"
 	picture = "macao"
 
-	is_triggered_only = yes
+	is_triggered_only = yes # POR
 
 	option = {
 		name = "EVT_1002802_A"
@@ -148,12 +148,12 @@ country_event = {
 	desc = "EVT_1002803_DESC"
 	picture = "chinese_hongkong"
 
-	is_triggered_only = yes
+	is_triggered_only = yes # CHI
 
 	option = {
 		name = "EVT_1002803_A"
-		create_vassal = HKG 
-		create_vassal = MCA
+		random_country = { limit = { exists = HKG tag = THIS } create_vassal = HKG }
+		random_country = { limit = { exists = MCA tag = THIS } create_vassal = MCA }
 		relation = {
 			who = FROM
 			value = 20
