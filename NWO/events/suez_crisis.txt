@@ -30,7 +30,7 @@ country_event = {
 	relation = { who = RUS value = 100 }
     war = { target = ENG attacker_goal = { casus_belli = acquire_core_state state_province_id = 1755 } defender_goal = { casus_belli = status_quo } }
 	# Only if ISR exist shall this kick of
-	random_country = { limit = { tag = ENG exists = ISR } country_event = 8500302 }
+	ENG = { country_event = 8500302 }
 	1766 = { add_province_modifier = { name = embankment_dam duration = 3500 } }
 	ai_chance = { factor = 100 }
   }
@@ -51,15 +51,13 @@ country_event = {
   fire_only_once = yes
   is_triggered_only = yes # ENG
 
-  immediate = { 1755 = { secede_province = EGY } }
-
   option = {
     name = EVT_8500302_A
 	money = -1000 
 	relation = { who = USA value = -50 } 
 	badboy = 1 
 	1755 = { secede_province = EGY }
-	ISR = { country_event = 8500304 }
+	random_country = { limit = { tag = ISR exists = ISR } country_event = 8500304 }
 	ai_chance = { factor = 100 }
   }
 
@@ -71,7 +69,7 @@ country_event = {
 	relation = { who = EGY value = -200 } 
 	1755 = { secede_province = EGY }
 	badboy = 3 
-	ISR = { country_event = 8500303 }
+	random_country = { limit = { tag = ISR exists = ISR } country_event = 8500303 }
 	ai_chance = { factor = 0 }
   }
 
