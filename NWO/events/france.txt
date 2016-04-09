@@ -90,6 +90,7 @@ country_event = { # Restore Unified France under the Fourth Republic
     tag = UFR
     year = 1959 NOT = { year = 1984 }
 	government = democracy
+	NOT = { exists = FRA }
 	war = no
   }
 
@@ -98,7 +99,8 @@ country_event = { # Restore Unified France under the Fourth Republic
 
   option = {
     name = EVT_8005732_A
-	change_tag_no_core_switch = FRA
+	change_tag = FRA
+	badboy = -20
 	country_event = 8005731
   }
   
