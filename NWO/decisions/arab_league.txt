@@ -46,7 +46,8 @@ political_decisions = {
 	xal_ambition = {
 		picture = "xal_ambition"
 		potential = {
-			primary_culture = sunni_arab OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL }
+			OR = { primary_culture = sunni_arab tag = SOM tag = DJI tag = COM } 
+			OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL tag = SOM tag = DJI tag = COM }
 			NOT = { has_country_flag = xal_ambition } 
 		}
 		allow = {
@@ -83,7 +84,7 @@ political_decisions = {
 		allow = {
 			OR = { 
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xal_ambition } } }
-				NOT = { primary_culture = sunni_arab  }
+				NOT = { primary_culture = sunni_arab tag = SOM tag = DJI tag = COM  }
 				has_country_modifier = in_bankrupcy
 			}
 			war = no
@@ -116,7 +117,8 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			primary_culture = sunni_arab OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL }
+			OR = { primary_culture = sunni_arab tag = SOM tag = DJI tag = COM } 
+			OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL tag = SOM tag = DJI tag = COM }
 		}
 		allow = {
 			has_country_flag = xal_ambition
@@ -133,7 +135,8 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			primary_culture = sunni_arab OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL }
+			OR = { primary_culture = sunni_arab tag = SOM tag = DJI tag = COM } 
+			OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL tag = SOM tag = DJI tag = COM }
 		}
 		allow = {
 			has_country_flag = xal_ambition
@@ -151,12 +154,12 @@ political_decisions = {
 		picture = "xal_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XAL } }
-			primary_culture = sunni_arab OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL }
+			OR = { primary_culture = sunni_arab tag = SOM tag = DJI tag = COM } 
+			OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL tag = SOM tag = DJI tag = COM }
 		}
 		allow = {
 			has_country_flag = xal_ambition
 			capital_scope = { has_province_modifier = currency_union_province }
-			primary_culture = sunni_arab 
 			has_unclaimed_cores = no
 			war = no
 			commodities_and_credit = 1
@@ -170,12 +173,12 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			primary_culture = sunni_arab OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL }
+			OR = { primary_culture = sunni_arab tag = SOM tag = DJI tag = COM } 
+			OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL tag = SOM tag = DJI tag = COM }
 		}
 		allow = {
 			has_country_flag = xal_ambition
 			capital_scope = { is_core = XAL }
-			primary_culture = sunni_arab 
 			war = no
 			age_of_protests = 1
 			has_unclaimed_cores = no
@@ -193,12 +196,12 @@ political_decisions = {
 		picture = "xal_parlament"
 		potential = {
 			XAL = { exists = no }
-			primary_culture = sunni_arab OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL }
+			OR = { primary_culture = sunni_arab tag = SOM tag = DJI tag = COM } 
+			OR = { exists = XMU exists = XGC exists = XAL tag = EGY tag = SYR tag = IRQ tag = LEB tag = PAL tag = SOM tag = DJI tag = COM }
 		}
 		allow = {
 			has_country_flag = xal_ambition
 			capital_scope = { has_province_modifier = defence_union } 
-			primary_culture = sunni_arab 
 			is_greater_power = yes
 			political_polarization = 1
             war = no
