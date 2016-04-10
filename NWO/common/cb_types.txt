@@ -364,7 +364,7 @@ acquire_core_state = {
 			is_core = THIS
 		}
 		THIS = { OR = { NOT = { war_policy = pacifism } war = yes } }
-		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
+		NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
 	}
 	
 	allowed_states = {
