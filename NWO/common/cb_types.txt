@@ -422,7 +422,7 @@ annex_core_country = {
 			}
 		}
 		THIS = { NOT = { war_policy = pacifism } }
-		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
+		NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
 	}
 
 	po_annex = yes
