@@ -34,7 +34,15 @@ country_event = {
         } #better relations
         #simulate migration
         #make the chain of events, possibly leading for sattellite state under Ukraine or supression of local politicians
-        ai_chance = {
+        
+        
+        country_event = {
+        tag = UKR
+	id = 257001
+	days = 90
+	}
+	
+	ai_chance = {
             factor = 50
         }
     }
@@ -43,6 +51,11 @@ country_event = {
         name = "Back associated state"     
         prestige = 5
         #make the chain of events, possibly leading for sattellite state under Ukraine (bigger chance) or supression of local politicians
+        country_event = {
+        tag = UKR
+	id = 257002
+	days = 90
+	}
         ai_chance = {
             factor = 20
         }        
@@ -51,8 +64,13 @@ country_event = {
     option = {            
         name = "Propose independent tri-ethnic state"     
         prestige = 10
+        country_event = {
+        tag = UKR
+	id = 257003
+	days = 90
+	}
         ai_chance = {
-            factor = 20
+            factor = 10
         }        
     }
     
@@ -61,7 +79,157 @@ country_event = {
         prestige = 20
         #badboy points, possible transfer
         ai_chance = {
-            factor = 10
+            factor = 20
         }        
     }
 }
+
+
+country_event = {
+
+    id = 257001
+    is_triggered_only = yes
+    title = "Crimea is Ukrainian!"
+    desc = "Surprisingly, Russian officials did not claim Crimea with dissolution of Soviet Union, but the local pro-Russian movement have proclaimed Republic of Crimea as a state, associated with Ukraine. It does not correspond with our constitution, where Crimea is only another oblast! What should we do?"
+    
+    option = {
+    	name = "Lets wait out some time, see where it goes"
+    	country_event = {
+        tag = UKR
+	id = [257001]
+	days = 365
+	}
+	militancy = 1
+	consciousness = 1 #maybe make different values for Ukraine and Crimea
+	any_province = { 
+    		is_core = CRI
+    		consciousness = 2
+    	}
+	ai_chance = {
+            factor = 20
+        }
+     }
+        
+        
+    option = {
+    	name = "Force them to abide us!"
+    	any_province = { 
+    		is_core = CRI
+    		militancy = 5
+    		consciousness = 5
+    	}
+    	relation = {
+	        who = RUS
+	        value = -50
+        }
+    	
+    	ai_chance = {
+            factor = 20
+        }
+    }
+        
+     option = {
+    	name = "Arrest their leaders, but make an autonomy" #Historical
+    	any_province = { 
+    		is_core = CRI
+    		militancy = 2.5
+    		consciousness = 2.5
+    	}
+    	ai_chance = {
+            factor = 40
+        }
+     }
+     
+     option = {
+    	name = "Give them what they want" #Historical
+    	create_vassal = CRI
+    	relation = {
+	        who = CRI
+	        value = 200
+        }
+    	relation = {
+	        who = RUS
+	        value = 100
+        }
+    	ai_chance = {
+            factor = 20
+        }
+     }
+        
+        
+country_event = {
+
+    id = 257002
+    is_triggered_only = yes
+    title = "Russians propose an assosiation for Crimea"
+    desc = "Russian officials propose an assosiation for Crimea after the dissolution of Soviet Union, and the local pro-Russian movement have proclaimed Republic of Crimea as a state, associated with Ukraine. It does not correspond with our constitution, where Crimea is only another oblast! What should we do?"
+    
+    option = {
+    	name = "Lets wait out some time, see where it goes"
+    	country_event = {
+        tag = UKR
+	id = [257002]
+	days = 365
+	}
+	militancy = 1
+	consciousness = 1 #maybe make different values for Ukraine and Crimea
+	ai_chance = {
+            factor = 20
+        }
+     }
+        
+        
+    option = {
+    	name = "Force them to abide us!"
+    	any_province = { 
+    		is_core = CRI
+    		militancy = 5
+    		consciousness = 5
+    	}
+    	relation = {
+	        who = RUS
+	        value = -50
+        }
+    	add_casus_belli = {
+    	target = RUS
+	type = liberate_country
+	months = 12
+	}
+    	ai_chance = {
+            factor = 20
+        }
+    }
+        
+     option = {
+    	name = "Arrest their leaders, but make an autonomy" #Historical
+    	any_province = { 
+    		is_core = CRI
+    		militancy = 2.5
+    		consciousness = 2.5
+    	}
+    	add_casus_belli = {
+    	target = RUS
+	type = liberate_country
+	months = 6
+	}
+    	ai_chance = {
+            factor = 20
+        }
+     }
+     
+     option = {
+    	name = "Give them what they want" #Historical
+    	create_vassal = CRI
+    	relation = {
+	        who = CRI
+	        value = 200
+        }
+    	relation = {
+	        who = RUS
+	        value = 100
+        }
+    	ai_chance = {
+            factor = 40
+        }
+     }
+        
