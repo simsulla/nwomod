@@ -366,7 +366,7 @@ ideologies = {
 		modifier = { factor = 0.5 militancy = 6 }
 	}
 	liberal = { # political reformist
-		factor = 0.2
+		factor = 0.25
 		modifier = { factor = 0.1 is_primary_culture = no is_accepted_culture = no country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship }} }
 		modifier = { factor = 4 country = { ruling_party_ideology = liberal } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = liberal } NOT = { everyday_needs = 0.5 } }
@@ -388,7 +388,7 @@ ideologies = {
 	}
 
 	socialist = { # pragmatic social reformist
-		factor = 0.2
+		factor = 0.25
 		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship } } }
 		modifier = { factor = 4 country = { ruling_party_ideology = socialist } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = socialist } NOT = { everyday_needs = 0.5 } }
@@ -412,6 +412,7 @@ ideologies = {
 	}
 	communist = { # social reformist militancy
 		factor = 0.1
+		modifier = { factor = 0.1 country = { NOT = { ruling_party_ideology = communist } } has_global_flag = autumn_of_nations }
 		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship } } }
 		modifier = { factor = 4 country = { ruling_party_ideology = communist } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = communist } NOT = { everyday_needs = 0.5 } }
@@ -429,6 +430,7 @@ ideologies = {
 	}
 	progressive = { # political reformist
 		factor = 0.1
+		modifier = { factor = 2 country = { NOT = { ruling_party_ideology = communist } } has_global_flag = autumn_of_nations }
 		modifier = { factor = 0.1 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism NOT = { government = nationalist_dictatorship } } }
 		modifier = { factor = 4 country = { ruling_party_ideology = progressive } everyday_needs = 0.5 }
 		modifier = { factor = 0.0 country = { ruling_party_ideology = progressive } NOT = { everyday_needs = 0.5 } }
