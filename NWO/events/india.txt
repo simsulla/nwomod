@@ -470,6 +470,31 @@ country_event = {
   }
 }
 country_event = {
+  id = 8007254
+  title = EVT_8007254_NAME
+  desc = EVT_8007254_DESC
+  picture = "colonial_heritage"
+
+  trigger = {
+    OR = { tag = RAJ tag = HND tag = PAK tag = BNG }
+    NOT = { has_global_flag = autumn_of_nations }
+	NOT = { year = 1990 }
+    exists = yes
+  }
+  
+  mean_time_to_happen = { months = 12 }
+  
+  option = {
+    name = EVT_8007254_A
+	add_country_modifier = { name = colonial_heritage duration = 7000 }
+	add_country_modifier = { name = corruption duration = 3500 }
+  }
+  option = {
+    name = EVT_8007254_B
+	add_country_modifier = { name = colonial_heritage duration = 14000 }
+  }
+}
+country_event = {
   id = 8007260
   title = EVT_8007260_NAME
   desc = EVT_8007260_DESC

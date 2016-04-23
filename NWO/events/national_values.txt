@@ -292,6 +292,33 @@ country_event = {
 	}
 }
 country_event = {
+	id = 18590
+	title = newly_industrialized_country_title
+	desc = newly_industrialized_country_desc
+	picture = "newly_industrialized_country"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_18590_A"
+		nationalvalue = nv_order
+		ai_chance = { factor = 0.1 modifier = { NOT = { government = proletarian_dictatorship government = democracy } factor = 10 } }
+	}
+	
+	option = {
+		name = "EVT_18590_B"
+		nationalvalue = nv_liberty
+		ai_chance = { factor = 0.1 modifier = { government = democracy factor = 10 } }
+	}
+	
+	option = {
+		name = "EVT_18590_C"
+		nationalvalue = nv_equality
+		ai_chance = { factor = 0.1 modifier = { government = proletarian_dictatorship factor = 10 } }
+	}
+	
+}
+country_event = {
 	id = 1902
 
 	title = EVT_1902_NAME

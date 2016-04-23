@@ -1103,7 +1103,7 @@ country_event = { # Structural Weaknesses of the Eastern Bloc
   trigger = {
     tag = RUS
 	government = proletarian_dictatorship
-    check_variable = { which = soviet_control_cee value = 6 } # TODO maby make this dependent on year as well see dissolution_of_the_eastern_bloc
+    check_variable = { which = soviet_control_cee value = 8 } 
   }
 
   mean_time_to_happen = { months = 12  }
@@ -1152,6 +1152,7 @@ country_event = { # Regime bends under dissent
 	government = proletarian_dictatorship
     NOT = { has_global_flag = autumn_of_nations }
     average_militancy  = 9
+	NOT = { rank = 1 }
 	year = 1971 # Nixon Shock
   }
 
@@ -1162,6 +1163,32 @@ country_event = { # Regime bends under dissent
 	set_global_flag = autumn_of_nations 
 	prestige = -200
 	any_pop = { militancy = -2  consciousness = -1 }
+  }
+}
+country_event = { # Brezhnev Era
+  id = 8014273
+  title = EVT_8014273_NAME
+  desc = EVT_8014273_DESC
+  picture = "brezhnev_era"
+
+  trigger = {
+    tag = RUS
+	government = proletarian_dictatorship
+    NOT = { has_global_flag = autumn_of_nations }
+    average_militancy  = 9
+  }
+
+  mean_time_to_happen = { months = 3  }
+
+  option = {
+    name = EVT_8014273_A
+	prestige = -50
+	any_pop = { militancy = -2  consciousness = 1 }
+  }
+  option = {
+    name = EVT_8014273_B
+	prestige = 20
+	any_pop = { consciousness = -0.5 }
   }
 }
 country_event = {
