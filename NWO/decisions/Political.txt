@@ -105,6 +105,36 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
+	
+	newly_industrialized_country = {
+		picture = "newly_industrialized_country"
+		alert = no
+		potential = {
+			nationalvalue = nv_development
+		}
+		
+		allow = {
+			fossil_fuel_power = 1
+			oil_well = 1
+			radio = 1
+			television = 1
+			intensive_farming = 1
+			mineral_processing = 1
+			modern_roads = 1
+			early_highway = 1
+			electricity = 1
+			petrochemical_industry = 1
+			nuclear_power = 1
+			plastic_industry = 1
+		}
+		effect = {
+			prestige = 20
+			country_event = 18590
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 }
