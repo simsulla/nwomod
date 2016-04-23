@@ -363,6 +363,35 @@ country_event = {
 	}
 }
 
+country_event = { 
+	id = 90909
+	title = "EVT_90909_NAME"
+	desc = "EVT_90909_DESC" 
+	picture = "communist_china_us_embargos"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		government = proletarian_dictatorship
+		exists = yes
+		capital_scope = { province_id = 1612 }
+		war = no
+	}
+	
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = EVT_90909_A 
+		add_country_modifier = { name = colonial_heritage duration = 7000 }
+		add_country_modifier = { name = corruption duration = 3500 }
+	}
+	option = {
+		name = EVT_90909_B 
+		add_country_modifier = { name = colonial_heritage duration = 14000 }
+	}
+}
+
 country_event = {
   id = 8002809
   title = EVT_8002809_NAME
