@@ -241,6 +241,23 @@ country_event = {
 			limit = { controlled_by = KMT province_id = 1485 }
 			owner = { capital = 1485 }
 		}
+		any_pop = { 
+			limit = { 
+				location = { 
+					OR = { 
+						province_id = 1545 
+						province_id = 1470 
+						province_id = 1604 
+						province_id = 1477 
+						province_id = 1538 
+						province_id = 1538  
+						province_id = 1540 
+					} 
+				} 
+				OR = { type = officers type = soldiers } 
+			} 
+			move_pop = 1485 # Taibei
+		}
 		end_war = CHI
 		CHI = { country_event = 90904 }
 		country_event = 8200101
