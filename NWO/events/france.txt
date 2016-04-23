@@ -106,6 +106,32 @@ country_event = { # Restore Unified France under the Fourth Republic
   
 }
 
+country_event = { # Restore Unified France under malitary rule
+  id = 8005737
+  title = EVT_8005737_NAME
+  desc = EVT_8005737_DESC
+  picture = "algiers_putsch_of_1961"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    NOT = { year = 1990 }
+	capital = 1700
+	owns = 425 # paris
+	NOT = { exists = UFR }
+	war = no
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+
+  option = {
+    name = EVT_8005737_A
+	capital = 425
+  }
+  
+}
+
 country_event = { # Common Programme of Socialists, Communists & MRG
     id = 8005733
     title = EVT_8005733_NAME
