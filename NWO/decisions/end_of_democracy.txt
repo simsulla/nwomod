@@ -37,7 +37,10 @@ political_decisions = {
 
 		allow = {
 			NOT = { has_country_modifier = transition_to_dictatorship }
-			security_reform = security_clearance_for_gov_services
+			OR = { 
+				security_reform = security_clearance_for_gov_services
+				security_reform = preemptive_security_actions
+			}
 		}
 
 		effect = {
