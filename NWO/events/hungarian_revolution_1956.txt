@@ -51,6 +51,7 @@ country_event = { #"Hungarian Neutrality"
   option = {
     name = EVT_8501102_A
 	government = democracy country_event = 800054
+	casus_belli = { target = RUS type = become_independent months = 12 }
 	war = { target = RUS attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli  = make_puppet } }
 	diplomatic_influence = { who = RUS value = -100 }
 	ai_chance = { factor = 0 }
@@ -239,6 +240,7 @@ country_event = { # USA intervention
   option = {
     name = EVT_8501111_A
 	any_pop = { consciousness = 1 }
+	# infamy unsanctioned
 	war = { target = RUS attacker_goal = { casus_belli = release_puppet } defender_goal = { casus_belli  = status_quo } } 
 	ai_chance = { factor = 0 }
   }

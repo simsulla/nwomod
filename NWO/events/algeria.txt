@@ -285,6 +285,7 @@ country_event = { # Philippeville massacre
 	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 1 }
 	release = ALG
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1700 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } } change_controller = FRA } }
+	casus_belli = { target = ALG type = annex_core_country months = 12 }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	any_country = { 
 		limit = { tag = FRA OR = { is_our_vassal = MOR NOT = { exists = MOR } } owns = 1685 }
@@ -302,6 +303,7 @@ country_event = { # Philippeville massacre
 	any_pop = { limit = { culture = sunni_arab } militancy = 1 consciousness = 2 }
 	release = ALG
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1700 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } }  change_controller = FRA } }
+	casus_belli = { target = ALG type = annex_core_country months = 12 }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	any_country = { 
 		limit = { tag = FRA OR = { is_our_vassal = MOR NOT = { exists = MOR } } owns = 1685 } 
@@ -337,6 +339,7 @@ country_event = { # Battle of Algiers
 	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 1 }
 	release = ALG
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } } change_controller = FRA } }
+	casus_belli = { target = ALG type = annex_core_country months = 12 }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	random_country = { 
 		limit = { tag = FRA OR = { is_our_vassal = TUN NOT = { exists = TUN } } owns = 1725 } 
@@ -354,6 +357,7 @@ country_event = { # Battle of Algiers
 	any_pop = { limit = { culture = sunni_arab } militancy = 1 consciousness = 2 }
 	release = ALG
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } }  change_controller = FRA } }
+	casus_belli = { target = ALG type = annex_core_country months = 12 }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	any_country = { 
 		limit = { tag = FRA OR = { is_our_vassal = TUN NOT = { exists = TUN } } owns = 1725 } 
@@ -393,6 +397,7 @@ country_event = { # The week of barricades
 	release = ALG
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1704 province_id = 1705 province_id = 1700 province_id = 1709 province_id = 1708 province_id = 1707 } } } change_controller = REB } }
 	ALG = { government = nationalist_dictatorship ruling_party_ideology = populist  country_event = 800050 } # party_populist_2_white_french_ALG
+	casus_belli = { target = ALG type = annex_core_country months = 12 }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = free_peoples } }
 	ai_chance = { factor = 100 }
   }

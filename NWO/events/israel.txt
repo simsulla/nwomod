@@ -161,6 +161,7 @@ country_event = {
 		}
 		create_alliance = JOR
 		create_alliance = EGY
+		# infamy unsanctioned
 		war = {
 			target = ISR
 			attacker_goal = { casus_belli = annex_core_country }
@@ -693,12 +694,15 @@ country_event = {
 	917 = { add_core = ISR }
 	920 = { add_core = ISR }
 	918 = { add_core = ISR }
+	casus_belli = { target = EGY type = acquire_state months = 48 }
+	casus_belli = { target = EGY type = acquire_core_state months = 48 }
+	casus_belli = { target = SYR type = acquire_core_state months = 48 }
+	casus_belli = { target = JOR type = acquire_core_state months = 48 }
 	random_country = { limit = { EGY = { owns = 920 } tag = ISR } war = { target = EGY attacker_goal = { casus_belli = acquire_core_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } }
 	random_country = { limit = { SYR = { owns = 2687 } tag = ISR } war = { target = SYR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo }} }
 	random_country = { limit = { JOR = { owns = 917 } tag = ISR } war = { target = JOR attacker_goal = { casus_belli = acquire_core_state state_province_id = 917 } defender_goal = { casus_belli = status_quo }} }
 	EGY = { add_country_modifier = { name = visionary_thinker duration = 700 } }
 	SYR = { add_country_modifier = { name = visionary_thinker duration = 700 } }
-	casus_belli = { target = EGY type = acquire_state months = 48 }
 	any_pop = {  consciousness = 2 }
 	badboy = 15 
 	ai_chance = { factor = 100 }
@@ -720,6 +724,7 @@ country_event = {
 
   option = {
     name = EVT_8007673_A
+	# infamy unsanctioned
 	war = { target = ISR defender_goal = { casus_belli = acquire_core_state state_province_id = 920 } attacker_goal = { casus_belli = conquest } }
 	add_country_modifier = { name = visionary_thinker duration = 700 }
 	any_pop = { militancy = -1.0  consciousness = -1 }
@@ -744,6 +749,7 @@ country_event = {
 
   option = {
     name = EVT_8007674_A
+	# infamy unsanctioned
 	war = { target = ISR defender_goal = { casus_belli = acquire_state state_province_id = 2687 } attacker_goal = { casus_belli = conquest } }
 	add_country_modifier = { name = visionary_thinker duration = 700 }
 	create_alliance = EGY 
@@ -767,6 +773,7 @@ country_event = {
 
   option = {
     name = EVT_8007675_A
+	# infamy unsanctioned
 	war = { target = ISR defender_goal = { casus_belli = acquire_core_state state_province_id = 917 } attacker_goal = { casus_belli = conquest } }
 	create_alliance = EGY 
 	any_pop = { militancy = -1.0 }
@@ -822,8 +829,16 @@ country_event = {
 
   option = {
     name = EVT_8007683_A
-	random_country = { limit = { owns = 920 ISR = { owns = 1756 } tag = EGY } war = { target = ISR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } }
-	random_country = { limit = { ISR = { owns = 1756 } tag = EGY } war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 1756 } defender_goal = { casus_belli = status_quo } } }
+	random_country = { 
+		limit = { owns = 920 ISR = { owns = 1756 } tag = EGY } 
+		casus_belli = { target = ISR type = acquire_core_state months = 12 }
+		war = { target = ISR attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli = status_quo } } 
+	}
+	random_country = { 
+		limit = { ISR = { owns = 1756 } tag = EGY } 
+		casus_belli = { target = ISR type = acquire_core_state months = 12 }
+		war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 1756 } defender_goal = { casus_belli = status_quo } } 
+	}
 	EGY = { add_country_modifier = { name = visionary_thinker duration = 700 } }
 	ISR = { country_event = 8007684 } 
 	random_country = { limit = { tag = SYR NOT = { owns = 2687 } } country_event = 8007685 }
@@ -857,6 +872,7 @@ country_event = {
 
   option = {
     name = EVT_8007685_A
+	casus_belli = { target = ISR type = acquire_core_state months = 12 }
 	war = { target = ISR attacker_goal = { casus_belli = acquire_core_state state_province_id = 2687 } defender_goal = { casus_belli = status_quo }} 
 	add_country_modifier = { name = visionary_thinker duration = 700 }
 	create_alliance = EGY 
@@ -1088,6 +1104,7 @@ country_event = {
     name = EVT_8007697_A
 	any_pop = { militancy = 2.0 }
 	any_owned = { limit = { OR = { province_id = 920 province_id = 918 } } secede_province = PAL }
+	casus_belli = { target = PAL type = acquire_core_state months = 12 }
 	war = { target = PAL attacker_goal = { casus_belli = acquire_core_state state_province_id = 918 } defender_goal = { casus_belli = status_quo }}
 	ai_chance = { factor = 100 }
   }
@@ -1128,6 +1145,7 @@ country_event = {
 	any_pop = { limit = { location = { province_id = 917 } NOT = { strata = poor } } move_pop = 918 } # Settlements on the West Bank
 	release = GAZ
 	any_owned = { limit = { province_id = 918 } secede_province = PAL }
+	# infamy unsanctioned
 	war = { target = PAL attacker_goal = { casus_belli = acquire_core_state state_province_id = 918 } defender_goal = { casus_belli = status_quo }}
 	war = { target = GAZ attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo }}
 	ai_chance = { factor = 100 }
@@ -1138,6 +1156,7 @@ country_event = {
 	# EVT_8007698_B;Crush the rebellion at any cost!
 	any_pop = { limit = { location = { province_id = 917 } NOT = { strata = poor } } move_pop = 918 } # Settlements on the West Bank
 	any_owned = { limit = { OR = { province_id = 918 province_id = 920 } } secede_province = PAL }
+	# infamy unsanctioned
 	war = { target = PAL attacker_goal = { casus_belli = acquire_core_state state_province_id = 918 } defender_goal = { casus_belli = status_quo }}
 	badboy = 10
 	ai_chance = { factor = 0 }

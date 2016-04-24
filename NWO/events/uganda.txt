@@ -17,6 +17,7 @@ country_event = {
 	
 	option = {
 		name = "EVT_1027001_A" # intervene
+		casus_belli = { target = RWA type = install_democracy months = 12 }
 		war = { target = RWA attacker_goal = { casus_belli = install_democracy } defender_goal = { casus_belli  = status_quo } } 
 		ai_chance = { factor = 100 }
 	}
@@ -235,6 +236,7 @@ country_event = {
 	
     option = {
 	  name = EVT_1027014_A
+	  # infamy this is an unsanctioned war.
 	  war = { target = TAN attacker_goal = { casus_belli = acquire_state state_province_id = 2044 } defender_goal = { casus_belli = install_authoritarian_regime } }
 	  ai_chance = { factor = 100 }
     }

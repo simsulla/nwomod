@@ -277,7 +277,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA90904" # continue the war
-		ai_chance = { factor = 100 }	
+		# unsanctioned infamy
 		war = {
 			target = KMT
 			attacker_goal = {
@@ -289,6 +289,7 @@ country_event = {
 			}
 		}
 		relation = { who = KMT value = -200 }
+		ai_chance = { factor = 100 }	
 	}
 
 	option = {				
@@ -762,7 +763,8 @@ country_event = {
 
   option = {
     name = EVT_8002825_A
-	war = { target = CHI attacker_goal = { casus_belli = humiliate } } 
+	casus_belli = { target = CHI type = humiliate months = 12 }
+	war = { target = CHI attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = status_quo } } 
 	ai_chance = { factor = 100 }
   }
 
@@ -2113,7 +2115,8 @@ country_event = {
   }
   option = {
     name = "EVT_8200111_B"
-	FROM = { war = { target = THIS attacker_goal = { casus_belli = annex_core_country }  defender_goal = { casus_belli = status_quo } } }
+	add_casus_belli = { target = FROM type = civil_war months = 12 }
+	war = { target = FROM attacker_goal = { casus_belli = status_quo }  defender_goal = { casus_belli = civil_war } } 
 	ai_chance = { factor = 100 }
   }
 }

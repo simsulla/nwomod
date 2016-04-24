@@ -34,6 +34,8 @@ country_event = { # Fall of the Fourth Republic
 	capital = 1700 # Algiers
 	prestige = -80
 	UFR = { capital = 425 } # Paris
+	casus_belli = { target = UFR type = civil_war months = 12 }
+	add_casus_belli = { target = UFR type = civil_war months = 12 }
 	war = { target = UFR attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
 	change_tag_no_core_switch = UFR
 	ai_chance = { factor = 0 }
@@ -48,6 +50,8 @@ country_event = { # Fall of the Fourth Republic
 	prestige = -80
 	capital = 1700 # Algiers
 	UFR = { capital = 425 } # Paris
+	casus_belli = { target = UFR type = civil_war months = 12 }
+	add_casus_belli = { target = UFR type = civil_war months = 12 }
 	war = { target = UFR attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
 	ai_chance = { factor = 0 }
   }
