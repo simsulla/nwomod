@@ -1,4 +1,4 @@
-name = "世界新秩序1.0.6pre汉化测试版" # 2016-04-13
+name = "世界新秩序1.06-beta" # 2016-04-25
 path = "mod/NWO" # location of your mod files. If changes change map/default.map as well
 user_dir = "NwO" # optional.   
 replace_path = "common"
