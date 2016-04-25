@@ -16,6 +16,8 @@ political_decisions = {
 			OR = { government = democracy government = hms_government }
 			bank_for_international_settlements = 1
 			war = no
+			NOT = { exists = XSU }
+			NOT = { exists = XMS }
 		}
 		effect = {
 			set_country_flag = xac_ambition
