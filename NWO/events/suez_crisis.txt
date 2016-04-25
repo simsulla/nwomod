@@ -28,6 +28,7 @@ country_event = {
 	relation = { who = USA value = -100 } 
 	relation = { who = ENG value = -100 } 
 	relation = { who = RUS value = 100 }
+	casus_belli = { target = ENG type = acquire_core_state months = 12 }
     war = { target = ENG attacker_goal = { casus_belli = acquire_core_state state_province_id = 1755 } defender_goal = { casus_belli = status_quo } }
 	# Only if ISR exist shall this kick of
 	ENG = { country_event = 8500302 }
@@ -92,6 +93,7 @@ country_event = {
   option = {
     name = EVT_8500303_A
 	set_country_flag = operation_kadesh
+	# infamy illegal operation
 	war = { target = EGY attacker_goal = { casus_belli = acquire_state state_province_id = 1756 } defender_goal = { casus_belli  = status_quo } } 
 	badboy = 5 
 	any_pop = { militancy = -0.5  consciousness = -0.2 }
@@ -114,6 +116,7 @@ country_event = {
   option = {
     name = EVT_8500304_A
 	set_country_flag = operation_kadesh
+	casus_belli = { target = EGY type = acquire_state months = 12 }
 	war = { target = EGY attacker_goal = { casus_belli = acquire_state state_province_id = 1756 } attacker_goal = { casus_belli = acquire_state state_province_id = 920 } defender_goal = { casus_belli  = status_quo } } 
 	badboy = 5 
 	any_pop = { militancy = -0.5  consciousness = 1.0 }

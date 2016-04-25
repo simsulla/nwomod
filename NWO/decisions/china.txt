@@ -84,7 +84,8 @@ political_decisions = {
 	the_return_of_hong_kong = {
 		picture = "the_return_of_hong_kong"
 		potential = {
-			OR = { tag = CHI tag = KMT }
+			OR = { tag = CHI tag = KMT tag = KWA }
+			owns = 2681 # Shenzhen
 			NOT = { has_country_flag = the_return_of_hong_kong }
 			OR = {
 				1496 = { owned_by = ENG } 
@@ -110,8 +111,10 @@ political_decisions = {
 		}
 
 		effect = {
-			KMT = { set_country_flag = the_return_of_hong_kong }
-			CHI = { set_country_flag = the_return_of_hong_kong }
+			random_country = { 
+				limit = { owns = 2681 } 
+				set_country_flag = the_return_of_hong_kong 
+			}
 			ENG = { country_event = 1002801 }
 		}
 		

@@ -34,6 +34,8 @@ country_event = { # Fall of the Fourth Republic
 	capital = 1700 # Algiers
 	prestige = -80
 	UFR = { capital = 425 } # Paris
+	casus_belli = { target = UFR type = civil_war months = 12 }
+	add_casus_belli = { target = UFR type = civil_war months = 12 }
 	war = { target = UFR attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
 	change_tag_no_core_switch = UFR
 	ai_chance = { factor = 0 }
@@ -48,6 +50,8 @@ country_event = { # Fall of the Fourth Republic
 	prestige = -80
 	capital = 1700 # Algiers
 	UFR = { capital = 425 } # Paris
+	casus_belli = { target = UFR type = civil_war months = 12 }
+	add_casus_belli = { target = UFR type = civil_war months = 12 }
 	war = { target = UFR attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
 	ai_chance = { factor = 0 }
   }
@@ -102,6 +106,32 @@ country_event = { # Restore Unified France under the Fourth Republic
 	change_tag = FRA
 	badboy = -20
 	country_event = 8005731
+  }
+  
+}
+
+country_event = { # Restore Unified France under malitary rule
+  id = 8005737
+  title = EVT_8005737_NAME
+  desc = EVT_8005737_DESC
+  picture = "algiers_putsch_of_1961"
+  fire_only_once = yes
+
+  trigger = {
+    tag = FRA
+    NOT = { year = 1990 }
+	capital = 1700
+	owns = 425 # paris
+	NOT = { exists = UFR }
+	war = no
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+
+  option = {
+    name = EVT_8005737_A
+	capital = 425
   }
   
 }

@@ -87,6 +87,7 @@ country_event = {
   option = {
     name = EVT_8500404_A
 	relation = { who = USA value = -100 } 
+	casus_belli = { target = KMT type = annex_core_country months = 12 }
 	war = { target = KMT attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
   }
 
@@ -120,6 +121,7 @@ country_event = { # Communists try an all-out war, American guarantee is in plac
 
   option = {
     name = EVT_8500405_B
+	casus_belli = { target = KMT type = annex_core_country months = 12 }
 	war = { target = KMT attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
 	ai_chance = { factor = 0 }
   }
@@ -156,6 +158,7 @@ country_event = {
 
   option = {
     name = EVT_8500406_C
+	casus_belli = { target = KMT type = annex_core_country months = 12 }
 	war = { target = KMT attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
 	ai_chance = { factor = 0 }
   }

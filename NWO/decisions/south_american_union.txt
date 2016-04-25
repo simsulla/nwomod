@@ -7,9 +7,10 @@ political_decisions = {
 		picture = "xsu_ambition"
 		potential = {
 			OR = { XMS = { exists = yes } XAC = { exists = yes } }
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = south_america } primary_culture = white_spanish primary_culture = mestizo }
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = south_america } primary_culture = white_spanish primary_culture = mestizo 
+			primary_culture = white_portuguese }
 			NOT = { has_country_flag = xsu_ambition }
-			NOT = { has_country_flag = in_trade_block }
+			#NOT = { has_country_flag = in_trade_block }
 			NOT = { tag =XSU }
 			NOT = { has_country_modifier = in_bankrupcy } 
 			NOT = {AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xsu_ambition } } } }
@@ -261,6 +262,7 @@ political_decisions = {
 			change_tag = XSU
 			primary_culture = mestizo
 			add_accepted_culture = white_spanish
+			add_accepted_culture = white_portuguese
 			clr_country_flag = in_trade_block
 		}
 		ai_will_do = {

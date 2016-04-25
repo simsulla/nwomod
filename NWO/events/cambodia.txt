@@ -93,20 +93,22 @@ country_event = {
   trigger = {
 	OR = { tag = DAI tag = SVI }
 	owns = 1380 # Saigon
-	year = 1979 NOT = { year = 1980 }
+	CAM = { has_country_modifier = ethnic_cleansing }
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 5  }
 
   option = {
     name = EVT_8003125_A
-	any_neighbor_country = { 
+	any_country = { 
 		limit = { tag = THIS government = proletarian_dictatorship }
-		war = { target = THIS attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = make_puppet } }
+		casus_belli = { target = CAM type = make_puppet months = 12 }
+		war = { target = CAM attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = humiliate } }
 	}
 	any_neighbor_country = { 
 		limit = { tag = THIS NOT = { government = proletarian_dictatorship } }
-		war = { target = THIS attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = install_democracy } }
+		casus_belli = { target = CAM type = install_democracy months = 12 }
+		war = { target = CAM attacker_goal = { casus_belli = install_democracy } defender_goal = { casus_belli = humiliate } }
 	}
   }
 }

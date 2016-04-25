@@ -52,6 +52,7 @@ country_event = { # Cyprus Independence
     name = EVT_8004101_B
 	prestige = -10
 	release = CYP
+	casus_belli = { target = CYP type = conquest months = 12 }
 	war = { target = CYP attacker_goal = { casus_belli = conquest } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 0 }
   }
@@ -87,6 +88,7 @@ country_event = {
 
   trigger = {
     tag = CYP
+	war = no
 	exists = TUR
     year = 1974 NOT = {year = 1990 }
   }
@@ -119,6 +121,7 @@ country_event = {
     name = EVT_8004111_A
 	relation = { who = GRE value = -150 } 
 	relation = { who = CYP value = -200 } 
+	# infamy unsanctioned
 	war = { target = CYP  attacker_goal = { casus_belli = liberate_country country = NCY } defender_goal = { casus_belli = status_quo } }
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
 	ai_chance = { factor = 100 }

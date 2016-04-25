@@ -57,7 +57,8 @@ country_event = {
   option = {
     name = EVT_8007229_A
 	any_pop = { militancy = 1.0 }
-	badboy = 5 
+	badboy = 5
+	casus_belli = {target = HYD type = annex_core_country months = 12 }
 	war = { target = HYD attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
@@ -155,6 +156,7 @@ country_event = {
 
   option = {
     name = EVT_8007233_A
+	casus_belli = {target = HND type = acquire_core_state months = 12 }
 	war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 1225 } attacker_goal = { casus_belli = acquire_core_state state_province_id = 3281 } } 
 	ai_chance = { factor = 100 }
   }
@@ -187,6 +189,7 @@ country_event = {
   
   option = {
     name = EVT_8007235_A
+	casus_belli = {target = PAK type = acquire_core_state months = 12 }
 	war = { target = PAK attacker_goal = { casus_belli = acquire_core_state state_province_id = 1224 } attacker_goal = { casus_belli = acquire_core_state state_province_id = 3281 } } 
 	ai_chance = { factor = 100 }
   }
@@ -206,6 +209,7 @@ country_event = {
 
   option = {
     name = EVT_8007236_A
+	casus_belli = {target = JAK type = annex_core_country months = 12 }
 	war = { target = JAK attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
 	ai_chance = { factor = 100 }
   }
@@ -225,6 +229,7 @@ country_event = {
 
   option = {
     name = EVT_8007237_A
+	casus_belli = {target = JAK type = annex_core_country months = 12 }
 	war = { target = JAK attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
 	ai_chance = { factor = 100 }
   }
@@ -253,6 +258,7 @@ country_event = {
   
   option = {
     name = EVT_8007238_A
+	casus_belli = {target = PAK type = acquire_core_state months = 12 }
 	war = { target = PAK attacker_goal = { casus_belli = acquire_core_state state_province_id = 1224 } } 
 	ai_chance = { factor = 100 }
   }
@@ -281,6 +287,7 @@ country_event = {
 
   option = {
     name = EVT_8007239_A
+	casus_belli = {target = HND type = acquire_core_state months = 12 }
 	war = { target = HND attacker_goal = { casus_belli = acquire_core_state state_province_id = 1225 } } 
 	ai_chance = { factor = 100 }
   }
@@ -914,7 +921,8 @@ country_event = {
 	# EVT_8007282_A;This is a full scale war!
 	release = NAX
 	NAX = { government = proletarian_dictatorship country_event = 800052 }
-	war = { target = NAX attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
+	casus_belli = {target = NAX type = civil_war months = 12 }
+	war = { target = NAX attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
 	clr_country_flag = naxalite_insurgency
   }
 }

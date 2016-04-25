@@ -169,6 +169,7 @@ country_event = {
     name = EVT_8013806_B
 	any_pop = { militancy = 1.0 consciousness = 1 }
 	neutrality = yes
+	casus_belli = { target = ETS type = annex_core_country months = 12 }
 	CHI = { war = { target = ETS attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } }
   }
 }
@@ -230,6 +231,7 @@ country_event = {
   option = {
     name = EVT_8013809_B
 	any_pop = { militancy = 1.0 }
+	casus_belli = { target = ETS type = annex_core_country months = 12 }
 	KMT = { war = { target = ETS attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } }
 	ai_chance = { factor = 100 }
   }

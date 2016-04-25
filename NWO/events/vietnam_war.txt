@@ -157,6 +157,7 @@ country_event = {
 
   option = {
     name = EVT_8228003_B
+	casus_belli = { target = DAI type = make_puppet months = 12 }
 	war = { target = DAI attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 0 }
 	badboy = 10 
@@ -197,6 +198,7 @@ country_event = {
 
   option = {
     name = EVT_8228010_A
+	casus_belli = { target = DAI type = annex_core_country months = 12 }
 	war = { target = DAI attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
@@ -227,6 +229,7 @@ country_event = {
 
   option = {
     name = EVT_8228011_A
+	casus_belli = { target = SVI type = annex_core_country months = 12 }
 	war = { target = SVI attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
@@ -658,6 +661,7 @@ country_event = {
 
   option = {
     name = EVT_8228100_A
+	casus_belli = { target = SVI type = annex_core_country months = 12 }
 	war = { target = SVI attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
@@ -951,6 +955,7 @@ country_event = {
 
   option = {
     name = EVT_8228201_A
+	# infamy unsanctioned war
 	DAI = { war = { target = LUA attacker_goal = { casus_belli = make_puppet } attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = { casus_belli = status_quo } } } 
 	ai_chance = { factor = 100 }
    }

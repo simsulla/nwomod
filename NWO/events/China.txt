@@ -241,6 +241,22 @@ country_event = {
 			limit = { controlled_by = KMT province_id = 1485 }
 			owner = { capital = 1485 }
 		}
+		any_pop = { 
+			limit = { 
+				location = { 
+					OR = { 
+						province_id = 1545 
+						province_id = 1470 
+						province_id = 1604 
+						province_id = 1477 
+						province_id = 1538  
+						province_id = 1540 
+					} 
+				} 
+				OR = { type = officers type = soldiers } 
+			} 
+			move_pop = 1485 # Taibei
+		}
 		end_war = CHI
 		CHI = { country_event = 90904 }
 		country_event = 8200101
@@ -261,7 +277,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA90904" # continue the war
-		ai_chance = { factor = 100 }	
+		# unsanctioned infamy
 		war = {
 			target = KMT
 			attacker_goal = {
@@ -273,6 +289,7 @@ country_event = {
 			}
 		}
 		relation = { who = KMT value = -200 }
+		ai_chance = { factor = 100 }	
 	}
 
 	option = {				
@@ -429,18 +446,24 @@ country_event = {
 
   option = {
     name = EVT_8002810_A
+	social_reform = unregulated_hours
+	social_reform = minimal_subsidies
+	social_reform = trinket_pensions
+	any_pop = { militancy = 0.5 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8002810_B
-	any_pop = { consciousness = 2 }
+	add_country_modifier = { name = colonial_heritage duration = 3500 }
+	any_pop = { consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8002810_C
-	any_pop = { militancy = 2.0 }
+	any_pop = { militancy = 1.0 }
+	add_country_modifier = { name = colonial_heritage duration = 3500 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -740,7 +763,8 @@ country_event = {
 
   option = {
     name = EVT_8002825_A
-	war = { target = CHI attacker_goal = { casus_belli = humiliate } } 
+	casus_belli = { target = CHI type = humiliate months = 12 }
+	war = { target = CHI attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = status_quo } } 
 	ai_chance = { factor = 100 }
   }
 
@@ -2091,7 +2115,8 @@ country_event = {
   }
   option = {
     name = "EVT_8200111_B"
-	FROM = { war = { target = THIS attacker_goal = { casus_belli = annex_core_country }  defender_goal = { casus_belli = status_quo } } }
+	add_casus_belli = { target = FROM type = civil_war months = 12 }
+	war = { target = FROM attacker_goal = { casus_belli = status_quo }  defender_goal = { casus_belli = civil_war } } 
 	ai_chance = { factor = 100 }
   }
 }

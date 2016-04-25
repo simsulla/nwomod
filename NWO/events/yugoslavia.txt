@@ -144,6 +144,7 @@ country_event = {
   option = {
     name = EVT_8022728_A
 	any_pop = { militancy = -0.2 consciousness = -0.1 }
+	# Soviet get's infamy by attack
 	war = { target = YUG  attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo } }
 	set_country_flag = military_intervention_aginst_tito
   }
@@ -397,6 +398,7 @@ country_event = {
 	relation = { who = RSR value = 200 }
 	relation = { who = BOS value = -200 }
 	change_tag = SER
+	# Serbia get infamy by attack
 	war = { target = CRO attacker_goal = { casus_belli = liberate_country country = SRK } defender_goal = { casus_belli = status_quo } }
 	BOS = { country_event = 8022743 }
 	overlord = { country_event = 8014250 }
@@ -432,6 +434,7 @@ country_event = {
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	BOS = {	government = populist_dictatorship country_event = 800050 }
+	# Serbia get infamy by attack
 	war = { target = CRO attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
 	war = { target = SLO attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
 	war = { target = BOS attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
@@ -456,6 +459,7 @@ country_event = {
 	release_vassal = HZB
 	HZB = { 2688 = { secede_province = BOS } }
 	# release = RSR in calling event
+	casus_belli = { target = RSR type = annex_core_country months = 12 }
 	war = { target = RSR attacker_goal = { casus_belli = annex_core_country country = RSR } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
@@ -491,6 +495,7 @@ country_event = {
     name = EVT_8022744_A
 	# EVT_8022744_A;Become independent
 	any_pop = { militancy = 0.5 consciousness = 1.0 }
+	# gets infamy as this is not a internationally recognized move.
 	war = { target = BOS attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli = annex_core_country } }
 	ai_chance = { factor = 100 }
   }
@@ -569,7 +574,11 @@ country_event = {
 	create_alliance = BOS
 	relation = { who = BOS value = 200 }
 	BOS = { country_event = { id = 8022747 days = 30 } }
-	any_country = { limit = { tag = SRK exists = SRK } CRO = { war = { target = SRK attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } } }
+	any_country = { 
+		limit = { tag = CRO exists = SRK } 
+		casus_belli = { target = SRK type = annex_core_country months = 12 }
+		war = { target = SRK attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
+	}
 	ai_chance = { factor = 100 }
   }
 
@@ -596,15 +605,14 @@ country_event = {
 	create_alliance = CRO
 	relation = { who = CRO value = 200 }
 	any_country = { 
-		limit = { tag = RSR exists = RSR } 
-		BOS = { 
-			war = { 
-				target = RSR 
-				attacker_goal = { casus_belli = make_puppet } 
-				defender_goal = { casus_belli = status_quo } 
-				call_ally = yes 
-			}
-		} 
+		limit = { tag = BOS exists = RSR } 
+		casus_belli = { target = RSR type = make_puppet months = 12 }
+		war = { 
+			target = RSR 
+			attacker_goal = { casus_belli = make_puppet } 
+			defender_goal = { casus_belli = status_quo } 
+			call_ally = yes 
+		}
 	}
 	ai_chance = { factor = 100 }
   }
@@ -690,6 +698,7 @@ country_event = {
 	any_pop = { militancy = 0.5 consciousness = 0.3 }
 	release = KOS
 	release_vassal = MON
+	# infamy due to events in Kosovo 
 	war = { target = KOS attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	GER = { diplomatic_influence = { who = KOS value = 200 } }
   }

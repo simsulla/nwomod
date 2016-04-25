@@ -1071,6 +1071,7 @@ country_event = {
 	trigger = {
 		literacy = 0.4
 		civilized = yes
+		OR = { pop_majority_religion = sunni pop_majority_religion = shiite }
 	}
 
 	mean_time_to_happen = {
@@ -1145,6 +1146,7 @@ country_event = {
 		NOT = {
 			publishing_rights = unregulated_publishing
 		}
+		OR = { pop_majority_religion = sunni pop_majority_religion = shiite }
 	}
 
 	mean_time_to_happen = {
@@ -1218,6 +1220,7 @@ country_event = {
 		NOT = {
 			publishing_rights = censored_publishing
 		}
+		OR = { pop_majority_religion = sunni pop_majority_religion = shiite }
 	}
 
 	mean_time_to_happen = {
