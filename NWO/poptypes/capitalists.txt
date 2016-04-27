@@ -235,9 +235,12 @@ migration_target = {
 
 promote_to =
 {
-	capitalists = { factor = 0.01 modifier = { factor = 2 } modifier = { factor = -2 owner = { government = proletarian_dictatorship } } }
 	artisans = { factor = 0.01 modifier = { factor = 2 } }
-	bureaucrats = { factor = 0.01 modifier = { factor = 0 } modifier = { factor = 10 owner = { government = proletarian_dictatorship } }  }
+	bureaucrats = { 
+		factor = 0.01 
+		modifier = { factor = 0 } 
+		modifier = { factor = 10 NOT = { has_country_flag = market_communism } owner = { government = proletarian_dictatorship } }  
+	}
 }
 
 ideologies = {
