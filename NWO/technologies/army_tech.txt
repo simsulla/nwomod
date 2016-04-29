@@ -622,7 +622,7 @@ special_forces = {
 	unciv_military = yes
 
 	irregular = {
-		attack = 1
+		attack = 0.1
 		supply_consumption = 0.35
 	}
 	mechanized_infantry = {
@@ -630,7 +630,7 @@ special_forces = {
 		supply_consumption = 0.35
 	}
 	modern_infantry = {
-		attack = 1
+		attack = 0.1
 		defence = 1
 		supply_consumption = 0.35
 	}
@@ -717,7 +717,7 @@ precision_long_ranged_weapons = {
 	unciv_military = yes
 	
 	irregular = {
-		attack = 1
+		attack = 0.1
 		supply_consumption = 0.35
 	}
 	mechanized_infantry = {
@@ -725,7 +725,7 @@ precision_long_ranged_weapons = {
 		supply_consumption = 0.35
 	}
 	modern_infantry = {
-		attack = 1
+		attack = 0.1
 		defence = 1
 		supply_consumption = 0.35
 	}
@@ -776,17 +776,16 @@ spec_ops = {
 	year = 1990
 	cost = 12600
 	irregular = {
-		attack = 1
-		defence = 1
+		defence = 0.1
 		supply_consumption = 0.25
 	}
 	mechanized_infantry = {
-		defence = 1
+		defence = 0.1
 		supply_consumption = 0.25
 	}
 	modern_infantry = {
-		attack = 2
-		defence = 2
+		attack = 0.1
+		defence = 0.1
 		supply_consumption = 0.25
 	}
 
@@ -841,17 +840,15 @@ lightweight_small_arms = {
 	unciv_military = yes
 	activate_unit = modern_mechanized_infantry
 	irregular = {
-		attack = 1
-		defence = 1
 		supply_consumption = 0.25
 	}
 	mechanized_infantry = {
-		attack = 1
+		attack = 0.1
 		supply_consumption = 0.25
 	}
 	modern_infantry = {
-		attack = 2
-		defence = 2
+		attack = 0.2
+		defence = 0.2
 		supply_consumption = 0.25
 	}
 	
@@ -901,17 +898,15 @@ adaptive_camouflage = {
 	cost = 18000
 	unciv_military = yes
 	irregular = {
-		attack = 1
-		defence = 1
 		supply_consumption = 0.25
 	}
 	mechanized_infantry = {
-		defence = 1
+		defence = 0.1
 		supply_consumption = 0.25
 	}
 	modern_infantry = {
-		attack = 2
-		defence = 2
+		attack = 0.2
+		defence = 0.2
 		supply_consumption = 0.25
 	}
 	combat_width = -2
@@ -956,17 +951,15 @@ future_force_warrior = {
 	cost = 21600
 	unciv_military = yes
 	irregular = {
-		attack = 1
-		defence = 1
 		supply_consumption = 0.2
 	}
 	modern_mechanized_infantry = {
-		defence = 1
+		defence = 0.1
 		supply_consumption = 0.2
 	}
 	modern_infantry = {
-		attack = 2
-		defence = 2
+		attack = 0.2
+		defence = 0.2
 		supply_consumption = 0.2
 	}
 
@@ -1511,7 +1504,6 @@ second_generation_jet_fighters = {
 	
 	activate_unit = bomber
 	cavalry = { # fighter
-		attack = 1
 		supply_consumption = 0.35
 	}
 	modern_fighter = {

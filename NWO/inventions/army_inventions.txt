@@ -435,9 +435,9 @@ personnel_asgt = {
 		}
 	}
 	effect = {
-	infantry = {defence = 1}
-	modern_infantry = {defence = 1}
-	irregular = {defence = 1}
+	infantry = {defence = 0.1}
+	modern_infantry = {defence = 0.1}
+	irregular = {defence = 0.1}
 	}
 }
 
@@ -694,9 +694,9 @@ red_dot_sight = {
 		}
 	}
 	effect = {
-	infantry = {attack = 1}
-	modern_infantry = {attack = 1}
-	irregular = {attack = 1}
+	infantry = {attack = 0.1}
+	modern_infantry = {attack = 0.1}
+	irregular = {attack = 0.1}
 	}
 }
 
@@ -805,9 +805,9 @@ interceptor_body_armor = {
 		}
 	}
 	effect = {
-	infantry = {defence = 2}
-	modern_infantry = {defence = 2}
-	irregular = {defence = 1}
+	infantry = {defence = 0.2}
+	modern_infantry = {defence = 0.2}
+	irregular = {defence = 0.1}
 	}
 }
 special_reconnaissance = {
@@ -870,9 +870,9 @@ universal_camouflage_pattern = {
 		}
 	}
 	effect = {
-	infantry = {defence = 1 supply_consumption = 0.05}
-	modern_infantry = {defence = 1 supply_consumption = 0.05}
-	irregular = {defence = 1 supply_consumption = 0.05}
+	infantry = {supply_consumption = 0.05}
+	modern_infantry = {supply_consumption = 0.05}
+	irregular = {supply_consumption = 0.05}
 	}
 }
 
@@ -895,9 +895,7 @@ plastic_tipped_bullets = {
 		}
 	}
 	effect = {
-	infantry = {attack = 1}
-	modern_infantry = {attack = 1}
-	irregular = {attack = 1}
+	modern_infantry = {attack = 0.1}
 	}
 }
 llm01 = {
@@ -914,7 +912,7 @@ llm01 = {
 		}
 	}
 	effect = {
-		cavalry = { # fighter = {
+		modern_fighter = { # fighter = {
 			reconnaissance = 2
 			attack = 1
 		}
@@ -983,6 +981,10 @@ adaptiv = {
 	}
 	effect = {
 		cavalry = { # fighter = {
+		 defence = 0.5
+		 supply_consumption = 0.05
+		}
+		modern_fighter = { 
 		 defence = 1
 		 supply_consumption = 0.05
 		}
@@ -1042,9 +1044,7 @@ multicam = {
 		}
 	}
 	effect = {
-	infantry = {defence = 1 supply_consumption = 0.05}
-	modern_infantry = {defence = 1 supply_consumption = 0.05}
-	irregular = {defence = 1 supply_consumption = 0.05}
+	modern_infantry = {defence = 0.1 supply_consumption = 0.05}
 	}
 }
 
@@ -1088,9 +1088,7 @@ intelligent_munitions_system = {
 		}
 	}
 	effect = {
-	infantry = { attack = 1 }
-	modern_infantry = { attack = 1 }
-	irregular = { attack = 1 }
+	modern_infantry = { attack = 0.1 }
 	}
 }
 lower_extremity_exoskeleton = {
@@ -1111,8 +1109,7 @@ lower_extremity_exoskeleton = {
 		}
 	}
 	effect = {
-	modern_infantry = { attack = 1 }
-	irregular = { attack = 1 }
+	modern_infantry = { attack = 0.1 }
 	}
 }
 powered_exoskeleton = {
@@ -1133,8 +1130,7 @@ powered_exoskeleton = {
 		}
 	}
 	effect = {
-	modern_infantry = { attack = 1 defence = 1}
-	irregular = { attack = 1 defence = 1}
+	modern_infantry = { attack = 0.1 defence = 0.1}
 	}
 }
 power_subsystem = {
@@ -1163,8 +1159,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	modern_infantry = { attack = 1 defence = 1}
-	irregular = { attack = 1 defence = 1}
+	modern_infantry = { attack = 0.1 defence = 0.1}
 	}
 }
 microclimate_cooling_system = {
@@ -1193,8 +1188,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	modern_infantry = { attack = 1 defence = 1}
-	irregular = { attack = 1 defence = 1}
+	modern_infantry = { attack = 0.1 defence = 0.1}
 	}
 }
 wpsm_future = {
@@ -1223,8 +1217,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	modern_infantry = { attack = 1 defence = 1}
-	irregular = { attack = 1 defence = 1}
+	modern_infantry = { attack = 0.1 defence = 0.1}
 	}
 }
 combat_uniform_subsystem = {
@@ -1253,8 +1246,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	modern_infantry = { attack = 1 defence = 1}
-	irregular = { attack = 1 defence = 1}
+	mechanized_infantry = { attack = 0.5 defence = 0.5}
 	}
 }
 nett_warrior = {
@@ -1283,8 +1275,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-	modern_infantry = { attack = 1 defence = 1}
-	irregular = { attack = 1 defence = 1}
+	mechanized_infantry = { attack = 0.5 defence = 0.5}
 	}
 }
 headgear_subsystem = {
@@ -1313,8 +1304,7 @@ limit = { future_force_warrior = 1 }
 		}
 	}
 	effect = {
-		modern_infantry = { attack = 1 defence = 1}
-		irregular = { attack = 1 defence = 1}
+	mechanized_infantry = { attack = 0.5 defence = 0.5}
 	}
 }
 force_warrior = {
