@@ -192,6 +192,7 @@ country_event = { # Demographic Transition - fix new county and out of sync
 	id = 22603 # negation of 22600
 	title = EVT_22600_NAME # The Demographic Transition
 	desc = EVT_22600_DESC
+	picture = "demographic_transition"
 	is_triggered_only = yes # on_actions
 	allow_multiple_instances = yes
 
@@ -217,6 +218,8 @@ country_event = { # Demographic Transition - fix new county and out of sync
 			} 
 		}
 	}
+	
+	mean_time_to_happen = { months = 1 }
 	
 	option = {
 		name = OK
