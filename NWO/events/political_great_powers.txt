@@ -185,7 +185,7 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19003_A
 		FROM = { set_country_flag = accept_differances_in_gov_by_communist }
-		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { NOT = { tag = FIN } OR = { government = democracy government = hms_governemnt government = absolute_monarchy } } } }
+		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { NOT = { tag = FIN } OR = { government = democracy government = hms_government government = absolute_monarchy } } } }
 	}
 	
 	option = {
