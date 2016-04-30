@@ -185,13 +185,13 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19003_A
 		FROM = { set_country_flag = accept_differances_in_gov_by_communist }
-		ai_chance = { factor = 0.8 modifier = { factor = 100 FROM = { tag = FIN } } }
+		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { NOT = { tag = FIN } OR = { government = democracy government = hms_governemnt government = absolute_monarchy } } } }
 	}
 	
 	option = {
 		name = EVT_19003_B
 		FROM = { country_event = 19006 }
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0.5 }
 	}
 }
 
@@ -205,13 +205,13 @@ country_event = { # Demand adopt presidential dictatorship
 	option = {
 		name = EVT_19003_A
 		FROM = { set_country_flag = accept_differances_in_gov_by_communist }
-		ai_chance = { factor = 0.8 modifier = { factor = 100 FROM = { tag = FIN } } }
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
 		name = EVT_19003_B
 		FROM = { country_event = 19106 }
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -225,13 +225,13 @@ country_event = { # Demand install democracy
 	option = {
 		name = EVT_19004_A
 		FROM = { set_country_flag = accept_differances_in_gov_by_democracy }
-		ai_chance = { factor = 0.1 modifier = { factor = 100 FROM = { tag = YUG } } }
+		ai_chance = { factor = 0.9 modifier = { factor = 100 FROM = { tag = YUG } } }
 	}
 	
 	option = {
 		name = EVT_19004_B
 		FROM = { country_event = 19007 }
-		ai_chance = { factor = 0.9 modifier = { factor = 0 FROM = { tag = YUG } } }
+		ai_chance = { factor = 0.1 modifier = { factor = 0 FROM = { tag = YUG } } }
 	}
 }
 country_event = {
