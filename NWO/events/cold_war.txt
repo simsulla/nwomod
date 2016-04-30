@@ -156,14 +156,16 @@ country_event = {
 	desc = "EVT_19804_DESC"
 	picture = "cold_war"
 	fire_only_once = yes
-
+	
 	trigger = {
 		ai = no # in an multi player env this may fire multiple times but no worry as it only sets flags
-		NOT = {  }
+		NOT = { has_global_flag = blocsenabled }
 		
 		RUS = { government = proletarian_dictatorship }
 		USA = { government = democracy }
 	}
+	
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "EVT_19804_A"

@@ -52,6 +52,7 @@ political_decisions = {
 		picture = "xsu_parlament"
 		potential = {
 			has_country_flag = xsu_ambition
+			NOT = {tag = XSU}
 			OR = { 
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xsu_ambition } } }
 				NOT = { OR = { government = democracy government = hms_government } }
