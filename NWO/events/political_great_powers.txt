@@ -191,7 +191,7 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19003_B
 		FROM = { country_event = 19006 }
-		ai_chance = { factor = 0.5 }
+		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { tag = FIN } } }
 	}
 }
 
