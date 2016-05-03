@@ -174,22 +174,30 @@ political_decisions = {
 		allow = {
 			KMT = {
 				all_core = {
-					owner = {
-						OR = {
-							tag = THIS
-							in_sphere = THIS
-							vassal_of = THIS
+					OR = { 
+						province_id = 1593 # Tawang
+						province_id = 1678 # Okinawa
+						owner = {
+							OR = {
+								tag = THIS
+								in_sphere = THIS
+								vassal_of = THIS
+							}
 						}
 					}
 				}
 			}		
 			CHI = {
 				all_core = {
-					owner = {
-						OR = {
-							tag = THIS
-							in_sphere = THIS
-							vassal_of = THIS
+					OR = { 
+						province_id = 1593 # Tawang
+						province_id = 1678 # Okinawa
+						owner = {
+							OR = {
+								tag = THIS
+								in_sphere = THIS
+								vassal_of = THIS
+							}
 						}
 					}
 				}
