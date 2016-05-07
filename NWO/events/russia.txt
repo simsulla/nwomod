@@ -373,16 +373,17 @@ country_event = {
 
   option = {
     name = EVT_8014251_A
-	any_pop = { militancy = 1.0 consciousness = 2.0 }
-	country_event = 8014253 
-	ai_chance = { factor = 100 }
+	any_pop = { militancy = 1.2 consciousness = 0.6 }
+	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8014251_B
-	any_pop = { militancy = 1.2 consciousness = 0.6 }
-	ai_chance = { factor = 0 }
+	any_pop = { militancy = 0.2 consciousness = 1.0 }
+	country_event = 8014253 
+	ai_chance = { factor = 100 }
   }
+
 }
 country_event = {
   id = 8014253
@@ -393,7 +394,7 @@ country_event = {
 
   option = {
     name = EVT_8014253_A
-	any_pop = { militancy = 1.0  consciousness = 1.5 }
+	any_pop = { militancy = 1.0  consciousness = 0.5 }
 	ai_chance = { factor = 100 }
   }
 
