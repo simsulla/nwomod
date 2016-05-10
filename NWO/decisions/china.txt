@@ -100,6 +100,8 @@ political_decisions = {
 		allow = {
 			part_of_sphere = no
 			is_vassal = no
+			war = no
+			owns = 2681 # Shenzhen
 			OR = {
 				AND = { year = 1997 ai = yes }
 				AND = {
@@ -111,10 +113,7 @@ political_decisions = {
 		}
 
 		effect = {
-			random_country = { 
-				limit = { owns = 2681 } 
-				set_country_flag = the_return_of_hong_kong 
-			}
+			set_country_flag = the_return_of_hong_kong 
 			ENG = { country_event = 1002801 }
 		}
 		
