@@ -304,6 +304,27 @@ promote_to =
 }
 
 ideologies = {
+	nationalist = {
+		factor = 0.1
+		modifier = { factor = 0.7 NOT = { militancy = 2 } }
+		modifier = { factor = 0.7 NOT = { militancy = 3 } }
+		modifier = { factor = 0.7 NOT = { militancy = 4 } }			
+		modifier = { factor = 1.2 militancy = 6 }
+		modifier = { factor = 1.2 militancy = 7 }
+		modifier = { factor = 1.2 militancy = 8 }
+		modifier = { factor = 1.2 militancy = 9 }
+		modifier = { factor = 0.7 NOT = { consciousness = 2 } }
+		modifier = { factor = 0.7 NOT = { consciousness = 3 } }
+		modifier = { factor = 0.7 NOT = { consciousness = 4 } }
+		modifier = { factor = 1.2 consciousness = 7 }
+		modifier = { factor = 1.2 consciousness = 8 }
+		modifier = { factor = 1.2 consciousness = 9 }
+		modifier = { factor = 0 is_primary_culture = yes NOT = { government = nationalist_dictatorship } }
+		modifier = { factor = 10.0 location = { OR = { is_colonial = yes is_overseas = yes } } } # Decolonialization
+		modifier = { factor = 0 location = { any_core = { is_primary_culture = THIS } } }
+		modifier = { factor = 10.0 is_accepted_culture = yes minorities_reform = minorities_oppression } # Afrikaaner in SAF
+		modifier = { factor = 10.0 is_primary_culture = yes government = nationalist_dictatorship } 
+	}
 	populist = { # pragmatic social reformist and revert reforms militancy
 		factor = 0.1
 		modifier = { factor = 0.1 country = { NOT = { ruling_party_ideology = populist government = hms_government government = democracy } } NOT = { militancy = 2  } }
@@ -538,6 +559,7 @@ issues = {
 	limited_citizenship = { # non-primary/accepted cultures view in sectarian society
 		factor = 1.0
 		modifier = { factor = 0.0 country = { NOT = { has_country_flag = sectarianism } } }
+		modifier = { factor = 0.0 is_accepted_culture = yes ideology = nationalist }
 		modifier = { factor = 0.0 is_primary_culture = no }
 		modifier = { factor = 0.0 is_accepted_culture = no }
 		modifier = { factor = 1.6 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism } }
@@ -547,6 +569,7 @@ issues = {
 	full_citizenship = {
 		factor = 1.0
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism } } 
+		modifier = { factor = 0.0 is_accepted_culture = yes ideology = nationalist }
 		modifier = { factor = 1.1 is_primary_culture = no is_accepted_culture = no consciousness = 5 }
 		modifier = { factor = 1.1 is_primary_culture = no is_accepted_culture = no consciousness = 8 }
 		modifier = { factor = 1.1 consciousness = 8 }

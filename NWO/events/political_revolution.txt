@@ -930,8 +930,8 @@ country_event = { # The New Regime Form of Government
 
 country_event = {
 	id = 800151 #$COUNTRY_ADJ$ Patriots (Annexation Event)
-	title = "EVTNAME800151"
-	desc = "EVTDESC800151"
+	title = "EVT_800151_NAME"
+	desc = "EVT_800151_DESC"
 	picture = "rebellion"
 
 	trigger = {
@@ -967,7 +967,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA800151"
+		name = "EVT_800151_A"
 		random_country = {
 			limit = {
 				neighbour = THIS
@@ -1082,7 +1082,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB800151"
+		name = "EVT_800151_B"
 		any_pop = {
 			limit = { is_primary_culture = yes }
 			militancy = 3
@@ -1893,3 +1893,175 @@ province_event = {
 		}
 	}
 }
+
+country_event = {
+	
+	id = 810055
+	
+	is_triggered_only = yes
+	
+	title = "EVT_810055_NAME" #$COUNTRY_ADJ$ Independence!
+	desc = "EVT_810055_DESC"
+	picture = "unite"
+	
+	option = {
+		name = "EVT_810055_A"
+		clr_country_flag = wants_to_unify
+		clr_country_flag = does_not_want_to_unify
+		clr_country_flag = rebels_in_capital
+		any_pop = {
+			militancy = -6
+		}
+		any_owned = {
+			limit = { is_core = THIS }
+			remove_province_modifier = nationalist_agitation
+		}
+		random_country = {
+			limit = { 
+				is_sphere_leader_of = THIS
+				NOT = { is_our_vassal = THIS }
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+			set_country_flag = former_sphere_leader
+			leave_alliance = THIS
+			country_event = 800056
+		}
+		random_country = {
+			limit = { is_our_vassal = THIS }
+			release_vassal = THIS
+			leave_alliance = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+			set_country_flag = former_overlord
+			country_event = 800055
+		}
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+	}
+}
+
+country_event = {
+	id = 97700
+	title = "EVT_97700_NAME" #$COUNTRY_ADJ$ Patriots
+	desc = "EVT_97700_DESC"
+	picture = "rebellion"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_97700_A"
+		random_country = {
+			limit = {
+				tag = FROM
+				any_owned_province = {
+					OR = {
+						NOT = { has_province_modifier = patriot_uprising }
+						NOT = { is_core = THIS }
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 36
+			}
+			casus_belli = {
+				target = THIS
+				type = acquire_state
+				months = 36
+			}
+			any_state = {
+				limit = {
+					any_owned_province = {
+						has_province_modifier = patriot_uprising
+						is_core = THIS
+					}
+				}
+				any_owned = {
+					limit = { is_core = THIS }
+					any_pop = { militancy = -4 }
+					secede_province = THIS
+					change_controller = THIS
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				NOT = {
+					any_owned_province = {
+						OR = {
+							NOT = { has_province_modifier = patriot_uprising }
+							NOT = { is_core = THIS }
+						}
+					}
+				}
+			}
+			sphere_owner = {
+				casus_belli = {
+					target = THIS
+					type = free_peoples
+					months = 75
+				}
+			}
+			any_pop = { militancy = -4 }
+			any_owned = { change_controller = THIS }
+			annex_to = THIS
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "EVT_97700_B"
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = 3
+		}
+		FROM = {
+			relation = {
+				who = THIS
+				value = 20
+			}
+			any_owned = {
+				limit = {
+					has_province_modifier = patriot_uprising
+					is_core = THIS
+				}
+				remove_province_modifier = patriot_uprising
+				any_pop = { militancy = -8 }
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}	
+}
+

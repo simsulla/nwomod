@@ -111,6 +111,9 @@ right_group = {
 		add_military_reform = { base = 0.5 }
 		add_economic_reform = { base = -0.5 }
 	}
+}
+
+liberal_group = {
 	liberal = { # political reformist
 		color = { 51 153 255 }
 
@@ -146,6 +149,28 @@ right_group = {
 			}			
 		}
 		
+		add_military_reform = { base = 0.5 }
+		add_economic_reform = { base = 1 }
+	}
+	progressive = { # political reformist
+		color = { 255 20 147 } 
+		date = 1900.1.1
+		
+		add_political_reform = { base = 1 }
+		remove_political_reform = { base = 0 }
+
+		add_social_reform = { 
+			base = 0.5
+			group = {
+				modifier = { factor = 0.1 OR = { militancy = 1 social_movement_strength = 0.1 } }
+				modifier = { factor = 0.1 OR = { militancy = 2 social_movement_strength = 0.2 } }
+				modifier = { factor = 0.1 OR = { militancy = 3 social_movement_strength = 0.3 } }
+				modifier = { factor = 0.1 OR = { militancy = 4 social_movement_strength = 0.4 } }
+				modifier = { factor = 0.1 OR = { militancy = 5 social_movement_strength = 0.5 } }
+			}			
+		}
+		remove_social_reform = { base = 0 }
+
 		add_military_reform = { base = 0.5 }
 		add_economic_reform = { base = 1 }
 	}
@@ -196,26 +221,33 @@ left_group = {
 		add_social_reform = { base = 1 }
 		remove_social_reform = { base = 0 }	
 	}
-	progressive = { # political reformist
-		color = { 255 20 147 } 
-		date = 1900.1.1
+}
+
+minor_group = {
+	nationalist = {
+		color = { 255 218 185 }
 		
-		add_political_reform = { base = 1 }
-		remove_political_reform = { base = 0 }
-
-		add_social_reform = { 
-			base = 0.5
-			group = {
-				modifier = { factor = 0.1 OR = { militancy = 1 social_movement_strength = 0.1 } }
-				modifier = { factor = 0.1 OR = { militancy = 2 social_movement_strength = 0.2 } }
-				modifier = { factor = 0.1 OR = { militancy = 3 social_movement_strength = 0.3 } }
-				modifier = { factor = 0.1 OR = { militancy = 4 social_movement_strength = 0.4 } }
-				modifier = { factor = 0.1 OR = { militancy = 5 social_movement_strength = 0.5 } }
-			}			
+		add_political_reform = {
+			base = 0
 		}
-		remove_social_reform = { base = 0 }
-
-		add_military_reform = { base = 0.5 }
-		add_economic_reform = { base = 1 }
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 0
+			modifier = {
+				factor = 1
+				ruling_party_ideology = nationalist 
+			}
+		}
+	
+	
+		remove_social_reform = {
+			base = 0
+			modifier = {
+				factor = 1
+				ruling_party_ideology = nationalist 
+			}
+		}
 	}
 }
