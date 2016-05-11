@@ -559,7 +559,6 @@ issues = {
 	limited_citizenship = { # non-primary/accepted cultures view in sectarian society
 		factor = 1.0
 		modifier = { factor = 0.0 country = { NOT = { has_country_flag = sectarianism } } }
-		modifier = { factor = 0.0 is_accepted_culture = yes ideology = nationalist }
 		modifier = { factor = 0.0 is_primary_culture = no }
 		modifier = { factor = 0.0 is_accepted_culture = no }
 		modifier = { factor = 1.6 OR = { is_primary_culture = yes is_accepted_culture = yes } country = { has_country_flag = sectarianism } }
@@ -569,7 +568,6 @@ issues = {
 	full_citizenship = {
 		factor = 1.0
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism } } 
-		modifier = { factor = 0.0 is_accepted_culture = yes ideology = nationalist }
 		modifier = { factor = 1.1 is_primary_culture = no is_accepted_culture = no consciousness = 5 }
 		modifier = { factor = 1.1 is_primary_culture = no is_accepted_culture = no consciousness = 8 }
 		modifier = { factor = 1.1 consciousness = 8 }

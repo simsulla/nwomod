@@ -101,78 +101,78 @@ country_migration_target = {
 	modifier = { factor = 0.9 unemployment = 0.6 }
 	modifier = { factor = 0.9 unemployment = 0.8 }
 
-	modifier = { factor = 4.0 has_pop_culture = THIS }
+	modifier = { factor = 2.0 has_pop_culture = THIS }
 
 	# Europenas to europe, north_america and oceania
 	modifier = {
 		factor = 2.0
 		THIS = { is_culture_group = european }
-		capital_scope = { OR = { continent = north_america continent = europe continent = oceania } }
+		OR = { continent = north_america continent = europe continent = oceania }
 	}
 	modifier = {
 		factor = 0.01
 		THIS = { is_culture_group = european }
-		capital_scope = { NOT = { continent = north_america } NOT = { continent = europe continent = oceania } }
+		NOT = { continent = north_america } NOT = { continent = europe continent = oceania }
 	}
 
 	# Neo_Europenas to north_america and oceania
 	modifier = {
 		factor = 2.0
 		THIS = { is_culture_group = neo_european_cultures }
-		capital_scope = { OR = { continent = north_america continent = south_america continent = oceania } }
+		OR = { continent = north_america continent = south_america continent = oceania }
 	}
 	modifier = {
-		factor = 0
+		factor = 0.01
 		THIS = { is_culture_group = neo_european_cultures }
-		capital_scope = { NOT = { continent = north_america } NOT = { continent = south_america } NOT = { continent = oceania } }
+		NOT = { continent = north_america } NOT = { continent = south_america } NOT = { continent = oceania }
 	}
 
 	# Latin migrate to America
 	modifier = {
 		factor = 2.0
 		THIS = { is_culture_group = latin_american_cultures }
-		capital_scope = { OR = { continent = north_america continent = south_america } }
+		OR = { continent = north_america continent = south_america }
 	}
 	modifier = {
-		factor = 0
+		factor = 0.01
 		THIS = { is_culture_group = latin_american_cultures }
-		capital_scope = { NOT = { continent = north_america } NOT = { continent = south_america } }
+		NOT = { continent = north_america } NOT = { continent = south_america }
 	}
 	
 	# South and Southeast Asians to MENA
 	modifier = {
 		factor = 2.0
 		THIS = { OR = { is_culture_group = south_asian is_culture_group = southeast_asian } }
-		capital_scope = { OR = { continent = mena continent = oceania } }
+		OR = { continent = mena continent = oceania }
 	}
 	modifier = {
-		factor = 0
+		factor = 0.01
 		THIS = { OR = { is_culture_group = south_asian is_culture_group = southeast_asian } }
-		capital_scope = { NOT = { continent = mena } NOT = { continent = oceania } }
+		NOT = { continent = mena } NOT = { continent = oceania }
 	}
 	
 	# middlea east and africans to Europe
 	modifier = {
 		factor = 2.0
 		THIS = { OR = {  is_culture_group = turko_semitic is_culture_group = arabic is_culture_group = african is_culture_group = african_diaspora_cultures } }
-		capital_scope = { OR = { continent = europe continent = africa continent = mena } }
+		OR = { continent = europe continent = africa continent = mena }
 	}
 	modifier = {
-		factor = 0
+		factor = 0.01
 		THIS = { OR = { is_culture_group = turko_semitic is_culture_group = arabic is_culture_group = african is_culture_group = african_diaspora_cultures } }
-		capital_scope = { NOT = { OR = { continent = europe continent = africa continent = mena } } }
+		NOT = { OR = { continent = europe continent = africa continent = mena } }
 	}
 
 	# oceanians stay in Oceania
 	modifier = {
 		factor = 2.0
 		THIS = { is_culture_group = oceanic }
-		capital_scope = { continent = oceania }
+		continent = oceania
 	}
 	modifier = {
-		factor = 0
+		factor = 0.01
 		THIS = { is_culture_group = oceanic }
-		capital_scope = { NOT = { continent = oceania } }
+		NOT = { continent = oceania }
 	}
 	
 }
