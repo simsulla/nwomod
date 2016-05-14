@@ -23,7 +23,7 @@ political_decisions = {
 		effect = {
 			prestige = -10
 			government = presidential_dictatorship country_event = 800050
-			any_pop = { limit = { NOT = { pop_majority_ideology = conservative } } militancy = 0.5 }
+			any_pop = { limit = { NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent } } } militancy = 0.5 }
 		}
 		ai_will_do = {
 			factor = 0

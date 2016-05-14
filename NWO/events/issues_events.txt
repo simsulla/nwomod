@@ -104,14 +104,20 @@ country_event = {
 	trigger = {
 		civilized = yes
 		health_care = acceptable_health_care
-		conservative = 0.2
+		OR = { 
+			conservative = 0.2
+			big_tent = 0.2
+		}
 	}
 	
 	mean_time_to_happen = {
 		months = 800 
 		modifier = {
 			factor = 0.9
-			conservative = 0.3
+			OR = { 
+				conservative = 0.3
+				big_tent = 0.3
+			}
 		}
 		
 		modifier = {
@@ -136,9 +142,19 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB3001"
-		upper_house = {
-			ideology = conservative
-			value = 0.1
+		random_country = { 
+			limit = { tag = USA } # big_tent_politics 
+			upper_house = {
+				ideology = big_tent
+				value = 0.1
+			}
+		}
+		random_country = { 
+			limit = { NOT = { tag = USA } } # big_tent_politics 
+			upper_house = {
+				ideology = conservative
+				value = 0.1
+			}
 		}
 		poor_strata = {
 			militancy = 1
@@ -147,6 +163,10 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC3001"
+		scaled_militancy = {
+			ideology = big_tent
+			factor = 2
+		}
 		scaled_militancy = {
 			ideology = conservative
 			factor = 2
@@ -223,6 +243,14 @@ country_event = {
 		name = "EVTOPTA3003"
 		random_state = {
 			any_pop = {
+				limit = { country = { tag = USA } } # big_tent_politics
+				ideology = {
+					value = big_tent
+					factor = 0.3
+				}
+			}
+			any_pop = {
+				limit = { NOT ={ country = { tag = USA } } } # big_tent_politics
 				ideology = {
 					value = conservative
 					factor = 0.3
@@ -357,6 +385,10 @@ country_event = {
 				ideology = conservative
 				factor = 4
 			}
+			scaled_militancy = {
+				ideology = big_tent
+				factor = 4
+			}
 			random_province = {
 				add_province_modifier = {
 					name = government_sanitarium
@@ -371,6 +403,10 @@ country_event = {
 		random_state = {
 			scaled_militancy = {
 				ideology = conservative
+				factor = -2
+			}
+			scaled_militancy = {
+				ideology = big_tent
 				factor = -2
 			}
 		}
@@ -403,7 +439,10 @@ country_event = {
 		health_care = good_health_care
 		civilized = yes
 		NOT = {
-			ruling_party_ideology = conservative
+			OR = {
+				ruling_party_ideology = conservative
+				ruling_party_ideology = big_tent
+			}
 		}
 	}
 	
@@ -420,6 +459,10 @@ country_event = {
 			NOT = {
 				upper_house = {
 					ideology = conservative
+					value = 0.4
+				}
+				upper_house = {
+					ideology = big_tent
 					value = 0.4
 				}
 			}
@@ -444,6 +487,10 @@ country_event = {
 		any_pop = {
 			scaled_consciousness = {
 				ideology = conservative
+				factor = 3
+			}
+			scaled_consciousness = {
+				ideology = big_tent
 				factor = 3
 			}
 		}
@@ -500,6 +547,14 @@ country_event = {
 				ideology = conservative
 				factor = 1
 			}
+			scaled_consciousness = {
+				ideology = big_tent
+				factor = 3
+			}
+			scaled_militancy = {
+				ideology = big_tent
+				factor = 1
+			}
 		}
 	}
 	
@@ -553,6 +608,10 @@ country_event = {
 				ideology = conservative
 				factor = 3
 			}
+			scaled_militancy = {
+				ideology = big_tent
+				factor = 3
+			}
 		}
 	}
 	
@@ -603,6 +662,14 @@ country_event = {
 		}
 		scaled_consciousness = {
 			ideology = conservative
+			factor = 2
+		}
+		scaled_militancy = {
+			ideology = big_tent
+			factor = 4
+		}
+		scaled_consciousness = {
+			ideology = big_tent
 			factor = 2
 		}
 	}
@@ -676,6 +743,10 @@ country_event = {
 			ideology = conservative
 			factor = 4
 		}
+		scaled_militancy = {
+			ideology = big_tent
+			factor = 4
+		}
 	}
 	
 	option = {
@@ -698,7 +769,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		pensions = good_pensions
-		conservative = 0.2
+		OR = { conservative = 0.2 big_tent = 0.2}
 		liberal = 0.2
 	}
 	
@@ -755,7 +826,7 @@ country_event = {
 		civilized = yes
 		social_reform_want = 0.05
 		liberal = 0.1
-		conservative = 0.1
+		OR = { big_tent = 0.1 conservative = 0.1 }
 		NOT = {
 			pensions = acceptable_pensions
 			pensions = good_pensions
@@ -826,6 +897,10 @@ country_event = {
 		rich_strata = {
 			scaled_consciousness = {
 				ideology = conservative
+				factor = 4
+			}
+			scaled_consciousness = {
+				ideology = big_tent
 				factor = 4
 			}
 		}
@@ -1027,7 +1102,7 @@ country_event = {
 		civilized = yes
 		unemployment = 0.05
 		unemployment_subsidies = ghent_system
-		conservative = 0.1
+		OR = { big_tent = 0.1 conservative = 0.1 }
 		liberal = 0.1
 		NOT = {
 			economic_policy = laissez_faire
@@ -1074,6 +1149,10 @@ country_event = {
 		any_pop = {
 			scaled_militancy = {
 				ideology = conservative
+				factor = 5
+			}
+			scaled_militancy = {
+				ideology = big_tent
 				factor = 5
 			}
 		}
@@ -1895,7 +1974,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		security_reform = security_clearance_for_gov_services
-		conservative = 0.3
+		OR = { conservative = 0.3 big_tent = 0.3 }
 	}
 	
 	mean_time_to_happen = {
@@ -2248,6 +2327,10 @@ country_event = {
 		rich_strata = {
 			scaled_militancy = {
 				ideology = conservative
+				factor = 3
+			}
+			scaled_militancy = {
+				ideology = big_tent
 				factor = 3
 			}
 		}

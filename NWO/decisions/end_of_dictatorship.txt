@@ -19,7 +19,7 @@ political_decisions = {
 			set_country_flag = new_constitution
 			add_country_modifier = { name = transition_to_democracy duration = 2800 }
 			prestige = -10
-			any_pop = { limit = { NOT = { pop_majority_ideology = conservative } } militancy = 0.5 }
+			any_pop = { limit = { NOT = { pop_majority_ideology = conservative pop_majority_ideology = big_tent } } militancy = 0.5 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -49,7 +49,7 @@ political_decisions = {
 			add_country_modifier = { name = transition_to_democracy duration = 1400 }
 			clr_country_flag = new_constitution
 			prestige = -10
-			any_pop = { limit = { NOT = { pop_majority_ideology = conservative } } militancy = 0.5 }
+			any_pop = { limit = { NOT = { pop_majority_ideology = conservative pop_majority_ideology = big_tent } } militancy = 0.5 }
 		}
 		ai_will_do = {
 			factor = 1

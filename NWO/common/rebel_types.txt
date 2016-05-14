@@ -89,6 +89,7 @@ reactionary_rebels = {
 				OR = {
 					pop_majority_ideology = traditionalist
 					pop_majority_ideology = conservative
+					pop_majority_ideology = big_tent
 					pop_majority_ideology = populist
 				}
 			}			
@@ -124,7 +125,10 @@ reactionary_rebels = {
 		}
 		modifier = {
 			factor = 1.0105
-			pop_majority_ideology = conservative
+			OR = { 
+				pop_majority_ideology = conservative
+				pop_majority_ideology = big_tent
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1091,7 +1095,10 @@ liberal_rebels = {
 		
 		modifier = {
 			factor = 1.15
-			pop_majority_ideology = conservative
+			OR = {
+				pop_majority_ideology = conservative
+				pop_majority_ideology = big_tent
+			}
 			country = {
 				OR = {
 					has_country_modifier = global_liberal_agitation
@@ -1248,6 +1255,7 @@ islamist_rebels = {
 				OR = {
 					pop_majority_ideology = traditionalist
 					pop_majority_ideology = conservative
+					pop_majority_ideology = big_tent
 					pop_majority_ideology = populist
 				}
 			}			
@@ -1283,7 +1291,10 @@ islamist_rebels = {
 		}
 		modifier = {
 			factor = 1.0105
-			pop_majority_ideology = conservative
+			OR = {
+				pop_majority_ideology = conservative
+				pop_majority_ideology = big_tent
+			}
 		}
 		modifier = {
 			factor = 0

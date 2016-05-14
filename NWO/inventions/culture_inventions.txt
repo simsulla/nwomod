@@ -879,7 +879,10 @@ biased_multiculturalism = {
 		}
 		modifier = {
 			factor = 2
-			ruling_party_ideology = conservative
+			OR = { 
+				ruling_party_ideology = conservative
+				ruling_party_ideology = big_tent
+			}
 		}
 		modifier = {
 			factor = 1

@@ -143,7 +143,7 @@ country_event  = {
 	option = {
 		name = "EVTOPTC14510"
 		upper_house = {
-			ideology = conservative
+			ideology = conservative # TODO what about big tent?
 			value = 0.1
 		}
 	}
@@ -168,6 +168,13 @@ country_event = {
 			factor = 0.9
 			upper_house = {
 				ideology = conservative
+				value = 0.2
+			}
+		}
+		modifier = {
+			factor = 0.9
+			upper_house = {
+				ideology = big_tent
 				value = 0.2
 			}
 		}
@@ -1391,6 +1398,10 @@ country_event = {
 		name = "EVTOPTB14730"
 		any_pop = {
 			scaled_consciousness = {
+				ideology = big_tent
+				factor = 1
+			}
+			scaled_consciousness = {
 				ideology = conservative
 				factor = 1
 			}
@@ -1404,6 +1415,10 @@ country_event = {
 	option = {
 		name = "EVTOPTC14730"
 		any_pop = {
+			scaled_militancy = {
+				ideology = big_tent
+				factor = 1
+			}
 			scaled_militancy = {
 				ideology = conservative
 				factor = 2
@@ -1520,7 +1535,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA14750"
 		upper_house = {
-			ideology = conservative
+			ideology = conservative # what about big_tent
 			value = 0.05
 		}
 		prestige = 5
