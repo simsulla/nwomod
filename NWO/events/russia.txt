@@ -1545,10 +1545,11 @@ country_event = {
         #make the chain of events, possibly leading for sattellite state under Ukraine or supression of local politicians
         
         
-        country_event = {
-        		target = UKR
-			id = 32521
-			days = 90
+		UKR = {
+			country_event = {
+				id = 32521
+				days = 90
+			}
 		}
 	
 		ai_chance = {
@@ -1560,11 +1561,14 @@ country_event = {
         name = EVT_32520_B   
         prestige = 5
         #make the chain of events, possibly leading for sattellite state under Ukraine (bigger chance) or supression of local politicians
-        country_event = {
-        		target = UKR
-			id = 32522
-			days = 90
+        
+		UKR = {
+			country_event = {
+				id = 32522
+				days = 90
+			}
 		}
+		
         ai_chance = {
             factor = 20
         }        
@@ -1573,11 +1577,14 @@ country_event = {
     option = {            
         name = EVT_32520_C   
         prestige = 10
-        country_event = {
-        		target = UKR
-			id = 32523
-			days = 90
+		
+		UKR = {
+			country_event = {
+				id = 32523
+				days = 90
+			}
 		}
+		
         ai_chance = {
             factor = 10
         }        
@@ -1587,11 +1594,14 @@ country_event = {
         name = EVT_32520_D
         prestige = 20
         badboy = 5 #badboy points, possible transfer
-        country_event = {
-        		target = UKR
-			id = 32524
-			days = 90
-		}
+        
+		UKR = { 
+			country_event = {
+				id = 32524
+				days = 90
+			}
+		}	
+			
         ai_chance = {
             factor = 20
         }        
