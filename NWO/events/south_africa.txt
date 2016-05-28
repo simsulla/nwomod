@@ -17,8 +17,8 @@ country_event = {
   option = {
     name = EVT_8012621_A
 	any_pop = { limit = { NOT = { culture = afrikaaner } militancy = 1.0  consciousness = 2.0 } }
-	any_pop = { limit = { culture = afrikaaner } ideology = { value = populist factor = 0.9 } }
-	ruling_party_ideology = populist
+	any_pop = { limit = { culture = afrikaaner } ideology = { value = nationalist factor = 0.9 } }
+	ruling_party_ideology = nationalist
 	add_country_modifier = { name = apartheid duration = -1 }
   }
 }
@@ -41,7 +41,7 @@ country_event = {
     name = EVT_8012622_A
 	relation = { who = ENG value = -50 } 
 	government = nationalist_dictatorship country_event = 800050
-	ruling_party_ideology = socialist
+	ruling_party_ideology = nationalist
 	ai_chance = { factor = 100 }
   }
 
