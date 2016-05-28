@@ -20,6 +20,9 @@ province_event = { # Demand Autonomy
 			}
 		}
 		NOT = { is_core = THIS }
+		NOT = { has_province_modifier = grant_independence }
+		NOT = { has_province_modifier = promised_autonomy }
+		NOT = { has_province_modifier = denied_independence }
 	}
 	
 	mean_time_to_happen = {
