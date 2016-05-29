@@ -1364,7 +1364,58 @@ country_event = {
 	HND = { country_event = 8007275 }
   }
 }
+country_event = {
+  id = 8014274
+  title = EVT_8014274_NAME
+  desc = EVT_8014274_DESC
+  picture = "putin"
+  fire_only_once = yes
 
+  trigger = {
+    tag = RUS
+	government = democracy
+	has_country_modifier = in_bankrupcy
+	year = 1992
+  }
+
+  mean_time_to_happen = { months = 84  }
+
+  option = {
+    name = EVT_8014274_A
+	government = populist_dictatorship country_event = 800050
+	badboy = 3
+	any_pop	= {
+		limit = { is_primary_culture = yes } 
+		militancy = -0.5
+		ideology = {
+			factor = 0.1
+			value = populist
+		}
+		ideology = {
+			factor = 0.1
+			value = communist
+		}
+	}
+	plurality = -20
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8014274_B
+	any_pop	= {
+		limit = { is_primary_culture = yes } 
+		militancy = 0.5
+		ideology = {
+			factor = 0.1
+			value = populist
+		}
+		ideology = {
+			factor = 0.1
+			value = communist
+		}
+	}
+	ai_chance = { factor = 0 }
+  }
+}
 country_event = {
   id = 8000700
   title = EVT_8000700_NAME # Khodorkovsky Case
@@ -1382,18 +1433,9 @@ country_event = {
 
   option = {
     name = EVT_8000700_A
-	government = populist_dictatorship
+	government = populist_dictatorship country_event = 800050
 	badboy = 3
-	
 	any_pop	= {
-		limit = { country = { tag = USA } } # big_tent_politics
-		ideology = {
-			factor = 0.3
-			value = big_tent
-		}
-	}
-	any_pop	= {
-		limit = { country = { NOT = { tag = USA } } } # big_tent_politics
 		ideology = {
 			factor = 0.3
 			value = conservative
@@ -1438,22 +1480,7 @@ country_event = {
 		factor = 2
 		ideology = communist
 	}
-	
 	nationalvalue = nv_order
-	
-	political_reform = registered_voting
-	political_reform = regulated_opinion
-	political_reform = no_state_religion
-	political_reform = open_unregulated
-	political_reform = quality_of_service
-	political_reform = firewall_publishing
-	political_reform = gender_equal
-	political_reform = parties_only_nominated
-	political_reform = quota_immigration
-	political_reform = lgbt_outlawed
-	political_reform = minorities_equal_rights
-	political_reform = proportional_representation
-	
 	plurality = -20
 	
 	ai_chance = { factor = 70 }
