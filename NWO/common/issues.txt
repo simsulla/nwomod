@@ -344,14 +344,66 @@ political_reforms = {
 			}
 		}
 		parties_promote_democratic = { # non_secret_ballots
-			ruling_party_support = 0.05
+			country = { 
+				ideology = {
+					factor = 0.05
+					value = liberal
+				}
+			}
+			country = { 
+				ideology = {
+					factor = 0.05
+					value = progressive
+				}
+			}
+			country = { 
+				ideology = {
+					factor = 0.05
+					value = socialist
+				}
+			}
 			allow = {
 				year = 1990 # cultural_imperialism = 1
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 		parties_restrict_non_democratic = { # secret_ballots
-			ruling_party_support = 0.1
+			country = { 
+				ideology = {
+					factor = 0.05
+					value = liberal
+				}
+			}
+			country = { 
+				ideology = {
+					factor = 0.05
+					value = progressive
+				}
+			}
+			country = { 
+				ideology = {
+					factor = 0.05
+					value = socialist
+				}
+			}
+			country = { 
+				ideology = {
+					factor = -0.05
+					value = populist
+				}
+			}
+			country = { 
+				ideology = {
+					factor = -0.05
+					value = traditionalist
+				}
+			}
+			country = { 
+				ideology = {
+					factor = -0.05
+					value = communist
+				}
+			}
 			allow = {
 				year = 2010 #colour_revolution = 1
 				NOT = { vote_franschise = none_voting }
