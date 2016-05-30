@@ -746,6 +746,179 @@ country_event = {
 	}
 }
 
+#Promotion of democracy
+country_event = {
+	id = 3205
+	title = "EVTNAME3205"
+	desc = "EVTDESC3205"
+	picture = "voting"
+	
+	trigger = {
+		civilized = yes
+		political_parties = parties_promote_democratic
+	}
+	
+	mean_time_to_happen = {
+		years = 4	
+		modifier = {
+			factor = 10
+			election = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA3205"
+		any_owned = {
+			limit = {
+				country = { tag = USA } # big_tent_politics
+				NOT = {
+					is_colonial = yes
+				}
+			}
+			any_pop = {
+				ideology = {
+					value = big_tent
+					factor = 0.15
+				}
+				ideology = {
+					value = socialist   
+					factor = 0.05
+				}
+				ideology = {  
+					value = progressive
+					factor = 0.05
+				}
+				ideology = {
+					value = liberal
+					factor = 0.05
+				}
+			}
+		}
+		any_owned = {
+			limit = {
+				NOT = { country = { tag = USA } } # big_tent_politics
+				NOT = {
+					is_colonial = yes
+				}
+			}
+			any_pop = {
+				ideology = {
+					value = socialist   
+					factor = 0.05
+				}
+				ideology = {  
+					value = progressive
+					factor = 0.05
+				}
+				ideology = {
+					value = liberal
+					factor = 0.05
+				}
+			}
+		}
+		add_tax_relative_income = -0.01
+	}
+}
+
+#Restriction of non-democratic
+country_event = {
+	id = 3206
+	title = "EVTNAME3206"
+	desc = "EVTDESC3206"
+	picture = "voting"
+	
+	trigger = {
+		civilized = yes
+		political_parties = parties_restrict_non_democratic
+	}
+	
+	mean_time_to_happen = {
+		years = 4	
+		modifier = {
+			factor = 5
+			election = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA3206"
+		any_owned = {
+			limit = {
+				country = { tag = USA } # big_tent_politics
+				NOT = {
+					is_colonial = yes
+				}
+			}
+			any_pop = {
+				ideology = {
+					value = big_tent
+					factor = 0.15
+				}
+				ideology = {
+					value = socialist   
+					factor = 0.05
+				}
+				ideology = {  
+					value = progressive
+					factor = 0.05
+				}
+				ideology = {
+					value = liberal
+					factor = 0.05
+				}
+				ideology = {
+					value = communist   
+					factor = -0.05
+				}
+				ideology = {  
+					value = traditionalist
+					factor = -0.05
+				}
+				ideology = {
+					value = populist
+					factor = -0.05
+				}
+			}
+		}
+		any_owned = {
+			limit = {
+				NOT = { country = { tag = USA } } # big_tent_politics
+				NOT = {
+					is_colonial = yes
+				}
+			}
+			any_pop = {
+				ideology = {
+					value = socialist   
+					factor = 0.05
+				}
+				ideology = {  
+					value = progressive
+					factor = 0.05
+				}
+				ideology = {
+					value = liberal
+					factor = 0.05
+				}
+				ideology = {
+					value = communist   
+					factor = -0.05
+				}
+				ideology = {  
+					value = traditionalist
+					factor = -0.05
+				}
+				ideology = {
+					value = populist
+					factor = -0.05
+				}
+			}
+		}
+		add_tax_relative_income = -0.01
+	}
+}
+
+
 #### Trade Unions ####
 # Red John
 country_event = {
