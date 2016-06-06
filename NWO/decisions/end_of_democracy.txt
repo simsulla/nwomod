@@ -17,7 +17,7 @@ political_decisions = {
 			set_country_flag = reform_legal_system
 			add_country_modifier = { name = transition_to_dictatorship duration = 2800 }
 			prestige = -10
-			any_pop = { limit = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist } } militancy = 0.5 }
+			any_pop = { limit = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } } militancy = 0.5 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -48,7 +48,7 @@ political_decisions = {
 			add_country_modifier = { name = transition_to_dictatorship duration = 1400 }
 			clr_country_flag = reform_legal_system
 			prestige = -10
-			any_pop = { limit = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist } } militancy = 0.5 }
+			any_pop = { limit = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } } militancy = 0.5 }
 		}
 		ai_will_do = {
 			factor = 1

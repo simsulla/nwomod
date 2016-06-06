@@ -1956,6 +1956,10 @@ country_event = {
 				NOT = { conservative = 0.25 }
 			}
 			AND = {
+				ruling_party_ideology = big_tent
+				NOT = { big_tent = 0.25 }
+			}
+			AND = {
 				ruling_party_ideology = liberal
 				NOT = { liberal = 0.25 }
 			}
@@ -2058,6 +2062,16 @@ country_event = {
 				NOT = { militancy = 0.5 }
 			}
 			ideology = { value = conservative factor = 0.05 }
+		}
+		any_pop = {
+			limit = {
+				country = { ruling_party_ideology = big_tent }
+				location = { has_province_modifier = support_the_government }
+				is_primary_culture = yes
+				NOT = { unemployment = 0.01 }
+				NOT = { militancy = 0.5 }
+			}
+			ideology = { value = big_tent factor = 0.05 }
 		}
 		any_pop = {
 			limit = {
@@ -2190,7 +2204,10 @@ country_event = {
 	trigger = {
 		election = no
 		has_country_flag = election_initialized
-		ruling_party_ideology = conservative
+		OR = { 
+			ruling_party_ideology = big_tent
+			ruling_party_ideology = conservative
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -2265,6 +2282,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { tag = USA } # big_tent_politics
 					vote_franschise = registered_voting
 				}
 			}
@@ -2296,6 +2314,39 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					tag = USA # big_tent_politics
+					vote_franschise = registered_voting
+				}
+			}
+			owner = {
+				any_pop = {
+					limit = {
+						location = { is_colonial = no }
+						strata = rich
+						OR = {
+							is_primary_culture = yes
+							is_accepted_culture = yes
+						}
+					}
+					ideology = {
+						value = big_tent
+						factor = 0.02
+					}
+					scaled_militancy = {
+						ideology = big_tent
+						factor = -2
+					}
+					scaled_consciousness = {
+						ideology = big_tent
+						factor = -2
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { tag = USA } # big_tent_politics
 					vote_franschise = universal_weighted_voting
 				}
 			}
@@ -2330,6 +2381,42 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					tag = USA # big_tent_politics
+					vote_franschise = universal_weighted_voting
+				}
+			}
+			owner = {
+				any_pop = {
+					limit = {
+						location = { is_colonial = no }
+						OR = {
+							strata = rich
+							strata = middle
+						}
+						OR = {
+							is_primary_culture = yes
+							is_accepted_culture = yes
+						}
+					}
+					ideology = {
+						value = big_tent
+						factor = 0.02
+					}
+					scaled_militancy = {
+						ideology = big_tent
+						factor = -2
+					}
+					scaled_consciousness = {
+						ideology = big_tent
+						factor = -2
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { tag = USA } # big_tent_politics
 					OR = {
 						vote_franschise = universal_weighted_voting
 						vote_franschise = promoted_voting
@@ -2355,6 +2442,40 @@ country_event = {
 					}
 					scaled_consciousness = {
 						ideology = conservative
+						factor = -2
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = USA # big_tent_politics
+					OR = {
+						vote_franschise = universal_weighted_voting
+						vote_franschise = promoted_voting
+					}
+				}
+			}
+			owner = {
+				any_pop = {
+					limit = {
+						location = { is_colonial = no }
+						OR = {
+							is_primary_culture = yes
+							is_accepted_culture = yes
+						}
+					}
+					ideology = {
+						value = big_tent
+						factor = 0.02
+					}
+					scaled_militancy = {
+						ideology = big_tent
+						factor = -2
+					}
+					scaled_consciousness = {
+						ideology = big_tent
 						factor = -2
 					}
 				}
@@ -5721,6 +5842,21 @@ country_event = {
 		} 
 		any_pop = {
 			limit = {
+				country = { tag = USA }
+				location = { is_colonial = no }
+			}
+			ideology = {
+				value = big_tent
+				factor = 0.05
+			}
+			scaled_consciousness = {
+				ideology = big_tent
+				factor = -2
+			}
+		}
+		any_pop = {
+			limit = {
+				country = { NOT = { tag = USA } }
 				location = { is_colonial = no }
 			}
 			ideology = {
@@ -5737,6 +5873,10 @@ country_event = {
 			modifier = {
 				factor = 2
 				ruling_party_ideology = conservative
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = big_tent
 			}
 		}
 	}
@@ -6648,8 +6788,8 @@ country_event = {
 	trigger = {
 		has_country_flag = election_initialized
 		election = yes
-		conservative = 5
-		NOT = { ruling_party_ideology = conservative }
+		OR = { big_tent = 5 conservative = 5 }
+		NOT = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 		NOT = { has_country_modifier = election_cooldown }
 	}
 	
@@ -6728,6 +6868,21 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
+				country = { tag = USA } # big_tent_politics
+				location = { is_colonial = no }
+			}
+			ideology = {
+				value = big_tent
+				factor = 0.05
+			}
+			scaled_consciousness = {
+				ideology = big_tent
+				factor = -3
+			}
+		}
+		any_pop = {
+			limit = {
+				country = { NOT = { tag = USA } } # big_tent_politics
 				location = { is_colonial = no }
 			}
 			ideology = {
@@ -7919,9 +8074,20 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
+				country = { tag = USA }
 				unemployment = 0.1
 				location = { is_colonial = no }
-				NOT = { OR = { religion = sunni religion = shiite } }
+			}
+			ideology = {
+				value = big_tent
+				factor = 0.025
+			}
+		}
+		any_pop = {
+			limit = {
+				country = { NOT = { tag = USA } }
+				unemployment = 0.1
+				location = { is_colonial = no }
 			}
 			ideology = {
 				value = conservative
@@ -7932,7 +8098,6 @@ country_event = {
 			limit = {
 				unemployment = 0.1
 				location = { is_colonial = no }
-				OR = { religion = sunni religion = shiite }
 			}
 			ideology = {
 				value = traditionalist

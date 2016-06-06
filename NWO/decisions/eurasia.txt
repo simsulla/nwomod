@@ -180,7 +180,7 @@ political_decisions = {
 		picture = "xea_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XEA } }
-			OR = { capital_scope = { continent = europe }  capital_scope = { continent = asia }}
+			OR = { capital_scope = { continent = europe is_core = THIS }  capital_scope = { continent = asia is_core = THIS }}
 			OR = { in_sphere = RUS in_sphere = XEA tag = RUS }
 			NOT = { has_country_flag = xac_ambition } 
 			NOT = { has_country_flag = xal_ambition } 

@@ -6,7 +6,7 @@ political_decisions = {
 	xeu_ambition = {
 		picture = "xeu_ambition"
 		potential = {
-			capital_scope = { continent = europe } # NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
+			capital_scope = { continent = europe }
 			NOT = { has_country_flag = xeu_ambition } 
 			NOT = { has_country_flag = imp_ambition } # filter for commonwealth ANZ
 		}
@@ -126,7 +126,7 @@ political_decisions = {
 		picture = "xeu_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XEU } }
-			capital_scope = { continent = europe } # NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
+			capital_scope = { continent = europe is_core = THIS } # NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
 		}
 		allow = {
 			has_country_flag = xeu_ambition
@@ -233,7 +233,7 @@ political_decisions = {
 		picture = "xeu_ambition"
 		potential = {
 			tag = XEU
-			any_greater_power = { has_country_flag = xeu_ambition ai = no NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
+			any_greater_power = { has_country_flag = xeu_ambition NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
 		}
 		allow = {
 			OR = { government = democracy government = hms_government }
@@ -243,7 +243,7 @@ political_decisions = {
             war = no
 		}
 		effect = {
-			any_country = { limit = { has_country_flag = xeu_ambition OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
+			any_greater_power= { limit = { has_country_flag = xeu_ambition} country_event = 11106 }
 			add_country_modifier = { name = xeu_enlarge_union_gp duration = 3500 }
 		}
 		ai_will_do = {

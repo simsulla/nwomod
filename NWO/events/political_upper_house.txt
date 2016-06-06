@@ -61,7 +61,7 @@ country_event = {
 			value = 0.05
 		}
 		upper_house = {
-			ideology = conservative
+			ideology = conservative # big_tent_politics
 			value = 0.02
 		}
 	}
@@ -69,7 +69,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB18010"
 		upper_house = {
-			ideology = conservative
+			ideology = conservative # big_tent_politics
 			value = 0.05
 		}
 		upper_house = {
@@ -442,6 +442,10 @@ country_event = {
 			factor = 4
 		}
 		scaled_militancy = {
+			ideology = big_tent
+			factor = 4
+		}
+		scaled_militancy = {
 			ideology = liberal
 			factor = 3
 		}
@@ -460,7 +464,7 @@ country_event = {
 		social_reform_want = 0.1
 		average_militancy = 4
 		upper_house = {
-			ideology = conservative
+			ideology = conservative # big_tent_politics
 			value = 0.1
 		}
 	}
@@ -500,11 +504,12 @@ country_event = {
 	trigger = {
 		average_militancy = 5
 		upper_house = {
-			ideology = conservative
+			ideology = conservative # big_tent_politics
 			value = 0.4
 		}
 		NOT = {
 			ruling_party_ideology = conservative
+			ruling_party_ideology = big_tent
 		}
 	}
 	
@@ -515,7 +520,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA18120"
 		upper_house = {
-			ideology = conservative
+			ideology = conservative # big_tent_politics
 			value = 0.5
 		}
 	}
@@ -749,10 +754,13 @@ country_event = {
 	trigger = {
 		average_consciousness = 3
 		upper_house = {
-			ideology = conservative
+			ideology = conservative 
 			value = 0.1
 		}
-		ruling_party_ideology = conservative
+		OR = {
+			ruling_party_ideology = conservative
+			ruling_party_ideology = big_tent
+		}
 	}
 	
 	mean_time_to_happen = {

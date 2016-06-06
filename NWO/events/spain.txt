@@ -102,3 +102,25 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
+country_event = {
+  id = 8014313
+  title = EVT_8014312_NAME
+  desc = EVT_8014312_DESC
+  picture = "nwo2_juan_carlos_i"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SPA
+	has_country_modifier = boycott_fascism
+	NOT = { government = populist_dictatorship }
+  }
+
+  mean_time_to_happen = { months = 10 }
+
+  option = {
+    name = EVT_8014312_A
+	badboy = -50
+	remove_country_modifier = boycott_fascism
+	ai_chance = { factor = 100 }
+  }
+}

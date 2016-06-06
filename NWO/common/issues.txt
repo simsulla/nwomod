@@ -344,14 +344,14 @@ political_reforms = {
 			}
 		}
 		parties_promote_democratic = { # non_secret_ballots
-			ruling_party_support = 0.05
+			#Yearly event will increase support of democratic ideologies and eat a percentage of money
 			allow = {
 				year = 1990 # cultural_imperialism = 1
 				NOT = { vote_franschise = none_voting }
 			}
 		}
 		parties_restrict_non_democratic = { # secret_ballots
-			ruling_party_support = 0.1
+			#Same as promotion of democratic plus decrease of support for non-democratic ideologies
 			allow = {
 				year = 2010 #colour_revolution = 1
 				NOT = { vote_franschise = none_voting }
@@ -433,7 +433,7 @@ political_reforms = {
 		}
 	}
 	voting_system = {
-		next_step_only = yes
+		next_step_only = no
 		first_past_the_post = {
 			rules = { largest_share = yes }
 			allow = { 

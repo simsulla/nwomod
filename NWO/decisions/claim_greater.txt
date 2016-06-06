@@ -1147,7 +1147,8 @@ political_decisions = {
                         696 = { add_core = GER }
                         695 = { add_core = GER }
                         697 = { add_core = GER }
-                }
+						690 = { add_core = GER }
+				}
 
         }
         abandon_claim_greater_germany = {
@@ -2578,7 +2579,7 @@ political_decisions = {
 			effect = {
 					badboy = 12
 					set_country_flag = claim_greater_guatemala
-					2966 = { add_core = GUA }
+					2190 = { add_core = GUA }
 			}
 
 	}
@@ -2691,8 +2692,86 @@ political_decisions = {
 			}
 
 	}		
-		
+
+	claim_greater_italy= {
+		picture = "claim_greater_italy"
+		potential = {
+			tag = ITA
+			NOT = { has_country_flag = claim_greater_italy }
+		}
+
+		allow = {
+		   tag = ITA
+			has_unclaimed_cores = no
+			NOT = {	
+				has_country_flag = claim_greater_italy
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal 
+			}
+			is_vassal = no
+			OR = {
+				ruling_party_ideology = populist
+				jingoism = 24
+			}
+		}
+
+		effect = {
+			badboy = 2
+			set_country_flag = claim_greater_italy
+			465 = { add_core = ITA } # Savoy
+			472 = { add_core = ITA } # Nice
+			473 = { add_core = ITA } # Corsica
+			2568 = { add_core = ITA } # Lugano
+			770 = { add_core = ITA } # Pola
+			778 = { add_core = ITA } # Rijeka
+			781 = { add_core = ITA } # Zadar
+			780 = { add_core = ITA } # Split
+			782 = { add_core = ITA } # Dubrovnik
+			826 = { add_core = ITA } # Corfu
+			827 = { add_core = ITA } # Zante
+		}
+		ai_will_do = { factor = 1 }
+
+	}
+
+	abandon_claim_greater_italy = {
+
+		potential = {
+			tag = ITA
+			has_country_flag = claim_greater_italy
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			has_country_flag = claim_greater_italy
+			part_of_sphere = yes
+			NOT = { jingoism = 5 }
+			has_country_flag = international_court_of_justice
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal
+			}
+		}
+
+		effect = {
+			prestige = 10
+			any_pop = {
+				consciousness = 1
+			}
+			clr_country_flag = claim_greater_italy
+			all_core = { 
+				limit = { NOT = { owned_by = THIS } is_primary_culture = yes }
+				remove_core = ITA
+			}
+		}
+
+	}
 		
 }
-
-

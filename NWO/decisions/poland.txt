@@ -25,6 +25,10 @@ political_decisions = {
 			any_pop = { limit = { location = { state_id = 690 } culture = german } move_pop = 551 } # W Prussia -> E.Berlin
 			any_pop = { limit = { location = { state_id = 682 } culture = german } move_pop = 564 } # Lower Silesia -> Frankfurt.a.M
 			any_pop = { limit = { location = { state_id = 546 } culture = german } move_pop = 551 } # Pomeria -> E.Berlin
+			# have to fill empty german provices
+			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 683 }
+			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 679 }
+			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 680 }
 		}
 	}
 

@@ -761,7 +761,7 @@ country_event = {
 	immediate = { 
 		great_wars_enabled = yes
 		set_global_flag = great_wars_enabled
-		set_global_flag = NWO_v1_06 # TODO change with a new version
+		set_global_flag = NWO_v1_07 # TODO change with a new version
 	}
 	
 	option = {
@@ -1842,7 +1842,8 @@ country_event = {
 	option = {
 		name = EVT_96088_C
 		government = presidential_dictatorship country_event = 800050
-		ruling_party_ideology = conservative
+		random_country = { limit = { THIS = { tag = USA } } ruling_party_ideology = conservative }
+		random_country = { limit = { tag = THIS NOT = { THIS = { tag = USA } } } ruling_party_ideology = big_tent } # big_tent_politics
 		set_country_flag = tory_election_win
 		clr_country_flag = socialist_election_win
 		clr_country_flag = liberal_election_win

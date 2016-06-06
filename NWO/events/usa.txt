@@ -59,7 +59,7 @@ country_event = {
 		AFG = { OR = { government = theocracy government = nationalist_dictatorship } }
 	}
 	
-	immediate = { random_country = { limit = { tag = AFG }  badboy = 30 } }
+	immediate = { AFG = { badboy = 30 } }
 	
 	mean_time_to_happen = {
 		months = 11
@@ -69,13 +69,37 @@ country_event = {
 	option = {
 		name = EVT_1015802_A 
 		any_country = { limit = { NOT = { ruling_party_ideology = traditionalist } } relation = { who = AFG value = -200 } } 
-		random_country = { limit = { tag = PAK  ai = yes } create_alliance = USA }
-		war = {
+		any_country = { 
+			limit = { tag = PAK  ai = yes } 
+			create_alliance = USA 
+			relation = { who = USA value = 200 }
+			casus_belli = {
+				target = AFG
+				type = install_democracy
+				months = 60
+			}
+			casus_belli = {
+				target = AFG
+				type = install_authoritarian_regime
+				months = 60
+			}
+			war = {
+				target = AFG
+				attacker_goal = { casus_belli = install_democracy }
+				attacker_goal = { casus_belli = install_authoritarian_regime }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		casus_belli = {
 			target = AFG
-			attacker_goal = { casus_belli = install_democracy }
-			attacker_goal = { casus_belli = add_to_sphere }
-			defender_goal = { casus_belli = status_quo }
-			#call_ally = yes
+			type = install_democracy
+			months = 60
+		}
+		casus_belli = {
+			target = AFG
+			type = add_to_sphere
+			months = 60
 		}
 		prestige = 20
 		badboy = 0.5
@@ -147,6 +171,7 @@ country_event = {
 		random_country = { limit = { tag = USA ruling_party_ideology  = socialist } ideology  = { factor = 0.2  value = socialist } }
 		random_country = { limit = { tag = USA ruling_party_ideology  = liberal } ideology  = { factor = 0.2  value = liberal } }
 		random_country = { limit = { tag = USA ruling_party_ideology  = conservative } ideology  = { factor = 0.2  value = conservative } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = big_tent } ideology  = { factor = 0.2  value = big_tent } }
 		random_country = { limit = { tag = USA ruling_party_ideology  = populist } ideology  = { factor = 0.2  value = populist } }
 		random_country = { limit = { tag = USA ruling_party_ideology  = traditionalist } ideology  = { factor = 0.2  value = traditionalist } }
 		ISR = { 
@@ -162,6 +187,7 @@ country_event = {
 		random_country = { limit = { tag = USA ruling_party_ideology  = socialist } ideology  = { factor = -0.2  value = socialist } }
 		random_country = { limit = { tag = USA ruling_party_ideology  = liberal } ideology  = { factor = -0.2  value = liberal } }
 		random_country = { limit = { tag = USA ruling_party_ideology  = conservative } ideology  = { factor = -0.2  value = conservative } }
+		random_country = { limit = { tag = USA ruling_party_ideology  = big_tent } ideology  = { factor = -0.2  value = big_tent } }
 		random_country = { limit = { tag = USA ruling_party_ideology  = populist } ideology  = { factor = -0.2  value = populist } }
 		random_country = { limit = { tag = USA ruling_party_ideology  = traditionalist } ideology  = { factor = -0.2  value = traditionalist } }
 		prestige = -30
@@ -187,6 +213,7 @@ country_event = {
 		tag = USA
 		year = 2001
 		month = 8
+		has_global_flag = world_trade_center
 	}
 	
 	mean_time_to_happen = {
@@ -228,7 +255,7 @@ country_event = {
   option = {
     name = EVT_8015801_B
 	any_pop = { militancy = 1.0 consciousness = 1.0 }
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	ai_chance = { factor = 0 }
   }
 }
@@ -250,7 +277,7 @@ country_event = {
 
   option = {
     name = EVT_8015802_A
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	ai_chance = { factor = 100 }
   }
 
@@ -279,7 +306,7 @@ country_event = {
 
   option = {
     name = EVT_8015803_A
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	ai_chance = { factor = 100 }
   }
 
@@ -314,7 +341,7 @@ country_event = {
 
   option = {
     name = EVT_8015804_B
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
@@ -363,7 +390,7 @@ country_event = {
 
   option = {
     name = EVT_8015806_B
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	any_pop = { militancy = 0.2 consciousness = 1.0 }
 	ai_chance = { factor = 0 }
   }
@@ -386,7 +413,7 @@ country_event = {
 
   option = {
     name = EVT_8015807_A
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	ai_chance = { factor = 100 }
   }
 
@@ -415,7 +442,7 @@ country_event = {
 
   option = {
     name = EVT_8015808_A
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	any_pop = { militancy = -0.2 consciousness = -1 }
 	ai_chance = { factor = 100 }
   }
@@ -491,7 +518,7 @@ country_event = {
 
   option = {
     name = EVT_8015811_B
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	any_pop = { militancy = 1.0 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
@@ -514,7 +541,7 @@ country_event = {
 
   option = {
     name = EVT_8015812_A
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	any_pop = { militancy = -1.2 consciousness = -0.6 }
 	ai_chance = { factor = 100 }
   }
@@ -544,7 +571,7 @@ country_event = {
 
   option = {
     name = EVT_8015813_A
-	any_pop = { ideology = { factor = 0.2 value = conservative } }
+	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
 	ai_chance = { factor = 100 }
   }
 

@@ -169,6 +169,8 @@ country_event = {
 		OR = {
 			conservative = 10
 			any_owned_province = { conservative = 20 }
+			big_tent = 10
+			any_owned_province = { big_tent = 20 }
 		}
 	}
 	
@@ -180,18 +182,18 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			ruling_party_ideology = conservative
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 			NOT = { publishing_rights = unregulated_publishing }
 		}
 		modifier = {
 			factor = 0.5
 			election = yes
-			ruling_party_ideology = conservative
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 		}
 		modifier = {
 			factor = 0.75
 			election = no
-			ruling_party_ideology = conservative
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 		}
 		modifier = {
 			factor = 1.5
@@ -215,53 +217,53 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.8
-			conservative = 25
+			OR = { conservative = 25 big_tent = 25 }
 		}
 		modifier = {
 			factor = 0.8
-			conservative = 50
+			OR = { conservative = 50 big_tent = 50 }
 		}
 		modifier = {
 			factor = 0.8
-			conservative = 75
+			OR = { conservative = 75 big_tent = 75 }
 		}	
 		modifier = {
 			factor = 1.2
-			NOT = {	ruling_party_ideology = conservative }
+			NOT = {	OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent } }
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { ruling_party_ideology = conservative }
+			NOT = {OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent } }
 			political_parties = parties_only_nominated
 		}
 		modifier = {
 			factor = 0.8
-			NOT = { ruling_party_ideology = conservative }
+			NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent } }
 			political_parties = parties_allowed
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { ruling_party_ideology = conservative }
+			NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent } }
 			political_parties = parties_promote_democratic
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { ruling_party_ideology = conservative }
+			NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent } }
 			publishing_rights = firewall_publishing
 		}
 		modifier = {
 			factor = 1.5
-			ruling_party_ideology = conservative
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 			political_parties = parties_only_nominated
 		}
 		modifier = {
 			factor = 1.2
-			ruling_party_ideology = conservative
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 			political_parties = parties_allowed
 		}
 		modifier = {
 			factor = 1.1
-			ruling_party_ideology = conservative
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 			political_parties = parties_promote_democratic
 		}
 	}
@@ -270,7 +272,7 @@ country_event = {
 		name = "EVTOPTA880190"
 		random_owned = {
 			limit = {
-				owner = { ruling_party_ideology = conservative }
+				owner = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent } }
 			}
 			owner = {
 				prestige = -5
@@ -284,10 +286,14 @@ country_event = {
 		any_pop = {
 			limit = {
 				location = { is_colonial = no }
-				conservative = 10
+				OR = { conservative = 10 big_tent = 10 }
 			}
 			ideology = {
 				value = conservative
+				factor = -0.1
+			}
+			ideology = {
+				value = big_tent
 				factor = -0.1
 			}
 		}	
@@ -297,6 +303,10 @@ country_event = {
 			}
 			scaled_consciousness = {
 				ideology = conservative
+				factor = 5
+			}
+			scaled_consciousness = {
+				ideology = big_tent
 				factor = 5
 			}
 		}

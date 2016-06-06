@@ -307,7 +307,9 @@ migration_chance = { # 1
 
 	modifier = { factor = -0.5 location = { is_state_capital = yes } }
 
-	modifier = { factor = -0.5 OR = { type = farmers type = labourers } }
+	modifier = { factor = -4 location = { NOT = { total_pops = 10000 } } }
+
+	modifier = { factor = -1.0 OR = { type = farmers type = labourers } }
 
 	group = {
 		modifier = { factor = 0.3 unemployment = 0.1 }
@@ -373,6 +375,8 @@ emigration_chance = { # 0.5
 	modifier = { factor = 0.2 NOT = { life_needs = 1.0 } }
 
 	modifier = { factor = -0.4 location = { is_state_capital = yes } }
+	
+	modifier = { factor = -4 location = { NOT = { total_pops = 10000 } } }
 
 	modifier = { factor = -0.4 OR = { type = farmers type = labourers } }
 

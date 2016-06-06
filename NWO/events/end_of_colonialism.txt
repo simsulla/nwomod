@@ -20,6 +20,9 @@ province_event = { # Demand Autonomy
 			}
 		}
 		NOT = { is_core = THIS }
+		NOT = { has_province_modifier = grant_independence }
+		NOT = { has_province_modifier = promised_autonomy }
+		NOT = { has_province_modifier = denied_independence }
 	}
 	
 	mean_time_to_happen = {
@@ -197,7 +200,7 @@ province_event = { # Colonial unrest in $PROVINCENAME$
   }
 
   mean_time_to_happen = { 
-	months = 120 
+	months = 240 
 	modifier = { continent = asia factor = 0.1 }
 	modifier = { continent = mena factor = 0.5 }
 	modifier = { continent = africa factor = 2 }
@@ -322,6 +325,7 @@ country_event = { # Full independence of $COUNTRY$
   trigger = {
 	has_country_flag = full_independance
 	NOT = { ruling_party_ideology = conservative }
+	NOT = { ruling_party_ideology = big_tent }
 	NOT = { ruling_party_ideology = traditionalist }
     is_vassal = yes
   }
