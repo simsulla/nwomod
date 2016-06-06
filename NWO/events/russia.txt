@@ -1690,7 +1690,7 @@ country_event = {
      
     option = {
     	name = EVT_32521_D #"Give them what they want"
-    	create_vassal = CRI
+    	release_vassal = CRI
     	relation = {
 	        who = CRI
 	        value = 200
@@ -1699,9 +1699,9 @@ country_event = {
 	        who = RUS
 	        value = 100
         }
-        CRI = {
+        RUS = {
         	diplomatic_influence = {
-				who = RUS
+				who = CRI
 				value = 100
 			}
 		}
@@ -1764,7 +1764,7 @@ country_event = {
      
     option = {
     	name = EVT_32522_C # "Give them what they want"
-    	create_vassal = CRI
+    	release_vassal = CRI
     	relation = {
 	        who = CRI
 	        value = 200
@@ -1773,9 +1773,9 @@ country_event = {
 	        who = RUS
 	        value = 100
         }
-        CRI = {
+        RUS = {
         	diplomatic_influence = {
-			who = RUS
+			who = CRI
 			value = 200
 			}
 		}
@@ -1826,7 +1826,7 @@ country_event = {
      
     option = {
     	name = EVT_32523_C # "Create an assosiated state"
-    	create_vassal = CRI
+    	release_vassal = CRI
     	relation = {
 	        who = CRI
 	        value = 100
@@ -1836,9 +1836,9 @@ country_event = {
 			type = release_puppet
 			months = 12
 		}
-		CRI = {
+		RUS = {
         	diplomatic_influence = {
-				who = RUS
+				who = CRI
 				value = 200
 			}
 		}
@@ -1850,6 +1850,10 @@ country_event = {
     option = {
     	name = EVT_32523_D # "Give them what they want"
     	release = CRI
+		CRI = {
+			add_accepted_culture = ukrainian
+			add_accepted_culture = tatar
+		}
     	relation = {
 	        who = CRI
 	        value = 200
@@ -1859,9 +1863,9 @@ country_event = {
 	        value = 100
         }
         
-        CRI = {
+        RUS = {
         	diplomatic_influence = {
-		who = RUS
+		who = CRI
 		value = 200
 		}
 	}
@@ -1915,7 +1919,7 @@ country_event = {
      
      option = {
     	name = EVT_32524_C #"Create an assosiated state"
-    	create_vassal = CRI
+    	release_vassal = CRI
     	relation = {
 	        who = CRI
 	        value = 100
@@ -1931,9 +1935,9 @@ country_event = {
 			months = 12
 		}
 	
-		CRI = {
+		RUS = {
         	diplomatic_influence = {
-				who = RUS
+				who = CRI
 				value = 200
 			}
 		}
@@ -1946,7 +1950,7 @@ country_event = {
      option = {
     	name = EVT_32524_D #"Give them what they want"
     	release = CRI
-    	CRI = {annex_to=RUS}
+    	CRI = { annex_to = RUS }
     	relation = {
 	        who = RUS
 	        value = 200
