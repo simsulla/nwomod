@@ -425,4 +425,53 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+
+	peace_mission = {
+		picture = "peace_mission"
+		potential = {
+			ai = no # performance reasons
+			OR = {
+				tag = XGC
+				tag = XEF
+				tag = XCC
+				tag = XAU
+				tag = XEW
+				tag = XEC
+				tag = XSA
+				tag = XSU
+				tag = XMS
+				tag = XAC
+				tag = XAL
+				tag = XMU
+				tag = XAN
+				tag = XCI
+				tag = XNA
+				tag = XPI
+				tag = XEA
+				tag = XTC
+				tag = XUM
+				tag = XEU
+			}
+		}
+		allow = {
+			NOT = { has_country_modifier = peace_mission }
+			any_neighbor_country = { 
+				has_unclaimed_cores = yes 
+				has_country_flag = in_trade_block
+			}
+		}
+		effect = {
+			any_country = {
+				limit = {
+					neighbour = THIS
+					has_unclaimed_cores = yes
+					has_country_flag = in_trade_block
+				}
+				 country_event = 15615
+			}
+			add_country_modifier = { name = peace_mission duration = 1200 } # every 10 year
+		}
+		ai_will_do = { factor = 1 }
+	}	
+
 }
