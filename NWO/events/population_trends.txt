@@ -287,6 +287,19 @@ country_event = { # haredim_jewish
 			duration = 3665 
 	    }
 	}
+	
+	option = {
+		name = EVT_22612_OPTB
+		any_pop = { 
+			limit = { culture = haredim_jewish }
+			reduce_pop = 1.2
+		}
+		add_country_modifier = { 
+			name = demographic_haredim_jewish 
+			duration = 3665 
+	    }
+	}
+	
 }
 
 country_event = { # mennonites
@@ -318,5 +331,67 @@ country_event = { # mennonites
 			name = demographic_mennonites 
 			duration = 3665 
 	    }
-	}
+		ai_chance = { factor = 100 }
+ 	}
+	
+	option = {
+		name = EVT_22613_OPTB
+		any_pop = { 
+			limit = { culture = mennonites }
+			reduce_pop = 1.15
+		}
+		add_country_modifier = { 
+			name = demographic_mennonites 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 0 }
+ 	}
+	
 }
+
+country_event = { # romani
+	id = 22614
+	title = EVT_22614_NAME 
+	desc = EVT_22614_DESC
+	picture = "romani"
+	is_triggered_only = yes # on_actions
+	allow_multiple_instances = yes
+	
+	trigger = {
+		NOT = { has_country_modifier = demographic_romani }
+		any_pop = { 
+			culture = roma
+		}
+	}
+	
+	#mean_time_to_happen = {
+    #    months = 12
+	#}
+	
+	option = {
+		name = EVT_22614_OPTA
+		any_pop = { 
+			limit = { culture = roma }
+			reduce_pop = 1.25
+		}
+		add_country_modifier = { 
+			name = demographic_romani 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 100 }
+ 	}
+	option = {
+		name = EVT_22614_OPTB
+		any_pop = { 
+			limit = { culture = roma }
+			reduce_pop = 1.16
+		}
+		add_country_modifier = { 
+			name = demographic_romani 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 0 }
+ 	}
+
+}
+
