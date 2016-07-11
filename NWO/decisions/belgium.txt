@@ -1,0 +1,22 @@
+political_decisions = {
+
+	partition_of_belgium = {
+		picture = "partition_of_belgium"
+		potential = {
+			tag = BEL
+			OR = { exists = WLL exists = FLA }
+		}
+
+		ai_will_do = { factor = 1 }
+		
+		allow = {
+		}
+
+		effect = {
+			prestige = 10
+			capital = 2421
+			treasury = -20000
+		}
+		
+	}
+}
