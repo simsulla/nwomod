@@ -14,8 +14,26 @@ political_decisions = {
 
 		effect = {
 			prestige = 10
-			capital = 2421
-			treasury = -20000
+			all_core = { 
+				limit = { 
+				}
+				remove_core = BEL
+			}
+			any_country = { 
+				limit = { 
+					tag = BEL 
+					NOT = { exists = FLA }
+				}
+				capital = 390
+				change_tag_no_core_switch = FLA
+			}
+			any_country = { 
+				limit = { 
+					tag = BEL 
+					NOT = { exists = WLL }
+				}
+				change_tag_no_core_switch = WLL
+			}
 		}
 		
 	}
