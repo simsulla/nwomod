@@ -57,17 +57,17 @@ political_decisions = {
 				has_country_flag = world_bank 
 				has_country_flag = the_imf  
 				has_country_flag = dev_bank
-				capital_scope = { trade_goods = credit } # ENG
+				capital_scope = { trade_goods = credit } # GBR
 			}
 			NOT = { # must not have all
 				has_country_flag = world_bank 
 				OR = { has_country_flag = the_imf  has_country_flag = dev_bank } 
-				ENG = { capital_scope = { NOT = { trade_goods = credit } } }
+				GBR = { capital_scope = { NOT = { trade_goods = credit } } }
 			}
 			NOT = { # must not have all, except wb but not be rank = 1
 				rank = 1
 				OR = { has_country_flag = the_imf  has_country_flag = dev_bank } 
-				ENG = { capital_scope = { NOT = { trade_goods = credit } } }
+				GBR = { capital_scope = { NOT = { trade_goods = credit } } }
 			}			
 			#year = 1968
 		}
@@ -83,7 +83,7 @@ political_decisions = {
 			add_country_modifier = { name = special_drawing_rights duration = 3500 } 
 			any_country = { # first take on London
 				limit = {
-					tag = ENG
+					tag = GBR
 					capital_scope = { trade_goods = credit }
 					NOT = { tag = THIS }
 				}
@@ -93,7 +93,7 @@ political_decisions = {
 				limit = {
 					OR = { has_country_flag = the_imf has_country_flag = dev_bank }
 					NOT = { tag = THIS }
-					ENG = { capital_scope = { NOT = { trade_goods = credit } } }
+					GBR = { capital_scope = { NOT = { trade_goods = credit } } }
 				}
 				country_event = 15606
 			}
@@ -134,13 +134,13 @@ political_decisions = {
 		picture = "city_of_london"
 		potential = {
 			is_greater_power = yes
-			NOT = { tag = ENG }
-			ENG = { capital_scope = { trade_goods = credit } }
+			NOT = { tag = GBR }
+			GBR = { capital_scope = { trade_goods = credit } }
 			has_country_modifier = special_drawing_rights
 			year = 1952
 		}
 		allow = {
-			ENG = { 
+			GBR = { 
 				OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy has_country_flag = end_of_the_city } 
 				has_country_modifier = special_drawing_rights 
 				capital_scope = { trade_goods = credit } 
@@ -150,7 +150,7 @@ political_decisions = {
 			set_country_flag = dev_bank
 			clr_country_flag = financial_attack
 			country_event = 15605 
-			ENG = {	country_event = 15602 } 
+			GBR = {	country_event = 15602 } 
 			any_country = { limit = { has_country_modifier = special_drawing_rights } remove_country_modifier = special_drawing_rights clr_country_flag = financial_attack }
 		}
 		ai_will_do = { factor = 1 }
@@ -409,7 +409,7 @@ political_decisions = {
 			tag = USA
 			NOT = { year = 1992 }
 			NOT = { has_country_modifier = uk_war_debt }
-			ENG = { money = 100000 } # TODO add condition if ENG does not decolonlialize
+			GBR = { money = 100000 } # TODO add condition if GBR does not decolonlialize
 			NOT = { check_variable = { which = "uk_war_debt" value = 5 }
 }
 		}
@@ -421,7 +421,7 @@ political_decisions = {
 			change_variable  = { which = "uk_war_debt" value = 1 }
 			add_country_modifier = { name = uk_war_debt duration = 700 } # every second year
 			treasury = 100000
-			ENG = { country_event = 15611 } 
+			GBR = { country_event = 15611 } 
 		}
 		ai_will_do = { factor = 1 }
 	}

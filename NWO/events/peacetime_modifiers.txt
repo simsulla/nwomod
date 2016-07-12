@@ -59,7 +59,7 @@ country_event = { # Operation Unthinkable
   fire_only_once = yes
 
   trigger = {
-	OR = { tag = ENG tag = USA }
+	OR = { tag = GBR tag = USA }
 	great_wars_enabled = yes
 	NOT = { year = 1959 }
 	war = no
@@ -73,8 +73,8 @@ country_event = { # Operation Unthinkable
   }
   option = {
     name = "EVT_8930002_B" # Yes War!
-	random_country = { limit = { NOT = { tag = THIS } tag = USA } relation = { who = ENG value = 200 }  create_alliance = ENG create_alliance = CAN }
-	random_country = { limit = { NOT = { tag = THIS } tag = ENG } relation = { who = USA value = 200 } create_alliance = USA create_alliance = CAN }
+	random_country = { limit = { NOT = { tag = THIS } tag = USA } relation = { who = GBR value = 200 }  create_alliance = GBR create_alliance = CAN }
+	random_country = { limit = { NOT = { tag = THIS } tag = GBR } relation = { who = USA value = 200 } create_alliance = USA create_alliance = CAN }
 	casus_belli = { target = RUS type = release_puppet months = 12 }
 	war = { target = RUS attacker_goal = { casus_belli = release_puppet country = POL }  }
 	ai_chance = { factor = 0 }

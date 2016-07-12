@@ -6,7 +6,7 @@ political_decisions = {
 			tag = USA
 			rank = 1
 			ISR = { exists = no }
-			919 = { owned_by = ENG } 
+			919 = { owned_by = GBR } 
 			NOT = { has_country_modifier = support_zionism }
 		}
 
@@ -14,12 +14,12 @@ political_decisions = {
  		    tag = USA
 			year = 1947
 			rank = 1
-			relation =  { who = ENG value = 0 } 
+			relation =  { who = GBR value = 0 } 
 		}
 
 		effect = {
 			add_country_modifier = { name = support_zionism duration = 3500 }
-			ENG = { country_event = 1007601 }
+			GBR = { country_event = 1007601 }
 		}
 		ai_will_do = { factor = 1 }	
 	}
@@ -71,7 +71,7 @@ political_decisions = {
 		potential = {
 			NOT = { year = 1992 }
 			colonial_nation = yes
-			OR = { tag = NET tag = FRA tag = ENG tag = BEL }
+			OR = { tag = NET tag = FRA tag = GBR tag = BEL }
 			NOT = { check_variable = { which = ww2_war_debt value = 6 } }
 			money = 200000
 		}
@@ -106,7 +106,7 @@ political_decisions = {
 			NOT = { year = 1992 }
 			OR = {
 				NET = { colonial_nation = yes has_country_flag = colonial_peristance NOT = { check_variable = { which = ww2_war_debt value = 6 } } }
-				ENG = { colonial_nation = yes has_country_flag = colonial_peristance  NOT = { check_variable = { which = ww2_war_debt value = 6 } } }
+				GBR = { colonial_nation = yes has_country_flag = colonial_peristance  NOT = { check_variable = { which = ww2_war_debt value = 6 } } }
 				BEL = { colonial_nation = yes has_country_flag = colonial_peristance  NOT = { check_variable = { which = ww2_war_debt value = 6 } } }
 				FRA = { colonial_nation = yes has_country_flag = colonial_peristance  NOT = { check_variable = { which = ww2_war_debt value = 6 } } }
 			}

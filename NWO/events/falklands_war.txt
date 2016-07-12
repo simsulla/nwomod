@@ -9,7 +9,7 @@ country_event = {
     tag = ARG
 	year = 1982 NOT = { year = 1983 }
     
-	ENG = { owns = 2131 }
+	GBR = { owns = 2131 }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -18,9 +18,9 @@ country_event = {
     name = EVT_8234000_A
 	any_pop = { militancy = -1.0 }
 	badboy = 15 
-	relation = { who = ENG value = -200 } 
+	relation = { who = GBR value = -200 } 
 	2131 = { add_core = ARG }
-	ENG = { country_event =  { id = 8234001 days = 7 } }
+	GBR = { country_event =  { id = 8234001 days = 7 } }
 	ai_chance = { factor = 100 }
   }
 
@@ -45,7 +45,7 @@ country_event = {
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.15 } } }
 	relation = { who = ARG value = -100 }
 	# infamy unsanctioned
-	ARG = { war = { target = ENG attacker_goal = { casus_belli = acquire_core_state state_province_id = 2131 } defender_goal = { casus_belli = status_quo } } }
+	ARG = { war = { target = GBR attacker_goal = { casus_belli = acquire_core_state state_province_id = 2131 } defender_goal = { casus_belli = status_quo } } }
 	ai_chance = { factor = 100 }
   }
 
@@ -75,7 +75,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	war_with = ARG
 	NOT = { controls = 2131 }
   }
@@ -110,7 +110,7 @@ country_event = {
 
   trigger = {
     tag = ARG
-	war_with = ENG
+	war_with = GBR
 	NOT = { controls = 2131 }
   }
 
@@ -130,7 +130,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	war_with = ARG
 	NOT = { controls = 2131 }
   }
@@ -164,7 +164,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	war_with = ARG
 	NOT = { controls = 2131 }
   }
@@ -185,7 +185,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	war_with = ARG
 	controls = 2131
   }
@@ -229,7 +229,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1982 NOT = { year = 1990 }
 	has_recently_lost_war = yes
 	NOT = { controls = 2131 }
@@ -266,16 +266,16 @@ country_event = {
   option = {
     name = EVT_8234030_A
 	any_pop = { militancy = 1.5 consciousness = 2 }
-	1162 = { secede_province = ENG } 
+	1162 = { secede_province = GBR } 
 	ai_chance = { factor = 1 modifier = { factor = 100 OR = { vassal_of = USA in_sphere = USA } } }
   }
 
   option = {
     name = EVT_8234030_B
 	any_pop = { militancy = 4.0 consciousness = 1 }
-	1162 = { secede_province = ENG } 
+	1162 = { secede_province = GBR } 
 	# infamy unsanctioned
-	war = { target = ENG attacker_goal = { casus_belli = acquire_core_state state_province_id = 2131 } defender_goal = { casus_belli = status_quo } }
+	war = { target = GBR attacker_goal = { casus_belli = acquire_core_state state_province_id = 2131 } defender_goal = { casus_belli = status_quo } }
 	badboy = 5
 	ai_chance = { factor = 5 }
   }

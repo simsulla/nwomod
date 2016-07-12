@@ -4,7 +4,7 @@ political_decisions = {
 		picture = "claim_the_suez"
 		potential = {
 			tag = EGY
-			1755 = { owned_by = ENG } 
+			1755 = { owned_by = GBR } 
 			NOT = { has_country_flag = claim_the_suez }
 		}
 
@@ -24,14 +24,14 @@ political_decisions = {
 				}
 				AND = {
 					ai = no
-					relation =  { who = ENG value = 150 } 
+					relation =  { who = GBR value = 150 } 
 				}
 			}
 		}
 
 		effect = {
 			set_country_flag = claim_the_suez
-			ENG = { country_event = 1005001 }
+			GBR = { country_event = 1005001 }
 		}
 		ai_will_do = { factor = 1 }	
 	}

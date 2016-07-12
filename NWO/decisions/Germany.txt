@@ -6,7 +6,7 @@ political_decisions = {
 		potential = {
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } }
-				AND = { tag = ENG 369 = { owned_by = ENG } }
+				AND = { tag = GBR 369 = { owned_by = GBR } }
 				AND = { tag = RUS 551 = { owned_by = RUS } }
 			}
 			NOT = { has_country_flag = denazification }
@@ -15,7 +15,7 @@ political_decisions = {
 		allow = {
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } }
-				AND = { tag = ENG 369 = { owned_by = ENG } }
+				AND = { tag = GBR 369 = { owned_by = GBR } }
 				AND = { tag = RUS 551 = { owned_by = RUS } }
 			}
 			NOT = { has_country_flag = denazification }
@@ -103,9 +103,9 @@ political_decisions = {
 			OR = { 
 				AND = { 
 					has_country_flag = denazification
-					tag = ENG
+					tag = GBR
 					year = 1952
-					369 = { owned_by = ENG }
+					369 = { owned_by = GBR }
 				}
 				AND = { 
 					has_country_flag = denazification
@@ -120,9 +120,9 @@ political_decisions = {
 			NOT = { has_country_flag = establish_west_germany }
 			OR = { 
 				AND = { 
-					tag = ENG
+					tag = GBR
 					year = 1952
-					369 = { owned_by = ENG }
+					369 = { owned_by = GBR }
 				}
 				AND = { 
 					tag = USA 
@@ -208,7 +208,7 @@ political_decisions = {
 			GER = { exists = yes }
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } }
-				AND = { tag = ENG 369 = { owned_by = ENG } }
+				AND = { tag = GBR 369 = { owned_by = GBR } }
 			}
 			NOT = { has_country_flag = end_occupation_of_germany }
 		}
@@ -216,7 +216,7 @@ political_decisions = {
 		allow = {
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } GER = { has_country_flag = end_of_sonderweg } }
-				AND = { tag = ENG 369 = { owned_by = ENG } GER = { has_country_flag = end_of_sonderweg } }
+				AND = { tag = GBR 369 = { owned_by = GBR } GER = { has_country_flag = end_of_sonderweg } }
 			}
 			NOT = { has_country_flag = end_occupation_of_germany }
 			GER = { exists = yes }
@@ -251,7 +251,7 @@ political_decisions = {
 				}
 				AND = {
 					relation = { who = USA value = 100 }
-					relation = { who = ENG value = 100 }
+					relation = { who = GBR value = 100 }
 					ai = no
 				}
 			}

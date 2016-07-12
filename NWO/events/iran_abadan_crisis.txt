@@ -17,13 +17,13 @@ country_event = {
   option = {
     name = EVT_8501001_A # Nationalize the fields
 	nationalize = yes
-	relation = { who = ENG value = -100 } 
+	relation = { who = GBR value = -100 } 
   }
 
   option = {
     name = EVT_8501001_B # Remain on good terms
 	any_pop = { militancy = 1.5 }
-	ENG = { country_event =  { id = 8501002 days = 30 } }
+	GBR = { country_event =  { id = 8501002 days = 30 } }
   }
 }
 country_event = {
@@ -146,7 +146,7 @@ country_event = {
   option = {
     name = EVT_8501006_B
 	RUS = { country_event = 8501010 } # Soviets are able to send Iranians help
-	relation = { who = ENG value = -150 } 
+	relation = { who = GBR value = -150 } 
 	ai_chance = { factor = 40 }
   }
 }
@@ -241,7 +241,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
     year = 1954
     has_global_flag = abadan_crisis
     
@@ -262,7 +262,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
     year = 1954
     has_global_flag = abadan_crisis
     

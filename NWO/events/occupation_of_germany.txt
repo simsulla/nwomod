@@ -66,7 +66,7 @@ country_event = {
   picture = "nwo2_occupation_zones_in_germany"
 
   trigger = {
-    OR = { tag = USA tag = FRA tag = ENG }
+    OR = { tag = USA tag = FRA tag = GBR }
 	year = 1944 NOT = { year = 1963 }
 	NOT = { exists = GER }
     NOT = { exists = IAR }
@@ -188,7 +188,7 @@ country_event = {
   picture = "nwo2_allied_occupation_of_germany"
 
   trigger = {
-    OR = { tag = ENG tag = FRA }
+    OR = { tag = GBR tag = FRA }
 	year = 1954 NOT = { year = 1959 }
     
 	NOT = { has_country_flag = morgenthau_plan }
@@ -420,7 +420,7 @@ country_event = {
   option = {
     name = EVT_8204040_A
 	set_global_flag = deutsche_mark
-	ENG = { country_event = 8204041 }
+	GBR = { country_event = 8204041 }
 	RUS = { country_event = 8204042 } 
     ai_chance = { factor = 100 }
   }
@@ -436,7 +436,7 @@ country_event = {
   title = EVT_8204041_NAME
   desc = EVT_8204041_DESC
   picture = "nwo2_deutsche_mark"
-  is_triggered_only = yes # ENG
+  is_triggered_only = yes # GBR
 
   option = {
     name = "EVT_8204041_A"
@@ -452,7 +452,7 @@ country_event = {
   option = {
     name = EVT_8204042_A
 	relation = { who = USA value = -50 } 
-	relation = { who = ENG value = -50 } 
+	relation = { who = GBR value = -50 } 
 	relation = { who = FRA value = -50 } 
 	any_pop = { limit = { culture = german } consciousness = 0.5 militancy = 0.5 }
     ai_chance = { factor = 100 }
@@ -461,7 +461,7 @@ country_event = {
   option = {
     name = EVT_8204042_B
 	USA = { country_event =  8204060 } 
-	ENG = { country_event =  8204060 } 
+	GBR = { country_event =  8204060 } 
 	FRA = { country_event =  8204060 } 
 	country_event =  { id = 8204060 days = 30 }
     ai_chance = { factor = 0 }
@@ -493,7 +493,7 @@ country_event = {
     name = EVT_8204044_A
 	money = 5000
 	USA = { country_event =  8204060 } 
-	ENG = { country_event =  8204060 } 
+	GBR = { country_event =  8204060 } 
 	FRA = { country_event =  8204060 } 
     ai_chance = { factor = 100 }
   }
@@ -501,7 +501,7 @@ country_event = {
   option = {
     name = EVT_8204044_B
 	relation = { who = USA value = 50 } 
-	relation = { who = ENG value = 50 } 
+	relation = { who = GBR value = 50 } 
 	relation = { who = FRA value = 50 } 
 	prestige = -50
     ai_chance = { factor = 0 }
@@ -512,7 +512,7 @@ country_event = {
   title = EVT_8204060_NAME
   desc = EVT_8204060_DESC
   picture = "nwo2_united_germany"
-  is_triggered_only = yes # USA, ENG, FRA
+  is_triggered_only = yes # USA, GBR, FRA
 
   option = {
     name = EVT_8204060_A
@@ -537,7 +537,7 @@ country_event = {
   trigger = {
     tag = RUS
 	owns = 551
-	ENG = { has_country_flag = accept_united_germany } 
+	GBR = { has_country_flag = accept_united_germany } 
 	USA = { has_country_flag = accept_united_germany } 
 	FRA = { has_country_flag = accept_united_germany } 
     has_global_flag = divided_berlin
@@ -549,7 +549,7 @@ country_event = {
   option = {
     name = EVT_8204061_A
 	relation = { who = USA value = -50 } 
-	relation = { who = ENG value = -50 } 
+	relation = { who = GBR value = -50 } 
 	relation = { who = FRA value = -50 } 
     ai_chance = { factor = 100 }
   }
@@ -744,7 +744,7 @@ country_event = {
 	badboy = -5 
     ai_chance = { factor = 100 }
 	USA = { country_event =  8204401 }
-	ENG = { country_event =  8204401 }
+	GBR = { country_event =  8204401 }
 	FRA = { country_event =  8204401 }
   }
 
@@ -758,7 +758,7 @@ country_event = {
   title = EVT_8204401_NAME
   desc = EVT_8204401_DESC
   picture = "nwo2_stalin_note"
-  is_triggered_only = yes # USA, ENG, FRA
+  is_triggered_only = yes # USA, GBR, FRA
 
   option = {
     name = EVT_8204401_A
@@ -799,11 +799,11 @@ country_event = {
 	year = 1952 NOT = { year = 1959 }
 	NOT = {
 		USA = { has_country_flag = stalins_note_ok }
-		ENG = { has_country_flag = stalins_note_ok }
+		GBR = { has_country_flag = stalins_note_ok }
 		FRA = { has_country_flag = stalins_note_ok }
 	}
 	USA = { OR = { has_country_flag = stalins_note_ok_nato has_country_flag = stalins_note_ok } }
-	ENG = { OR = { has_country_flag = stalins_note_ok_nato has_country_flag = stalins_note_ok } }
+	GBR = { OR = { has_country_flag = stalins_note_ok_nato has_country_flag = stalins_note_ok } }
 	FRA = { OR = { has_country_flag = stalins_note_ok_nato has_country_flag = stalins_note_ok } }
     
   }
@@ -819,7 +819,7 @@ country_event = {
   option = {
     name = EVT_8204404_A
 	relation = { who = USA value = 100 } 
-	relation = { who = ENG value = 100 } 
+	relation = { who = GBR value = 100 } 
 	relation = { who = FRA value = 100 } 
 	relation = { who = GER value = 150 } 
 	badboy = -5 
@@ -838,7 +838,7 @@ country_event = {
     tag = RUS
 	year = 1954 NOT = { year = 1959 }
 	USA = { has_country_flag = stalins_note_ok }
-	ENG = { has_country_flag = stalins_note_ok }
+	GBR = { has_country_flag = stalins_note_ok }
 	FRA = { has_country_flag = stalins_note_ok }
     
   }
@@ -848,7 +848,7 @@ country_event = {
   option = {
     name = EVT_8204405_A
 	relation = { who = USA value = 50 } 
-	relation = { who = ENG value = 50 } 
+	relation = { who = GBR value = 50 } 
 	relation = { who = FRA value = 50 } 
 	relation = { who = GER value = 100 } 
 	badboy = -5 
@@ -875,7 +875,7 @@ country_event = {
 	inherit = DDR 
 	overlord = { release_vassal = THIS } 
 	relation = { who = USA value = -50 } 
-	relation = { who = ENG value = -50 } 
+	relation = { who = GBR value = -50 } 
 	relation = { who = FRA value = -50 } 
 	relation = { who = RUS value = 25 } 
   }
@@ -894,7 +894,7 @@ country_event = {
 	neutrality = yes
 	overlord = { release_vassal = THIS } 
 	relation = { who = USA value = -50 } 
-	relation = { who = ENG value = -50 } 
+	relation = { who = GBR value = -50 } 
 	relation = { who = FRA value = -50 } 
 	relation = { who = RUS value = 25 } 
 	capital_scope = { add_province_modifier = { name = neutrality duration = -1 } }

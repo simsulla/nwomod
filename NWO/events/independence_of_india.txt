@@ -6,7 +6,7 @@ country_event = { # Interim Government of India
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG 
+		tag = GBR 
 		NOT = { year = 1990 }
 		is_our_vassal = RAJ
 		exists = RAJ
@@ -76,7 +76,7 @@ country_event = {
 	option = {
 		name = EVT_1214011_A 
 		ai_chance = { factor = 100 }
-		ENG = { country_event = 1214012 }
+		GBR = { country_event = 1214012 }
 	}
 	
 	option = {
@@ -99,14 +99,14 @@ country_event = {
 	# EVT_1214012_NAME;Direct Action Day
 	desc = EVT_1214012_DESC
 	picture = "independence_of_india"
-	is_triggered_only = yes # ENG
+	is_triggered_only = yes # GBR
 
 	option = {
 		name = EVT_1214012_A 
 		ai_chance = { factor = 100 }
 		prestige = 2
 		release_vassal = RAJ
-		random_country = { limit = { tag = UAE vassal_of = RAJ } RAJ = { release_vassal = UAE } ENG = { create_vassal = UAE } }
+		random_country = { limit = { tag = UAE vassal_of = RAJ } RAJ = { release_vassal = UAE } GBR = { create_vassal = UAE } }
 		any_country = { limit = { OR = { vassal_of = RAJ tag = TIB tag = NET tag = SIK } } country_event = 8214019 }
 		RAJ = { country_event = { id = 8214013 days = 10 } }
 	}
@@ -137,7 +137,7 @@ country_event = { # Mountbatten Plan
 	option = {
 		name = EVT_8214013_A 
 		ai_chance = { factor = 100 }
-		ENG = { diplomatic_influence = { who = RAJ value = -100 } }
+		GBR = { diplomatic_influence = { who = RAJ value = -100 } }
 		any_pop = {
 			limit = { OR = { culture = indian culture = indian_muslim } }
 			consciousness = 2
@@ -152,7 +152,7 @@ country_event = { # Mountbatten Plan
 	option = {
 		name = EVT_8214013_B 
 		ai_chance = { factor = 0 }
-		ENG = { diplomatic_influence = { who = RAJ value = -100 } }
+		GBR = { diplomatic_influence = { who = RAJ value = -100 } }
 		prestige = -20
 		any_pop = {
 			limit = {
@@ -184,7 +184,7 @@ country_event = {
 	desc = EVT_8214019_DESC
 	# EVT_8214019_DESC;Neither paramountcy nor the subsidiary alliances could continue after Indian independence. The British took the view that because they had been established directly between the British crown and the princely states, they could not be transferred to the newly independent dominions of India and Pakistan.[11] At the same time, the alliances imposed obligations on Britain that it was not prepared to continue to carry out, such as the obligation to maintain troops in India for the defence of the princely states. The British government therefore decided that paramountcy, together with all treaties between them and the princely states, would come to an end upon the British departure from India.
 	picture = "princely_states"
-	is_triggered_only = yes # ENG
+	is_triggered_only = yes # GBR
 	
 	option = {
 		name = EVT_8214019_A 
@@ -215,7 +215,7 @@ country_event = {
 	release_vassal = JAK
 	leave_alliance = TIB
 	leave_alliance = JAK
-	leave_alliance = ENG
+	leave_alliance = GBR
 	government = democracy country_event = 800054
 	change_tag = HND
   }
@@ -246,7 +246,7 @@ country_event = {
 		set_country_flag = princely_state_stay_independent
 		HND = { release_vassal = THIS } 
 		HND = { leave_alliance = THIS }
-		ENG = { diplomatic_influence = { who = THIS value = -100 } }
+		GBR = { diplomatic_influence = { who = THIS value = -100 } }
 		add_casus_belli = { target = HND type = annex_core_country }
 		# TODO inform HND about this
 		ai_chance = { factor = 0 }
@@ -285,7 +285,7 @@ country_event = {
 		set_country_flag = princely_state_stay_independent
 		HND = { release_vassal = THIS } 
 		HND = { leave_alliance = THIS }
-		ENG = { diplomatic_influence = { who = THIS value = -100 } }
+		GBR = { diplomatic_influence = { who = THIS value = -100 } }
 		add_casus_belli = { target = PAK type = annex_core_country }
 		# TODO inform PAK about this
 		# TODO inform HND about this
@@ -332,7 +332,7 @@ country_event = {
 		set_country_flag = princely_state_stay_independent
 		HND = { release_vassal = THIS } 
 		HND = { leave_alliance = THIS }
-		ENG = { diplomatic_influence = { who = THIS value = -100 } }
+		GBR = { diplomatic_influence = { who = THIS value = -100 } }
 		add_casus_belli = { target = HND type = annex_core_country } 
 		# TODO inform HND about this # will trigger 8007229
 		ai_chance = { factor = 100 }

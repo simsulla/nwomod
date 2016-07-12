@@ -6,7 +6,7 @@ country_event = { # Malta Independence
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
     year = 1960 NOT = { year = 1990 }
 	NOT = { exists = MAL }
 	owns = 854 # Malta
@@ -49,7 +49,7 @@ country_event = { # Malta Republic
   option = {
     name = EVT_8004201_A
 	government = democracy country_event = 800054
-	ENG = { diplomatic_influence = { who = MAL value = -100 } }
+	GBR = { diplomatic_influence = { who = MAL value = -100 } }
 	ai_chance = { factor = 100 }
   }
 

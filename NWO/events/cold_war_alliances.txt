@@ -5,9 +5,9 @@ country_event = {
   picture = "nwo2_western_allies"
 
   trigger = {
-    OR = { tag = ENG tag = USA tag = FRA }
+    OR = { tag = GBR tag = USA tag = FRA }
 	NOT = { has_country_flag = reject_western_allies }
-	NOT = { OR = {  alliance_with = USA alliance_with = ENG } }
+	NOT = { OR = {  alliance_with = USA alliance_with = GBR } }
     year = 1946 NOT = { year = 1960 }
 	NOT = { has_global_flag = alliance_nato }
     
@@ -27,7 +27,7 @@ country_event = {
 		create_alliance = THIS
     }
     random_country = {
-        limit = { NOT = { tag = THIS } tag = ENG ai = yes }
+        limit = { NOT = { tag = THIS } tag = GBR ai = yes }
 		create_alliance = THIS
     }
 	ai_chance = { factor = 100 }
@@ -203,7 +203,7 @@ country_event = {
     name = EVT_8215012_A
 	create_alliance = USA 
 	relation = { who = USA value = 80 } 
-	relation = { who = ENG value = 80 } 
+	relation = { who = GBR value = 80 } 
 	relation = { who = FRA value = 80 } 
 	set_country_flag = western_allies_in_war 
 	ai_chance = { factor = 100 }
@@ -277,7 +277,7 @@ country_event = {
   picture = "nwo2_nato"
 
   trigger = {
-    OR = { tag = BEL tag = LUX tag = FRA tag = NET tag = ENG }
+    OR = { tag = BEL tag = LUX tag = FRA tag = NET tag = GBR }
     year = 1948 NOT = { year = 1960 }
 	has_global_flag = teaty_of_brussels
   }

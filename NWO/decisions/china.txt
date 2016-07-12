@@ -88,11 +88,11 @@ political_decisions = {
 			owns = 2681 # Shenzhen
 			NOT = { has_country_flag = the_return_of_hong_kong }
 			OR = {
-				1496 = { owned_by = ENG } 
-				HKG = { vassal_of = ENG }
+				1496 = { owned_by = GBR } 
+				HKG = { vassal_of = GBR }
 			}
 			OR = {
-				relation =  { who = ENG value = 50 } 
+				relation =  { who = GBR value = 50 } 
 				year = 1992
 			}
 		}
@@ -105,16 +105,16 @@ political_decisions = {
 			OR = {
 				AND = { year = 1997 ai = yes }
 				AND = {
-					relation =  { who = ENG value = 100 } 
+					relation =  { who = GBR value = 100 } 
 					rank = 3
-					ENG = { NOT = { rank = 2 } }
+					GBR = { NOT = { rank = 2 } }
 				}
 			}
 		}
 
 		effect = {
 			set_country_flag = the_return_of_hong_kong 
-			ENG = { country_event = 1002801 }
+			GBR = { country_event = 1002801 }
 		}
 		
 		ai_will_do = {

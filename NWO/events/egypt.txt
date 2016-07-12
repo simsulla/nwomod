@@ -20,7 +20,7 @@ country_event = {
 		name = "EVT_1004901_A"
 		government = presidential_dictatorship
 		political_reform = none_voting # TODO dictatorship reforsm
-		any_country = { limit = { primary_culture = sunni_arab is_vassal = yes OR = { vassal_of = FRA vassal_of = ENG } } country_event = 101931 }
+		any_country = { limit = { primary_culture = sunni_arab is_vassal = yes OR = { vassal_of = FRA vassal_of = GBR } } country_event = 101931 }
 		ruling_party_ideology = socialist
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
@@ -49,7 +49,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
     year = 1952 NOT = { year = 1990 }
 	EGY = { government = presidential_dictatorship }
   }

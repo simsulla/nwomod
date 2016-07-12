@@ -15,7 +15,7 @@ country_event = {
 			OR = { 
 				AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 				AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-				tag = ENG
+				tag = GBR
 				tag = USA
 				tag = FRA
 				tag = RUS
@@ -45,7 +45,7 @@ country_event = {
 					OR = { 
 						AND = { tag = CHI year = 1971 }
 						AND = { tag = KMT NOT = { year = 1971 } }
-						tag = ENG
+						tag = GBR
 						tag = USA
 						tag = FRA
 						tag = RUS
@@ -58,7 +58,7 @@ country_event = {
 					AND = { tag = CHI year = 1971 }
 					AND = { tag = KMT NOT = { year = 1971 } }
 					tag = KMT
-					tag = ENG
+					tag = GBR
 					tag = USA
 					tag = FRA
 					tag = RUS
@@ -188,7 +188,7 @@ country_event = {
 				tag = ARG tag = AST tag = BEL tag = BOL tag = BRZ tag = CAN tag = CHL tag = CLM tag = COS tag = CUB tag = CZH tag = DEN
 				tag = DOM tag = ECU tag = EGY tag = ELS tag = ETH tag = FRA tag = GRE tag = GUA tag = HAI tag = HON tag = RAJ tag = PER 
 				tag = IRQ tag = LEB tag = LIB tag = LUX tag = MEX tag = NET tag = NZL tag = NIC tag = NOR tag = PNM tag = PRG tag = PEU
-				tag = PHI tag = SAA tag = SAF tag = SYR tag = TUR tag = RUS tag = ENG tag = USA tag = URU tag = VNZ tag = YUG tag = KMT
+				tag = PHI tag = SAA tag = SAF tag = SYR tag = TUR tag = RUS tag = GBR tag = USA tag = URU tag = VNZ tag = YUG tag = KMT
 			}
 	}
 
@@ -218,7 +218,7 @@ country_event = { # TODO trigger by chines civil war
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -238,7 +238,7 @@ country_event = { # TODO trigger by chines civil war
   option = {
     name = EVT_85101XX_B
 	set_global_flag = un_ccw_interventionveto 
-	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = FRA tag = ENG } } }
+	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = FRA tag = GBR } } }
   }
 
   option = {
@@ -301,7 +301,7 @@ country_event = { # TODO trigger by suez war
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -328,7 +328,7 @@ country_event = { # TODO trigger by suez war
   option = {
     name = EVT_85102XX_C
 	set_global_flag = un_suez_totalveto 
-	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = USA tag = FRA tag = ENG } } } 
+	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = USA tag = FRA tag = GBR } } } 
   }
 
 }
@@ -388,7 +388,7 @@ country_event = { # TODO trigger by taiwan war
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -408,7 +408,7 @@ country_event = { # TODO trigger by taiwan war
   option = {
     name = EVT_85103XX_B
 	set_global_flag = un_taiwan_interventionveto 
-	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = FRA tag = ENG } } }
+	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = FRA tag = GBR } } }
   }
 
   option = {
@@ -471,7 +471,7 @@ country_event = { # TODO Greek Civil war trigger
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -491,7 +491,7 @@ country_event = { # TODO Greek Civil war trigger
   option = {
     name = EVT_85104XX_B
 	set_global_flag = un_gcw_interventionveto 
-	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = FRA tag = ENG } } }
+	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = FRA tag = GBR } } }
   }
 
   option = {
@@ -553,7 +553,7 @@ country_event = { # TODO Eritrea trigger
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -616,7 +616,7 @@ country_event = { # TODO Indonesian National Revolution
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -700,7 +700,7 @@ country_event = { # TODO Korean War
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -713,7 +713,7 @@ country_event = { # TODO Korean War
   
   option = {
     name = EVT_85101XX_A
-	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = USA tag = KMT tag = FRA tag = ENG } } }
+	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = USA tag = KMT tag = FRA tag = GBR } } }
 	set_global_flag = un_korea_intervention
   }
 
@@ -783,7 +783,7 @@ country_event = { # TODO Hungarian Revolution
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -805,7 +805,7 @@ country_event = { # TODO Hungarian Revolution
   option = {
     name = EVT_85101XX_B
 	set_global_flag = un_hungary_interventionveto 
-	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = FRA tag = ENG } } }
+	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = FRA tag = GBR } } }
   }
 
   option = {
@@ -848,11 +848,11 @@ country_event = { # called in falkland wars
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
-	ARG = { war_with = ENG }
+	ARG = { war_with = GBR }
   }
 
   mean_time_to_happen = { months = 1 }
@@ -861,7 +861,7 @@ country_event = { # called in falkland wars
   
   option = {
     name = EVT_85109XX_A
-	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = USA tag = KMT tag = FRA tag = ENG  } } }
+	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = USA tag = KMT tag = FRA tag = GBR  } } }
 	set_global_flag = un_falkland_intervention
   }
 
@@ -891,7 +891,7 @@ country_event = {
 		AND = { tag = CHI has_global_flag = CHI_in_UNSC }
 		AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
 		AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
-		tag = ENG
+		tag = GBR
 		tag = USA
 		tag = FRA
 	}
@@ -904,7 +904,7 @@ country_event = {
   
   option = {
     name = EVT_85109XX_A
-	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = USA tag = KMT tag = FRA tag = ENG tag = CHI tag = RUS } } }
+	ai_chance = { factor = 1 modifier = { factor = 100 OR = { tag = USA tag = KMT tag = FRA tag = GBR tag = CHI tag = RUS } } }
 	set_global_flag = un_desertstorm_intervention
   }
 
