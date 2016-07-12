@@ -1,0 +1,28 @@
+political_decisions = {
+
+	end_the_uk = {
+		picture = "end_the_uk"
+		potential = {
+			tag = GBR
+			OR = { exists = SCO NOT = { owns = 271 } } # Glasgow
+			OR = { exists = NIR NOT = { owns = 254 } } # Belfast
+		}
+
+		ai_will_do = { factor = 1 }
+		
+		allow = {
+		}
+
+		effect = {
+			prestige = 10
+			all_core = { 
+				limit = { 
+					NOT = { owned_by = GBR } 
+				}
+				remove_core = GBR
+			}
+			change_tag = ENG
+		}
+		
+	}
+}
