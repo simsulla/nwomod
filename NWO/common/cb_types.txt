@@ -363,6 +363,7 @@ acquire_core_state = {
 		any_owned_province = {
 			is_core = THIS
 		}
+		NOT = { relation = { who = THIS value = 0 } }
 		THIS = { OR = { NOT = { war_policy = pacifism } war = yes } }
 		NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
 	}
