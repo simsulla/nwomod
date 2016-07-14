@@ -326,6 +326,7 @@ country_event = {
 	release_vassal = BOS
 	release_vassal = MON
 	release_vassal = MAC
+	random_country = { limit = { NOT = { exists = BUL } } release_vassal = BUL }
 	ai_chance = { factor = 0 }
   }
 
@@ -389,6 +390,7 @@ country_event = {
 	release = CRO
 	release = MAC
 	release = BOS
+	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	MAC = {	government = democracy country_event = 800054 }
@@ -414,6 +416,7 @@ country_event = {
 	release = CRO
 	release = BOS
 	release = MAC	
+	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	MAC = {	government = democracy country_event = 800054 }
@@ -431,6 +434,7 @@ country_event = {
 	release = SLO
 	release = CRO
 	release = BOS
+	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	BOS = {	government = populist_dictatorship country_event = 800050 }
