@@ -164,6 +164,7 @@ country_event = {
     name = EVT_8500207_A
 	badboy = 10 
 	relation = { who = USA value = -100 } 
+	USA = { country_event =  { id = 8500208 days = 10 } }
 	ai_chance = { factor = 100 }
   }
 
@@ -173,14 +174,6 @@ country_event = {
 	relation = { who = USA value = 100 } 
 	clr_global_flag = missiles_in_cuba 
 	RUS  = { country_event = 8225001 } 
-	ai_chance = { factor = 0 }
-  }
-
-  option = {
-    name = EVT_8500207_C
-	war = USA 
-	any_pop = { militancy = 1.5 }
-	USA = { country_event =  { id = 8500208 days = 10 } }
 	ai_chance = { factor = 0 }
   }
 }
