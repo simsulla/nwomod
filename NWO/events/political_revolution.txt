@@ -815,6 +815,9 @@ country_event = { #The New Regime - populist or dictatorship
 	option = {
 		name = "EVTOPTA800050"
 		
+		# remove ideology based modifiers 
+		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
+
 		# rom rebel_types
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
@@ -841,6 +844,10 @@ country_event = { #The New Regime- traditionalist
 
 	option = {
 		name = "EVTOPTA800051"
+
+		# remove ideology based modifiers 
+		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
+
 		# rom rebel_types
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
@@ -891,6 +898,9 @@ country_event = { # The New Regime - Democracy
 
 	option = {
 		name = "EVTOPTA800054"
+		
+		# remove ideology based modifiers 
+		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
 		
 		# from rebel_types
 		random_owned = { limit = { owner = { NOT = { vote_franschise = none_voting } } } owner = { political_reform = promoted_voting } }		
