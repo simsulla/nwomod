@@ -820,7 +820,7 @@ country_event = { #The New Regime - populist or dictatorship
 		political_reform = ruling_party_opinion
 		political_reform = quality_of_service
 		political_reform = censored_publishing
-		political_reform = gender_equal
+		political_reform = gender_role_based
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
 		political_reform = lgbt_outlawed
@@ -846,7 +846,7 @@ country_event = { #The New Regime- traditionalist
 		political_reform = ruling_party_opinion
 		political_reform = quality_of_service
 		political_reform = censored_publishing
-		political_reform = gender_equal
+		political_reform = gender_role_based
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
 		political_reform = lgbt_outlawed
@@ -898,7 +898,8 @@ country_event = { # The New Regime - Democracy
 		political_reform = democratic_opinion
 		political_reform = open_unregulated
 		political_reform = unregulated_publishing
-		random_owned = { limit = { owner = { NOT = { gender_rights = feminist } } } owner = { political_reform = gender_promotive } } 
+		random_owned = { limit = { owner = { gender_rights = gender_role_based } } owner = { political_reform = gender_equal } } 
+		random_owned = { limit = { owner = { gender_rights = gender_equal } } owner = { political_reform = gender_promotive } } 
 		random_owned = { limit = { owner = { OR = { political_parties = parties_not_allowed political_parties = parties_only_nominated } } } owner = { political_reform = parties_allowed } }
 		random_owned = { limit = { owner = { NOT = { political_parties = parties_allowed } } } owner = { political_reform = parties_promote_democratic } } 	
 		random_owned = { limit = { owner = { NOT = { political_parties = parties_promote_democratic } } } owner = { political_reform =  parties_restrict_non_democratic } }
