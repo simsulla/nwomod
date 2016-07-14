@@ -18,12 +18,12 @@ country_event = {
     name = EVT_8501001_A # Nationalize the fields
 	nationalize = yes
 	relation = { who = GBR value = -100 } 
+	GBR = { country_event =  { id = 8501002 days = 30 } }
   }
 
   option = {
     name = EVT_8501001_B # Remain on good terms
 	any_pop = { militancy = 1.5 }
-	GBR = { country_event =  { id = 8501002 days = 30 } }
   }
 }
 country_event = {
@@ -70,14 +70,14 @@ country_event = {
     name = EVT_8501003_A # Sanctions are successful
 	add_country_modifier = { name = stock_market_crash duration = 365 }
 	any_pop = { militancy = 0.5  consciousness = 1 }
+	country_event =  { id = 8501004 days = 30 } 
+	country_event =  { id = 8501020 days = 60 } # Operation Ajax
 	ai_chance = { factor = 80 }
   }
 
   option = {
     name = EVT_8501003_B # Sanctions are a failure
 	any_pop = {  consciousness = 2 }
-	country_event =  { id = 8501004 days = 30 } 
-	country_event =  { id = 8501020 days = 60 } # Operation Ajax
 	ai_chance = { factor = 20 }
   }
 }
