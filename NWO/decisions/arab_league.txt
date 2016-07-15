@@ -29,7 +29,10 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			is_secondary_power = yes 
+			OR = {
+				is_secondary_power = yes 
+				is_greater_power = yes 
+			}
 			third_way = 1 
 			OR = { government = populist_dictatorship government = presidential_dictatorship }
 		}
