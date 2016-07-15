@@ -338,6 +338,7 @@ country_event = {
   option = {
     name = EVT_8014207_A
     define_general = { name = "Nikita Khrushchev" personality = energetic background = no_background }
+	set_country_flag = nikita_khrushchev
 	country_event =  { id = 8014251 days = 10 } 
 	ai_chance = { factor = 0 }
   }
@@ -898,35 +899,6 @@ country_event = {
   }
 }
 country_event = {
-  id = 8014228
-  title = EVT_8014228_NAME
-  desc = EVT_8014228_DESC
-  picture = "nwo2_cpsu_congress_1956"
-  fire_only_once = yes
-
-  trigger = {
-    tag = RUS
-    year = 1956 NOT = { year = 1960 }
-	government = proletarian_dictatorship
-  }
-
-  mean_time_to_happen = { months = 1  }
-
-  option = {
-    name = EVT_8014228_B
-	any_pop = { militancy = -0.2 consciousness = -0.1 }
-	country_event =  { id = 8014217 days = 1 } 
-	ai_chance = { factor = 100 }
-  }
-
-  option = {
-    name = EVT_8014228_A
-	any_pop = { militancy = 1.0 consciousness = 1 }
-	RUS  = { country_event = 8225001 } 
-	ai_chance = { factor = 0 }
-  }
-}
-country_event = {
   id = 8014233
   title = EVT_8014233_NAME
   desc = EVT_8014233_DESC
@@ -936,6 +908,27 @@ country_event = {
   trigger = {
     tag = RUS
     year = 1964 NOT = { year = 1979 }
+	has_country_flag = nikita_khrushchev
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8014233_A
+	define_general = { name = "Leonid Brezhnev" personality = energetic background = no_background }
+  }
+}
+country_event = {
+  id = 8014234
+  title = EVT_8014233_NAME
+  desc = EVT_8014233_DESC
+  picture = "nwo2_leonid_brezhnev"
+  fire_only_once = yes
+
+  trigger = {
+    tag = RUS
+    year = 1964 NOT = { year = 1979 }
+	NOT = { has_country_flag = nikita_khrushchev }
   }
 
   mean_time_to_happen = { months = 2 }
