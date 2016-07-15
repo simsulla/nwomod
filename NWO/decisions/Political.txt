@@ -49,8 +49,10 @@ political_decisions = {
 			can_nationalize = yes 
 		}
 		allow = {
-			NOT = { part_of_sphere = yes }
-			ruling_party_ideology = communist
+			#NOT = { part_of_sphere = yes }
+			#ruling_party_ideology = communist
+			NOT = { has_country_modifier = pending_nationalize }
+			government = proletarian_dictatorship
 		}
 		effect = {
 			nationalize = yes

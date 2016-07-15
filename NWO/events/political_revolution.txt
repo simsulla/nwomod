@@ -882,8 +882,35 @@ country_event = { # The New Regime - Communist
 		political_reform = lgbt_outlawed
 		political_reform = minorities_equal_rights
 		
-		nationalize = yes
+		add_country_modifier = { name = pending_nationalize duration = 700 }
+		any_greater_power = { limit = { THIS = { can_nationalize = yes } NOT = { government = proletarian_dictatorship } } country_event = 800053 }
+		#nationalize = yes
 		# end from rebel_types
+	}
+}
+country_event = { # Assest Will be Nationalized
+	id = 800053
+	title = "EVT_800053_NAME"  
+	desc = "EVT_800053_DESC"
+	picture = "nationalization"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_800053_A"
+		casus_belli = { target = FROM type = install_democracy months = 12 }
+		war = { target = FROM attacker_goal = { casus_belli = install_democracy } defender_goal = { casus_belli = status_quo } }
+		ai_chance = { 
+			factor = 0.9 
+			modifier = { NOT = { government = democracy } NOT = { government = hms_government }  factor = 0 }
+			modifier = { NOT = { rank = 2 }  factor = 0 }
+			modifier = { FROM = { part_of_sphere = yes }  factor = 0 } 
+			modifier = { war = yes  factor = 0.5 } 
+		}
+	}
+	option = {
+		name = "EVT_800053_B"
+		casus_belli = { target = FROM type = install_democracy months = 12 }
+		ai_chance = { factor = 0.1  }
 	}
 }
 country_event = { # The New Regime - Democracy
