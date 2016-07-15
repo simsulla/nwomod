@@ -1567,7 +1567,10 @@ country_event = {
 		election = yes
 		OR = {
 			average_militancy = 2
-			unemployment = 0.1
+			AND = {
+				unemployment = 0.1
+				NOT = { unemployment_subsidies = citizen_salary }
+			}
 			war_exhaustion = 20
 		}	
 		NOT = {
@@ -1699,7 +1702,10 @@ country_event = {
 		election = yes
 		OR = {
 			average_militancy = 2
-			unemployment = 0.1
+			AND = {
+				unemployment = 0.1
+				NOT = { unemployment_subsidies = citizen_salary }
+			}
 			num_of_revolts = 1
 		}
 		NOT = {
