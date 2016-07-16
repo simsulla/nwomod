@@ -1,5 +1,24 @@
 political_decisions = {
 
+	internationalism = {
+		picture = "internationalism"
+		potential = {
+			NOT = { has_country_modifier = internationalism }
+			OR = { tag = XEU tag = XCC tag = XAU tag = XEW tag = XEC tag = XSA tag = XSU tag = XMS tag = XAC tag = XAL tag = XMU tag = XAN tag = XCI tag = XNA tag = XPI tag = XEA tag = XTC }	
+		}
+		allow = {
+			war = no
+			money = 24000
+		}
+		effect = {
+			any_neighbor_country = { limit = { has_country_flag = trade_block_ambition } add_country_modifier = { name = internationalism duration = 1000 } }
+			add_country_modifier = { name = internationalism duration = 1000 }
+			treasury = -20000
+			random_pop = { limit = { type = capitalists } money = 20000 }
+		}		
+		ai_will_do = { factor = 0 }
+	}
+
 #An Open Market
 # trade_block_ambition - called during elections in on_action.txt
 # this events regulates the nations engagement in the trade block
