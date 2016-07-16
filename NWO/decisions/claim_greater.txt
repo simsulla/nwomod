@@ -2773,5 +2773,84 @@ political_decisions = {
 		}
 
 	}
-		
+	
+	claim_greater_paraguay = {
+			picture = "claim_greater_paraguay"
+			potential = {
+					tag = PRG
+					NOT = { has_country_flag = claim_greater_paraguay }
+			}
+
+			allow = {
+				   tag = PRG
+					part_of_sphere = no
+					has_unclaimed_cores = no
+					NOT = {	
+						has_country_flag = claim_greater_paraguay
+						ruling_party_ideology = socialist
+						ruling_party_ideology = progressive
+						ruling_party_ideology = liberal 
+					}
+					is_vassal = no
+					prestige = 45
+					OR = {
+							ruling_party_ideology = populist
+							jingoism = 24
+					}
+			}
+
+			effect = {
+					badboy = 12
+					set_country_flag = claim_greater_paraguay
+					2420 = { 
+							add_core = PRG
+					}
+					2554 = { 
+							add_core = PRG
+					}
+					2366 = { 
+							add_core = PRG
+					}
+					2367 = { 
+							add_core = PRG
+					}
+			}
+
+	}
+	abandon_claim_greater_paraguay = {
+			picture = "claim_greater_afghanistan"
+			potential = {
+					tag = PRG
+					has_country_flag = claim_greater_paraguay
+					OR = {
+							government = democracy
+							government = hms_government
+					}
+			}
+
+			allow = {
+					war = no
+					is_vassal = no
+					has_country_flag = claim_greater_paraguay
+					OR = {
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal
+					}
+			}
+
+			effect = {
+					prestige = 10
+					any_pop = {
+							consciousness = 1
+					}
+					clr_country_flag = claim_greater_paraguay
+					all_core = { 
+							limit = { NOT = { owned_by = THIS } is_primary_culture = yes }
+							remove_core = PRG
+					}
+			}
+
+	}	
+	
 }
