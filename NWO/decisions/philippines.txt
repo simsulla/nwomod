@@ -1,0 +1,66 @@
+political_decisions = {
+
+	maphilindo = {
+		picture = "maphilindo"
+		# maphilindo_title;Maphilindo
+		# maphilindo_desc;Maphilindo is a regional association of nations of the Malay race. Shall the Philippines trye and hinder the formation of the Federation of Malaysia as Malaya's successor state. The Philippines has legit claim over Sabah (formerly British North Borneo), and historic ties with Sarawak.
+		potential = {
+			NOT = { has_country_flag = maphilindo }
+			OR = { tag = PHI tag = SWK }
+			OR = {	
+				NOT = { owns = 1394 } # Sarawak 
+				NOT = { owns = 1396 } # Sabha
+				NOT = { owns = 1445 } # Manilla
+			}
+		}
+		
+		allow = {
+			prestige = 45
+			war = no
+			is_vassal = no
+			part_of_sphere = no
+			OR = {
+				AND = { 
+					owns = 1394 # Sarawak 
+					owns = 1396 # Sabha
+					owns = 1445 # Manilla
+				}
+				PHI = {
+					OR = {
+						tag = THIS
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				SWK = {
+					OR = {
+						tag = THIS
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 20
+			any_country = {
+				limit = {
+					OR = {
+						tag = SWK
+						tag = PHI
+					}
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+			set_country_flag = maphilindo
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

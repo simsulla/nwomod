@@ -189,7 +189,11 @@ country_event = {
   option = {
     name = EVT_8009722_B
 	relation = { who = MSY value = -200 } 
+	MSY = { country_event =  8009723 }
 	any_pop = { limit = { culture = malay } militancy = 6 consciousness = 5 }
+	release = BRU
+	release = SWK
+	any_owned = { limit = { OR = { province_id = 1396 province_id = 1397 } } secede_province = PHI } 
 	ai_chance = { factor = 0 }
   }
 }
