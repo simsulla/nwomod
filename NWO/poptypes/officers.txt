@@ -158,12 +158,12 @@ country_migration_target = {
 	# South and Southeast Asians to MENA
 	modifier = {
 		factor = 2.0
-		THIS = { OR = { is_culture_group = south_asian is_culture_group = southeast_asian } }
+		THIS = { OR = { is_culture_group = south_asian is_culture_group = south_asian_indian is_culture_group = south_asian_pakistani is_culture_group = southeast_asian } }
 		OR = { continent = mena continent = oceania }
 	}
 	modifier = {
 		factor = 0.01
-		THIS = { OR = { is_culture_group = south_asian is_culture_group = southeast_asian } }
+		THIS = { OR = { is_culture_group = south_asian is_culture_group = south_asian_indian is_culture_group = south_asian_pakistani is_culture_group = southeast_asian } }
 		NOT = { continent = mena } NOT = { continent = oceania }
 	}
 	

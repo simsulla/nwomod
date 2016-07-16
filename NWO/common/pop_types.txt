@@ -329,7 +329,7 @@ migration_chance = { # 1
 	}
 	modifier = { 
 		factor = -0.5
-		is_culture_group = south_asian
+		OR = { is_culture_group = south_asian is_culture_group = south_asian_indian is_culture_group = south_asian_pakistani }
 		OR = { is_primary_culture = no is_accepted_culture = no } 
 		location = { is_primary_culture = no is_accepted_culture = no } 
 	}
