@@ -51,13 +51,17 @@ political_decisions = {
 			set_country_flag = article_nine_japan_adopted
 		}
 	}
+	#changed so the decision will only be available if Japan has cores on the southern islands only
 	kuril_islands_dispute = {
 		picture = "kuril_islands_dispute"
 		potential = {
 			tag = JAP
 			NOT = { has_country_flag = kuril_islands_dispute }
-			1089 = { owned_by = RUS } 
+			1089 = { owned_by = RUS is_core = JAP  } 
 			relation = { who = RUS value = -20 }
+			1087 = { NOT = { is_core = JAP } }
+			1088 = { NOT = { is_core = JAP } }
+			1086 = { NOT = { is_core = JAP } }
 		}
 		allow = {
 			OR = { government = democracy government = hms_government }
