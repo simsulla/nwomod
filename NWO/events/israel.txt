@@ -1184,14 +1184,14 @@ country_event = {
     year = 1949 
     war = no
 	owns = 919 # Tel Aviv
-	NOT = { RUS = { government = proletarian_dictatorship } }
+	NOT = { exists = SUN }
   }
 
   mean_time_to_happen = { months = 1 }
 
   option = {
     name = EVT_8007670_A
-	RUS= { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 919 } } # Tel Aviv
+	RUS = { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 919 } } # Tel Aviv
 	UKR = { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 919 } }
 	BYE = { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 919 } }
   }

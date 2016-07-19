@@ -3,7 +3,7 @@ political_decisions = {
 	gulag = {
 		picture = "gulag"
 		potential = {
-			tag = RUS
+			tag = SUN
 			NOT = { year = 1956 }
 			NOT = { has_country_modifier = forced_labour }
 			NOT = { has_country_modifier = in_bankrupcy }
@@ -34,7 +34,7 @@ political_decisions = {
 		picture = "comecon"
 		potential = {
 			government = proletarian_dictatorship
-			RUS = { is_greater_power = yes government = proletarian_dictatorship }
+			SUN = { is_greater_power = yes government = proletarian_dictatorship }
 			NOT = { has_country_modifier = comecon }
 			NOT = { has_country_modifier = comecon_excluded }
 			NOT = { has_country_modifier = bretton_system }
@@ -43,10 +43,10 @@ political_decisions = {
 			containment = 1
 			OR = { 
 				war = no
-				tag = RUS
-				relation = { who = RUS value = 150 } # enables other communist to join
-				overlord = { tag = RUS } 
-				sphere_owner = { tag = RUS } 
+				tag = SUN
+				relation = { who = SUN value = 150 } # enables other communist to join
+				overlord = { tag = SUN } 
+				sphere_owner = { tag = SUN } 
 			}
 		}
 		effect = {
@@ -59,9 +59,9 @@ political_decisions = {
 		picture = "comecon_aid"
 		potential = {
 			NOT = { has_country_modifier = comecon_excluded }
-			RUS = { is_greater_power = yes government = proletarian_dictatorship money = 200000 }
+			SUN = { is_greater_power = yes government = proletarian_dictatorship money = 200000 }
 			NOT = { is_greater_power = yes }
-			NOT = { tag = RUS }
+			NOT = { tag = SUN }
 			NOT = { has_country_modifier = comecon_aid }
 			NOT = { has_country_modifier = comecon_aid_rejected }
 		}
@@ -78,7 +78,7 @@ political_decisions = {
 			any_country = { 
 				limit = { 
 					is_greater_power = yes
-					tag = RUS
+					tag = SUN
 					money = 220000
 				}
 				country_event = 15610 
@@ -97,7 +97,7 @@ political_decisions = {
 			government = proletarian_dictatorship
 			NOT = { has_country_flag = sino_soviet_friendship }
 			CHI = { exists = yes }
-			tag = RUS
+			tag = SUN
 		}
 
 		allow = {
@@ -123,7 +123,7 @@ political_decisions = {
 	deportation_of_germans = {
 		picture = "deportation_of_germans"
 		potential = {
-			tag = RUS
+			tag = SUN
 			year = 1947 NOT = { year = 1990 }
 			NOT = { has_country_flag = deportation_of_germans }
 		}
@@ -151,7 +151,7 @@ political_decisions = {
 	polish_population_transfers = {
 		picture = "polish_population_transfers"
 		potential = {
-			tag = RUS
+			tag = SUN
 			year = 1947 NOT = { year = 1990 }
 			has_country_flag = allow_polish_population_transfers
 			NOT = { has_country_flag = polish_population_transfers }

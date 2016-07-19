@@ -11,9 +11,9 @@ country_event = {
 	government = proletarian_dictatorship  country_event = 800042
 	clr_country_flag = castro_rebellion 
 	relation = { who = USA value = -100 } 
-	relation = { who = RUS value = 100 } 
+	relation = { who = SUN value = 100 } 
 	USA = { diplomatic_influence = { who = CUB value = -200 } }
-	RUS = { diplomatic_influence = { who = CUB value = 200 } }
+	SUN = { diplomatic_influence = { who = CUB value = 200 } }
   }
 }
 country_event = {
@@ -167,7 +167,7 @@ country_event = {
   option = {
     name = EVT_8003817_A
 	any_pop = { militancy = -1.0 consciousness = -1 }
-	relation = { who = USA value = -100 } relation = { who = RUS value = 100 } 
+	relation = { who = USA value = -100 } relation = { who = SUN value = 100 } 
 	USA = { country_event =  { id = 8003818 days = 10 } } 
   }
 }
@@ -182,7 +182,7 @@ country_event = {
     name = EVT_8003818_A
 	any_pop = { militancy = 0.5 consciousness = 1 }
 	relation = { who = CUB value = -100 } 
-	relation = { who = RUS value = -100 }
+	relation = { who = SUN value = -100 }
 	prestige = -20	
   }
 }
@@ -197,10 +197,10 @@ country_event = {
     name = EVT_8003819_A
 	any_pop = { militancy = 1.5 consciousness = 2 }
 	relation = { who = USA value = 200 } 
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	government = presidential_dictatorship  country_event = 800050
 	diplomatic_influence = { who = USA value = 200 }
-	diplomatic_influence = { who = RUS value = -200 }
+	diplomatic_influence = { who = SUN value = -200 }
 	USA = { country_event =  { id = 8003820 days = 10 } } 
   }
 }
@@ -253,14 +253,14 @@ country_event = {
 	any_pop = { consciousness = 2 }
 	badboy = -5 
 	relation = { who = USA value = 75 } 
-	relation = { who = RUS value = -25 } 
+	relation = { who = SUN value = -25 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8003821_B
 	relation = { who = USA value = -50 } 
-	relation = { who = RUS value = 15 } 
+	relation = { who = SUN value = 15 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -284,7 +284,7 @@ country_event = {
     name = EVT_8003822_A
 	any_pop = { consciousness = 2 }
 	relation = { who = USA value = -50 } 
-	relation = { who = RUS value = 25 } 
+	relation = { who = SUN value = 25 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -292,7 +292,7 @@ country_event = {
     name = EVT_8003822_B
 	any_pop = { militancy = 0.6 }
 	relation = { who = USA value = 25 } 
-	relation = { who = RUS value = -60 } 
+	relation = { who = SUN value = -60 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -315,14 +315,14 @@ country_event = {
   option = {
     name = EVT_8003823_A
 	relation = { who = USA value = -25 } 
-	relation = { who = RUS value = 40 } 
+	relation = { who = SUN value = 40 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8003823_B
 	relation = { who = USA value = 25 } 
-	relation = { who = RUS value = -25 } 
+	relation = { who = SUN value = -25 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -346,14 +346,14 @@ country_event = {
   option = {
     name = EVT_8003824_A
 	relation = { who = USA value = -25 } 
-	relation = { who = RUS value = 40 } 
+	relation = { who = SUN value = 40 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8003824_B
 	relation = { who = USA value = 25 } 
-	relation = { who = RUS value = -25 } 
+	relation = { who = SUN value = -25 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -376,14 +376,14 @@ country_event = {
   option = {
     name = EVT_8003825_A
 	relation = { who = USA value = -50 }
- 	relation = { who = RUS value = 50 } 
+ 	relation = { who = SUN value = 50 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8003825_B
 	relation = { who = USA value = 50 } 
-	relation = { who = RUS value = -25 } 
+	relation = { who = SUN value = -25 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -406,7 +406,7 @@ country_event = {
   option = {
     name = EVT_8003826_A
 	relation = { who = USA value = -100 } 
-	relation = { who = RUS value = 10 } 
+	relation = { who = SUN value = 10 } 
 	nationalize = yes
 	ai_chance = { factor = 100 }
   }
@@ -415,7 +415,7 @@ country_event = {
     name = EVT_8003826_B
 	any_pop = { militancy = 1.0 consciousness = 1 }
 	relation = { who = USA value = 20 } 
-	relation = { who = RUS value = -25 } 
+	relation = { who = SUN value = -25 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -444,7 +444,7 @@ country_event = {
 
   option = {
     name = EVT_8003830_B
-	RUS = { country_event = 8003832 }
+	SUN = { country_event = 8003832 }
 	ai_chance = { factor = 100 }
   }
 
@@ -479,7 +479,7 @@ country_event = {
   title = EVT_8003832_NAME
   desc = EVT_8003832_DESC
   picture = "nwo2_soviet_cuba"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8003832_A
@@ -503,7 +503,7 @@ country_event = {
   option = {
     name = EVT_8003833_A
 	relation = { who = USA value = 150 } 
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
   }
 }
 country_event = {
@@ -516,7 +516,7 @@ country_event = {
   option = {
     name = EVT_8003834_A
 	relation = { who = USA value = -50 } 
-	relation = { who = RUS value = -150 } 
+	relation = { who = SUN value = -150 } 
   }
 }
 country_event = {
@@ -530,7 +530,7 @@ country_event = {
     name = EVT_8003835_A
 	any_pop = { consciousness = 1 }
 	relation = { who = USA value = -150 } 
-	relation = { who = RUS value = 150 } 
+	relation = { who = SUN value = 150 } 
   }
 }
 country_event = {

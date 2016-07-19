@@ -80,12 +80,14 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
 			capital_scope = { continent = europe } # NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
+			NOT = { tag = SUN }
 		}
 		allow = {
 			has_country_flag = xeu_ambition
 			has_country_flag = trade_block_ambition 
 			OR = { capital_scope = { continent = europe } tag = TUR } 
 			#NOT = { tag = RUS } NOT = { tag = BYE }
+			NOT = { tag = SUN }
 			OR = {
 				government = democracy
 				government = hms_government
@@ -104,6 +106,7 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
 			capital_scope = { continent = europe } # NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
+			NOT = { tag = SUN }
 		}
 		allow = {
 			has_country_flag = xeu_ambition
@@ -127,6 +130,7 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { is_core = XEU } }
 			capital_scope = { continent = europe is_core = THIS } # NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
+			NOT = { tag = SUN }
 		}
 		allow = {
 			has_country_flag = xeu_ambition
@@ -148,6 +152,7 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 			capital_scope = { continent = europe } # NOT = { tag = RUS } NOT = { tag = BYE } # Union Scope
+			NOT = { tag = SUN }
 		}
 		allow = {
 			has_country_flag = xeu_ambition
@@ -172,6 +177,7 @@ political_decisions = {
 		potential = {
 			XEU = { exists = no }
 			capital_scope = { continent = europe } #NOT = { tag = RUS } NOT = { tag = BYE } NOT = { tag = XEA } # Union Scope
+			NOT = { tag = SUN }
 		}
 		allow = {
 			has_country_flag = xeu_ambition

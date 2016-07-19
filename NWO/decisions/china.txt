@@ -30,8 +30,8 @@ political_decisions = {
 	sino_soviet_friendship_chi = {
 		picture = "sino_soviet_friendship"
 		potential = {
-			RUS = { war = no government = proletarian_dictatorship }
-			RUS = { has_country_flag = sino_soviet_friendship }
+			SUN = { war = no government = proletarian_dictatorship }
+			SUN = { has_country_flag = sino_soviet_friendship }
 			war = no
 			NOT = { has_country_flag = sino_soviet_friendship }
 			tag = CHI
@@ -45,10 +45,10 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = sino_soviet_friendship
-			relation = { who = RUS value = 100 } 
+			relation = { who = SUN value = 100 } 
 			add_country_modifier = { name = comecon duration = 1750 }
-			create_alliance = RUS
-			RUS = { diplomatic_influence = { who = CHI value = 100 }  }
+			create_alliance = SUN
+			SUN = { diplomatic_influence = { who = CHI value = 100 }  }
 		}
 
 		ai_will_do = {
@@ -61,9 +61,9 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = the_return_of_port_arthur }
 			tag = CHI
-			RUS = { war = no government = proletarian_dictatorship }
+			SUN = { war = no government = proletarian_dictatorship }
 			CHI = { war = no  }
-			1481 = { owned_by = RUS }
+			1481 = { owned_by = SUN }
 		}
 
 		allow = {
@@ -72,7 +72,7 @@ political_decisions = {
 		}
 
 		effect = {
-			RUS = { country_event = 32500 }
+			SUN = { country_event = 32500 }
 			add_country_modifier = { name = comecon duration = 1750 }
 			set_country_flag = the_return_of_port_arthur
 		}

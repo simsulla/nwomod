@@ -27,7 +27,7 @@ country_event = {
     name = EVT_8500301_A
 	relation = { who = USA value = -100 } 
 	relation = { who = GBR value = -100 } 
-	relation = { who = RUS value = 100 }
+	relation = { who = SUN value = 100 }
 	casus_belli = { target = GBR type = acquire_core_state months = 12 }
     war = { target = GBR attacker_goal = { casus_belli = acquire_core_state state_province_id = 1755 } defender_goal = { casus_belli = status_quo } }
 	# Only if ISR exist shall this kick of
@@ -66,7 +66,7 @@ country_event = {
     name = EVT_8500302_B
 	money = -3000 
 	relation = { who = USA value = -150 } 
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	relation = { who = EGY value = -200 } 
 	1755 = { secede_province = EGY }
 	badboy = 3 
@@ -179,7 +179,7 @@ country_event = {
 	badboy = 10 
 	any_pop = { militancy = 0.8  consciousness = 1.6 }
 	ISR = { country_event = 8500315 }
-	RUS = {country_event =  8500312 } 
+	SUN = {country_event =  8500312 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -234,7 +234,7 @@ country_event = {
   option = {
     name = EVT_8500313_B
 	relation = { who = USA value = -50 } 
-	RUS = { country_event = 8500314  }
+	SUN = { country_event = 8500314  }
 	create_alliance = ISR 
 	ai_chance = { factor = 0 }
   }

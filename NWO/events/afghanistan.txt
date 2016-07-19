@@ -93,13 +93,13 @@ country_event = {
 	government = proletarian_dictatorship  country_event = 800042
 	set_country_flag = soviet_intervention_in_afghanistan
 	country_event =  { id = 8176109 days = 30 }  
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
   
   option = {
     name = EVT_8000110_B
-  	RUS  = { country_event = 8176112 }
+  	SUN  = { country_event = 8176112 }
 	ai_chance = { factor = 100 }
   }
 
@@ -158,7 +158,7 @@ country_event = {
 
   option = {
     name = OK
-	relation = { who = RUS value = -50 }
+	relation = { who = SUN value = -50 }
 	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.15 } } }
 	random_state = { any_pop = { dominant_issue = { value = state_religion factor = 0.1 } } }
 	define_general = { name = "Hafizullah Amin" personality = energetic background = no_background }
@@ -214,8 +214,8 @@ country_event = {
 
   option = {
     name = EVT_8176109_A
-	relation = { who = RUS value = 200 } 
-	RUS = { military_access = THIS } 
+	relation = { who = SUN value = 200 } 
+	SUN = { military_access = THIS } 
   }
 }
 country_event = {
@@ -226,7 +226,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1978
     AFG = { is_vassal = no }
     has_global_flag = afghani_coup_1973
@@ -272,7 +272,7 @@ country_event = {
   title = EVT_8176112_NAME
   desc = EVT_8176112_DESC
   picture = "nwo2_soviet_intervention_in_afghanistan"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8176112_A
@@ -299,7 +299,7 @@ country_event = {
   trigger = {
 	war = no
 	has_country_flag = soviet_intervention_in_afghanistan
-	tag = RUS
+	tag = SUN
 	government = proletarian_dictatorship
 	AFG = { NOT = { government = proletarian_dictatorship } }
   }
@@ -323,7 +323,7 @@ country_event = {
   option = {
     name = EVT_8176114_A
 	any_pop = { consciousness = 1 }
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }
 country_event = {

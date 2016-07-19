@@ -7,11 +7,11 @@ political_decisions = {
 join_communist_bloc = {
 		picture = "joincommunistbloc"
 		potential = {
-			NOT = { OR = { tag = RUS tag = USA } }
-			RUS = { government = proletarian_dictatorship }
+			NOT = { OR = { tag = SUN tag = USA } }
+			SUN = { government = proletarian_dictatorship }
 			USA = { government = democracy }
 			exists = USA
-			exists = RUS
+			exists = SUN
 			NOT = { has_country_flag = joindemo }
 			NOT = { has_country_flag = joincomm }
 			NOT = { has_country_flag = joinnam }
@@ -20,16 +20,16 @@ join_communist_bloc = {
 		}
 		allow = {
 			OR = { government = proletarian_dictatorship ruling_party_ideology = communist }
-			relation = { who = RUS value = 100 }
+			relation = { who = SUN value = 100 }
 		}
 		effect = {
 			set_country_flag = joincomm
 			prestige = 10
-			relation = { who = RUS value = 50 }
+			relation = { who = SUN value = 50 }
 			relation = { who = USA value = -100 }
-			random_country = { limit = { tag = RUS year = 1947 } diplomatic_influence =  { who = THIS value = 25 } country_event = 19809 }
+			random_country = { limit = { tag = SUN year = 1947 } diplomatic_influence =  { who = THIS value = 25 } country_event = 19809 }
 			add_country_modifier = { name = communist_bloc duration = 999999 }
-			random_country = { limit = { tag = RUS year = 1947 } country_event = 8225000 }
+			random_country = { limit = { tag = SUN year = 1947 } country_event = 8225000 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -42,11 +42,11 @@ join_communist_bloc = {
 join_democratic_bloc = {
 		picture = "joindemocraticbloc"
 		potential = {
-			NOT = { OR = { tag = RUS tag = USA } }
-			RUS = { government = proletarian_dictatorship }
+			NOT = { OR = { tag = SUN tag = USA } }
+			SUN = { government = proletarian_dictatorship }
 			USA = { government = democracy }
 			exists = USA
-			exists = RUS
+			exists = SUN
 			NOT = { has_country_flag = joindemo }
 			NOT = { has_country_flag = joincomm }
 			NOT = { has_country_flag = joinnam }
@@ -66,7 +66,7 @@ join_democratic_bloc = {
 			set_country_flag = joindemo
 			prestige = 10
 			relation = { who = USA value = 50 }
-			relation = { who = RUS value = -100 }
+			relation = { who = SUN value = -100 }
 			random_country = { limit = { tag = USA year = 1947 } diplomatic_influence =  { who = THIS value = 25 } country_event = 19809 }
 			add_country_modifier = { name = democratic_bloc duration = 999999 }
 		}
@@ -82,11 +82,11 @@ join_democratic_bloc = {
 join_nam_bloc = {
 		picture = "joinnambloc"
 		potential = {
-			NOT = { OR = { tag = RUS tag = USA } }
-			RUS = { government = proletarian_dictatorship }
+			NOT = { OR = { tag = SUN tag = USA } }
+			SUN = { government = proletarian_dictatorship }
 			USA = { government = democracy }
 			exists = USA
-			exists = RUS
+			exists = SUN
 			NOT = { has_country_flag = joinnam }
 			NOT = { has_country_flag = joindemo }
 			NOT = { has_country_flag = joincomm }
@@ -96,15 +96,15 @@ join_nam_bloc = {
 		}
 		allow = {
 			NOT = { relation = { who = USA value = 100 } }
-			NOT = { relation = { who = RUS value = 100 } }
+			NOT = { relation = { who = SUN value = 100 } }
 		}
 		effect = {
 			set_country_flag = joinnam
 			prestige = 10
 			relation = { who = USA value = -10 }
-			relation = { who = RUS value = -10 }
+			relation = { who = SUN value = -10 }
 			USA =  { diplomatic_influence =  { who = THIS value = -50 } }
-			RUS =  { diplomatic_influence =  { who = THIS value = -50 } }
+			SUN =  { diplomatic_influence =  { who = THIS value = -50 } }
 			add_country_modifier = { name = nam_bloc duration = 999999 }
 		}
 		ai_will_do = {
@@ -117,11 +117,11 @@ join_nam_bloc = {
 leave_communist_bloc = {
 		picture = "leavebloc"
 		potential = {
-			NOT = { OR = { tag = RUS tag = USA } }
-			RUS = { government = proletarian_dictatorship }
+			NOT = { OR = { tag = SUN tag = USA } }
+			SUN = { government = proletarian_dictatorship }
 			USA = { government = democracy }
 			exists = USA
-			exists = RUS
+			exists = SUN
 			has_country_flag = joincomm
 			has_global_flag = blocsenabled
 			NOT = { has_country_modifier = independent_bloc }
@@ -132,14 +132,14 @@ leave_communist_bloc = {
 		effect = {
 			clr_country_flag = joincomm
 			prestige = -10
-			relation = { who = RUS value = -200 }
+			relation = { who = SUN value = -200 }
 			relation = { who = USA value = 100 }
-			RUS =  { diplomatic_influence =  { who = THIS value = -200 } }
+			SUN =  { diplomatic_influence =  { who = THIS value = -200 } }
 			USA =  { diplomatic_influence =  { who = THIS value = 10 } }
 			any_country = { limit = { has_country_flag = joincomm } country_event = 19810 }
 			add_country_modifier = { name = independent_bloc duration = 3500 }
 			remove_country_modifier = communist_bloc
-			RUS  = { country_event = 8225001 }
+			SUN  = { country_event = 8225001 }
 		}
 		alert = no
 		ai_will_do = {
@@ -152,11 +152,11 @@ leave_communist_bloc = {
 leave_democratic_bloc = {
 		picture = "leavebloc"
 		potential = {
-			NOT = { OR = { tag = RUS tag = USA } }
-			RUS = { government = proletarian_dictatorship }
+			NOT = { OR = { tag = SUN tag = USA } }
+			SUN = { government = proletarian_dictatorship }
 			USA = { government = democracy }
 			exists = USA
-			exists = RUS
+			exists = SUN
 			has_country_flag = joindemo
 			has_global_flag = blocsenabled
 			NOT = { has_country_modifier = independent_bloc }
@@ -167,9 +167,9 @@ leave_democratic_bloc = {
 		effect = {
 			clr_country_flag = joindemo
 			prestige = -10
-			relation = { who = RUS value = 100 }
+			relation = { who = SUN value = 100 }
 			relation = { who = USA value = -200 }
-			RUS =  { diplomatic_influence =  { who = THIS value = 10 } }
+			SUN =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = -200 } }
 			any_country = { limit = { has_country_flag = joindemo } country_event = 19810 }
 			add_country_modifier = { name = independent_bloc duration = 3500 }
@@ -186,11 +186,11 @@ leave_democratic_bloc = {
 leave_nam_bloc = {
 		picture = "leavebloc"
 		potential = {
-			NOT = { OR = { tag = RUS tag = USA } }
-			RUS = { government = proletarian_dictatorship }
+			NOT = { OR = { tag = SUN tag = USA } }
+			SUN = { government = proletarian_dictatorship }
 			USA = { government = democracy }
 			exists = USA
-			exists = RUS
+			exists = SUN
 			has_country_flag = joinnam
 			has_global_flag = blocsenabled
 			NOT = { government = proletarian_dictatorship }
@@ -208,9 +208,9 @@ leave_nam_bloc = {
 		effect = {
 			clr_country_flag = joinnam
 			prestige = -10
-			relation = { who = RUS value = 25 }
+			relation = { who = SUN value = 25 }
 			relation = { who = USA value = 25 }
-			RUS =  { diplomatic_influence =  { who = THIS value = 10 } }
+			SUN =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = 10 } }
 			add_country_modifier = { name = independent_bloc duration = 3500 }
 			remove_country_modifier = nam_bloc
@@ -226,25 +226,25 @@ leave_nam_bloc = {
 leave_nam_bloc_comm = {
 		picture = "leavebloc"
 		potential = {
-			NOT = { OR = { tag = RUS tag = USA } }
-			RUS = { government = proletarian_dictatorship }
+			NOT = { OR = { tag = SUN tag = USA } }
+			SUN = { government = proletarian_dictatorship }
 			USA = { government = democracy }
 			exists = USA
-			exists = RUS
+			exists = SUN
 			has_country_flag = joinnam
 			has_global_flag = blocsenabled
 			government = proletarian_dictatorship
 			NOT = { has_country_modifier = independent_bloc }
 		}
 		allow = {
-			relation = { who = RUS value = 150 }
+			relation = { who = SUN value = 150 }
 		}
 		effect = {
 			clr_country_flag = joinnam
 			prestige = -10
-			relation = { who = RUS value = 50 }
+			relation = { who = SUN value = 50 }
 			relation = { who = USA value = 20 }
-			RUS =  { diplomatic_influence =  { who = THIS value = 10 } }
+			SUN =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = -10 } }
 			add_country_modifier = { name = independent_bloc duration = 3500 }
 			remove_country_modifier = nam_bloc
@@ -263,9 +263,9 @@ leave_nam_bloc_comm = {
 			potential = {
 				OR = { year = 1955 has_country_flag = invitation_to_nato }
 				NOT =  { has_country_modifier = neutrality }
-				NOT =  { in_sphere = RUS }					
+				NOT =  { in_sphere = SUN }					
 				NOT =  { has_country_modifier = csto_alliance }
-				NOT =  { tag = RUS }					
+				NOT =  { tag = SUN }					
 				NOT = { has_country_modifier = alliance_nato }
 				NOT = { has_country_modifier = leave_alliance_nato }
 				OR = {
@@ -482,26 +482,26 @@ leave_nam_bloc_comm = {
 				NOT = { has_country_modifier = leave_warsaw_pact }
 				government = proletarian_dictatorship
 				OR = {
-					tag = RUS
+					tag = SUN
 					AND = {
 						OR = { is_greater_power = yes part_of_sphere = yes }
 						continent = europe
 					}
 				}
 				OR = {
-					RUS = { has_country_modifier = warsaw_pact }
-					tag = RUS
+					SUN = { has_country_modifier = warsaw_pact }
+					tag = SUN
 				}
 			}
 
 			allow = {
 				has_unclaimed_cores = no
 				OR = {
-					tag = RUS
+					tag = SUN
 					continent = europe
 				}
 				OR = {
-					tag = RUS
+					tag = SUN
 					AND = {
 						OR = { is_greater_power = yes part_of_sphere = yes }
 						continent = europe
@@ -510,9 +510,9 @@ leave_nam_bloc_comm = {
 				OR = {
 					AND = { 
 						is_greater_power = yes
-						OR = { tag = RUS  relation = { who = RUS value = 50 } }
+						OR = { tag = SUN  relation = { who = SUN value = 50 } }
 					}
-					in_sphere = RUS
+					in_sphere = SUN
 				}
 				government = proletarian_dictatorship
 			}
@@ -521,9 +521,9 @@ leave_nam_bloc_comm = {
 				random_country = {
 					limit = {
 						tag = THIS
-						NOT = { tag = RUS }
+						NOT = { tag = SUN }
 					}
-					create_alliance = RUS
+					create_alliance = SUN
 				}
 				add_country_modifier = {
 					name = warsaw_pact
@@ -540,24 +540,24 @@ leave_nam_bloc_comm = {
 			potential = {
 				has_country_modifier = warsaw_pact
 				NOT = { 
-					tag = RUS
-					alliance_with = RUS
-					in_sphere = RUS
+					tag = SUN
+					alliance_with = SUN
+					in_sphere = SUN
 				}
-				NOT = { relation = { who = RUS value = 0 } }
+				NOT = { relation = { who = SUN value = 0 } }
 			}
 
 			allow = {
 				has_country_modifier = warsaw_pact
 				NOT = { 
-					tag = RUS
-					alliance_with = RUS
-					in_sphere = RUS
+					tag = SUN
+					alliance_with = SUN
+					in_sphere = SUN
 				}
 				OR = { 
 					has_unclaimed_cores = yes
 					NOT = { government = proletarian_dictatorship }
-					NOT = { relation = { who = RUS value = -100 } }
+					NOT = { relation = { who = SUN value = -100 } }
 				}
 			}
 

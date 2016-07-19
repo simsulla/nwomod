@@ -47,7 +47,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-	tag = RUS
+	tag = SUN
     year = 1946 NOT = { year = 1955 }
   }
 
@@ -89,7 +89,7 @@ country_event = {
   trigger = {
     tag = USA
     year = 1944 NOT = { year = 1990 }
-    GER = { war_with = RUS }
+    GER = { war_with = SUN }
 	war_with = GER
   }
 
@@ -97,8 +97,8 @@ country_event = {
 
   option = {
     name = EVT_8215003_A
-	relation = { who = RUS value = 100 }
-	RUS = { country_event = 8215004 }
+	relation = { who = SUN value = 100 }
+	SUN = { country_event = 8215004 }
   }
 }
 country_event = {
@@ -155,7 +155,7 @@ country_event = { # Maintaining security in Europe
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
      year = 1946 NOT = { year = 1991 }
 	war = no
     
@@ -166,7 +166,7 @@ country_event = { # Maintaining security in Europe
   option = {
     name = EVT_8215011_A
 	any_country = { 
-		limit = { war = no government = proletarian_dictatorship NOT = { tag = RUS } exists = yes }
+		limit = { war = no government = proletarian_dictatorship NOT = { tag = SUN } exists = yes }
 		country_event = 8215013
 	}
 	ai_chance = { factor = 100 }
@@ -192,7 +192,7 @@ country_event = {
 	NOT = { government = proletarian_dictatorship }
     year = 1946 NOT = { year = 1949 }
     has_global_flag = ww3
-    war_with = RUS
+    war_with = SUN
 	NOT = { has_country_flag = western_allies_in_war }
 	war = no
   }
@@ -211,7 +211,7 @@ country_event = {
 
   option = {
     name = EVT_8215012_B
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	relation = { who = USA value = -150 } 
 	set_country_flag = western_allies_in_war 
 	ai_chance = { factor = 100 }	
@@ -226,14 +226,14 @@ country_event = {
  
   option = {
     name = EVT_8215013_A
-	create_alliance = RUS 
+	create_alliance = SUN 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8215013_B
 	relation = { who = USA value = 50 } 
-	relation = { who = RUS value = -150 } 
+	relation = { who = SUN value = -150 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -383,7 +383,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1955 NOT = { year = 1960 }
 	GER = { has_country_flag = invitation_to_nato }
   }
@@ -415,7 +415,7 @@ country_event = {
     year = 1955 NOT = { year = 1960 }
     NOT = { has_global_flag = isolationist_ussr }
     NOT = { has_global_flag = tito_soviet_split }
-    NOT = { THIS = { alliance_with = RUS } }
+    NOT = { THIS = { alliance_with = SUN } }
 	NOT = { has_country_flag = invitation_to_warsaw_pact }
 	NOT =  { capital_scope = { has_province_modifier = neutrality } }
   }

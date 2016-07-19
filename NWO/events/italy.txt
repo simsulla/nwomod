@@ -272,7 +272,7 @@ country_event = {
 
   option = {
     name = EVT_8007744_A
-	RUS = { country_event = 8007745 }
+	SUN = { country_event = 8007745 }
 	ai_chance = { factor = 100 }
   }
 
@@ -288,7 +288,7 @@ country_event = {
   title = EVT_8007745_NAME
   desc = EVT_8007745_DESC
   picture = "nwo2_italian_communist_party"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
 
   option = {
@@ -335,10 +335,10 @@ country_event = {
   option = {
     name = EVT_8007747_A
 	any_pop = { militancy = 1.0 }
-	create_alliance = RUS 
-	RUS = { military_access = THIS } 
+	create_alliance = SUN 
+	SUN = { military_access = THIS } 
 	government = proletarian_dictatorship country_event = 800052
-	RUS = { country_event = 8225000 } # dissolution_of_the_eastern_bloc.txt
+	SUN = { country_event = 8225000 } # dissolution_of_the_eastern_bloc.txt
 	USA = { country_event = 8007746 }
   }
 }
@@ -354,7 +354,7 @@ country_event = {
 	any_pop = { militancy = 2.5 }
 	create_alliance = USA 
 	USA = { military_access = THIS } 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }
 country_event = {

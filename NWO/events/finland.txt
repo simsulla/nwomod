@@ -66,7 +66,7 @@ country_event = {
     tag = FIN
     year = 1955
 	war = no
-    exists = RUS
+    exists = SUN
   }
 
   mean_time_to_happen = { months = 1  }
@@ -74,15 +74,15 @@ country_event = {
   option = {
     name = EVT_8005524_A
 	any_pop = { consciousness = 1 }
-	relation = { who = RUS value = 200 } 
-	RUS = { military_access = THIS } 
+	relation = { who = SUN value = 200 } 
+	SUN = { military_access = THIS } 
 	country_event =  { id = 8202020 days = 1 } 
   }
 
   option = {
     name = EVT_8005524_B
 	any_pop = { militancy = 3.0 }
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
   }
 }
 country_event = {
@@ -114,7 +114,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1943 NOT = { year = 1953 }
     NOT = { has_global_flag = ww3 }
 	war = no
@@ -154,7 +154,7 @@ country_event = {
   option = {
     name = EVT_8005527_B
 	any_pop = { militancy = 1.0 consciousness = 1 }
-	war = { target = RUS attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli = install_communist_gov_cb } }
+	war = { target = SUN attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli = install_communist_gov_cb } }
 	ai_chance = { factor = 0 }
   }
 }

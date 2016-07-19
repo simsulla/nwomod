@@ -36,7 +36,7 @@ country_event = {
 
   trigger = {
 	government = proletarian_dictatorship
-	tag = RUS
+	tag = SUN
 	year = 1960 NOT = { year = 1963 }
     owns = 551 # East Berlin
 	NOT = { exists = DDR }
@@ -92,7 +92,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1944 NOT = { year = 1963 }
 	NOT = { exists = GER }
     NOT = { exists = IAR }
@@ -247,7 +247,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1946 NOT = { year = 1963 }
     NOT = { exists = DDR }
     
@@ -421,7 +421,7 @@ country_event = {
     name = EVT_8204040_A
 	set_global_flag = deutsche_mark
 	GBR = { country_event = 8204041 }
-	RUS = { country_event = 8204042 } 
+	SUN = { country_event = 8204042 } 
     ai_chance = { factor = 100 }
   }
 
@@ -447,7 +447,7 @@ country_event = {
   title = EVT_8204042_NAME
   desc = EVT_8204042_DESC
   picture = "nwo2_deutsche_mark"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8204042_A
@@ -481,7 +481,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1948 NOT = { year = 1949 }
     has_global_flag = deutsche_mark
     has_global_flag = divided_berlin
@@ -523,7 +523,7 @@ country_event = {
 
   option = {
     name = EVT_8204060_B
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
     ai_chance = { factor = 100 }
   }
 }
@@ -535,7 +535,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	owns = 551
 	GBR = { has_country_flag = accept_united_germany } 
 	USA = { has_country_flag = accept_united_germany } 
@@ -729,7 +729,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1952 NOT = { year = 1953 }
     exists = DDR
     
@@ -762,7 +762,7 @@ country_event = {
 
   option = {
     name = EVT_8204401_A
-	relation = { who = RUS value = -25 } 
+	relation = { who = SUN value = -25 } 
 	relation = { who = DDR value = -25 } 
 	relation = { who = GER value = 30 } 
 	badboy = -5 
@@ -772,7 +772,7 @@ country_event = {
 
   option = {
     name = EVT_8204401_B
-	relation = { who = RUS value = -75 } 
+	relation = { who = SUN value = -75 } 
 	relation = { who = DDR value = -75 } 
 	badboy = -5 
     ai_chance = { factor = 0 }
@@ -780,7 +780,7 @@ country_event = {
 
   option = {
     name = EVT_8204401_C
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	relation = { who = DDR value = 50 } 
 	relation = { who = GER value = -50 } 
 	set_country_flag = stalins_note_ok
@@ -795,7 +795,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1952 NOT = { year = 1959 }
 	NOT = {
 		USA = { has_country_flag = stalins_note_ok }
@@ -835,7 +835,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1954 NOT = { year = 1959 }
 	USA = { has_country_flag = stalins_note_ok }
 	GBR = { has_country_flag = stalins_note_ok }
@@ -877,7 +877,7 @@ country_event = {
 	relation = { who = USA value = -50 } 
 	relation = { who = GBR value = -50 } 
 	relation = { who = FRA value = -50 } 
-	relation = { who = RUS value = 25 } 
+	relation = { who = SUN value = 25 } 
   }
 }
 country_event = {
@@ -896,7 +896,7 @@ country_event = {
 	relation = { who = USA value = -50 } 
 	relation = { who = GBR value = -50 } 
 	relation = { who = FRA value = -50 } 
-	relation = { who = RUS value = 25 } 
+	relation = { who = SUN value = 25 } 
 	capital_scope = { add_province_modifier = { name = neutrality duration = -1 } }
 	capital_scope = { remove_province_modifier = alliance_nato }
   }
@@ -980,7 +980,7 @@ country_event = {
   trigger = {
     tag = GER
 	year = 1948 NOT = { year = 1960 }
-    USA = { war_with = RUS }
+    USA = { war_with = SUN }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -1001,7 +1001,7 @@ country_event = {
 	  tag = GER
 	  NOT = { year = 1956 }
 	  or = { 
-		  vassal_of = RUS
+		  vassal_of = SUN
 		  ai = no
 	  } 
 	  government = proletarian_dictatorship
@@ -1013,7 +1013,7 @@ country_event = {
 	option = {
 	  name = EVT_8204001_A
 	  change_tag = DDR
-	  RUS = { create_vassal = THIS } #As you do not act historically，The country can only get limited independence.
+	  SUN = { create_vassal = THIS } #As you do not act historically，The country can only get limited independence.
 	  any_owned = { add_core = DDR }
 	}
 }

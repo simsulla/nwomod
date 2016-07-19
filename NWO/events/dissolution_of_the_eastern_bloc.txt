@@ -4,7 +4,7 @@ country_event = {
   title = EVT_8225000_NAME
   desc = EVT_8225000_DESC
   picture = "nwo2_communism_gets_stronger"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8225000_A
@@ -20,7 +20,7 @@ country_event = {
   title = EVT_8225001_NAME
   desc = EVT_8225001_DESC
   picture = "nwo2_communism_gets_weaker"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8225001_A
@@ -60,7 +60,7 @@ country_event = {
   trigger = {
     has_global_flag = depuppetize_warsaw_pact
 	government = proletarian_dictatorship
-	OR = { vassal_of = RUS is_vassal = no }
+	OR = { vassal_of = SUN is_vassal = no }
 	capital_scope = { continent = europe  }
 	NOT = { has_country_flag = depuppetize_warsaw_pact }
   }
@@ -91,7 +91,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship
 	has_global_flag = breakup_of_ussr # DH alt history
   }
@@ -113,7 +113,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship
     has_global_flag = autumn_of_nations 
 	OR = { exists = LAT exists = LIT exists = EST }

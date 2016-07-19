@@ -58,7 +58,7 @@ country_event = {
     year = 1968 NOT = { year = 1969 }
     
 	government = proletarian_dictatorship
-	vassal_of = RUS
+	vassal_of = SUN
   }
 
   mean_time_to_happen = { months = 1  }
@@ -66,12 +66,12 @@ country_event = {
   option = {
     name = EVT_8023107_A
 	any_pop = { consciousness = 2 }
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	relation = { who = USA value = 50 } 
 	relation = { who = GBR value = 50 } 
 	relation = { who = FRA value = 50 } 
-	RUS  = { country_event = 8225001 } 
-	RUS = { country_event = 8023121 } 
+	SUN  = { country_event = 8225001 } 
+	SUN = { country_event = 8023121 } 
 	ai_chance = { factor  = 100 }
   }
 
@@ -137,7 +137,7 @@ country_event = {
 
   option = {
     name = EVT_8023114_B
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	ai_chance = { factor = 100 }
   }
 }
@@ -161,12 +161,12 @@ country_event = {
   option = {
     name = EVT_8023120_A
 	any_pop = { militancy = 0.5 consciousness = 1 }
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	relation = { who = USA value = 50 } 
 	relation = { who = GBR value = 50 } 
 	relation = { who = FRA value = 50 } 
-	RUS  = { country_event = 8225001 } 
-	RUS = { country_event = 8023121 }
+	SUN  = { country_event = 8225001 } 
+	SUN = { country_event = 8023121 }
 	ai_chance = { factor  = 100 }
   }
 
@@ -214,7 +214,7 @@ country_event = {
   option = {
     name = EVT_8023122_A
 	overlord = { release_vassal = THIS } 
-	RUS = { end_military_access = THIS } 
+	SUN = { end_military_access = THIS } 
 	country_event = 8023123
   }
 }
@@ -236,7 +236,7 @@ country_event = {
   
  option = {
     name = EVT_8023123_A
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	any_pop = { militancy = -2.0 consciousness = -1 }
 	government = democracy  country_event = 800054
   }
@@ -249,7 +249,7 @@ country_event = {
   fire_only_once = yes
   
   trigger = {
-    tag = RUS
+    tag = SUN
    	has_country_flag = end_the_spring
 	war = no
 	is_our_vassal = CZH
@@ -259,7 +259,7 @@ country_event = {
 
   option = {
     name = EVT_8023124_A
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
 	CZH = { country_event = 8023125 }
   }
 }
@@ -273,8 +273,8 @@ country_event = {
   option = {
     name = EVT_8023125_A
 	any_pop = { militancy = 1.0 consciousness = 1 }
-	relation = { who = RUS value = 50 } 
-	RUS = { country_event = 8023108 }
+	relation = { who = SUN value = 50 } 
+	SUN = { country_event = 8023108 }
   }
 }
 country_event = {
@@ -288,7 +288,7 @@ country_event = {
     tag = CZH
     has_global_flag = autumn_of_nations
 	government = proletarian_dictatorship
-	OR = { vassal_of = RUS is_vassal = no }
+	OR = { vassal_of = SUN is_vassal = no }
 	war = no
   }
 

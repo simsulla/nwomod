@@ -296,7 +296,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1941 NOT = {year = 1950 }
   }
 
@@ -316,7 +316,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1953 NOT = {year = 1954}
   }
 
@@ -436,7 +436,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1954 NOT = {  year = 1960 }
     has_global_flag = event_fired_8014254
     exists = DDR
@@ -474,7 +474,7 @@ country_event = {
     name = EVT_8014256_A
 	any_pop = { militancy = 0.5  consciousness = 1 }
 	relation = { who = DDR value = 100 } 
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	country_event =  { id = 8014261 days = 1 } 
 	ai_chance = { factor = 100 }
   }
@@ -494,7 +494,7 @@ country_event = {
   option = {
     name = EVT_8014257_A
 	relation = { who = GER value = 100 } 
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
     country_event =  { id = 8014261 days = 1 } 
 	ai_chance = { factor = 100 }
   }
@@ -514,14 +514,14 @@ country_event = {
 
   option = {
     name = EVT_8014258_A
-	relation = { who = RUS value = 100 } 
+	relation = { who = SUN value = 100 } 
 	set_global_flag = event_fired_8014258
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8014258_B
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -534,14 +534,14 @@ country_event = {
 
   option = {
     name = EVT_8014259_A
-	relation = { who = RUS value = 100 } 
+	relation = { who = SUN value = 100 } 
 	set_global_flag = event_fired_8014259
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8014259_B
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -554,14 +554,14 @@ country_event = {
 
   option = {
     name = EVT_8014260_A
-	relation = { who = RUS value = 100 } 
+	relation = { who = SUN value = 100 } 
 	set_global_flag = event_fired_8014260
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8014260_B
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -590,8 +590,8 @@ country_event = {
     name = EVT_8014261_A
 	inherit = DDR 
 	neutrality = yes
-	RUS  = { country_event = 8225001 } 
-	RUS = { country_event = 8014262 }
+	SUN  = { country_event = 8225001 } 
+	SUN = { country_event = 8014262 }
   }
 }
 country_event = {
@@ -599,7 +599,7 @@ country_event = {
   title = EVT_8014262_NAME
   desc = EVT_8014262_DESC
   picture = "nwo2_soviet_economy"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8014262_A
@@ -611,7 +611,7 @@ country_event = {
   title = EVT_8014206_NAME
   desc = EVT_8014206_DESC
   picture = "nwo2_lavrentiy_beria"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8014206_A
@@ -644,7 +644,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1947 NOT = { year = 1956 }
   }
 
@@ -663,7 +663,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1954 NOT = { year = 1960 }
   }
 
@@ -682,7 +682,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1956 NOT = { year = 1960 }
   }
 
@@ -698,7 +698,7 @@ country_event = {
   option = {
     name = EVT_8014216_B
 	any_pop = { militancy = 0.1 consciousness = 0.1 }
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -725,7 +725,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship 
     political_reform_want = 1
     average_militancy  = 3
@@ -752,7 +752,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1952 NOT = { year = 1953 }
   }
 
@@ -819,7 +819,7 @@ country_event = {
 
   option = {
     name = EVT_8014220_A
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	country_event = 8014224 
   }
 }
@@ -853,7 +853,7 @@ country_event = {
   option = {
     name = EVT_8014225_A
 	any_pop = { militancy = 0.5 consciousness = 1 }
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
   }
 }
 country_event = {
@@ -864,7 +864,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1952 NOT = { year = 1970 }
     NOT = { average_militancy  = 2 }
     
@@ -906,7 +906,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1964 NOT = { year = 1979 }
 	has_country_flag = nikita_khrushchev
   }
@@ -926,7 +926,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1964 NOT = { year = 1979 }
 	NOT = { has_country_flag = nikita_khrushchev }
   }
@@ -946,7 +946,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1984 NOT = { year = 1985 }
   }
 
@@ -965,7 +965,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
      year = 1984 NOT = { year = 1985 }
   }
 
@@ -984,7 +984,7 @@ country_event = { # Mikhail Gorbachev
   fire_only_once = yes
 
   trigger = { 
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship
     has_country_modifier = in_bankrupcy
   }
@@ -1014,7 +1014,7 @@ country_event = { # August Coup
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     has_global_flag = autumn_of_nations
 	NOT = { has_global_flag = august_coup }
   }
@@ -1035,7 +1035,7 @@ country_event = { # perestroika
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     war = no
 	has_country_flag = perestroika
 	government = proletarian_dictatorship
@@ -1076,7 +1076,7 @@ country_event = { # perestroika
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	has_country_flag = perestroika
 	government = proletarian_dictatorship
   }
@@ -1097,7 +1097,7 @@ country_event = { # Structural Weaknesses of the Eastern Bloc
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship
     check_variable = { which = soviet_control_cee value = 8 } 
   }
@@ -1144,7 +1144,7 @@ country_event = { # Regime bends under dissent
   picture = "nwo2_ussr_protests"
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship
     NOT = { has_global_flag = autumn_of_nations }
     average_militancy  = 9
@@ -1168,7 +1168,7 @@ country_event = { # Brezhnev Era
   picture = "brezhnev_era"
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship
     NOT = { has_global_flag = autumn_of_nations }
     average_militancy  = 9
@@ -1195,7 +1195,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship
     has_global_flag = autumn_of_nations
 	war = no
@@ -1264,7 +1264,7 @@ country_event = { # Belavezha Accords
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     has_global_flag = autumn_of_nations
 	has_global_flag = august_coup
     war = no
@@ -1289,8 +1289,9 @@ country_event = { # Fall of USSR
   option = {
     name = EVT_8014271_A
 	any_pop = { militancy = -2.5  consciousness = -2 }
+	change_tag_no_core_switch = RUS # make ths have more options
 	government = democracy country_event = 800054
-	random_country = { limit = { NOT = { exists = EST } tag = RUS } country_event = 8014246 } 
+	random_country = { limit = { NOT = { exists = EST } tag = SUN } country_event = 8014246 } 
 	release = UKR 
 	release = BYE 
 	release = GEO 
@@ -1318,7 +1319,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1956
 	OR = { 
 		owns = 361
@@ -1343,7 +1344,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    OR = { tag = SUN tag = RUS }
     year = 1960  NOT = { year = 1990 }
     exists = HND
 	government = proletarian_dictatorship
@@ -1923,7 +1924,7 @@ country_event = {
 			months = 12
 		}
 		add_casus_belli = {
-			target = RUS
+			target = SUN
 			type = release_puppet
 			months = 12
 		}
@@ -1943,9 +1944,9 @@ country_event = {
      option = {
     	name = EVT_32524_D #"Give them what they want"
     	release = CRI
-    	CRI = { annex_to = RUS }
+    	CRI = { annex_to = SUN }
     	relation = {
-	        who = RUS
+	        who = SUN
 	        value = 200
         }
     	ai_chance = {

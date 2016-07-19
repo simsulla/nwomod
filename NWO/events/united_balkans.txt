@@ -62,7 +62,7 @@ country_event = {
 
   option = {
     name = EVT_8216012_A #"We stand by USSR"
-	relation = { who = RUS value = 100 } 
+	relation = { who = SUN value = 100 } 
 	relation = { who = YUG value = -200 } 
 	overlord = { release_vassal = THIS } 
 	YUG = { country_event =  { id = 8216013 days = 1 }  }
@@ -74,7 +74,7 @@ country_event = {
     name = EVT_8216012_B # "We will back Tito"
 	create_alliance = YUG 
 	relation = { who = YUG value = 100 } 
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -88,17 +88,17 @@ country_event = {
   option = {
     name = EVT_8216013_A
 	relation = { who = ALB value = 50 } 
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	badboy = 10 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8216013_B
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	relation = { who = ALB value = -50 } 
 	any_pop = { militancy = -0.5 consciousness = -0.1 }
-	RUS = { country_event =  { id = 8216014 days = 30 }  }
+	SUN = { country_event =  { id = 8216014 days = 30 }  }
 	ai_chance = { factor = 100 }
   }
 }
@@ -139,7 +139,7 @@ country_event = {
 
   option = {
     name = EVT_8216015_B
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	relation = { who = YUG value = -200 } 
 	any_pop = { militancy = 2.0 consciousness = 1.0 }
 	ai_chance = { factor = 100 }
@@ -155,7 +155,7 @@ country_event = {
   option = {
     name = EVT_8216016_A
 	inherit = ALB 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }
 country_event = {
@@ -177,7 +177,7 @@ country_event = {
   option = {
     name = EVT_8216020_A
 	relation = { who = BUL value = 100 } 
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	any_pop = { militancy = -0.1 consciousness = -0.1 }
 	BUL = { country_event =  { id = 8216021 days = 7 } }
 	ai_chance = { factor = 100 }
@@ -185,7 +185,7 @@ country_event = {
 
   option = {
     name = EVT_8216020_B
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	relation = { who = BUL value = -50 } 
 	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
@@ -201,7 +201,7 @@ country_event = {
   option = {
     name = EVT_8216021_A
 	relation = { who = YUG value = 100 } 
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	any_pop = { militancy = -0.1 consciousness = -0.1 }
 	YUG = { country_event =  { id = 8216022 days = 360 } }
 	ai_chance = { factor = 100 }
@@ -209,7 +209,7 @@ country_event = {
 
   option = {
     name = EVT_8216021_B
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	relation = { who = YUG value = -50 } 
 	any_pop = { militancy = 0.2 consciousness = 0.4}
 	ai_chance = { factor = 0 }
@@ -226,15 +226,15 @@ country_event = {
     name = EVT_8216022_A #"We invite people of Bulgaria"
 	ai_chance = { factor = 100 }
 	relation = { who = BUL value = 50 } 
-	relation = { who = RUS value = -50 } 
-	RUS = { country_event =  { id = 8216023 days = 30 } }
+	relation = { who = SUN value = -50 } 
+	SUN = { country_event =  { id = 8216023 days = 30 } }
 	badboy = 1
   }
 
   option = {
     name = EVT_8216022_B #"Not really"
 	ai_chance = { factor = 0 }
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	relation = { who = BUL value = -50 } 
 	any_pop = { militancy = -0.5 consciousness = -0.1 }
   }
@@ -279,7 +279,7 @@ country_event = {
   option = {
     name = EVT_8216024_B
 	ai_chance = { factor = 0 }
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	relation = { who = YUG value = -200 } 
 	any_pop = { militancy = 0.5 consciousness = 1.0 }
   }
@@ -294,6 +294,6 @@ country_event = {
   option = {
     name = EVT_8216025_A
 	inherit = BUL 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }

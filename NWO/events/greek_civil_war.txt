@@ -63,7 +63,7 @@ country_event = {
   option = {
     name = EVT_8500501_A
 	ai_chance = { factor = 100 }
-	RUS = { country_event = 8500503 }
+	SUN = { country_event = 8500503 }
   }
 
   option = {
@@ -102,7 +102,7 @@ country_event = {
   title = EVT_8500503_NAME
   desc = EVT_8500503_DESC
   picture = "nwo2_greek_civil_war"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
   
   option = {
     name = EVT_8500503_A
@@ -141,7 +141,7 @@ country_event = {
 
   option = {
     name = EVT_8500504_A
-	RUS = { country_event = 8500505 }
+	SUN = { country_event = 8500505 }
 	ai_chance = { factor = 100 }
   }
 
@@ -158,13 +158,13 @@ country_event = {
   title = EVT_8500505_NAME
   desc = EVT_8500505_DESC
   picture = "nwo2_greek_civil_war"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
 
   option = {
     name = EVT_8500505_A
 	any_pop = { consciousness = 1.0 }
-	RUS  = { country_event = 8225001 }
+	SUN  = { country_event = 8225001 }
 	ai_chance = { factor = 100 }
   }
 
@@ -237,7 +237,7 @@ country_event = {
     name = EVT_8500510_A
 	USA = { create_alliance = GRE }
 	country_event = 8940010 # limited_wars.txt
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	ai_chance = { factor = 0 }
   }
 
@@ -282,16 +282,16 @@ country_event = {
 
   option = {
     name = EVT_8500522_A
-	create_alliance = RUS 
+	create_alliance = SUN 
 	any_pop = { militancy = -0.5 consciousness = -1 }
-	diplomatic_influence = { who = RUS value = 100 } 
+	diplomatic_influence = { who = SUN value = 100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500522_B
 	any_pop = { consciousness = 2 }
-	relation = { who = RUS value = -150 } 
+	relation = { who = SUN value = -150 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -314,14 +314,14 @@ country_event = {
     name = EVT_8500523_A
 	GRE = { country_event = 8500524 } 
 	any_pop = { consciousness = 1 }
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500523_B
 	any_pop = { militancy = 1 }
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -402,7 +402,7 @@ country_event = {
 	any_pop = { militancy = -2.5 consciousness = -1}
 	change_tag = GRE
 	capital = 834 # Athens
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
   }
 }
 country_event = {
@@ -423,7 +423,7 @@ country_event = {
 
   option = {
     name = EVT_8500550_A
-	RUS = { country_event = 8500551 }
+	SUN = { country_event = 8500551 }
 	ai_chance = { factor = 0 }
   }
 
@@ -438,7 +438,7 @@ country_event = {
   title = EVT_8500551_NAME
   desc = EVT_8500551_DESC
   picture = "nwo2_greek_civil_war"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8500551_A
@@ -481,7 +481,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1949 NOT = { year = 1960 }
     GRE = { government = proletarian_dictatorship }
 	USA = { war_with = GRE }
@@ -521,7 +521,7 @@ country_event = {
     name = EVT_8500554_B
 	ai_chance = { factor = 0 }
 	any_pop = { militancy = 0.5 }
-	RUS = { country_event = 8500555 }
+	SUN = { country_event = 8500555 }
   }
 }
 country_event = {
@@ -529,7 +529,7 @@ country_event = {
   title = EVT_8500555_NAME
   desc = EVT_8500555_DESC
   picture = "nwo2_greek_civil_war"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
 
   option = {

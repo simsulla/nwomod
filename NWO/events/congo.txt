@@ -216,7 +216,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1960 NOT = { year = 1990 }
 	has_global_flag = congo_crisis
     exists = CNG
@@ -323,7 +323,7 @@ country_event = {
 	government = presidential_dictatorship  country_event = 800050
 	small_arms = 1000 clothes = 1000 
 	relation = { who = USA value = 200 } 
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	KAT = { country_event = 8003336 }
 	ai_chance = { factor = 100 }
   }
@@ -331,7 +331,7 @@ country_event = {
   option = {
     name = EVT_8003335_B
 	relation = { who = USA value = -200 } 
-	relation = { who = RUS value = 200 } 
+	relation = { who = SUN value = 200 } 
 	government = presidential_dictatorship  country_event = 800050
 	ai_chance = { factor = 0 }
   }
@@ -454,6 +454,6 @@ country_event = {
 	capital = 1982 # Leopoldville
 	change_tag_no_core_switch = CNG
 	government = proletarian_dictatorship  country_event = 800042
-	RUS = { diplomatic_influence = { who = CNG value = 100 } }
+	SUN = { diplomatic_influence = { who = CNG value = 100 } }
   }
 }

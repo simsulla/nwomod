@@ -101,7 +101,7 @@ country_event = {
 
   option = {
     name = EVT_8501004_B # Ask Soviets for help
-	RUS = { country_event = 8501005 }
+	SUN = { country_event = 8501005 }
 	ai_chance = { factor = 30 }
   }
 }
@@ -139,13 +139,13 @@ country_event = {
   option = {
     name = EVT_8501006_A # Soviet reaction
 	relation = { who = PER value = -50 } 
-	RUS = { country_event = 8501007 } 
+	SUN = { country_event = 8501007 } 
 	ai_chance = { factor = 60 }
   }
 
   option = {
     name = EVT_8501006_B
-	RUS = { country_event = 8501010 } # Soviets are able to send Iranians help
+	SUN = { country_event = 8501010 } # Soviets are able to send Iranians help
 	relation = { who = GBR value = -150 } 
 	ai_chance = { factor = 40 }
   }
@@ -181,8 +181,8 @@ country_event = {
 
   option = {
     name = EVT_8501008_A
-	casus_belli = { target = RUS type = humiliate months = 24 }
-	war = RUS 
+	casus_belli = { target = SUN type = humiliate months = 24 }
+	war = SUN 
 	ai_chance = { factor = 0 }
 	any_pop = { militancy = 0.5  consciousness = 1 }
   }

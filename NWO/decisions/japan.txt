@@ -57,8 +57,8 @@ political_decisions = {
 		potential = {
 			tag = JAP
 			NOT = { has_country_flag = kuril_islands_dispute }
-			1089 = { owned_by = RUS is_core = JAP  } 
-			relation = { who = RUS value = -20 }
+			1089 = { OR = { owned_by = SUN owned_by = RUS } is_core = JAP  } 
+			OR = { relation = { who = RUS value = -20 } relation = { who = SUN value = -20 } }
 			1087 = { NOT = { is_core = JAP } }
 			1088 = { NOT = { is_core = JAP } }
 			1086 = { NOT = { is_core = JAP } }
@@ -66,15 +66,19 @@ political_decisions = {
 		allow = {
 			OR = { government = democracy government = hms_government }
 			war = no
-			RUS = { war = no }
-			OR = {
-				RUS = { is_greater_power = no }
-				relation = { who = RUS value = 200 }
+			1089 = { 
+				owner = { 
+					war = no 
+					OR = { 
+						is_greater_power = no
+						relation = { who = THIS value = 200 }
+					}
+				}
 			}
 			money = 2000000
 		}
 		effect = {
-			RUS = { country_event = 32501 }
+			random_country = { limit = { exists = yes OR = { tag = SUN tag = RUS } } country_event = 32501 }
 			set_country_flag = kuril_islands_dispute
 		}
 	}	

@@ -10,10 +10,10 @@ country_event = {
 	year = 1943 NOT = { year = 1950 }
     OR = {
 		any_owned_province = { controlled_by_rebels = yes any_core = { OR = { tag = SER tag = BOS } } }
-		any_owned_province = { controlled_by= RUS any_core = { OR = { tag = HUN tag = SER tag = CRO tag = BUL } } }
+		any_owned_province = { controlled_by= SUN any_core = { OR = { tag = HUN tag = SER tag = CRO tag = BUL } } }
 	}
     NOT = { exists = YUG }
-    war_with = RUS
+    war_with = SUN
   }
 
   mean_time_to_happen = { months = 1  }
@@ -37,8 +37,8 @@ country_event = {
   option = {
     name = EVT_8223001_A
 	define_general = { name = "Tito" personality = energetic background = no_background }
-	RUS = { military_access = THIS } 
-	create_alliance = RUS 
+	SUN = { military_access = THIS } 
+	create_alliance = SUN 
 	# TODO claim YUG and war with GER
   }
 }

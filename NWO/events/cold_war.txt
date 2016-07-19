@@ -6,10 +6,10 @@ country_event = { # Soviet-$COUNTRY$ Friendship
 	picture = "soviet_economy"
 
 	trigger = {
-		NOT = { tag = RUS }
+		NOT = { tag = SUN }
 		government = proletarian_dictatorship
 		NOT = { has_country_flag = soviet_friendship }
-		RUS = { is_greater_power = yes government = proletarian_dictatorship } 
+		SUN = { is_greater_power = yes government = proletarian_dictatorship } 
 		NOT = { has_country_modifier = comecon }
 		NOT = { has_country_modifier = bretton_system }
 		# TODO somehow china soviet rivality
@@ -29,7 +29,7 @@ country_event = { # Soviet-$COUNTRY$ Friendship
 	option = {
 		name = "EVTOPTA19800"
 		ai_chance = { factor = 100 }
-		RUS = { country_event =  19801 }
+		SUN = { country_event =  19801 }
 		set_country_flag = soviet_friendship
 		any_country = {
 			limit = { NOT = { government = proletarian_dictatorship } }
@@ -161,7 +161,7 @@ country_event = {
 		ai = no # in an multi player env this may fire multiple times but no worry as it only sets flags
 		NOT = { has_global_flag = blocsenabled }
 		
-		RUS = { government = proletarian_dictatorship }
+		SUN = { government = proletarian_dictatorship }
 		USA = { government = democracy }
 	}
 	
@@ -180,7 +180,7 @@ country_event = {
 		BEL = { relation = { who = USA value = 200 } }
 		LUX = { relation = { who = USA value = 200 } }
 		ITA = { relation = { who = USA value = 200 } }
-		RUS = { add_country_modifier = { name = communist_bloc_leader duration = -1 } set_country_flag = joincomm }
+		SUN = { add_country_modifier = { name = communist_bloc_leader duration = -1 } set_country_flag = joincomm }
 		USA = { add_country_modifier = { name = democratic_bloc_leader duration = -1 } set_country_flag = joindemo }
 	}
 
@@ -223,7 +223,7 @@ country_event = {
 	picture = "endofcoldwar"
 
 	trigger = {
-		OR = { RUS = { NOT = { government = proletarian_dictatorship } } USA = { NOT = { government = democracy } } }
+		OR = { SUN = { NOT = { government = proletarian_dictatorship } } USA = { NOT = { government = democracy } } }
 		
 		NOT = { has_country_flag = endofthecoldwar }
 	}
@@ -255,9 +255,9 @@ country_event = {
 	picture = "endofcoldwar"
 
 	trigger = {
-		RUS = { government = proletarian_dictatorship }
+		SUN = { government = proletarian_dictatorship }
 		NOT = { USA = { government = democracy } }
-		
+		NOT = { exists = RUS }
 		NOT = { has_country_flag = cold_warussr1 }
 		has_global_flag = blocsenabled
 		ai = no
@@ -285,8 +285,8 @@ country_event = {
 
 	trigger = {
 		USA = { government = democracy }
-		NOT = { RUS = { government = proletarian_dictatorship } }
-		
+		NOT = { SUN = { government = proletarian_dictatorship } }
+		NOT = { exists = SUN }
 		NOT = { has_country_flag = cold_warusa1 }
 		has_global_flag = blocsenabled
 		ai = no

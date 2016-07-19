@@ -38,7 +38,7 @@ country_event = {
 	relation = { who = USA value = 50 } 
 	relation = { who = GBR value = 50 } 
 	relation = { who = FRA value = 50 } 
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
   }
 }
 country_event = {
@@ -72,7 +72,7 @@ country_event = {
   trigger = {
     tag = ROM
     has_global_flag = autumn_of_nations
-	OR = { vassal_of = RUS is_vassal = no }
+	OR = { vassal_of = SUN is_vassal = no }
 	government = proletarian_dictatorship
   }
 
@@ -102,7 +102,7 @@ country_event = {
   trigger = {
     tag = ROM
     has_global_flag = autumn_of_nations
-	OR = { vassal_of = RUS is_vassal = no }
+	OR = { vassal_of = SUN is_vassal = no }
 	government = proletarian_dictatorship
 	war = no
   }

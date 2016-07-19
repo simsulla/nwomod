@@ -6,7 +6,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1962 NOT = { year = 1965}
     
 	CUB = { government = proletarian_dictatorship }
@@ -35,15 +35,15 @@ country_event = {
   option = {
     name = EVT_8500202_A
 	set_global_flag = missiles_in_cuba 
-	create_alliance = RUS
-	RUS = { diplomatic_influence = { who = CUB value = 200 } }
+	create_alliance = SUN
+	SUN = { diplomatic_influence = { who = CUB value = 200 } }
 	USA = { country_event =  8500203 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500202_B
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -63,7 +63,7 @@ country_event = {
   option = {
     name = EVT_8500203_B
 	any_pop = { militancy = 1.0 consciousness = 1 }
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -77,33 +77,33 @@ country_event = {
   option = {
     name = EVT_8500204_A
 	any_pop = { consciousness = 2 }
-	relation = { who = RUS value = -50 } 
-	RUS = { country_event = { id = 8500207 days = 10 } }
+	relation = { who = SUN value = -50 } 
+	SUN = { country_event = { id = 8500207 days = 10 } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500204_B
 	any_pop = { militancy = 2.0 }
-	relation = { who = RUS value = 100 } 
-	RUS  = { country_event = 8225000 } 
+	relation = { who = SUN value = 100 } 
+	SUN  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8500204_C
 	any_pop = { militancy = 1.5 consciousness = 1 }
-	relation = { who = RUS value = -10 } 
-	RUS = { country_event = { id = 8500205 days = 10 } }
+	relation = { who = SUN value = -10 } 
+	SUN = { country_event = { id = 8500205 days = 10 } }
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8500204_D
 	war = CUB 
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	any_pop = { militancy = 1.0 consciousness = 1 }
-	RUS = { country_event = { id = 8500206 days = 10 } }
+	SUN = { country_event = { id = 8500206 days = 10 } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -112,7 +112,7 @@ country_event = {
   title = EVT_8500205_NAME
   desc = EVT_8500205_DESC
   picture = "nwo2_cuban_missile_crisis_stevenson"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8500205_A
@@ -125,7 +125,7 @@ country_event = {
     name = EVT_8500205_B
 	any_pop = {consciousness = 1 }
 	clr_global_flag = missiles_in_cuba 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -134,7 +134,7 @@ country_event = {
   title = EVT_8500206_NAME
   desc = EVT_8500206_DESC
   picture = "nwo2_cuban_missile_crisis_attack"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8500206_A
@@ -149,7 +149,7 @@ country_event = {
     name = EVT_8500206_B
 	any_pop = { militancy = 1.5 }
 	clr_global_flag = missiles_in_cuba 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }	
   }
 }
@@ -158,7 +158,7 @@ country_event = {
   title = EVT_8500207_NAME
   desc = EVT_8500207_DESC
   picture = "nwo2_cuban_missile_crisis_quarantine"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8500207_A
@@ -173,7 +173,7 @@ country_event = {
 	badboy = -10 
 	relation = { who = USA value = 100 } 
 	clr_global_flag = missiles_in_cuba 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -188,15 +188,15 @@ country_event = {
   option = {
     name = EVT_8500208_A
 	ai_chance = { factor = 100 }
-	relation = { who = RUS value = 10 } 
-	RUS = { country_event = 8500209 }
+	relation = { who = SUN value = 10 } 
+	SUN = { country_event = 8500209 }
   }
 
   option = {
     name = EVT_8500208_B
 	badboy = -10 
-	relation = { who = RUS value = 100 } 
-	RUS  = { country_event = 8225000 } 
+	relation = { who = SUN value = 100 } 
+	SUN  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 
@@ -213,7 +213,7 @@ country_event = {
   title = EVT_8500209_NAME
   desc = EVT_8500209_DESC
   picture = "nwo2_kennedy_khrushchev"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
 	name = EVT_8500209_A
@@ -253,7 +253,7 @@ country_event = {
   option = {
     name = EVT_8500210_A
 	money = -5000 
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -276,22 +276,22 @@ country_event = {
     name = EVT_8500211_A
 	clr_global_flag = divided_berlin 
 	clr_global_flag = missiles_in_cuba 
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500211_B
-	relation = { who = RUS value = 100 } 
+	relation = { who = SUN value = 100 } 
 	any_pop = { militancy = 1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8500211_C
-	war = RUS 
+	war = SUN 
 	any_pop = { consciousness = 1 }
-	RUS = { country_event =  { id = 8500213 days = 10 } }
+	SUN = { country_event =  { id = 8500213 days = 10 } }
 	USA = { country_event =  { id = 8500214 days = 10 } }
 	ai_chance = { factor = 100 }
   }
@@ -305,10 +305,10 @@ country_event = {
 
   option = {
     name = EVT_8500212_A
-	relation = { who = RUS value = 100 } 
+	relation = { who = SUN value = 100 } 
 	clr_global_flag = american_nuclear_advantage 
 	clr_global_flag = missiles_in_cuba 
-	RUS = { country_event =  { id = 8500213 days = 10 } }
+	SUN = { country_event =  { id = 8500213 days = 10 } }
 	USA = { country_event =  { id = 8500214 days = 10 } }
 	ai_chance = { factor = 100 }
   }
@@ -326,12 +326,12 @@ country_event = {
   title = EVT_8500213_NAME
   desc = EVT_8500213_DESC
   picture = "nwo2_cuban_missile_crisis_aftermath"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8500213_A
 	any_pop = { militancy = 0.5 consciousness = 1 }
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }
 country_event = {

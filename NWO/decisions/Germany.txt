@@ -7,7 +7,7 @@ political_decisions = {
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } }
 				AND = { tag = GBR 369 = { owned_by = GBR } }
-				AND = { tag = RUS 551 = { owned_by = RUS } }
+				AND = { tag = SUN 551 = { owned_by = SUN } }
 			}
 			NOT = { has_country_flag = denazification }
 		}
@@ -16,7 +16,7 @@ political_decisions = {
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } }
 				AND = { tag = GBR 369 = { owned_by = GBR } }
-				AND = { tag = RUS 551 = { owned_by = RUS } }
+				AND = { tag = SUN 551 = { owned_by = SUN } }
 			}
 			NOT = { has_country_flag = denazification }
 			OR = {
@@ -159,7 +159,7 @@ political_decisions = {
 		potential = {
 			DDR = { exists = no }
 			has_country_flag = denazification
-			tag = RUS
+			tag = SUN
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
@@ -170,7 +170,7 @@ political_decisions = {
 		allow = {
 			DDR = { exists = no }
 			has_country_flag = denazification
-			tag = RUS
+			tag = SUN
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
@@ -194,7 +194,7 @@ political_decisions = {
 			any_owned = { limit = { is_core = GER } add_core = DDR }
 			release_vassal = DDR
 			diplomatic_influence = { who = DDR value = 200 }
-			military_access = RUS
+			military_access = SUN
 			prestige = 50
 		}
 		ai_will_do = {
@@ -261,7 +261,7 @@ political_decisions = {
 			set_country_flag = end_of_sonderweg
 			prestige = 20
 			all_core = {
-				limit = { owned_by = RUS }
+				limit = { owned_by = SUN }
 				remove_core = GER
 				add_core = DDR
 			}
