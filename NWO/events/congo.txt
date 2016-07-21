@@ -457,3 +457,36 @@ country_event = {
 	SUN = { diplomatic_influence = { who = CNG value = 100 } }
   }
 }
+
+country_event = {
+  id = EVT_8176116
+  title = EVT_8176116_NAME
+  desc = EVT_8176116_DESC
+  picture = "nwo2_congo_crisis"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SUK
+    year = 1961
+  }
+
+  mean_time_to_happen = { months = 4  }
+
+  option = {
+    name = EVT_8176116_A
+	government = absolute_monarchy
+		any_pop = {
+			limit = {
+				OR = { culture = luba culture = african_minor }
+			}
+			militancy = 4
+			consciousness = 3
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8176116_B
+	ai_chance = { factor = 0 }
+  }
+}
+
