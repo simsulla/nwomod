@@ -788,12 +788,12 @@ issues = {
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.80 } }
 	}
 
-# internet_infrastructure
-	# quality_of_service
-	open_unregulated = {
+# criminology
+	# criminology_classical_school
+	criminology_corporal_punishment = {
 		factor = 0.6
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 OR = { is_next_reform = open_unregulated NOT = { consciousness = 5 } } }
+		modifier = { factor = 0 OR = { is_next_reform = criminology_corporal_punishment NOT = { consciousness = 5 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
 		modifier = { factor = 1.25 literacy = 0.40 }
@@ -807,10 +807,10 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 8 }
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
-	net_neutrality = {
+	criminology_capital_punishment = {
 		factor = 0.4
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 OR = { is_next_reform = net_neutrality NOT = { consciousness = 6 } } }
+		modifier = { factor = 0 OR = { is_next_reform = criminology_capital_punishment NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
 		modifier = { factor = 1.25 literacy = 0.40 }
@@ -823,10 +823,10 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 8 }
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
-	sponsored_access = {
+	criminology_social_justice = {
 		factor = 0.2
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 is_next_reform = sponsored_access }
+		modifier = { factor = 0 is_next_reform = criminology_social_justice }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }
