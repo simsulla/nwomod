@@ -459,7 +459,7 @@ country_event = {
 }
 
 country_event = {
-  id = EVT_8176116
+  id = 8176116
   title = EVT_8176116_NAME
   desc = EVT_8176116_DESC
   picture = "nwo2_congo_crisis"
@@ -475,12 +475,13 @@ country_event = {
   option = {
     name = EVT_8176116_A
 	government = absolute_monarchy
-		any_pop = {
-			limit = {
-				OR = { culture = luba culture = african_minor }
-			}
-			militancy = 4
-			consciousness = 3
+	any_pop = {
+		limit = {
+			OR = { culture = luba culture = african_minor }
+		}
+		militancy = 4
+		consciousness = 3
+	}
 	ai_chance = { factor = 100 }
   }
 
