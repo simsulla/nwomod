@@ -167,6 +167,7 @@ conquest = {
 				NOT = { number_of_states = 2 }
 			}
 		}
+		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
 		is_independant = yes
 	}
 
@@ -365,7 +366,7 @@ acquire_core_state = {
 		}
 		NOT = { relation = { who = THIS value = 0 } }
 		THIS = { OR = { NOT = { war_policy = pacifism } war = yes } }
-		NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
+		#NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
 	}
 	
 	allowed_states = {
@@ -427,7 +428,7 @@ annex_core_country = {
 			}
 		}
 		THIS = { NOT = { war_policy = pacifism } }
-		NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
+		#NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
 	}
 
 	po_annex = yes
@@ -486,6 +487,7 @@ acquire_state = {
 				}
 			}
 		}
+		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
 		is_independant = yes
 	}
 	
