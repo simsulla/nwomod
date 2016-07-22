@@ -52,6 +52,7 @@ country_event = { # Interim Government of India
 
 	option = {
 		name = EVT_1214010_C
+		set_global_flag = india_denied_independance
 		RAJ = { 
 			any_pop = {
 				limit = {
@@ -83,6 +84,7 @@ country_event = {
 		name = EVT_1214011_B
 		ai_chance = { factor = 0 }
 		badboy = 1.0
+		set_global_flag = india_denied_independance
 		any_pop = {
 			limit = {
 				culture = indian
@@ -193,32 +195,157 @@ country_event = {
 	}
 }
 country_event = {
-  id = 8007205
-  title = EVT_8007205_NAME
-  desc = EVT_8007205_DESC
-  picture = "nwo2_independence_of_india"
-  is_triggered_only = yes # RAJ
+	id = 8007205
+	title = EVT_8007205_NAME
+	desc = EVT_8007205_DESC
+	picture = "nwo2_independence_of_india"
 
 	trigger = { # either by trigger event call or if UK does not allow indian independance, when the RAJ becomes a GP
 		tag = RAJ
 		exists = RAJ
-		is_greater_power = yes
+		OR = { is_greater_power = yes has_global_flag = india_denied_independance }
 		is_vassal = no
 		NOT = { exists = HND }
 		war = no
 		RAJ = { owns = 1236 } # Delhi
 	}
 	
-  option = {
-    name = EVT_8007205_A
-	release_vassal = NEP
-	release_vassal = JAK
-	leave_alliance = TIB
-	leave_alliance = JAK
-	leave_alliance = GBR
-	government = democracy country_event = 800054
-	change_tag = HND
-  }
+	mean_time_to_happen = { months = 48 }
+	
+	option = {
+		name = EVT_8007205_A
+		change_tag = HND
+		release_vassal = NEP
+		release_vassal = JAK
+		leave_alliance = TIB
+		leave_alliance = JAK
+		leave_alliance = GBR
+		any_owned = { limit = { is_core = PAK } secede_province = PAK }
+		PAK = { 
+			capital = 1288
+			any_pop = {
+				consciousness = -5
+				militancy = -5
+			}
+		}
+		soldiers = {
+			militancy = 8
+		}
+		any_pop = {
+			limit = {
+				has_pop_religion = sunni
+			}
+			militancy = 5
+		}
+		war = {
+			target = PAK
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	}
+
+	option = {
+		name = EVT_8007205_A
+		release_vassal = NEP
+		release_vassal = JAK
+		leave_alliance = TIB
+		leave_alliance = JAK
+		leave_alliance = GBR
+		any_owned = { limit = { is_core = PAK } secede_province = PAK }
+		any_owned = { limit = { OR = { region = RUS_2615 region = PAN_1233 region = ENG_1236 } } add_core = PAK }
+		PAK = { 
+			capital = 1288
+			any_pop = {
+				consciousness = -5
+				militancy = -5
+			}
+		}
+		soldiers = {
+			militancy = 8
+		}
+		any_pop = {
+			limit = {
+				has_pop_religion = sunni
+			}
+			militancy = 5
+		}
+		war = {
+			target = PAK
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		change_tag_no_core_switch = PAK
+	}
+
+	option = {
+		name = EVT_8007205_C
+		release_vassal = NEP
+		release_vassal = JAK
+		leave_alliance = TIB
+		leave_alliance = JAK
+		leave_alliance = GBR
+		any_owned = { limit = { is_core = PAK } secede_province = PAK }
+		any_owned = { limit = { is_core = HND NOT = { region = ENG_1236 } } secede_province = HND }
+		PAK = { 
+			capital = 1288
+			any_pop = {
+				consciousness = -5
+				militancy = -5
+			}
+		}
+		soldiers = {
+			militancy = 8
+		}
+		any_pop = {
+			limit = {
+				has_pop_religion = sunni
+			}
+			militancy = 5
+		}
+		war = {
+			target = PAK
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		HND = { 
+			capital = 1297
+			any_pop = {
+				consciousness = -5
+				militancy = -5
+			}
+		}
+		soldiers = {
+			militancy = 8
+		}
+		any_pop = {
+			limit = {
+				has_pop_religion = hindu
+			}
+			militancy = 5
+		}
+		war = {
+			target = HND
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+	}
+	
 }
 country_event = {
 	id = 8214016
