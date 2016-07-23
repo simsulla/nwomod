@@ -39,6 +39,10 @@
 
 # Order that CBs are executed in a peace treaty
 peace_order = { 
+become_independent
+dismantle_cb
+dismantle_cb_add
+dismantle_cb_add_new
 acquire_core_state 
 annex_core_country
 free_allied_cores
@@ -58,7 +62,6 @@ conquest
 civil_war
 cut_down_to_size 
 release_puppet
-become_independent
 make_puppet
 humiliate
 territorial_dispute
@@ -1503,6 +1506,251 @@ rude_boy = {
 			to = pro_military
 			value = 0.1
 		}
+	}
+}
+
+# Great War CB's
+dismantle_cb = {
+	sprite_index = 11
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	construction_speed = 0.25
+
+	badboy_factor = 2
+	prestige_factor = 10
+	peace_cost_factor = 35
+	penalty_factor = 3
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 3
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+	
+	can_use = {
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+			colonial_nation = yes
+			any_owned_province = { is_overseas = yes }
+		}	
+		is_disarmed = no
+		is_vassal = no
+		NOT = { is_our_vassal = THIS }
+		NOT = { has_country_flag = dismantle_declared }
+		NOT = {
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		THIS = {
+			is_greater_power = yes
+			is_disarmed = no
+			containment = 1
+		}
+		THIS = {
+			NOT = { has_country_flag = in_great_war }
+			NOT = { has_country_modifier = no_more_war }
+		}
+		NOT = { has_country_modifier = neutrality }
+		THIS = {
+			NOT = { has_country_modifier = neutrality }
+			NOT = { war_policy = pacifism }
+		}	
+	}
+	
+	po_disarmament = yes
+	po_reparations = yes
+	
+	war_name = WAR_DISMANTLE_NAME
+	
+	on_add = {
+		FROM = {
+			set_country_flag = dismantle_declared
+		}
+		move_issue_percentage = { 
+			from = pro_military 
+			to = jingoism
+			value = 0.10
+		}
+		country_event = 96000
+	}
+	
+	on_po_accepted = {
+		set_country_flag = dismantling_treaty
+	}
+}
+
+dismantle_cb_add = {
+	sprite_index = 11
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	construction_speed = 1.5
+
+	badboy_factor = 0
+	prestige_factor = 10
+	peace_cost_factor = 35
+	penalty_factor = 3
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 3
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		NOT = { has_country_modifier = neutrality }
+		NOT = { has_country_flag = dismantle_declared }
+		has_country_flag = in_great_war
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+			colonial_nation = yes
+			any_owned_province = { is_overseas = yes }
+		}
+		civilized = yes
+		is_disarmed = no
+		is_vassal = no
+		war_with = THIS
+		THIS = {
+			NOT = { has_country_modifier = neutrality }
+			has_country_flag = in_great_war
+			is_greater_power = yes
+			is_disarmed = no
+			is_vassal = no
+			containment = 1
+		}		
+	}
+	
+	po_disarmament = yes
+	po_reparations = yes
+	
+	war_name = WAR_DISMANTLE_NAME
+	
+	on_add = {
+		FROM = {
+			set_country_flag = dismantle_declared
+		}
+		move_issue_percentage = { 
+			from = pro_military 
+			to = jingoism
+			value = 0.10
+		}
+	}
+	
+	on_po_accepted = {
+		set_country_flag = dismantling_treaty
+	}
+}
+
+dismantle_cb_add_new = {
+	sprite_index = 11
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	construction_speed = 1.5
+
+	badboy_factor = 0
+	prestige_factor = 10
+	peace_cost_factor = 35
+	penalty_factor = 3
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 3
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		NOT = { has_country_flag = dismantle_declared }
+		NOT = { has_country_modifier = neutrality }
+		is_greater_power = yes		
+		is_disarmed = no
+		is_vassal = no
+		war_with = THIS
+		THIS = {
+			NOT = { has_country_modifier = neutrality }
+			NOT = { has_country_flag = in_great_war }
+			is_greater_power = yes
+			is_disarmed = no
+			is_vassal = no
+			containment = 1
+		}
+	}
+	
+	po_disarmament = yes
+	po_reparations = yes
+	
+	war_name = WAR_DISMANTLE_NAME
+	
+	on_add = {
+		FROM = {
+			set_country_flag = dismantle_declared
+		}
+		move_issue_percentage = { 
+			from = pro_military 
+			to = jingoism
+			value = 0.10
+		}
+		country_event = 96000
+	}
+	
+	on_po_accepted = {
+		set_country_flag = dismantling_treaty
+	}
+}
+
+#Placeholder for calling allies
+call_allies_cb = {
+	sprite_index = 11
+	is_triggered_only = yes
+	months = 1
+	constructing_cb = no
+	crisis = no
+	
+	badboy_factor = 0
+	prestige_factor = 0
+	peace_cost_factor = 1
+	penalty_factor = 0
+	
+	break_truce_prestige_factor = 0
+	break_truce_infamy_factor = 0
+	break_truce_militancy_factor = 0
+	truce_months = 0
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+	
+	can_use = {
+		THIS = { ai = yes }
+		always = no
+	}
+
+	po_remove_prestige = yes
+	
+	war_name = WAR_NAME
+	
+	on_add = {
 	}
 }
 
