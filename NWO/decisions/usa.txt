@@ -147,7 +147,12 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			any_country = { 
-				limit = { involved_in_crisis = yes NOT = { tag = USA } NOT = { has_country_modifier = peace_mission } }
+				limit = { 
+					crisis_exist = yes
+					involved_in_crisis = yes 
+					NOT = { tag = USA } 
+					NOT = { has_country_modifier = peace_mission } 
+				}
 				add_country_modifier = { name = peace_mission duration = 700 }
 				country_event = 20111
 				relation = { who = THIS value = -10 }
