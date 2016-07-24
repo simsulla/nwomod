@@ -418,9 +418,67 @@ country_event = {
 #														#
 #########################################################
 
+#release country to avoid crisis
+country_event = {
+	id = 96009
+	title = "EVT_96009_NAME" #The Treaty of $FROMPROVINCE$
+	desc = "EVT_96009_DESC" # The time has come for us to leave the people of $FROMPROVINCE$ to their own deistiny. The time of colonialism and overloardships are over. Give them independance.
+	picture = "greatpowers"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_96009_A" #Decolonialize!
+		random_country = {
+			limit = {
+				exists = yes
+				any_core = { owned_by = THIS has_province_modifier = decolonialize }
+			}
+			country_event = 96014
+		}
+
+		#release all vassals
+		random_country = {
+			limit = {
+				exists = yes
+				any_core = { owned_by = THIS has_province_modifier = decolonialize }
+			}		
+			limit = { vassal_of = THIS }
+			leave_alliance = THIS
+			country_event = 96015
+		}
+
+		#release non-existing countries			
+		random_country = {
+			limit = {
+				any_core = { owned_by = THIS has_province_modifier = decolonialize }
+				exists = no
+				NOT = {
+					AND = {
+						is_primary_culture = THIS
+						culture_has_union_tag = yes
+					}
+				}
+				NOT = { has_country_flag = post_colonial_country }
+			}
+			country_event = 96012
+		}
+
+		#give cores back to neighboring, non-allied countries
+		any_neighbor_country = {
+			limit = {
+				any_core = { owned_by = THIS has_province_modifier = decolonialize }
+			}
+			country_event = 96013
+		}
+		
+		any_owned = {
+			remove_province_modifier = decolonialize
+		}
+	}
+}
+
 # Generic "dismantling" of Great Powers who are disarmed after a Great War
 country_event = {
-
 	id = 96010
 	title = "EVTNAME96010" #The Treaty of $CAPITAL$
 	desc = "EVTDESC96010"

@@ -364,26 +364,21 @@ country_event = {
 #															#
 #############################################################
 
-#Crisis prevention for Native states
+#Crisis prevention by the UN Security Council
 province_event = {
 	id = 20110
-	title = "EVTNAME20110" #Natives in $STATENAME$
-	desc = "EVTDESC20110"
+	title = "EVT_20110_NAME" # UN Security Council on conflict in $STATENAME$
+	desc = "EVT_20110_DESC"
 	
 	trigger = {
 		owner = {
 			crisis_exist = no
-			NOT = { is_culture_group = native_american }
-			NOT = { year = 1900 }
-		}
-		any_core = {
-			is_culture_group = native_american
-			exists = no
 		}
 		state_scope = {
 			has_flashpoint = yes
 			flashpoint_tension = 50
 		}
+		owner = { NOT = { has_country_modifier = un_resolution_veto } }
 	}
 	
 	mean_time_to_happen = {
@@ -401,17 +396,20 @@ province_event = {
 	option = {
 		name = EVT_20110_A 
 		owner = {
-			badboy = 2
+			badboy = 1
 			plurality = -2
+			set_variable = { which = UNSC_vote value = 0 }
 		}
 		state_scope = {
-			flashpoint_tension = -75
-			any_pop = {
-				limit = { is_culture_group = native_american }
-				reduce_pop = 0.95
-				militancy = -4
-				consciousness = -4
+			flashpoint_tension = -20
+		}
+		set_country_flag = colonial_peristance # USA decition 
+		any_country = { 
+			limit = { 
+				has_country_flag = permanent_member_of_UNSC
+				NOT = { has_country_flag = not_participating_UNSC }
 			}
+			country_event = 9000
 		}
 		ai_chance = {
 			factor = 75
@@ -419,11 +417,15 @@ province_event = {
 				factor = 0
 				owner = { badboy = 0.92 }
 			}
+			modifier = {
+				factor = 0
+				country = { NOT = { money = 1000000 } }
+				is_colonial = yes
+			}
 		}
 	}
-	
 	option = {
-		name = EVT_20110_A 
+		name = EVT_20110_B 
 		owner = {
 			prestige_factor = -0.1
 			plurality = 1
@@ -433,12 +435,7 @@ province_event = {
 			}
 		}
 		state_scope = {
-			flashpoint_tension = -50
-			any_pop = {
-				limit = { is_culture_group = native_american }
-				militancy = -2
-				consciousness = -2
-			}
+			flashpoint_tension = 20
 		}
 		ai_chance = {
 			factor = 25
@@ -470,61 +467,46 @@ province_event = {
 				factor = 2
 				owner = { citizenship_policy = full_citizenship }
 			}
+			modifier = {
+				factor = 0
+				country = { NOT = { money = 1000000 } }
+				is_colonial = yes
+			}
 		}
 	}
-}
-
-#preventing crises over uncivilized cores
-province_event = {
-	id = 20111
-	title = "EVTNAME20111" #Trouble in $STATENAME$
-	desc = "EVTDESC20111"
-	
-	trigger = {
-		owner = { crisis_exist = no }
-		state_scope = {
-			has_flashpoint = yes
-			flashpoint_tension = 50
-		}		
-		NOT = {
-			any_core = {
-				ai = yes
-				civilized = yes
-				NOT = { tag = THIS }
-				NOT = { has_country_flag = post_colonial_country }
-				OR = {
-					is_cultural_union = no
-					exists = yes
-				}
+	option = {
+		name = EVT_20110_C
+		add_province_modifier = { name = decolonialize duration = -1 }
+		owner = {
+			prestige_factor = -0.1
+			plurality = 1
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				consciousness = 1
+			}
+			country_event = 96009
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 4
+				country = { NOT = { money = 1000000 } }
+				is_colonial = yes
 			}
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 36
-		modifier = {
-			factor = 0.5
-			state_scope = { flashpoint_tension = 75 }
-		}
-		modifier = {
-			factor = 0.5
-			state_scope = { flashpoint_tension = 90 }
-		}
-	}
+}
+
+country_event = {
+	id = 20111
+	title = "EVT_20111_NAME" #Pax Americana
+	desc = "EVT_20111_DESC" # $FROMCOUNTRY$ has put precures on us for peacfull resolution of the ongoing crisis
 	
 	option = {
 		name = EVT_20111_A
-		state_scope = {
-			flashpoint_tension = -50
-			any_pop = {
-				limit = {
-					is_primary_culture = no
-					is_accepted_culture = no
-				}
-				militancy = 2
-				consciousness = 2
-			}
-		}
+		war_exhaustion = 10
+		
 	}
 }
 

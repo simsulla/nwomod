@@ -12868,17 +12868,18 @@ EVTOPTE999011;Support the Anarcho-Liberal parties!;;;;;;;;;;;;;x,;;;;
 EVTOPTF999012;Support the Socialist parties!;;;;;;;;;;;;;x,;;;;
 EVTOPTG999014;Support the Communist parties!;;;;;;;;;;;;;x,;;;;
 EVTOPTH999015;Support the Fascist parties!;;;;;;;;;;;;;x,;;;;
-EVTNAME20111;Trouble in $STATENAME$;;;;;;;;;;;;x,,,,,,,,,,,,,;;;;;
-EVTDESC20111;A recent riot in $PROVINCENAME$ has brought a great deal of attention to $STATENAME$-- the kind that would normally prompt the great powers to consider intervention. It seems, however, that the demands for independence by 'uncivilized' peoples has largely fallen on deaf ears. News of the trouble has faded away as quickly as it began.;;;;;;;;;;;;x,,,,,,,,,,,;;;;;
-EVTNAME20110;Natives in $STATENAME$;;;;;;;;;;;;x,,,,,,,,,,,,,;;;;;
-EVTDESC20110;A recent demonstration in $PROVINCENAME$ has brought attention to the plight of natives in $STATENAME$, namely to their oppression by the $COUNTRY_ADJ$ government and their demands for independence. If something isn't done soon we may be facing intervention by foreign powers.;;;;;;;;;;;;x,,,,,,,,,,,,;;;;;
+EVT_20111_NAME;Pax Americana;;;;;;;;;;;;x,,,,,,,,,,,,,;;;;;
+EVT_20111_DESC;$FROMCOUNTRY$ has put precures on us for peacfull resolution of the ongoing crisis;;;;;;;;;;;;x
+EVT_20111_A;We need no interference!;;;;;;;;;;;;;;x ;;;
+EVT_20110_NAME;Demands for raisng the conflict in $STATENAME$ to the UN Security Council;;;;;;;;;;;;x,,,,,,,,,,,,,;;;;;
+EVT_20110_DESC;A recent demonstration in $PROVINCENAME$ has brought attention to the plight of the people in $STATENAME$, namely to their oppression by the $COUNTRY_ADJ$ government and their demands for independence. If something isn't done soon we may be facing intervention by foreign powers.;;;;;;;;;;;;x,,,,,,,,,,,,;;;;;
+EVT_20110_A;Silence the troublemakers, risking UN Involvement;;;;;;;;;;;;;;x ;;;
+EVT_20110_B;Work with these people to solve their issues.;;;;;;;;;;;;;;x ;;;
+EVT_20110_C;Give them independance.;;;;;;;;;;;;;;x ;;;
 EVTNAME20112;Long Memories;;;;;;;;;;;;x,,,,,,,,,,,,,;;;;;
 EVTDESC20112;While recent trouble in $STATENAME$ has raised the spectre of foreign intervention once again, there are many who remember the last crisis over $STATENAME$'s people as if it were yesterday. Try as they might, the world is simply not ready to listen to them again-- yet.;;;;;;;;;;;;x,,,,,,,,,,,;;;;;
 EVTNAME20115;Incident in $STATENAME$;;;;;;;;;;;;x,,,,,,,,,,,,,;;;;;
 EVTDESC20115;A demonstration by $PROVINCECULTURE$ citizens in $PROVINCENAME$ quickly got out of hand as $COUNTRY_ADJ$ soldiers shot into the crowd to disperse it. A riot ensued, and several protestors were slain. Throughout $STATENAME$, the reaction has been one of outrage-- and there is an effort by some $PROVINCECULTURE$ malcontents to draw the attention of the world, just one more example of $COUNTRY$'s disregard for peace and civilized behavior-- or so they'll say.;;;;;;;;;;;;x,,,,,,,,,,;;;;;
-EVT_20110_A;Silence the troublemakers. Immediately.;;;;;;;;;;;;;;x ;;;
-EVT_20110_B;Work with these people to solve their issues.;;;;;;;;;;;;;;x ;;;
-EVT_20111_A;Good. We need no interference in $STATENAME$.;;;;;;;;;;;;;;x ;;;
 EVT_20113_A;This? Again?;;;;;;;;;;;;;;x ;;;
 EVT_20115_A;Let the world think what it likes.;;;;;;;;;;;;;;x ;;;
 EVT_20115_B;Supress this. Now.;;;;;;;;;;;;;;x;;;
@@ -12930,6 +12931,9 @@ EVT_8209501_DESC;Our nation follows a centrally plane five year plan. This rende
 EVT_8209501_A;This is inevitable!;;;;;;;;;;;;x;;;;;
 EVT_1005702_A;Hand back the Ruhr to Germany;;;;;;;;;;;;x;;;;;
 EVT_1005702_B;Continue the occupation!;;;;;;;;;;;;x;;;;;
+EVT_1215009_NAME;United Nations Security Council;;;;;;;;;;;;x;;;;;
+EVT_1215009_DESC;The Security Council consists of fifteen members. The great powers that were the victors of World War II— the Soviet Union (now represented by Russia), the United Kingdom, France, Republic of China (potentially represented by the People's Republic of China), and the United States—serve as the body's five permanent members.;;;;;;;;;;;;x;;;;;
+EVT_1215009_A;Peace in our time!;;;;;;;;;;;;x;;;;;
 EVT_1215010_NAME;United Nations Membership;;;;;;;;;;;;x;;;;;
 EVT_1215010_DESC;$COUNTRY$ is §Ynot§! a member of the united nations. This sets us outside the international cooperation organizations. We should make an effort to become a member, either by rising in the world to a great or secondary power status, or by being part of a great power sphere of interest.;;;;;;;;;;;;x;;;;;
 EVT_1215010_A;Stay on our own path;;;;;;;;;;;;x;;;;;
@@ -13293,3 +13297,24 @@ EVTOPTA96003;Is anyone out there?;;;;;;;;;;;;;x
 EVTNAME96002;Call Allies Cleanup;;;;;;;;;;;;;x
 EVTDESC96002;This removes the flag once peace is achieved.;;;;;;;;;;;;;x
 EVTOPTA96002;Let's keep this clean.;;;;;;;;;;;;;x
+EVT_9000_NAME;UN Security Council on conflict in $FROMPROVINCE$ $FROMCOUNTRY$;;;;;;;;;;;;;x
+EVT_9000_DESC;Ongoing troubles in $FROMPROVINCE$ calls for the UN Security Council to act.;;;;;;;;;;;;;x
+EVT_9000_A;Veto Security Council Resolution on the issue.;;;;;;;;;;;;;x
+EVT_9000_B;Support legal government of $FROMPROVINCE$ $FROMCOUNTRY$;;;;;;;;;;;;;x
+EVT_9000_C;Conditions in $STATENAME$ must improve, but we can't afford a crisis now!;;;;;;;;;;;;;x
+EVT_9000_D;Conditions in $STATENAME$ must improve. Let the crisis evolve!;;;;;;;;;;;;;x
+EVT_9001_NAME;UN Security Council vote supporting your position in $FROMPROVINCE$;;;;;;;;;;;;;x
+EVT_9001_DESC;Ongoing troubles in $FROMPROVINCE$ calls for the UN Security Council to act. After a Security Council vote, you were able to avoid criticism. This will de-escalte the situation in $FROMPROVINCE$;;;;;;;;;;;;;x
+EVT_9001_A;Ok;;;;;;;;;;;;;x
+EVT_9002_NAME;UN Security Council veto agianst resolution on conflict in $FROMPROVINCE$ $FROMCOUNTRY$;;;;;;;;;;;;;x
+EVT_9002_DESC;Ongoing troubles in $FROMPROVINCE$ calls for the UN Security Council to act. After a Security Council vote, you were able to avoid criticism by calling upon security council member veto. This will de-escalte the situation in $FROMPROVINCE$;;;;;;;;;;;;;x
+EVT_9002_A;Good.;;;;;;;;;;;;;x
+EVT_9003_NAME;UN Security Council vote supporting $FROMCOUNTRY$ on evolving cricises;;;;;;;;;;;;;x
+EVT_9003_DESC;Ongoing troubles in $FROMCOUNTRY$ calls for the UN Security Council. After a Security Council vote, $FROMCOUNTRY$ were able to avoid criticism. This will de-escalte the situation in $FROMPROVINCE$;;;;;;;;;;;;;x
+EVT_9003_A;Ok;;;;;;;;;;;;;x
+EVT_9004_NAME;UN Security Council vote supporting $FROMCOUNTRY$ on evolving cricises;;;;;;;;;;;;;x
+EVT_9004_DESC;Ongoing troubles in $FROMCOUNTRY$ calls for the UN Security Council. After a Security Council vote, $FROMCOUNTRY$ were able to avoid criticism by calling upon security council member veto. This will de-escalte the situation in $FROMPROVINCE$;;;;;;;;;;;;;x
+EVT_9004_A;Ok;;;;;;;;;;;;;x
+EVT_96009_NAME;The Treaty of $FROMPROVINCE$;;;;;;;;;;;;;x
+EVT_96009_DESC;The time has come for us to leave the people of $FROMPROVINCE$ to their own deistiny. The time of colonialism and overloardships are over. Give them independance.;;;;;;;;;;;;;x
+EVT_96009_A;Decolonialize!;;;;;;;;;;;;;x
