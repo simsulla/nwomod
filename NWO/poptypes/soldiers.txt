@@ -305,7 +305,7 @@ promote_to =
 
 ideologies = {
 	nationalist = {
-		factor = 0.1
+		factor = 1
 		# type
 		# government and ruling_party_ideology
 		modifier = { factor = 10.0 is_primary_culture = yes government = nationalist_dictatorship } 
@@ -334,7 +334,7 @@ ideologies = {
 		modifier = { factor = 1.2 consciousness = 9 }
 	}
 	populist = { # pragmatic social reformist and revert reforms militancy
-		factor = 0.1 # 0.0-0.48
+		factor = 1 # 0.0-0.48
 		# type
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = populist } everyday_needs = 0.5 }
@@ -353,7 +353,7 @@ ideologies = {
 		modifier = { factor = 2.0 revanchism = 0.20 }
 	}
 	traditionalist = { # revert reforms
-		factor = 0.1 # 0-0.4
+		factor = 1 # 0-0.4
 		# type
 		modifier = { factor = 0.1 NOT = { OR = { type = farmers type = labourers type = aristocrats } }  NOT = { ruling_party_ideology = traditionalist } }
 		# government and ruling_party_ideology
@@ -368,7 +368,7 @@ ideologies = {
 		modifier = { factor = 2.0 religious_rights = secularism_religion } 
 	}
 	conservative = { # pragmatic social reformist
-		factor = 0.1 # 0.05-0.4
+		factor = 1 # 0.05-0.4
 		# type
 		modifier = { factor = 2.5 NOT = { OR = { type = clerks type = labourers type = craftsmen type = capitalists type = clergymen } } life_needs = 1.0 }
 		# government and ruling_party_ideology
@@ -383,7 +383,7 @@ ideologies = {
 		modifier = { factor = 0.2 religion = secularism }
 	}
 	big_tent = { # pragmatic social reformist
-		factor = 0.1 # 0.05-0.4
+		factor = 1 # 0.05-0.4
 		# type
 		modifier = { factor = 2.5 NOT = { OR = { type = clerks type = labourers type = craftsmen type = capitalists type = clergymen } } life_needs = 1.0 }
 		# government and ruling_party_ideology
@@ -398,7 +398,7 @@ ideologies = {
 		modifier = { factor = 0.2 religion = secularism }
 	}
 	liberal = { # political reformist
-		factor = 0.1
+		factor = 1
 		# type
 		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats type = farmers type = labourers }  NOT = { ruling_party_ideology = progressive } }
 		modifier = { factor = 2.5 OR = { type = bureaucrats type = capitalists type = clerks type = artisans type = clergymen } }
@@ -427,7 +427,7 @@ ideologies = {
 		modifier = { factor = 0.5 militancy = 6 }
 	}
 	socialist = { # pragmatic social reformist
-		factor = 0.1
+		factor = 1
 		# type
 		modifier = { factor = 4 OR = { type = craftsmen type = labourers } NOT = { militancy = 2 } }
 		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats } NOT = { ruling_party_ideology = socialist } }
@@ -455,7 +455,7 @@ ideologies = {
 		modifier = { factor = 0.1 militancy = 6 }
 	}
 	communist = { # social reformist militancy
-		factor = 0.1
+		factor = 1
 		# type
 		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats } NOT = { ruling_party_ideology = communist } }
 		# government and ruling_party_ideology
@@ -478,7 +478,7 @@ ideologies = {
 		modifier = { factor = 1.1 social_reform_want = 1.0 }
 	}
 	progressive = { # political reformist
-		factor = 0.1
+		factor = 1
 		# type
 		modifier = { factor = 0 OR = { type = soldiers type = officers type = aristocrats type = farmers type = labourers }  NOT = { ruling_party_ideology = progressive } }
 		# government and ruling_party_ideology
