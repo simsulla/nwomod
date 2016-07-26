@@ -88,7 +88,7 @@ SID_146 = { 146 148 147 149 150 151 152 153 154 } #Missouri
 #USA_118 = { 117 118 119 } #North Dakota
 #USA_121 = { 120 121 122 } #South Dakota
 #USA_158 = { 155 156 157 158 } #Minnesota
-SID_158 = { 155 156 157 158 117 118 119 120 121 122 } #Minnesota
+SID_158 = { 155 156 157 158 117 118 119 120 121 122 } #Minnesota Dakota
 
 #USA_162 = { 159 160 161 162 } #Wisconsin
 USA_159 = { 159 160 161 162 } #Wisconsin
@@ -110,7 +110,7 @@ SID_184 = { 184 185 186 187 } #Kentucky
 
 #USA_188 = { 188 189 191 190 } #Tennessee
 #USA_144 = { 143 144 145 } #Arkansas
-USA_188 = { 188 189 191 190 } #Tennessee
+USA_188 = { 188 191 190 } #Tennessee
 USA_189 = { 189 143 144 145 } #Memphis
 
 #USA_194 = { 194 192 193 } #Mississippi
@@ -159,200 +159,225 @@ SID_243 = { 243 244 245 241 242 247 246 248 249 } #New England
 
 ### United Kingdom
 
-ENG_254 = { 254 255 256 } #Ulster
+#ENG_254 = { 254 255 256 } #Ulster
+SID_254 = { 254 255 256 } #Northen Ireland
 
-ENG_258 = { 258 259 257 } #Connacht
+#ENG_258 = { 258 259 257 } #Connacht
+#ENG_260 = { 260 261 262 } #Munster
+#ENG_263 = { 263 264 265 } #Leinster
+SID_263 = { 263 264 265 260 261 262 258 259 257 } #Sothern Ireland
 
-ENG_260 = { 260 261 262 } #Munster
+#ENG_266 = { 266 267 268 } #Highlands West Northsea
+#ENG_271 = { 271 269 270 272 } #Lowlands
+SID_271 = { 271 269 270 272 266 267 268 } #Scotland
 
-ENG_263 = { 263 264 265 } #Leinster
+#ENG_273 = { 273 274 275 276 } #Wales
+SID_273 = { 273 274 275 276 } #Wales
 
-ENG_266 = { 266 267 268 } #Highlands West Northsea
+#ENG_277 = { 277 278 279 285 304 } #North West England
+#ENG_280 = { 280 281 282 283 } #North East England
+SID_278 = { 278 277 279 285 304 280 281 282 283 } #North England
 
-ENG_271 = { 271 269 270 272 } #Lowlands
+#ENG_296 = { 296 299 297 298 419 } #South West England
+#ENG_284 = { 284 286 287 288 289 290 } #Midlands
+SID_284 = { 284 286 287 288 289 290 296 299 297 298 419 } #Midlands
 
-ENG_273 = { 273 274 275 276 } #Wales
-
-ENG_277 = { 277 278 279 285 304 } #North West England
-
-ENG_280 = { 280 281 282 283 } #North East England
-
-ENG_284 = { 284 286 287 288 289 290 } #Midlands
-
-ENG_291 = { 291 292 293 295 } #Eastern Counties
-
-ENG_296 = { 296 299 297 298 419 } #South West England
-
-ENG_300 = { 300 294 301 302 303 } #South East England
+#ENG_291 = { 291 292 293 295 } #Eastern Counties
+#ENG_300 = { 300 294 301 302 303 } #South East England
+SID_300 = { 300 294 301 302 303 291 292 293 295 } #South England
 
 
 ### Scandinavia
 
-DEN_251 = { 251 252 253 3246 } #Iceland & Greenland
+#DEN_251 = { 251 252 253 3246 } #Iceland & Greenland
+SID_251 = { 251 253 3246 } # Greenland
+SID_252 = { 252 } #Iceland
 
-SWE_308 = { 308 305 306 307 } #Nordnoge Norway
+#SWE_308 = { 308 305 306 307 } #Nordnoge Norway
+#SWE_309 = { 309 311 310 312 } #Vestlandet Norway
+#SWE_313 = { 313 316 314 315 } #Ostlandet Norway
+SID_313 = { 313 316 314 315 309 311 310 312 308 305 306 307 } #Ostlandet Norway
 
-SWE_309 = { 309 311 310 312 } #Vestlandet Norway
+#SWE_318 = { 318 317 319 320 321 } #Norrland Oevre Norrland
+#SWE_322 = { 322 324 326 325 } #Stockholm
+SID_322 = { 322 324 326 318 317 319 320 321 323 327 328 } #Svealand
 
-SWE_313 = { 313 316 314 315 } #Ostlandet Norway
+#SWE_329 = { 329 328 327 323 330 } #Goteburg
+SID_329 = { 329 325 330 332 331 333 } #Götaland
 
-SWE_318 = { 318 317 319 320 321 } #Norrland Oevre Norrland
+#SWE_334 = { 334 332 331 333 335 } #Malmo
+SID_334 = { 334 335 } # Skåneland
 
-SWE_322 = { 322 324 326 325 } #Stockholm
+#RUS_336 = { 336 337 338 342 } #Northern Finland
+#RUS_343 = { 343 344 341 340 } #Helsinki
+SID_343 = { 343 336 337 338 342 344 341 340 347 } # Finland
 
-SWE_329 = { 329 328 327 323 330 } #Goteburg
+#RUS_345 = { 345 346 347 348 } #Turku
+SID_346 = { 346 345 } # Österbotten 
+SID_348 = { 348 } # Åland
 
-SWE_334 = { 334 332 331 333 335 } #Malmo
+#DEN_367 = { 367 366 368 2557 } #Jylland
+#DEN_372 = { 372 373 374 } #Sjaelland Denmark
+SID_372 = { 372 373 374 367 366 368 2557 371 } # Denmark
 
-RUS_336 = { 336 337 338 342 } #Northern Finland
-
-RUS_343 = { 343 344 341 340 } #Helsinki
-
-RUS_345 = { 345 346 347 348 } #Turku
-
-DEN_367 = { 367 366 368 2557 } #Jylland
-
-HOL_369 = { 369 530 529 } #Holstein
-
-SCH_370 = { 370 371 533 } #Schleswig
-
-DEN_372 = { 372 373 374 } #Sjaelland Denmark
+#SCH_370 = { 370 371 533 } #Schleswig
+SID_370 = { 370 533 } #Schleswig
 
 
 ### Low Countries
 
-NET_375 = { 375 376 377 382 } #Holland
+#NET_385 = { 385 383 384 386 } #Friesland
+#NET_375 = { 375 376 377 382 } #Holland
+SID_377 = { 377 382 } #Utrecht
+SID_375 = { 375 376 377 380 385 383 384 386 } #North Holland
 
-NET_379 = { 379 378 380 381 } #Zeeland
+#NET_379 = { 379 378 380 381 } #Zeeland
+SID_376 = { 376 379 378 381 } # South Holland
 
-NET_385 = { 385 383 384 386 } #Friesland
+#BEL_387 = { 387 388 389 390 391 } #Flanders
+SID_390 = { 390 388 389 391 } #Flanders
+SID_387 = { 387 } #Brussels
 
-BEL_387 = { 387 388 389 390 391 } #Flanders
-
-BEL_394 = { 394 392 393 395 396 398 } #Wallonia
+#BEL_394 = { 394 392 393 395 396 398 } #Wallonia
+SID_394 = { 394 392 393 395 396 398 } #Wallonia
 
 
 ### France
 
-FRA_399 = { 399 400 401 402 2570 } #Picardie
+#FRA_399 = { 399 400 401 402 2570 } #Picardie
+FRA_399 = { 399 400 } #Picardie
 
-FRA_404 = { 404 403 405 406 408 } #Champagne
+#FRA_425 = { 425 426 427 } #Ile de France
+#FRA_404 = { 404 403 405 406 408 } #Champagne
+#FRA_411 = { 411 413 407 414 432 } #Franche-Comté
+#FRA_418 = { 418 415 416 417 } #Normandie
+#FRA_438 = { 438 436 439 440 441 } #Region Centre
+#FRA_445 = { 445 446 447 } #Limousin
+SID_425 = { 425 426 427 404 403 405 406 408 411 413 407 414 432 418 415 416 417 438 436 440 441 445 446 447 435 401 402 2570 } #Ile de France
 
-FRA_411 = { 411 413 407 414 432 } #Franche-Comté
+#FRA_412 = { 412 409 410 } #Alsace-Lorraine
+SID_409 = { 409 412 410 } #Alsace-Lorraine
 
-FRA_412 = { 412 409 410 } #Alsace-Lorraine
 
-FRA_418 = { 418 415 416 417 } #Normandie
+#FRA_420 = { 420 421 422 424 423 } #Bretagne
+SID_423 = { 423 420 421 422 424 } #Bretagne
 
-FRA_420 = { 420 421 422 424 423 } #Bretagne
 
-FRA_425 = { 425 426 427 } #Ile de France
+#FRA_451 = { 451 452 453 454 } #Rhone
+#FRA_448 = { 448 449 450 } #Auvergne
+#FRA_428 = { 428 429 431 430 433 } #Bourgogne
+#FRA_428 = { 428 429 431 430 433 } #Bourgogne
+SID_451 = { 451 452 453 454 448 449 450 428 429 431 430 433 439 431 430 433 } #Rhone
 
-FRA_428 = { 428 429 431 430 433 } #Bourgogne
+#FRA_458 = { 458 459 460 } #Aquitaine
+#FRA_442 = { 442 444 443 } #Poitou
+#FRA_435 = { 435 434 437 } #Loire
+SID_458 = { 458 442 444 443 434 437 } #Aquitaine
 
-FRA_435 = { 435 434 437 } #Loire
 
-FRA_438 = { 438 436 439 440 441 } #Region Centre
+#SAR_466 = { 465 466 472 } #Savoie
+SID_472 = { 472 465 466 } #Nice Savoie
 
-FRA_442 = { 442 444 443 } #Poitou
-
-FRA_445 = { 445 446 447 } #Limousin
-
-FRA_448 = { 448 449 450 } #Auvergne
-
-FRA_451 = { 451 452 453 454 } #Rhone
-
-FRA_455 = { 455 457 456 } #Le Midi
-
-FRA_458 = { 458 459 460 } #Aquitaine
-
-FRA_461 = { 461 462 463 464 } #Languedoc
-
-SAR_466 = { 465 466 472 } #Savoie
-
-FRA_467 = { 467 468 469 470 471 } #Provence
+#FRA_455 = { 455 457 456 } #Le Midi
+#FRA_461 = { 461 462 463 464 } #Languedoc
+#FRA_467 = { 467 468 469 470 471 } #Provence
+SID_467 = { 467 468 469 470 471 461 462 463 464 455 457 456 460 459 } #Provence
 
 
 ### Spain & Portugal
 
-SPA_474 = { 474 476 475 478 } #Galicia
+#SPA_474 = { 474 476 475 478 } #Galicia
+SID_474 = { 474 476 475 478 } #Galicia
 
-SPA_477 = { 477 479 480 481 482 483 } #León-Castilla
+#SPA_477 = { 477 479 480 481 482 483 } #León-Castilla
+#SPA_484 = { 484 485 486 } #Extremadura
+#SPA_487 = { 487 488 489 490 491 } #Castilla la Nueva
+SID_487 = { 487 488 489 490 491 493 494 495 496 497 484 485 486 477 479 480 481 482 483 508 } #Castilla la Nueva
 
-SPA_484 = { 484 485 486 } #Extremadura
+#SPA_492 = { 492 493 494 495 496 497 } #Vasconia-Aragón
+SID_492 = { 492 } # Basque Country
 
-SPA_487 = { 487 488 489 490 491 } #Castilla la Nueva
+#SPA_498 = { 498 499 500 501 502 } #Catalonia Baleares
+SID_498 = { 498 499 500 501 502 } #Catalonia Baleares
 
-SPA_492 = { 492 493 494 495 496 497 } #Vasconia-Aragón
+#SPA_503 = { 503 504 505 506 507 508 } #Valencia
+SID_503 = { 503 504 505 } #Valencia
 
-SPA_498 = { 498 499 500 501 502 } #Catalonia Baleares
+#SPA_512 = { 512 509 510 511 517 } #Andalucia West Andalucia
+#SPA_513 = { 513 514 515 516 } #Granada East Andalucia
+SID_509 = { 509 512 510 511 517 513 514 515 516 506 507 } #Andalucia
 
-SPA_503 = { 503 504 505 506 507 508 } #Valencia
+#POR_518 = { 518 519 520 } #Douro
+SID_518 = { 518 519 520 522 } #Douro
 
-SPA_512 = { 512 509 510 511 517 } #Andalucia West Andalucia
-
-SPA_513 = { 513 514 515 516 } #Granada East Andalucia
-
-POR_518 = { 518 519 520 } #Douro
-
-POR_521 = { 521 522 523 524 } #Estremadura Portugal
-
-POR_525 = { 525 526 527 } #Alentejo Cantabric Chain
-
-POR_2134 = { 2134 2135 2136 } #Macaronesia
+#POR_521 = { 521 522 523 524 } #Estremadura Portugal
+#POR_525 = { 525 526 527 } #Alentejo Cantabric Chain
+#POR_2134 = { 2134 2135 2136 } #Macaronesia
+SID_521 = { 521 523 524 525 526 527 2134 2135 2136 } #Estremadura Portugal
 
 
 ### Germany & Switzerland
 
-HAN_528 = { 528 531 532 } #Lower Elbe
+#HOL_369 = { 369 530 529 } #Holstein
+#HAN_528 = { 528 531 532 } #Lower Elbe
+#HAN_534 = { 534 535 536 537 } #Hannover
+#HAN_540 = { 539 540 543 542 538 541 } #East Friesland
+SID_528 = { 528 531 532 369 530 529 534 535 536 537 539 540 543 542 538 541 } #Lower Elbe
 
-HAN_534 = { 534 535 536 537 } #Hannover
+#PRU_549 = { 549 550 551 552 681 } #Brandenburg
+#PRU_544 = { 544 545 } #Mecklenburg
+#PRU_553 = { 553 555 556 557 } #Magdeburg
+#PRU_554 = { 554 561 562 563 } #Thuringia
+#SAX_558 = { 558 559 560 } #Saxony
+SID_549 = { 549 550 551 552 681 558 559 560  554 561 562 563 553 555 556 557 544 545 547 } #East Germany
+SID_549 = { 549 } # Berlin
 
-HAN_540 = { 539 540 543 542 538 541 } #East Friesland
+#HES_2560 = { 564 565 566 567 568 2560 } #Hessen
+SID_564 = { 564 565 566 567 568 2560 } #Hessen
 
-PRU_544 = { 544 545 } #Mecklenburg
+#PRU_570 = { 570 573 574 571 } #Palatinate
+#PRU_575 = { 575 576 577 572 397 } #Rheinland
+SID_573 = { 573 } #Saarland
+SID_397 = { 397 } #Luxenburg
+SID_575 = { 575 574 570 571 572 576 577 } #Rheinland
 
-PRU_546 = { 546 547 548 679 680 692 } #Pomerania
+#PRU_578 = { 578 579 2561 } #Eastern Rheinland
+#PRU_581 = { 581 580 582 583 584 585 } #Westfalen
+SID_578 = { 578 579 2561 581 580 582 583 584 585 } # Ruhr
 
-PRU_549 = { 549 550 551 552 681 } #Brandenburg
+#BAD_586 = { 586 587 588 569 } #Baden
+#WUR_589 = { 589 590 591 593 594 } #Wurttemburg
+SID_589 = { 589 590 591 593 594 586 587 588 569 } # Baden Wurttemburg
 
-PRU_553 = { 553 555 556 557 } #Magdeburg
+#BAV_595 = { 595 596 597 598 } #Franconia
+SID_595 = { 595 596 597 598 602 } #Franconia
 
-PRU_554 = { 554 561 562 563 } #Thuringia
+#BAV_599 = { 599 592 600 601 602 } #Upper Bavaria
+SID_599 = { 599 592 600 601 } #Upper Bavaria
 
-SAX_558 = { 558 559 560 } #Saxony
+#SWI_603 = { 603 606 611 2568 } #East Switzerland
+SID_603 = { 603 606 611 605 604 607 608 } #East Switzerland
+SID_2568 = { 2568 } #South Switzerland
 
-HES_2560 = { 564 565 566 567 568 2560 } #Hessen
+#SWI_605 = { 605 604 607 608 609 } #West Switzerland
+SID_607 = { 607 609 } #West Switzerland
 
-PRU_570 = { 570 573 574 571 } #Palatinate
+#PRU_546 = { 546 547 548 679 680 692 } #Pomerania
+#PRU_682 = { 682 683 687 } #Lower Silesia
+SID_682 = { 682 683 687 546 548 679 680 692 684 689 } #Silesia Pomerania
 
-PRU_575 = { 575 576 577 572 397 } #Rheinland
+#PRU_684 = { 684 685 689 2584 } #Upper Silesia
+SID_685 = { 685 2584 } #Upper Silesia
 
-PRU_578 = { 578 579 2561 } #Eastern Rheinland
+#PRU_690 = { 690 691 694 } #Westpreußen
+SID_690 = { 690 691 694 } #Gdansk
 
-PRU_581 = { 581 580 582 583 584 585 } #Westfalen
+#PRU_695 = { 695 696 697 698 693 } #Ostpreußen East Prussia
+SID_693 = { 693 696 } #Masuria
+SID_695 = { 695 697 698 } #Kaliningrad
 
-BAD_586 = { 586 587 588 569 } #Baden
-
-WUR_589 = { 589 590 591 593 594 } #Wurttemburg
-
-BAV_595 = { 595 596 597 598 } #Franconia
-
-BAV_599 = { 599 592 600 601 602 } #Upper Bavaria
-
-SWI_603 = { 603 606 611 2568 } #East Switzerland
- 
-SWI_605 = { 605 604 607 608 609 } #West Switzerland
-
-PRU_682 = { 682 683 687 } #Lower Silesia
-
-PRU_684 = { 684 685 689 2584 } #Upper Silesia
-
-PRU_690 = { 690 691 694 } #Westpreußen
-
-PRU_695 = { 695 696 697 698 693 } #Ostpreußen East Prussia
-
-PRU_701 = { 701 699 700 } #Posen
+#PRU_701 = { 701 699 700 } #Posen
+SID_699 = { 699 701 700 } #Posen
 
 
 ### Austria
