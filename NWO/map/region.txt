@@ -329,7 +329,8 @@ SID_528 = { 528 531 532 369 530 529 534 535 536 537 539 540 543 542 538 541 } #L
 #PRU_553 = { 553 555 556 557 } #Magdeburg
 #PRU_554 = { 554 561 562 563 } #Thuringia
 #SAX_558 = { 558 559 560 } #Saxony
-SID_549 = { 549 550 551 552 681 558 559 560  554 561 562 563 553 555 556 557 544 545 547 } #East Germany
+SID_549 = { 549 550 551 552 548 553 555 556 557 544 545 547 687 } #East Germany
+SID_559 = { 559 558 560 554 561 562 563 } #Saxony Thuringia
 SID_549 = { 549 } # Berlin
 
 #HES_2560 = { 564 565 566 567 568 2560 } #Hessen
@@ -339,11 +340,12 @@ SID_564 = { 564 565 566 567 568 2560 } #Hessen
 #PRU_575 = { 575 576 577 572 397 } #Rheinland
 SID_573 = { 573 } #Saarland
 SID_397 = { 397 } #Luxenburg
-SID_575 = { 575 574 570 571 572 576 577 } #Rheinland
+SID_575 = { 575 576 577 } #North Rhine-Westphalia
+SID_570 = { 570 571 574 572 579 } #Rhineland-Palatinate
 
 #PRU_578 = { 578 579 2561 } #Eastern Rheinland
 #PRU_581 = { 581 580 582 583 584 585 } #Westfalen
-SID_578 = { 578 579 2561 581 580 582 583 584 585 } # Ruhr
+SID_578 = { 578 2561 581 580 582 583 584 585 } # Ruhr
 
 #BAD_586 = { 586 587 588 569 } #Baden
 #WUR_589 = { 589 590 591 593 594 } #Wurttemburg
@@ -364,7 +366,7 @@ SID_607 = { 607 609 } #West Switzerland
 
 #PRU_546 = { 546 547 548 679 680 692 } #Pomerania
 #PRU_682 = { 682 683 687 } #Lower Silesia
-SID_682 = { 682 683 687 546 548 679 680 692 684 689 } #Silesia Pomerania
+SID_682 = { 682 683 546 681 679 680 692 684 689 } #Silesia Pomerania
 
 #PRU_684 = { 684 685 689 2584 } #Upper Silesia
 SID_685 = { 685 2584 } #Upper Silesia
@@ -382,326 +384,453 @@ SID_699 = { 699 701 700 } #Posen
 
 ### Austria
 
-AUS_612 = { 612 613 614 615 } #Tirol
+#AUS_612 = { 612 613 614 615 } #Tirol
+SID_612 = { 612 614 } #Tirol
 
-AUS_613 = { 616 618 617 } #Kärnten-Steiermark
+#AUS_613 = { 616 618 617 } #Kärnten-Steiermark
+SID_616 = { 616 618 617 615 } #Kärnten-Steiermark
 
-AUS_619 = { 619 620 621 622 624 } #Österreich Austria
+#AUS_619 = { 619 620 621 622 624 } #Österreich Austria
+SID_613 = { 613 622 } # Ober Österreich
+SID_619 = { 619 620 621 622 624 } # Nieder Österreich
 
-AUS_623 = { 623 639 640 642 643 644 } #Transdanubia
+#AUS_625 = { 625 626 627 628 629 630 } #Bohemia
+#AUS_626 = { 631 632 688 } #Moravia
+SID_630 = { 630 625 626 627 628 629 688 } #Sudetenland
+SID_625 = { 625 626 631 632 } #Bohemia
 
-AUS_625 = { 625 626 627 628 629 630 } #Bohemia
+#AUS_633 = { 633 634 635 636 637 638 950 } #Slovakia
+SID_633 = { 633 634 635 636 637 638 } #Slovakia
+SID_950 = { 950 } #Carpathian Ruthenia
 
-AUS_626 = { 631 632 688 } #Moravia
+#AUS_641 = { 641 645 646 648 649 650 } #Central Hungary
+#AUS_623 = { 623 639 640 642 643 644 } #Transdanubia
+SID_641 = { 641 645 646 648 649 650 623 639 640 642 643 644 } #Hungary
 
-AUS_633 = { 633 634 635 636 637 638 950 } #Slovakia
+#AUS_654 = { 654 655 656 661 651 647 } #Western Transylvania
+SID_654 = { 654 661 651 647 } #Western Transylvania
 
-AUS_641 = { 641 645 646 648 649 650 } #Central Hungary
+#AUS_657 = { 657 659 660 2533 } #Eastern Transylvania
+SID_2533 = { 2533 660 } #Eastern Transylvania
 
-AUS_652 = { 652 653 } #Banat
+#AUS_702 = { 702 704 705 714 951 952 953 } #Galicia-Lodomeria
+#RUS_715 = { 715 711 713 716 703 } #West Galicia
+SID_703 = { 703 715 711 713 716 704 705 714 } #West Galicia
 
-AUS_654 = { 654 655 656 661 651 647 } #Western Transylvania
+SID_702 = { 702 951 952 953 } #Lviv
 
-AUS_657 = { 657 659 660 2533 } #Eastern Transylvania
+#AUS_734 = { 734 735 } #South Tirol
+SID_735 = { 735 } #South Tirol
 
-AUS_702 = { 702 704 705 714 951 952 953 } #Galicia-Lodomeria
+#AUS_736 = { 736 737 769 770 778 } #Istria
+AUS_736 = { 736 } #Trieste
+AUS_736 = { 770 } #Istria
 
-RUS_715 = { 715 711 713 716 703 } #West Galicia
+#AUS_768 = { 767 768 } #Slovenia
+SID_768 = { 767 768 769 } #Slovenia
 
-AUS_726 = { 726 727 728 } #Lombardia North Italy
+#AUS_771 = { 771 772 773 774 775 776 } #Croatia
+#AUS_777 = { 779 793 777 } #Slavonia
+#AUS_780 = { 780 781 782 2582 } #Dalmatia
+SID_771 = { 771 773 775 776 779 777 780 781 782 2582 } #Croatia
+SID_793 = { 793 772 774 } #Krajina
+SID_778 = { 778 781 } #Dalmatia
 
-AUS_729 = { 729 730 731 732 733 } #Venetia
-
-AUS_734 = { 734 735 } #South Tirol
-
-AUS_736 = { 736 737 769 770 778 } #Istria
-
-AUS_768 = { 767 768 } #Slovenia
-
-AUS_771 = { 771 772 773 774 775 776 } #Croatia
-
-AUS_777 = { 779 793 777 } #Slavonia
-
-AUS_780 = { 780 781 782 2582 } #Dalmatia
-
-AUS_2538 = { 2538 791 792 } #Vojvodina
-
+#AUS_2538 = { 2538 791 792 } #Vojvodina
+SID_791 = { 791 792 } #Vojvodina
+SID_2538 = { 2538 } #Backa  
 
 ### Italy
 
-SAR_720 = { 720 721 722 723 724 725 } #Piemonte
+#AUS_726 = { 726 727 728 } #Lombardia North Italy
+#AUS_729 = { 729 730 731 732 733 } #Venetia
+SID_726 = { 726 727 728 729 730 731 732 733 737 734 } #North Italy
 
-MOD_739 = { 739 738 740 } #Emilia
+#SAR_720 = { 720 721 722 723 724 725 } #Piemonte
+SID_720 = { 720 721 722 723 724 725 } #Piemonte
 
-TUS_744 = { 744 745 746 747 748 } #Tuscany
+#PAP_741 = { 741 742 743 } #Romagna
+#MOD_739 = { 739 738 740 } #Emilia
+SID_741 = { 741 742 743 739 738 740 } #Emilia
 
-PAP_741 = { 741 742 743 } #Romagna
+#TUS_744 = { 744 745 746 747 748 } #Tuscany
+SID_744 = { 744 745 746 747 748 } #Tuscany
 
-PAP_752 = { 749 752 750 751 } #Lazio
+#PAP_752 = { 749 752 750 751 } #Lazio
+SID_749 = { 749 752 750 751 } #Lazio
 
-SIC_753 = { 753 756 757 758 } #Puglia
+#SIC_753 = { 753 756 757 758 } #Puglia
+#SIC_754 = { 754 755 759 760 761 2567 } #Campania South Italy
+SID_754 = { 754 755 759 760 761 2567 753 756 757 758 } #Campania South Italy
 
-SIC_754 = { 754 755 759 760 761 2567 } #Campania South Italy
+#SIC_763 = { 763 762 764 854 } #Sicily
+SID_762 = { 762 763 764 854 } #Sicily
 
-SIC_763 = { 763 762 764 854 } #Sicily
-
-SAR_765 = { 765 766 473 } #Sardinia & Corscia Ligurian Islands
+#SAR_765 = { 765 766 473 } #Sardinia & Corscia Ligurian Islands
+SID_765 = { 765 766 } #Sardinia
+SID_473 = { 473 } #Corscia
 
 
 ### Balkans
 
-WAL_665 = { 664 665 666 668 667 669 } #Wallachia South Romania
+#AUS_652 = { 652 653 } #Banat
+#WAL_665 = { 664 665 666 668 667 669 } #Wallachia South Romania
+#MOL_673 = { 673 672 670 671 663 662 } #Moldavia North Romania
+SID_664 = { 664 665 666 668 667 669 673 672 670 671 663 662 652 653 674 675 655 656 657 659 } #Romania
 
-MOL_673 = { 673 672 670 671 663 662 } #Moldavia North Romania
+#TUR_674 = { 674 675 818 } #Dobrudja
+SID_818 = { 818 } #Dobrudja
 
-TUR_674 = { 674 675 818 } #Dobrudja
-
-MOL_676 = { 676 677 678 2589 } #Besserabia
+#MOL_676 = { 676 677 678 2589 } #Besserabia
+SID_676 = { 676 677 678 } #Besserabia
+SID_677 = { 677 } #Transnistria
+SID_2589 = { 2589 } #Gagauzia
 
 TUR_788 = { 783 787 789 788 786 785 784 2688 } #Bosnia
 
-SER_794 = { 794 797 795 796 } #Northern Serbia Central Serbia
+#SER_794 = { 794 797 795 796 } #Northern Serbia Central Serbia
+#TUR_803 = { 803 804 798 802 799 } #Southern Serbia East Serbia
+SID_794 = { 794 797 795 796 803 804 798 802 799 } #Serbia
 
-MON_2582 = { 2583 2569 2577 800 } #Montenegro
+#MON_2582 = { 2583 2569 2577 800 } #Montenegro
+SID_2583 = { 2583 2569 2577 800 } #Montenegro
 
-TUR_803 = { 803 804 798 802 799 } #Southern Serbia East Serbia
+#TUR_806 = { 806 807 } #Northern Macedonia
+SID_806 = { 806 } #Macedonia
+SID_807 = { 807 } #Northwestern Macedonia
 
-TUR_805 = { 805 819 820 821 822 } #Southern Macedonia
+#TUR_809 = { 817 808 815 816 } #Eastern Rumelia
+#TUR_810 = { 809 810 811 812 813 814 } #Bulgaria
+SID_809 = { 817 808 815 816 809 810 811 812 813 814 } #Eastern Rumelia
 
-TUR_806 = { 806 807 } #Northern Macedonia
+#TUR_823 = { 823 829 830 } #Eastern Macedonia
+SID_830 = { 830 829 } #Eastern Macedonia
 
-TUR_809 = { 817 808 815 816 } #Eastern Rumelia
+#TUR_805 = { 805 819 820 821 822 } #Southern Macedonia
+SID_805 = { 805 819 820 821 822 823 } #Southern Macedonia
 
-TUR_810 = { 809 810 811 812 813 814 } #Bulgaria
+#TUR_832 = { 832 831 833 825 824 } #Thessalia
+#GRE_826 = { 839 826 827 840 841 842 } #Peloponnese
+#GRE_837 = { 834 837 836 835 838 } #Attica
+#EGY_843 = { 843 844 845 846 847 848 } #Aegean Islands Greek Island
+SID_834 = { 834 837 836 835 838 839 826 827 840 841 842 832 831 833 825 824 843 844 845 847 848 } #Greece
+SID_846 = { 846 } #Dodecanese
 
-TUR_823 = { 823 829 830 } #Eastern Macedonia
+#TUR_853 = { 849 853 852 851 850 } #Albania
+SID_849 = { 849 852 851 850 } #Albania
+SID_853 = { 853 } #Eripidus
 
-GRE_826 = { 839 826 827 840 841 842 } #Peloponnese
+#TUR_855 = { 855 856 857 } #Cyprus
+SID_855 = { 855 856 } #Cyprus
+SID_857 = { 857 } #North Cyprus
 
-TUR_832 = { 832 831 833 825 824 } #Thessalia
-
-GRE_837 = { 834 837 836 835 838 } #Attica
-
-EGY_843 = { 843 844 845 846 847 848 } #Aegean Islands Greek Island
-
-TUR_853 = { 849 853 852 851 850 } #Albania
-
-TUR_855 = { 855 856 857 } #Cyprus
-
-TUR_860 = { 860 828 858 859 } #Thrace
+#TUR_860 = { 860 828 858 859 } #Thrace
+SID_860 = { 860 828 858 859 } #Thrace
 
 
 ### Middle East
 
-TUR_863 = { 863 861 862 864 865 867 } #Hudavendigar
+#TUR_863 = { 863 861 862 864 865 867 } #Hudavendigar
+TUR_863 = { 863 861 862 865 } #Hudavendigar
 
-TUR_869 = { 869 870 871 872 } #Aydin
+#TUR_869 = { 869 870 871 872 } #Aydin
+SID_869 = { 869 } #Izmir
 
-TUR_873 = { 873 874 875 866 } #Konya
+#TUR_869 = { 869 870 871 872 } #Aydin
+SID_875 = { 875 870 871 872 864 867 } #Antalaya
 
-TUR_876 = { 876 877 878 868 } #Ankara
+#TUR_873 = { 873 874 875 866 } #Konya
+TUR_873 = { 873 874 866 } #Konya
 
-TUR_880 = { 880 881 883 } #Kastamonu Anatolian North Coast
+#TUR_876 = { 876 877 878 868 } #Ankara
+#TUR_880 = { 880 881 883 } #Kastamonu Anatolian North Coast
+#TUR_882 = { 882 884 879 888 } #Trabizond
+#TUR_890 = { 890 891 1101 1109 1110 } #Van
+SID_876 = { 876 877 878 868 880 881 883 884 879 888 } #Ankara
 
-TUR_882 = { 882 884 879 888 } #Trabizond
+#TUR_885 = { 885 886 887 1096 } #Kars
+SID_882 = { 882 887 885 886 1101 } #East Turkey
 
-TUR_885 = { 885 886 887 1096 } #Kars
+#TUR_893 = { 893 889 899 892 901 } #Diyarbakir
+SID_893 = { 893 890 891 892 } #Diyarbakir
+SID_901 = { 901 } #Rojava
 
-TUR_890 = { 890 891 1101 1109 1110 } #Van
+#TUR_894 = { 894 896 898 895 } #Adana
+SID_894 = { 894 896 895 878 } #Adana
+SID_898 = { 898 899 889 } # Antep
 
-TUR_893 = { 893 889 899 892 901 } #Diyarbakir
+#EGY_897 = { 897 900 904 905 } #Aleppo
+SID_900 = { 900 } #Antioch
+SID_905 = { 905 } #Lactia
+SID_897 = { 897 907 } #Aleppo
 
-TUR_894 = { 894 896 898 895 } #Adana
+#EGY_903 = { 902 903 906 } #Syria
+SID_902 = { 902 903 906 904 } #Damascus
 
-EGY_897 = { 897 900 904 905 } #Aleppo
+#EGY_910 = { 908 910 911 922 909 } #Transjordan
+SID_910 = { 908 910 911 922 909 } #Transjordan
 
-EGY_903 = { 902 903 906 } #Syria
+#EGY_915 = { 913 915 912 914 } #Lebanon Lebanon_Syria
+SID_915 = { 913 915 912 914 } #Lebanon Lebanon_Syria
 
-EGY_910 = { 908 910 911 922 909 } #Transjordan
+#EGY_921 = { 919 917 921 920 918 916 2687 } #Palestine
+SID_919 = { 919 921 916 } #Israel
+SID_917 = { 917 } #Jerusalem
+SID_920 = { 920 } #Gaza
+SID_918 = { 918 } #West Bank
+SID_2687 = { 2687 } #Golan Hights
 
-EGY_915 = { 913 915 912 914 } #Lebanon Lebanon_Syria
+#TUR_923 = { 923 931 907 927 } #Mosul
+SID_923 = { 923 931 927 } #Mosul
+SID_925 = { 925 924 928 } #Iraqi Kurdistan
 
-EGY_921 = { 919 917 921 920 918 916 2687 } #Palestine
+#TUR_931 = { 926 928 929 934 } #Baghdad Iraq
+SID_926 = { 926 } #Baghdad
 
-TUR_923 = { 923 931 907 927 } #Mosul
+#TUR_935 = { 935 932 933 930 } #Basra
+SID_935 = { 935 932 933 930 929 934 } #Basra
 
-TUR_931 = { 926 928 929 934 } #Baghdad Iraq
+#RUS_1090 = { 1090 1093 1091 1092 1094 1095 } #Georgia
+SID_1090 = { 1090 1093 1092 1094 1095 } #Georgia
+SID_1096 = { 1096 } #Adjara
+SID_1095 = { 1095 } #Abkhazia
+SID_1091 = { 1091 } #South Ossetia
 
-TUR_935 = { 935 932 933 930 } #Basra
+#RUS_1098 = { 1098 1099 1100 1106 } #Armenia Armenia_Azerbaijan
+SID_1098 = { 1098 1099 1100 } #Armenia
+SID_1106 = { 1106 } #Nagorno-Karabakh
 
-RUS_1090 = { 1090 1093 1091 1092 1094 1095 } #Georgia
+#RUS_1102 = { 1102 1105 1104 1107 1103 } #Azerbaijan
+SID_1102 = { 1102 1105 1104 1107 1103 } #Azerbaijan
+SID_1101 = { 1101 } #Nakhichevan
 
-RUS_1098 = { 1098 1099 1100 1106 } #Armenia Armenia_Azerbaijan
+#PER_1112 = { 1108 1111 1112 } #Tabriz
+SID_1108 = { 1108 1109 1110 1111 1112 } #Tabriz
 
-RUS_1102 = { 1102 1105 1104 1107 1103 } #Azerbaijan Armenia_Azerbaijan
+#PER_1116 = { 1113 1114 1115 1116 } #Mazandaran
+#PER_1121 = { 1121 1124 1125 1126 1123 } #Irakajemi
+SID_1121 = { 1121 1124 1125 1123 1113 1114 1115 } #Irakajemi
 
-PER_1112 = { 1108 1111 1112 } #Tabriz
+#PER_1122 = { 1117 1118 924 925 } #Kurdistan
+SID_1117 = { 1117 1118 } #Kurdistan
 
-PER_1116 = { 1113 1114 1115 1116 } #Mazandaran
+#PER_1127 = { 1127 1129 1130 } #Isfahan
+#PER_1128 = { 1128 1122 1120 1119 } #Lorestan
+SID_1127 = { 1127 1129 1128 1122 1120 1119 1134 1133 1136 } #Isfahan
 
-PER_1121 = { 1121 1124 1125 1126 1123 } #Irakajemi
+#PER_1132 = { 1132 1131 1133 1136 } #Khuzestan
+SID_1132 = { 1132 1131 } #Khuzestan
 
-PER_1122 = { 1117 1118 924 925 } #Kurdistan
+#PER_1136 = { 1135 1134 1137 1138 1141 } #Fars
+#PER_1140 = { 1142 1139 1140 1143 1145 } #Kerman
+SID_1135 = { 1135 1137 1138 1141 1142 1139 1140 1143 1145 1130 } #Shiraz
 
-PER_1127 = { 1127 1129 1130 } #Isfahan
+#PER_1148 = { 1148 1147 1150 1149 } #Khorasan East Persia
+PER_1147 = { 1147 1148 1150 1149 1116 1126 } #Khorasan East Persia
 
-PER_1128 = { 1128 1122 1120 1119 } #Lorestan
+#HDJ_1151 = { 1151 1152 1153 1154 1155 } #Hedjaz Red Sea Coast
+SID_1152 = { 1152 1151 1153 1154 1155 } #Jeddah
 
-PER_1132 = { 1132 1131 1133 1136 } #Khuzestan
+#NEJ_1156 = { 1160 1156 1158 1163 } #Hail
+SID_1157 = { 1157 1159 1160 1156 1158 1163 } #Hail
 
-PER_1136 = { 1135 1134 1137 1138 1141 } #Fars
+#NEJ_1157 = { 1157 1164 1161 2586 1159 } #Nejd
+SID_1164 = { 1164 1161 2586 } #East Province
 
-PER_1140 = { 1142 1139 1140 1143 1145 } #Kerman
+#ABU_1162 = { 1162 1165 1167 1168 } #Abu Dhabi South Arabian Sea
+SID_1168 = { 1168 1167 } #Arab Emirates
+SID_1165 = { 1165 } #Qatar
+SID_1162 = { 1162 } #Bahrain
 
-PER_1148 = { 1148 1147 1150 1149 } #Khorasan East Persia
+#OMA_1166 = { 1166 1169 1170 1171 1172 1174 } #Oman
+SID_1166 = { 1166 1169 1170 1171 1172 1174 } #Oman
 
-HDJ_1151 = { 1151 1152 1153 1154 1155 } #Hedjaz Red Sea Coast
+#YEM_1412 = { 1412 1173 1175 1176 1177 } #Aden
+SID_1412 = { 1412 1173 1175 1176 1177 } #South Yemen
 
-NEJ_1156 = { 1160 1156 1158 1163 } #Hail
+#YEM_1178 = { 1178 1179 1180 } #Sanaa
+SID_1178 = { 1178 1179 1180 } #Yemen
 
-NEJ_1157 = { 1157 1164 1161 2586 1159 } #Nejd
+#KOK_1190 = { 1189 1190 1202 1203 } #Kirghizia Kirgiz Steppe
+SID_1189 = { 1189 1190 1203 } #Kyrgyzstan
 
-ABU_1162 = { 1162 1165 1167 1168 } #Abu Dhabi South Arabian Sea
+#KHI_1191 = { 1191 1195 1197 1198 1199 1200 } #Uzbekia Uzbekistan
+SID_1195 = { 1195 1191 1198 1199 1200 1202 } #Uzbekia Uzbekistan
+SID_1192 = { 1192 } #Karakalpakstan
 
-OMA_1166 = { 1166 1169 1170 1171 1172 1174 } #Oman
+#KOK_1210 = { 1207 1201 } #Bandakshan
+SID_1207 = { 1207 1201 } #Bandakshan
+SID_1208 = { 1208 } #Gorno-Badakhshan
 
-YEM_1412 = { 1412 1173 1175 1176 1177 } #Aden
-
-YEM_1178 = { 1178 1179 1180 } #Sanaa
-
-KOK_1190 = { 1189 1190 1202 1203 } #Kirghizia Kirgiz Steppe
-
-KHI_1191 = { 1191 1195 1197 1198 1199 1200 } #Uzbekia Uzbekistan
-
-AFG_1209 = { 1209 1217 1216 1223 1225 1218 1219 1210 2653 } #Pashtunistan
-
-KOK_1210 = { 1207 1201 } #Bandakshan
-
-AFG_1214 = { 1214 1215 1213 1212 1211 } #Kandahar
+#AFG_1209 = { 1209 1217 1216 1223 1225 1218 1219 1210 2653 } #Pashtunistan
+#AFG_1214 = { 1214 1215 1213 1212 1211 } #Kandahar
+SID_1211 = { 1211 1210 } #Norht Afghanistan
+SID_1209 = { 1209 1217 1216 1223 1225 1218 1219 2653 1214 1215 1213 1212 } #Pashtunistan
 
 
 ### Russia
 
-RUS_349 = { 349 350 351 352 353 } #Estonia
+#RUS_349 = { 349 350 351 352 353 } #Estonia
+SID_349 = { 349 350 351 352 353 } #Estonia
 
-RUS_354 = { 354 355 356 357 358 359 } #Latvia
+#RUS_354 = { 354 355 356 357 358 359 } #Latvia
+SID_354 = { 354 355 356 357 358 359 } #Latvia
 
-RUS_360 = { 360 361 362 363 364 365 } #Lithuania
+#RUS_360 = { 360 361 362 363 364 365 } #Lithuania
+SID_361 = { 360 361 362 363 364 365 } #Lithuania
+SID_360 = { 360 } #Vilnius
 
-RUS_339 = { 339 984 995 988 } #Karelia
+#RUS_339 = { 339 984 995 988 } #Karelia
+SID_995 = { 339 984 995 988 } #East Karelia
+SID_339 = { 339 982 } #West Karelia
+SID_982 = { 982 } #Petsamo
 
-RUS_706 = { 706 708 709 710 717 712 } #Masovia
+#RUS_706 = { 706 708 709 710 717 712 } #Masovia
+SID_706 = { 706 707 708 709 710 717 712 719 } #Central Poland
 
-RUS_707 = { 707 719 936 937 } #Brêst
+#RUS_707 = { 707 719 936 937 } #Brêst
+#RUS_940 = { 940 939 938 947 } #Pinsk
+SID_936 = { 936 937 940 939 938 } #Gordno
 
-RUS_718 = { 718 941 942 } #Minsk Rogachev
+#RUS_718 = { 718 941 942 } #Minsk Rogachev
+#RUS_947 = { 944 945 946 948 949 } #Orsha
+SID_718 = { 718 941 942 947 944 945 946 948 949 } #Minsk Rogachev
 
-RUS_940 = { 940 939 938 947 } #Pinsk
+#RUS_943 = { 943 999 1000 1007 } #Smolensk
+SID_943 = { 943 999 1000 1007 1014 } #Smolensk
 
-RUS_943 = { 943 999 1000 1007 } #Smolensk
+#RUS_955 = { 955 956 957 } #Podillia
+#RUS_958 = { 958 959 960 961 954 } #Kiev
+SID_958 = { 958 959 960 961 954 955 956 957 962 963 } #Kiev
 
-RUS_947 = { 944 945 946 948 949 } #Orsha
+#RUS_964 = { 967 966 964 } #Crimea Krim
+SID_964 = { 967 966 964 } #Crimea
 
-RUS_955 = { 955 956 957 } #Podillia
+#RUS_968 = { 968 969 970 971 972 } #Transnistria
+SID_968 = { 968 969 970 971 972 978 } #Transnistria
 
-RUS_958 = { 958 959 960 961 954 } #Kiev
+#RUS_973 = { 973 974 975 976 965 } #Zaporizhia Dnepropretovsk
+SID_980 = { 980 975 976 } #Donetsk
 
-RUS_964 = { 967 966 964 } #Crimea Krim
+#RUS_978 = { 978 962 963 } #Kharkov
+SID_974 = { 974 978 973 965 } #Dnipropetrovsk
 
-RUS_968 = { 968 969 970 971 972 } #Transnistria
+#RUS_979 = { 979 980 1047 1046 1045 } #Rostov
+SID_979 = { 979 980 1047 1046 1045 } #Rostov
 
-RUS_973 = { 973 974 975 976 965 } #Zaporizhia Dnepropretovsk
+#RUS_981 = { 981 985 2588 } #Arkhangelsk Tajmyr_Evenk
+#RUS_990 = { 990 987 1024 991 1023 } #Galich Kostroma
+#RUS_998 = { 998 1001 992 993 989 } #Tver
+SID_998 = { 998 2588 981 985 990 987 1024 991 1023 1001 992 993 989  } #Tver
+SID_987 = { 987 } # Komi
+ 
+#RUS_977 = { 977 1017 1018 1019 } #Kursk
+SID_977 = { 977 1017 1018 } #Kursk
 
-RUS_977 = { 977 1017 1018 1019 } #Kursk
+#RUS_994 = { 994 996 997 2580 } #Ingria Leningrad
+#RUS_1003 = { 1003 1004 1005 1006 } #Novgorod
+SID_994 = { 994 996 997 2580 1003 1004 1005 1006 } #St Petersburg
 
-RUS_978 = { 978 962 963 } #Kharkov
+#RUS_1008 = { 1008 1011 1012 1013 1022 } #Moscow
+#RUS_1009 = { 1009 1010 1014 1015 1016 } #Bryansk
+SID_1008 = { 1008 1011 1012 1013 1022 1009 1010 1014 1015 1016 } #Moscow
 
-RUS_979 = { 979 980 1047 1046 1045 } #Rostov
+#RUS_1020 = { 1020 1027 1028 1030 1032 1033 } #Kazan
+SID_1020 = { 1020 1027 1028 1030 } #Nizhni Novgorod
+SID_1030 = { 1030 1034 } #Tatarstan
+SID_1033 = { 1033 } #Chuvashia
+SID_1032 = { 1032 } # Mari
 
-RUS_981 = { 981 985 2588 } #Arkhangelsk Tajmyr_Evenk
+#RUS_1026 = { 1026 1029 1031 2700 } #Perm
+SID_1026 = { 1026 1029 1031 2700 } #Perm
 
-RUS_990 = { 990 987 1024 991 1023 } #Galich Kostroma
+#RUS_1037 = { 1037 1038 1025 1021 } #Tartaria Saransk
+SID_1037 = { 1037 1035 1038 } #Saratov
+SID_1021 = { 1021 } # Mordovia 
+SID_1025 = { 1019 1025 1012 } # Voronets 
 
-RUS_994 = { 994 996 997 2580 } #Ingria Leningrad
+#RUS_1041 = { 1041 1036 1040 1039 } #Astrakhan Stalingrad
+SID_1039 = { 1039 1036 1040 } #Stalingrad
+SID_1041 = { 1041 } #Kalmykia
 
-RUS_998 = { 998 1001 992 993 989 } #Tver
+#RUS_1052 = { 1052 1053 1054 1055 1057 } #North Caucasia
+SID_1051 = { 1051 } #Adygei
+SID_1052 = { 1056 } #Karachay-Cherkessia
+SID_1051 = { 1052 } #Kabardino-Balkaria
+SID_1051 = { 1054 } #North Ossetia
+SID_1051 = { 1053 } #Ingushetia
+SID_1051 = { 1055 } #Chechnya
+SID_1051 = { 1057 } #Dagestan
 
-RUS_1003 = { 1003 1004 1005 1006 } #Novgorod
+#RUS_1064 = { 1061 1066 2691 2686 2659 3249 3250 3251 3252 3253 3254 3255 3256 3257 3258 3259 3260 } #Tobolsk - Tyumen Kuybyshev 
+SID_1064 = { 1064 2698 1067 } #Novosibirsk 
+SID_1066 = { 1066 1063 } #Tobolsk
+SID_1061 = { 1061 2686 2691 3249 3250 2659 3251 3252 3253 } #Tyumen
 
-RUS_1008 = { 1008 1011 1012 1013 1022 } #Moscow
+#RUS_1070 = { 3261 3262 3263 3264 3265 3266 3267 3268 3269 3270 3271 3272 3273 3274 3275 3276 } #Upper Yeniseysk
+SID_1070 = { 3261 3262 3263 3264 3265 3266 3267 3268 3269 3270 3271 3272 3273 3274 3275 3276 } #Yakutsk
 
-RUS_1009 = { 1009 1010 1014 1015 1016 } #Bryansk
+#RUS_1074 = { 2639 1074 2633 2590 2614 } #Kamchatka
+SID_1074 = { 2639 1074 2633 2590 2614 3260 1072 } #Kamchatka
 
-RUS_1020 = { 1020 1027 1028 1030 1032 1033 } #Kazan
+#RUS_1075 = { 1075 2676 2677 2695  } #Irkutsk
+#RUS_1069 = {  2645 1078 1079 1081 } #West Yakutsk - Zabaykalsky Krai
+SID_1075 = { 1075 2676 2677 2695 2645 1078 1081 } #Irkutsk
+SID_1079 = { 1079 } # Buryatia
+SID_1469 = { 1469 } #Tuvas
 
-RUS_1026 = { 1026 1029 1031 2700 } #Perm
+#CHI_1082 = { 1082 1083 } #HaIshenwai - Primorsky Krai
+#RUS_1071 = { 2617 1084 2618 1072 2641 } #Yakutsk - Khabarovsk Magadan
+#RUS_1079 = { 2697 1080 2696 } #Trans-Baikal - Amur Oblast
+SID_2617 = { 2617 1084 2618 2641 1082 1083 2697 1080 2696 } #HaIshenwai - Primorsky Krai
 
-RUS_1037 = { 1037 1038 1025 1021 } #Tartaria Saransk
+#JAP_1086 = { 1086 1087 1088 1089 } #Sakhalin
+JAP_1086 = { 1086 } #North Sakhalin
+JAP_1087 = { 1087 } #South Sakhalin
+JAP_1088 = { 1088 1089 } # Kurils
 
-RUS_1041 = { 1041 1036 1040 1039 } #Astrakhan Stalingrad
+#RUS_1182 = { 1182 1183 1194 2610 2702 1192 } #Uralsk
+#RUS_1184 = { 1181 1184 1193 2612 2611 986 } #Akmolinsk 
+#RUS_1185 = { 1185 1186 1187 1188 2606 } #Semireche Kazakstan
+SID_1186 = { 1186 1185 1187 1188 2606 1182 1183 1194 2610 2702 1192 1193 2612 2611 1197 } #Kazakstan
+SID_1181 = { 1181 1184 2611 } #North Kazakstan 
+SID_986 = { 986 } #Baikonur 
 
-RUS_1048 = { 1048 1049 1050 1051 1056 } #Ekaterinodar Krasnodar
+#RUS_1196 = { 1196 1204 1205 1206 } #Turkmenia Turkestan
+SID_1196 = { 1196 1204 1205 1206 } #Turkmenistan
 
-RUS_1052 = { 1052 1053 1054 1055 1057 } #North Caucasia
+#RUS_1469 = { 1077 1067 1068 1063 2698 1064 2615 } #Tomsk Novosibirsk
+SID_1077 = { 1077 2615 3254 3255 3256 3257 3258 3259  } #Tomsk Novosibirsk
+SID_1068 = { 1068 } #Altai
 
-RUS_1060 = { 1060 1044 1042 1034 1043 1035 } #Samara
+#RUS_2587 = { 2587 983 982 } #Kola
+SID_2587 = { 2587 983 } #Kola
 
-RUS_1064 = { 1061 1066 2691 2686 2659 3249 3250 3251 3252 3253 3254 3255 3256 3257 3258 3259 3260 } #Tobolsk - Tyumen Kuybyshev 
+#RUS_2685 = { 1058 1059 2683 } #Ural
+SID_1058 = { 1058 2683 } #Ekaterineburg
 
-RUS_1065 = { 1585 1586 } # Sichuan Sikang Xikang
+#RUS_1048 = { 1048 1049 1050 1051 1056 } #Ekaterinodar Krasnodar
+SID_1048 = { 1048 1049 1050 } #Ekaterineburg
 
-RUS_1069 = {  2645 1078 1079 1081 } #West Yakutsk - Zabaykalsky Krai
-
-RUS_1070 = { 3261 3262 3263 3264 3265 3266 3267 3268 3269 3270 3271 3272 3273 3274 3275 3276 } #Upper Yeniseysk
-
-RUS_1071 = { 2617 1084 2618 1072 2641 } #Yakutsk - Khabarovsk Magadan
-
-RUS_1072 = { 1613 1533 1002 } # Hsingan
-
-RUS_1074 = { 2639 1074 2633 2590 2614 } #Kamchatka
-
-RUS_1075 = { 1075 2676 2677 2695  } #Irkutsk
-
-RUS_1079 = { 2697 1080 2696 } #Trans-Baikal - Amur Oblast
-
-CHI_1082 = { 1082 1083 } #HaIshenwai - Primorsky Krai
-
-JAP_1086 = { 1086 1087 1088 1089 } #Sakhalin
-
-RUS_1182 = { 1182 1183 1194 2610 2702 1192 } #Uralsk
-
-RUS_1184 = { 1181 1184 1193 2612 2611 986 } #Akmolinsk 
-
-RUS_1185 = { 1185 1186 1187 1188 2606 } #Semireche Kazakstan
-
-RUS_1196 = { 1196 1204 1205 1206 } #Turkmenia Turkestan
-
-RUS_1469 = { 1077 1067 1068 1063 2698 1064 2615 } #Tomsk Novosibirsk
-
-RUS_2587 = { 2587 983 982 } #Kola
-
-RUS_2589 = { 1555 1085 45 } #Nenetsia - Jilin
-
-RUS_2590 = { 2666 1070 1254 2637  } #Coastal Chukotka - East Bengal
-
-RUS_2615 = { 1251 1253 2660 2622 2661 } #Lower Yeniseysk - West Bengal
-
-RUS_2618 = { 2638  1073 1416 1417 } #Upper Okhotsk - Central Java
-
-RUS_2621 = { 1239 1240 1241 2650 2644 } #Inner Chukotka - Western Uttar Pradesh
-
-RUS_2653 = { 2654 1248 1247 1250  } #North Siberia - South Bihar
-
-RUS_2668 = { 2681 1494 1496 1497 2690 } #North Yakutsk Guangdong 
-
-RUS_2685 = { 1058 1059 2683 } #Ural
-
-RUS_2694 = { 2664 1249 } #Middle Siberia - 
+#RUS_1060 = { 1060 1044 1042 1034 1043 1035 } #Samara
+SID_1059 = { 1059 1060 1044 1043 }
+SID_1042 = { 1042 } # Basharostan
 
 
 ### India
 
+RUS_2694 = { 2664 1249 } #Middle Siberia - 
+
+RUS_2590 = { 2666 1070 1254 2637  } #Coastal Chukotka - East Bengal
+
+RUS_2615 = { 1251 1253 2660 2622 2661 } #West Bengal
+
+RUS_2621 = { 1239 1240 1241 2650 2644 } #Western Uttar Pradesh
+
+RUS_2653 = { 2654 1248 1247 1250  } #outh Bihar
+
 KAL_1221 = { 1221 1222 1146 1144 1220 } #Baluchistan
+SID_1144 = { 1144 1146 } #West Baluchistan
 
 PAN_1224 = { 1224 1226 } #Kashmir
 
@@ -764,30 +893,41 @@ ENG_2125 = { 2125 2127 2126 2124 } #Indian Ocean Territory
 
 ### Indochina
 
-SIA_1352 = { 1392 1352 1354 } #Patani
+#SIA_1352 = { 1392 1352 1354 } #Patani
+SID_1392 = { 1392  } #Patani
 
-SIA_1355 = { 1355 2572 1338 1340 } #Shan
+#SIA_1355 = { 1355 2572 1338 1340 } #Shan
+SID_1355 = { 1355 2572 } #Northen Thailand
+SID_1338 = { 1338 1340 } #Shan
 
-LUA_1356 = { 1356 1360 1357 1361 1362 1363 } #Laos
+#LUA_1356 = { 1356 1360 1357 1361 1362 1363 } #Laos
+SID_1357 = { 1357 1360 1356 1361 1362 1363 } #Laos
 
-SIA_1358 = { 1358 1350 1359 } #Isan
+#SIA_1358 = { 1358 1350 1359 } #Isan
+SID_1358 = { 1358 1350 1359 } #Isan
 
-SIA_1366 = { 1366 1367 1364 1368 1365 } #Cambodia
+#SIA_1366 = { 1366 1367 1364 1368 1365 } #Cambodia
+SID_1364 = { 1364 1367 1366 1368 1365 } #Cambodia
 
-DAI_1369 = { 1369 1374 1370 1373 1371 1372 } #Tonkin
+#DAI_1369 = { 1369 1374 1370 1373 1371 1372 } #Tonkin
+SID_1369 = { 1369 1374 1370 1373 1371 1372 1376 } #North Vietnam
 
-DAI_1375 = { 1375 1378 1379 1377 1376 } #Annam
+#DAI_1375 = { 1375 1378 1379 1377 1376 } #Annam
+#DAI_1380 = { 1380 1382 1383 1381 } #Cochinchina Indochine
+SID_1380 = { 1380 1382 1383 1381 1375 1378 1379 1377 } #South Vietnam
 
-DAI_1380 = { 1380 1382 1383 1381 } #Cochinchina Indochine
+#ENG_1384 = { 1384 1386 1385 1387 2576 } #Southern Malaya Malacka
+#ENG_1391 = { 1391 1390 1388 1389 2575 } #Northern Malaya
+SID_1386 = { 1386 1388 } #Malacka
+SID_1387 = { 1387 1384 1385 2576 1391 1390 1389 2575 } #Malaysia
 
-ENG_1384 = { 1384 1386 1385 1387 2576 } #Southern Malaya Malacka
-
-ENG_1391 = { 1391 1390 1388 1389 2575 } #Northern Malaya
-
-SIA_1392 = { 1346 1353 1347 1351 1348 1349 } #Ayutthaya Siam
+#SIA_1392 = { 1346 1353 1347 1351 1348 1349 } #Ayutthaya Siam
+SID_1392 = { 1346 1353 1347 1351 1348 1349 1365 1352 1354 } #Ayutthaya Siam
 
 
 ### East Indies
+
+RUS_2618 = { 2638  1073 1416 1417 } #Central Java
 
 BRU_1394 = { 1393 1394 1395 } #West Borneo
 
@@ -825,6 +965,14 @@ SPA_1463 = { 1463 1462 1464 } #Mindanao
 
 
 ### China
+
+RUS_1065 = { 1585 1586 } # Sichuan Sikang Xikang
+
+RUS_1072 = { 1613 1533 1002 } # Hsingan
+
+RUS_2589 = { 1555 1085 45 } #Nenetsia - Jilin
+
+RUS_2668 = { 2681 1494 1496 1497 2690 } #North Yakutsk Guangdong 
 
 CAN_19 = { 1617 1612 } #New Caledonia - Beijing
 
