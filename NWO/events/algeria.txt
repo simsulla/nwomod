@@ -161,9 +161,11 @@ country_event = {
 	any_pop = { militancy = 1.0 consciousness = 1 }
 	define_general = { name = "Abdelaziz Bouteflika" personality = energetic background = no_background }
 	any_owned = { 
-		limit = { NOT = { province_id = 1708 province_id = 1709 province_id = 1700 province_id = 1704 } NOT = { region = ALD_1714 region = ALD_1718 } }
-		add_core = ISI
+		limit = { is_state_capital = no OR = { region = SID_1700 region = SID_1704 region = SID_1708 } is_primary_culture = yes }
 		change_controller = REB
+	}
+	any_owned = { 
+		add_core = ISI
 	}
 	ai_chance = { factor = 100 }
   }

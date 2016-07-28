@@ -371,17 +371,27 @@ country_event = {
 		limit = {
 			NOT = {
 				OR = {
-					region = PAP_752
-					region = TUS_744
-					region = PAP_741
-					region = MOD_739
-					region = AUS_726
+					region = SID_720
+					region = SID_726
+					region = SID_744
+					region = SID_749
 				}
 			}
 		}
 		secede_province = RSI
 	}
-	749 = { change_controller = RSI }
+	749 = { secede_province = RSI }
+	any_owned = {
+		limit = {
+			NOT = {
+				OR = {
+					region = SID_720
+					region = SID_726
+				}
+			}
+		}
+		change_controller = RSI
+	}
 	RSI = {
 		capital = 574
 		any_pop = {
@@ -401,17 +411,27 @@ country_event = {
 		limit = {
 			NOT = {
 				OR = {
-					region = PAP_752
-					region = TUS_744
-					region = PAP_741
-					region = MOD_739
-					region = AUS_726
+					region = SID_720
+					region = SID_726
+					region = SID_744
+					region = SID_749
 				}
 			}
 		}
 		secede_province = RSI
 	}
-	749 = { change_controller = RSI }
+	749 = { secede_province = RSI }
+	any_owned = {
+		limit = {
+			NOT = {
+				OR = {
+					region = SID_720
+					region = SID_726
+				}
+			}
+		}
+		change_controller = RSI
+	}
 	RSI = {
 		capital = 574
 		any_pop = {
