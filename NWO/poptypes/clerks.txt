@@ -219,7 +219,7 @@ migration_target = {
 	modifier = {
 		factor = 2
 		is_state_capital = yes
-		NOT = { OR = { 
+		NOT = { is_capital = no OR = { 
 			province_id = 60 #Northern Quebec
 			province_id = 69 #Acadia
 			province_id = 76 #Labrador
