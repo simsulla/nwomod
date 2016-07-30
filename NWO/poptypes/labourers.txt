@@ -225,6 +225,7 @@ promote_to =
 		modifier = { factor = -2 NOT = { literacy = 0.2 } }
 		modifier = { factor = -2 NOT = { literacy = 0.25 } }
 		modifier = { factor = -2 NOT = { literacy = 0.3 } }
+		modifier = { factor = -1 location = { NOT = { total_pops = 10000 } } } # prevent depopulation of rural areas 
 	}
 
 	bureaucrats =
@@ -251,6 +252,7 @@ promote_to =
 			modifier = { factor =  1.0 literacy = 0.90 }
 			modifier = { factor =  2.0 literacy = 1.0 }
 		}		
+		modifier = { factor = -1 location = { NOT = { total_pops = 10000 } } } # prevent depopulation of rural areas 
 	}	
 
 	clergymen =
@@ -278,6 +280,7 @@ promote_to =
 			modifier = { factor =  1.0 literacy = 0.90 }
 			modifier = { factor =  2.0 literacy = 1.0 }
 		}		
+		modifier = { factor = -1 location = { NOT = { total_pops = 10000 } } } # prevent depopulation of rural areas 
 	}
 	
 	clerks = {
@@ -289,6 +292,7 @@ promote_to =
 		modifier = { factor = -2 NOT = { literacy = 0.2 } }
 		modifier = { factor = -2 NOT = { literacy = 0.25 } }
 		modifier = { factor = -2 NOT = { literacy = 0.3 } }
+		modifier = { factor = -1 location = { NOT = { total_pops = 10000 } } } # prevent depopulation of rural areas 
 	}
 	
 	soldiers =
@@ -304,6 +308,7 @@ promote_to =
 			modifier = { factor = -2 state_scope = { soldiers = 0.06 } }
 			modifier = { factor = -2 state_scope = { soldiers = 0.08 } }
 		}
+		modifier = { factor = -1 location = { NOT = { total_pops = 10000 } } } # prevent depopulation of rural areas 
 	}
 
 }
