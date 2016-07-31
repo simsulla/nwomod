@@ -1,5 +1,9 @@
 promotion_chance = { # 0.4
 	factor = 0.4
+	
+	# need to prevent rural provinces going empty
+	modifier = { factor = -4 location = { is_state_capital = no NOT = { total_pops = 10000 } } }
+	
 	group = {
 		modifier = {
 			factor = 0.03
