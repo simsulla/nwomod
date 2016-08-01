@@ -13,7 +13,7 @@ political_decisions = {
 		effect = {
 			badboy = 5
 			random_country = { 
-				limit = { war = no NOT = { tag = ISI } any_owned_province = { is_core = ISI } }
+				limit = { war = no NOT = { truce_with = ISI } NOT = { tag = ISI } any_owned_province = { is_core = ISI } }
 				country_event = 1014800
 			}
 		}
