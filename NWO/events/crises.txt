@@ -378,6 +378,7 @@ province_event = {
 		state_scope = {
 			has_flashpoint = yes
 			flashpoint_tension = 50
+			NOT = { flashpoint_tension = 60 }
 		}
 		owner = { NOT = { has_country_modifier = un_resolution_veto } }
 	}
