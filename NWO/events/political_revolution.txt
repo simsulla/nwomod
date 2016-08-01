@@ -900,8 +900,9 @@ country_event = { # Assest Will be Nationalized
 		casus_belli = { target = FROM type = install_democracy months = 12 }
 		war = { target = FROM attacker_goal = { casus_belli = install_democracy } defender_goal = { casus_belli = status_quo } }
 		ai_chance = { 
-			factor = 0.9 
+			factor = 0.5 
 			modifier = { NOT = { government = democracy } NOT = { government = hms_government }  factor = 0 }
+			modifier = { FROM = { tag = CUB }  factor = 0.1 } # Avoid US waring agisnt 
 			modifier = { NOT = { rank = 2 }  factor = 0 }
 			modifier = { FROM = { part_of_sphere = yes }  factor = 0 } 
 			modifier = { war = yes  factor = 0.5 } 
@@ -910,7 +911,7 @@ country_event = { # Assest Will be Nationalized
 	option = {
 		name = "EVT_800053_B"
 		casus_belli = { target = FROM type = install_democracy months = 12 }
-		ai_chance = { factor = 0.1  }
+		ai_chance = { factor = 0.5 modifier= { factor = 2  FROM = { tag = CUB } } }
 	}
 }
 country_event = { # The New Regime - Democracy
