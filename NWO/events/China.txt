@@ -1091,7 +1091,7 @@ country_event = {
     tag = CHI
 	year = 1971 NOT = { year = 1980 }
 	government = proletarian_dictatorship
-    NOT = { has_global_flag = CHI_in_UNSC }
+    NOT = { has_country_flag = not_participating_UNSC }
     exists = USA
     war = no
     relation = { who = USA value = -100 }
@@ -1141,7 +1141,8 @@ country_event = {
   option = {
     name = EVT_8002852_A
 	any_pop = { militancy = -1 consciousness = 1 }
-	set_global_flag = CHI_in_UNSC 
+	clr_country_flag = not_participating_UNSC
+	KMT = { set_country_flag = not_participating_UNSC }
   }
 }
 country_event = {
@@ -1964,10 +1965,10 @@ province_event = {
     owner = { war = yes  war_with = CHI }
 	has_national_minority = no
 	NOT = { country_units_in_province = KMT }
-	NOT = { region = CHI_1578 } # no rebellion in Sichuan
-	NOT = { region = CHI_1579 } 
-	NOT = { region = RUS_1065 }
-	NOT = { region = CHI_1485 } # not in Taiwan
+	NOT = { region = SID_1578 } # no rebellion in Sichuan
+	NOT = { region = SID_1579 } # Chongqing
+	NOT = { region = SID_1065 } # Xikang
+	NOT = { region = SID_1485 } # not in Taiwan
 	NOT = { province_id = 1499 } # not on other islands
 	NOT = { province_id = 2576 } # not on other islands
   }
@@ -3165,14 +3166,15 @@ country_event = { # # China in United Nations Security Council
 		NOT = { exists = KMT }
 	}
     war = no
-	NOT = { has_global_flag = CHI_in_UNSC }
+	has_country_flag = not_participating_UNSC
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8207000_A
-	set_global_flag = CHI_in_UNSC 
+	clr_country_flag = not_participating_UNSC
+	KMT = { set_country_flag = not_participating_UNSC }
   }
 }
 country_event = {
@@ -3185,7 +3187,7 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1944 NOT = { year = 1990 }
-    NOT = { has_global_flag = CHI_in_UNSC }
+    CHI = { has_country_flag = not_participating_UNSC }
     exists = CHI
     has_global_flag = CHI_won_civil_war
   }
@@ -3214,7 +3216,7 @@ country_event = {
 
   option = {
     name = EVT_8207002_A
-	set_global_flag = CHI_in_UNSC 
+	set_country_flag = not_participating_UNSC
 	any_pop = {  consciousness = 1 }
   }
 }
@@ -3228,7 +3230,7 @@ country_event = {
   trigger = {
     tag = SUN
     year = 1949 NOT = { year = 1950 }
-    NOT = { has_global_flag = CHI_in_UNSC }
+    CHI = { has_country_flag = not_participating_UNSC}
     exists = CHI
     has_global_flag = CHI_won_civil_war
   }

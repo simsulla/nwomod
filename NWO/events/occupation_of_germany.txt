@@ -305,9 +305,11 @@ country_event = {
   option = {
     name = "EVT_8204030_A"
 	any_owned = { 
-		limit = { OR = { province_id = 577 province_id = 578 province_id = 580 } }
-		secede_province = IAR
-		add_province_modifier = { name = blood_and_iron_mine duration = 1000 }
+		limit = { province_id = 578 }
+		state_scope = { 
+			secede_province = IAR
+			add_province_modifier = { name = blood_and_iron_mine duration = 1000 }
+		}
 	}
 	FRA = { diplomatic_influence = { who = IAR value = 200 }}
   }

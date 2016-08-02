@@ -75,8 +75,8 @@ country_event = { # Operation Unthinkable
     name = "EVT_8930002_B" # Yes War!
 	random_country = { limit = { NOT = { tag = THIS } tag = USA } relation = { who = GBR value = 200 }  create_alliance = GBR create_alliance = CAN }
 	random_country = { limit = { NOT = { tag = THIS } tag = GBR } relation = { who = USA value = 200 } create_alliance = USA create_alliance = CAN }
-	casus_belli = { target = SUN type = release_puppet months = 12 }
-	war = { target = SUN attacker_goal = { casus_belli = release_puppet country = POL }  }
+	casus_belli = { target = SUN type = dismantle_cb months = 12 }
+	war = { target = SUN attacker_goal = { casus_belli = dismantle_cb }  }
 	ai_chance = { factor = 0 }
   }
 }

@@ -4,7 +4,7 @@ political_decisions = {
 
 ###################Join Communist Bloc##########################
 
-join_communist_bloc = {
+join_communist_fraction = {
 		picture = "joincommunistbloc"
 		potential = {
 			NOT = { OR = { tag = SUN tag = USA } }
@@ -16,7 +16,7 @@ join_communist_bloc = {
 			NOT = { has_country_flag = joincomm }
 			NOT = { has_country_flag = joinnam }
 			has_global_flag = blocsenabled 
-			NOT = { has_country_modifier = independent_bloc }
+			NOT = { has_country_modifier = independent_fraction }
 		}
 		allow = {
 			OR = { government = proletarian_dictatorship ruling_party_ideology = communist }
@@ -28,7 +28,7 @@ join_communist_bloc = {
 			relation = { who = SUN value = 50 }
 			relation = { who = USA value = -100 }
 			random_country = { limit = { tag = SUN year = 1947 } diplomatic_influence =  { who = THIS value = 25 } country_event = 19809 }
-			add_country_modifier = { name = communist_bloc duration = 999999 }
+			add_country_modifier = { name = communist_fraction duration = 999999 }
 			random_country = { limit = { tag = SUN year = 1947 } country_event = 8225000 }
 		}
 		ai_will_do = {
@@ -39,7 +39,7 @@ join_communist_bloc = {
 
 ###################Join democratic Bloc#########################
 
-join_democratic_bloc = {
+join_democratic_fraction = {
 		picture = "joindemocraticbloc"
 		potential = {
 			NOT = { OR = { tag = SUN tag = USA } }
@@ -51,7 +51,7 @@ join_democratic_bloc = {
 			NOT = { has_country_flag = joincomm }
 			NOT = { has_country_flag = joinnam }
 			has_global_flag = blocsenabled
-			NOT = { has_country_modifier = independent_bloc }
+			NOT = { has_country_modifier = independent_fraction }
 		}
 		allow = {
 			OR = {   
@@ -68,7 +68,7 @@ join_democratic_bloc = {
 			relation = { who = USA value = 50 }
 			relation = { who = SUN value = -100 }
 			random_country = { limit = { tag = USA year = 1947 } diplomatic_influence =  { who = THIS value = 25 } country_event = 19809 }
-			add_country_modifier = { name = democratic_bloc duration = 999999 }
+			add_country_modifier = { name = democratic_fraction duration = 999999 }
 		}
 
 		ai_will_do = {
@@ -79,7 +79,7 @@ join_democratic_bloc = {
 
 ########################Join NAM#########################
 
-join_nam_bloc = {
+join_nam_fraction = {
 		picture = "joinnambloc"
 		potential = {
 			NOT = { OR = { tag = SUN tag = USA } }
@@ -92,7 +92,7 @@ join_nam_bloc = {
 			NOT = { has_country_flag = joincomm }
 			has_global_flag = blocsenabled
 			has_global_flag = namformed
-			NOT = { has_country_modifier = independent_bloc }
+			NOT = { has_country_modifier = independent_fraction }
 		}
 		allow = {
 			NOT = { relation = { who = USA value = 100 } }
@@ -105,7 +105,7 @@ join_nam_bloc = {
 			relation = { who = SUN value = -10 }
 			USA =  { diplomatic_influence =  { who = THIS value = -50 } }
 			SUN =  { diplomatic_influence =  { who = THIS value = -50 } }
-			add_country_modifier = { name = nam_bloc duration = 999999 }
+			add_country_modifier = { name = nam_fraction duration = 999999 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -114,7 +114,7 @@ join_nam_bloc = {
 
 ########################Leave Communist bloc########################
 
-leave_communist_bloc = {
+leave_communist_fraction = {
 		picture = "leavebloc"
 		potential = {
 			NOT = { OR = { tag = SUN tag = USA } }
@@ -124,7 +124,7 @@ leave_communist_bloc = {
 			exists = SUN
 			has_country_flag = joincomm
 			has_global_flag = blocsenabled
-			NOT = { has_country_modifier = independent_bloc }
+			NOT = { has_country_modifier = independent_fraction }
 		}
 		allow = {
 			NOT = { government = proletarian_dictatorship }
@@ -137,8 +137,8 @@ leave_communist_bloc = {
 			SUN =  { diplomatic_influence =  { who = THIS value = -200 } }
 			USA =  { diplomatic_influence =  { who = THIS value = 10 } }
 			any_country = { limit = { has_country_flag = joincomm } country_event = 19810 }
-			add_country_modifier = { name = independent_bloc duration = 3500 }
-			remove_country_modifier = communist_bloc
+			add_country_modifier = { name = independent_fraction duration = 3500 }
+			remove_country_modifier = communist_fraction
 			SUN  = { country_event = 8225001 }
 		}
 		alert = no
@@ -149,7 +149,7 @@ leave_communist_bloc = {
 
 ########################Leave Demo bloc#######################
 
-leave_democratic_bloc = {
+leave_democratic_fraction = {
 		picture = "leavebloc"
 		potential = {
 			NOT = { OR = { tag = SUN tag = USA } }
@@ -159,7 +159,7 @@ leave_democratic_bloc = {
 			exists = SUN
 			has_country_flag = joindemo
 			has_global_flag = blocsenabled
-			NOT = { has_country_modifier = independent_bloc }
+			NOT = { has_country_modifier = independent_fraction }
 		}
 		allow = {
 			government = proletarian_dictatorship
@@ -172,8 +172,8 @@ leave_democratic_bloc = {
 			SUN =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = -200 } }
 			any_country = { limit = { has_country_flag = joindemo } country_event = 19810 }
-			add_country_modifier = { name = independent_bloc duration = 3500 }
-			remove_country_modifier = democratic_bloc
+			add_country_modifier = { name = independent_fraction duration = 3500 }
+			remove_country_modifier = democratic_fraction
 		}
 		alert = no
 		ai_will_do = {
@@ -183,7 +183,7 @@ leave_democratic_bloc = {
 
 ########################Leave NAM bloc for non communists#######################
 
-leave_nam_bloc = {
+leave_nam_fraction = {
 		picture = "leavebloc"
 		potential = {
 			NOT = { OR = { tag = SUN tag = USA } }
@@ -194,7 +194,7 @@ leave_nam_bloc = {
 			has_country_flag = joinnam
 			has_global_flag = blocsenabled
 			NOT = { government = proletarian_dictatorship }
-			NOT = { has_country_modifier = independent_bloc }
+			NOT = { has_country_modifier = independent_fraction }
 		}
 		allow = {
 			relation = { who = USA value = 150 }
@@ -212,8 +212,8 @@ leave_nam_bloc = {
 			relation = { who = USA value = 25 }
 			SUN =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = 10 } }
-			add_country_modifier = { name = independent_bloc duration = 3500 }
-			remove_country_modifier = nam_bloc
+			add_country_modifier = { name = independent_fraction duration = 3500 }
+			remove_country_modifier = nam_fraction
 		}
 		alert = no
 		ai_will_do = {
@@ -223,7 +223,7 @@ leave_nam_bloc = {
 
 ########################Leave NAM bloc for communists #######################
 
-leave_nam_bloc_comm = {
+leave_nam_fraction_comm = {
 		picture = "leavebloc"
 		potential = {
 			NOT = { OR = { tag = SUN tag = USA } }
@@ -234,7 +234,7 @@ leave_nam_bloc_comm = {
 			has_country_flag = joinnam
 			has_global_flag = blocsenabled
 			government = proletarian_dictatorship
-			NOT = { has_country_modifier = independent_bloc }
+			NOT = { has_country_modifier = independent_fraction }
 		}
 		allow = {
 			relation = { who = SUN value = 150 }
@@ -246,8 +246,8 @@ leave_nam_bloc_comm = {
 			relation = { who = USA value = 20 }
 			SUN =  { diplomatic_influence =  { who = THIS value = 10 } }
 			USA =  { diplomatic_influence =  { who = THIS value = -10 } }
-			add_country_modifier = { name = independent_bloc duration = 3500 }
-			remove_country_modifier = nam_bloc
+			add_country_modifier = { name = independent_fraction duration = 3500 }
+			remove_country_modifier = nam_fraction
 		}
 		alert = no
 		ai_will_do = {

@@ -128,5 +128,37 @@ political_decisions = {
 		}
 		alert = no
 		ai_will_do = { factor = 1 }	
-	}	
+	}
+	
+	pax_americana = {
+		# pax_americana_title;Pax Americana
+		# pax_americana_desc;The American peace has proven itself peaceful, stable, and durable. It has, over the past decade, provided the geopolitical framework for widespread economic growth and the spread of American principles of liberty and democracy. Yet no moment in international politics can be frozen in time; even a global Pax Americana will not preserve itself. [... What is required is] a military that is strong and ready to meet both present and future challenges; a foreign policy that boldly and purposefully promotes American principles abroad; and national leadership that accepts the United States’ global responsibilities.
+		picture = "pax_americana"
+		potential = {
+			tag = USA
+			crisis_exist = yes
+		}
+
+		allow = {
+			rank = 2
+			war = no
+		}
+
+		effect = {
+			prestige = 5
+			any_country = { 
+				limit = { 
+					crisis_exist = yes
+					involved_in_crisis = yes 
+					NOT = { tag = USA } 
+					NOT = { has_country_modifier = peace_mission } 
+				}
+				add_country_modifier = { name = peace_mission duration = 700 }
+				country_event = 20111
+				relation = { who = THIS value = -10 }
+			}
+		}
+		alert = no
+		ai_will_do = { factor = 1 }	
+	}
 }
