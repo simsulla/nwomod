@@ -233,7 +233,11 @@ migration_target = {
 	modifier = {
 		factor = 2
 		is_state_capital = yes
-		NOT = { is_capital = no OR = {
+	}
+	modifier = {
+		factor = 0
+		is_capital = no 
+		OR = { 
 			province_id = 60 #Northern Quebec
 			province_id = 69 #Acadia
 			province_id = 76 #Labrador
@@ -506,7 +510,7 @@ migration_target = {
 			province_id = 2649 #Bophuthatswana
 			province_id = 2113 #Zululand
 			province_id = 2104 #Lesotho
-		} }	
+		}
 	}		
 
 	modifier = {
