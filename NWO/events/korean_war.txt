@@ -158,6 +158,8 @@ country_event = {
     NKO = { NOT = { war_with = SKO } }
 	NOT = { war_with = NKO }
 	NOT = { truce_with = NKO }
+	exists = NKO
+	NKO = { government = proletarian_dictatorship }
 	has_global_flag = un_korea_intervention
   }
 
@@ -173,9 +175,9 @@ country_event = {
   option = {
     name = EVT_8500803_B
 	diplomatic_influence = { who = SKO value = 100 }
-	casus_belli = { target = NKO type = free_allied_cores months = 12 }
+	casus_belli = { target = NKO type = annex_core_country months = 12 }
 	set_global_flag = korea_war_second_phase
-	war = { target = NKO attacker_goal = { casus_belli = free_allied_cores state_province_id = 1619 } defender_goal = { casus_belli = status_quo } }
+	war = { target = NKO attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	military_access = SKO
 	SKO = { country_event = 8500804 }
 	SUN = { country_event =  { id = 8500805 days = 1 } }
