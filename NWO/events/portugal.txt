@@ -2,7 +2,7 @@ country_event = {
   id = 8011700
   title = EVT_8011700_NAME # Insurgency in Portuguese Angola
   desc = EVT_8011700_DESC
-  picture = "nwo2_carnation_revolution"
+  picture = "angola_colonial_war"
   fire_only_once = yes
 
   trigger = {
@@ -36,7 +36,7 @@ country_event = {
   id = 8011701
   title = EVT_8011701_NAME # Insurgency in Portuguese Mozambique
   desc = EVT_8011701_DESC
-  picture = "nwo2_carnation_revolution"
+  picture = "mozambique_colonial_war"
   fire_only_once = yes
 
   trigger = {
@@ -70,7 +70,7 @@ country_event = {
   id = 8011702
   title = EVT_8011702_NAME # Insurgency in Portuguese Guinea
   desc = EVT_8011702_DESC
-  picture = "nwo2_carnation_revolution"
+  picture = "guinea_bissau_colonial_war"
   fire_only_once = yes
 
   trigger = {
@@ -111,6 +111,7 @@ country_event = {
   trigger = {
     tag = POR
     year = 1963
+	NOT = { year = 1990 }
 	OR = { 
 		NOT = { owns = 1877 } # Bissau
 		NOT = { owns = 2049 } # Maputo
