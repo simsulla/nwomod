@@ -142,6 +142,7 @@ political_decisions = {
 		allow = {
 			rank = 2
 			war = no
+			NOT = { has_country_modifier = peace_mission }
 		}
 
 		effect = {
@@ -157,6 +158,7 @@ political_decisions = {
 				country_event = 20111
 				relation = { who = THIS value = -10 }
 			}
+			add_country_modifier = { name = peace_mission duration = 700 }
 		}
 		alert = no
 		ai_will_do = { factor = 1 }	
