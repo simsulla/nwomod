@@ -6,7 +6,7 @@ country_event = {
 
   trigger = {
     OR = { tag = GBR tag = USA tag = FRA }
-	NOT = { has_country_flag = reject_western_allies }
+	NOT = { has_country_flag = western_allies }
 	NOT = { OR = {  alliance_with = USA alliance_with = GBR } }
     year = 1946 NOT = { year = 1960 }
 	NOT = { has_global_flag = alliance_nato }
@@ -30,12 +30,13 @@ country_event = {
         limit = { NOT = { tag = THIS } tag = GBR ai = yes }
 		create_alliance = THIS
     }
+	set_country_flag = western_allies 
 	ai_chance = { factor = 100 }
   }
   
   option = {
     name = EVT_8215000_B
-	set_country_flag = reject_western_allies 
+	set_country_flag = western_allies 
 	ai_chance = { factor = 0 }
   }
 }
