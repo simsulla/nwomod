@@ -2020,6 +2020,28 @@ country_event = {
   }
 }
 country_event = {
+  id = 8200102
+  title = "EVT_8200102_NAME"
+  desc = "EVT_8200102_DESC"
+  picture = "nwo2_chiang_crying"
+
+  trigger = {
+    tag = KMT
+    year = 1948 NOT = { year = 1963 }
+    has_global_flag = CHI_won_civil_war
+	is_greater_power = no
+	war = no
+  }  
+
+  option = {
+    name = "EVT_8200102_A"
+	USA = { country_event = 8200105 }
+  }
+  option = {
+    name = "EVT_8200102_B"
+  }
+}
+country_event = {
   id = 8200103
   title = "EVT_8200103_NAME"
   desc = "EVT_8200103_DESC"
@@ -2057,6 +2079,23 @@ country_event = {
 	any_pop = { militancy = -2.0 consciousness = 1 }
   }
 
+}
+country_event = {
+  id = 8200105
+  title = "EVT_8200105_NAME"
+  desc = "EVT_8200105_DESC"
+  picture = "nwo2_mao_announces_prc"
+  is_triggered_only = yes # USA, FROM = KMT
+
+  option = {
+    name = "EVT_8200105_A"
+	create_alliance = KMT
+	diplomatic_influence = { who = KMT value = 200 }
+  }
+  option = {
+    name = "EVT_8200105_B"
+	prestige = -10
+  }
 }
 country_event = {
   id = 8200110

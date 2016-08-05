@@ -41,13 +41,6 @@ country_event = {
 
   option = {
     name = EVT_8500402_A
-	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.1 } } }
-	relation = { who = CHI value = -100 } 
-	ai_chance = { factor = 0 }
-  }
-
-  option = {
-    name = EVT_8500402_B
 	relation = { who = CHI value = -100 } 
 	relation = { who = KMT value = 100 } 
 	random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
@@ -55,6 +48,14 @@ country_event = {
 	KMT = { country_event =  8500403 }
 	ai_chance = { factor = 100 }
   }
+
+  option = {
+    name = EVT_8500402_B
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.1 } } }
+	relation = { who = CHI value = -100 } 
+	ai_chance = { factor = 0 }
+  }
+
 }
 country_event = {
   id = 8500403
