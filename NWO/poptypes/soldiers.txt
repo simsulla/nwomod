@@ -614,7 +614,7 @@ ideologies = {
 		modifier = { factor = 1.2 consciousness = 9 }
 	}
 	populist = { # pragmatic social reformist and revert reforms militancy
-		factor = 1 # 0.0-0.48
+		factor = 0.5 # 0.0-0.48
 		# type
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = populist } everyday_needs = 0.5 }
@@ -635,7 +635,7 @@ ideologies = {
 	traditionalist = { # revert reforms
 		factor = 1 # 0-0.4
 		# type
-		modifier = { factor = 0.1 NOT = { OR = { type = farmers type = labourers type = aristocrats } }  NOT = { ruling_party_ideology = traditionalist } }
+		modifier = { factor = 0.5  NOT = { ruling_party_ideology = traditionalist } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = traditionalist } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = traditionalist } NOT = { everyday_needs = 0.5 } }
@@ -650,7 +650,6 @@ ideologies = {
 	conservative = { # pragmatic social reformist
 		factor = 1 # 0.05-0.4
 		# type
-		modifier = { factor = 2.5 NOT = { OR = { type = clerks type = labourers type = craftsmen type = capitalists type = clergymen } } life_needs = 1.0 }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = conservative } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = conservative } NOT = { everyday_needs = 0.5 } }
@@ -665,7 +664,6 @@ ideologies = {
 	big_tent = { # pragmatic social reformist
 		factor = 1 # 0.05-0.4
 		# type
-		modifier = { factor = 2.5 NOT = { OR = { type = clerks type = labourers type = craftsmen type = capitalists type = clergymen } } life_needs = 1.0 }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = big_tent } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = big_tent } NOT = { everyday_needs = 0.5 } }
@@ -680,9 +678,7 @@ ideologies = {
 	liberal = { # political reformist
 		factor = 1
 		# type
-		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats type = farmers type = labourers }  NOT = { ruling_party_ideology = progressive } }
-		modifier = { factor = 2.5 OR = { type = bureaucrats type = capitalists type = clerks type = artisans type = clergymen } }
-		modifier = { factor = 10 type = artisans }
+		modifier = { factor = 0.5 NOT = { ruling_party_ideology = liberal } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = liberal } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = liberal } NOT = { everyday_needs = 0.5 } }
@@ -709,8 +705,7 @@ ideologies = {
 	socialist = { # pragmatic social reformist
 		factor = 1
 		# type
-		modifier = { factor = 4 OR = { type = craftsmen type = labourers } NOT = { militancy = 2 } }
-		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats } NOT = { ruling_party_ideology = socialist } }
+		modifier = { factor = 0.5 NOT = { ruling_party_ideology = socialist } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = socialist } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = socialist } NOT = { everyday_needs = 0.5 } }
@@ -737,7 +732,7 @@ ideologies = {
 	communist = { # social reformist militancy
 		factor = 1
 		# type
-		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats } NOT = { ruling_party_ideology = communist } }
+		modifier = { factor = 0.5 NOT = { ruling_party_ideology = communist } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = communist } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = communist } NOT = { everyday_needs = 0.5 } }
@@ -760,7 +755,7 @@ ideologies = {
 	progressive = { # political reformist
 		factor = 1
 		# type
-		modifier = { factor = 0 OR = { type = soldiers type = officers type = aristocrats type = farmers type = labourers }  NOT = { ruling_party_ideology = progressive } }
+		modifier = { factor = 0.5 NOT = { ruling_party_ideology = progressive } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = progressive } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = progressive } NOT = { everyday_needs = 0.5 } }
