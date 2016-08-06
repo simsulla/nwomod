@@ -76,13 +76,15 @@ country_event = {
 	any_pop = { consciousness = 1 }
 	relation = { who = SUN value = 200 } 
 	SUN = { military_access = THIS } 
-	country_event =  { id = 8202020 days = 1 } 
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8005524_B
 	any_pop = { militancy = 3.0 }
 	relation = { who = SUN value = -200 } 
+	country_event =  { id = 8202020 days = 1 } 
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -126,7 +128,7 @@ country_event = {
     name = EVT_8005526_A
 	diplomatic_influence = { who = FIN value = 200 }
 	FIN = { country_event = 8005527 }
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
