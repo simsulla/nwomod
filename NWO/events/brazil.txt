@@ -43,6 +43,26 @@ country_event = { # Suicide of Vargas
 	any_pop = { consciousness = 1 }
   }
 }
+country_event = { # Import substitution industrialization
+  id = 8002005
+  title = "EVT_8002005_NAME"
+  desc = "EVT_8002005_DESC"
+  picture = "import_substitution_industrialization"
+  fire_only_once = yes
+
+  trigger = {
+    tag = BRZ
+ 	year = 1949
+    NOT = { year = 1965 }
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = "EVT_8002007_A"
+	add_country_modifier = { name = import_substitution_industrialization duration = 5475 }
+  }
+}
 country_event = { # Resignation of Quadros
   id = 8002007
   title = "EVT_8002007_NAME"
