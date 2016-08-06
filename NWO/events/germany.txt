@@ -1,4 +1,28 @@
 country_event = {
+  id = 8004505
+  title = "EVT_8004505_NAME"
+  desc = "EVT_8004505_DESC"
+  picture = "adenauer"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+	exists = GER
+    year = 1949 NOT = {year = 1964}
+  }
+
+  mean_time_to_happen = { months = 2  }
+
+  option = {
+    name = "EVT_8004505_A"
+	prestige = 60
+  }
+  option = {
+    name = "EVT_8004505_B"
+	prestige = -10
+  }
+}
+country_event = {
   id = 8004506
   title = "EVT_8004506_NAME"
   desc = "EVT_8004506_DESC"
@@ -14,7 +38,7 @@ country_event = {
 
   option = {
     name = "EVT_8004506_A"
-	prestige = -40
+	prestige = -10
   }
 }
 country_event = {
