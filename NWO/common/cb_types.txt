@@ -682,6 +682,7 @@ free_peoples = {
 		FROM = {
 			exists = yes
 		}
+		OR = { THIS = { ai = no } part_of_sphere = no }
 		
 		any_owned_province = {
 			is_core = FROM
@@ -755,6 +756,7 @@ liberate_country = {
 			is_capital = no
 		}
 		is_releasable_vassal = FROM
+		OR = { THIS = { ai = no } part_of_sphere = no }
 	}
 
 	# THIS - us
