@@ -203,6 +203,7 @@ country_event = { # Demographic Transition - fix new county and out of sync
 
 	trigger = {
 		has_country_flag = demographic_init
+		NOT = { has_country_modifier = fertility_timer }
 		any_owned_province = {
 			NOT = { has_province_modifier = demographic_transition }
 			NOT = { 
