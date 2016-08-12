@@ -25,11 +25,15 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 48
+		months = 480
 		modifier = {
 			factor = 0.1
 			has_global_flag = islamist_revolution_somewhere
 		}
+		modifier = {
+			factor = 0.1
+			AFG = { government = proletarian_dictatorship }
+		}		
 	}
 
 	option = {
