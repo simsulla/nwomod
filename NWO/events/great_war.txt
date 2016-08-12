@@ -647,6 +647,9 @@ country_event = {
 			limit = {
 				any_core = { owned_by = THIS }
 				exists = no
+				# if SUN or YUG don't release RUS or SER
+				NOT = { THIS = { tag = SUN } tag = RUS }
+				NOT = { THIS = { tag = YUG } tag = SER }
 				is_cultural_union = no
 				NOT = {
 					AND = {
