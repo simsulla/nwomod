@@ -305,7 +305,7 @@ country_event = {
   option = {
     name = "EVT_8204030_A"
 	any_owned = { 
-		limit = { region = SID_578 }
+		limit = { OR = { region = SID_578 region = 580 } }
 		secede_province = IAR
 		add_province_modifier = { name = blood_and_iron_mine duration = 1000 }
 	}
@@ -686,7 +686,7 @@ country_event = {
   picture = "nwo2_berlin_wall"
 
   trigger = {
-    OR = { owns = 549  tag = DDR tag = GER tag = IAR }
+    OR = { owns = 549  tag = DDR tag = GER }
 	year = 1954 NOT = { year = 1963 }
     has_global_flag = divided_berlin
     NOT = { has_country_flag = event_fired_8204303 }
@@ -707,7 +707,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    OR = { owns = 549  tag = DDR tag = GER tag = IAR }
+    OR = { owns = 549  tag = DDR tag = GER }
 	year = 1954 NOT = { year = 1963 }
     has_country_flag = event_fired_8204303
     any_owned_province = { province_id = 155 }  
