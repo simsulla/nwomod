@@ -657,10 +657,16 @@ province_event = {
 	}
 	option = {
 		name = "EVT_11140_A"
-		# EVT_11140_A;Emprosin the terrorists
+		# EVT_11140_A;Persecute the terrorists
 		add_province_modifier = {
 			name = islamist_agitation
 			duration = 730
+		}
+		any_pop = {
+			ideology = {
+				value = traditionalist
+				factor = 0.1
+			}
 		}
 	}
 
