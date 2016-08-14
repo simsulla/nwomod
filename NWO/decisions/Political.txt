@@ -93,5 +93,28 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	
+	social_credit_system = {
+		picture = "social_credit_system"
+		potential = {
+			NOT = { government = democracy }
+			NOT = { government = hms_government }
+			is_secondary_power = yes
+			strd_internet = 1
+		}
+		
+		allow = {
+			uni_internet = 1
+			is_greater_power = yes
+		}
+		effect = {
+			prestige = -5
+			add_country_modifier = { name = social_credit_system duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	
+	}
 
 }
