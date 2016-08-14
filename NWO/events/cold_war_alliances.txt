@@ -1,3 +1,117 @@
+#AI Countries involved in an Alliance will call in their GP allies
+#if the GP gets involved in the war it will in its turn coll it's allies.
+country_event = {
+	id = 96101
+	title = EVTNAME96001
+	desc = EVTDESC96001
+
+	trigger = {
+		ai = yes
+		war = yes
+		NOT = { has_country_flag = calling_all_allies }
+		OR = {
+			AND = {
+				is_greater_power = yes
+				OR = { 
+					has_country_modifier = sco_pact
+					has_country_modifier = csto_alliance
+					has_country_modifier = warsaw_pact
+					has_country_modifier = rio_pact
+					has_country_modifier = alliance_nato
+					has_country_modifier = anzus_alliance
+				}
+			}
+			AND = { 
+				has_country_modifier = sco_pact
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = sco_pact
+				}
+			}
+			AND = { 
+				has_country_modifier = csto_alliance
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = csto_alliance
+				}
+			}
+			AND = { 
+				has_country_modifier = warsaw_pact
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = warsaw_pact
+				}
+			}
+			AND = { 
+				has_country_modifier = rio_pact
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = rio_pact
+				}
+			}
+			AND = { 
+				has_country_modifier = anzus_alliance
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = anzus_alliance
+				}
+			}
+			AND = { 
+				has_country_modifier = alliance_nato
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = alliance_nato
+				}
+			}			
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = EVTOPTA96001
+		set_country_flag = calling_all_allies # remove flag on peace 96002
+		any_country = {
+			limit = { 
+				OR = {
+					AND = { THIS = { has_country_modifier = sco_pact } has_country_modifier = sco_pact }
+					AND = { THIS = { has_country_modifier = csto_alliance } has_country_modifier = csto_alliance }
+					AND = { THIS = { has_country_modifier = warsaw_pact } has_country_modifier = warsaw_pact }
+					AND = { THIS = { has_country_modifier = rio_pact } has_country_modifier = rio_pact }
+					AND = { THIS = { has_country_modifier = anzus_alliance } has_country_modifier = anzus_alliance }
+					AND = { THIS = { has_country_modifier = alliance_nato } has_country_modifier = alliance_nato }
+				}
+			}
+			create_alliance = THIS
+		}
+		random_country = {
+			limit = {
+				is_greater_power = yes
+				OR = {
+					AND = { THIS = { has_country_modifier = sco_pact } has_country_modifier = sco_pact }
+					AND = { THIS = { has_country_modifier = csto_alliance } has_country_modifier = csto_alliance }
+					AND = { THIS = { has_country_modifier = warsaw_pact } has_country_modifier = warsaw_pact }
+					AND = { THIS = { has_country_modifier = rio_pact } has_country_modifier = rio_pact }
+					AND = { THIS = { has_country_modifier = anzus_alliance } has_country_modifier = anzus_alliance }
+					AND = { THIS = { has_country_modifier = alliance_nato } has_country_modifier = alliance_nato }
+				}
+				war = no
+			}
+			THIS = {
+				war = {
+					# TODO target required by the validator but defaults to REB
+					target = REB
+					attacker_goal = {
+						casus_belli = call_allies_cb
+					}
+					call_ally = yes
+				}
+			}
+		}
+	}
+}
 country_event = {
   id = 8215000
   title = EVT_8215000_NAME
