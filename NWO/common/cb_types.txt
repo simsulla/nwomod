@@ -244,6 +244,46 @@ civil_war = {
 	}
 }
 
+# Colonial war
+colonial_war = {
+	sprite_index = 2
+	is_triggered_only = yes
+	months = 1
+	constructing_cb = no
+	crisis = no
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		always = no
+	}
+
+	badboy_factor = 0
+	prestige_factor = 1
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	po_annex = yes
+	
+	war_name = WAR_CONCESSION_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
 # Sphere of Influence Gain
 add_to_sphere = {
 	sprite_index = 3
