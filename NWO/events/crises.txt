@@ -12,7 +12,6 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA20000" # declare interest
-		add_crisis_interest = yes
 		any_country = {
 			limit = {
 				involved_in_crisis = yes
@@ -29,14 +28,18 @@ country_event = {
 		# with add_crisis_interest = yes we are involved, but other democracies are alos involved - since moding side is not supported,
 		# just don't get involved if ai
 		random_country = { 
-			limit = { 
-				involved_in_crisis = yes 
-				is_greater_power = yes
-				NOT = { tag = THIS }
-				THIS = { OR = { government = democracy government = hms_government } }
-				OR = { government = democracy government = hms_government }
+			limit = {
+				tag = THIS
+				NOT = { 
+					any_greater_power = { 
+						involved_in_crisis = yes 
+						NOT = { tag = THIS }
+						THIS = { OR = { government = democracy government = hms_government } }
+						OR = { government = democracy government = hms_government }
+					}
+				}
 			}
-			THIS = { country_event = 20001 }
+			add_crisis_interest = yes
 		}
 		ai_chance = {
 			factor = 100
@@ -50,30 +53,6 @@ country_event = {
 		}
 	}
 }
-
-country_event = {
-	id = 20001
-	title = "EVT_20001_NAME"
-	desc = "EVT_20001_DESC"
-	picture = "crisis"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVT_20001_A" # continue with interest
-		ai_chance = {
-			factor = 0
-		}
-	}
-	option = {
-		name = "EVT_20001_B" # decline
-		add_crisis_interest = no
-		prestige_factor = -0.2
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
 province_event = {
 	id = 20100
 	title = "EVTNAME20100" #Flashpoint event for GPs
