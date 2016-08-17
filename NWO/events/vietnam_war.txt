@@ -578,12 +578,14 @@ country_event = {
   
   option = {
     name = EVT_8228060_A
-	war = DAI any_pop = { militancy = 1.2 consciousness = 1.0 }
+	war = { target = DAI attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8228060_B
 	DAI = { country_event = 8228061 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
