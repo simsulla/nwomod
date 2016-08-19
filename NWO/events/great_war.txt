@@ -837,7 +837,7 @@ country_event = {
 					port = yes
 				}
 				random_list = {
-					50 = { secede_province = THIS }
+					50 = { state_scope = { any_owned = { secede_province = THIS } }	}
 					50 = { }
 				}
 			}
@@ -860,7 +860,7 @@ country_event = {
 					port = yes
 				}
 				random_list = {
-					25 = { secede_province = THIS }
+					25 = { state_scope = { any_owned = { secede_province = THIS } }	 }
 					75 = { }
 				}
 			}
@@ -893,10 +893,7 @@ country_event = {
 					any_owned_province = { is_core = THIS }
 					NOT = { any_owned_province = { is_capital = yes } }
 				}
-				any_owned = {
-					limit = { is_core = THIS }
-					secede_province = THIS
-				}
+				any_owned = { secede_province = THIS }
 			}
 		}
 		random_owned = {
@@ -1007,7 +1004,7 @@ country_event = {
 					is_core = THIS
 					is_capital = no
 				}
-				secede_province = THIS
+				state_scope = { any_owned = { secede_province = THIS } }	
 			}
 			relation = {
 				who = THIS
@@ -1098,10 +1095,6 @@ country_event = {
 					any_owned_province = { is_core = THIS }
 				}
 				any_owned = {
-					limit = {
-						is_core = THIS
-						is_capital = no
-					}
 					secede_province = THIS
 				}
 			}
@@ -1280,7 +1273,7 @@ country_event = {
 					port = yes
 				}
 				random_list = {
-					50 = { secede_province = THIS }
+					50 = { state_scope = { any_owned = { secede_province = THIS } } }
 					50 = { }
 				}
 			}
@@ -1323,7 +1316,7 @@ country_event = {
 					port = yes
 				}
 				random_list = {
-					50 = { secede_province = THIS }
+					50 = { state_scope = { any_owned = { secede_province = THIS } } }
 					50 = { }
 				}
 			}
@@ -1381,7 +1374,7 @@ country_event = {
 					port = yes
 				}
 				random_list = {
-					10 = { secede_province = THIS }
+					10 = { state_scope = { any_owned = { secede_province = THIS } } }
 					90 = { }
 				}
 			}
@@ -1441,10 +1434,7 @@ country_event = {
 						is_colonial = yes
 					}
 				}
-				any_owned = {
-					limit = { is_core = THIS }
-					secede_province = THIS
-				}
+				secede_province = THIS
 			}
 			any_state = {
 				limit = {
@@ -1462,10 +1452,7 @@ country_event = {
 						}
 					}
 				}
-				any_owned = {
-					limit = { is_core = THIS }
-					secede_province = THIS
-				}
+				secede_province = THIS
 			}
 		}
 		random_owned = {
@@ -1752,10 +1739,7 @@ country_event = {
 						any_neighbor_province = { owned_by = THIS }
 					}
 				}
-				any_owned = {
-					limit = { is_core = THIS }
-					secede_province = THIS
-				}
+				secede_province = THIS
 			}
 		}			
 	}
@@ -2541,7 +2525,7 @@ country_event = {
 						}
 					}
 				}
-				secede_province = THIS
+				state_scope = { any_owned = { secede_province = THIS } }
 			}
 			random_owned = {
 				limit = {

@@ -22,7 +22,7 @@ country_event = {
     name = EVT_8223000_A
 	any_owned = { 
 		limit = { OR = { controlled_by = THIS controlled_by_rebels = yes } any_core = { OR = { tag = SER tag = BOS } } }  
-		secede_province = YUG
+		state_scope = { any_owned = { secede_province = YUG } } 
 	}
 	YUG = { country_event = 8223001 }
   }

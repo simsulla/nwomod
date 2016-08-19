@@ -395,7 +395,7 @@ country_event = {
 	SLO = {	government = democracy country_event = 800054 }
 	MAC = {	government = democracy country_event = 800054 }
 	BOS = { release = RSR }
-	RSR = { 786 = { secede_province = BOS } } # Tuzla 
+	RSR = { 786 = { state_scope = { any_owned = { secede_province = BOS } } } } # Tuzla 
 	create_alliance = RSR
 	relation = { who = RSR value = 200 }
 	relation = { who = BOS value = -200 }
@@ -461,7 +461,7 @@ country_event = {
 	any_pop = { militancy = 0.5 consciousness = 0.8 }
 	government = populist_dictatorship country_event = 800050
 	release_vassal = HZB
-	HZB = { 2688 = { secede_province = BOS } }
+	HZB = { 2688 = { state_scope = { any_owned = { secede_province = BOS } } } }
 	# release = RSR in calling event
 	casus_belli = { target = RSR type = annex_core_country months = 12 }
 	war = { target = RSR attacker_goal = { casus_belli = annex_core_country country = RSR } defender_goal = { casus_belli = status_quo } }
@@ -653,7 +653,6 @@ country_event = {
 	# EVT_8022748_A;Sign the Agreement
 	government = democracy country_event = 800054
 	prestige = 10
-	any_country = { limit = { tag = RSR owns = 789 } 789 = { secede_province = BOS } }
 	ai_chance = { factor = 100 }
   }
 
@@ -666,7 +665,6 @@ country_event = {
 	leave_alliance = CRO
 	release_vassal = RSR
 	release = HZB
-	any_country = { limit = { tag = RSR owns = 789 } 789 = { secede_province = HZB } }
 	CRO = { create_vassal = HZB } 
 	ai_chance = { factor = 0 }
   }
