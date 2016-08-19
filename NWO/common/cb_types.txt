@@ -734,8 +734,17 @@ annex_allied_core_country = {
 			}
 		}
 	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal's state
+	allowed_states = {
+		#NOT = { any_owned_province = { is_capital = yes } }
+		NOT = { any_owned_province = { is_core = THIS } }
+		any_owned_province = { is_core = FROM }
+	}	
 
-	po_annex = yes
+	po_demand_state = yes
 	
 	war_name = WAR_RESTORE_ORDER_NAME
 	
