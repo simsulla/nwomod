@@ -647,9 +647,6 @@ country_event = {
 			limit = {
 				any_core = { owned_by = THIS }
 				exists = no
-				# if SUN or YUG don't release RUS or SER
-				NOT = { THIS = { tag = SUN } tag = RUS }
-				NOT = { THIS = { tag = YUG } tag = SER }
 				is_cultural_union = no
 				NOT = {
 					AND = {
@@ -661,6 +658,9 @@ country_event = {
 			}
 			all_core = {
 				limit = {
+					# if SUN or YUG don't release RUS or SER
+					NOT = { is_core = RUS }
+					NOT = { is_core = SER }
 					is_core = THIS
 					state_scope = {
 						NOT = { any_owned_province = { is_capital = yes } }
@@ -672,6 +672,9 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				# if SUN or YUG don't release RUS or SER
+				NOT = { is_core = RUS }
+				NOT = { is_core = SER }
 				any_core = { owned_by = THIS }
 				exists = no
 				is_cultural_union = no
@@ -801,6 +804,9 @@ country_event = {
 				}
 			}
 		}
+		# SUN and YUG become RUS and SER
+		random_country = { limit = { tag = SUN } change_tag = RUS }
+		random_country = { limit = { tag = YUG } change_tag = SER }
 		add_country_modifier = {
 			name = punitive_effects
 			duration = 1825
