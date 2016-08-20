@@ -26,7 +26,7 @@ province_event = { # Demand Autonomy
 	}
 	
 	mean_time_to_happen = {
-		months = 240
+		months = 960
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
@@ -100,7 +100,7 @@ province_event = { # Separatists demands freedom
 	}
 	
 	mean_time_to_happen = {
-		months = 36
+		months = 240
 		modifier = {
 			factor = 0.5
 			average_militancy = 5
@@ -202,7 +202,7 @@ province_event = { # Colonial unrest in $PROVINCENAME$
   }
 
   mean_time_to_happen = { 
-	months = 240 
+	months = 960 
 	modifier = { continent = asia factor = 0.1 }
 	modifier = { continent = mena factor = 0.5 }
 	modifier = { continent = africa factor = 2 }
@@ -256,7 +256,7 @@ province_event = { # $PROVINCECULTURE$ Demands Independence
 	has_province_modifier = colonial_unrest
   }
   
-  mean_time_to_happen = { months = 1 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_15402_A
