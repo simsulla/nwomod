@@ -5,7 +5,7 @@ political_decisions = {
 			alert = no
 			potential = {
 				government = populist_dictatorship
-				NOT = { has_country_modifier = ethnic_cleansing }
+				NOT = { has_country_flag = ethnic_cleansed }
 			}
 
 			allow = {
@@ -18,7 +18,7 @@ political_decisions = {
 			effect = {
 				set_country_flag = ethnic_cleansed
 				badboy = 5
-				add_country_modifier = {  name = ethnic_cleansing duration = 120 } 
+				any_owned = { limit = { controlled_by = THIS } add_province_modifier = {  name = ethnic_cleansing duration = 120 } }
 			}
 			ai_will_do = { 
 				factor = 1
@@ -31,7 +31,7 @@ political_decisions = {
 			picture = "ethnic_cleansing"
 			
 			potential = {
-				has_country_modifier = ethnic_cleansing
+				has_country_flag = ethnic_cleansed
 			}
 
 			allow = {
@@ -39,8 +39,9 @@ political_decisions = {
 			}
 
 			effect = {
-				badboy = -2
-				remove_country_modifier = ethnic_cleansing
+				badboy = -1
+				remove_country_flag = ethnic_cleansed
+				any_owned = { remove_province_modifier = ethnic_cleansing }
 			}
 			ai_will_do = { factor = 1 }
 	}

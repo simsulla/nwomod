@@ -372,7 +372,7 @@ colonialmigration_chance = { # 0.25
 
 #general emigration chance
 emigration_chance = { 
-	factor = 0.5 
+	factor = 1
 	
 	# emigration causes pop fragmentation - thus we will prevent all except the following cultures emigrating
 	modifier = { 
@@ -423,11 +423,8 @@ emigration_chance = {
 	# no life needs - leave!
 	modifier = { factor = 0.2 NOT = { life_needs = 1.0 } }
 
-	modifier = { factor = -0.4 location = { is_state_capital = yes } }
-	
 	# need to prevent rural provinces going empty - pops will move to the state_capital by getting promoted
 	modifier = { factor = -4 location = { is_state_capital = no } }
-
 	modifier = { factor = -4 location = { NOT = { total_pops = 10000 } } }
 
 	modifier = { factor = 0.1 unemployment = 0.2 }
@@ -446,7 +443,7 @@ emigration_chance = {
 
 	# roundabout way to mod that mostly refugees emigrate
 	modifier = { 
-		factor = -0.2
+		factor = -0.1
 		country = {
 			OR = {
 				government = absolute_monarchy
@@ -461,11 +458,11 @@ emigration_chance = {
 		country = { OR = { immigration_policy = nobody_gets_out government = proletarian_dictatorship } }
 	}
 	
-	modifier = {
-		factor = 400
-		NOT = { is_primary_culture = yes }
-		NOT = { is_accepted_culture = yes }
-		country = { has_country_modifier = ethnic_cleansing }
+	modifier = { # the province_modifier makes pops migrate
+		factor = 2
+		is_primary_culture = no
+		is_accepted_culture = no
+		country = { has_country_flag = ethnic_cleansed }
 	}	
 
 }
