@@ -119,6 +119,9 @@ country_migration_target = {
 
 	modifier = { factor = 2.0 has_pop_culture = THIS }
 
+	modifier = { factor = -2.0 NOT = { has_pop_culture = THIS } } # negative baseline nullifed by any of the below
+
+
 	modifier = { 
 		factor = 2.0 
 		THIS = { OR = { culture = indian culture = bengali_hindu culture = indian_muslim culture = bengali culture = tamil culture = nepali culture = filipino } } 
