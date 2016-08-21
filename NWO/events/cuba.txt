@@ -13,7 +13,19 @@ country_event = {
 	relation = { who = USA value = -100 } 
 	relation = { who = SUN value = 100 } 
 	USA = { diplomatic_influence = { who = CUB value = -200 } }
-	SUN = { diplomatic_influence = { who = CUB value = 200 } }
+	SUN = { country_event = { id = 8003809 days = 10 } }
+  }
+}
+country_event = {
+  id = 8003809
+  title = "EVT_8003808_NAME"
+  desc = "EVT_8003808_DESC"
+  picture = "nwo2_castro_triumph"
+  is_triggered_only = yes
+  
+  option = {
+    name = "EVT_8003808_A"
+	diplomatic_influence = { who = FROM value = 200 } 
   }
 }
 country_event = {
@@ -199,7 +211,6 @@ country_event = {
 	relation = { who = USA value = 200 } 
 	relation = { who = SUN value = -200 } 
 	government = presidential_dictatorship  country_event = 800050
-	diplomatic_influence = { who = USA value = 200 }
 	diplomatic_influence = { who = SUN value = -200 }
 	USA = { country_event =  { id = 8003820 days = 10 } } 
   }
@@ -214,6 +225,7 @@ country_event = {
   option = {
     name = EVT_8003820_A
 	any_pop = { militancy = -0.5 }
+	diplomatic_influence = { who = CUB value = 200 }
 	create_vassal = CUB 
   }
 }
