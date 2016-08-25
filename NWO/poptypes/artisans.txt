@@ -97,21 +97,21 @@ country_migration_target = {
 
 	modifier = { factor = 2.0 has_pop_culture = THIS }
 
-	modifier = { factor = -2.0 NOT = { has_pop_culture = THIS } } # negative baseline nullifed by any of the below
+	modifier = { factor = -1.4 NOT = { has_pop_culture = THIS } } # negative baseline nullifed by any of the below
 
 
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { OR = { culture = indian culture = bengali_hindu culture = indian_muslim culture = bengali culture = tamil culture = nepali culture = filipino } } 
 		any_owned_province = { OR = { is_core = SAA is_core = KUW is_core = BAH is_core = OMA is_core = UAE is_core = QAT continent = oceania is_core = ENG is_core = CAN is_core = USA } }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { OR = { culture = somali culture = pashtun } }
 		any_owned_province = { OR = {  is_core = NOR is_core = SWE } }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { OR = { culture = sunni_arab culture = shia_arab culture = black_muslim culture = african_minor } } 
 		any_owned_province = { 
 			OR = { 
@@ -121,72 +121,72 @@ country_migration_target = {
 		}
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { OR = { culture = turkish culture = kurdish } }
 		any_owned_province = { OR = {  is_core = GER is_core = AUS is_core = SWI is_core = NET } }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = albanian } 
 		any_owned_province = { OR = {  is_core = GRE is_core = ITA } }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = polish } 
 		any_owned_province = { is_core = GER }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { OR = { culture = black_dutch culture = indonesian } }
 		any_owned_province = {  is_core = NET }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = indonesian } 
 		any_owned_province = { is_core = MSY }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { OR = { culture = black_portuguese culture = pardo_portuguese } }
 		any_owned_province = { is_core = POR }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { OR = { culture = vietnamese culture = korean } } 
 		any_owned_province = { is_core = USA }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = polynesian } 
 		any_owned_province = { continent = oceania }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = black_spanish } 
 		any_owned_province = { is_core = SPA }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = black_french } 
 		any_owned_province = { OR = { is_core = FRA is_core = QUE } }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = black_anglo } 
 		any_owned_province = { OR = { is_core = ENG is_core = CAN  is_core = USA } }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = mestizo } 
 		any_owned_province = { is_core = USA is_core = ARG }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = chinese } 
 		any_owned_province = { is_core = USA is_core = AST is_core = CAN is_core = SNG }
 	}
 	modifier = { 
-		factor = 2.0 
+		factor = 1.4 
 		THIS = { culture = chinese_cantonese } 
 		any_owned_province = { is_core = SNG is_core = ENG }
 	}	

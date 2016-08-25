@@ -376,7 +376,7 @@ emigration_chance = {
 	
 	# emigration causes pop fragmentation - thus we will prevent all except the following cultures emigrating
 	modifier = { 
-		factor = -2.0 
+		factor = -0.5 
 		NOT = { 
 			OR = { 
 				culture = indian
@@ -410,6 +410,7 @@ emigration_chance = {
 				culture = indonesian
 				culture = african_minor
 				culture = black_muslim
+				culture = russian
 			}
 		}
 	}
@@ -421,7 +422,8 @@ emigration_chance = {
 	modifier = { factor = 0.1 country = { citizenship_policy = residency } NOT = { culture = THIS } }
 
 	# no life needs - leave!
-	modifier = { factor = 0.2 NOT = { life_needs = 1.0 } }
+	modifier = { factor = 0.1 NOT = { life_needs = 1.0 } }
+	modifier = { factor = 0.1 NOT = { life_needs = 0.5 } }
 
 	# need to prevent rural provinces going empty - pops will move to the state_capital by getting promoted
 	modifier = { factor = -4 location = { is_state_capital = no } }
