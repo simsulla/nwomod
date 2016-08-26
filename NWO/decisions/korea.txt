@@ -8,6 +8,8 @@ political_decisions = {
 				is_sphere_leader_of = NKO
 				SKO = { vassal_of = THIS }
 				NKO = { vassal_of = THIS }
+				AND = { year = 1960 NOT = { exists = NKO } }
+				AND = { year = 1960 NOT = { exists = SKO } } # need the year to prevent early formation
 			}
 			NOT = { exists = KOR }
 			NOT = { has_country_flag = allow_form_korea }

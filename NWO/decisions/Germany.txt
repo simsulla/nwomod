@@ -6,8 +6,8 @@ political_decisions = {
 		potential = {
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } }
-				AND = { tag = ENG 369 = { owned_by = ENG } }
-				AND = { tag = RUS 551 = { owned_by = RUS } }
+				AND = { tag = GBR 369 = { owned_by = GBR } }
+				AND = { tag = SUN 551 = { owned_by = SUN } }
 			}
 			NOT = { has_country_flag = denazification }
 		}
@@ -15,8 +15,8 @@ political_decisions = {
 		allow = {
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } }
-				AND = { tag = ENG 369 = { owned_by = ENG } }
-				AND = { tag = RUS 551 = { owned_by = RUS } }
+				AND = { tag = GBR 369 = { owned_by = GBR } }
+				AND = { tag = SUN 551 = { owned_by = SUN } }
 			}
 			NOT = { has_country_flag = denazification }
 			OR = {
@@ -34,11 +34,12 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = denazification
+			prestige = 10
 			any_owned = { 
 				limit = { is_core = GER }
 				add_province_modifier = { name = denazification duration = 700 }
 			}
-			country_event = 8204080
+			country_event = { id = 8204080 days = 40 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -103,9 +104,9 @@ political_decisions = {
 			OR = { 
 				AND = { 
 					has_country_flag = denazification
-					tag = ENG
+					tag = GBR
 					year = 1952
-					369 = { owned_by = ENG }
+					369 = { owned_by = GBR }
 				}
 				AND = { 
 					has_country_flag = denazification
@@ -120,9 +121,9 @@ political_decisions = {
 			NOT = { has_country_flag = establish_west_germany }
 			OR = { 
 				AND = { 
-					tag = ENG
+					tag = GBR
 					year = 1952
-					369 = { owned_by = ENG }
+					369 = { owned_by = GBR }
 				}
 				AND = { 
 					tag = USA 
@@ -159,7 +160,7 @@ political_decisions = {
 		potential = {
 			DDR = { exists = no }
 			has_country_flag = denazification
-			tag = RUS
+			tag = SUN
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
@@ -170,7 +171,7 @@ political_decisions = {
 		allow = {
 			DDR = { exists = no }
 			has_country_flag = denazification
-			tag = RUS
+			tag = SUN
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
@@ -194,7 +195,7 @@ political_decisions = {
 			any_owned = { limit = { is_core = GER } add_core = DDR }
 			release_vassal = DDR
 			diplomatic_influence = { who = DDR value = 200 }
-			military_access = RUS
+			military_access = SUN
 			prestige = 50
 		}
 		ai_will_do = {
@@ -208,7 +209,7 @@ political_decisions = {
 			GER = { exists = yes }
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } }
-				AND = { tag = ENG 369 = { owned_by = ENG } }
+				AND = { tag = GBR 369 = { owned_by = GBR } }
 			}
 			NOT = { has_country_flag = end_occupation_of_germany }
 		}
@@ -216,7 +217,7 @@ political_decisions = {
 		allow = {
 			OR = { 
 				AND = { tag = USA 564 = { owned_by = USA } GER = { has_country_flag = end_of_sonderweg } }
-				AND = { tag = ENG 369 = { owned_by = ENG } GER = { has_country_flag = end_of_sonderweg } }
+				AND = { tag = GBR 369 = { owned_by = GBR } GER = { has_country_flag = end_of_sonderweg } }
 			}
 			NOT = { has_country_flag = end_occupation_of_germany }
 			GER = { exists = yes }
@@ -251,7 +252,7 @@ political_decisions = {
 				}
 				AND = {
 					relation = { who = USA value = 100 }
-					relation = { who = ENG value = 100 }
+					relation = { who = GBR value = 100 }
 					ai = no
 				}
 			}
@@ -259,9 +260,9 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = end_of_sonderweg
-			prestige = 20
+			prestige = 100
 			all_core = {
-				limit = { owned_by = RUS }
+				limit = { owned_by = SUN }
 				remove_core = GER
 				add_core = DDR
 			}
@@ -365,7 +366,6 @@ political_decisions = {
 			GER = { has_country_flag = accept_ruhr_area }
 			580 = { owned_by = IAR } # Dortmund
 			578 = { owned_by = IAR } # Dusseldorf
-			577 = { owned_by = IAR } # Cleves
 			FRA = { has_country_flag = ruhr_area }
 			IAR = { ai = yes }
 		}
@@ -421,7 +421,13 @@ political_decisions = {
 		potential = {
 			exists = DDR
 			exists = GER
-			OR = { tag = DDR tag = GER DDR = { in_sphere = THIS } DDR = { vassal_of = THIS } GER = { in_sphere = THIS } GER = { vassal_of = THIS } }
+			OR = { 
+				AND = { tag = DDR is_sphere_leader_of = GER }
+				AND = { tag = DDR is_our_vassal = GER }
+				AND = { tag = GER is_sphere_leader_of = DDR }
+				AND = { tag = GER is_our_vassal = DDR }
+				AND = { is_sphere_leader_of = DDR is_sphere_leader_of = GER }
+			}
 			NOT = { has_global_flag = german_reunification }
 		}
 		allow = {
@@ -455,8 +461,30 @@ political_decisions = {
 		effect = {
 			set_global_flag = german_reunification
 			prestige = 20
-			random_country = { limit = { NOT = { tag = THIS } THIS = { OR = { tag = GER tag = DDR } } OR = { tag = GER tag = DDR } } country_event = 11101 }
-			random_country = { limit = { THIS = { NOT = { tag = GER } NOT = { tag = DDR } } OR = { tag = GER tag = DDR } } country_event = 11100 }
+			random_country = { 
+				limit = { 
+					tag = GER
+					DDR = { OR = { is_sphere_leader_of = GER is_our_vassal = GER } }
+				}
+				country_event = 11101 
+			}
+			random_country = { 
+				limit = { 
+					tag = DDR
+					GER = { OR = { is_sphere_leader_of = DDR is_our_vassal = DDR } }
+				}
+				country_event = 11101 
+			}
+			random_country = { 
+				limit = { 
+					tag = GER
+					THIS = { 
+						is_sphere_leader_of = DDR
+						is_sphere_leader_of = GER
+					}
+				} 
+				country_event = 11100
+			}
 		}
 		ai_will_do = {
 			factor = 1

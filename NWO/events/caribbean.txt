@@ -6,7 +6,7 @@ country_event = { # Form the West Indies Federation
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG
+		tag = GBR
 		owns = 2237 # Trinidad
 		OR = { exists = TAN exists = GHA year = 1960 }
 		NOT = { year = 1990 }
@@ -42,7 +42,7 @@ country_event = { # Dissolve the West Indies Federation
 	
 	trigger = {
 		war = no
-		tag = ENG
+		tag = GBR
 		year = 1962	NOT = { year = 1990 }
 		is_our_vassal = XCC
 	}
@@ -77,7 +77,7 @@ country_event = { # Dissolve the West Indies Federation
 		ai_chance = { factor = 100 }
 		any_owned = { remove_core = XCC }
 		any_country = { limit = { OR = { tag = AAB tag = BAR tag = COM tag = JAM tag = GRD tag = STL tag = SVG tag = SKN } } country_event = 15410 }
-		any_owned = { limit = { OR = { is_core = CYI is_core = TCI } } secede_province = ENG }
+		any_owned = { limit = { OR = { is_core = CYI is_core = TCI } } secede_province = GBR }
 		country_event = { id = 1002703 days = 30 }
 	}
 

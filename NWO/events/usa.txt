@@ -21,6 +21,7 @@ country_event = {
 		name = EVT_1015801_A 
 		ai_chance = { factor = 100 }
 		release_vassal = PUR
+		diplomatic_influence = { who = PUR value = 200 }
 		prestige = 2
 	}
 	
@@ -144,7 +145,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA44200"
-		1723 = { secede_province = PNM }
+		1723 = { state_scope = { any_owned = { secede_province = PNM } } }
 		prestige = 10
 		ai_chance = { factor = 100 }
 	}
@@ -277,14 +278,14 @@ country_event = {
 
   option = {
     name = EVT_8015802_A
-	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
+	any_pop = { ideology = { factor = 0.35 value = big_tent } } # big_tent_politics
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8015802_B
 	any_pop = { militancy = 0.2 consciousness = 0.5 }
-	any_pop = { ideology = { factor = 0.2 value = liberal } }
+	any_pop = { ideology = { factor = 0.15 value = big_tent } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -306,14 +307,14 @@ country_event = {
 
   option = {
     name = EVT_8015803_A
-	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
+	any_pop = { ideology = { factor = 0.35 value = big_tent } } # big_tent_politics
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8015803_B
 	any_pop = { militancy = 0.2 consciousness = 0.5 }
-	any_pop = { ideology = { factor = 0.2 value = liberal } }
+	any_pop = { ideology = { factor = 0.15 value = big_tent } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -335,13 +336,13 @@ country_event = {
 
   option = {
     name = EVT_8015804_A
-	any_pop = { ideology = { factor = 0.2 value = liberal } }
+	any_pop = { ideology = { factor = 0.35 value = liberal } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8015804_B
-	any_pop = { ideology = { factor = 0.2 value = big_tent } } # big_tent_politics
+	any_pop = { ideology = { factor = 0.15 value = big_tent } } # big_tent_politics
 	any_pop = { militancy = 0.2 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
@@ -651,7 +652,7 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1953 NOT = { year = 1954 }
-	RUS = { government = proletarian_dictatorship }
+	exists = SUN
   }
 
   mean_time_to_happen = { months = 8  }
@@ -659,7 +660,7 @@ country_event = {
   option = {
     name = EVT_8015843_A
 	any_pop = { militancy = -0.2 consciousness = -0.1 }
-	relation = { who = RUS value = -25 } 
+	relation = { who = SUN value = -25 } 
 	ai_chance = { factor = 100 }
   }
 

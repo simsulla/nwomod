@@ -39,8 +39,8 @@ country_event = {
   option = {
     name = EVT_8023217_A
 	any_pop = { militancy = -0.5 consciousness = 0.5 }
-	RUS  = { country_event = 8225001 } 
-	RUS = { country_event =  8023237 } 
+	SUN  = { country_event = 8225001 } 
+	SUN = { country_event =  8023237 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -88,13 +88,13 @@ country_event = {
 
   option = {
     name = EVT_8023226_A
-	relation = { who = ENG value = -100 }
+	relation = { who = GBR value = -100 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8023226_B
-	relation = { who = ENG value = 50 }
+	relation = { who = GBR value = 50 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -252,7 +252,6 @@ country_event = {
   option = {
     name = EVT_8023233_A
 	any_pop = { militancy = -1.0 consciousness = 1 }
-	RUS  = { country_event = 8225001 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -280,7 +279,7 @@ country_event = {
 
   option = {
     name = EVT_8023234_A
-	relation = { who = RUS value = 100 }
+	relation = { who = SUN value = 100 }
 	set_country_flag = poland_west_littlegains
   }
 }
@@ -330,7 +329,7 @@ country_event = {
   title = EVT_8023237_NAME
   desc = EVT_8023237_DESC
   picture = "nwo2_solidarity"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   mean_time_to_happen = { months = 1  }
 
@@ -345,7 +344,7 @@ country_event = {
     name = EVT_8023237_B
 	any_pop = { militancy = 1.0 consciousness = 0.5 }
 	POL = { country_event = 8023239 } 
-	RUS  = { country_event = 8225001 }
+	SUN  = { country_event = 8225001 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -369,8 +368,8 @@ country_event = {
   option = {
     name = EVT_8023238_B
 	overlord = { release_vassal = THIS } 
-	RUS = { end_military_access = THIS } 
-	RUS = { country_event = 8023240 } 
+	SUN = { end_military_access = THIS } 
+	SUN = { country_event = 8023240 } 
 	ai_chance = { factor = 0 }	
   }
 }
@@ -383,7 +382,7 @@ country_event = {
   
   option = {
     name = EVT_8023239_A
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	any_pop = { militancy = -2.0 consciousness = -2 }
   }
 }
@@ -397,7 +396,7 @@ country_event = {
   option = {
     name = EVT_8023240_A
 	create_vassal = POL 
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
 	country_event = 8023241 
   }
 }
@@ -411,7 +410,7 @@ country_event = {
   option = {
     name = EVT_8023241_A
 	any_pop = { militancy = 2.5 consciousness = 3 }
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
   }
 }
 country_event = {
@@ -425,7 +424,7 @@ country_event = {
     tag = POL
     has_global_flag = autumn_of_nations
 	government = proletarian_dictatorship
-	OR = { vassal_of = RUS is_vassal = no }
+	OR = { vassal_of = SUN is_vassal = no }
 	war = no
   }
 
@@ -474,7 +473,7 @@ country_event = {
   
   option = {
     name = EVT_8023245_A
-	government = democracy country_event = 800054
+	government = hms_government country_event = 800054
   }
 }
 
@@ -547,7 +546,7 @@ country_event = {
 		exists = POL
 		owns = 711  # Siedlce
 	}
-	RUS = { war_with = GER }
+	SUN = { war_with = GER }
 	owns = 706 # Warsaw
   }
   immediate = { set_global_flag = event_fired_8222000 }
@@ -555,7 +554,7 @@ country_event = {
 
   option = {
     name = EVT_8222000_A
-	798 = { secede_province = POL } 
+	798 = { state_scope = { any_owned = { secede_province = POL } } } 
 	POL = { country_event = 8222001 }
   }
 }
@@ -581,7 +580,7 @@ country_event = {
 	random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.1 } } }
 	define_general = { name = "Cepa" personality = energetic background = no_background }
 	define_general = { name = "Dindorf-Ankowicz" personality = energetic background = no_background }
-	RUS = { military_access = THIS } 
+	SUN = { military_access = THIS } 
   }
 }
 
@@ -593,7 +592,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
     has_global_flag = event_fired_8222000
     exists = POL
     war_with = GER
@@ -631,7 +630,7 @@ country_event = {
 
   option = {
     name = "OK"
-	relation = { who = ENG value = 150 } 
+	relation = { who = GBR value = 150 } 
   }
 }
 
@@ -643,7 +642,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1950
     has_global_flag = event_fired_8222000
     exists = POL
@@ -686,7 +685,7 @@ country_event = {
   option = {
     name = EVT_8222005_A
 	petroleum = 100
-	relation = { who = RUS value = 150 } 
+	relation = { who = SUN value = 150 } 
   }
 }
 
@@ -744,26 +743,28 @@ country_event = { #"Poland is free"
     tag = POL
     year = 1943 NOT = { year = 1963 }
 	NOT = { government = proletarian_dictatorship }
-    NOT = { has_country_flag  = cores_returned }
+    NOT = { has_country_flag  = claim_greater_poland }
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8224000_A
-	set_country_flag = cores_returned 
-	936 = { add_core =  THIS }
-	937 = { add_core =  THIS }
-	938 = { add_core =  THIS }
-	947 = { add_core =  THIS }
-	939 = { add_core =  THIS }
-	940 = { add_core =  THIS }
-	957 = { add_core =  THIS }
-	956 = { add_core =  THIS }
-	955 = { add_core =  THIS }
-	952 = { add_core =  THIS }
-	953 = { add_core =  THIS }
-	951 = { add_core =  THIS }
-	702 = { add_core =  THIS }
+	set_country_flag = claim_greater_poland 
+	702 = { add_core = POL }
+	951 = { add_core = POL }
+	952 = { add_core = POL }
+	953 = { add_core = POL }
+	955 = { add_core = POL }
+	956 = { add_core = POL }
+	957 = { add_core = POL }
+	937 = { add_core = POL }
+	940 = { add_core = POL }
+	939 = { add_core = POL }
+	936 = { add_core = POL }
+	938 = { add_core = POL }
+	946 = { add_core = POL }
+	947 = { add_core = POL }
+	360 = { add_core = POL }
   }
 }

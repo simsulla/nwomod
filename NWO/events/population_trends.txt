@@ -24,16 +24,17 @@ country_event = { # Demographic Transition
 			OR = { 
 				AND = { continent = europe year = 1890 }
 				AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
-				AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1960 }
-				AND = { OR = { continent = north_america continent = south_america } year = 1970 }
+				AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1965 }
+				AND = { OR = { continent = north_america continent = south_america } year = 1990 }
 				AND = { continent = asia year = 1950 is_core = JAP }
-				AND = { continent = asia year = 1970 owner = { government = proletarian_dictatorship NOT = { pop_majority_religion = sunni } } }
-				AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } year = 1980 }
-				AND = { continent = oceania year = 1980 }
+				AND = { year = 1970 is_core = CHI } # should be China event 
+				AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { is_core = PHI } year = 1980 }
 				AND = { continent = mena is_core = TUR year = 1980 }
-				AND = { continent = asia year = 2000 }
-				AND = { continent = mena year = 2000 }
-				AND = { continent = africa year = 2010 }
+				AND = { continent = africa OR = { is_core = SAF is_core = NAM is_core = BOT } year = 2000 }
+				AND = { continent = oceania year = 2010 }
+				AND = { continent = asia year = 2010 } # rest of asia
+				AND = { continent = mena year = 2010 }
+				AND = { continent = africa year = 2035 }
 			}
 		}
 	}
@@ -46,16 +47,17 @@ country_event = { # Demographic Transition
 				OR = { 
 					AND = { continent = europe year = 1890 }
 					AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
-					AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1960 }
-					AND = { OR = { continent = north_america continent = south_america } year = 1970 }
+					AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1965 }
+					AND = { OR = { continent = north_america continent = south_america } year = 1990 }
 					AND = { continent = asia year = 1950 is_core = JAP }
-					AND = { continent = asia year = 1970 owner = { government = proletarian_dictatorship NOT = { pop_majority_religion = sunni } } }
-					AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } year = 1980 }
-					AND = { continent = oceania year = 1980 }
+					AND = { year = 1970 is_core = CHI } # should be China event 
+					AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { is_core = PHI } year = 1980 }
 					AND = { continent = mena is_core = TUR year = 1980 }
-					AND = { continent = asia year = 2000 }
-					AND = { continent = mena year = 2000 }
-					AND = { continent = africa year = 2010 }
+					AND = { continent = africa OR = { is_core = SAF is_core = NAM is_core = BOT } year = 2000 }
+					AND = { continent = oceania year = 2010 }
+					AND = { continent = asia year = 2010 } # rest of asia
+					AND = { continent = mena year = 2010 }
+					AND = { continent = africa year = 2035 }
 				}
 			}
 			remove_province_modifier = demographic_transition 
@@ -65,7 +67,7 @@ country_event = { # Demographic Transition
 			remove_province_modifier = family_values
 			remove_province_modifier = total_fertility_rate
 		}		
-		country_event = 22602
+		country_event = { id = 22602 days = 10 }
 	}
 }
 
@@ -91,18 +93,21 @@ country_event = { # Demographic Transition - Initial setup
 		set_country_flag = demographic_init
 		any_owned = {
 			limit = {
-				OR = {
-					continent = mena
-					continent = africa
-					AND = { NOT = { year = 1992 } continent = asia }
-					AND = { NOT = { year = 1992 } continent = oceania }
-					AND = { 
-						NOT = { year = 1992 } 
-						OR = { continent = north_america continent = south_america } 
-						NOT = { 
-							is_primary_culture = yes 
-							OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } 
-						}
+				NOT = { 
+					OR = { 
+						AND = { continent = europe year = 1890 }
+						AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
+						AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1965 }
+						AND = { OR = { continent = north_america continent = south_america } year = 1990 }
+						AND = { continent = asia year = 1950 is_core = JAP }
+						AND = { year = 1970 is_core = CHI } # should be China event 
+						AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { is_core = PHI } year = 1980 }
+						AND = { continent = mena is_core = TUR year = 1980 }
+						AND = { continent = africa OR = { is_core = SAF is_core = NAM is_core = BOT } year = 2000 }
+						AND = { continent = oceania year = 2010 }
+						AND = { continent = asia year = 2010 } # rest of asia
+						AND = { continent = mena year = 2010 }
+						AND = { continent = africa year = 2040 }
 					}
 				}
 			}
@@ -115,7 +120,7 @@ country_event = { # Demographic Transition - Initial setup
 			remove_province_modifier = family_values
 			remove_province_modifier = total_fertility_rate
 		}
-		country_event = 22602
+		country_event = { id = 22602 days = 10 }
 	}
 }
 
@@ -198,6 +203,7 @@ country_event = { # Demographic Transition - fix new county and out of sync
 
 	trigger = {
 		has_country_flag = demographic_init
+		NOT = { has_country_modifier = fertility_timer }
 		any_owned_province = {
 			NOT = { has_province_modifier = demographic_transition }
 			NOT = { 
@@ -287,6 +293,19 @@ country_event = { # haredim_jewish
 			duration = 3665 
 	    }
 	}
+	
+	option = {
+		name = EVT_22612_OPTB
+		any_pop = { 
+			limit = { culture = haredim_jewish }
+			reduce_pop = 1.2
+		}
+		add_country_modifier = { 
+			name = demographic_haredim_jewish 
+			duration = 3665 
+	    }
+	}
+	
 }
 
 country_event = { # mennonites
@@ -318,5 +337,67 @@ country_event = { # mennonites
 			name = demographic_mennonites 
 			duration = 3665 
 	    }
-	}
+		ai_chance = { factor = 100 }
+ 	}
+	
+	option = {
+		name = EVT_22613_OPTB
+		any_pop = { 
+			limit = { culture = mennonites }
+			reduce_pop = 1.15
+		}
+		add_country_modifier = { 
+			name = demographic_mennonites 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 0 }
+ 	}
+	
 }
+
+country_event = { # romani
+	id = 22614
+	title = EVT_22614_NAME 
+	desc = EVT_22614_DESC
+	picture = "romani"
+	is_triggered_only = yes # on_actions
+	allow_multiple_instances = yes
+	
+	trigger = {
+		NOT = { has_country_modifier = demographic_romani }
+		any_pop = { 
+			culture = roma
+		}
+	}
+	
+	#mean_time_to_happen = {
+    #    months = 12
+	#}
+	
+	option = {
+		name = EVT_22614_OPTA
+		any_pop = { 
+			limit = { culture = roma }
+			reduce_pop = 1.25
+		}
+		add_country_modifier = { 
+			name = demographic_romani 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 100 }
+ 	}
+	option = {
+		name = EVT_22614_OPTB
+		any_pop = { 
+			limit = { culture = roma }
+			reduce_pop = 1.16
+		}
+		add_country_modifier = { 
+			name = demographic_romani 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 0 }
+ 	}
+
+}
+

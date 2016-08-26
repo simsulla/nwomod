@@ -26,7 +26,7 @@ province_event = { # Demand Autonomy
 	}
 	
 	mean_time_to_happen = {
-		months = 240
+		months = 960
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
@@ -100,7 +100,7 @@ province_event = { # Separatists demands freedom
 	}
 	
 	mean_time_to_happen = {
-		months = 36
+		months = 240
 		modifier = {
 			factor = 0.5
 			average_militancy = 5
@@ -130,9 +130,16 @@ province_event = { # Separatists demands freedom
 	
 	option = {
 		name = "EVT_15501_A"		#Accept
-		add_province_modifier = { name = grant_independence duration = 1080 }
-		set_global_flag = grant_independence
-		# country_event = 15502 
+		add_province_modifier = { name = grant_independence duration = -1 }
+		random_country = {
+			limit = {
+				any_core = {
+					owned_by = THIS
+					has_province_modifier = grant_independence
+				}
+			}
+			country_event = 15502 
+		}		
 		ai_chance = { factor = 0.1 }
 	}
 	option = {
@@ -147,25 +154,19 @@ country_event = { # $FROMCOUNTRY$ offers the return of provinces
 	title = "EVT_15502_NAME"
 	desc = "EVT_15502_DESC"
 	picture = "separation"
-	
-	trigger = {
-		has_global_flag = grant_independence
-		any_core = { has_province_modifier = grant_independence owner = { NOT = { tag = THIS } } }
-	}
-	
-	immediate =  { clr_global_flag = grant_independence }
-	
-	mean_time_to_happen = { months = 6 }
+	is_triggered_only = yes
 	
 	option = {
-		name = "EVT_15502_A"		
-		all_core = { 
-			limit = { has_province_modifier = promised_autonomy owner = { NOT = { tag = THIS } }  }
-			secede_province = THIS
-			remove_province_modifier = grant_independence
-			remove_province_modifier = promised_autonomy
-			remove_province_modifier = denied_independence
-		} 
+		name = "EVT_15502_A"
+		any_country = {
+			limit = {
+				tag = FROM
+			}
+			any_owned = {
+				limit = { is_core = THIS }
+				secede_province = THIS
+			}
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -175,6 +176,7 @@ country_event = { # $FROMCOUNTRY$ offers the return of provinces
 		name = "EVT_15502_B"
 		all_core = { 
 			limit = { has_province_modifier = promised_autonomy owner = { NOT = { tag = THIS } }  }
+			remove_province_modifier = grant_independence
 			remove_province_modifier = promised_autonomy
 			remove_province_modifier = denied_independence
 		} 
@@ -200,7 +202,7 @@ province_event = { # Colonial unrest in $PROVINCENAME$
   }
 
   mean_time_to_happen = { 
-	months = 240 
+	months = 960 
 	modifier = { continent = asia factor = 0.1 }
 	modifier = { continent = mena factor = 0.5 }
 	modifier = { continent = africa factor = 2 }
@@ -254,7 +256,7 @@ province_event = { # $PROVINCECULTURE$ Demands Independence
 	has_province_modifier = colonial_unrest
   }
   
-  mean_time_to_happen = { months = 1 }
+  mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_15402_A

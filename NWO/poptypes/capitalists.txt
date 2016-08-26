@@ -106,77 +106,99 @@ country_migration_target = {
 
 	modifier = { factor = 2.0 has_pop_culture = THIS }
 
-	# Europenas to europe, north_america and oceania
-	modifier = {
-		factor = 2.0
-		THIS = { is_culture_group = european }
-		OR = { continent = north_america continent = europe continent = oceania }
-	}
-	modifier = {
-		factor = 0.01
-		THIS = { is_culture_group = european }
-		NOT = { continent = north_america } NOT = { continent = europe continent = oceania }
-	}
+	modifier = { factor = -1.4 NOT = { has_pop_culture = THIS } } # negative baseline nullifed by any of the below
 
-	# Neo_Europenas to north_america and oceania
-	modifier = {
-		factor = 2.0
-		THIS = { is_culture_group = neo_european_cultures }
-		OR = { continent = north_america continent = south_america continent = oceania }
-	}
-	modifier = {
-		factor = 0.01
-		THIS = { is_culture_group = neo_european_cultures }
-		NOT = { continent = north_america } NOT = { continent = south_america } NOT = { continent = oceania }
-	}
 
-	# Latin migrate to America
-	modifier = {
-		factor = 2.0
-		THIS = { is_culture_group = latin_american_cultures }
-		OR = { continent = north_america continent = south_america }
+	modifier = { 
+		factor = 1.4 
+		THIS = { OR = { culture = indian culture = bengali_hindu culture = indian_muslim culture = bengali culture = tamil culture = nepali culture = filipino } } 
+		any_owned_province = { OR = { is_core = SAA is_core = KUW is_core = BAH is_core = OMA is_core = UAE is_core = QAT continent = oceania is_core = ENG is_core = CAN is_core = USA } }
 	}
-	modifier = {
-		factor = 0.01
-		THIS = { is_culture_group = latin_american_cultures }
-		NOT = { continent = north_america } NOT = { continent = south_america }
+	modifier = { 
+		factor = 1.4 
+		THIS = { OR = { culture = somali culture = pashtun } }
+		any_owned_province = { OR = {  is_core = NOR is_core = SWE } }
 	}
-	
-	# South and Southeast Asians to MENA
-	modifier = {
-		factor = 2.0
-		THIS = { OR = { is_culture_group = south_asian is_culture_group = southeast_asian } }
-		OR = { continent = mena continent = oceania }
+	modifier = { 
+		factor = 1.4 
+		THIS = { OR = { culture = sunni_arab culture = shia_arab culture = black_muslim culture = african_minor } } 
+		any_owned_province = { 
+			OR = { 
+				is_core = SPA is_core = FRA is_core = BEL is_core = SWI is_core = GER is_core = AUS is_core = NET is_core = DEN 
+				is_core = SWE is_core = ITA is_core = GRE is_core = IRE is_core = POR is_core = AST is_core = CAN
+			} 
+		}
 	}
-	modifier = {
-		factor = 0.01
-		THIS = { OR = { is_culture_group = south_asian is_culture_group = southeast_asian } }
-		NOT = { continent = mena } NOT = { continent = oceania }
+	modifier = { 
+		factor = 1.4 
+		THIS = { OR = { culture = turkish culture = kurdish } }
+		any_owned_province = { OR = {  is_core = GER is_core = AUS is_core = SWI is_core = NET } }
 	}
-	
-	# middlea east and africans to Europe
-	modifier = {
-		factor = 2.0
-		THIS = { OR = {  is_culture_group = turko_semitic is_culture_group = arabic is_culture_group = african is_culture_group = african_diaspora_cultures } }
-		OR = { continent = europe continent = africa continent = mena }
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = albanian } 
+		any_owned_province = { OR = {  is_core = GRE is_core = ITA } }
 	}
-	modifier = {
-		factor = 0.01
-		THIS = { OR = { is_culture_group = turko_semitic is_culture_group = arabic is_culture_group = african is_culture_group = african_diaspora_cultures } }
-		NOT = { OR = { continent = europe continent = africa continent = mena } }
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = polish } 
+		any_owned_province = { is_core = GER }
 	}
-
-	# oceanians stay in Oceania
-	modifier = {
-		factor = 2.0
-		THIS = { is_culture_group = oceanic }
-		continent = oceania
+	modifier = { 
+		factor = 1.4 
+		THIS = { OR = { culture = black_dutch culture = indonesian } }
+		any_owned_province = {  is_core = NET }
 	}
-	modifier = {
-		factor = 0.01
-		THIS = { is_culture_group = oceanic }
-		NOT = { continent = oceania }
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = indonesian } 
+		any_owned_province = { is_core = MSY }
 	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { OR = { culture = black_portuguese culture = pardo_portuguese } }
+		any_owned_province = { is_core = POR }
+	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { OR = { culture = vietnamese culture = korean } } 
+		any_owned_province = { is_core = USA }
+	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = polynesian } 
+		any_owned_province = { continent = oceania }
+	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = black_spanish } 
+		any_owned_province = { is_core = SPA }
+	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = black_french } 
+		any_owned_province = { OR = { is_core = FRA is_core = QUE } }
+	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = black_anglo } 
+		any_owned_province = { OR = { is_core = ENG is_core = CAN  is_core = USA } }
+	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = mestizo } 
+		any_owned_province = { is_core = USA is_core = ARG }
+	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = chinese } 
+		any_owned_province = { is_core = USA is_core = AST is_core = CAN is_core = SNG }
+	}
+	modifier = { 
+		factor = 1.4 
+		THIS = { culture = chinese_cantonese } 
+		any_owned_province = { is_core = SNG is_core = ENG }
+	}	
 	
 }
 
@@ -226,7 +248,286 @@ migration_target = {
 	modifier = {
 		factor = 2
 		is_state_capital = yes
+	}
+	modifier = {
+		factor = 0
+		is_capital = no 
+		OR = { 
+			province_id = 60 #Northern Quebec
+			province_id = 69 #Acadia
+			province_id = 76 #Labrador
+			province_id = 2196 # Puerto Lampira
+			province_id = 2200 # Mosquito
+			province_id = 1723 # Panama Canal
+			province_id = 2213 # province_id = 2213;Haiti
+			province_id = 203 # province_id = 203;Bermuda
+			province_id = 2218 # province_id = 2218;Cayman Islands
+			province_id = 2217 # province_id = 2217;Jamaica
+			province_id = 2219 # province_id = 2219;Bahamas
+			province_id = 2220 # province_id = 2220;Turks and Ciacos
+			province_id = 2222 # province_id = 2222;Puerto Rico
+			province_id = 2223 # province_id = 2223;Saint Thomas
+			province_id = 2224 # province_id = 2224;Antigua and Barbuda
+			province_id = 2225 # province_id = 2225;Monserrat
+			province_id = 2226 # province_id = 2236;Virgin Islands
+			province_id = 2227 # province_id = 2227;Saint Kitts
+			province_id = 2236 # province_id = 2236;Saint Martin
+			province_id = 2228 # province_id = 2228;Martinique
+			province_id = 2231 # province_id = 2231;Saint Lucia
+			province_id = 2232 # province_id = 2232;Dominica
+			province_id = 2229 # province_id = 2237;Barbados
+			province_id = 2409 # province_id = 2409;St Vincent and Grenadines
+			province_id = 2233 # province_id = 2237;Grenada
+			province_id = 2237 # province_id = 2237;Trinidad and Tobago
+			province_id = 2234 # province_id = 2234;Leeward Antilles
+			province_id = 2235 # province_id = 2235;Aruba
+			province_id = 2243 # Essequibo
+			province_id = 2289 #Marañón
+			province_id = 2532 # Roraima
+			province_id = 2549 # Acre
+			province_id = 2308 # Arica
+			province_id = 2305 # Antofagasta
+			province_id = 2334 # Patagonia
+			province_id = 2420 # South Mato Grosso
+			province_id = 2366 #Gran Chaco
+			province_id = 2392 #Patagonia
+			province_id = 2244 # Christmas & Cocos Islands
+			province_id = 610 # Micronesia
+			province_id = 2518 # Palau
+			province_id = 2524 # Marshall islands
+			province_id = 2527 # Kiribati
+			province_id = 2541 # Tuvalu
+			province_id = 2542 # Wallis and Futuna
+			province_id = 2523 # Nauru
+			province_id = 2517 # Guam
+			province_id = 2521 # Northern Mariana Islands
+			province_id = 2539 # Bougainville
+			province_id = 2534 # Solomon Islands
+			province_id = 1097 # New Caledonia
+			province_id = 2535 # Vanuatu
+			province_id = 2540 # Tonga
+			province_id = 2546 # Cook Islands
+			province_id = 2543 # West Samoa
+			province_id = 2544 # East Samoa
+			province_id = 2547 # Tokelau
+			province_id = 2552 # Pitcairn Islands
+			province_id = 254 #Northen Ireland
+			province_id = 273 #Wales
+			province_id = 251 # Greenland
+			province_id = 252 #Iceland
+			province_id = 346 # Österbotten 
+			province_id = 348 # Åland
+			province_id = 474 #Galicia
+			province_id = 573 #Saarland
+			province_id = 397 #Luxenburg
+			province_id = 2568 #Ticino
+			province_id = 693 #Masuria
+			province_id = 612 #Tirol
+			province_id = 616 #Kärnten-Steiermark
+			province_id = 613 # Ober Österreich
+			province_id = 630 #Sudetenland
+			province_id = 950 #Carpathian Ruthenia
+			province_id = 654 #Western Transylvania
+			province_id = 2533 #Eastern Transylvania
+			province_id = 735 #South Tirol
+			province_id = 736 #Trieste
+			province_id = 770 #Istria
+			province_id = 793 #Krajina
+			province_id = 791 #Vojvodina
+			province_id = 2538 #Backa  
+			province_id = 662 # Chernivtsi
+			province_id = 765 #Sardinia
+			province_id = 473 #Corscia
+			province_id = 818 #Dobrudja
+			province_id = 677 #Transnistria
+			province_id = 2589 #Gagauzia
+			province_id = 785 #Srpska
+			province_id = 788 #Herzegovina
+			province_id = 806 #Macedonia
+			province_id = 807 #Northwestern Macedonia
+			province_id = 830 #Eastern Macedonia
+			province_id = 846 #Dodecanese
+			province_id = 853 #Eripidus
+			province_id = 857 #North Cyprus
+			province_id = 855 #Cyprus
+			province_id = 893 #Diyarbakir
+			province_id = 901 #Rojava
+			province_id = 900 #Antioch
+			province_id = 905 #Lactia
+			province_id = 917 #Jerusalem
+			province_id = 920 #Gaza
+			province_id = 918 #West Bank
+			province_id = 2687 #Golan Hights
+			province_id = 925 #Iraqi Kurdistan
+			province_id = 1096 #Adjara
+			province_id = 1095 #Abkhazia
+			province_id = 1091 #South Ossetia
+			province_id = 1106 #Nagorno-Karabakh
+			province_id = 802 #Kosovo
+			province_id = 803 #Mitrovica
+			province_id = 1101 #Nakhichevan
+			province_id = 1117 #Kurdistan
+			province_id = 1132 #Khuzestan
+			province_id = 1168 #Arab Emirates
+			province_id = 1165 #Qatar
+			province_id = 1162 #Bahrain
+			province_id = 1192 #Karakalpakstan
+			province_id = 1208 #Gorno-Badakhshan
+			province_id = 1211 #North Afghanistan
+			province_id = 1225 #Azad Kashmir
+			province_id = 2653 #Tribal Areas
+			province_id = 360 #Vilnius
+			province_id = 995 #East Karelia
+			province_id = 339 #West Karelia
+			province_id = 982 #Petsamo
+			province_id = 955 #Podillia
+			province_id = 987 # Komi
+			province_id = 1030 #Tatarstan
+			province_id = 1033 #Chuvashia
+			province_id = 1032 # Mari
+			province_id = 1021 # Mordovia 
+			province_id = 1025 # Voronets 
+			province_id = 1041 #Kalmykia
+			province_id = 1051 #Adygei
+			province_id = 1056 #Karachay-Cherkessia
+			province_id = 1052 #Kabardino-Balkaria
+			province_id = 1054 #North Ossetia
+			province_id = 1053 #Ingushetia
+			province_id = 1055 #Chechnya
+			province_id = 1057 #Dagestan
+			province_id = 1070 #Yakutsk
+			province_id = 1074 #Kamchatka
+			province_id = 1079 # Buryatia
+			province_id = 1469 #Tuvas
+			province_id = 1086 #North Sakhalin
+			province_id = 1087 #South Sakhalin
+			province_id = 1088 # Kurils
+			province_id = 986 #Baikonur 
+			province_id = 1068 #Altai
+			province_id = 1042 # Basharostan
+			province_id = 1221 #Baluchistan
+			province_id = 1144 #West Baluchistan
+			province_id = 1224 #Kashmir
+			province_id = 1230 #Islamabad
+			province_id = 1235 #Shimla
+			province_id = 1236 #Delhi
+			province_id = 2680 #Hilltracts
+			province_id = 2657 #South Bengal
+			province_id = 1252 #North Bengal
+			province_id = 1258 # Meghalaya
+			province_id = 1259 # Manipur
+			province_id = 1260 # Assam
+			province_id = 2566 # Mizoram
+			province_id = 2693 # Bodoland
+			province_id = 3278 # Arunachal Pradesh
+			province_id = 3279 # Nagaland
+			province_id = 3280 # Tripura
+			province_id = 1275 #Central India
+			province_id = 1270 #Gwalior
+			province_id = 1271 #Indore
+			province_id = 1286 #Gulbarga
+			province_id = 1284 # Aurangbad
+			province_id = 1303 # Goa
+			province_id = 1312 #Pondicherry
+			province_id = 1302 #Karnataka
+			province_id = 1322 #Tamil Eelam
+			province_id = 1328 #Sikkim
+			province_id = 1345 #Rakhine
+			province_id = 1320 #Andaman Islands
+			province_id = 1342 #Kachin
+			province_id = 1343 #Mon State
+			province_id = 2123 #Comoros
+			province_id = 2124 #Mayotte
+			province_id = 2125 #Mauritius
+			province_id = 2126 #Reunion
+			province_id = 2127 #Seychelles
+			province_id = 1392 #Patani
+			province_id = 1355 #Northen Thailand
+			province_id = 1340 #Shan
+			province_id = 1338 #Kayin
+			province_id = 1358 #Isan
+			province_id = 2576 #South China Sea
+			province_id = 1393 #Brunei
+			province_id = 1405 #Aceh
+			province_id = 1413 #Jakarta
+			province_id = 1438 #Bali
+			province_id = 1449 #Ambon
+			province_id = 1442 #West Nusa Tenggara 
+			province_id = 1445 #East Nusa Tenggara
+			province_id = 1463 #Mindanao
+			province_id = 1462 #Muslim Mindanao
+			province_id = 1085 #Yanbian
+			province_id = 1535 #Alxa Left Banner
+			province_id = 1532 #Inner Mongolia
+			province_id = 1065 # Xikang
+			province_id = 1072 # Hsingan
+			province_id = 1481 #Port Aurthur
+			province_id = 1491 #Ningxia
+			province_id = 1587 #Chamdo
+			province_id = 1588 #Tibet
+			province_id = 1329 #Buthan
+			province_id = 1593 # Arunachal Pradesh South Tibet
+			province_id = 1594 #Kashgar Xinjiang
+			province_id = 3281 #Aksai Chin
+			province_id = 1654 #Okinawa
+			province_id = 1774 #West Sahara
+			province_id = 1773 #Sahrawi
+			province_id = 1689 #Melilla
+			province_id = 1713 #Interior Algeria
+			province_id = 1744 #Fezzan
+			province_id = 1756 #Sinai
+			province_id = 1755 #Suez
+			province_id = 1834 #Halaib
+			province_id = 1842 #Darfur
+			province_id = 1839 #Abyei and Blue Nile
+			province_id = 1852 #Amhara Gumuz
+			province_id = 1856 #Tigray Afar
+			province_id = 1860 #SNNPR
+			province_id = 1865 #Somali
+			province_id = 1872 #Puntaland
+			province_id = 1873 #Somaliland
+			province_id = 1875 #Djibuti
+			province_id = 2031 #South Somalia
+			province_id = 2048 #Zanzibar
+			province_id = 2044 #Mwanza
+			province_id = 1792 #Casamance 
+			province_id = 1785 #Gambia 
+			province_id = 1803 #Timbuktu
+			province_id = 1907 #Ghana
+			province_id = 1910 #Ashanti
+			province_id = 1913 #North Ghana
+			province_id = 1915 #Togoland
+			province_id = 1954 #São Tomé
+			province_id = 1955 #Equatorial Guinea
+			province_id = 1963 #North Cameroon
+			province_id = 1957 #Ambazonia
+			province_id = 1971 # Seleka
+			province_id = 1986 #South Kasai
+			province_id = 1997 # Ituri
+			province_id = 2034 #Rwanda
+			province_id = 2035 #Burundi
+			province_id = 2008 #North Ovamboland
+			province_id = 2000 #Cambinda
+			province_id = 2067 #Malawi
+			province_id = 2083 #Walvis Bay
+			province_id = 2081 #Caprivi
+			province_id = 2672 #Transkei
+			province_id = 2100 #Ciskei
+			province_id = 2103 #Vrystaat
+			province_id = 2665 #Qwa Qwa
+			province_id = 2105 #Pretoria
+			province_id = 2114 #Swaziland
+			province_id = 2619 #KaNgwane
+			province_id = 2667 #Gazankulu
+			province_id = 2652 #Venda
+			province_id = 2647 #Lebowa
+			province_id = 2643 #KwaNdebele
+			province_id = 2649 #Bophuthatswana
+			province_id = 2113 #Zululand
+			province_id = 2104 #Lesotho
+		}
 	}		
+
 	modifier = {
 		factor = 2
 		is_capital = yes
@@ -245,7 +546,7 @@ promote_to =
 
 ideologies = {
 	nationalist = {
-		factor = 0.1
+		factor = 1
 		# type
 		# government and ruling_party_ideology
 		modifier = { factor = 4.0 is_primary_culture = yes government = nationalist_dictatorship } 
@@ -274,7 +575,7 @@ ideologies = {
 		modifier = { factor = 1.2 consciousness = 9 }
 	}
 	populist = { # pragmatic social reformist and revert reforms militancy
-		factor = 0.1 # 0.0-0.48
+		factor = 0.5 # 0.0-0.48
 		# type
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = populist } everyday_needs = 0.5 }
@@ -293,9 +594,9 @@ ideologies = {
 		modifier = { factor = 2.0 revanchism = 0.20 }
 	}
 	traditionalist = { # revert reforms
-		factor = 0.1 # 0-0.4
+		factor = 1 # 0-0.4
 		# type
-		modifier = { factor = 0.1 NOT = { OR = { type = farmers type = labourers type = aristocrats } }  NOT = { ruling_party_ideology = traditionalist } }
+		modifier = { factor = 0.5  NOT = { ruling_party_ideology = traditionalist } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = traditionalist } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = traditionalist } NOT = { everyday_needs = 0.5 } }
@@ -308,9 +609,8 @@ ideologies = {
 		modifier = { factor = 2.0 religious_rights = secularism_religion } 
 	}
 	conservative = { # pragmatic social reformist
-		factor = 0.1 # 0.05-0.4
+		factor = 1 # 0.05-0.4
 		# type
-		modifier = { factor = 2.5 NOT = { OR = { type = clerks type = labourers type = craftsmen type = capitalists type = clergymen } } life_needs = 1.0 }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = conservative } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = conservative } NOT = { everyday_needs = 0.5 } }
@@ -323,9 +623,8 @@ ideologies = {
 		modifier = { factor = 0.2 religion = secularism }
 	}
 	big_tent = { # pragmatic social reformist
-		factor = 0.1 # 0.05-0.4
+		factor = 1 # 0.05-0.4
 		# type
-		modifier = { factor = 2.5 NOT = { OR = { type = clerks type = labourers type = craftsmen type = capitalists type = clergymen } } life_needs = 1.0 }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = big_tent } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = big_tent } NOT = { everyday_needs = 0.5 } }
@@ -338,11 +637,9 @@ ideologies = {
 		modifier = { factor = 0.2 religion = secularism }
 	}
 	liberal = { # political reformist
-		factor = 0.1
+		factor = 1
 		# type
-		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats type = farmers type = labourers }  NOT = { ruling_party_ideology = progressive } }
-		modifier = { factor = 2.5 OR = { type = bureaucrats type = capitalists type = clerks type = artisans type = clergymen } }
-		modifier = { factor = 10 type = artisans }
+		modifier = { factor = 1.5 }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = liberal } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = liberal } NOT = { everyday_needs = 0.5 } }
@@ -367,10 +664,8 @@ ideologies = {
 		modifier = { factor = 0.5 militancy = 6 }
 	}
 	socialist = { # pragmatic social reformist
-		factor = 0.1
+		factor = 1
 		# type
-		modifier = { factor = 4 OR = { type = craftsmen type = labourers } NOT = { militancy = 2 } }
-		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats } NOT = { ruling_party_ideology = socialist } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = socialist } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = socialist } NOT = { everyday_needs = 0.5 } }
@@ -395,9 +690,9 @@ ideologies = {
 		modifier = { factor = 0.1 militancy = 6 }
 	}
 	communist = { # social reformist militancy
-		factor = 0.1
+		factor = 1
 		# type
-		modifier = { factor = 0.1 OR = { type = soldiers type = officers type = aristocrats } NOT = { ruling_party_ideology = communist } }
+		modifier = { factor = 0.1 }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = communist } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = communist } NOT = { everyday_needs = 0.5 } }
@@ -418,9 +713,8 @@ ideologies = {
 		modifier = { factor = 1.1 social_reform_want = 1.0 }
 	}
 	progressive = { # political reformist
-		factor = 0.1
+		factor = 1
 		# type
-		modifier = { factor = 0 OR = { type = soldiers type = officers type = aristocrats type = farmers type = labourers }  NOT = { ruling_party_ideology = progressive } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = progressive } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = progressive } NOT = { everyday_needs = 0.5 } }
@@ -741,12 +1035,12 @@ issues = {
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.80 } }
 	}
 
-# internet_infrastructure
-	# quality_of_service
-	open_unregulated = {
+# criminology
+	# criminology_classical_school
+	criminology_corporal_punishment = {
 		factor = 0.6
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 OR = { is_next_reform = open_unregulated NOT = { consciousness = 5 } } }
+		modifier = { factor = 0 OR = { is_next_reform = criminology_corporal_punishment NOT = { consciousness = 5 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
 		modifier = { factor = 1.25 literacy = 0.40 }
@@ -760,10 +1054,10 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 8 }
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
-	net_neutrality = {
+	criminology_capital_punishment = {
 		factor = 0.4
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 OR = { is_next_reform = net_neutrality NOT = { consciousness = 6 } } }
+		modifier = { factor = 0 OR = { is_next_reform = criminology_capital_punishment NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
 		modifier = { factor = 1.25 literacy = 0.40 }
@@ -776,10 +1070,10 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 8 }
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
-	sponsored_access = {
+	criminology_social_justice = {
 		factor = 0.2
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 is_next_reform = sponsored_access }
+		modifier = { factor = 0 is_next_reform = criminology_social_justice }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }

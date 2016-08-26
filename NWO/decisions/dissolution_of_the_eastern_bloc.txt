@@ -6,7 +6,7 @@ political_decisions = {
 			NOT = { has_global_flag = autumn_of_nations }
 			NOT = { has_country_flag = dissolution_of_the_eastern_bloc }
 			OR = { is_secondary_power = yes is_greater_power = yes }
-			RUS = { government = proletarian_dictatorship }
+			SUN = { government = proletarian_dictatorship }
 			is_greater_power = yes
 		}
 
@@ -14,24 +14,24 @@ political_decisions = {
 			NOT = { government = proletarian_dictatorship }
 			OR = { 
 				AND = {
-					RUS = { check_variable = { which = soviet_control_cee value = -3 } }
-					RUS = { check_variable = { which = soviet_control_cee value = -2 } }
-					RUS = { check_variable = { which = soviet_control_cee value = -1 } }
-					RUS = { check_variable = { which = soviet_control_cee value = 0 } }
-					RUS = { check_variable = { which = soviet_control_cee value = 1 } }
-					RUS = { check_variable = { which = soviet_control_cee value = 2 } }
-					RUS = { check_variable = { which = soviet_control_cee value = 3 } }
-					RUS = { check_variable = { which = soviet_control_cee value = 4 } }
-					RUS = { check_variable = { which = soviet_control_cee value = 5 } }
-					RUS = { check_variable = { which = soviet_control_cee value = 6 } } # TODO add year or more levels see 8014243???
+					SUN = { check_variable = { which = soviet_control_cee value = -3 } }
+					SUN = { check_variable = { which = soviet_control_cee value = -2 } }
+					SUN = { check_variable = { which = soviet_control_cee value = -1 } }
+					SUN = { check_variable = { which = soviet_control_cee value = 0 } }
+					SUN = { check_variable = { which = soviet_control_cee value = 1 } }
+					SUN = { check_variable = { which = soviet_control_cee value = 2 } }
+					SUN = { check_variable = { which = soviet_control_cee value = 3 } }
+					SUN = { check_variable = { which = soviet_control_cee value = 4 } }
+					SUN = { check_variable = { which = soviet_control_cee value = 5 } }
+					SUN = { check_variable = { which = soviet_control_cee value = 6 } } # TODO add year or more levels see 8014243???
 				}
-				AND = { year = 1971 RUS = {has_country_modifier = in_bankrupcy } }
+				AND = { year = 1971 SUN = {has_country_modifier = in_bankrupcy } }
 			}
 		}
 
 		effect = {
 			set_country_flag = dissolution_of_the_eastern_bloc
-			RUS = { country_event = 8014237 } # Mikhail Gorbachev
+			SUN = { country_event = 8014237 } # Mikhail Gorbachev
 		}
 	}
 	

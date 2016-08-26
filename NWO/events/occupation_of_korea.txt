@@ -4,7 +4,7 @@ country_event = {
 	id = 1209001
 	title = EVT_1209001_NAME
 	desc = EVT_1209001_DESC
-	picture = "united_korea"
+	picture = "provisional_government_korea"
 
 	fire_only_once = yes
 	
@@ -31,9 +31,12 @@ country_event = {
 	option = {
 		name = EVT_1209001_B 
 		ai_chance = { factor = 0 }
-		prestige = -10
-		release_vassal = SKO
-		KMT = { diplomatic_influence = { who = SKO value = 200 } }
+		prestige = -5
+		any_owned = { limit = { is_core = SKO } secede_province = SKO }
+		KMT = {
+			relation = { who = SKO value = 200 }
+			diplomatic_influence = { who = SKO value = 200 } 
+		}
 	}
 
 }
@@ -49,10 +52,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = RUS
+		tag = SUN
 		government = proletarian_dictatorship
 		NOT = { exists = NKO }
-		1619 = { controlled_by = RUS } # Pyongyang
+		1619 = { controlled_by = SUN } # Pyongyang
 		OR = { 
 			year = 1948
 			has_country_flag = korea_trusteeship
@@ -62,7 +65,7 @@ country_event = {
 	mean_time_to_happen = {
 		months = 22
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			SKO = { exists = yes } 
 		}
 	}
@@ -72,14 +75,28 @@ country_event = {
 		ai_chance = { factor = 100 }
 		release_vassal = NKO
 		prestige = 5
+		diplomatic_influence = { who = NKO value = 50 }
+	}
+	
+	option = {
+		name = EVT_1209002_B
+		ai_chance = { factor = 100 }
+		release_vassal = NKO
+		prestige = 5
+		clothes = -1000
+		small_arms = -2000
+		NKO = {
+			clothes = 1000
+			small_arms = 2000
+		}
 		diplomatic_influence = { who = NKO value = 100 }
 	}
 	
 	option = {
-		name = EVT_1209002_B # We will remain there
+		name = EVT_1209002_C # We will remain there
 		ai_chance = { factor = 0 }
 		prestige = -10
-		badboy = 2
+		badboy = 10
 		any_pop = {
 			limit = {
 				culture = korean
@@ -121,9 +138,10 @@ country_event = {
 	option = {
 		name = EVT_1209003_A
 		ai_chance = { factor = 100 }
-		release_vassal = SKO
+		any_owned = { limit = { is_core = SKO } secede_province = SKO }
 		prestige = 5
 		diplomatic_influence = { who = SKO value = 200 }
+		relation = { who = SKO value = 200 }
 		USA = { military_access = THIS }
 	}
 	
@@ -131,7 +149,7 @@ country_event = {
 		name = EVT_1209003_B # We will remain there
 		ai_chance = { factor = 0 }
 		prestige = -10
-		badboy = 2
+		badboy = 10
 	    any_pop = {
 			limit = {
 				culture = korean

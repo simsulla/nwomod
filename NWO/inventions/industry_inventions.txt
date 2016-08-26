@@ -159,7 +159,6 @@ reprocessing_depleted_uranium = {
 		}
 	}
 	effect = {
-		activate_building = heating_electricity_factory
 		factory_throughput = 0.05
 	}
 }
@@ -2111,6 +2110,15 @@ automation = {
 	}
 }
 #electricity
+electric_grid = {
+	limit = { electricity = 1 }
+	chance = {
+		base = 8
+	}
+	effect = {
+		activate_building = heating_electricity_factory
+	}
+}
 spinning = {
 	limit = { electricity = 1 }
 	chance = {

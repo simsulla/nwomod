@@ -197,15 +197,16 @@ country_event = {
 	define_general = { name = "Sukarno" personality = energetic background = no_background }
 	casus_belli = { target = NET type = become_independent months = 12 }
 	add_casus_belli = { target = NET type = acquire_core_state months = 12 }
-	random_country = { limit = { tag = NET } leave_alliance = ENG leave_alliance = USA }
+	random_country = { limit = { tag = NET } leave_alliance = GBR leave_alliance = USA }
 	war = { 
 		target = NET
 		attacker_goal = { casus_belli = become_independent }
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 2620 } # West Java
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1419 } # East Java
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1405 } # Sumatra
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1401 }
-		defender_goal = { casus_belli = acquire_core_state state_province_id = 1403 }
+		defender_goal = { casus_belli = make_puppet } 
+		#defender_goal = { casus_belli = acquire_core_state state_province_id = 1413 } # 2620 West Java
+		#defender_goal = { casus_belli = acquire_core_state state_province_id = 1418 } # East Java
+		#defender_goal = { casus_belli = acquire_core_state state_province_id = 1405 } # Sumatra
+		#defender_goal = { casus_belli = acquire_core_state state_province_id = 1401 }
+		#defender_goal = { casus_belli = acquire_core_state state_province_id = 1398 } 
 	}
 	ai_chance = { factor = 100 }
   }

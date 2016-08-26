@@ -119,8 +119,6 @@ country_event = {
 		months = 12
 	}
 
-	immediate = { clr_country_flag = accept_differances_in_gov_by_democracy }
-
 	option = {
 		name = EVT_19002_A
 		sphere_owner = { country_event = 19003 }
@@ -155,8 +153,6 @@ country_event = {
 	mean_time_to_happen = {
 		months = 12
 	}
-
-	immediate = { clr_country_flag = accept_differances_in_gov_by_democracy }
 
 	option = {
 		name = EVT_19002_A
@@ -761,7 +757,7 @@ country_event = {
 	immediate = { 
 		great_wars_enabled = yes
 		set_global_flag = great_wars_enabled
-		set_global_flag = NWO_v1_07 # TODO change with a new version
+		set_global_flag = NWO_v1_09 # TODO change with a new version
 	}
 	
 	option = {
@@ -776,8 +772,8 @@ country_event = {
 		USA = { remove_accepted_culture = german } # due to literacy Vic2 mod limitations
 		FRA = { remove_accepted_culture = german }
 		SPA = { remove_accepted_culture = catalan remove_accepted_culture = basque }
-		RUS = { remove_accepted_culture = german remove_accepted_culture= estonian remove_accepted_culture = latvian remove_accepted_culture = lithuanian }
-		ENG = { remove_accepted_culture = german }
+		SUN = { remove_accepted_culture = german remove_accepted_culture= estonian remove_accepted_culture = latvian remove_accepted_culture = lithuanian }
+		GBR = { remove_accepted_culture = german }
 	}
 }
 
@@ -806,7 +802,7 @@ country_event = {
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
-                                political_reform = quality_of_service
+                                political_reform = criminology_classical_school
                                 political_reform = censored_publishing
                                 political_reform = gender_role_based
                                 political_reform = parties_not_allowed
@@ -863,7 +859,7 @@ country_event = {
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
-                                political_reform = quality_of_service
+                                political_reform = criminology_classical_school
                                 political_reform = censored_publishing
                                 political_reform = gender_role_based
                                 political_reform = parties_not_allowed
@@ -920,7 +916,7 @@ country_event = {
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
-                                political_reform = quality_of_service
+                                political_reform = criminology_classical_school
                                 political_reform = censored_publishing
                                 political_reform = gender_role_based
                                 political_reform = parties_not_allowed
@@ -1140,7 +1136,7 @@ country_event = {
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
-                                political_reform = quality_of_service
+                                political_reform = criminology_classical_school
                                 political_reform = censored_publishing
                                 political_reform = gender_role_based
                                 political_reform = parties_not_allowed
@@ -1265,7 +1261,7 @@ country_event = {
 	trigger = {
 		year = 1946
 		NOT = { year = 1947 }
-		tag = ENG
+		tag = GBR
 	}
 
 	immediate = {
@@ -1292,7 +1288,7 @@ country_event = {
 	trigger = {
 		year = 1946
 		NOT = { year = 1947 }
-		tag = RUS
+		tag = SUN
 	}
 
 	immediate = {
@@ -1348,7 +1344,7 @@ country_event = {
 	
 	trigger = {
 		year = 1992
-		tag = ENG
+		tag = GBR
 		NOT = { has_country_flag = develop_atomic_bomb }
 	}
 

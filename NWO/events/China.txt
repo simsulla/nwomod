@@ -80,7 +80,7 @@ country_event = {
 	desc = "EVT_1002801_DESC"
 	picture = "chinese_hongkong"
 
-	is_triggered_only = yes # ENG
+	is_triggered_only = yes # GBR
 
 	option = {
 		name = "EVT_1002801_A"
@@ -609,17 +609,17 @@ country_event = {
 	year = 1961 
 	government = proletarian_dictatorship
     has_global_flag = de_stalinization
-    exists = RUS
+    exists = SUN
   }
 
   mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8002818_A
-	RUS = { end_military_access = THIS } 
-	relation = { who = RUS value = -100 } 
+	SUN = { end_military_access = THIS } 
+	relation = { who = SUN value = -100 } 
 	set_global_flag = sino_soviet_split 
-	RUS = {	country_event = 8002819 }
+	SUN = {	country_event = 8002819 }
 	ai_chance = { factor = 100 }
   }
 
@@ -640,7 +640,7 @@ country_event = {
   title = EVT_8002819_NAME
   desc = EVT_8002819_DESC
   picture = "nwo2_mao_with_khrushchev"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8002819_A
@@ -690,7 +690,7 @@ country_event = {
     tag = CHI
 	year = 1962 NOT = { year = 1968 }
 	government = proletarian_dictatorship
-    exists = RUS
+    exists = SUN
     has_global_flag = sino_soviet_split
     war = no
   }
@@ -700,7 +700,7 @@ country_event = {
   option = {
     name = EVT_8002821_A
 	any_pop = { consciousness = 2 }
-	RUS = { country_event = 8002822 }
+	SUN = { country_event = 8002822 }
 	ai_chance = { factor = 100 }
   }
 
@@ -744,12 +744,12 @@ country_event = {
 	any_pop = { consciousness = 2 }
 	ai_chance = { factor = 100 }
 	country_event = 8002827
-	RUS  = { country_event = 8002826 }
+	SUN  = { country_event = 8002826 }
   }
 
   option = {
     name = EVT_8002824_B
-	RUS = { country_event = 8002825 } 
+	SUN = { country_event = 8002825 } 
 	any_pop = { militancy = -1.0 consciousness = 1 }
 	ai_chance = { factor = 0 }
   }
@@ -759,7 +759,7 @@ country_event = {
   title = EVT_8002825_NAME
   desc = EVT_8002825_DESC
   picture = "nwo2_sino_soviet_border_conflict"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
 
   option = {
@@ -781,7 +781,7 @@ country_event = {
   title = EVT_8002826_NAME
   desc = EVT_8002826_DESC
   picture = "nwo2_sino_soviet_border_conflict"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8002826_A
@@ -856,8 +856,8 @@ country_event = {
     year = 1991
     war = no
 	OR = {
-		1496 = { owned_by = ENG } 
-		HKG = { vassal_of = ENG }
+		1496 = { owned_by = GBR } 
+		HKG = { vassal_of = GBR }
 	}
   }
 
@@ -865,7 +865,7 @@ country_event = {
 
   option = {
     name = EVT_8002832_A
-	relation = { who = ENG value = 100 } 
+	relation = { who = GBR value = 100 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -1091,7 +1091,7 @@ country_event = {
     tag = CHI
 	year = 1971 NOT = { year = 1980 }
 	government = proletarian_dictatorship
-    NOT = { has_global_flag = CHI_in_UNSC }
+    NOT = { has_country_flag = not_participating_UNSC }
     exists = USA
     war = no
     relation = { who = USA value = -100 }
@@ -1141,7 +1141,8 @@ country_event = {
   option = {
     name = EVT_8002852_A
 	any_pop = { militancy = -1 consciousness = 1 }
-	set_global_flag = CHI_in_UNSC 
+	clr_country_flag = not_participating_UNSC
+	KMT = { set_country_flag = not_participating_UNSC }
   }
 }
 country_event = {
@@ -1226,33 +1227,33 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1945 NOT = { year = 1963 }
 	war = no
-    NOT = { RUS = { war_with = CHI } }
+    NOT = { SUN = { war_with = CHI } }
     NOT = { exists = MCK }
     NOT = { exists = IMN }
-    exists = CHI
+    exists = CHI # and KMT 
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = "EVT_8200000_A"
-	any_owned = { limit = { is_core = CHI } secede_province = CHI }
+	any_owned = { limit = { is_core = CHI } secede_province = KMT }
 	prestige = 10
-	CHI = { country_event = 8200005 } 
+	KMT = { country_event = 8200005 } 
+	relation = { who = CHI value = -100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = "EVT_8200000_B"
-	relation = { who = CHI value = -100 } 
+	any_owned = { limit = { is_core = CHI } secede_province = CHI }
+	prestige = 10
+	CHI = { country_event = 8200005 } 
 	relation = { who = KMT value = -100 } 
-	badboy = 10 
-	prestige = -50
-	any_pop = { limit = { culture = chinese } militancy = 5 consciousness = 2 }
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
@@ -1262,11 +1263,8 @@ country_event = {
 	badboy = 10 
 	prestige = -50
 	any_pop = { limit = { culture = chinese } militancy = 5 consciousness = 2 }
-	release_vassal = MCK
 	ai_chance = { factor = 0 }
   }
-
-  
 }
 country_event = {
   id = 8200005
@@ -1278,9 +1276,10 @@ country_event = {
   option = {
     name = "OK"
 	# Port Aurthur remains in Russian hands
-	1481 = { secede_province = RUS }
+	1481 = { secede_province = SUN }
 	random_country = { limit = { exists = KMT tag = KMT war_with = THIS } 2613 = { change_controller = KMT } 1479 = { change_controller = KMT } 45 = { change_controller = KMT } 1555 = { change_controller = KMT } }
-	relation = { who = RUS value = 50 } 
+	random_country = { limit = { exists = CHI tag = CHI war_with = THIS } 1480 = { change_controller = CHI } 44 = { change_controller = CHI } 1554 = { change_controller = CHI } 1553 = { change_controller = CHI } }
+	relation = { who = SUN value = 50 } 
 	relation = { who = MGL value = 25 } 
   }
 }
@@ -1292,7 +1291,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1946 NOT = { year = 1950 }
     NOT = { has_global_flag = KMT_won_civil_war }
     
@@ -1395,7 +1394,7 @@ country_event = {
 	small_arms = 2000
 	weaponry = 2000
 	fuel = 2000
-	RUS = { country_event = 8200121 } # nwo2_chinese_civil_war_interventions.txt
+	SUN = { country_event = 8200121 } # nwo2_chinese_civil_war_interventions.txt
 	ai_chance = { factor = 0 }
   }
 }
@@ -1939,7 +1938,7 @@ country_event = {
 
   option = {
     name = "EVT_8200047_A"
-	RUS = { country_event = 8500111 }  # nwo2_chinese_civil_war_interventions.txt
+	SUN = { country_event = 8500111 }  # nwo2_chinese_civil_war_interventions.txt
 	money = 50000 
 	ai_chance = { factor = 100 }
   }
@@ -1966,10 +1965,10 @@ province_event = {
     owner = { war = yes  war_with = CHI }
 	has_national_minority = no
 	NOT = { country_units_in_province = KMT }
-	NOT = { region = CHI_1578 } # no rebellion in Sichuan
-	NOT = { region = CHI_1579 } 
-	NOT = { region = RUS_1065 }
-	NOT = { region = CHI_1485 } # not in Taiwan
+	NOT = { region = SID_1578 } # no rebellion in Sichuan
+	NOT = { region = SID_1579 } # Chongqing
+	NOT = { region = SID_1065 } # Xikang
+	NOT = { region = SID_1485 } # not in Taiwan
 	NOT = { province_id = 1499 } # not on other islands
 	NOT = { province_id = 2576 } # not on other islands
   }
@@ -2021,6 +2020,29 @@ country_event = {
   }
 }
 country_event = {
+  id = 8200102
+  title = "EVT_8200102_NAME"
+  desc = "EVT_8200102_DESC"
+  picture = "nwo2_chiang_crying"
+ fire_only_once = yes
+ 
+  trigger = {
+    tag = KMT
+    year = 1948 NOT = { year = 1963 }
+    has_global_flag = CHI_won_civil_war
+	is_greater_power = no
+	war = no
+  }  
+
+  option = {
+    name = "EVT_8200102_A"
+	USA = { country_event = 8200105 }
+  }
+  option = {
+    name = "EVT_8200102_B"
+  }
+}
+country_event = {
   id = 8200103
   title = "EVT_8200103_NAME"
   desc = "EVT_8200103_DESC"
@@ -2042,7 +2064,7 @@ country_event = {
 	set_global_flag = CHI_won_civil_war 
 	capital = 1612 
 	any_pop = { militancy = -1.0 consciousness = 1  }
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
   }
 }
 country_event = {
@@ -2058,6 +2080,23 @@ country_event = {
 	any_pop = { militancy = -2.0 consciousness = 1 }
   }
 
+}
+country_event = {
+  id = 8200105
+  title = "EVT_8200105_NAME"
+  desc = "EVT_8200105_DESC"
+  picture = "nwo2_mao_announces_prc"
+  is_triggered_only = yes # USA, FROM = KMT
+
+  option = {
+    name = "EVT_8200105_A"
+	create_alliance = KMT
+	diplomatic_influence = { who = KMT value = 200 }
+  }
+  option = {
+    name = "EVT_8200105_B"
+	prestige = -10
+  }
 }
 country_event = {
   id = 8200110
@@ -2159,10 +2198,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1944 NOT = { year = 1946 }
     
-    CHI = { vassal_of = RUS }
+    CHI = { vassal_of = SUN }
   }
 
   mean_time_to_happen = { months = 2  }
@@ -2281,7 +2320,7 @@ country_event = {
 
   option = {
     name = EVT_8500101_A
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	relation = { who = KMT value = -200 } 
 	set_global_flag = ccw_american_nonintervention 
 	prestige = -5
@@ -2291,10 +2330,10 @@ country_event = {
 
   option = {
     name = EVT_8500101_B
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	relation = { who = CHI value = -100 } 
 	relation = { who = KMT value = 100 } 
-	RUS = { country_event = 8500102 }
+	SUN = { country_event = 8500102 }
     ai_chance = { factor = 0 }
   }
 }
@@ -2350,7 +2389,7 @@ country_event = {
 
   option = {
     name = EVT_8500104_A
-	create_alliance = RUS 
+	create_alliance = SUN 
   }
 }
 country_event = {
@@ -2359,7 +2398,7 @@ country_event = {
   desc = EVT_8500111_DESC
   picture = "nwo2_kmt_troops_in_shermans"
 
-  is_triggered_only = yes # chinese_civil_war.txt as RUS
+  is_triggered_only = yes # chinese_civil_war.txt as SUN
   
   option = {
     name = EVT_8500111_A
@@ -2390,14 +2429,14 @@ country_event = {
 
   option = {
     name = EVT_8500102_A
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	set_global_flag = ccw_american_nonintervention 
   }
 
   option = {
     name = EVT_8500102_B
-	relation = { who = RUS value = -50 } 
-	RUS = { country_event = 8500113 }
+	relation = { who = SUN value = -50 } 
+	SUN = { country_event = 8500113 }
 	country_event = 8500114 
   }
 }
@@ -2412,7 +2451,7 @@ country_event = {
   option = {
     name = EVT_8500113_A
 	create_alliance = CHI 
-	relation = { who = RUS value = 100 } 
+	relation = { who = SUN value = 100 } 
   }
 
   option = {
@@ -2518,7 +2557,7 @@ country_event = {
 	year = 1954 NOT = { year = 1990 }
     has_global_flag = KMT_won_civil_war
 	war = no
-	RUS = { war = no }
+	SUN = { war = no }
 	USA = { war = no }
 	MGL = { war = no }
 	ETS = { war = no }
@@ -2540,7 +2579,7 @@ country_event = {
   option = {
     name = EVT_8002920_C
     ai_chance = { factor = 0 }
-	RUS = { country_event = 8002922 }
+	SUN = { country_event = 8002922 }
 	any_pop = { militancy = 1.0  consciousness = 1 }
   }
 }
@@ -2570,7 +2609,7 @@ country_event = {
   title = EVT_8002922_NAME
   desc = EVT_8002922_DESC
   picture = "nwo2_chiang_smiling"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8002922_A
@@ -2642,7 +2681,7 @@ country_event = {
     tag = USA
 	year = 1954 NOT = { year = 1990 }
     has_global_flag = KMT_won_civil_war
-    KMT = { alliance_with = RUS }
+    KMT = { alliance_with = SUN }
   }
 
   mean_time_to_happen = { months = 3  }
@@ -2682,7 +2721,7 @@ country_event = {
 
   option = {
     name = EVT_8002925_C
-	RUS = { country_event = 8002926 }
+	SUN = { country_event = 8002926 }
 	create_alliance = USA 
 	any_pop = { militancy = 2.0 }
 	ai_chance = { factor = 0 }
@@ -2693,7 +2732,7 @@ country_event = {
   title = EVT_8002926_NAME
   desc = EVT_8002926_DESC
   picture = "nwo2_kmt_unitedstates"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
 
   option = {
@@ -2717,13 +2756,13 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	government = proletarian_dictatorship
 	year = 1945 NOT = { year = 1959 }
     exists = MGL
     has_global_flag = KMT_won_civil_war
     MGL = { ai = yes }
-    MGL = { vassal_of = RUS }
+    MGL = { vassal_of = SUN }
     KMT = { alliance_with = USA }
   }
 
@@ -2753,20 +2792,20 @@ country_event = {
   option = {
     name = EVT_8002928_A
 	any_pop = { consciousness = 2 }
-	RUS = { country_event = 8002930 } 
+	SUN = { country_event = 8002930 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8002928_B
-	RUS = { country_event = 8002930 } 
+	SUN = { country_event = 8002930 } 
     ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8002928_C
 	USA = { country_event = 8002929 } 
-	create_alliance = RUS 
+	create_alliance = SUN 
 	any_pop = { militancy = 2.0 }
     ai_chance = { factor = 0 }
   }
@@ -3167,14 +3206,15 @@ country_event = { # # China in United Nations Security Council
 		NOT = { exists = KMT }
 	}
     war = no
-	NOT = { has_global_flag = CHI_in_UNSC }
+	has_country_flag = not_participating_UNSC
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8207000_A
-	set_global_flag = CHI_in_UNSC 
+	clr_country_flag = not_participating_UNSC
+	KMT = { set_country_flag = not_participating_UNSC }
   }
 }
 country_event = {
@@ -3187,7 +3227,7 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1944 NOT = { year = 1990 }
-    NOT = { has_global_flag = CHI_in_UNSC }
+    CHI = { has_country_flag = not_participating_UNSC }
     exists = CHI
     has_global_flag = CHI_won_civil_war
   }
@@ -3216,7 +3256,7 @@ country_event = {
 
   option = {
     name = EVT_8207002_A
-	set_global_flag = CHI_in_UNSC 
+	set_country_flag = not_participating_UNSC
 	any_pop = {  consciousness = 1 }
   }
 }
@@ -3228,9 +3268,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1949 NOT = { year = 1950 }
-    NOT = { has_global_flag = CHI_in_UNSC }
+    CHI = { has_country_flag = not_participating_UNSC}
     exists = CHI
     has_global_flag = CHI_won_civil_war
   }
@@ -3261,7 +3301,7 @@ country_event = {
   option = {
     name = EVT_8207004_A
 	relation = { who = CHI value = -100 } 
-	relation = { who = RUS value = -20 } 
+	relation = { who = SUN value = -20 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -3270,7 +3310,7 @@ country_event = {
 	CHI = { country_event = 8207002 } 
 	clr_global_flag = un_soviet_boycott 
 	relation = { who = CHI value = 200 } 
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	relation = { who = KMT value = -50 } 
 	ai_chance = { factor = 0 }
   }
@@ -3283,7 +3323,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1950 NOT = { year = 1990 }
     has_global_flag = un_soviet_boycott
 	has_global_flag = korea_war # TODO what flag?

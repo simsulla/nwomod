@@ -10,7 +10,7 @@ country_event = { # Hungarian Revolution 1956
 	year = 1956 NOT = { year = 1957 }
     
 	is_vassal = yes
-	vassal_of = RUS
+	vassal_of = SUN
     war = no
   }
   immediate = { set_global_flag = hungarian_revolution_1956 }
@@ -20,7 +20,7 @@ country_event = { # Hungarian Revolution 1956
   option = {
     name = EVT_8501101_A
 	any_pop = { consciousness = 2 }
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	define_general = { name = "Imre Nagy" personality = energetic background = no_background }
 	ai_chance = { factor = 100 }
   }
@@ -42,7 +42,7 @@ country_event = { #"Hungarian Neutrality"
     tag = HUN
 	year = 1956 NOT = { year = 1957 }
     has_global_flag = hungarian_revolution_1956
-	vassal_of = RUS
+	vassal_of = SUN
     war = no
   }
 
@@ -51,9 +51,9 @@ country_event = { #"Hungarian Neutrality"
   option = {
     name = EVT_8501102_A
 	government = democracy country_event = 800054
-	casus_belli = { target = RUS type = become_independent months = 12 }
-	war = { target = RUS attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli  = make_puppet } }
-	diplomatic_influence = { who = RUS value = -100 }
+	casus_belli = { target = SUN type = become_independent months = 12 }
+	war = { target = SUN attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli  = make_puppet } }
+	diplomatic_influence = { who = SUN value = -100 }
 	ai_chance = { factor = 0 }
   }
 
@@ -61,8 +61,8 @@ country_event = { #"Hungarian Neutrality"
     name = EVT_8501102_B
 	any_pop = { militancy = 2.0 }
 	government = democracy country_event = 800054
-	diplomatic_influence = { who = RUS value = -100 }
-	RUS = { release_vassal = HUN country_event =  { id = 8501103 days = 23 } }
+	diplomatic_influence = { who = SUN value = -100 }
+	SUN = { release_vassal = HUN country_event =  { id = 8501103 days = 23 } }
 	ai_chance = { factor = 100 }
   }
 }
@@ -71,7 +71,7 @@ country_event = {
   title = EVT_8501103_NAME
   desc = EVT_8501103_DESC
   picture = "nwo2_hungarian_revolution_1956"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8501103_A
@@ -126,7 +126,7 @@ country_event = {
 
   option = {
     name = EVT_8501104_A
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	country_event = 8021308 
   }
 }
@@ -138,7 +138,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1958 NOT = { year = 1959 }
 	war = no
 	HUN = { 
@@ -162,7 +162,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	NOT = { year = 1990 }
 	war = no
 	is_our_vassal = HUN 
@@ -188,13 +188,13 @@ country_event = {
     tag = HUN
 	NOT = { year = 1990 }
 	war = no
-	vassal_of = RUS
+	vassal_of = SUN
 	has_global_flag = hungarian_revolution_1956
   }
 
   option = {
     name = EVT_8501106_A
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	country_event = 8021309 
   }
 }
@@ -206,11 +206,11 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1956 NOT = { year = 1957 }
     has_global_flag = event_fired_8510806 # united_nations.txt
     
-    RUS = { war_with = HUN }
+    SUN = { war_with = HUN }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -241,7 +241,7 @@ country_event = { # USA intervention
     name = EVT_8501111_A
 	any_pop = { consciousness = 1 }
 	# infamy unsanctioned
-	war = { target = RUS attacker_goal = { casus_belli = release_puppet } defender_goal = { casus_belli  = status_quo } } 
+	war = { target = SUN attacker_goal = { casus_belli = release_puppet } defender_goal = { casus_belli  = status_quo } } 
 	ai_chance = { factor = 0 }
   }
 
@@ -261,14 +261,14 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1954 NOT = { year = 1956 }
-    OR = { NOT = { exists = ENG } has_global_flag = event_fired_8510802 }
+    OR = { NOT = { exists = GBR } has_global_flag = event_fired_8510802 }
     OR = { NOT = { exists = FRA } has_global_flag = event_fired_8510803 }
-    OR = { NOT = { exists = CHI } has_global_flag = event_fired_8510804 has_global_flag = CHI_in_UNSC }
-    OR = { NOT = { exists = KMT } NOT = { has_global_flag = CHI_in_UNSC } has_global_flag = event_fired_8510808 }
-    OR = { NOT = { exists = RUS } has_global_flag = event_fired_8510805 has_global_flag = un_soviet_boycott }
+    OR = { NOT = { exists = CHI } has_global_flag = event_fired_8510804 has_country_flag = not_participating_UNSC }
+    OR = { NOT = { exists = KMT } has_global_flag = event_fired_8510808 has_country_flag = not_participating_UNSC }
+    OR = { NOT = { exists = SUN } has_global_flag = event_fired_8510805 has_country_flag = not_participating_UNSC }
     has_global_flag = un_hungary_totalveto
     
-    RUS = { war_with = HUN }
+    SUN = { war_with = HUN }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -283,7 +283,7 @@ country_event = {
     name = EVT_8501112_B
 	badboy = 1
 	any_pop = { militancy = 3.5 }
-	RUS = { country_event = 8501113 }
+	SUN = { country_event = 8501113 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -292,7 +292,7 @@ country_event = {
   title = EVT_8501113_NAME
   desc = EVT_8501113_DESC
   picture = "nwo2_allied_intervention"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8501113_A

@@ -25,11 +25,15 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 48
+		months = 480
 		modifier = {
 			factor = 0.1
 			has_global_flag = islamist_revolution_somewhere
 		}
+		modifier = {
+			factor = 0.1
+			AFG = { government = proletarian_dictatorship }
+		}		
 	}
 
 	option = {
@@ -653,10 +657,16 @@ province_event = {
 	}
 	option = {
 		name = "EVT_11140_A"
-		# EVT_11140_A;Emprosin the terrorists
+		# EVT_11140_A;Persecute the terrorists
 		add_province_modifier = {
 			name = islamist_agitation
 			duration = 730
+		}
+		any_pop = {
+			ideology = {
+				value = traditionalist
+				factor = 0.1
+			}
 		}
 	}
 
@@ -749,7 +759,7 @@ province_event = {
 	trigger = {
 		owner = {
 			has_country_flag = islamist_revolution_in_progress
-			internet_infrastructure = quality_of_service
+			criminology = criminology_classical_school
 		}
 		is_colonial = no
 	}
@@ -1315,7 +1325,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 2
-			internet_infrastructure = quality_of_service
+			criminology = criminology_classical_school
 		}
 		modifier = {
 			factor = 1.4

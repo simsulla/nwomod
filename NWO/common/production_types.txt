@@ -35,7 +35,7 @@ factory_template = {
 
 bank_template = {
 	efficiency = {
-		computers = 1
+		computers = 0.06
 	}
 	
 	owner =
@@ -47,13 +47,19 @@ bank_template = {
 	
 	employees = {		
 		{ 
-			poptype = clerks 
+			poptype = craftsmen
 			effect = throughput
-			amount = 1
+			amount = 0.1
+		}		
+		{ 
+			poptype = clerks 
+			effect = output
+			effect_multiplier = 1.1
+			amount = 0.9
 		}
 	}
 	type = factory
-	workforce = 1000 
+	workforce = 40000 
 }
 
 modern_factory_template = {
@@ -74,13 +80,13 @@ modern_factory_template = {
 		{ 
 			poptype = craftsmen
 			effect = throughput
-			amount = 0.8
+			amount = 0.4
 		}		
 		{ 
 			poptype = clerks 
 			effect = output
 			effect_multiplier = 1.5
-			amount = 0.2
+			amount = 0.6
 		}
 	
 	}
@@ -915,10 +921,10 @@ automobiles_factory = {
 jewellery_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		gold_silver = 18	
+		gold_silver = 6
 	}
 	output_goods = jewellery 
-	value = 9
+	value = 18
 	bonus = {
 		trigger = { trade_goods_in_state = gold_silver }
 		value = 0.125
@@ -944,7 +950,7 @@ beverage_tobacco_factory = {
 }
 
 health_factory = {       
-	template = modern_factory_template
+	template = bank_template
 	input_goods = {    
 		pharmaceuticals = 4.5	
 		optics = 8.0	
@@ -1091,7 +1097,7 @@ communication_factory = {
 }
 
 education_rnd_factory = {       
-	template = modern_factory_template
+	template = bank_template
 	input_goods = {    
 		telecommunications = 30
 		computers = 30
@@ -1114,7 +1120,7 @@ education_rnd_factory = {
 }
 
 culture_factory = {       
-	template = modern_factory_template
+	template = bank_template
 	input_goods = {    
 		health = 30.00	
 		beverage_tobacco = 30.00	
@@ -1132,7 +1138,7 @@ culture_factory = {
 }
 
 recreation_factory = {       
-	template = modern_factory_template
+	template = bank_template
 	input_goods = {    
 		health = 3.0
 		aeroplanes = 3.0	
@@ -1150,7 +1156,7 @@ recreation_factory = {
 }
 
 financial_services_factory = {       
-	template = modern_factory_template
+	template = bank_template
 	input_goods = {    
 		computers = 58
 	}

@@ -239,7 +239,7 @@ country_event = {
 	
 	trigger = {
 		capital_scope = { trade_goods = credit }
-		tag = ENG
+		tag = GBR
 		CHI = { rank = 1 }
 		NOT = { has_country_flag = world_bank has_country_flag = the_imf }
 	}
@@ -276,7 +276,7 @@ country_event = {
 	desc = EVT_15610_DESC
 	picture = gulag
 
-	is_triggered_only = yes # RUS
+	is_triggered_only = yes # SUN
 	
 	option = {
 		name = EVT_15610_A
@@ -301,7 +301,7 @@ country_event = {
 	desc = EVT_15611_DESC
 	picture = uk_war_debt
 
-	is_triggered_only = yes # ENG
+	is_triggered_only = yes # GBR
 	
 	option = {
 		name = EVT_15609_A
@@ -399,5 +399,151 @@ country_event = {
 		# EVT_15614_B;Take the bad credit losses
 		any_owned = { limit = { owner = { money = 12000 } } owner = { treasury = -10000 } }
 		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 15615
+	title = EVT_15615_NAME
+	# EVT_15615_NAME;Conflict Resolution. $FROMCOUNTRY$ has decided to get involved
+	desc = EVT_15615_DESC
+	# EVT_15615_DESC;We have territorial claims on neighbouring countries. These claims hinders integration with $FROMCOUNTRY$. How should we respond?
+	picture = peace_mission
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_15615_A 
+		# EVT_15615_A;Give up claims
+		all_core = { 
+			limit = { 
+				NOT = { owned_by = THIS } 
+				owner = { has_country_flag = in_trade_block }
+			}
+			add_province_modifier = { name = peace_mission duration = -1 }
+			remove_core = THIS
+			owner = { country_event = 15616 }
+		}
+		ai_chance = { factor = 0.8 }
+	}
+	option = {
+		name = EVT_15615_B
+		# EVT_15615_B;Keep our claims
+		relation = { who = FROM value = -100 }
+		FROM = { country_event = 15618 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = {
+	id = 15616
+	title = EVT_15616_NAME
+	# EVT_15616_NAME;$FROMCOUNTRY$ proposes a compromize for territorial conflict
+	desc = EVT_15616_DESC
+	# EVT_15616_DESC;$FROMCOUNTRY$ has territorial claims on us. They propose a peacfull resolution of the conflict under international law. How shall we respond?
+	picture = peace_mission
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_15616_A 
+		# EVT_15616_A;Give up claims
+		any_owned = { 
+			limit = { 
+				has_province_modifier = peace_mission
+				is_core = FROM
+			}
+			remove_core = THIS
+		}
+		any_country = { 
+			limit = { 
+				has_country_modifier = peace_mission 
+			}
+			relation = { who = THIS value = -100 }
+			country_event = 15619
+		}
+		FROM = { country_event = 15619 }
+		ai_chance = { 
+			factor = 0.1 
+		}
+	}
+	option = {
+		name = EVT_15616_B
+		# EVT_15616_B;Don't give up our cores
+		relation = { who = FROM value = -100 }
+		FROM = { country_event = 15618 }
+		any_country = { 
+			limit = { 
+				has_country_modifier = peace_mission 
+			}
+			relation = { who = THIS value = -100 }
+			country_event = 15618
+		}
+		any_owned = { 
+			limit = { 
+				has_province_modifier = peace_mission
+				is_core = FROM
+			}
+			remove_province_modifier = peace_mission
+		}
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+province_event = {
+	id = 15617
+	title = EVT_15617_NAME
+	# EVT_15617_NAME;$FROMCOUNTRY$ gives freedom
+	desc = EVT_15617_DESC
+	# EVT_15617_DESC;$FROMCOUNTRY$ are ending territorial claims on us and giving us freedom
+	picture = peace_mission
+
+	trigger = {
+		has_province_modifier = peace_mission
+		any_core = { exists = no }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = EVT_15617_A
+		# EVT_15617_A;Freedom at last
+		secede_province = THIS
+		remove_province_modifier = peace_mission
+	}
+}
+country_event = {
+	id = 15618
+	title = EVT_15618_NAME
+	# EVT_15616_NAME;$FROMCOUNTRY$ are hindering a peacfull resolution of the conflict
+	desc = EVT_15618_DESC
+	# EVT_15616_DESC;$FROMCOUNTRY$ has territorial disputes. They propose resist a peacfull resolution of the conflict under international law. How shall we respond?
+	picture = peace_mission
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_15618_A 
+		# EVT_15618_A;Leave the situation be. Make a nother try in a couple of years
+		prestige = -20
+	}
+}
+
+country_event = {
+	id = 15619
+	title = EVT_15619_NAME
+	# EVT_15616_NAME;Peace mission success. 
+	desc = EVT_15619_DESC
+	# EVT_15616_DESC;$FROMCOUNTRY$ has agreed to a peacfull resolution of the conflict. The conflict will be resolved under international law.
+	picture = peace_mission
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_15619_A 
+		# EVT_15619_A;A diplomatic triumph
+		prestige = 50
 	}
 }

@@ -41,13 +41,6 @@ country_event = {
 
   option = {
     name = EVT_8500402_A
-	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.1 } } }
-	relation = { who = CHI value = -100 } 
-	ai_chance = { factor = 0 }
-  }
-
-  option = {
-    name = EVT_8500402_B
 	relation = { who = CHI value = -100 } 
 	relation = { who = KMT value = 100 } 
 	random_state = { any_pop = { dominant_issue = { value = interventionism factor = 0.55 } } }
@@ -55,6 +48,14 @@ country_event = {
 	KMT = { country_event =  8500403 }
 	ai_chance = { factor = 100 }
   }
+
+  option = {
+    name = EVT_8500402_B
+	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.1 } } }
+	relation = { who = CHI value = -100 } 
+	ai_chance = { factor = 0 }
+  }
+
 }
 country_event = {
   id = 8500403
@@ -201,7 +202,7 @@ country_event = { # Mutual Defense Treaty for Taiwan - Communists attack
     name = EVT_8500411_B
 	relation = { who = CHI value = -100 } 
 	relation = { who = KMT value = 100 } 
-	RUS = { country_event =  8500412 } 
+	SUN = { country_event =  8500412 } 
 	ai_chance = { factor = 100 }
   }
 }
@@ -210,7 +211,7 @@ country_event = {
   title = EVT_8500412_NAME
   desc = EVT_8500412_DESC
   picture = "nwo2_taiwan_strait"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   mean_time_to_happen = { months = 1  }
 
@@ -249,7 +250,7 @@ country_event = {
 
   option = {
     name = EVT_8500413_B
-	relation = { who = RUS value = -200 } 
+	relation = { who = SUN value = -200 } 
 	country_event = 8500414 
 	ai_chance = { factor = 100 }
   }

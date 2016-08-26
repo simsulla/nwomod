@@ -33,23 +33,16 @@ political_decisions = {
 		picture = "united_nations_security_council"
 		potential = {
 			is_greater_power = yes
+			rank = 2 # or higher
 			OR = { 
-				AND = { tag = CHI has_global_flag = CHC_in_UNSC }
-				tag = KMT
-				tag = ENG
-				tag = USA
-				tag = FRA
-				tag = RUS
+				has_country_flag = permanent_member_of_UNSC
+				NOT = { has_country_flag = not_participating_UNSC }
 			}
-			crisis_exist = yes
-			involved_in_crisis = no
 		}
 
 		allow = {
-			any_greater_power = {
-				involved_in_crisis = yes
-				relation = { who = THIS value = 50 }
-			}
+			crisis_exist = yes
+			involved_in_crisis = no
 			war = no
 		}
 

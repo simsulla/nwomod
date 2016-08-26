@@ -75,11 +75,14 @@ country_event = {
 		leave_alliance = FROM
 		diplomatic_influence = { who = FROM value = -200 }
 		FROM = { country_event = 70006 }
-		ai_chance = { factor = 100 }
+		ai_chance = { 
+			factor = 0.05 
+			modifier = { FROM = { is_primary_culture = THIS } factor = 5 }
+		}
 	}
 	option = {
 		name = "EVTOPTB70005" # never mind
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 0.95 }
 	}
 	
 }
@@ -98,8 +101,8 @@ country_event = {
         ai_chance = {
 			factor = 0.1
             modifier = {
-                factor = 10
-				FROM = { is_primary_culture = THIS }
+                factor = 0
+				FROM = { NOT = { is_primary_culture = THIS } }
 			}
         }
 	}
@@ -115,7 +118,7 @@ country_event = {
         ai_chance = {
 			factor = 0.9
             modifier = {
-                factor = 0.1
+                factor = 0
 				FROM = { is_primary_culture = THIS }
             }
             modifier = {

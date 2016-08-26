@@ -847,7 +847,7 @@ cold_war = {
                         factor = 6
                         OR = {
 				tag = USA
-				tag = RUS
+				tag = SUN
 			}
 			is_greater_power = yes
                 }
@@ -994,6 +994,10 @@ age_of_protests = {
 	ai_chance = {
 		factor = 1.15
 		modifier = {
+			factor = 2.0
+			has_country_modifier = internationalism
+		}
+		modifier = {
 			factor = 2
 			is_greater_power = yes
 		}
@@ -1032,6 +1036,10 @@ political_polarization = {
 	diplomatic_points = 0.25
 	ai_chance = {
 		factor = 1.1
+		modifier = {
+			factor = 2.0
+			has_country_modifier = internationalism
+		}
 		modifier = {
 			factor = 1.5
 			is_greater_power = yes

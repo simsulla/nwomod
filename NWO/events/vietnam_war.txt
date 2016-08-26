@@ -125,6 +125,10 @@ country_event = {
 		prestige = -2
 		release_vassal = DAI
 		DAI = { government = hms_government }
+		diplomatic_influence = {
+			who = DAI
+			value = 200
+		}
 	}
 	
 	option = {
@@ -387,7 +391,7 @@ country_event = {
 	small_arms = 200
 	weaponry = 100
 	relation = { who = CHI value = 50 }
-	diplomatic_influence = { who = RUS value = 100 }
+	diplomatic_influence = { who = SUN value = 100 }
   }
 }
 country_event = {
@@ -482,6 +486,7 @@ country_event = {
 
   trigger = {
     tag = DAI
+	war = no
     year = 1955 NOT = { year = 1963 }
     exists = SVI
   }
@@ -574,12 +579,14 @@ country_event = {
   
   option = {
     name = EVT_8228060_A
-	war = DAI any_pop = { militancy = 1.2 consciousness = 1.0 }
+	war = { target = DAI attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
+	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8228060_B
 	DAI = { country_event = 8228061 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -963,6 +970,7 @@ country_event = {
   option = {
     name = EVT_8228201_B
 	DAI = { military_access = THIS } 
+	government = proletarian_dictatorship country_event = 800052
  	ai_chance = { factor = 0 }
   }
   

@@ -1,4 +1,28 @@
 country_event = {
+  id = 8004505
+  title = "EVT_8004505_NAME"
+  desc = "EVT_8004505_DESC"
+  picture = "adenauer"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GER
+	exists = GER
+    year = 1949 NOT = {year = 1964}
+  }
+
+  mean_time_to_happen = { months = 2  }
+
+  option = {
+    name = "EVT_8004505_A"
+	prestige = 60
+  }
+  option = {
+    name = "EVT_8004505_B"
+	prestige = -10
+  }
+}
+country_event = {
   id = 8004506
   title = "EVT_8004506_NAME"
   desc = "EVT_8004506_DESC"
@@ -14,7 +38,7 @@ country_event = {
 
   option = {
     name = "EVT_8004506_A"
-	prestige = -40
+	prestige = -10
   }
 }
 country_event = {
@@ -118,7 +142,7 @@ country_event = {
   option = {
     name = EVT_8004525_A
 	any_pop = { consciousness = 2 }
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	relation = { who = DDR value = -50 } 
 	ai_chance = { factor = 100 }
   }
@@ -126,14 +150,14 @@ country_event = {
   option = {
     name = EVT_8004525_B
 	any_pop = { militancy = 0.5 }
-	relation = { who = RUS value = 25 } 
+	relation = { who = SUN value = 25 } 
 	relation = { who = DDR value = 25 } 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8004525_C
-	any_pop = { militancy = 1.5 }war = RUS 
+	any_pop = { militancy = 1.5 }war = SUN 
 	ai_chance = { factor = 0 }
   }
 }
@@ -157,7 +181,7 @@ country_event = {
     name = EVT_8004526_A
 	any_pop = { consciousness = 2 }
 	relation = { who = DDR value = 100 } 
-	relation = { who = RUS value = 20 } 
+	relation = { who = SUN value = 20 } 
   }
 
   option = {
@@ -212,8 +236,8 @@ country_event = {
 	government = democracy country_event = 800054 
 	USA = { country_event = 8004321 } 
 	FRA = { country_event = 8004321 } 
-	RUS = { country_event = 8004321 } 
-	ENG = { country_event = 8004321 } 
+	SUN = { country_event = 8004321 } 
+	GBR = { country_event = 8004321 } 
 	GER = { country_event = { id = 8004325 days = 30 } } # reunification
 	ai_chance = { factor = 100 }
   }
@@ -244,7 +268,7 @@ country_event = { # Stasi
   option = {
     name = EVT_8004312_A
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.65 } } }
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
   }
 }
 country_event = { # East German Uprising of 1953
@@ -279,7 +303,7 @@ country_event = { # East German Uprising of 1953
   option = {
     name = EVT_8004313_C
 	any_pop = { militancy = 1.6 }
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
 	add_country_modifier = { name = central_planning_inflexibility2 duration = 30 }
 	ai_chance = { factor = 10 }
   }
@@ -306,7 +330,7 @@ country_event = { # Construction of the Berlin Wall;
   option = {
     name = EVT_8004314_A
 	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
   }
 }
 country_event = {
@@ -339,7 +363,7 @@ country_event = {
 
   trigger = {
 	OR = { tag = DDR tag = POL }
-	vassal_of = RUS
+	vassal_of = SUN
     year = 1952
 	NOT = { year = 1952 }
     exists = POL
@@ -349,7 +373,7 @@ country_event = {
 
   option = {
     name = "EVT_8004316_A"
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	set_country_flag = treaty_of_zgorzelec
 	badboy = -10 
 	# TODO add DDR event where they refuse to sign
@@ -434,7 +458,7 @@ country_event = { # Fall of the Berlin Wall
 	exists = DDR
     exists = GER
     has_global_flag = autumn_of_nations
-	OR = { vassal_of = RUS is_vassal = no }
+	OR = { vassal_of = SUN is_vassal = no }
 	war = no
   }
 

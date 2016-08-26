@@ -1567,7 +1567,10 @@ country_event = {
 		election = yes
 		OR = {
 			average_militancy = 2
-			unemployment = 0.1
+			AND = {
+				unemployment = 0.1
+				NOT = { unemployment_subsidies = citizen_salary }
+			}
 			war_exhaustion = 20
 		}	
 		NOT = {
@@ -1699,7 +1702,10 @@ country_event = {
 		election = yes
 		OR = {
 			average_militancy = 2
-			unemployment = 0.1
+			AND = {
+				unemployment = 0.1
+				NOT = { unemployment_subsidies = citizen_salary }
+			}
 			num_of_revolts = 1
 		}
 		NOT = {
@@ -3054,7 +3060,7 @@ country_event = {
 	}
 }
 
-#Islamist victory
+#Traditionalsit victory
 country_event = {
 	id = 98314
 	title = "EVTNAME98314"
@@ -3344,7 +3350,7 @@ country_event = {
 					}
 					scaled_militancy = {
 						ideology = populist
-						factor = -2
+						factor = -4
 					}
 					scaled_consciousness = {
 						ideology = populist
@@ -3378,7 +3384,7 @@ country_event = {
 					}
 					scaled_militancy = {
 						ideology = populist
-						factor = -2
+						factor = -4
 					}
 					scaled_consciousness = {
 						ideology = populist
@@ -3411,7 +3417,7 @@ country_event = {
 					}
 					scaled_militancy = {
 						ideology = populist
-						factor = -2
+						factor = -4
 					}
 					scaled_consciousness = {
 						ideology = populist

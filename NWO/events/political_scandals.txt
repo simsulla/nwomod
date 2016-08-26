@@ -1238,3 +1238,165 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 880211
+	title = "EVT_880211_NAME" # IT Leaks
+	desc = "EVT_880211_DESC"
+	picture = "cyber_warfare"
+	
+	trigger = {
+		uni_internet = 1
+		NOT = {
+			vote_franschise = none_voting
+			publishing_rights = censored_publishing
+		}
+		is_greater_power = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 60	
+		modifier = {
+			factor = 1.5
+			NOT = { average_consciousness = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { average_consciousness = 4 }
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 6
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 8
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 9
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 2
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.5
+			publishing_rights = firewall_publishing
+		}
+		modifier = {
+			factor = 0.8
+			publishing_rights = unregulated_publishing
+		}
+	}
+	option = {
+		name = "EVT_880211_B"
+		random_country = {
+			country_event = 880212
+		}
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = unregulated_publishing
+			}
+		}
+	}	
+	option = {
+		name = "EVT_880211_A"
+		random_country = {
+			country_event = 880212
+		}
+		any_greater_power = { limit = { rank = 1 } badboy = 1 country_event = 880212 } 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = unregulated_publishing
+			}
+		}
+	}
+	option = {
+		name = "EVT_880211_A"
+		random_country = {
+			country_event = 880212
+		}
+		any_greater_power = { limit = { rank = 2 NOT = { rank = 1 } } badboy = 1 country_event = 880212 } 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = unregulated_publishing
+			}
+		}
+	}
+	option = {
+		name = "EVT_880211_A"
+		random_country = {
+			country_event = 880212
+		}
+		any_greater_power = { limit = { rank = 3 NOT = { rank = 2 } } badboy = 1 country_event = 880212 } 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = unregulated_publishing
+			}
+		}
+	}
+	option = {
+		name = "EVT_880211_A"
+		random_country = {
+			country_event = 880212
+		}
+		any_greater_power = { limit = { rank = 4 NOT = { rank = 3 } } badboy = 1 country_event = 880212 } 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = unregulated_publishing
+			}
+		}
+	}
+	option = {
+		name = "EVT_880211_A"
+		random_country = {
+			country_event = 880212
+		}
+		any_greater_power = { limit = { rank = 5 NOT = { rank = 4 } } badboy = 1 country_event = 880212 } 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = unregulated_publishing
+			}
+		}
+	}	
+	option = {
+		name = "EVT_880211_A"
+		random_country = {
+			country_event = 880212
+		}
+		any_greater_power = { limit = { rank = 6 NOT = { rank = 5 } } badboy = 1 country_event = 880212 } 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = unregulated_publishing
+			}
+		}
+	}	
+	
+}
+
+country_event = {
+	id = 880212
+	title = "EVT_880212_NAME" # IT Leaks causes Ruling Party Scandal
+	desc = "EVT_880212_DESC"
+	picture = "cyber_warfare"
+	is_triggered_only = yes 
+	
+	option = {
+		name = "EVT_880212_A"
+		add_country_modifier = {
+			name = party_scandal_evidence
+			duration = 365
+		}
+	}	
+}

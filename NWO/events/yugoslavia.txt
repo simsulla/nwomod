@@ -46,9 +46,9 @@ country_event = {
   trigger = {
     tag = YUG
 	year = 1948 NOT = { year = 1951 }
-    NOT = { YUG = { vassal_of = RUS }
+    NOT = { YUG = { vassal_of = SUN }
     }
-    exists = RUS
+    exists = SUN
     
   }
 
@@ -57,17 +57,17 @@ country_event = {
   option = {
     name = EVT_8022724_A
 	any_pop = { militancy = 0.3 consciousness = 0.6 }
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	add_country_modifier = { name = comecon_excluded duration = -1 }
-	RUS = { country_event =  { id = 8022726 days = 30 } }
+	SUN = { country_event =  { id = 8022726 days = 30 } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8022724_B
 	any_pop = { militancy = 1.0 consciousness = 0.5 }
-	relation = { who = RUS value = 100 } 
-	RUS = { country_event = 8022725 }
+	relation = { who = SUN value = 100 } 
+	SUN = { country_event = 8022725 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -98,7 +98,7 @@ country_event = {
 	relation = { who = YUG value = -100 } 
 	diplomatic_influence = { who = YUG value = -100 } 
 	set_global_flag = tito_stalin_split 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
 	ai_chance = { factor = 100 }
   }
 
@@ -106,7 +106,7 @@ country_event = {
     name = EVT_8022726_B
 	any_pop = { militancy = 1.5 consciousness = 1 }
 	set_global_flag = tito_stalin_split 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
 	relation = { who = YUG value = -50 } 
 	diplomatic_influence = { who = YUG value = -50 } 
 	ai_chance = { factor = 0 }
@@ -131,7 +131,7 @@ country_event = {
   option = {
     name = EVT_8022727_A
 	any_pop = { militancy = -0.5 consciousness = -0.5 }
-	RUS = { country_event = 8022728 }
+	SUN = { country_event = 8022728 }
   }
 }
 country_event = {
@@ -157,7 +157,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1948 NOT = { year = 1952 }
 	is_our_vassal = YUG
     
@@ -169,7 +169,7 @@ country_event = {
   option = {
     name = EVT_8022731_A
 	any_pop = { militancy = -0.7 consciousness = -0.5 }
-	RUS = { country_event = 8225000 } # dissolution_of_the_eastern_bloc.txt
+	SUN = { country_event = 8225000 } # dissolution_of_the_eastern_bloc.txt
 	YUG = { country_event = 8022734 } 
   }
 }
@@ -183,7 +183,7 @@ country_event = {
   trigger = {
     tag = YUG
 	year = 1949 NOT = { year = 1952 }
-	NOT = { vassal_of = RUS }
+	NOT = { vassal_of = SUN }
 	war = no
   }
 
@@ -192,7 +192,7 @@ country_event = {
   option = {
     name = EVT_8022732_A
 	any_pop = { militancy = -0.7 consciousness = -0.5 }
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }
 country_event = {
@@ -224,7 +224,7 @@ country_event = {
 	release_vassal = POL 
 	release_vassal = AUS 
 	release_vassal = GRE 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }
 country_event = {
@@ -261,15 +261,15 @@ country_event = {
 	any_pop = { militancy = -0.5 consciousness = -0.8 }
 	relation = { who = USA value = 50 } 
 	relation = { who = FRA value = 50 } 
-	relation = { who = ENG value = 50 } 
+	relation = { who = GBR value = 50 } 
 	relation = { who = GER value = 50 } 
-	relation = { who = RUS value = -100 } 
+	relation = { who = SUN value = -100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8022729_B
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -326,6 +326,7 @@ country_event = {
 	release_vassal = BOS
 	release_vassal = MON
 	release_vassal = MAC
+	random_country = { limit = { NOT = { exists = BUL } } release_vassal = BUL }
 	ai_chance = { factor = 0 }
   }
 
@@ -375,7 +376,7 @@ country_event = {
   trigger = {
     tag = YUG
     has_global_flag = autumn_of_nations
-	OR = { vassal_of = RUS is_vassal = no }
+	OR = { vassal_of = SUN is_vassal = no }
 	government = proletarian_dictatorship
 	war = no
   }
@@ -389,11 +390,12 @@ country_event = {
 	release = CRO
 	release = MAC
 	release = BOS
+	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	MAC = {	government = democracy country_event = 800054 }
 	BOS = { release = RSR }
-	RSR = { 786 = { secede_province = BOS } } # Tuzla 
+	RSR = { 786 = { state_scope = { any_owned = { secede_province = BOS } } } } # Tuzla 
 	create_alliance = RSR
 	relation = { who = RSR value = 200 }
 	relation = { who = BOS value = -200 }
@@ -414,6 +416,7 @@ country_event = {
 	release = CRO
 	release = BOS
 	release = MAC	
+	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	MAC = {	government = democracy country_event = 800054 }
@@ -431,6 +434,7 @@ country_event = {
 	release = SLO
 	release = CRO
 	release = BOS
+	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	BOS = {	government = populist_dictatorship country_event = 800050 }
@@ -457,7 +461,7 @@ country_event = {
 	any_pop = { militancy = 0.5 consciousness = 0.8 }
 	government = populist_dictatorship country_event = 800050
 	release_vassal = HZB
-	HZB = { 2688 = { secede_province = BOS } }
+	HZB = { 2688 = { state_scope = { any_owned = { secede_province = BOS } } } }
 	# release = RSR in calling event
 	casus_belli = { target = RSR type = annex_core_country months = 12 }
 	war = { target = RSR attacker_goal = { casus_belli = annex_core_country country = RSR } defender_goal = { casus_belli = status_quo } }
@@ -649,7 +653,6 @@ country_event = {
 	# EVT_8022748_A;Sign the Agreement
 	government = democracy country_event = 800054
 	prestige = 10
-	any_country = { limit = { tag = RSR owns = 789 } 789 = { secede_province = BOS } }
 	ai_chance = { factor = 100 }
   }
 
@@ -662,7 +665,6 @@ country_event = {
 	leave_alliance = CRO
 	release_vassal = RSR
 	release = HZB
-	any_country = { limit = { tag = RSR owns = 789 } 789 = { secede_province = HZB } }
 	CRO = { create_vassal = HZB } 
 	ai_chance = { factor = 0 }
   }

@@ -39,7 +39,7 @@ country_event = {
 
   option = {
     name = EVT_8012622_A
-	relation = { who = ENG value = -50 } 
+	relation = { who = GBR value = -50 } 
 	government = nationalist_dictatorship country_event = 800050
 	ruling_party_ideology = nationalist
 	ai_chance = { factor = 100 }
@@ -47,7 +47,7 @@ country_event = {
 
   option = {
     name = EVT_8012622_B
-	relation = { who = ENG value = 50 } 
+	relation = { who = GBR value = 50 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -112,7 +112,7 @@ country_event = { # Botswana Independence
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1966 NOT = { year = 1990 }
 	owns = 2074
 	NOT = { exists = BOT }
@@ -152,7 +152,7 @@ country_event = { # Lesotho Independence
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	is_our_vassal = LES
 	OR = { 
 		exists = BOT
@@ -187,7 +187,7 @@ country_event = { # Swaziland Independence
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	is_our_vassal = SWA
 	OR = { 
 		exists = BOT

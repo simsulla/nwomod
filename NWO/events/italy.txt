@@ -46,14 +46,17 @@ country_event = {
     name = EVT_8007734_A
 	any_pop = {  consciousness = 1 }
 	set_country_flag = moderate_ICP 
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 0.8 }
   }
 
   option = {
     name = EVT_8007734_B
 	any_pop = { militancy = 1.0 }
 	set_country_flag = radical_ICP 
-	ai_chance = { factor = 0 }
+	ai_chance = { 
+		factor = 0.2 
+		modifier = { factor = 10 pop_majority_ideology = communist } 
+	}
   }
 }
 country_event = {
@@ -74,15 +77,21 @@ country_event = {
 
   option = {
     name = EVT_8007735_A
-	ai_chance = { factor = 100 }
 	any_pop = {  consciousness = 1 }
 	set_country_flag = very_moderate_ICP 
+	ai_chance = { 
+		factor = 0.8
+	}
   }
 
   option = {
     name = EVT_8007735_B
 	any_pop = { militancy = 0.5 }
 	set_country_flag = radical_ICP 
+	ai_chance = { 
+		factor = 0.2
+		modifier = { factor = 10 pop_majority_ideology = communist } 
+	}
   }
 }
 country_event = {
@@ -141,7 +150,7 @@ country_event = {
   trigger = {
     tag = ITA
 	year = 1950 NOT = { year = 1952 }
-	has_country_flag  = very_radical_ICP
+	has_country_flag  = radical_ICP
 	OR = { government = democracy government = hms_government }
   }
 
@@ -149,22 +158,22 @@ country_event = {
 
   option = {
     name = EVT_8007738_A
-	any_pop = {  consciousness = 2 }
-	ai_chance = { factor = 100 }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.4 value = communist } }
+	ai_chance = { factor = 0.7 }
   }
 
   option = {
     name = EVT_8007738_B
-	any_pop = {  consciousness = 1 }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.3 value = communist } }
 	country_event = 8007741 
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 0.3 }
   }
 
   option = {
     name = EVT_8007738_C
-	any_pop = { militancy = -0.5 }
-	country_event = 8007742 
-	ai_chance = { factor = 0 }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.4 value = communist } }
+	country_event = { id = 8007742 days = 10 }
+	ai_chance = { factor = 0.1 }
   }
 }
 country_event = {
@@ -179,27 +188,28 @@ country_event = {
 	year = 1960 NOT = { year = 1962 }
 	has_country_flag  = very_moderate_ICP
 	OR = { government = democracy government = hms_government }
+	NOT = { ruling_party_ideology = communist }
   }
 
   mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8007739_A
-	any_pop = {  consciousness = 2 }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.4 value = communist } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007739_B
-	any_pop = {  consciousness = 1 }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.3 value = communist } }
 	country_event = 8007741 
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8007739_C
-	any_pop = { militancy = -0.5 }
-	country_event = 8007742 
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.4 value = communist } }
+	country_event = { id = 8007742 days = 10 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -213,7 +223,8 @@ country_event = {
   trigger = {
     tag = ITA
 	year = 1950 NOT = { year = 1980 }
-	has_country_flag  = very_radical_ICP
+	has_country_flag  = radical_ICP
+	NOT = { ruling_party_ideology = communist }
 	OR = { government = democracy government = hms_government }
   }
 
@@ -221,7 +232,7 @@ country_event = {
 
   option = {
     name = EVT_8007740_A
-	any_pop = { militancy = 2.0  consciousness = 1 }
+	any_pop = { limit = { pop_majority_ideology = communist } militancy = 2.0  consciousness = 1 }
 	relation = { who = USA value = 100 } 
 	country_event = 8007742 
   }
@@ -235,29 +246,36 @@ country_event = {
 
   option = {
     name = EVT_8007741_A
-	any_pop = { militancy = 1.0  consciousness = 1 }
-	country_event = { id = 8007743 days = 7 }
+	any_pop = { limit = { pop_majority_ideology = communist }  militancy = 5 }
+	# get ther by election giving communist rule.. country_event = { id = 8007743 days = 7 }
   }
 }
-country_event = {
+country_event = { 
   id = 8007742
-  title = EVT_8007742_NAME
+  title = EVT_8007742_NAME #Dispersion of Italian Communist Party
   desc = EVT_8007742_DESC
   picture = "nwo2_italian_communist_party"
   is_triggered_only = yes
 
   option = {
     name = EVT_8007742_A
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }
+	any_pop = { limit = { pop_majority_ideology = communist } militancy = 2.0  consciousness = 1 }
+	any_pop = { limit = { strata = poor }  ideology = { factor = -0.3 value = communist } }
   }
 }
 country_event = {
   id = 8007743
-  title = EVT_8007743_NAME
+  title = EVT_8007743_NAME # Italian Communist Party at helm
   desc = EVT_8007743_DESC
   picture = "nwo2_italian_communist_party"
-  is_triggered_only = yes
 
+  trigger = {
+    tag = ITA
+	year = 1950 NOT = { year = 1980 }
+	ruling_party_ideology = communist
+	OR = { government = democracy government = hms_government }
+  }
+  
   option = {
     name = EVT_8007743_A
 	USA = { country_event = 8007744 }
@@ -272,7 +290,7 @@ country_event = {
 
   option = {
     name = EVT_8007744_A
-	RUS = { country_event = 8007745 }
+	SUN = { country_event = 8007745 }
 	ai_chance = { factor = 100 }
   }
 
@@ -288,20 +306,19 @@ country_event = {
   title = EVT_8007745_NAME
   desc = EVT_8007745_DESC
   picture = "nwo2_italian_communist_party"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
 
   option = {
     name = EVT_8007745_A
 	ITA = { country_event = 8007747 }
-	ai_chance = { factor = 100 }
+	ai_chance = { factor = 90 }
   }
 
   option = {
     name = EVT_8007734_B
-	any_pop = { militancy = 1  consciousness = 2 }
 	ITA = { country_event = 8007748 }
-	ai_chance = { factor = 0 }	
+	ai_chance = { factor = 10 }	
   }
 }
 country_event = {
@@ -313,15 +330,14 @@ country_event = {
 
   option = {
     name = EVT_8007746_A
-	# infamy unsanctioned
-	war = { target = ITA attacker_goal = { casus_belli = install_democracy } defender_goal = { casus_belli = status_quo } } 
-	any_pop = {  consciousness = 2 }
+	ITA = { country_event = 8007748 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8007746_B
-	any_pop = { militancy = 0.7 }
+	prestige = -10
+	any_pop = { militancy = 0.1 }
 	ai_chance = { factor = 0 }	
   }
 }
@@ -335,10 +351,10 @@ country_event = {
   option = {
     name = EVT_8007747_A
 	any_pop = { militancy = 1.0 }
-	create_alliance = RUS 
-	RUS = { military_access = THIS } 
+	create_alliance = SUN 
+	SUN = { military_access = THIS } 
 	government = proletarian_dictatorship country_event = 800052
-	RUS = { country_event = 8225000 } # dissolution_of_the_eastern_bloc.txt
+	SUN = { country_event = 8225000 } # dissolution_of_the_eastern_bloc.txt
 	USA = { country_event = 8007746 }
   }
 }
@@ -350,11 +366,113 @@ country_event = {
   is_triggered_only = yes # ITA
 
   option = {
-    name = EVT_8007748_A
-	any_pop = { militancy = 2.5 }
+    name = EVT_8007748_A # civil war
+	any_owned = {
+		limit = {
+			NOT = {
+				OR = {
+					region = SID_720
+					region = SID_726
+					region = SID_744
+					region = SID_749
+				}
+			}
+		}
+		secede_province = RSI
+	}
+	749 = { secede_province = RSI }
+	any_owned = {
+		limit = {
+			NOT = {
+				OR = {
+					region = SID_720
+					region = SID_726
+				}
+			}
+		}
+		change_controller = RSI
+	}
+	RSI = {
+		capital = 574
+		any_pop = {
+			consciousness = -5
+			militancy = -5
+		}
+	}
+	soldiers = { militancy = 8 }
+	war = { target = RSI attacker_goal = { casus_belli = civil_war } defender_goal =  { casus_belli = civil_war } }
+	create_alliance = SUN
+	SUN = { military_access = THIS } 
+	ai_chance = { factor = 0.9 }
+  }
+  option = {
+    name = EVT_8007748_B # civil war
+	any_owned = {
+		limit = {
+			NOT = {
+				OR = {
+					region = SID_720
+					region = SID_726
+					region = SID_744
+					region = SID_749
+				}
+			}
+		}
+		secede_province = RSI
+	}
+	749 = { secede_province = RSI }
+	any_owned = {
+		limit = {
+			NOT = {
+				OR = {
+					region = SID_720
+					region = SID_726
+				}
+			}
+		}
+		change_controller = RSI
+	}
+	RSI = {
+		capital = 574
+		any_pop = {
+			consciousness = -5
+			militancy = -5
+		}
+	}
+	soldiers = { militancy = 8 }
+	war = { target = RSI attacker_goal = { casus_belli = civil_war } defender_goal =  { casus_belli = civil_war } }
+	change_tag_no_core_switch = RSI
 	create_alliance = USA 
 	USA = { military_access = THIS } 
-	RUS  = { country_event = 8225001 } 
+	ai_chance = { factor = 0.9 }
+  }
+  option = {
+    name = EVT_8007748_C
+	any_pop = { militancy = 2.5 }
+	government = presidential_dictatorship country_event = 800050
+	create_alliance = USA 
+	USA = { military_access = THIS } 
+	SUN  = { country_event = 8225001 } 
+	ai_chance = { factor = 0.1 }
+  }
+}
+country_event = {
+  id = 8007749
+  title = EVT_8007749_NAME
+  desc = EVT_8007749_DESC
+  picture = "nwo2_italian_union"
+  fire_only_once = yes
+  
+  trigger = {
+	tag = RSI
+	war = no
+	NOT = { exists = ITA }
+  }
+  
+  option = {
+    name = EVT_8007749_A
+	capital = 749
+	change_tag = ITA
   }
 }
 country_event = {

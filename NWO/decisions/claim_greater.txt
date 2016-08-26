@@ -2773,5 +2773,152 @@ political_decisions = {
 		}
 
 	}
-		
+	
+	claim_greater_paraguay = {
+			picture = "claim_greater_paraguay"
+			potential = {
+					tag = PRG
+					NOT = { has_country_flag = claim_greater_paraguay }
+			}
+
+			allow = {
+				   tag = PRG
+					part_of_sphere = no
+					has_unclaimed_cores = no
+					NOT = {	
+						has_country_flag = claim_greater_paraguay
+						ruling_party_ideology = socialist
+						ruling_party_ideology = progressive
+						ruling_party_ideology = liberal 
+					}
+					is_vassal = no
+					prestige = 45
+					OR = {
+							ruling_party_ideology = populist
+							jingoism = 24
+					}
+			}
+
+			effect = {
+					badboy = 12
+					set_country_flag = claim_greater_paraguay
+					2420 = { 
+							add_core = PRG
+					}
+					2554 = { 
+							add_core = PRG
+					}
+					2366 = { 
+							add_core = PRG
+					}
+					2367 = { 
+							add_core = PRG
+					}
+			}
+
+	}
+	abandon_claim_greater_paraguay = {
+			picture = "claim_greater_afghanistan"
+			potential = {
+					tag = PRG
+					has_country_flag = claim_greater_paraguay
+					OR = {
+							government = democracy
+							government = hms_government
+					}
+			}
+
+			allow = {
+					war = no
+					is_vassal = no
+					has_country_flag = claim_greater_paraguay
+					OR = {
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal
+					}
+			}
+
+			effect = {
+					prestige = 10
+					any_pop = {
+							consciousness = 1
+					}
+					clr_country_flag = claim_greater_paraguay
+					all_core = { 
+							limit = { NOT = { owned_by = THIS } is_primary_culture = yes }
+							remove_core = PRG
+					}
+			}
+
+	}
+	
+	claim_greater_poland = {
+			picture = "claim_greater_poland"
+			potential = {
+					tag = POL
+					NOT = { has_country_flag = claim_greater_poland }
+			}
+
+			allow = {
+				   tag = POL
+					part_of_sphere = no
+					has_unclaimed_cores = no
+					NOT = {	
+						has_country_flag = claim_greater_poland
+						ruling_party_ideology = socialist
+						ruling_party_ideology = progressive
+						ruling_party_ideology = liberal 
+					}
+					is_vassal = no
+					prestige = 45
+					OR = {
+							ruling_party_ideology = populist
+							jingoism = 24
+					}
+			}
+
+			effect = {
+					badboy = 12
+					set_country_flag = claim_greater_poland
+					country_event = 8224000
+			}
+
+	}
+	abandon_claim_greater_poland = {
+			picture = "claim_greater_afghanistan"
+			potential = {
+					tag = POL
+					has_country_flag = claim_greater_poland
+					OR = {
+							government = democracy
+							government = hms_government
+					}
+			}
+
+			allow = {
+					war = no
+					is_vassal = no
+					has_country_flag = claim_greater_poland
+					OR = {
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal
+					}
+			}
+
+			effect = {
+					prestige = 10
+					any_pop = {
+							consciousness = 1
+					}
+					clr_country_flag = claim_greater_poland
+					all_core = { 
+							limit = { NOT = { owned_by = THIS } is_primary_culture = yes }
+							remove_core = POL
+					}
+			}
+
+	}	
+	
 }

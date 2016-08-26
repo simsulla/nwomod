@@ -1,3 +1,117 @@
+#AI Countries involved in an Alliance will call in their GP allies
+#if the GP gets involved in the war it will in its turn coll it's allies.
+country_event = {
+	id = 96101
+	title = EVTNAME96001
+	desc = EVTDESC96001
+
+	trigger = {
+		ai = yes
+		war = yes
+		NOT = { has_country_flag = calling_all_allies }
+		OR = {
+			AND = {
+				is_greater_power = yes
+				OR = { 
+					has_country_modifier = sco_pact
+					has_country_modifier = csto_alliance
+					has_country_modifier = warsaw_pact
+					has_country_modifier = rio_pact
+					has_country_modifier = alliance_nato
+					has_country_modifier = anzus_alliance
+				}
+			}
+			AND = { 
+				has_country_modifier = sco_pact
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = sco_pact
+				}
+			}
+			AND = { 
+				has_country_modifier = csto_alliance
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = csto_alliance
+				}
+			}
+			AND = { 
+				has_country_modifier = warsaw_pact
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = warsaw_pact
+				}
+			}
+			AND = { 
+				has_country_modifier = rio_pact
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = rio_pact
+				}
+			}
+			AND = { 
+				has_country_modifier = anzus_alliance
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = anzus_alliance
+				}
+			}
+			AND = { 
+				has_country_modifier = alliance_nato
+				any_greater_power = { 
+					NOT = { war_with = THIS }
+					has_country_modifier = alliance_nato
+				}
+			}			
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = EVTOPTA96001
+		set_country_flag = calling_all_allies # remove flag on peace 96002
+		any_country = {
+			limit = { 
+				OR = {
+					AND = { THIS = { has_country_modifier = sco_pact } has_country_modifier = sco_pact }
+					AND = { THIS = { has_country_modifier = csto_alliance } has_country_modifier = csto_alliance }
+					AND = { THIS = { has_country_modifier = warsaw_pact } has_country_modifier = warsaw_pact }
+					AND = { THIS = { has_country_modifier = rio_pact } has_country_modifier = rio_pact }
+					AND = { THIS = { has_country_modifier = anzus_alliance } has_country_modifier = anzus_alliance }
+					AND = { THIS = { has_country_modifier = alliance_nato } has_country_modifier = alliance_nato }
+				}
+			}
+			create_alliance = THIS
+		}
+		random_country = {
+			limit = {
+				is_greater_power = yes
+				OR = {
+					AND = { THIS = { has_country_modifier = sco_pact } has_country_modifier = sco_pact }
+					AND = { THIS = { has_country_modifier = csto_alliance } has_country_modifier = csto_alliance }
+					AND = { THIS = { has_country_modifier = warsaw_pact } has_country_modifier = warsaw_pact }
+					AND = { THIS = { has_country_modifier = rio_pact } has_country_modifier = rio_pact }
+					AND = { THIS = { has_country_modifier = anzus_alliance } has_country_modifier = anzus_alliance }
+					AND = { THIS = { has_country_modifier = alliance_nato } has_country_modifier = alliance_nato }
+				}
+				war = no
+			}
+			THIS = {
+				war = {
+					# TODO target required by the validator but defaults to REB
+					target = REB
+					attacker_goal = {
+						casus_belli = call_allies_cb
+					}
+					call_ally = yes
+				}
+			}
+		}
+	}
+}
 country_event = {
   id = 8215000
   title = EVT_8215000_NAME
@@ -5,9 +119,9 @@ country_event = {
   picture = "nwo2_western_allies"
 
   trigger = {
-    OR = { tag = ENG tag = USA tag = FRA }
-	NOT = { has_country_flag = reject_western_allies }
-	NOT = { OR = {  alliance_with = USA alliance_with = ENG } }
+    OR = { tag = GBR tag = USA tag = FRA }
+	NOT = { has_country_flag = western_allies }
+	NOT = { OR = {  alliance_with = USA alliance_with = GBR } }
     year = 1946 NOT = { year = 1960 }
 	NOT = { has_global_flag = alliance_nato }
     
@@ -27,15 +141,16 @@ country_event = {
 		create_alliance = THIS
     }
     random_country = {
-        limit = { NOT = { tag = THIS } tag = ENG ai = yes }
+        limit = { NOT = { tag = THIS } tag = GBR ai = yes }
 		create_alliance = THIS
     }
+	set_country_flag = western_allies 
 	ai_chance = { factor = 100 }
   }
   
   option = {
     name = EVT_8215000_B
-	set_country_flag = reject_western_allies 
+	set_country_flag = western_allies 
 	ai_chance = { factor = 0 }
   }
 }
@@ -47,7 +162,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-	tag = RUS
+	tag = SUN
     year = 1946 NOT = { year = 1955 }
   }
 
@@ -89,7 +204,7 @@ country_event = {
   trigger = {
     tag = USA
     year = 1944 NOT = { year = 1990 }
-    GER = { war_with = RUS }
+    GER = { war_with = SUN }
 	war_with = GER
   }
 
@@ -97,8 +212,8 @@ country_event = {
 
   option = {
     name = EVT_8215003_A
-	relation = { who = RUS value = 100 }
-	RUS = { country_event = 8215004 }
+	relation = { who = SUN value = 100 }
+	SUN = { country_event = 8215004 }
   }
 }
 country_event = {
@@ -155,7 +270,7 @@ country_event = { # Maintaining security in Europe
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
      year = 1946 NOT = { year = 1991 }
 	war = no
     
@@ -166,7 +281,7 @@ country_event = { # Maintaining security in Europe
   option = {
     name = EVT_8215011_A
 	any_country = { 
-		limit = { war = no government = proletarian_dictatorship NOT = { tag = RUS } exists = yes }
+		limit = { war = no government = proletarian_dictatorship NOT = { tag = SUN } exists = yes }
 		country_event = 8215013
 	}
 	ai_chance = { factor = 100 }
@@ -192,7 +307,7 @@ country_event = {
 	NOT = { government = proletarian_dictatorship }
     year = 1946 NOT = { year = 1949 }
     has_global_flag = ww3
-    war_with = RUS
+    war_with = SUN
 	NOT = { has_country_flag = western_allies_in_war }
 	war = no
   }
@@ -201,9 +316,9 @@ country_event = {
 
   option = {
     name = EVT_8215012_A
-	create_alliance = USA 
+	#create_alliance = USA 
 	relation = { who = USA value = 80 } 
-	relation = { who = ENG value = 80 } 
+	relation = { who = GBR value = 80 } 
 	relation = { who = FRA value = 80 } 
 	set_country_flag = western_allies_in_war 
 	ai_chance = { factor = 100 }
@@ -211,7 +326,7 @@ country_event = {
 
   option = {
     name = EVT_8215012_B
-	relation = { who = RUS value = 50 } 
+	relation = { who = SUN value = 50 } 
 	relation = { who = USA value = -150 } 
 	set_country_flag = western_allies_in_war 
 	ai_chance = { factor = 100 }	
@@ -226,14 +341,15 @@ country_event = {
  
   option = {
     name = EVT_8215013_A
-	create_alliance = RUS 
+	relation = { who = SUN value = 150 } 
+	#create_alliance = SUN 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8215013_B
 	relation = { who = USA value = 50 } 
-	relation = { who = RUS value = -150 } 
+	relation = { who = SUN value = -150 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -277,7 +393,7 @@ country_event = {
   picture = "nwo2_nato"
 
   trigger = {
-    OR = { tag = BEL tag = LUX tag = FRA tag = NET tag = ENG }
+    OR = { tag = BEL tag = LUX tag = FRA tag = NET tag = GBR }
     year = 1948 NOT = { year = 1960 }
 	has_global_flag = teaty_of_brussels
   }
@@ -347,7 +463,7 @@ country_event = {
 
   option = {
     name = EVT_8215023_A
-	country_event = 8215024
+	GER = { country_event = 8215024 }
 	ai_chance = { factor = 100 }
   }
 
@@ -383,7 +499,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
     year = 1955 NOT = { year = 1960 }
 	GER = { has_country_flag = invitation_to_nato }
   }
@@ -415,7 +531,7 @@ country_event = {
     year = 1955 NOT = { year = 1960 }
     NOT = { has_global_flag = isolationist_ussr }
     NOT = { has_global_flag = tito_soviet_split }
-    NOT = { THIS = { alliance_with = RUS } }
+    NOT = { THIS = { alliance_with = SUN } }
 	NOT = { has_country_flag = invitation_to_warsaw_pact }
 	NOT =  { capital_scope = { has_province_modifier = neutrality } }
   }

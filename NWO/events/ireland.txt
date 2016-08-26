@@ -8,7 +8,7 @@ country_event = {
   trigger = {
     tag = IRE
 	year = 1954 NOT = { year = 1956 }
-    NOT = { IRE = { war_with = ENG } }
+    NOT = { IRE = { war_with = GBR } }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -33,7 +33,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1956 NOT = { year = 1957 }
     NOT = { war_with = IRE }
   }
@@ -62,10 +62,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1957 NOT = { year = 1958 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
   }
 
@@ -95,7 +95,7 @@ country_event = {
     tag = IRE
 	year = 1958 NOT = { year = 1959 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
   }
 
@@ -112,7 +112,7 @@ country_event = {
     name = EVT_8007433_B
 	ai_chance = { factor = 0 }
 	any_pop = { limit = { culture = irish }  consciousness = 2 }
-	relation = { who = ENG value = -50 }
+	relation = { who = GBR value = -50 }
 	set_global_flag = ira_is_ignored 
   }
 
@@ -121,7 +121,7 @@ country_event = {
 	ai_chance = { factor = 0 }
 	any_pop = { militancy = 2.5 }
 	badboy = 15 
-	relation = { who = ENG value = -100 }
+	relation = { who = GBR value = -100 }
 	set_global_flag = ira_is_supported 
   }
 }
@@ -133,10 +133,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1958 NOT = { year = 1959 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
   }
 
@@ -161,7 +161,7 @@ country_event = {
   title = EVT_8007435_NAME
   desc = EVT_8007435_DESC
   picture = "nwo2_irish_republican_army"
-  is_triggered_only = yes # ENG
+  is_triggered_only = yes # GBR
 
   option = {
     name = EVT_8007435_A
@@ -200,10 +200,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1959 NOT = { year = 1960 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
     NOT = {
     exists = NIR
@@ -231,7 +231,7 @@ country_event = {
   title = EVT_8007437_NAME
   desc = EVT_8007437_DESC
   picture = "nwo2_irish_republican_army"
-  is_triggered_only = yes # ENG
+  is_triggered_only = yes # GBR
 
  option = {
     name = EVT_8007437_A
@@ -270,10 +270,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1960 NOT = { year = 1961 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
     NOT = {
     exists = NIR
@@ -301,7 +301,7 @@ country_event = {
   title = EVT_8007439_NAME
   desc = EVT_8007439_DESC
   picture = "nwo2_irish_republican_army"
-  is_triggered_only = yes # ENG
+  is_triggered_only = yes # GBR
 
  option = {
     name = EVT_8007437_A
@@ -340,10 +340,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1961 NOT = { year = 1962 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
     NOT = {
     exists = NIR
@@ -367,7 +367,7 @@ country_event = {
   trigger = {
     tag = NIR
 	year = 1959 NOT = { year = 1960 }
-    NOT = { IRE = { war_with = ENG } }
+    NOT = { IRE = { war_with = GBR } }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -383,7 +383,7 @@ country_event = {
     name = EVT_8007441_B
 	ai_chance = { factor = 0 }
 	any_pop = { limit = { culture = irish }  consciousness = 2 }
-	ENG = { country_event =  { id = 8007443 days = 1 } } 
+	GBR = { country_event =  { id = 8007443 days = 1 } } 
   }
 }
 country_event = {
@@ -410,7 +410,7 @@ country_event = {
   option = {
     name = EVT_8007442_C
 	any_pop = { militancy = 1.5 }
-	ENG = { country_event =  { id = 8007451 days = 1 } }
+	GBR = { country_event =  { id = 8007451 days = 1 } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -422,10 +422,10 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = ENG
+    tag = GBR
 	year = 1960 NOT = { year = 1961 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
   }
 
@@ -484,7 +484,7 @@ country_event = {
     tag = NIR
     year = 1960 NOT = { year = 1961 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
   }
 
@@ -506,7 +506,7 @@ country_event = {
     tag = NIR
 	year = 1954 NOT = { year = 1990 }
     NOT = {
-    IRE = { war_with = ENG }
+    IRE = { war_with = GBR }
     }
   }
 

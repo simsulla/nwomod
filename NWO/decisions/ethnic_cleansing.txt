@@ -5,25 +5,23 @@ political_decisions = {
 			alert = no
 			potential = {
 				government = populist_dictatorship
-				NOT = { has_country_flag = ethnic_cleansing }
+				NOT = { has_country_flag = ethnic_cleansed }
 			}
 
 			allow = {
 				jingoism = 24
 				wars_of_national_liberation = 1
 				NOT = { badboy = 1 }
-				war = no
+				war = yes
 			}
 
 			effect = {
-				set_country_flag = ethnic_cleansing
 				set_country_flag = ethnic_cleansed
-				badboy = 20
-				add_country_modifier = {  name = ethnic_cleansing duration = 90 } 
-				any_neighbor_country = { limit = { NOT = { is_culture_group  = THIS } } add_country_modifier = { name = neighbor_ethnic_cleansing duration = 90 } }
+				badboy = 5
+				any_owned = { limit = { controlled_by = THIS } add_province_modifier = {  name = ethnic_cleansing duration = 120 } }
 			}
 			ai_will_do = { 
-				factor = 1 
+				factor = 1
 				modifier = { has_country_flag = ethnic_cleansed factor = 0  } 
 				modifier = {  NOT = { OR = { tag = RWA tag = RSR tag = SRK tag = SER tag = CRO tag = BOS } } factor = 0 } 
 			}
@@ -33,17 +31,17 @@ political_decisions = {
 			picture = "ethnic_cleansing"
 			
 			potential = {
-				has_country_flag = ethnic_cleansing
+				has_country_flag = ethnic_cleansed
 			}
 
 			allow = {
-				NOT = { has_country_modifier = ethnic_cleansing }
 				war = no
 			}
 
 			effect = {
-				badboy = -2
-				clr_country_flag = ethnic_cleansing
+				badboy = -1
+				clr_country_flag = ethnic_cleansed
+				any_owned = { remove_province_modifier = ethnic_cleansing }
 			}
 			ai_will_do = { factor = 1 }
 	}

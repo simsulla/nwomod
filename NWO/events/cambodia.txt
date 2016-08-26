@@ -49,6 +49,7 @@ country_event = {
   trigger = {
     tag = CAM
 	year = 1975 NOT = { year = 1980 }
+	DAI = { government = proletarian_dictatorship }
     NOT = { government = proletarian_dictatorship } 
   }
 
@@ -79,8 +80,10 @@ country_event = {
   option = {
     name = EVT_8003124_A
 	any_pop = { militancy = 2.5  consciousness = 2 }
-	add_country_modifier = { name = ethnic_cleansing duration = 365 }
-	add_country_modifier = { name = war_torn duration = 365 }
+	1364 = { 
+		add_province_modifier = { name = ethnic_cleansing duration = 365 }
+		add_province_modifier = { name = war_torn duration = 365 }
+	}
   }
 }
 country_event = {

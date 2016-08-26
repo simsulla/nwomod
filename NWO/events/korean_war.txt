@@ -1,30 +1,49 @@
 country_event = {
-  id = 8500800
-  title = EVT_8500800_NAME
-  desc = EVT_8500800_DESC
+  id = 8500824
+  title = EVT_8500824_NAME
+  desc = EVT_8500824_DESC
   picture = "nwo2_kim_il_sung_speaking"
   fire_only_once = yes
 
   trigger = {
-    tag = NKO
+    tag = SUN
 	year = 1949 NOT = { year = 1960 }
-    NOT = { war_with = SKO }
+	war = no
+    exists = NKO
+    is_our_vassal = NKO
     exists = SKO
 	exists = CHI
 	CHI = { government = proletarian_dictatorship }
 	CHI = { war = no }
-	is_vassal = yes
-    
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 6  }
+
+  option = {
+    name = EVT_8500824_A
+	release_vassal = NKO
+	NKO = { country_event = 8500800 } 
+	any_pop = { consciousness = 2 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8500824_B
+	prestige = -50
+    ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8500800
+  title = EVT_8500800_NAME
+  desc = EVT_8500800_DESC
+  picture = "nwo2_kim_il_sung_speaking"
+  is_triggered_only = yes  # NKO
 
   option = {
     name = EVT_8500800_A
-	ai_chance = { factor = 100 }
-	overlord = { release_vassal = THIS } # RUS release NKO
 	SKO = { country_event =  8500801 } 
-	any_pop = {  consciousness = 2 }
+	ai_chance = { factor = 100 }
   }
 
   option = {
@@ -42,9 +61,9 @@ country_event = {
 
   option = {
     name = EVT_8500801_A
-	random_country = { limit = { is_our_vassal = THIS } release_vassal = THIS } 
 	relation = { who = USA value = 100 }
-	NKO = { country_event =  8500802 } 
+	any_owned = { add_core = NKO }
+	NKO = { country_event = 8500802 } 
   }
 }
 country_event = {
@@ -59,8 +78,9 @@ country_event = {
 	relation = { who = CHI value = 200 }
 	CHI = { diplomatic_influence = { who = NKO value = 200 } }
 	create_alliance  = CHI 
+	all_core = { add_core = SKO }
 	# infamy unsanctioned
-	war = { target = SKO attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = { casus_belli = status_quo } call_ally = yes } 
+	war = { target = SKO attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } } # US will intervene to protect SOI nation
 	set_global_flag = korea_war
   }
 }
@@ -117,7 +137,7 @@ country_event = {
     SKO = { war_with = NKO }
   }
 
-  mean_time_to_happen = { months = 6  }
+  mean_time_to_happen = { months = 2  }
 
   option = {
     name = EVT_8500842_A
@@ -134,9 +154,12 @@ country_event = {
 
   trigger = {
     tag = USA
-	year = 1949 NOT = { year = 1960 }
-    NKO = { war_with = SKO }
+	year = 1951 NOT = { year = 1960 }
+    NKO = { NOT = { war_with = SKO } }
 	NOT = { war_with = NKO }
+	SKO = { NOT = { truce_with = NKO } }
+	exists = NKO
+	NKO = { government = proletarian_dictatorship }
 	has_global_flag = un_korea_intervention
   }
 
@@ -144,24 +167,24 @@ country_event = {
 
   option = {
     name = EVT_8500803_A
-	any_pop = { consciousness = 2 }
-	country_event = 8500804 
-	RUS = { country_event =  { id = 8500805 days = 1 } }
+	any_pop = { dominant_issue = { value = jingoism factor = 0.1 } }
+	money = -3000 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500803_B
-	any_pop = { consciousness = 1 }
-	money = -3000 
+	diplomatic_influence = { who = SKO value = 100 }
+	casus_belli = { target = NKO type = annex_allied_core_country months = 12 }
+	set_global_flag = korea_war_second_phase
+	create_alliance = SKO
+	military_access = SKO
+	war = { target = NKO attacker_goal = { casus_belli = annex_allied_core_country } defender_goal = { casus_belli = status_quo } }
+	SKO = { country_event = 8500804 }
+	SUN = { country_event =  { id = 8500805 days = 1 } }
 	ai_chance = { factor = 0 }
   }
 
-  option = {
-    name = EVT_8500803_C
-	any_pop = { militancy = 1.0 }
-	ai_chance = { factor = 0 }
-  }
 }
 country_event = {
   id = 8500804
@@ -172,8 +195,8 @@ country_event = {
 
   option = {
     name = EVT_8500804_A
-	any_pop = {  consciousness = 1 }
-	diplomatic_influence = { who = SKO value = 100 }
+	# TODO join FROM (US) in war with any neighbour.
+	any_pop = { dominant_issue = { value = jingoism factor = 0.1 } }
   }
 }
 country_event = {
@@ -181,7 +204,7 @@ country_event = {
   title = EVT_8500805_NAME
   desc = EVT_8500805_DESC
   picture = "nwo2_american_intervention_in_korea"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8500805_A
@@ -223,7 +246,7 @@ country_event = {
   option = {
     name = EVT_8500806_B
 	any_pop = {  consciousness = 1 }
-	RUS = { country_event = 8500807 } 
+	SUN = { country_event = 8500807 } 
 	SKO = { country_event = 8500808 } 
 	ai_chance = { factor = 0 }
   }
@@ -233,7 +256,7 @@ country_event = {
   title = EVT_8500807_NAME
   desc = EVT_8500807_DESC
   picture = "nwo2_american_intervention_in_korea"
-  is_triggered_only = yes # RUS
+  is_triggered_only = yes # SUN
 
   option = {
     name = EVT_8500807_A
@@ -294,6 +317,7 @@ country_event = {
 	year = 1949 NOT = { year = 1960 }
 	government = proletarian_dictatorship
     NKO = { war_with = SKO }
+	has_global_flag = korea_war_second_phase
   }
 
   mean_time_to_happen = { months = 1  }
@@ -302,12 +326,14 @@ country_event = {
     name = EVT_8500810_A
 	NKO = { country_event = 8500811 } 
 	NKO = { military_access = THIS } 
+	prestige = 40
 	diplomatic_influence = { who = NKO value = 100 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500810_B
+	prestige = -20
 	ai_chance = { factor = 0 }
 	any_pop = {  consciousness = 2 }
   }
@@ -345,7 +371,7 @@ country_event = {
   option = {
     name = EVT_8500820_A
 	any_pop = {  consciousness = 1 militancy = -1.0 }
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
   }
 }
 country_event = {
@@ -368,7 +394,7 @@ country_event = {
     name = EVT_8500821_A
 	prestige = 20
 	any_pop = { militancy = -1.0  consciousness = 1 }
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }
 country_event = {
@@ -392,6 +418,7 @@ country_event = {
   option = {
     name = EVT_8500822_A
 	prestige = 10
+	any_owned = { remove_core = NKO } # 8500801
 	NKO = { country_event = 8500823 }
     ai_chance = { factor = 100 }
   }
@@ -406,6 +433,7 @@ country_event = {
   option = {
     name = EVT_8500823_A
 	prestige = -10
+	any_owned = { remove_core = SKO } 
 	ai_chance = { factor = 100 }
   }
 

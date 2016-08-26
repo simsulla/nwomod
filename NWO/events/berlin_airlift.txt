@@ -18,14 +18,15 @@ country_event = {
     year = 1949
 	NOT = { year = 1990 } 
     exists = DDR
-    
+    exists = SUN
+	money = 6000
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8500601_A
-	relation = { who = RUS value = -50 } 
+	relation = { who = SUN value = -50 } 
 	relation = { who = DDR value = -50 } 
 	money = -5000 
 	country_event = { id = 8500602 days = 30 }
@@ -35,7 +36,7 @@ country_event = {
     name = EVT_8500601_B
 	money = -2000 
 	clr_global_flag = divided_berlin 
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
   }
 }
 
@@ -49,14 +50,14 @@ country_event = {
   option = {
     name = EVT_8500602_A
 	relation = { who = GER value = 50 } 
-	RUS = { country_event =  { id = 8500603 days = 30 } } 
+	SUN = { country_event =  { id = 8500603 days = 30 } } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500602_B
 	clr_global_flag = divided_berlin 
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -89,7 +90,7 @@ country_event = {
     name = EVT_8500603_C
 	relation = { who = USA value = 100 } 
 	country_event = 8500608 
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
 	ai_chance = { factor = 0 }
   }
 
@@ -129,7 +130,7 @@ country_event = { # Airlifts are hampered further
     name = EVT_8500604_B
 	country_event =  { id = 8500607 days = 30 } 
 	clr_global_flag = divided_berlin 
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -150,9 +151,9 @@ country_event = { # Putsch is organized
 
   option = {
     name = EVT_8500605_B
-	RUS = { country_event = 8500607 }
+	SUN = { country_event = 8500607 }
 	clr_global_flag = divided_berlin 
-	RUS  = { country_event = 8225000 } 
+	SUN  = { country_event = 8225000 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -165,17 +166,17 @@ country_event = { # Berlin Airlift gets hot
 
   option = {
     name = EVT_8500606_A
-	# war = RUS # TODO what war?
+	# war = SUN # TODO what war?
 	ai_chance = { factor = 0 }
   }
 
   option = {
     name = EVT_8500606_B
-	RUS = { country_event = 8500607 }
+	SUN = { country_event = 8500607 }
 	ai_chance = { factor = 100 }
   }
 }
-country_event = { # End of Berlin Airlift RUS
+country_event = { # End of Berlin Airlift SUN
   id = 8500607
   title = EVT_8500607_NAME
   desc = EVT_8500607_DESC
@@ -187,7 +188,7 @@ country_event = { # End of Berlin Airlift RUS
 	any_pop = { consciousness = 1 }
 	USA = { country_event = 8500608 }
 	GER = { country_event = 8500609 }
-	RUS  = { country_event = 8225001 } 
+	SUN  = { country_event = 8225001 } 
   }
 }
 country_event = { # End of Berlin Airlift USA

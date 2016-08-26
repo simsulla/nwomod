@@ -833,8 +833,8 @@ heavy_mining = {
 	rgo_goods_output = { iron = 0.75 }
 	rgo_size = { iron = 0.2 }
 	rgo_size = { bauxite = 0.1 }
-	rgo_goods_output = { gold_silver = 0.25 }
-	rgo_size = { gold_silver = 0.2 }
+	rgo_goods_output = { gold_silver =1 }
+	rgo_size = { gold_silver = 1 }
 	
 	ai_chance = {
 		factor = 1.1
@@ -885,15 +885,15 @@ deep_mining = {
 	year = 1962
 	cost = 7200
 	
-	rgo_goods_output = { copper = 0.25 }
+	rgo_goods_output = { copper = 0.5 }
 	rgo_goods_output = { coal = 0.25 }
 	rgo_size = { coal = 0.2 }
 	rgo_goods_output = { other_minerals = 0.25 }
 	rgo_size = { other_minerals = 0.2 }
 	rgo_goods_output = { iron = 0.75 }
 	rgo_size = { iron = 0.2 }
-	rgo_goods_output = { gold_silver = 1 }
-	rgo_size = { gold_silver = 1 }
+	rgo_goods_output = { gold_silver = 1.5 }
+	rgo_size = { gold_silver = 1.5 }
 	
 	ai_chance = {
 		factor = 1.1
@@ -949,7 +949,7 @@ green_revolution = {
 	rgo_goods_output = { cattle = 0.25 }
 	rgo_goods_output = { timber = 0.1 }
 	rgo_goods_output = { tea = 0.35 }
-	rgo_goods_output = { tobacco = 0.2 }
+	rgo_goods_output = { tobacco = 0.4 }
 	rgo_goods_output = { cotton = 0.3 }
 	rgo_goods_output = { coffee = 0.3 }
 
@@ -1010,6 +1010,8 @@ contemporary_agriculture = {
 	rgo_size = { tea = 0.1 }
 	rgo_goods_output = { coffee = 0.25 }
 	rgo_size = { coffee = 0.1 }
+	rgo_goods_output = { tobacco = 0.25 }
+	rgo_size = { tobacco = 0.1 }
 	rgo_goods_output = { cotton = 0.3 }
 	rgo_size = { cotton = 0.1 }
 	rgo_goods_output = { timber = 0.2 }
@@ -1029,6 +1031,10 @@ contemporary_agriculture = {
 			big_producer = coffee
 		}
 		modifier = {
+			factor = 1.4
+			big_producer = tobacco
+		}
+		modifier = {
 			factor = 1.02
 			tech_school = industrial_tech_school
 		}
@@ -1039,7 +1045,7 @@ automated_mining = {
 	year = 2000
 	cost = 14400
 
-	rgo_goods_output = { copper = 0.4 }
+	rgo_goods_output = { copper = 0.8 }
 	rgo_goods_output = { gold_silver = 0.25 }
 	rgo_goods_output = { coal = 0.25 }
 	rgo_goods_output = { iron = 0.25 }
@@ -1518,6 +1524,7 @@ electricity = {
 
 	supply_limit = 0.25
 	activate_building = electric_gear_factory
+	factory_goods_output = { canned_food = 0.2 }
 	ai_chance = {
 		factor = 1.1
 		modifier = {

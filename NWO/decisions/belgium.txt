@@ -1,0 +1,41 @@
+political_decisions = {
+
+	partition_of_belgium = {
+		picture = "partition_of_belgium"
+		potential = {
+			tag = BEL
+			OR = { exists = WLL exists = FLA }
+		}
+
+		ai_will_do = { factor = 1 }
+		
+		allow = {
+		}
+
+		effect = {
+			prestige = 10
+			all_core = { 
+				limit = { 
+					NOT = { owned_by = BEL } 
+				}
+				remove_core = BEL
+			}
+			any_country = { 
+				limit = { 
+					tag = BEL 
+					NOT = { exists = FLA }
+				}
+				capital = 390
+				change_tag = FLA
+			}
+			any_country = { 
+				limit = { 
+					tag = BEL 
+					NOT = { exists = WLL }
+				}
+				change_tag = WLL
+			}
+		}
+		
+	}
+}

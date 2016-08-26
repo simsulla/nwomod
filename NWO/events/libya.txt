@@ -7,7 +7,7 @@ country_event = {
 
 	trigger = {
 		year = 1946 NOT = { year = 1990 }
-		tag = ENG
+		tag = GBR
 		owns = 1731 # Tripoli
 		NOT = { has_country_flag = king_idris_of_libya }
 		war = no
@@ -103,11 +103,11 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		tag = GBR
 		year = 1951 NOT = { year = 1990 }
 		has_country_flag = king_idris_of_libya
-		NOT = { exists = TRI }
-		1731 = { controlled_by = ENG }
+		NOT = { exists = LBY }
+		1731 = { controlled_by = GBR }
 	}
 
 	mean_time_to_happen = {
@@ -118,9 +118,9 @@ country_event = {
 		name = EVT_1008602_A 
 		ai_chance = { factor = 100 }
 		badboy = -1
-		release = TRI
-		diplomatic_influence = { who = TRI value = 100 }
-		TRI = { government = absolute_monarchy country_event = 800050 } 
+		release = LBY
+		diplomatic_influence = { who = LBY value = 100 }
+		LBY = { government = absolute_monarchy country_event = 800050 } 
 	}
 	
 	option = {
@@ -153,7 +153,7 @@ country_event = {
 	trigger = {
 		tag = FRA
 		has_country_flag = king_idris_of_libya
-		exists = TRI
+		exists = LBY
 		1743 = { controlled_by = FRA }
 	}
 
@@ -161,8 +161,8 @@ country_event = {
 		name = EVT_1008603_A 
 		ai_chance = { factor = 100 }
 		badboy = -1
-		release = TRI
-		diplomatic_influence = { who = TRI value = 100 }
+		release = LBY
+		diplomatic_influence = { who = LBY value = 100 }
 		clr_country_flag = king_idris_of_libya
 	}
 	
@@ -195,31 +195,31 @@ country_event = {
 	
 	trigger = {
 		tag = USA
-		TRI = { has_country_flag = arab_spring }
-		exists = TRI
+		LBY = { has_country_flag = arab_spring }
+		exists = LBY
 		war = no
 	}
 
 	option = {
 		name = EVT_1008604_OPTA
 		ai_chance = { factor = 100 }
-		TRI = { badboy = 10 }
+		LBY = { badboy = 10 }
 		random_country = {
 			limit = { tag = EGY in_sphere = THIS ai = yes }
 			create_alliance = THIS
 		}
 		casus_belli = {
-			target = TRI
+			target = LBY
 			type = install_democracy
 			months = 12
 		}
 		casus_belli = {
-			target = TRI
+			target = LBY
 			type = add_to_sphere
 			months = 12
 		}
 		war = {
-			target = TRI
+			target = LBY
 			attacker_goal = {
 				casus_belli = install_democracy
 			}
@@ -244,7 +244,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = TRI
+    tag = LBY
     year = 1969 NOT = { year = 1990 }
 	OR = { government = hms_government government = absolute_monarchy government = democracy }
 	war = no
@@ -266,7 +266,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = TRI
+    tag = LBY
     year = 1977 NOT = { year = 1990 }
   }
 
@@ -285,7 +285,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = TRI
+    tag = LBY
     year = 1984 NOT = { year = 1990 }
 	government = nationalist_dictatorship 
 	money = 2500 

@@ -1,0 +1,61 @@
+political_decisions = {
+
+	maphilindo = {
+		picture = "maphilindo"
+		potential = {
+			NOT = { has_country_flag = maphilindo }
+			OR = { tag = PHI tag = SWK }
+			OR = {	
+				owns = 1394 # Sarawak 
+				owns = 1396 # Sabha
+				owns = 1445 # Manilla
+			}
+		}
+		
+		allow = {
+			prestige = 45
+			war = no
+			is_vassal = no
+			part_of_sphere = no
+			OR = {
+				AND = { 
+					owns = 1394 # Sarawak 
+					owns = 1396 # Sabha
+					owns = 1445 # Manilla
+				}
+				any_neighbor_country = {
+					OR = {	
+						owns = 1394 # Sarawak 
+						owns = 1396 # Sabha
+						owns = 1445 # Manilla
+					}
+					OR = { tag = PHI tag = SWK }
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 20
+			any_country = {
+				limit = {
+					OR = {
+						tag = SWK
+						tag = PHI
+					}
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+			set_country_flag = maphilindo
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

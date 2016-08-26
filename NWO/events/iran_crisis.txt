@@ -6,7 +6,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1945 NOT = { year = 1946 }
     
     any_owned_province = { province_id = 1110  }  
@@ -47,7 +47,7 @@ country_event = {
 
   option = {
     name = EVT_8500902_A
-	RUS = { military_access = THIS } 
+	SUN = { military_access = THIS } 
   }
 }
 country_event = {
@@ -58,7 +58,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1946 NOT = { year = 1947 }
 	exists = KUR
 	is_our_vassal = KUR
@@ -93,8 +93,8 @@ country_event = {
 
   option = {
     name = EVT_8500904_A
-	RUS = { country_event = 8500905 } 
-	relation = { who = RUS value = -50 } 
+	SUN = { country_event = 8500905 } 
+	relation = { who = SUN value = -50 } 
 	any_pop = { consciousness = 0.1 }
 	ai_chance = { factor = 100 }
   }
@@ -143,7 +143,7 @@ country_event = {
   option = {
     name = EVT_8500906_A
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
-	RUS = { country_event = 8500910 } 
+	SUN = { country_event = 8500910 } 
 	PER = { country_event = 8500909 } 
 	country_event =  { id = 8500908 days = 1 } 
 	ai_chance = { factor = 100 }
@@ -214,8 +214,8 @@ country_event = {
   option = {
     name = EVT_8500911_A
 	overlord = { release_vassal = THIS } 
-	RUS = { end_military_access = THIS } 
-	leave_alliance = RUS
+	SUN = { end_military_access = THIS } 
+	leave_alliance = SUN
 	PER = { country_event = 8500908 }
   }
 }
@@ -227,7 +227,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = RUS
+    tag = SUN
 	year = 1954 NOT = { year = 1947 }
     NOT = { exists = KUR }
     exists = PER
