@@ -21,7 +21,7 @@ country_event = {
   option = {
     name = EVT_8223000_A
 	random_state = { 
-		limit = { random_owned = { OR = { controlled_by = THIS controlled_by_rebels = yes } any_core = { OR = { tag = SER tag = BOS } } } }  
+		limit = { any_owned_province = { NOT = { is_capital = yes } OR = { controlled_by = THIS controlled_by_rebels = yes } any_core = { OR = { tag = SER tag = BOS } } } }
 		any_owned = { secede_province = YUG }
 	}
 	YUG = { country_event = 8223001 }
