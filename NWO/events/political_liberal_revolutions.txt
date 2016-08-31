@@ -23,7 +23,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 540
+		months = 120
 		modifier = {
 			factor = 0.1
 			has_global_flag = liberal_revolution_somewhere
@@ -31,6 +31,10 @@ country_event = {
 		modifier = {
 			factor = 0.1
 			year = 1990
+		}
+		modifier = {
+			factor = 10
+			NOT = { year = 1990 }
 		}
 	}
 
@@ -737,7 +741,7 @@ province_event = {
 		is_colonial = no
 	}
 	mean_time_to_happen = {
-		months = 90
+		months = 180
 		modifier = {
 			factor = 0.9
 			average_consciousness = 4
