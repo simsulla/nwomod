@@ -594,15 +594,6 @@ country_event = {
 					}
 				}
 			}
-			all_core = {
-				limit = {
-					is_core = THIS
-					state_scope = {
-						NOT = { any_owned_province = { is_capital = yes } }
-					}
-				}
-				remove_core = THIS
-			}
 			country_event = 96014
 		}
 
@@ -630,15 +621,6 @@ country_event = {
 			SLV = { all_core = { add_core = CZH } }
 			2584 = { add_core = CZH }
 			689 = { add_core = CZH }
-			all_core = {
-				limit = {
-					is_core = THIS
-					state_scope = {
-						NOT = { any_owned_province = { is_capital = yes } }
-					}
-				}
-				remove_core = THIS
-			}
 			country_event = 96012
 		}					
 
@@ -647,6 +629,8 @@ country_event = {
 			limit = {
 				any_core = { owned_by = THIS }
 				exists = no
+				NOT = { tag = RUS }
+				NOT = { tag = SER }
 				is_cultural_union = no
 				NOT = {
 					AND = {
@@ -656,18 +640,6 @@ country_event = {
 				}
 				NOT = { has_country_flag = post_colonial_country }
 			}
-			all_core = {
-				limit = {
-					# if SUN or YUG don't release RUS or SER
-					NOT = { is_core = RUS }
-					NOT = { is_core = SER }
-					is_core = THIS
-					state_scope = {
-						NOT = { any_owned_province = { is_capital = yes } }
-					}
-				}
-				remove_core = THIS
-			}
 			country_event = 96012
 		}
 		any_country = {
@@ -675,7 +647,7 @@ country_event = {
 				# if SUN or YUG don't release RUS or SER
 				NOT = { tag = RUS }
 				NOT = { tag = SER }
-				any_core = { owned_by = THIS }
+				any_core = { owned_by = THIS NOT = { is_core = THIS } } # prevent XNA releaseing USA
 				exists = no
 				is_cultural_union = no
 				is_primary_culture = THIS
