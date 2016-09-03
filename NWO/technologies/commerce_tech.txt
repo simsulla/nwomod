@@ -538,7 +538,11 @@ keynesian_economics = {
 	factory_cost = -0.02
 	increase_research = 0.05
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 2.0
+			has_country_modifier = internationalism
+		}
 		modifier = {
 			factor = 0.5
 			NOT = { industrial_score = 10 }
@@ -569,7 +573,11 @@ new_growth_theory = {
 	
 	factory_input = -0.02
 	ai_chance = {
-		factor = 1.01
+		factor = 1.1
+		modifier = {
+			factor = 2.0
+			has_country_modifier = internationalism
+		}
 		modifier = {
 			factor = 1.2
 			industrial_score = 20 #10
@@ -599,7 +607,7 @@ new_synthesis = {
 
 	factory_input = -0.02
 	ai_chance = {
-		factor = 1.01
+		factor = 1.1
 		modifier = {
 			factor = 2.0
 			has_country_modifier = internationalism

@@ -12,7 +12,7 @@ country_event = { #The New Regime - populist or dictatorship
 
 	is_triggered_only = yes
 
-	title = "EVTNAME800050" # Reactionary
+	title = "EVTNAME800050" 
 	desc = "EVTDESC800050"
 	picture = "Danishgovernment"
 
@@ -20,7 +20,7 @@ country_event = { #The New Regime - populist or dictatorship
 		name = "EVTOPTA800050"
 
 		country_event = 800050
-		
+
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = rebels_in_capital
@@ -138,9 +138,9 @@ country_event = { #The New Regime - populist or dictatorship
 		}
 	}
 }
-country_event = { #The New Regime- traditionalist
+country_event = { #The New Regime- theocracy
 	id = 800041
-	title = "EVTNAME800051"   # Fascist
+	title = "EVTNAME800051"   
 	desc = "EVTDESC800051"
 	picture = "islamist"
 	is_triggered_only = yes
@@ -152,6 +152,7 @@ country_event = { #The New Regime- traditionalist
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = paramilitaries_outlawed
 		clr_country_flag = rebels_in_capital
+
 		random_owned = {
 			limit = {
 				owner = {
@@ -589,6 +590,7 @@ country_event = { # The New Regime - Democracy
 	option = {
 		name = "EVTOPTA800054"
 		country_event = 800054
+
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = liberal_revolution_fired
@@ -807,14 +809,14 @@ country_event = { # The New Regime - Democracy
 }
 country_event = { #The New Regime - populist or dictatorship
 	id = 800050
-	title = "EVTNAME800050" # Reactionary
+	title = "EVTNAME800050" 
 	desc = "EVTDESC800050"
 	picture = "military_junta"
 	is_triggered_only = yes
 
 	option = {
 		name = "EVTOPTA800050"
-		
+		religion = secularism
 		# remove ideology based modifiers 
 		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
 
@@ -844,6 +846,16 @@ country_event = { #The New Regime- traditionalist
 
 	option = {
 		name = "EVTOPTA800051"
+		
+		# if pop majority is muslim make islam state religion
+		random_country = { 
+			limit = { tag = THIS pop_majority_religion = sunni }
+			religion = sunni
+		}
+		random_country = { 
+			limit = { tag = THIS pop_majority_religion = shiite }
+			religion = shiite
+		}
 
 		# remove ideology based modifiers 
 		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
@@ -870,7 +882,7 @@ country_event = { # The New Regime - Communist
 
 	option = {
 		name = "EVTOPTA800052"
-		
+		religion = secularism
 		# from rebel_types
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
@@ -929,7 +941,7 @@ country_event = { # The New Regime - Democracy
 		
 		# remove ideology based modifiers 
 		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
-		
+		religion = secularism
 		# from rebel_types
 		random_owned = { limit = { owner = { NOT = { vote_franschise = none_voting } } } owner = { political_reform = promoted_voting } }		
 		random_owned = { limit = { owner = { NOT = { vote_franschise = promoted_voting } } } owner = { political_reform = universal_weighted_voting } }

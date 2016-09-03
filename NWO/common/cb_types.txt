@@ -68,6 +68,7 @@ humiliate
 territorial_dispute
 sanctions
 rude_boy
+colonial_war
 }
 
 gunboat = {
@@ -247,25 +248,20 @@ civil_war = {
 
 # Colonial war
 colonial_war = {
-	sprite_index = 2
+	sprite_index = 7
 	is_triggered_only = yes
-	months = 1
-	constructing_cb = no
+	constructing_cb = no    # only used in crises
 	crisis = no
-	
-	can_use = {
-		NOT = { is_our_vassal = THIS }
-		always = no
-	}
+	months = 12
 
 	badboy_factor = 0
-	prestige_factor = 1
-	peace_cost_factor = 1
+	prestige_factor = 2
+	peace_cost_factor = 0.9
 	penalty_factor = 1
 
-	break_truce_prestige_factor = 5
-	break_truce_infamy_factor = 2
-	break_truce_militancy_factor = 2
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
 	truce_months = 0
 	
 	good_relation_prestige_factor = 1
@@ -273,8 +269,8 @@ colonial_war = {
 	good_relation_militancy_factor = 1
 
 	po_annex = yes
-	
-	war_name = WAR_CONCESSION_NAME
+
+	war_name = WAR_COLONIAL_NAME
 	
 	on_add = {
 		move_issue_percentage = { 
@@ -678,7 +674,7 @@ free_allied_cores = {
 	}
 	
 	on_po_accepted = {
-		#country_event =	2651	# Territorial Loss event
+		country_event =	2651	# Territorial Loss event
 	}
 }
 

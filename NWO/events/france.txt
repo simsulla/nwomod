@@ -259,7 +259,10 @@ country_event = { # FROM = HND THIS = FRA
 			relation = { who = THIS value = 100 }
 		}
 		prestige = -2
-		release = HND
+		any_owned = {
+			limit = { is_core = HND }
+			secede_province = HND
+		}
 	}
 	
 	option = {

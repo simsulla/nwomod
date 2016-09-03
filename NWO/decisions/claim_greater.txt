@@ -688,23 +688,34 @@ political_decisions = {
                 effect = {
                         badboy = 12
                         set_country_flag = claim_greater_china
-                        1496 = { add_core = CHI }
-                        1498 = { add_core = CHI }
-                        2562 = { add_core = CHI }
-                        1485 = { add_core = CHI }
-                        1341 = { add_core = CHI } # Putao
+                        1496 = { add_core = CHI } # Hong Kong
+                        1498 = { add_core = CHI } # Macao
+                        2562 = { add_core = CHI } # Taiwan
+                        1485 = { add_core = CHI } # Taiwan
+                        1341 = { add_core = CHI } # North Burma
+                        1342 = { add_core = CHI } # North Burma
                         1208 = { add_core = CHI } # Khorug
                         1678 = { add_core = CHI } # Okiwawa 
                         2576 = { add_core = CHI } # Spatly
-						1469 = { add_core = CHI } # Kyzyl
-						1467 = { add_core = CHI }
-						2207 = { add_core = CHI }
-						1465 = { add_core = CHI }
-						1466 = { add_core = CHI }
-						1468 = { add_core = CHI }
-						2608 = { add_core = CHI }
-						2679 = { add_core = CHI }
-						2678 = { add_core = CHI }
+						1469 = { add_core = CHI } # Tuva
+						1467 = { add_core = CHI } # Mongolia
+						2207 = { add_core = CHI } # Mongolia
+						1465 = { add_core = CHI } # Mongolia
+						1466 = { add_core = CHI } # Mongolia
+						1468 = { add_core = CHI } # Mongolia
+						2608 = { add_core = CHI } # Mongolia
+						2679 = { add_core = CHI } # Mongolia
+						2678 = { add_core = CHI } # Mongolia
+						1082 = { add_core = CHI } # Russia
+						1083 = { add_core = CHI } # Russia
+						2617 = { add_core = CHI } # Russia
+						2618 = { add_core = CHI } # Russia
+						1080 = { add_core = CHI } # Russia
+						1084 = { add_core = CHI } # Russia
+						2697 = { add_core = CHI } # Russia
+						2696 = { add_core = CHI } # Russia
+						1086 = { add_core = CHI } # Shakalin
+						1087 = { add_core = CHI } # Shakalin
                 }
 
         }
@@ -712,6 +723,91 @@ political_decisions = {
 				picture = "claim_greater_china"
                 potential = {
                         tag = CHI
+                        has_country_flag = claim_greater_china
+                        OR = {
+                                government = democracy
+                                government = hms_government 
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_china
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_china
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } is_primary_culture = yes }
+                                remove_core = CHI
+                        }
+                }
+
+        }
+
+        claim_greater_china_kmt = {
+			        picture = "claim_greater_china_kmt"
+                potential = {
+                        tag = KMT
+			owns = 2221
+			is_core = 2221
+                        NOT = { has_country_flag = claim_greater_china }
+						has_unclaimed_cores = no
+                }
+
+                allow = {
+						tag = KMT
+						part_of_sphere = no
+						NOT = {	
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }						
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_china
+                        1496 = { add_core = KMT }
+                        1498 = { add_core = KMT }
+                        2562 = { add_core = KMT }
+                        1485 = { add_core = KMT }
+                        1341 = { add_core = KMT } # Putao
+                        1208 = { add_core = KMT } # Khorug
+                        1678 = { add_core = KMT } # Okiwawa 
+                        2576 = { add_core = KMT } # Spatly
+						1469 = { add_core = KMT } # Kyzyl
+						1467 = { add_core = KMT }
+						2207 = { add_core = KMT }
+						1465 = { add_core = KMT }
+						1466 = { add_core = KMT }
+						1468 = { add_core = KMT }
+						2608 = { add_core = KMT }
+						2679 = { add_core = KMT }
+						2678 = { add_core = KMT }
+                }
+
+        }
+        abandon_claim_greater_china_kmt = {
+				picture = "claim_greater_china_kmt"
+                potential = {
+                        tag = KMT
                         has_country_flag = claim_greater_china
                         OR = {
                                 government = democracy
@@ -738,7 +834,7 @@ political_decisions = {
                         clr_country_flag = claim_greater_china
                         all_core = { 
                                 limit = { NOT = { owned_by = THIS } is_primary_culture = yes }
-                                remove_core = CHI
+                                remove_core = KMT
                         }
                 }
 
@@ -1848,7 +1944,7 @@ political_decisions = {
                 effect = {
                         badboy = 12
                         set_country_flag = claim_greater_mexico
-                        USA = { all_core = { limit = { OR = { state_id = 84 state_id = 96 state_id = 97 state_id = 102 state_id = 103 state_id = 132 state_id = 106 } } add_core = MEX } }
+                        USA = { all_core = { limit = { OR = { state_id = 84 state_id = 86 state_id = 90 state_id = 89 state_id = 96 state_id = 97 state_id = 102 state_id = 103 state_id = 132 state_id = 134 state_id = 137 } } add_core = MEX } }
                 }
 
         }

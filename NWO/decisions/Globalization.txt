@@ -11,7 +11,7 @@ political_decisions = {
 			money = 24000
 		}
 		effect = {
-			any_neighbor_country = { limit = { has_country_flag = trade_block_ambition } add_country_modifier = { name = internationalism duration = 1000 } }
+			any_neighbor_country = { add_country_modifier = { name = internationalism duration = 1000 } }
 			add_country_modifier = { name = internationalism duration = 1000 }
 			treasury = -20000
 			random_pop = { limit = { type = capitalists } money = 20000 }

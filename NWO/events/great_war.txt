@@ -594,15 +594,6 @@ country_event = {
 					}
 				}
 			}
-			all_core = {
-				limit = {
-					is_core = THIS
-					state_scope = {
-						NOT = { any_owned_province = { is_capital = yes } }
-					}
-				}
-				remove_core = THIS
-			}
 			country_event = 96014
 		}
 
@@ -630,15 +621,6 @@ country_event = {
 			SLV = { all_core = { add_core = CZH } }
 			2584 = { add_core = CZH }
 			689 = { add_core = CZH }
-			all_core = {
-				limit = {
-					is_core = THIS
-					state_scope = {
-						NOT = { any_owned_province = { is_capital = yes } }
-					}
-				}
-				remove_core = THIS
-			}
 			country_event = 96012
 		}					
 
@@ -647,6 +629,8 @@ country_event = {
 			limit = {
 				any_core = { owned_by = THIS }
 				exists = no
+				NOT = { tag = RUS }
+				NOT = { tag = SER }
 				is_cultural_union = no
 				NOT = {
 					AND = {
@@ -656,18 +640,6 @@ country_event = {
 				}
 				NOT = { has_country_flag = post_colonial_country }
 			}
-			all_core = {
-				limit = {
-					# if SUN or YUG don't release RUS or SER
-					NOT = { is_core = RUS }
-					NOT = { is_core = SER }
-					is_core = THIS
-					state_scope = {
-						NOT = { any_owned_province = { is_capital = yes } }
-					}
-				}
-				remove_core = THIS
-			}
 			country_event = 96012
 		}
 		any_country = {
@@ -675,7 +647,7 @@ country_event = {
 				# if SUN or YUG don't release RUS or SER
 				NOT = { tag = RUS }
 				NOT = { tag = SER }
-				any_core = { owned_by = THIS }
+				any_core = { owned_by = THIS NOT = { is_core = THIS } } # prevent XNA releaseing USA
 				exists = no
 				is_cultural_union = no
 				is_primary_culture = THIS
@@ -842,10 +814,7 @@ country_event = {
 					}
 					port = yes
 				}
-				random_list = {
-					50 = { state_scope = { any_owned = { secede_province = THIS } }	}
-					50 = { }
-				}
+				secede_province = THIS
 			}
 			country_event = 96019
 		}
@@ -865,10 +834,7 @@ country_event = {
 					}
 					port = yes
 				}
-				random_list = {
-					25 = { state_scope = { any_owned = { secede_province = THIS } }	 }
-					75 = { }
-				}
+				secede_province = THIS
 			}
 			country_event = 96019
 		}
@@ -1010,7 +976,7 @@ country_event = {
 					is_core = THIS
 					is_capital = no
 				}
-				state_scope = { any_owned = { secede_province = THIS } }	
+				secede_province = THIS
 			}
 			relation = {
 				who = THIS
@@ -1101,6 +1067,10 @@ country_event = {
 					any_owned_province = { is_core = THIS }
 				}
 				any_owned = {
+					limit = {
+						is_core = THIS
+						is_capital = no
+					}				
 					secede_province = THIS
 				}
 			}
@@ -1278,10 +1248,7 @@ country_event = {
 					}
 					port = yes
 				}
-				random_list = {
-					50 = { state_scope = { any_owned = { secede_province = THIS } } }
-					50 = { }
-				}
+				secede_province = THIS
 			}
 		}
 		ai_chance = {
@@ -1321,10 +1288,7 @@ country_event = {
 					}
 					port = yes
 				}
-				random_list = {
-					50 = { state_scope = { any_owned = { secede_province = THIS } } }
-					50 = { }
-				}
+				secede_province = THIS
 			}
 		}
 		ai_chance = {
@@ -1379,10 +1343,7 @@ country_event = {
 					}
 					port = yes
 				}
-				random_list = {
-					10 = { state_scope = { any_owned = { secede_province = THIS } } }
-					90 = { }
-				}
+				secede_province = THIS
 			}
 		}
 		ai_chance = {
@@ -1440,7 +1401,10 @@ country_event = {
 						is_colonial = yes
 					}
 				}
-				secede_province = THIS
+				any_owned = {
+					limit = { is_core = THIS }
+					secede_province = THIS
+				}				
 			}
 			any_state = {
 				limit = {
@@ -1458,7 +1422,10 @@ country_event = {
 						}
 					}
 				}
-				secede_province = THIS
+				any_owned = {
+					limit = { is_core = THIS }
+					secede_province = THIS
+				}				
 			}
 		}
 		random_owned = {
@@ -1745,7 +1712,10 @@ country_event = {
 						any_neighbor_province = { owned_by = THIS }
 					}
 				}
-				secede_province = THIS
+				any_owned = {
+					limit = { is_core = THIS }
+					secede_province = THIS
+				}
 			}
 		}			
 	}
