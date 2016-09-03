@@ -623,6 +623,213 @@ communist_rebels = {
 ###################################
 # Nationalist Rebels
 ###################################
+nationalist_rebels = {
+	icon = 5
+	
+	area = nation_culture 				# Stays within provinces of their culture
+	break_alliance_on_win = no
+	
+	# <this is the governement in the country> = <this is what the rebels want>
+	government = {
+		proletarian_dictatorship = presidential_dictatorship
+		presidential_dictatorship = presidential_dictatorship
+		theocracy = presidential_dictatorship
+		populist_dictatorship = populist_dictatorship
+		nationalist_dictatorship = populist_dictatorship
+		absolute_monarchy = democracy
+		hms_government = democracy
+		democracy = democracy
+	}
+	
+	
+	defection = culture		# If the country seeks independence, defection specifies what type of provinces it wants.
+	independence = culture 		# Seeks independence for spawn province culture. Will not spawn at all if there is no suitable tag.
+	defect_delay = 12		# Can spontaneously declare independence after X months (earliest)
+	
+	allow_all_cultures = no
+	allow_all_religions = yes
+	allow_all_ideologies = yes
+	
+	resilient = yes					# Does not disband on retreat
+	reinforcing = yes				# Does not receive reinforcements
+	general = yes					# Does use generals
+	smart = yes					# Does not assault forts, tactically withdraw from battle, etc.
+	unit_transfer = yes				# Units do remain after enforcing demands.
+	
+	occupation_mult = 5.0			# The amount of strength this rebel gains from taking provinces	
+
+	# triggers a general rising, modifier will be multiplied with the country's army strength and compared to the faction's strength
+	will_rise = 
+	{
+		factor = 0.5
+		
+		modifier = {
+			war = yes
+			factor = 0.8
+		}
+		
+		modifier = {
+			war_exhaustion = 4
+			factor = 0.95
+		}
+		
+		modifier = {
+			war_exhaustion = 6
+			factor = 0.95
+		}
+		
+		modifier = {
+			war_exhaustion = 8
+			factor = 0.95
+		}
+	}
+	
+	# The rebel type with the highest modifier for this pop gets picked
+	spawn_chance = {
+		factor = 3
+		
+		modifier = {
+			factor = 0
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 0.25
+			is_primary_culture = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				location = {
+					any_core = {
+						is_cultural_union = no
+						is_primary_culture = THIS
+						exists = no
+			 		}
+			 	}
+		 	}
+		}
+		modifier = {
+			factor = 3
+				location = {
+					any_core = {
+						is_primary_culture = THIS
+						exists = no
+			 		}
+		 	}
+		}
+		modifier = {
+			factor = 0
+				is_cultural_union = THIS
+		}
+		modifier = {
+			factor = 1.01
+			pop_majority_ideology = communist
+		}
+		modifier = {
+			factor = 1.01
+			pop_majority_ideology = socialist
+		}
+		modifier = {
+			factor = 1.03
+			pop_majority_ideology = progressive
+		}
+		modifier = {
+			factor = 1.05
+			pop_majority_ideology = liberal
+		}
+		modifier = {
+			factor = 1.07
+			pop_majority_ideology = conservative
+		}
+		modifier = {
+			factor = 1.09
+			pop_majority_ideology = traditionalist
+		}
+		modifier = {
+			factor = 1.11
+			pop_majority_ideology = populist
+		}
+		
+
+		modifier = {
+			factor = 1.015
+			NOT = { is_culture_group = THIS }
+		}
+		
+		modifier = {
+			factor = 0.4
+			is_accepted_culture = yes
+		}
+		modifier = {
+			factor = 1.02
+			is_accepted_culture = no
+		}
+		modifier = {
+			factor = 1.2
+			location = {
+				is_colonial = yes
+			}
+		}
+	
+	}
+ 
+ 	#This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 2.0
+			is_capital = yes
+		}
+	}
+	
+ 	# Province Scope
+ 	#siege_won_trigger = {
+ 	#}
+	
+	#siege_won_effect = {
+	#}
+	
+	# Country scope
+	demands_enforced_trigger = {
+		independence = {
+			all_core = {
+				OR = {
+					controlled_by_rebels = yes
+					NOT = { owned_by = THIS }
+				}
+				province_control_days = 30
+			}
+		}
+	}
+	demands_enforced_effect = {
+		release_vassal = REB
+		modify_relation = {
+			tag = REB
+			relation = -150
+		}
+	}
+}
+
 separatist_rebels = {
 	icon = 5
 	
