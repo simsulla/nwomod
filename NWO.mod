@@ -1,4 +1,4 @@
-name = "世界新秩序1.09" # 2016-08-26
+name = "世界新秩序1.10" # 2016-09-03
 path = "mod/NWO" # location of your mod files. If changes change map/default.map as well
 user_dir = "NwO" # optional.   
 replace_path = "common"
