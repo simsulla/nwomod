@@ -159,20 +159,37 @@ conquest = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		# only one state or unciv
-		THIS = { ai = no  } 
-		NOT = { number_of_states = 5 }
 		OR = {
 			AND = {
-				civilized = yes
-				NOT = { number_of_states = 2 }
+				THIS = { ai = no  } 
+				OR = {
+					AND = {
+						civilized = yes
+						NOT = { number_of_states = 2 }
+					}
+					AND = {
+						civilized = no
+						THIS = { civilized = no }
+						NOT = { number_of_states = 2 }
+					}
+				}
 			}
 			AND = {
-				civilized = no
-				THIS = { civilized = no }
-				NOT = { number_of_states = 2 }
+				THIS = { ai = yes }
+				part_of_sphere  = no
+				OR = {
+					AND = {
+						civilized = yes
+						NOT = { number_of_states = 2 }
+					}
+					AND = {
+						civilized = no
+						THIS = { civilized = no }
+						NOT = { number_of_states = 2 }
+					}
+				}
 			}
 		}
-		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
 		is_independant = yes
 	}
 
@@ -508,26 +525,39 @@ acquire_state = {
 	can_use = { # TODO add AI limits
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2 # annex if you want their last state
-		THIS = { ai = no } 
 		any_owned_province = {
 			NOT = { is_core = THIS }
 			#is_colonial = no
 		}
 		OR = {
 			AND = {
-				civilized = yes
-				THIS = {
-					civilized = yes
+				THIS = { ai = no  } 
+				OR = {
+					AND = {
+						civilized = yes
+						THIS = { civilized = yes }
+					}
+					AND = {
+						civilized = no
+						THIS = { civilized = no }
+					}
 				}
 			}
 			AND = {
-				civilized = no
-				THIS = {
-					civilized = no
+				THIS = { ai = yes }
+				part_of_sphere  = no
+				OR = {
+					AND = {
+						civilized = yes
+						THIS = { civilized = yes }
+					}
+					AND = {
+						civilized = no
+						THIS = { civilized = no }
+					}
 				}
 			}
 		}
-		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
 		is_independant = yes
 	}
 	
