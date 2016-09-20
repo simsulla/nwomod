@@ -5,6 +5,7 @@ political_decisions = {
 		potential = {
 			tag = BEL
 			OR = { exists = WLL exists = FLA }
+			NOT = { AND = { exists = WLL exists = FLA } } # will not work if both exists
 		}
 
 		ai_will_do = { factor = 1 }
@@ -25,6 +26,7 @@ political_decisions = {
 				limit = { 
 					is_core = FLA
 					NOT = { is_core = WLL }
+					NOT = { province_id = 387 }
 				}
 				owner = {
 					change_tag = FLA
@@ -38,7 +40,6 @@ political_decisions = {
 				}
 				owner = {
 					change_tag = WLL
-					capital = 390
 				}
 			}
 		}
