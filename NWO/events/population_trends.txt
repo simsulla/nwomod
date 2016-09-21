@@ -23,6 +23,7 @@ country_event = { # Demographic Transition
 			has_province_modifier = demographic_transition 
 			OR = { 
 				AND = { continent = europe year = 1890 }
+				AND = { continent = africa year = 1890 OR = { is_core = AZO is_core = MAE is_core = POR is_core = SPA } } #The Azores Madeira and Canary Islands
 				AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
 				AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1965 }
 				AND = { OR = { continent = north_america continent = south_america } year = 1990 }
@@ -46,6 +47,7 @@ country_event = { # Demographic Transition
 				has_province_modifier = demographic_transition 
 				OR = { 
 					AND = { continent = europe year = 1890 }
+					AND = { continent = africa year = 1890 OR = { is_core = AZO is_core = MAE is_core = POR is_core = SPA } } #The Azores Madeira and Canary Islands
 					AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
 					AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1965 }
 					AND = { OR = { continent = north_america continent = south_america } year = 1990 }
@@ -96,6 +98,7 @@ country_event = { # Demographic Transition - Initial setup
 				NOT = { 
 					OR = { 
 						AND = { continent = europe year = 1890 }
+						AND = { continent = africa year = 1890 OR = { is_core = AZO is_core = MAE is_core = POR is_core = SPA } } #The Azores Madeira and Canary Islands
 						AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
 						AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1965 }
 						AND = { OR = { continent = north_america continent = south_america } year = 1990 }
@@ -209,6 +212,7 @@ country_event = { # Demographic Transition - fix new county and out of sync
 			NOT = { 
 				OR = { 
 					AND = { continent = europe year = 1890 }
+					AND = { continent = africa year = 1890 OR = { is_core = AZO is_core = MAE is_core = POR is_core = SPA } } #The Azores Madeira and Canary Islands
 					AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
 					AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1960 }
 					AND = { OR = { continent = north_america continent = south_america } year = 1970 }
@@ -235,6 +239,7 @@ country_event = { # Demographic Transition - fix new county and out of sync
 				NOT = { 
 					OR = { 
 						AND = { continent = europe year = 1890 }
+						AND = { continent = africa year = 1890 OR = { is_core = AZO is_core = MAE is_core = POR is_core = SPA } } #The Azores Madeira and Canary Islands
 						AND = { is_primary_culture = yes OR = { is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } year = 1890 }
 						AND = { is_primary_culture = yes OR = { continent = north_america continent = south_america } year = 1960 }
 						AND = { OR = { continent = north_america continent = south_america } year = 1970 }
