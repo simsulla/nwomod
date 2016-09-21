@@ -60,8 +60,10 @@ country_event = {
   trigger = {
     has_global_flag = depuppetize_warsaw_pact
 	government = proletarian_dictatorship
-	OR = { vassal_of = SUN is_vassal = no }
-	capital_scope = { continent = europe  }
+	NOT = { tag = SUN }
+	NOT = { tag = YUG }
+	OR = { vassal_of = SUN vassal_of = RUS is_vassal = no }
+	OR = { capital_scope = { continent = europe } tag = KAZ tag = UZB tag = TAJ tag = TNR tag = KYR tag = ARM tag = GEO tag = MON tag = TKR }
 	NOT = { has_country_flag = depuppetize_warsaw_pact }
   }
 
