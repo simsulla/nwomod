@@ -1276,18 +1276,17 @@ country_event = { # Belavezha Accords
   option = {
     name = EVT_8014249_A
 	any_pop = { militancy = -2.5  consciousness = -2 }
-	release_vassal = UKR 
-	release_vassal = BYE 
-	release_vassal = GEO 
-	release_vassal = AZB 
-	release_vassal = ARM 
-	release_vassal = TKR
-	release_vassal = MOL
-	release_vassal = UZB 
-	release_vassal = KYR 
-	release_vassal = TAJ 
-	release_vassal = KAZ 
-	change_tag = RUS
+	release = UKR 
+	release = BYE 
+	release = GEO 
+	release = AZB 
+	release = ARM 
+	release = TKR
+	release = MOL
+	release = UZB 
+	release = KYR 
+	release = TAJ 
+	release = KAZ 
 	country_event = 8014271
   }
 }
@@ -1300,20 +1299,10 @@ country_event = { # Fall of USSR
 
   option = {
     name = EVT_8014271_A
+    	change_tag = RUS
 	any_pop = { militancy = -2.5  consciousness = -2 }
 	government = democracy country_event = 800054
 	random_country = { limit = { NOT = { exists = EST } tag = THIS } country_event = 8014246 } 
-	release = UKR 
-	release = BYE 
-	release = GEO 
-	release = AZB 
-	release = ARM 
-	release = TKR
-	release = MOL
-	release = UZB 
-	release = KYR 
-	release = TAJ 
-	release = KAZ 
 	MOL = { release = TRD }
 	create_alliance = TRD
 	diplomatic_influence = { who = TRD value = 100 }
