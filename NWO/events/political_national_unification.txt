@@ -48,6 +48,18 @@ country_event = {
 	
 	option = {
 		name = "EVT_11107_A"
+		random_owned = {
+			limit = { owner = { NOT = { has_country_flag = develop_atomic_bomb } } }
+			FROM = { random_owned = { limit = { owner = { has_country_flag = develop_atomic_bomb NOT = { has_country_flag = has_the_atomic_bomb } } } THIS = { set_country_flag = develop_atomic_bomb add_country_modifier = { name = develop_atomic_bomb duration = 5475 } remove_country_modifier = non_proliferation_treaty } } }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_country_flag = has_the_atomic_bomb } } }
+			FROM = { random_owned = { limit = { owner = { has_country_flag = has_the_atomic_bomb NOT = { has_country_modifier = nuclear_weapon_power } } } THIS = { set_country_flag = develop_atomic_bomb set_country_flag = has_the_atomic_bomb add_country_modifier = { name = has_the_atomic_bomb duration = 5475 } remove_country_modifier = non_proliferation_treaty remove_country_modifier = has_the_atomic_bomb } } }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_country_modifier = nuclear_weapon_power } } }
+			FROM = { random_owned = { limit = { owner = { has_country_modifier = nuclear_weapon_power } } THIS = { set_country_flag = develop_atomic_bomb set_country_flag = has_the_atomic_bomb add_country_modifier = { name = nuclear_weapon_power duration = -1 } remove_country_modifier = non_proliferation_treaty remove_country_modifier = has_the_atomic_bomb remove_country_modifier = develop_atomic_bomb } } }
+		}
 		inherit = FROM
 		prestige = 20
 		ai_chance = { factor = 100 }
