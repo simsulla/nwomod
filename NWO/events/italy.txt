@@ -464,15 +464,25 @@ country_event = {
   fire_only_once = yes
   
   trigger = {
-	tag = RSI
+	OR = {
+		AND = {
+			tag = RSI
+			NOT = { exists = ITA }
+		}
+		AND = {
+			tag = ITA
+			NOT = { exists = RSI }
+		}
+	}
+	749 = { is_capital = no }
 	war = no
-	NOT = { exists = ITA }
+	NOT = { year = 1970 }
   }
   
   option = {
     name = EVT_8007749_A
 	capital = 749
-	change_tag = ITA
+	random_owned = { limit = { owner = { tag = RSI } } owner = { change_tag = ITA } }
   }
 }
 country_event = {
