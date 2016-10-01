@@ -195,7 +195,7 @@ country_event = {
 
   option = {
     name = EVT_8007739_A
-	any_pop = { limit = { strata = poor }  ideology = { factor = 0.4 value = communist } }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.3 value = communist } }
 	ai_chance = { factor = 100 }
   }
 
@@ -208,7 +208,7 @@ country_event = {
 
   option = {
     name = EVT_8007739_C
-	any_pop = { limit = { strata = poor }  ideology = { factor = 0.4 value = communist } }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.3 value = communist } }
 	country_event = { id = 8007742 days = 10 }
 	ai_chance = { factor = 0 }
   }
@@ -478,6 +478,8 @@ country_event = {
 	war = no
 	NOT = { year = 1970 }
   }
+  
+  mean_time_to_happen = { months = 1  }
   
   option = {
     name = EVT_8007749_A
