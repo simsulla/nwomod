@@ -857,6 +857,7 @@ country_event = {
 
   trigger = {
     tag = HND
+    NOT = { government = proletarian_dictatorship }
     year = 1967
 	owns = 2654 # Munger
 	owns = 1287 # Warangal
@@ -883,7 +884,9 @@ province_event = {
   trigger = {
     year = 1970
     owned_by = HND
-	owner = { has_country_flag = naxalite_insurgency }
+	owner = { has_country_flag = naxalite_insurgency
+	NOT = { government = proletarian_dictatorship }
+	}
 	any_neighbor_province = { is_core = NAX }
 	is_capital = no 
 	is_core = HND
@@ -911,6 +914,7 @@ country_event = {
 
   trigger = {
     tag = HND
+    NOT = { government = proletarian_dictatorship }
     year = 2010
 	war = no
   }
