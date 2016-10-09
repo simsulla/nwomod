@@ -4,17 +4,18 @@ country_event = {
 	desc = "EVT_1003301_DESC"
 	picture = "congo_war" 
 	
-	is_triggered_only = yes # Rwanda supports rebels 8029501
+	is_triggered_only = yes # Rwanda supports rebels 1029501
 	
 	option = {
-		name = "EVT_1003301_A" # face the rebels
+		name = "EVT_1003301_A" # Accept demands
 		any_pop = {
 			limit = {
 				OR = { culture = tutsi culture = nyakole culture = african_minor }
 			}
-			militancy = 8
-			consciousness = 4
+			militancy = 2
+			consciousness = 2
 		}
+		government = democracy country_event = 800054
 		ai_chance = { factor = 0 }
 	}
 	
@@ -91,6 +92,33 @@ country_event = {
 		prestige = -5
 		ai_chance = { factor = 0 }
 	}
+	
+}
+
+country_event = {
+	id = 1003304
+	title = "EVT_1003304_NAME" # second Congo war
+	desc = "EVT_1003304_DESC"
+	picture = "congo_war" 
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CNG
+		year = 2003
+		exists = ITU
+		government = democracy
+	}
+
+	mean_time_to_happen = {
+		months = 1
+		}
+	
+	option = {
+		name = "EVT_1003304_A" # gather an alliance
+		inherit = ITU
+		ai_chance = { factor = 100 }
+	}
+	
 	
 }
 country_event = { # Lipanda

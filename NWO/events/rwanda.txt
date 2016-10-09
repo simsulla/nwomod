@@ -40,11 +40,12 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = { # Uganda has successfully intervened in Rwanda 8027001
+	trigger = {
 		tag = RWA
-		government = democracy
-		has_recently_lost_war = yes
-		badboy = 10
+		government = nationalist_dictatorship
+		primary_culture = tutsi
+		year = 1991
+		CNG = { NOT = { government = democracy } }
 	}
 	
 	mean_time_to_happen = {
@@ -52,10 +53,8 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT_1029501_A" # riece of tutsi nationalism
-		government = nationalist_dictatorship country_event = 800050
-		ruling_party_ideology = socialist
-		primary_culture = tutsi
+		name = "EVT_1029501_A" 
+		BRN = { country_event = 1029502 } # offer alliance
 		UGA = { country_event = 1029502 } # offer alliance
 		CNG = { country_event = 1003301 } # support rebellion
 		small_arms = 200
@@ -71,7 +70,7 @@ country_event = {
 }
 country_event = {
 	id = 1029502
-	title = "EVT_1029502_NAME" # Alliance with Uganda
+	title = "EVT_1029502_NAME" # Alliance with Rwanda
 	desc = "EVT_1029502_DESC"
 	picture = "congo_war" 
 
@@ -94,14 +93,14 @@ country_event = {
 	id = 1029503
 	title = "EVT_1029503_NAME"
 	desc = "EVT_1029503_DESC"
-	picture = "rwanda_genocide" 
+	picture = "rwanda_habyarimana" 
 	
 	fire_only_once = yes
 	
 	trigger = { 
 		tag = RWA
-		exists = yes
-		year = 1996
+		year = 1973
+		NOT = { year = 1990 }
 		NOT = { government = populist_dictatorship }
 	}
 	
@@ -112,7 +111,6 @@ country_event = {
 	option = {
 		name = "EVT_1029503_A"
 		government = populist_dictatorship country_event = 800050
-		primary_culture = hutu
 		ai_chance = { factor = 100 }
 	}
 	
@@ -122,4 +120,79 @@ country_event = {
 	}
 	
 }
-
+country_event = {
+	id = 1029504
+	title = "EVT_1029504_NAME"
+	desc = "EVT_1029504_DESC"
+	picture = "rwanda_genocide" 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = RWA
+		year = 1992
+		NOT = { year = 1996 }
+		government = populist_dictatorship
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVT_1029504_A"
+		government = nationalist_dictatorship country_event = 800050
+		primary_culture = tutsi
+		any_pop = {
+			limit = { culture = tutsi }
+			reduce_pop = 0.9
+			}
+		any_pop = {
+			limit = { culture = hutu }
+			reduce_pop = 0.99
+			}
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_1029504_B" # never mind
+		ai_chance = { factor = 0 }
+	}
+	
+}
+country_event = {
+	id = 1029505
+	title = "EVT_1029505_NAME"
+	desc = "EVT_1029505_DESC"
+	picture = "election_crowd" 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = RWA
+		year = 2003
+		government = nationalist_dictatorship
+		NOT = { government = democracy }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVT_1029505_A"
+		government = democracy country_event = 800054
+		add_accepted_culture = hutu
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT_1029504_B" # never mind
+		any_pop = {
+			militancy = 4 consciousness = 2
+			}
+		badboy = 3	
+		ai_chance = { factor = 0 }
+	}
+	
+}
