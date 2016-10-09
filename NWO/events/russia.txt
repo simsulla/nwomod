@@ -1954,3 +1954,27 @@ country_event = {
         }
      }
 }    
+country_event = {
+    id = 32525
+    title = EVT_32525_NAME # "Lost Great War"
+    desc = EVT_32525_DESC 
+    picture = "treaty"
+	
+	trigger = {
+		tag = SUN
+		exists = UKR
+		exists = BYE
+		exists = LIT
+		exists = EST
+		exists = LAT
+		war = no 
+		has_country_modifier = no_more_war
+		has_country_modifier = punitive_effects
+	}
+	mean_time_to_happen = { months = 1 }
+    option = {
+    	name = EVT_32525_A #"We are no longer Soviet Union"
+    	change_tag = RUS
+    }
+        
+}
