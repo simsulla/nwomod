@@ -17,7 +17,10 @@ country_event = {
 		political_parties = parties_not_allowed
 		vote_franschise = none_voting
 		political_opinions = ruling_party_opinion
-		ruling_party_ideology = communist
+		OR = {
+			ruling_party_ideology = socialist
+			ruling_party_ideology = communist
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -81,7 +84,7 @@ country_event = {
 		political_parties = parties_not_allowed
 		vote_franschise = none_voting
 		political_opinions = ruling_party_opinion
-		ruling_party_ideology = populist
+		ruling_party_ideology = nationalist
 	}
 	
 	mean_time_to_happen = {
@@ -142,7 +145,6 @@ country_event = {
 			government = theocracy
 		}
 		civilized = yes
-		ruling_party_ideology = liberal
 		NOT = {
 			political_parties = parties_not_allowed
 			vote_franschise = none_voting
@@ -158,6 +160,10 @@ country_event = {
 		name = "EVTOPTA60050"
 		government = democracy
 	}
+	option = {
+		name = "EVTOPTB60050"
+		government = hms_government
+	}
 }
 
 country_event = {
@@ -167,12 +173,18 @@ country_event = {
 	picture = "Monarchy"
 	
 	trigger = {
-		government = hms_government
+		NOT = {
+			government = proletarian_dictatorship
+			government = presidential_dictatorship
+			government = populist_dictatorship
+			government = nationalist_dictatorship
+			government = absolute_monarchy
+			government = theocracy
+		}
 		civilized = yes
-		NOT = { ruling_party_ideology = traditionalist }
-		NOT = { ruling_party_ideology = liberal }
-		NOT = { ruling_party_ideology = communist }
+		ruling_party_ideology = conservative
 		vote_franschise = none_voting
+		political_opinions = ruling_party_opinion
 	}
 	
 	mean_time_to_happen = {
@@ -193,6 +205,7 @@ country_event = {
 	
 	trigger = {
 		government = absolute_monarchy
+		always = no		#60050 solves it
 		NOT = {
 				vote_franschise = none_voting
 		}	
@@ -216,9 +229,25 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
-		government = democracy
-		vote_franschise = none_voting		
-		ruling_party_ideology = liberal
+		NOT = {
+			government = proletarian_dictatorship
+			government = presidential_dictatorship
+			government = populist_dictatorship
+			government = nationalist_dictatorship
+			government = absolute_monarchy
+			government = theocracy
+		}
+		political_parties = parties_not_allowed
+		vote_franschise = none_voting
+		political_opinions = ruling_party_opinion
+		NOT = {
+			ruling_party_ideology = populist
+			ruling_party_ideology = communist
+			ruling_party_ideology = traditionalist
+			ruling_party_ideology = conservative
+			ruling_party_ideology = nationalist
+			ruling_party_ideology = socialist
+			}
 		civilized = yes
 	}
 	
@@ -242,6 +271,7 @@ country_event = {
 		government = democracy
 		vote_franschise = none_voting
 		ruling_party_ideology = populist
+		always = no		#60010 solves it
 		civilized = yes
 	}
 	
@@ -263,6 +293,7 @@ country_event = {
 	
 	trigger = {
 		government = democracy
+		always = no		#60000 solves it
 		vote_franschise = none_voting
 		OR = {
 			ruling_party_ideology = socialist
@@ -290,6 +321,7 @@ country_event = {
 	trigger = {
 		government = democracy
 		vote_franschise = none_voting
+		always = no		#60030 solves it
 		ruling_party_ideology = traditionalist
 		civilized = yes
 	}
