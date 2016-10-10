@@ -279,7 +279,9 @@ political_reforms = {
 		}
 		firewall_publishing = { # censored_press
 			literacy_con_impact = 0.5
-			allow = { year = 1990 } # strd_internet = 1
+			allow = {
+				NOT = { vote_franschise = none_voting }
+			}
 		}
 		unregulated_publishing = { # free_press
 			literacy_con_impact = 1
@@ -287,14 +289,18 @@ political_reforms = {
 			cb_generation_speed_modifier = -0.1
 			issue_change_speed = 0.1
 			global_immigrant_attract = 0.05
-			allow = { year = 1990 } # strd_internet = 1
+			allow = {
+				NOT = { vote_franschise = none_voting }
+			}
 		}
 		responsible_publishing = { 
 			literacy_con_impact = 0.5		
 			suppression_points_modifier = 0.05
 			cb_generation_speed_modifier = 0.1
 			issue_change_speed = -0.1
-			allow = { year = 2000 } # war_on_terror = 1 
+			allow = {
+				NOT = { vote_franschise = none_voting }
+			}
 		}		
 	}
 	gender_rights = { # trade_unions
