@@ -128,6 +128,8 @@ country_event = {
 	trigger = {
 		war = no
 		tag = RUS
+		government = populist_dictatorship
+		NOT = { relation = { who = UKR value = -50 } }
 		exists = UKR
 		UKR = { NOT = { in_sphere = RUS } owns = 964 }
 		NOT = { has_country_flag = euromaidan_UKR }
