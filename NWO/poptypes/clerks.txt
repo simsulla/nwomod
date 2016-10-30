@@ -233,20 +233,22 @@ migration_target = {
 		factor = 1.2
 		has_pop_religion = THIS
 	}
-	modifier = {
-		factor = 0
-		is_state_capital = no
-		is_capital = no
-	}		
+#	modifier = {
+#		factor = 0
+#		is_state_capital = no
+#		is_capital = no
+#	}
+
 	modifier = {
 		factor = 2
 		is_state_capital = yes
 	}
 	modifier = {
-		factor = 0
-		is_capital = no 
-		OR = { 
+		factor = 0.1
+		is_capital = no
+		OR = {
 			province_id = 60 #Northern Quebec
+
 			province_id = 69 #Acadia
 			province_id = 76 #Labrador
 			province_id = 2196 # Puerto Lampira
