@@ -29,7 +29,7 @@ country_event = { # Demographic Transition
 				AND = { OR = { continent = north_america continent = south_america } year = 1990 }
 				AND = { continent = asia year = 1950 is_core = JAP }
 				AND = { year = 1970 is_core = CHI } # should be China event 
-				AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { is_core = PHI } year = 1980 }
+				AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { OR = { is_core = PHI is_core = KAZ is_core = UZB is_core = TKR is_core = TAJ is_core = ETS } } year = 1980 }
 				AND = { continent = mena is_core = TUR year = 1980 }
 				AND = { continent = africa OR = { is_core = SAF is_core = NAM is_core = BOT } year = 2000 }
 				AND = { continent = oceania year = 2010 }
@@ -53,7 +53,7 @@ country_event = { # Demographic Transition
 					AND = { OR = { continent = north_america continent = south_america } year = 1990 }
 					AND = { continent = asia year = 1950 is_core = JAP }
 					AND = { year = 1970 is_core = CHI } # should be China event 
-					AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { is_core = PHI } year = 1980 }
+					AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { OR = { is_core = PHI is_core = KAZ is_core = UZB is_core = TKR is_core = TAJ is_core = ETS } } year = 1980 }
 					AND = { continent = mena is_core = TUR year = 1980 }
 					AND = { continent = africa OR = { is_core = SAF is_core = NAM is_core = BOT } year = 2000 }
 					AND = { continent = oceania year = 2010 }
@@ -104,7 +104,7 @@ country_event = { # Demographic Transition - Initial setup
 						AND = { OR = { continent = north_america continent = south_america } year = 1990 }
 						AND = { continent = asia year = 1950 is_core = JAP }
 						AND = { year = 1970 is_core = CHI } # should be China event 
-						AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { is_core = PHI } year = 1980 }
+						AND = { continent = asia NOT = { owner = { pop_majority_religion = sunni } } NOT = { OR = { is_core = PHI is_core = KAZ is_core = UZB is_core = TKR is_core = TAJ is_core = ETS } } year = 1980 }
 						AND = { continent = mena is_core = TUR year = 1980 }
 						AND = { continent = africa OR = { is_core = SAF is_core = NAM is_core = BOT } year = 2000 }
 						AND = { continent = oceania year = 2010 }
