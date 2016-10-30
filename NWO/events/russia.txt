@@ -1276,18 +1276,17 @@ country_event = { # Belavezha Accords
   option = {
     name = EVT_8014249_A
 	any_pop = { militancy = -2.5  consciousness = -2 }
-	release_vassal = UKR 
-	release_vassal = BYE 
-	release_vassal = GEO 
-	release_vassal = AZB 
-	release_vassal = ARM 
-	release_vassal = TKR
-	release_vassal = MOL
-	release_vassal = UZB 
-	release_vassal = KYR 
-	release_vassal = TAJ 
-	release_vassal = KAZ 
-	change_tag = RUS
+	release = UKR 
+	release = BYE 
+	release = GEO 
+	release = AZB 
+	release = ARM 
+	release = TKR
+	release = MOL
+	release = UZB 
+	release = KYR 
+	release = TAJ 
+	release = KAZ 
 	country_event = 8014271
   }
 }
@@ -1300,20 +1299,10 @@ country_event = { # Fall of USSR
 
   option = {
     name = EVT_8014271_A
+    	change_tag = RUS
 	any_pop = { militancy = -2.5  consciousness = -2 }
 	government = democracy country_event = 800054
 	random_country = { limit = { NOT = { exists = EST } tag = THIS } country_event = 8014246 } 
-	release = UKR 
-	release = BYE 
-	release = GEO 
-	release = AZB 
-	release = ARM 
-	release = TKR
-	release = MOL
-	release = UZB 
-	release = KYR 
-	release = TAJ 
-	release = KAZ 
 	MOL = { release = TRD }
 	create_alliance = TRD
 	diplomatic_influence = { who = TRD value = 100 }
@@ -1935,7 +1924,7 @@ country_event = {
 			months = 12
 		}
 		add_casus_belli = {
-			target = SUN
+			target = RUS
 			type = release_puppet
 			months = 12
 		}
@@ -1955,9 +1944,9 @@ country_event = {
      option = {
     	name = EVT_32524_D #"Give them what they want"
     	release = CRI
-    	CRI = { annex_to = SUN }
+    	CRI = { annex_to = RUS }
     	relation = {
-	        who = SUN
+	        who = RUS
 	        value = 200
         }
     	ai_chance = {
@@ -1965,3 +1954,27 @@ country_event = {
         }
      }
 }    
+country_event = {
+    id = 32525
+    title = EVT_32525_NAME # "Lost Great War"
+    desc = EVT_32525_DESC 
+    picture = "treaty"
+	
+	trigger = {
+		tag = SUN
+		exists = UKR
+		exists = BYE
+		exists = LIT
+		exists = EST
+		exists = LAT
+		war = no 
+		has_country_modifier = no_more_war
+		has_country_modifier = punitive_effects
+	}
+	mean_time_to_happen = { months = 1 }
+    option = {
+    	name = EVT_32525_A #"We are no longer Soviet Union"
+    	change_tag = RUS
+    }
+        
+}

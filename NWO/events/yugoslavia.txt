@@ -729,3 +729,27 @@ country_event = {
 	any_owned = { add_core =  THIS }
   }
 }
+country_event = {
+    id = 8224002
+    title = EVT_8224002_NAME # "Lost Great War"
+    desc = EVT_8224002_DESC 
+    picture = "treaty"
+	
+	trigger = {
+		tag = YUG
+		exists = CRO
+		exists = SLO
+		exists = MAC
+		exists = MON
+		exists = VOJ
+		war = no
+		has_country_modifier = no_more_war
+		has_country_modifier = punitive_effects
+	}
+	mean_time_to_happen = { months = 1 }
+    option = {
+    	name = EVT_8224002_A #"We are no longer Yugoslavia"
+    	change_tag = SER
+    }
+        
+}

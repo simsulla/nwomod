@@ -100,6 +100,35 @@ country_event = {
   }
 }
 country_event = {
+  id = 8001033
+  title = "EVT_8001033_NAME"
+  desc = "EVT_8001033_DESC"
+  picture = "white_australia"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AST
+    year = 1966
+	NOT = { OR = { immigration_policy = naturalization immigration_policy = promoted_immigration } }
+    war = no
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = "EVT_8001032_A"
+	random_state = { any_pop = { dominant_issue = { value = promoted_immigration factor = 0.4 } } }
+	random_state = { any_pop = { dominant_issue = { value = naturalization factor = 0.4 } } }
+	political_reform = naturalization
+	prestige = 20
+  }
+  option = {
+    name = "EVT_8001032_A"
+	random_state = { any_pop = { dominant_issue = { value = naturalization factor = 0.4 } } }
+	prestige = -10
+  }  
+}
+country_event = {
   id = 8001050
   title = EVT_8001050_NAME
   desc = EVT_8001050_DESC

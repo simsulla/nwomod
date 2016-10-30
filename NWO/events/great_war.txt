@@ -776,9 +776,7 @@ country_event = {
 				}
 			}
 		}
-		# SUN and YUG become RUS and SER
-		random_country = { limit = { tag = SUN } change_tag = RUS }
-		random_country = { limit = { tag = YUG } change_tag = SER }
+		
 		add_country_modifier = {
 			name = punitive_effects
 			duration = 1825
@@ -1246,7 +1244,6 @@ country_event = {
 						is_colonial = yes
 						is_overseas = yes
 					}
-					port = yes
 				}
 				secede_province = THIS
 			}
@@ -1286,7 +1283,6 @@ country_event = {
 						is_colonial = yes
 						is_overseas = yes
 					}
-					port = yes
 				}
 				secede_province = THIS
 			}

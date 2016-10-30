@@ -7,7 +7,7 @@ country_event = {
 
   trigger = {
     tag = PER
-    year = 1951
+    year = 1951 NOT = { year = 1952 }
     
   }
   immediate = { set_global_flag = event_fired_8501001 }
@@ -59,7 +59,7 @@ country_event = {
 
   trigger = {
     tag = PER
-    year = 1953
+    year = 1953 NOT = { year = 1954 } 
     has_global_flag = abadan_crisis
   }
   immediate = { set_global_flag = event_fired_8501003 }
@@ -242,7 +242,7 @@ country_event = {
 
   trigger = {
     tag = GBR
-    year = 1954
+    year = 1954 NOT = { year = 1955 }
     has_global_flag = abadan_crisis
     
   }
@@ -263,7 +263,7 @@ country_event = {
 
   trigger = {
     tag = GBR
-    year = 1954
+    year = 1954 NOT = { year = 1955 }
     has_global_flag = abadan_crisis
     
   }

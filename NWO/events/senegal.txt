@@ -35,3 +35,69 @@ country_event = { # Independence of Gambia
   }
   
 }
+
+country_event = {
+  id = 8009301
+  title = EVT_8009301_NAME
+  desc = EVT_8009301_DESC
+  picture = "casamanceconflict"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SEN
+    year = 1982 NOT = { year = 2014 }
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8009301_A 
+	prestige = -5
+	any_pop = {
+		limit = {
+			culture = jola
+		}
+		consciousness = 5
+		militancy = 8
+	}
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009301_B
+	prestige = 5
+	release = CSM
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 8009302
+  title = EVT_8009302_NAME
+  desc = EVT_8009302_DESC
+  picture = "casamanceconflictpeace"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SEN
+    year = 2014 NOT = { year = 2015 }
+	NOT = { exists = CSM }
+    any_owned_province = { province_id = 1792 } 
+  }
+
+  mean_time_to_happen = { months = 5 }
+
+  option = {
+    name = EVT_8009302_A 
+	prestige = 5
+	any_pop = { militancy = -5.0 consciousness = -3 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8009302_B
+	prestige = -5
+	any_pop = { militancy = 3.0 consciousness = 2 }
+	ai_chance = { factor = 0 }
+  }
+}

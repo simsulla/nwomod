@@ -195,7 +195,7 @@ country_event = {
 
   option = {
     name = EVT_8007739_A
-	any_pop = { limit = { strata = poor }  ideology = { factor = 0.4 value = communist } }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.3 value = communist } }
 	ai_chance = { factor = 100 }
   }
 
@@ -208,7 +208,7 @@ country_event = {
 
   option = {
     name = EVT_8007739_C
-	any_pop = { limit = { strata = poor }  ideology = { factor = 0.4 value = communist } }
+	any_pop = { limit = { strata = poor }  ideology = { factor = 0.3 value = communist } }
 	country_event = { id = 8007742 days = 10 }
 	ai_chance = { factor = 0 }
   }
@@ -464,15 +464,27 @@ country_event = {
   fire_only_once = yes
   
   trigger = {
-	tag = RSI
+	OR = {
+		AND = {
+			tag = RSI
+			NOT = { exists = ITA }
+		}
+		AND = {
+			tag = ITA
+			NOT = { exists = RSI }
+		}
+	}
+	749 = { is_capital = no }
 	war = no
-	NOT = { exists = ITA }
+	NOT = { year = 1970 }
   }
+  
+  mean_time_to_happen = { months = 1  }
   
   option = {
     name = EVT_8007749_A
 	capital = 749
-	change_tag = ITA
+	random_owned = { limit = { owner = { tag = RSI } } owner = { change_tag = ITA } }
   }
 }
 country_event = {

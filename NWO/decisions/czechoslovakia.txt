@@ -18,9 +18,10 @@ political_decisions = {
 			set_country_flag = expulsion_of_sudeten_germans
 			relation = { who = GER value = -200 } 
 			any_pop = { limit = { location = { province_id = 633 } culture = german } move_pop = 619 } # Bratislava -> Vienna
-			any_pop = { limit = { location = { state_id = 631 } culture = german } move_pop = 595 }  # Moravia -> Nurenberg
+			any_pop = { limit = { location = { state_id = 630 } culture = german } move_pop = 595 }  # Sudetenland -> Nurenberg
 			any_pop = { limit = { location = { state_id = 625 } culture = german } move_pop = 599 }  # Moravia -> Munich
-			any_pop = { limit = { location = { state_id = 689 } culture = polish } move_pop = 683 }  # Tesin -> Liegniz
+			any_pop = { limit = { location = { province_id = 689 } culture = polish } move_pop = 683 }  # Tesin -> Liegniz
+			any_pop = { limit = { location = { province_id = 633 } culture = polish } move_pop = 681 }  # Bratislava -> Kustrin
 		}
 		ai_will_do = { factor = 1 }
 	}

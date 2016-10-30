@@ -5,35 +5,40 @@ political_decisions = {
 		potential = {
 			tag = BEL
 			OR = { exists = WLL exists = FLA }
+			NOT = { AND = { exists = WLL exists = FLA } } # will not work if both exists
 		}
 
 		ai_will_do = { factor = 1 }
 		
-		allow = {
-		}
+		allow = { war = no }
 
 		effect = {
 			prestige = 10
 			all_core = { 
 				limit = { 
-					NOT = { owned_by = BEL } 
+					is_core = BEL
 				}
 				remove_core = BEL
 			}
-			any_country = { 
+			any_owned = { 
 				limit = { 
-					tag = BEL 
-					NOT = { exists = FLA }
+					is_core = FLA
+					NOT = { is_core = WLL }
+					NOT = { province_id = 387 }
 				}
-				capital = 390
-				change_tag = FLA
+				owner = {
+					change_tag = FLA
+					capital = 390
+				}
 			}
-			any_country = { 
+			any_owned = { 
 				limit = { 
-					tag = BEL 
-					NOT = { exists = WLL }
+					is_core = WLL
+					NOT = { is_core = FLA }
 				}
-				change_tag = WLL
+				owner = {
+					change_tag = WLL
+				}
 			}
 		}
 		

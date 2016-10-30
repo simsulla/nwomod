@@ -23,13 +23,17 @@ political_decisions = {
 			any_pop = { limit = { location = { province_id = 681 } culture = german } move_pop = 551 } # Kustrin -> E.Berlin
 			any_pop = { limit = { location = { province_id = 692 } culture = german } move_pop = 551 } # D.Krone -> E.Berlin
 			any_pop = { limit = { location = { province_id = 693 } culture = german } move_pop = 551 } # Kustrin -> E.Berlin
+			any_pop = { limit = { location = { province_id = 696 } culture = german } move_pop = 551 } # Olszytn  -> E.Berlin
 			any_pop = { limit = { location = { state_id = 690 } culture = german } move_pop = 551 } # W Prussia -> E.Berlin
 			any_pop = { limit = { location = { state_id = 682 } culture = german } move_pop = 564 } # Lower Silesia -> Frankfurt.a.M
 			any_pop = { limit = { location = { state_id = 546 } culture = german } move_pop = 551 } # Pomeria -> E.Berlin
 			# have to fill empty german provices
-			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 683 }
-			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 679 }
-			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 680 }
+			random_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 683 }
+			random_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 683 }
+			random_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 679 }
+			random_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 679 }
+			random_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 680 }
+			random_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 680 }
 		}
 	}
 
