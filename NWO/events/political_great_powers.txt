@@ -404,25 +404,19 @@ province_event = {
 			is_greater_power = yes
 		}
 		is_colonial = yes
-		NOT = {
-			life_rating = 25
-			has_global_flag = botanical_expedition_in_progress
-		}
+		life_rating = 40
+		NOT = { has_global_flag = botanical_expedition_in_progress }
 	}
 
 	mean_time_to_happen = {
 		months = 500
 		modifier = {
 			factor = 0.8
-			NOT = {
-				life_rating = 20
-			}
+			life_rating = 40
 		}
 		modifier = {
 			factor = 0.9
-			NOT = {
-				life_rating = 25
-			}
+			life_rating = 35
 		}
 		modifier = {
 			factor = 1.5
