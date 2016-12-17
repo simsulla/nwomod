@@ -14,8 +14,8 @@ country_event = {
 	title = EVT_22600_NAME # The Demographic Transition
 	desc = EVT_22600_DESC
 	picture = "demographic_transition"
-	is_triggered_only = yes # on_actions
-	allow_multiple_instances = yes
+	#is_triggered_only = yes # on_actions
+	#allow_multiple_instances = yes
 
 	trigger = {
 		any_owned_province = {
@@ -66,7 +66,7 @@ country_event = {
 		# changes in birth rates
 		any_owned = {
 			limit = { 
-				life_rating = 25
+				life_rating = 20
 				NOT = { pop_majority_culture = haredim_jewish pop_majority_culture = mennonites pop_majority_culture = roma }
 				OR = { 
 					AND = { 
@@ -96,25 +96,41 @@ country_event = {
 					year = 2010 
 				}
 			}
-			life_rating = -10 
+			life_rating = -10
 		}
 	}
 }
 
-country_event = { # High Mortality
+country_event = { # High Mortality negation of The Demographic Transition -0.024/LIFE_RATING_GROWTH_BONUS=33(africa), -0.012/LIFE_RATING_GROWTH_BONUS=-22(asia)
 	id = 22601
 	title = EVT_22601_NAME # High Mortality
-	desc = EVT_22600_DESC
+	desc = EVT_22601_DESC
 	picture = "high_mortality"
+	#is_triggered_only = yes # on_actions
+	#allow_multiple_instances = yes
 
 	trigger = {
-		NOT = { has_country_flag = demographic_init }
-		exists = yes
-		NOT = { year = 1965 }
+		NOT = { year = 2010 } 
+		any_owned_province = {
+			OR = { 
+				AND = { 
+					OR = { continent = mena continent = asia is_core = SAF } 
+					NOT = { is_core = TUR }
+					NOT = { is_core = JAP }
+					NOT = { year = 1970 } 
+				}
+				AND = { 
+					continent = africa
+					NOT = { is_core = SAF }
+					year = 1960
+					NOT = { year = 2010 } 
+				}
+			}		
+		}
 	}
 
 	mean_time_to_happen = {
-		days = 10
+		months = 120
 	}
 
 	option = {
@@ -122,22 +138,27 @@ country_event = { # High Mortality
 		set_country_flag = demographic_init
 		any_owned = {
 			limit = { 
-				NOT = { year = 1955 }
-				NOT = { 
-					OR = { continent = europe is_core = JAP is_core = RUS is_core = AZO is_core = MAE is_core = POR is_core = SPA is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL }
-				}					
+				OR = { 
+					AND = { 
+						OR = { continent = mena continent = asia is_core = SAF } 
+						NOT = { is_core = TUR }
+						NOT = { is_core = JAP }
+						NOT = { year = 1970 } 
+					}
+					AND = { 
+						continent = africa 
+						NOT = { is_core = SAF }
+						year = 1960
+						NOT = { year = 2010 } 
+					}
+				}		
 			}
-			add_province_modifier = { name = demographic_high_mortality duration = 3500 }
-		}
-		any_owned = {
-			limit = { 
-				continent = africa NOT = { is_core = SAF }	
-			}
-			add_province_modifier = { name = demographic_very_high_mortality duration = 7500 }
+			life_rating = 11
 		}
 		ai_chance = { factor = 100 }
 	}
 }
+
 country_event = { # haredim_jewish
 	id = 22612
 	title = EVT_22612_NAME 

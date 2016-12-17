@@ -624,9 +624,9 @@ pops = {
 	PROMOTION_ASSIMILATION_CHANCE = 0,
 	LUXURY_THRESHOLD = 500,
 	BASE_GOODS_DEMAND = 1,
-	BASE_POPGROWTH = -0.02, -- % per month:  per year: -21% reflects death rates with no aging
+	BASE_POPGROWTH = -0.01, -- % per month:  reflects death rates with no aging
 	MIN_LIFE_RATING_FOR_GROWTH = 0, 
-	LIFE_RATING_GROWTH_BONUS = 0.001, -- % per month * life_rating (TFR/10)
+	LIFE_RATING_GROWTH_BONUS = 0.0007, -- % per month * life_rating (TFR/10)
 	LIFE_NEED_STARVATION_LIMIT = 0.5, 
 
 	MIL_LACK_EVERYDAY_NEED = 0.05,
