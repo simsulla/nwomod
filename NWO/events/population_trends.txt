@@ -110,7 +110,7 @@ country_event = { # High Mortality
 	trigger = {
 		NOT = { has_country_flag = demographic_init }
 		exists = yes
-		NOT = { year = 1950 }
+		NOT = { year = 1965 }
 	}
 
 	mean_time_to_happen = {
@@ -122,6 +122,7 @@ country_event = { # High Mortality
 		set_country_flag = demographic_init
 		any_owned = {
 			limit = { 
+				NOT = { year = 1955 }
 				NOT = { 
 					OR = { continent = europe is_core = JAP is_core = RUS is_core = AZO is_core = MAE is_core = POR is_core = SPA is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL }
 				}					
@@ -130,10 +131,11 @@ country_event = { # High Mortality
 		}
 		any_owned = {
 			limit = { 
-				continent = africa NOT = { is_core = SAF }		
+				continent = africa NOT = { is_core = SAF }	
 			}
 			add_province_modifier = { name = demographic_very_high_mortality duration = 7500 }
 		}
+		ai_chance = { factor = 100 }
 	}
 }
 country_event = { # haredim_jewish
