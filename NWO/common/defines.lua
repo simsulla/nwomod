@@ -521,7 +521,7 @@ diplomacy = {
 	PUPPET_BONUS_INFLUENCE_PERCENT = 1.0, -- bonus if they are our puppet
 	
 	-- effects of manually releasing a nation
-	RELEASE_NATION_PRESTIGE = 5,
+	RELEASE_NATION_PRESTIGE = -5,
 	RELEASE_NATION_INFAMY = -5,
 	
 	INFAMY_CLEAR_UNION_SPHERE = 0, -- Infamy for asserting hegemony
