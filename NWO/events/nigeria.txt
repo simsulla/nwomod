@@ -147,8 +147,8 @@ country_event = {
     name = EVT_8010518_A # Give the south autonomy
 	any_pop = { militancy = 1.0 consciousness = 1 }
 	release_vassal = YOR
-	random_country = { limit = { tag = BIF NOT = {exists = BIF } release_vassal = BIF } }
-	random_country = { limit = { tag = EDO NOT = {exists = EDO } release_vassal = EDO } }
+	random_country = { limit = { tag = BIF NOT = {exists = BIF } } release_vassal = BIF }
+	random_country = { limit = { tag = EDO NOT = {exists = EDO } } release_vassal = EDO }
   }
   option = {
     name = EVT_8010518_B # Defend the unity of Nigeria
