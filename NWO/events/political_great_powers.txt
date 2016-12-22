@@ -326,7 +326,14 @@ country_event = { # Demand install democracy
 	option = {
 		name = EVT_19004_B
 		set_country_flag = soi_demand_install
-		government = democracy country_event = 800044
+		random_country = { 
+			limit = { government = absolute_monarchy }
+			government = hms_government country_event = 800054
+		}
+		random_country = { 
+			limit = { NOT = { government = absolute_monarchy } }
+			government = democracy country_event = 800044
+		}
 		ai_chance = { factor = 0.5 }
 	}
 }
