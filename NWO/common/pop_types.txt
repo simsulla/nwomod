@@ -301,6 +301,8 @@ migration_chance = { # 1
 	modifier = { factor = 0.3 unemployment = 0.5 location = { controlled_by = owner } }		
 
 	modifier = { factor = -0.5 location = { is_state_capital = yes } }
+	
+	modifier = { factor = 0.5 location = { NOT = { controlled_by = owner } } }
 
 	modifier = { factor = -2.0 state_scope = { is_colonial = yes } }
 
@@ -352,6 +354,8 @@ emigration_chance = {
 	modifier = { factor = -1.0 state_scope = { is_colonial = yes } }
 
 	modifier = { factor = 0.1 country = { citizenship_policy = residency } NOT = { culture = THIS } }
+
+	modifier = { factor = 0.5 location = { NOT = { controlled_by = owner } is_state_capital = yes } }
 
 	# no life needs - leave!
 	modifier = { factor = 0.1 NOT = { life_needs = 1.0 } }
