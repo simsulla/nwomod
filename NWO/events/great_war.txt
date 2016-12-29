@@ -645,7 +645,7 @@ country_event = {
 			}
 			all_core = {
 				limit = {
-					NOT = { OR = { tag = SUN tag = YUG } }
+					NOT = { OR = { is_core = SUN is_core = YUG } }
 					is_core = THIS
 					state_scope = {
 						NOT = { any_owned_province = { is_capital = yes } }

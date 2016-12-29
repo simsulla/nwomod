@@ -1537,17 +1537,30 @@ country_event = {
 	desc = "EVTDESC19380"
 	picture = "nuclear_peace"
 
-	major = yes
+	trigger = { 
+		national_provinces_occupied = 0.1
+		OR = { 
+			#has_country_modifier = has_the_atomic_bomb
+			has_country_modifier = nuclear_weapon_power
+			AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
+			AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
+			AND = { has_country_modifier = warsaw_pact SUN = { has_country_modifier = nuclear_weapon_power } }
+			AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
+			AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
+			AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
+		}
+	}
 	
-	is_triggered_only = yes # victorious attacker of nuclear/nuclear umbrella country
-	# FROM attacked country
-
-	immediate = {
-		end_war = FROM
+	mean_time_to_happen = {
+		months = 1
 	}
 	
 	option = {
 		name = "EVTOPTA19380"
+		any_country = { 
+			limit = { war_with = THIS }
+			country_event = 19384
+		}
 	}
 
 }
@@ -1630,6 +1643,20 @@ country_event = {
 
 }
 
+country_event = {
+	id = 19384
+	title = "EVTNAME19384"
+	desc = "EVTDESC19384"
+	picture = "nuclear_peace"
+
+	is_triggered_only = yes 
+	# FROM attacked country
+	
+	option = {
+		name = "EVTOPTA19384"
+	}
+	
+}
 #################################################################################
 #																				#
 #          These events deal with new governments after a gov change war		#
