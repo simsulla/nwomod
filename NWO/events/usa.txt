@@ -985,3 +985,47 @@ country_event = {
 	relation = { who = PAK value = -50 } 
   }
 }
+
+country_event = {
+  id = 8015860
+  title = EVT_8015860_NAME
+  desc = EVT_8015860_DESC
+  picture = "strategic_defense_initiative"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+	year = 1984 NOT = { year = 1959 }
+	exists = SUN
+	SUN = { is_greaterpower = yes }
+	NOT = { has_country_flag = strategic_defense_initiative }
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = EVT_8015860_A
+	SUN = { country_event = 8015861 }
+	add_country_modifier = { name = strategic_defense_initiative duration = 3500 }
+	set_country_flag = strategic_defense_initiative
+	prestige = 10
+  }
+  
+  option = {
+    name = EVT_8015860_B
+	set_country_flag = strategic_defense_initiative
+  }  
+}
+
+country_event = {
+  id = 8015861
+  title = EVT_8015860_NAME
+  desc = EVT_8015860_DESC
+  picture = "strategic_defense_initiative"
+  is_triggered_only = yes # SUN
+
+  option = {
+    name = EVT_8015861_A 
+	add_country_modifier = { name = strategic_defense_initiative duration = 3500 }
+  }
+}
