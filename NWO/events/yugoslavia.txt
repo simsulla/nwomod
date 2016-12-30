@@ -344,7 +344,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = SER
+    tag = YUG
 	year = 1993
 	NOT = { owns = 771 } # Zagreb
 	NOT = { government = populist_dictatorship }
@@ -355,6 +355,7 @@ country_event = {
 
   option = {
     name = EVT_8022741_A
+	change_tag_no_core_switch = SER
 	government = populist_dictatorship country_event = 800050
 	any_pop = { limit = { NOT = { culture = serb } } militancy = 5.0 consciousness = 2.0 }
 	ai_chance = { factor = 100 }

@@ -1,7 +1,7 @@
 defines = {
 
 start_date = '1946.1.1',
-end_date = '2100.1.1',
+end_date = '2246.1.1',
 
 country = {
 	YEARS_OF_NATIONALISM 	= 50,   -- Years of Nationalism
@@ -26,7 +26,7 @@ country = {
 	CAMPAIGN_DURATION = 6,	-- a campaign lasts these amount of months
 	COLONIAL_RANK = 16, -- Minimum rank a nation must have to send colonists
 	COLONY_TO_STATE_PRESTIGE_GAIN = 2, -- Prestige gain when turning colony to state
-	COLONIAL_LIFERATING = 35,
+	COLONIAL_LIFERATING = 0, 
 	BASE_GREATPOWER_DAILY_INFLUENCE = 0.1, -- Influence value which is distributed each day
 	AI_SUPPORT_REFORM = 0.025, -- At least this many % needs to support a reform for the AI to take it
 	BASE_MONTHLY_DIPLOPOINTS = 0.3, -- Base value gain for diplomatic actions each month
@@ -183,11 +183,11 @@ military = {
 	AI_BLOCKADE_RANGE = 2000, -- max distance the AI will send out blockade fleets from their home base
 	RECON_UNIT_RATIO = 0.1, -- the % of units in the army that must have a recon value to get the full bonus
 	ENGINEER_UNIT_RATIO = 0.1, -- the % of units in the army that must have a fort attack value to get the full bonus
-	SIEGE_BRIGADES_MIN = 3, -- the number of brigades needed for a siege to progress at normal speed
-	SIEGE_BRIGADES_MAX = 13, -- the number of brigades above which you get no addition benefit in sieges
-	SIEGE_BRIGADES_BONUS = 0.5, -- the bonus to siege speed from each brigade
-	RECON_SIEGE_EFFECT = 0.1, -- multiplier to effect of recon on speeding up sieges
-	SIEGE_ATTRITION = 1, -- fixed attrition on sieging units
+	SIEGE_BRIGADES_MIN = 10, -- the number of brigades needed for a siege to progress at normal speed
+	SIEGE_BRIGADES_MAX = 20, -- the number of brigades above which you get no addition benefit in sieges
+	SIEGE_BRIGADES_BONUS = 0.1, -- the bonus to siege speed from each brigade
+	RECON_SIEGE_EFFECT = 0.0, -- multiplier to effect of recon on speeding up sieges
+	SIEGE_ATTRITION = 2, -- fixed attrition on sieging units
 	BASE_MILITARY_TACTICS = 1.5, -- base mil tactics before tech
 	NAVAL_LOW_SUPPLY_DAMAGE_SUPPLY_STATUS = 0.25, -- how little supply is acceptable before getting damage to STR
 	NAVAL_LOW_SUPPLY_DAMAGE_DAYS_DELAY = 30, -- delay in days before the STR will get damage due to no supplies. Sometimes supply status may jump bcoz of the market.
@@ -521,7 +521,7 @@ diplomacy = {
 	PUPPET_BONUS_INFLUENCE_PERCENT = 1.0, -- bonus if they are our puppet
 	
 	-- effects of manually releasing a nation
-	RELEASE_NATION_PRESTIGE = 5,
+	RELEASE_NATION_PRESTIGE = -5,
 	RELEASE_NATION_INFAMY = -5,
 	
 	INFAMY_CLEAR_UNION_SPHERE = 0, -- Infamy for asserting hegemony
@@ -624,10 +624,10 @@ pops = {
 	PROMOTION_ASSIMILATION_CHANCE = 0,
 	LUXURY_THRESHOLD = 500,
 	BASE_GOODS_DEMAND = 1,
-	BASE_POPGROWTH = 0.0005, 
-	MIN_LIFE_RATING_FOR_GROWTH = 30,
-	LIFE_RATING_GROWTH_BONUS = 0,
-	LIFE_NEED_STARVATION_LIMIT = 0.5,
+	BASE_POPGROWTH = -0.01, -- % per month:  reflects death rates with no aging
+	MIN_LIFE_RATING_FOR_GROWTH = 0, 
+	LIFE_RATING_GROWTH_BONUS = 0.0005, -- % per month * life_rating (TFR/10)
+	LIFE_NEED_STARVATION_LIMIT = 0.5, 
 
 	MIL_LACK_EVERYDAY_NEED = 0.05,
 	MIL_HAS_EVERYDAY_NEED = -0.075,

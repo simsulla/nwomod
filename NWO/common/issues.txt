@@ -116,9 +116,9 @@ party_issues = {
 			global_population_growth = -0.001
 		}
 		secularized = {
-			global_population_growth = -0.001
 		}
 		moralism = {
+			global_population_growth = 0.001
 			#no effect
 		}
 	}
@@ -175,32 +175,27 @@ political_reforms = {
 			rich_vote = 2
 			middle_vote = 1
 			poor_vote = 0
-			global_immigrant_attract = 0.01
 		}
 		universal_weighted_voting = { # wealth_weighted_voting 
 			rich_vote = 1
 			middle_vote = 1
 			poor_vote = 0
-			global_immigrant_attract = 0.02
 		}
 		universal_voting = { # wealth_voting
 			rich_vote = 1
 			middle_vote = 1
 			poor_vote = 1
-			global_immigrant_attract = 0.03
 		}
 		promoted_voting = { # universal_voting
 			rich_vote = 2
 			middle_vote = 1
 			poor_vote = 1
-			global_immigrant_attract = 0.04
 		}
 	}
 	political_opinions = { # upper_house_composition
 		next_step_only = yes
 		ruling_party_opinion = { # party_appointed
 			rules = { same_as_ruling_party = yes }
-			global_immigrant_attract = -0.05
 			global_pop_consciousness_modifier = -0.02
 			ruling_party_support = 0.1
 			issue_change_speed = -0.8			
@@ -210,7 +205,6 @@ political_reforms = {
 			global_pop_consciousness_modifier = -0.01
 			ruling_party_support = 0.1
 			issue_change_speed = -0.4
-			global_immigrant_attract = -0.02
 		}
 		open_opinion = { # state_equal_weight
 			rules = { population_vote = yes }
@@ -224,7 +218,6 @@ political_reforms = {
 			rules = { population_vote = yes }
 			global_pop_consciousness_modifier = 0.02
 			issue_change_speed = 0.8
-			global_immigrant_attract = 0.02			
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
@@ -233,7 +226,6 @@ political_reforms = {
 			rules = { population_vote = yes }
 			global_pop_consciousness_modifier = 0.01
 			issue_change_speed = 0.6
-			global_immigrant_attract = 0.01
 			global_pop_militancy_modifier = -0.01			
 			allow = {
 				NOT = { vote_franschise = none_voting }
@@ -255,17 +247,14 @@ political_reforms = {
 		}
 		criminology_corporal_punishment = { 
 			issue_change_speed = 1.0
-			global_immigrant_attract = 0.01
 			suppression_points_modifier = -0.25
 		}
 		criminology_capital_punishment = { 
 			issue_change_speed = 1.2
-			global_immigrant_attract = 0.01
 			suppression_points_modifier = -0.25
 		}
 		criminology_social_justice = { 
 			issue_change_speed = 0.5
-			global_immigrant_attract = -0.01
 			suppression_points_modifier = 0.05
 		}
 	}
@@ -275,7 +264,6 @@ political_reforms = {
 			suppression_points_modifier = 0.05
 			cb_generation_speed_modifier = 0.1
 			issue_change_speed = -0.1
-			global_immigrant_attract = -0.01
 		}
 		firewall_publishing = { # censored_press
 			literacy_con_impact = 0.5
@@ -288,7 +276,6 @@ political_reforms = {
 			suppression_points_modifier = -0.25
 			cb_generation_speed_modifier = -0.1
 			issue_change_speed = 0.1
-			global_immigrant_attract = 0.05
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
@@ -368,20 +355,20 @@ political_reforms = {
 			global_immigrant_attract = -1.0
 		}
 		quota_immigration = {
-			global_immigrant_attract = -0.1
-			allow = { OR = { government = democracy government = hms_government year = 1960 } } # decolonization = 1
+			global_immigrant_attract = 0.1
+			allow = { year = 1968 } 
 		}
 		open_immigration = {
 			global_immigrant_attract = 0.25
-			allow = { OR = {  year = 1960 tag = USA tag = AST tag = CAN tag = NZL } } # wars_of_national_liberation = 1 }
+			allow = { year = 1970  } 
 		}
 		naturalization = {
 			global_immigrant_attract = 0.50
-			allow = { year = 1968 } # seventies_subcultures = 1
+			allow = { year = 1980 } 
 		}
 		promoted_immigration = { #
 			global_immigrant_attract = 0.80
-			allow = { year = 1968 } # seventies_subcultures = 1
+			allow = { year = 1990 } 
 		}
 
 	}
@@ -671,13 +658,13 @@ social_reforms = {
 			administrative_multiplier = 2
 		}
 		acceptable_health_care = {
-			global_population_growth = -0.001
+			global_population_growth = 0.0015
 			global_immigrant_attract = 0.15
 			administrative_multiplier = 3
 			global_pop_consciousness_modifier = -0.01
 		}
 		good_health_care = {
-			global_population_growth = -0.002
+			global_population_growth = 0.002
 			global_immigrant_attract = 0.2
 			administrative_multiplier = 4
 			global_pop_consciousness_modifier = -0.02
@@ -691,21 +678,33 @@ social_reforms = {
 		}
 		trinket_envir = {
 			factory_maintenance = 0.1
+			rich_life_needs = -0.05
+			middle_life_needs = -0.05
+			poor_life_needs = -0.05
 			administrative_multiplier = 1
 		}
 		low_envir = {
 			factory_maintenance = 0.2
+			rich_life_needs = -0.1
+			middle_life_needs = -0.1
+			poor_life_needs = -0.1
 			factory_throughput = -0.04			
 			administrative_multiplier = 2
 		}
 		acceptable_envir = {
 			factory_maintenance = 0.3
 			factory_throughput = -0.02			
+			rich_life_needs = -0.15
+			middle_life_needs = -0.15
+			poor_life_needs = -0.15
 			administrative_multiplier = 3
 		}
 		good_envir = {
 			factory_maintenance = 0.4
 			factory_throughput = -0.04			
+			rich_life_needs = -0.2
+			middle_life_needs = -0.2
+			poor_life_needs = -0.2
 			administrative_multiplier = 4
 		}
 	}

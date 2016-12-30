@@ -6,17 +6,19 @@ political_decisions = {
 			has_country_modifier = apartheid
 			tag = SAF
 			NOT = { 
-				exists = BOP
-				exists = CIS
-				exists = TRK
-				exists = QWA
-				exists = NDB
-				exists = NGW
-				exists = GZA
-				exists = LBW
-				exists = VED
-				exists = ZUL
-				AND = { owns = 2081 exists = ECA }
+				OR = { 
+					exists = BOP
+					exists = CIS
+					exists = TRK
+					exists = QWA
+					exists = NDB
+					exists = NGW
+					exists = GZA
+					exists = LBW
+					exists = VED
+					exists = ZUL
+					AND = { owns = 2081 exists = ECA }
+				}
 			}
 		}
 
@@ -145,7 +147,6 @@ political_decisions = {
 			any_country = { 
 				limit = { 
 					vassal_of = THIS
-					ai = yes
 					OR = {
 						tag = BOP
 						tag = CIS

@@ -71,9 +71,17 @@ country_event = {
   is_triggered_only = yes
 
   option = {
-    name = apartheid_end_bantustans_title
+    name = apartheid_end_bantustans_end
 	FROM = { inherit = THIS }
+	ai_chance = { factor = 1 }
   }
+  
+  option = {
+    name = apartheid_end_bantustans_autonomy
+	FROM = { country_event = 8012626 }
+	ai_chance = { factor = 0.1 modifier = { tag = ZUL factor = 5 } }
+  }
+  
 }
 country_event = {
   id = 8012625
@@ -99,6 +107,28 @@ country_event = {
 	add_country_modifier = { name = apartheid duration = -1 } # 1990 start date must set
   }
 
+}
+country_event = {
+  id = 8012626
+  title = EVT_8012626_NAME
+  desc = EVT_8012626_DESC
+  picture = "prince_buthelezi"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8012626_A
+	prestige = -4
+	any_pop = { limit = { culture = xhosa } consciousness = 0.1 }
+	ai_chance = { factor = 0 }
+  }
+  
+  option = {
+    name = EVT_8012626_B
+	casus_belli = { target = FROM type = annex_core_country months = 12 }
+	war = { target = FROM attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
+	ai_chance = { factor = 1}
+  }
+  
 }
 
 #

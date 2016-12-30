@@ -199,3 +199,49 @@ country_event = {
 	}
 }
 
+# EVT_1014206_NAME;Budapest Memorandum on Security Assurances
+# EVT_1014206_DESC;The Budapest Memorandum on Security Assurances refers to three identical political agreements signed at the OSCE conference in Budapest, Hungary on 5 December 1994, providing security assurances by its signatories relating to Belarus's, Kazakhstan's and Ukraine's accession to the Treaty on the Non-Proliferation of Nuclear Weapons. The Memorandum was originally signed by three nuclear powers, the Russian Federation, the United States of America, and the United Kingdom. China and France gave somewhat weaker individual assurances in separate documents.# EVT_1014206_A;Support our Russian Brothers and Sisters
+# EVT_1014206_A;Trust the guarantees
+# EVT_1014206_B;No Russia can't be trusted
+country_event = {
+	id = 1014206
+	title = EVT_1014206_NAME
+	desc = EVT_1014206_DESC
+	picture = "budapest_memorandum"
+	
+	trigger = {
+		war = no
+		OR = { tag = UKR tag = KAZ tag = BYE }
+		NOT = { exists = SUN }
+		NOT = { has_country_flag = budapest_memorandum }
+		NOT = { has_country_flag = reject_budapest_memorandum }
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = EVT_1014206_A
+		set_country_flag = budapest_memorandum
+		add_country_modifier = {
+			name = non_proliferation_treaty
+			duration = 3650
+		}
+		prestige = 5
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = EVT_1014206_B
+		badboy = 10
+		set_country_flag = reject_budapest_memorandum
+		set_country_flag = has_the_atomic_bomb
+		add_country_modifier = {
+			name = has_the_atomic_bomb
+			duration = 5475
+		}
+		ai_chance = { factor = 0 }
+	}
+	
+}

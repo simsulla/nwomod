@@ -679,6 +679,82 @@ country_event = {
   }
 }
 country_event = {
+  id = 8228101
+  title = EVT_8228101_NAME
+  desc = EVT_8228101_DESC
+  picture = "ngo_dinh_diem"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SVI
+    year = 1963
+	government = nationalist_dictatorship
+	}
+
+  mean_time_to_happen = { months = 4  }
+
+  option = {
+    name = EVT_8228101_A
+	random_country = {
+		limit = { is_sphere_leader_of = THIS }
+		country_event = 8228102
+	}
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8228101_B
+	country_event = 8228104
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8228102
+  title = EVT_8228102_NAME
+  desc = EVT_8228102_DESC
+  picture = "ngo_dinh_diem"
+  is_triggered_only = yes # USA
+
+  option = {
+    name = EVT_8228102_A
+	SVI = { country_event = 8228104 }
+	ai_chance = { factor = 0.9 }
+  }
+
+  option = {
+    name = EVT_8228102_B
+	SVI = { country_event = 8228103 }
+	ai_chance = { factor = 0.1 }
+  }
+}
+country_event = {
+  id = 8228103
+  title = EVT_8228103_NAME
+  desc = EVT_8228103_DESC
+  picture = "ngo_dinh_diem"
+  is_triggered_only = yes # SVI
+
+  option = {
+    name = EVT_8228103_A
+	SVI = { any_pop = { limit = { religion = buddhist } militancy = 0.8 consciousness = 0.1 } }
+  }
+}
+country_event = {
+  id = 8228104
+  title = EVT_8228104_NAME
+  desc = EVT_8228104_DESC
+  picture = "ngo_dinh_diem"
+  is_triggered_only = yes # SVI
+
+  option = {
+    name = EVT_8228104_A
+	government = presidential_dictatorship country_event = 800050
+	primary_culture = vietnamese
+	SVI = { any_pop = { limit = { religion = buddhist } militancy = -0.5 consciousness = 0.1 } }
+  }
+}
+
+country_event = {
   id = 8228110
   title = EVT_8228110_NAME
   desc = EVT_8228110_DESC

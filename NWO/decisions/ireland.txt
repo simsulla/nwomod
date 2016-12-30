@@ -1,0 +1,21 @@
+political_decisions = {
+
+	united_ireland = {
+		picture = "united_ireland"
+		potential = {
+			tag = NIR
+			exists = IRE
+		}
+
+		allow = {
+			part_of_sphere = no
+			pop_majority_culture = irish
+			war = no
+			IRE = { war = no }
+		}
+
+		effect = {
+			IRE = { inherit = NIR }
+		}
+	}
+}

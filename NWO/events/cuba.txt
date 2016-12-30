@@ -559,3 +559,26 @@ country_event = {
 	relation = { who = USA value = -50 } 
   }
 }
+country_event = {
+  id = 8003837
+  title = EVT_8003837_NAME
+  desc = EVT_8003837_DESC
+  picture = "fidel_castro_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CUB
+	year = 2016
+	government = proletarian_dictatorship
+    war = no
+  }
+  
+  mean_time_to_happen = { months = 5 }
+
+  option = {
+    name = EVT_8003837_A
+	any_pop = { militancy = 0.1 consciousness = 0.1 }
+	prestige = -5
+	relation = { who = USA value = 10 } 
+  }
+}

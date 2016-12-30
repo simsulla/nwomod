@@ -238,3 +238,32 @@ country_event = {
   }
 }
 
+country_event = {
+  id = 8014524
+  title = EVT_8014524_NAME
+  desc = EVT_8014524_DESC
+  picture = "south_sudanese_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SSU
+    year = 2013
+	war = no
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8014524_A
+	any_owned = { limit = { OR = { province_id = 1844 province_id = 1847 province_id = 1832 } } change_controller = REB }
+	any_pop = { limit = { culture = nuer } militancy = 5.0  consciousness = 4.0 }
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8014524_B
+	any_pop = { limit = { culture = dinka } militancy = 5.0  consciousness = 4.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+
+

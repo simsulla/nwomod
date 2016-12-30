@@ -627,10 +627,13 @@ country_event = {
 		#release non-existing countries			
 		any_country = {
 			limit = {
-				any_core = { owned_by = THIS }
+				any_core = { 
+					owned_by = THIS 
+					state_scope = { # prevent for YUG/SUN/super states releaseing the "founding" nation. 
+						NOT = { any_owned_province = { is_capital = yes } }
+					}
+				}
 				exists = no
-				NOT = { tag = RUS }
-				NOT = { tag = SER }
 				is_cultural_union = no
 				NOT = {
 					AND = {
@@ -640,14 +643,20 @@ country_event = {
 				}
 				NOT = { has_country_flag = post_colonial_country }
 			}
+			all_core = {
+				limit = {
+					NOT = { OR = { is_core = SUN is_core = YUG } }
+					is_core = THIS
+					state_scope = {
+						NOT = { any_owned_province = { is_capital = yes } }
+					}
+				}
+				remove_core = THIS
+			}			
 			country_event = 96012
 		}
 		any_country = {
 			limit = {
-				# if SUN or YUG don't release RUS or SER
-				NOT = { tag = RUS }
-				NOT = { tag = SER }
-				any_core = { owned_by = THIS NOT = { is_core = THIS } } # prevent XNA releaseing USA
 				exists = no
 				is_cultural_union = no
 				is_primary_culture = THIS

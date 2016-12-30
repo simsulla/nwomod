@@ -6,7 +6,7 @@ political_decisions = {
 	xtc_ambition = {
 		picture = "xtc_ambition"
 		potential = {
-			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
+			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = ETS }
 			NOT = { has_country_flag = xtc_ambition } 
 		}
 		allow = {
@@ -77,7 +77,7 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
+			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = ETS }
 		}
 		allow = {
 			has_country_flag = xtc_ambition
@@ -95,7 +95,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
+			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = ETS }
 		}
 		allow = {
 			has_country_flag = xtc_ambition
@@ -115,7 +115,7 @@ political_decisions = {
 		picture = "xtc_ambition"
 		potential = {
 			NOT = { capital_scope = { is_core = XTC } }
-			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
+			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = ETS }
 		}
 		allow = {
 			has_country_flag = xtc_ambition
@@ -135,7 +135,7 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
+			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = ETS }
 		}
 		allow = {
 			has_country_flag = xtc_ambition
@@ -159,7 +159,7 @@ political_decisions = {
 		picture = "xtc_parlament"
 		potential = {
 			XTC = { exists = no }
-			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
+			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB tag = ETS }
 		}
 		allow = {
 			has_country_flag = xtc_ambition

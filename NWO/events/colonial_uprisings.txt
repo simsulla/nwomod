@@ -944,7 +944,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			life_rating = 20
+			NOT = { life_rating = 20 }
 		}	
 	}
 	
@@ -1011,9 +1011,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.9
-			NOT = {
-				life_rating = 15
-			}
+			life_rating = 15
 		}
 		
 		modifier = {
@@ -1722,7 +1720,7 @@ country_event = {
 				is_colonial = yes
 			}
 			any_owned = {
-				life_rating = -1
+				life_rating = 1
 			}
 		}
 	}

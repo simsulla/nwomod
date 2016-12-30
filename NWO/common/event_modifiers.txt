@@ -957,30 +957,10 @@ economy_very_hard = {
 }
 
 ### Population Trends ###
-# population_growth = 0.001 => 2.5% per year
-
-demographic_transition = {
-	population_growth = 0.001
-}
 
 demographic_mennonites = {}
 demographic_haredim_jewish = {}
 demographic_romani = {}
-
-family_values = {
-	population_growth = 0.002
-	icon = 17
-}
-
-total_fertility_rate = {
-	population_growth = 0.001
-	icon = 17
-}
-
-self_values = {
-	population_growth = -0.001
-	icon = 17
-}
 
 call_for_un_peacekeeping_mission = {}
 un_peacekeeping_mission = {}
@@ -1148,6 +1128,10 @@ nuclear_weapon_power = {
 	tax_efficiency = -0.02
 	icon = 15
 }
+strategic_defense_initiative = {
+	tax_efficiency = -0.15
+	icon = 15
+}
 stall_nuclear_peace = {
 	icon = 15
 }
@@ -1203,10 +1187,6 @@ us_israel_relations = {
 
 support_zionism = {
 	prestige = 0.05
-}
-
-fertility_timer = {
-   icon = 17
 }
 
 reject_uar = {}
@@ -1271,3 +1251,41 @@ import_substitution_industrialization = {
 	factory_throughput = -0.1
 	icon = 18
 }
+
+integration_refusal = {
+	assimilation_rate = -0.1
+	immigrant_attract = -0.1
+	pop_militancy_modifier = -0.02
+	icon = 7
+}
+
+core_integration = {
+	assimilation_rate = 0.1
+	pop_consciousness_modifier = 0.05
+	non_accepted_pop_consciousness_modifier = 0.01
+	icon = 7
+}
+
+national_assimilation = {
+	assimilation_rate = 0.1
+	icon = 7
+}
+
+national_assimilation_rejection = {
+	assimilation_rate = -0.2
+	immigrant_attract = -0.1
+	pop_militancy_modifier = 0.1
+	non_accepted_pop_militancy_modifier = 0.01
+	icon = 18
+}
+
+national_assimilation_acceptance = {
+	pop_consciousness_modifier = 0.05
+	non_accepted_pop_consciousness_modifier = 0.01
+	icon = 17
+}
+
+national_assimilation_complete = {
+	icon = 7
+}
+
