@@ -1027,6 +1027,7 @@ country_event = { # August Coup
     name = EVT_8014239_A
 	any_pop = { militancy = 2.0  consciousness = 1 }
 	add_country_modifier = { name = great_depression duration = 3650 }
+	set_global_flag = august_coup
 	country_event = 8014248 
 	ai_chance = { factor = 100 }
   }
@@ -1103,7 +1104,7 @@ country_event = { # Structural Weaknesses of the Eastern Bloc
   trigger = {
     tag = SUN
 	government = proletarian_dictatorship
-    check_variable = { which = soviet_control_cee value = 8 } 
+	plurality = 50
   }
 
   mean_time_to_happen = { months = 12  }
@@ -1151,7 +1152,7 @@ country_event = { # Regime bends under dissent
     tag = SUN
 	government = proletarian_dictatorship
     NOT = { has_global_flag = autumn_of_nations }
-    average_militancy  = 9
+    average_militancy  = 8
 	NOT = { rank = 1 }
 	year = 1971 # Nixon Shock
   }
@@ -1162,7 +1163,56 @@ country_event = { # Regime bends under dissent
     name = EVT_8014245_A
 	set_global_flag = autumn_of_nations 
 	prestige = -200
-	any_pop = { militancy = -2  consciousness = -1 }
+	country_event = 8014246 # release the baltics
+	release = GEO 
+	release = ARM 
+	release = MOL
+	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MOL } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
+	any_pop = { consciousness = -1 }
+	ai_chance = { factor = 0 }
+  }
+  
+  option = {
+    name = EVT_8014245_B
+	set_global_flag = autumn_of_nations
+	country_event = { id = 8014252 days = 10 }
+	prestige = -200
+	ai_chance = { factor = 100 }
+  }  
+}
+country_event = { # Soviet Union referendum $YEAR$
+  id = 8014252
+  title = EVT_8014252_NAME
+  desc = EVT_8014252_DESC
+  picture = "soviet_union_referendum"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8014252_A
+	country_event = 8014246 # release the baltics
+	release = GEO 
+	release = ARM 
+	release = MOL	
+	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MOL } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8014252_B
+	release_vassal = UKR 
+	release_vassal = BYE 
+	release_vassal = AZB 
+	release_vassal = TKR
+	release_vassal = UZB 
+	release_vassal = KYR 
+	release_vassal = TAJ 
+	release_vassal = KAZ 
+	country_event = 8014246 # release the baltics
+	release = GEO 
+	release = ARM 
+	release = MOL
+	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MOL } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = { # Brezhnev Era
@@ -1202,6 +1252,7 @@ country_event = {
     tag = SUN
 	government = proletarian_dictatorship
     has_global_flag = autumn_of_nations
+	NOT = { has_country_flag = baltic_way }
 	war = no
   }
 
@@ -1209,6 +1260,7 @@ country_event = {
 
   option = {
     name = EVT_8014246_A
+	set_country_flag = baltic_way
 	release = LIT 
 	release = LAT
 	release = EST 
@@ -1228,8 +1280,6 @@ country_event = {
   picture = "nwo2_wind_of_change"
   is_triggered_only = yes 
   
-  mean_time_to_happen = { months = 1  }
-
   option = {
     name = EVT_8014247_A
 	diplomatic_influence = { who = FROM value = -200 }
@@ -1239,25 +1289,32 @@ country_event = {
 	any_pop = { militancy = -10.0  consciousness = -2 }
   }
 }
-country_event = { # August Coup
+country_event = { # soviet_civil_war
   id = 8014248
   title = EVT_8014248_NAME
   desc = EVT_8014248_DESC
-  picture = "nwo2_august_coup"
+  picture = "soviet_civil_war"
   is_triggered_only = yes
 
   option = {
     name = EVT_8014248_A
 	any_pop = { militancy = 2.0  consciousness = 2 }
-	set_global_flag = august_coup
-	ai_chance = { factor = 100 }
+	any_owned = { limit = { is_core = UKR OR = { state_id = 702 state_id = 956 state_id = 958 } } secede_province = UKR }
+	casus_belli = { target = UKR type = conquest months = 12 }
+	casus_belli = { target = UKR type = make_puppet months = 12 }
+	any_owned = { limit = { is_core = RUS OR = { state_id = 2587 state_id = 998 state_id = 1039 state_id = 1048 state_id = 994 any_core = { NOT = { tag = RUS } } } } secede_province = RUS }
+	war = { target = RUS  attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
+	war = { target = UKR attacker_goal = { casus_belli = conquest } defender_goal = { casus_belli = status_quo } }
+	RUS = { capital = 994 } # Leningrad
+	set_global_flag = soviet_civil_war
+	ai_chance = { factor = 10 }
   }
 
   option = {
     name = EVT_8014248_B
 	any_pop = { militancy = -1.0  consciousness = 2 }
 	country_event = { id = 8014249 days = 180 }
-	ai_chance = { factor = 0 }
+	ai_chance = { factor = 90 }
   }
 }
 country_event = { # Belavezha Accords
@@ -1268,18 +1325,18 @@ country_event = { # Belavezha Accords
   fire_only_once = yes
 
   trigger = {
-    tag = SUN
-    has_global_flag = autumn_of_nations
-	has_global_flag = august_coup
-    war = no
-	government = proletarian_dictatorship
+    tag = RUS
+    has_global_flag = soviet_civil_war
+	war = no
   }
 
-  mean_time_to_happen = { months = 24  }
-
+  mean_time_to_happen = { months = 2  }
+  
   option = {
     name = EVT_8014249_A
+	RUS = { capital = 1008 } # Moscow
 	any_pop = { militancy = -2.5  consciousness = -2 }
+	# TODO what regime type?
 	release = UKR 
 	release = BYE 
 	release = GEO 
@@ -1303,7 +1360,7 @@ country_event = { # Fall of USSR
 
   option = {
     name = EVT_8014271_A
-    	change_tag = RUS
+    change_tag = RUS
 	any_pop = { militancy = -2.5  consciousness = -2 }
 	government = democracy country_event = 800054
 	random_country = { limit = { NOT = { exists = EST } tag = THIS } country_event = 8014246 } 

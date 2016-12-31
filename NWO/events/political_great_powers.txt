@@ -227,7 +227,7 @@ country_event = { # Demand install democracy
 	option = {
 		name = EVT_19004_B
 		FROM = { country_event = 19007 }
-		ai_chance = { factor = 0.1 modifier = { factor = 0 FROM = { tag = YUG } } }
+		ai_chance = { factor = 0.1 modifier = { factor = 0 FROM = { tag = YUG } } modifier = { factor = 0 FROM = { tag = SAA } }   modifier = { factor = 0 FROM = { tag = UAE } }  modifier = { factor = 0 FROM = { tag = QAT } } }
 	}
 }
 country_event = {
@@ -327,11 +327,11 @@ country_event = { # Demand install democracy
 		name = EVT_19004_B
 		set_country_flag = soi_demand_install
 		random_country = { 
-			limit = { government = absolute_monarchy }
+			limit = { tag = THIS government = absolute_monarchy }
 			government = hms_government country_event = 800054
 		}
 		random_country = { 
-			limit = { NOT = { government = absolute_monarchy } }
+			limit = {  tag = THIS NOT = { government = absolute_monarchy } }
 			government = democracy country_event = 800044
 		}
 		ai_chance = { factor = 0.5 }
@@ -2052,6 +2052,7 @@ country_event = {
   option = {
     name = EVT_DEMOSWITCH_SWITCH
 	clr_country_flag = was_commi
+	SUN = { plurality = 4 }
 	prestige = 5
   }
 
@@ -2074,6 +2075,7 @@ country_event = {
   option = {
     name = EVT_COMMIESWITCH_CELEBRATE
 	set_country_flag = was_commi
+	SUN = { plurality = -1 }
 	prestige = 5
   }
 }
@@ -2097,6 +2099,7 @@ country_event = {
     name = EVT_COMMIESWITCH_CELEBRATE
 	set_country_flag = was_commi
 	government = proletarian_dictatorship
+	SUN = { plurality = -1 }
 	country_event = 800052
 	ai_chance = { factor = 100 }
   }
