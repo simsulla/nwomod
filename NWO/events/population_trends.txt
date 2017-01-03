@@ -4,60 +4,57 @@
 #															#
 #############################################################
 
-# Demographic factors
-# 1. Demographic transition - hardcoded timing
-# 2.a literacy - influences when the transition happens 
-# 2.b secular pop majority - Y|N influences when the transition happens 
-# 3. special - haredim_jewish, roma and mennonites and not prim/accept
 country_event = {
 	id = 22600 
 	title = EVT_22600_NAME # The Demographic Transition
 	desc = EVT_22600_DESC
 	picture = "demographic_transition"
-	#is_triggered_only = yes # on_actions
-	#allow_multiple_instances = yes
 
 	trigger = {
 		any_owned_province = {
-			life_rating = 25
-			NOT = { pop_majority_culture = haredim_jewish pop_majority_culture = mennonites pop_majority_culture = roma }
 			OR = { 
-				AND = { 
-					year = 1890 
-					OR = { continent = europe is_core = JAP is_core = AZO is_core = MAE is_core = POR is_core = SPA is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } 
-					NOT = { pop_majority_religion = sunni }
-				}
-				AND = { 
-					is_primary_culture = yes
-					OR = { continent = north_america continent = south_america continent = europe continent = asia continent = oceania } 
-					NOT = { is_core = PHI } NOT = { pop_majority_religion = sunni continent = asia } 
-					year = 1965 
-				}
-				AND = { 
-					is_core = TUR 
-					year = 1965 
-				}
-				AND = { 
-					NOT = { continent = africa } 
-					year = 1980 
-				}
-				AND = { 
-					continent = africa 
-					NOT = { pop_majority_religion = sunni } 
-					year = 1990 
-				}
-				year = 2010 
+				AND = { life_rating = 28 literacy = 0,005 NOT = { literacy = 0,025 } }
+				AND = { life_rating = 42 literacy = 0,01 NOT = { literacy = 0,025 } }
+				AND = { life_rating = 56 literacy = 0,015 NOT = { literacy = 0,025 } }
+				AND = { life_rating = 70 literacy = 0,02 NOT = { literacy = 0,025 } }
+				AND = { life_rating = 71 literacy = 0,025 }
+				AND = { life_rating = 70 literacy = 0,03 }
+				AND = { life_rating = 69 literacy = 0,04 }
+				AND = { life_rating = 67 literacy = 0,05 }
+				AND = { life_rating = 65 literacy = 0,06 }
+				AND = { life_rating = 63 literacy = 0,07 }
+				AND = { life_rating = 61 literacy = 0,08 }
+				AND = { life_rating = 59 literacy = 0,09 }
+				AND = { life_rating = 57 literacy = 0,1 }
+				AND = { life_rating = 55 literacy = 0,11 }
+				AND = { life_rating = 53 literacy = 0,12 }
+				AND = { life_rating = 51 literacy = 0,13 }
+				AND = { life_rating = 49 literacy = 0,14 }
+				AND = { life_rating = 47 literacy = 0,15 }
+				AND = { life_rating = 45 literacy = 0,16 }
+				AND = { life_rating = 43 literacy = 0,17 }
+				AND = { life_rating = 41 literacy = 0,18 }
+				AND = { life_rating = 39 literacy = 0,19 }
+				AND = { life_rating = 37 literacy = 0,2 }
+				AND = { life_rating = 35 literacy = 0,21 }
+				AND = { life_rating = 33 literacy = 0,22 }
+				AND = { life_rating = 31 literacy = 0,23 }
+				AND = { life_rating = 29 literacy = 0,24 }
+				AND = { life_rating = 27 literacy = 0,25 }
+				AND = { life_rating = 25 literacy = 0,26 }
+				AND = { life_rating = 23 literacy = 0,27 }
+				AND = { life_rating = 21 literacy = 0,28 }
+				AND = { life_rating = 19 literacy = 0,29 }
+				AND = { life_rating = 17 literacy = 0,3 }
+				AND = { life_rating = 15 literacy = 0,31 }
+				AND = { life_rating = 13 literacy = 0,32 }
+				AND = { life_rating = 11 literacy = 0,33 }
 			}
 		}
 	}
 
 	mean_time_to_happen = {
 		months = 60
-		modifier = { NOT = { literacy = 0.02 } factor = 2 }
-		modifier = { literacy = 0.02 factor = 1.2 }
-		modifier = { literacy = 0.05 factor = 0.8 }
-		modifier = { literacy = 0.10 factor = 0.8 }
-		modifier = { literacy = 0.20 factor = 0.8 }
 		modifier = { pop_majority_religion = secularism factor = 0.5 }
 	}
 
@@ -66,96 +63,85 @@ country_event = {
 		# changes in birth rates
 		any_owned = {
 			limit = { 
-				life_rating = 20
-				NOT = { pop_majority_culture = haredim_jewish pop_majority_culture = mennonites pop_majority_culture = roma }
-				OR = { 
-					AND = { 
-						year = 1890 
-						OR = { continent = europe is_core = JAP is_core = RUS is_core = AZO is_core = MAE is_core = POR is_core = SPA is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } 
-						NOT = { pop_majority_religion = sunni }
-					}
-					AND = { 
-						is_primary_culture = yes
-						OR = { continent = north_america continent = south_america continent = europe continent = asia continent = oceania } 
-						NOT = { is_core = PHI } NOT = { pop_majority_religion = sunni continent = asia } 
-						year = 1965 
-					}
-					AND = { 
-						is_core = TUR 
-						year = 1965 
-					}
-					AND = { 
-						NOT = { continent = africa } 
-						year = 1980 
-					}
-					AND = { 
-						continent = africa 
-						NOT = { pop_majority_religion = sunni } 
-						year = 1990 
-					}
-					year = 2010 
-				}
+				AND = { life_rating = 28 literacy = 0,005 NOT = { literacy = 0,025 } }
+				AND = { life_rating = 42 literacy = 0,01 NOT = { literacy = 0,025 } }
+				AND = { life_rating = 56 literacy = 0,015 NOT = { literacy = 0,025 } }
 			}
-			life_rating = -5
+			life_rating = 14
+		}
+		any_owned = {
+			limit = { 
+				AND = { life_rating = 70 literacy = 0,03 }
+				AND = { life_rating = 69 literacy = 0,04 }
+				AND = { life_rating = 67 literacy = 0,05 }
+				AND = { life_rating = 65 literacy = 0,06 }
+				AND = { life_rating = 63 literacy = 0,07 }
+				AND = { life_rating = 61 literacy = 0,08 }
+				AND = { life_rating = 59 literacy = 0,09 }
+				AND = { life_rating = 57 literacy = 0,1 }
+				AND = { life_rating = 55 literacy = 0,11 }
+				AND = { life_rating = 53 literacy = 0,12 }
+				AND = { life_rating = 51 literacy = 0,13 }
+				AND = { life_rating = 49 literacy = 0,14 }
+				AND = { life_rating = 47 literacy = 0,15 }
+				AND = { life_rating = 45 literacy = 0,16 }
+				AND = { life_rating = 43 literacy = 0,17 }
+				AND = { life_rating = 41 literacy = 0,18 }
+				AND = { life_rating = 39 literacy = 0,19 }
+				AND = { life_rating = 37 literacy = 0,2 }
+				AND = { life_rating = 35 literacy = 0,21 }
+				AND = { life_rating = 33 literacy = 0,22 }
+				AND = { life_rating = 31 literacy = 0,23 }
+				AND = { life_rating = 29 literacy = 0,24 }
+				AND = { life_rating = 27 literacy = 0,25 }
+				AND = { life_rating = 25 literacy = 0,26 }
+				AND = { life_rating = 23 literacy = 0,27 }
+				AND = { life_rating = 21 literacy = 0,28 }
+				AND = { life_rating = 19 literacy = 0,29 }
+				AND = { life_rating = 17 literacy = 0,3 }
+				AND = { life_rating = 15 literacy = 0,31 }
+				AND = { life_rating = 13 literacy = 0,32 }
+				AND = { life_rating = 11 literacy = 0,33 }
+			}
+			life_rating = -2
 		}
 	}
 }
 
-country_event = { # High Mortality negation of The Demographic Transition -0.024/LIFE_RATING_GROWTH_BONUS=33(africa), -0.012/LIFE_RATING_GROWTH_BONUS=-22(asia)
+country_event = { # initiall setup of literacy among non primary/accepted pops
+# TODO model colony - for colonies with higher liferating
+# TODO add lower literacy by salafi movement
 	id = 22601
 	title = EVT_22601_NAME # High Mortality
 	desc = EVT_22601_DESC
 	picture = "high_mortality"
-	#is_triggered_only = yes # on_actions
-	#allow_multiple_instances = yes
 
 	trigger = {
-		NOT = { year = 2010 } 
-		any_owned_province = {
-			OR = { 
-				AND = { 
-					OR = { continent = mena continent = asia is_core = SAF } 
-					NOT = { is_core = TUR }
-					NOT = { is_core = JAP }
-					NOT = { year = 1970 } 
-				}
-				AND = { 
-					continent = africa
-					NOT = { is_core = SAF }
-					year = 1960
-					NOT = { year = 2010 } 
-				}
-			}		
+		NOT = { year = 1990 } 
+		NOT = { has_country_flag = demographic_init }
+		any_pop = {
+			location = { is_colonial = no }
+			is_accepted_culture = no
+			# TODO extend this
+			OR = { culture = german culture = estonian culture = latvian culture = lithuanian culture = catalan culture = basque culture = portuguese }
 		}
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		months = 1
 	}
 
 	option = {
 		name = OK
 		set_country_flag = demographic_init
-		any_owned = {
+		any_pop = { 
 			limit = { 
-				OR = { 
-					AND = { 
-						OR = { continent = mena continent = asia is_core = SAF } 
-						NOT = { is_core = TUR }
-						NOT = { is_core = JAP }
-						NOT = { year = 1970 } 
-					}
-					AND = { 
-						continent = africa 
-						NOT = { is_core = SAF }
-						year = 1960
-						NOT = { year = 2010 } 
-					}
-				}		
+				location = { is_colonial = no }
+				is_accepted_culture = no
+				OR = { culture = german culture = estonian culture = latvian culture = lithuanian culture = catalan culture = basque culture = portuguese }
 			}
-			life_rating = 5
+			literacy = 0.1
 		}
-		ai_chance = { factor = 100 }
 	}
 }
 
