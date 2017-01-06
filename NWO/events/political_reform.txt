@@ -100,17 +100,17 @@ country_event = {
 
 	trigger = {
 			ai = no
-			criminology = criminology_classical_school
+			criminology = criminology_classical
 			consciousness = 5
 			literacy = 0.40
-			criminology_corporal_punishment = 10
+			criminology_corporal = 10
 			any_neighbor_country = {
-				criminology = criminology_corporal_punishment
+				criminology = criminology_corporal
 			}
 			NOT = {
 				OR = {
-				has_country_flag = criminology_corporal_punishment_noway
-				has_country_flag = criminology_corporal_punishment_promised
+				has_country_flag = criminology_corporal_noway
+				has_country_flag = criminology_corporal_promised
 				}
 			}
 	}
@@ -129,22 +129,22 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.1
-				value = criminology_corporal_punishment
+				value = criminology_corporal
 			}
 		}
 		set_country_flag = unregulated_publishing_promised
 		add_country_modifier = {
-			name = "criminology_corporal_punishment_promised"
+			name = "criminology_corporal_promised"
 			duration = 1825
 		}
 	}
 	option = {
 		name = "EVTOPTB90100"
 		scaled_militancy = {
-				issue = criminology_corporal_punishment
+				issue = criminology_corporal
 				factor = 2
 			}
-		set_country_flag = criminology_corporal_punishment_noway
+		set_country_flag = criminology_corporal_noway
 	}
 }
 
@@ -155,11 +155,11 @@ country_event = {
 	picture = "Demonstration"
 
 	trigger = {
-			criminology = criminology_classical_school
+			criminology = criminology_classical
 			consciousness = 5
 			literacy = 0.40
-			has_country_flag = criminology_corporal_punishment_promised
-			NOT = { has_country_modifier = criminology_corporal_punishment_promised	}
+			has_country_flag = criminology_corporal_promised
+			NOT = { has_country_modifier = criminology_corporal_promised	}
 	}
  
 	mean_time_to_happen =  {
@@ -174,7 +174,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA90103" 
 		scaled_militancy = {
-				issue = criminology_corporal_punishment
+				issue = criminology_corporal
 				factor = 4
 			}
 	}
