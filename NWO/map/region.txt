@@ -112,13 +112,15 @@ SID_243 = { 243 244 245 241 242 247 246 248 249 250 } #New England
 
 ### Mexico
 
-SID_2139 = { 2139 2137 2138 2140 2141 } # Sonora
+SID_2139 = { 2139 2138 } # Baja California
 
-SID_2143 = { 2143 2142 2144 2145 } #Chihuahua
+SID_2143 = { 2143 2142 2144 2145 2137 2140 2141 } #Chihuahua
 
-SID_2146 = { 2146 2148 2149 2150 2147 2152 } #Nuevo León
+SID_2146 = { 2146 2148 2149 2150 2151 } #Nuevo León
 
-SID_2155 = { 2155 2151 2153 2154 2156 2157 } #SID_2155;Durango
+SID_2155 = { 2155 2147 2152} #SID_2155;Durango
+
+SID_2153 = { 2153 2154 2156 2157 } # Durango
 
 SID_2183 = { 2183 2185 2184 2165 } #Yucatan
 
@@ -196,23 +198,27 @@ SID_2270 = { 2270 2271 } # Zulia
 
 SID_2268 = { 2268 2272 2273 2265 2274 } # Valencia
 
-SID_2264 = { 2264 2267 2269 2275 2276 2277 2278 2266 } #Caracas
+SID_2264 = { 2264 2267 2269 2276 2266 } #Caracas
+
+SID_2275 = { 2275 2277 2278 } #Guyana
 
 SID_2252 = { 2252 2251 2254 2255 } #Medelin
 
-SID_2247 = { 2247 2250 2249 2248 2261 2260 2262 2263 } #Bogotá
+SID_2247 = { 2247 2250 2249 2248 2257 } #Bogotá
 
-SID_2256 = { 2256 2257 2258 2259 2253 } #Cali
+SID_2260 = { 2260 2261 2262 2263 } #Amazonas
+
+SID_2256 = { 2256 2258 2259 2253 } #Cali
 
 SID_2279 = { 2279 2280 2281 2282 2283 2284 2285 } #Ecuador
 
-SID_2289 = { 2289 2287 2288 } #Marañón
+SID_2289 = { 2289 2286 2288 2300 2301 } #Marañón
 
-SID_2292 = { 2292 2291 } # Trujillo
+SID_2292 = { 2292 2291 2287 2294 } # Trujillo
 
-SID_2304 = { 2304 2303 2578 2299 2301 2302 2300 2293 2296 2290 2294 2286 } #Arequipa
+SID_2304 = { 2304 2303 2578 2299 2302 2290 } #Arequipa
 
-SID_2295 = { 2295 2297 2298 } # Lima
+SID_2295 = { 2295 2297 2298 2293 2296 } # Lima
 
 SID_2316 = { 2316 2317 2318 2321 2320 2319  } # Santa Cruz
 
@@ -669,8 +675,8 @@ SID_1098 = { 1098 1099 1100 1106 } #Armenia
 
 SID_1102 = { 1102 1105 1104 1107 1103 } #Azerbaijan
 
-SID_1108 = { 1108 1109 1112 1101 } #Tabriz
-SID_1111 = { 1111 1110 } #West Azerbadjan
+SID_1108 = { 1108 1112 } #East Azerbadjan
+SID_1111 = { 1111 1110 1109 1101 } #West Azerbadjan
 
 SID_1121 = { 1121 1124 1125 1123 1113 1114 1115 } #Irakajemi
 
@@ -844,16 +850,9 @@ SID_1236 = { 1236 } #Delhi
 SID_1242 = { 1242 1243 1244 1069 2669 2671 1245 1246 2670 1071 2644 1239 1240 1241 2650 } #Uttar Pradesh
 
 SID_1257 = { 1257 2658 } #Chittagong
-SID_2657 = { 2657 1256 } #South Bengal
-SID_2680 = { 2680 } #Hilltracts
+SID_2657 = { 2657 1256 2680 } #South Bengal
 
-SID_1258 = { 1258 } # Meghalaya
-SID_1259 = { 1259 } # Manipur
-SID_1260 = { 1260 2693 } # Assam
-SID_2566 = { 2566 } # Mizoram
-SID_3278 = { 3278 } # Arunachal Pradesh
-SID_3279 = { 3279 } # Nagaland
-SID_3280 = { 3280 } # Tripura
+SID_1260 = { 1260 2693 2566 3279 3280 1259 1258 } # Assam
 
 SID_1261 = { 1261 1262 1263 } #Orissa 
 
@@ -896,7 +895,7 @@ SID_1330 = { 1330 1331 1332 1344 } #South Burma
 SID_1345 = { 1345 } #Rakhine
 SID_1320 = { 1320 } #Andaman Islands
 
-SID_1342 = { 1342 1341 } #Kachin
+SID_1342 = { 1342 1341 3278 } #Kachin
 
 SID_1343 = { 1343 } #Mon State
 
@@ -975,40 +974,33 @@ SID_1462 = { 1462 1464 } #Muslim Mindanao
 
 ### China
 
-SID_1065 = { 1585 1586 } # Xikang
-
 SID_1072 = { 1613 1533 1002 } # Hsingan
 
-SID_1555 = { 1555 45 } #Jilin
-SID_1085 = { 1085 } #Yanbian
-
-SID_2668 = { 2681 1494 1497 2690 } #Guangdong 
-SID_1496 = { 1496 } #Hong Kong
-SID_1498 = { 1498 } #Macao
+SID_1555 = { 1555 45 1085 } #Jilin
 
 SID_1617 = { 1617 } #Tianjin
 SID_1612 = { 1612 } #Beijing
 
 SID_1465 = { 1465 1466 1467 2207 1468 2678 2679 2608 } #Mongolia
 
-SID_1470 = { 1470 1471 1473 1475 } #South Anhui
-
-SID_1477 = { 1477 1474 1476 1472 1478 } #North Anhui
+SID_1477 = { 1477 1474 1472 1478 1470 1471 1473 1475 } #Anhui
 
 SID_1479 = { 1479 1480 2613 }  #Fengtian Liaoning
 SID_1481 = { 1481 }  #Port Aurthur
 
-SID_1482 = { 1482 1483 } #Fujian Fuzhou
-SID_1484 = { 1484 1486 1487 } #Fujian Xiamen
+SID_1482 = { 1482 1483 1484 1486 1487 } #Fujian
 
 SID_1485 = { 1485 2562 } #Taiwan
 
 SID_1490 = { 1490 1488 1489 1492 } #Gansu
 SID_1491 = { 1491 } #Ningxia
 
-SID_1493 = { 1493 1500 1065 } #Canton Guangdong
+SID_1493 = { 1493 1500 1065 1495 1501 2646 2681 1494 1497 2690 } #Guangdong
 
-SID_1499 = { 1499 1495 1501 2646 } #Hainan Guangdong
+SID_1496 = { 1496 } #Hong Kong
+SID_1498 = { 1498 } #Macao
+
+SID_1499 = { 1499 } #Hainan
 
 SID_1504 = { 1502 1503 1504 2682 } #Guangxi
 
@@ -1016,24 +1008,17 @@ SID_1505 = { 1505 1506 1507 } #Guizhou
 
 SID_1511 = { 1511 1510 1513 1515 2684 1508 1509 1512 1514 1062 2685 } #Henan
 
-SID_1519 = { 1519 1520 1521 1523 } #West Hubei Hebei
+SID_1522 = { 1522 1516 1517 1518 2699 1519 1520 1521 1523  } #Hubei
 
-SID_1522 = { 1522 1516 1517 1518 2699 } #East Hubei Hebei
-
-SID_1524 = { 1524 1525 1528 1529 } #West Hunan
-
-SID_1526 = { 1526 1527 1530 2591 } #East Hunan
+SID_1524 = { 1524 1525 1528 1529  1526 1527 1530 2591 } #Hunan
 
 SID_1532 = { 1532 1534 1535 } #Inner Mongolia
 
 SID_1538 = { 1538 1539 2632 } #Shanghai
-SID_2221 = { 2221 1544 1537 } #South Jiangsu Nanking
 
-SID_1540 = { 1540 1541 1543 1536 1542 2636 } #North Jiangsu
+SID_2221 = { 2221 1544 1537 1540 1541 1543 1536 1542 2636 1476 } #Jiangsu
 
-SID_1545 = { 1545 1546 1549 1551 43 } #North Jiangxi
-
-SID_1547 = { 1547 1548 1550 } #South Jiangxi
+SID_1545 = { 1545 1546 1549 1551 43 1547 1548 1550 } #Jiangxi
 
 SID_1552 = { 1552 1553 1554 44 } #Heilongjiang Chahar
 
@@ -1047,31 +1032,23 @@ SID_1565 = { 1565 1566 1569 } #East Shandong
 
 SID_1572 = { 1572 1573 1574 1575 1576 } #Shanxi
 
-SID_1578 = { 1579 1583 7 8 1578 1580 1582 1584 2599 } #Sichuan
+SID_1578 = { 1579 1583 7 8 1578 1580 1582 1584 2599 1585 1586 } #Sichuan
 
 SID_1579 = { 1581 1577 10 } # Chongqing
 
-SID_1588 = { 1587 1590 1591 1592 1589 1588 } #Tibet
+SID_1588 = { 1587 1590 1591 1592 1589 1588 1593 } #Tibet
 SID_1329 = { 1329 1328 } #Buthan
-SID_1593 = { 1593 } # Arunachal Pradesh South Tibet
 
-SID_1594 = { 1594 1598 } #Kashgar Xinjiang
-SID_3281 = { 3281 } #Aksai Chin
+SID_1594 = { 1594 1598 3281 } #Kashgar Xinjiang
 
 SID_1600 = { 1600 1599 2607 } #Urumqui Xinjiang
 SID_1595 = { 1595 1596 1597 } #Ili Xinjiang
 
 SID_1601 = { 1601 1602 1603 2631 } #Yunnan
 
-SID_1604 = { 1604 1605 1606 } #North Zhejiang
-SID_1608 = { 1608 1609 } #North Zhejiang Ningho
+SID_1604 = { 1604 1605 1606 1608 1609 1611 1607 1610 } #Zhejiang
 
-SID_1611 = { 1611 1607 1610	 } #South Zhejiang
-
-SID_18 = { 18 1614 2596 2629 2689 } #Baoding
-
-SID_1616 = { 1616 } #Tangshan
-SID_17 = { 17 1615 1618 } #Baoding
+SID_18 = { 18 1614 2596 2629 2689 17 1615 1618 1616 } #Hebei
 
 
 ### Japan & Korea
