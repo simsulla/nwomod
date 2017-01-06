@@ -11,51 +11,19 @@ country_event = {
 	picture = "demographic_transition"
 
 	trigger = {
-		any_owned_province = {
-			OR = { 
-				AND = { life_rating = 28 literacy = 0,005 NOT = { literacy = 0,025 } }
-				AND = { life_rating = 42 literacy = 0,01 NOT = { literacy = 0,025 } }
-				AND = { life_rating = 56 literacy = 0,015 NOT = { literacy = 0,025 } }
-				AND = { life_rating = 70 literacy = 0,02 NOT = { literacy = 0,025 } }
-				AND = { life_rating = 71 literacy = 0,025 }
-				AND = { life_rating = 70 literacy = 0,03 }
-				AND = { life_rating = 69 literacy = 0,04 }
-				AND = { life_rating = 67 literacy = 0,05 }
-				AND = { life_rating = 65 literacy = 0,06 }
-				AND = { life_rating = 63 literacy = 0,07 }
-				AND = { life_rating = 61 literacy = 0,08 }
-				AND = { life_rating = 59 literacy = 0,09 }
-				AND = { life_rating = 57 literacy = 0,1 }
-				AND = { life_rating = 55 literacy = 0,11 }
-				AND = { life_rating = 53 literacy = 0,12 }
-				AND = { life_rating = 51 literacy = 0,13 }
-				AND = { life_rating = 49 literacy = 0,14 }
-				AND = { life_rating = 47 literacy = 0,15 }
-				AND = { life_rating = 45 literacy = 0,16 }
-				AND = { life_rating = 43 literacy = 0,17 }
-				AND = { life_rating = 41 literacy = 0,18 }
-				AND = { life_rating = 39 literacy = 0,19 }
-				AND = { life_rating = 37 literacy = 0,2 }
-				AND = { life_rating = 35 literacy = 0,21 }
-				AND = { life_rating = 33 literacy = 0,22 }
-				AND = { life_rating = 31 literacy = 0,23 }
-				AND = { life_rating = 29 literacy = 0,24 }
-				AND = { life_rating = 27 literacy = 0,25 }
-				AND = { life_rating = 25 literacy = 0,26 }
-				AND = { life_rating = 23 literacy = 0,27 }
-				AND = { life_rating = 21 literacy = 0,28 }
-				AND = { life_rating = 19 literacy = 0,29 }
-				AND = { life_rating = 17 literacy = 0,3 }
-				AND = { life_rating = 15 literacy = 0,31 }
-				AND = { life_rating = 13 literacy = 0,32 }
-				AND = { life_rating = 11 literacy = 0,33 }
-			}
-		}
+		literacy = 0.02
 	}
 
 	mean_time_to_happen = {
 		months = 60
 		modifier = { pop_majority_religion = secularism factor = 0.5 }
+		modifier = { NOT = { life_rating = 21 } year = 1960 factor = 2 }
+		modifier = { NOT = { life_rating = 25 } year = 1970 factor = 2 }
+		modifier = { NOT = { life_rating = 29 } year = 1980 factor = 2 }
+		modifier = { NOT = { life_rating = 41 } year = 2010 factor = 2 }
+		modifier = { NOT = { life_rating = 49 } year = 2030 factor = 2 }
+		modifier = { NOT = { life_rating = 57 } year = 2050 factor = 2 }
+		modifier = { NOT = { life_rating = 65 } year = 2070 factor = 2 }
 	}
 
 	option = {
@@ -63,62 +31,62 @@ country_event = {
 		# changes in birth rates
 		any_owned = {
 			limit = { 
-				AND = { life_rating = 28 literacy = 0,005 NOT = { literacy = 0,025 } }
-				AND = { life_rating = 42 literacy = 0,01 NOT = { literacy = 0,025 } }
-				AND = { life_rating = 56 literacy = 0,015 NOT = { literacy = 0,025 } }
+				literacy = 0.02
 			}
-			life_rating = 14
+			life_rating = -2
 		}
 		any_owned = {
 			limit = { 
-				AND = { life_rating = 70 literacy = 0,03 }
-				AND = { life_rating = 69 literacy = 0,04 }
-				AND = { life_rating = 67 literacy = 0,05 }
-				AND = { life_rating = 65 literacy = 0,06 }
-				AND = { life_rating = 63 literacy = 0,07 }
-				AND = { life_rating = 61 literacy = 0,08 }
-				AND = { life_rating = 59 literacy = 0,09 }
-				AND = { life_rating = 57 literacy = 0,1 }
-				AND = { life_rating = 55 literacy = 0,11 }
-				AND = { life_rating = 53 literacy = 0,12 }
-				AND = { life_rating = 51 literacy = 0,13 }
-				AND = { life_rating = 49 literacy = 0,14 }
-				AND = { life_rating = 47 literacy = 0,15 }
-				AND = { life_rating = 45 literacy = 0,16 }
-				AND = { life_rating = 43 literacy = 0,17 }
-				AND = { life_rating = 41 literacy = 0,18 }
-				AND = { life_rating = 39 literacy = 0,19 }
-				AND = { life_rating = 37 literacy = 0,2 }
-				AND = { life_rating = 35 literacy = 0,21 }
-				AND = { life_rating = 33 literacy = 0,22 }
-				AND = { life_rating = 31 literacy = 0,23 }
-				AND = { life_rating = 29 literacy = 0,24 }
-				AND = { life_rating = 27 literacy = 0,25 }
-				AND = { life_rating = 25 literacy = 0,26 }
-				AND = { life_rating = 23 literacy = 0,27 }
-				AND = { life_rating = 21 literacy = 0,28 }
-				AND = { life_rating = 19 literacy = 0,29 }
-				AND = { life_rating = 17 literacy = 0,3 }
-				AND = { life_rating = 15 literacy = 0,31 }
-				AND = { life_rating = 13 literacy = 0,32 }
-				AND = { life_rating = 11 literacy = 0,33 }
+				NOT = { year = 1990 }
+				NOT = { literacy = 0.02 }
 			}
-			life_rating = -2
+			life_rating = 2
 		}
 	}
 }
 
-country_event = { # initiall setup of literacy among non primary/accepted pops
-# TODO model colony - for colonies with higher liferating
-# TODO add lower literacy by salafi movement
+country_event = {
 	id = 22601
 	title = EVT_22601_NAME # High Mortality
 	desc = EVT_22601_DESC
 	picture = "high_mortality"
 
 	trigger = {
+		NOT = { year = 1990 }
+		NOT = { literacy = 0.02 }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = { pop_majority_religion = secularism factor = 0.5 }
+		modifier = { NOT = { life_rating = 28 } year = 2030 factor = 2 }
+		modifier = { NOT = { life_rating = 42 } year = 1990 factor = 2 }
+		modifier = { NOT = { life_rating = 56 } year = 1960 factor = 2 }
+	}
+
+	option = {
+		name = OK
+		# changes in birth rates
+		any_owned = {
+			limit = { 
+				NOT = { literacy = 0.02 }
+			}
+			life_rating = 2
+		}
+	}
+}
+
+country_event = { 
+# initiall setup of literacy among non primary/accepted pops
+	id = 22602
+	title = EVT_22602_NAME
+	desc = EVT_22602_DESC
+	picture = "education"
+
+	trigger = {
 		NOT = { year = 1990 } 
 		NOT = { has_country_flag = demographic_init }
+		OR = { tag = USA tag = FRA tag = GBR tag = SUN tag = SPA } 
 		any_pop = {
 			location = { is_colonial = no }
 			is_accepted_culture = no
