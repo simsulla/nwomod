@@ -5,25 +5,52 @@
 #############################################################
 
 country_event = {
+	id = 22599
+	title = EVT_22600_NAME # The Demographic Transition
+	desc = EVT_22600_DESC
+	picture = "demographic_transition"
+
+	trigger = {
+		year = 1990
+		any_owned_province = {
+			life_rating = 60
+		}
+	}
+	
+	option = {
+		name = OK
+		# changes in birth rates
+		any_owned = {
+			life_rating = 5
+		}
+	}
+	
+}
+
+country_event = {
 	id = 22600 
 	title = EVT_22600_NAME # The Demographic Transition
 	desc = EVT_22600_DESC
 	picture = "demographic_transition"
 
 	trigger = {
-		literacy = 0.02
+		any_owned_province = {
+			literacy = 0.02
+			OR = {
+				AND = { NOT = { life_rating = 21 } NOT = { year = 1951 } }
+				AND = { NOT = { life_rating = 25 } NOT = { year = 1955 } }
+				AND = { NOT = { life_rating = 29 } NOT = { year = 1959 } }
+				AND = { NOT = { life_rating = 41 } NOT = { year = 1971 } }
+				AND = { NOT = { life_rating = 49 } NOT = { year = 1979 } }
+				AND = { NOT = { life_rating = 57 } NOT = { year = 1987 } }
+				AND = { NOT = { life_rating = 65 } NOT = { year = 1995 } }
+				AND = { life_rating = 65 NOT = { year = 2000 } }
+			}
+		}
 	}
 
 	mean_time_to_happen = {
 		months = 60
-		modifier = { pop_majority_religion = secularism factor = 0.5 }
-		modifier = { any_owned_province = { NOT = { life_rating = 21 } } year = 1951 factor = 2 }
-		modifier = { any_owned_province = { NOT = { life_rating = 25 } } year = 1955 factor = 2 }
-		modifier = { any_owned_province = { NOT = { life_rating = 29 } } year = 1959 factor = 2 }
-		modifier = { any_owned_province = { NOT = { life_rating = 41 } } year = 1971 factor = 2 }
-		modifier = { any_owned_province = { NOT = { life_rating = 49 } } year = 1979 factor = 2 }
-		modifier = { any_owned_province = { NOT = { life_rating = 57 } } year = 1987 factor = 2 }
-		modifier = { any_owned_province = { NOT = { life_rating = 65 } } year = 1995 factor = 2 }
 	}
 
 	option = {
@@ -32,15 +59,19 @@ country_event = {
 		any_owned = {
 			limit = { 
 				literacy = 0.02
+				OR = {
+					AND = { NOT = { life_rating = 21 } NOT = { year = 1951 } }
+					AND = { NOT = { life_rating = 25 } NOT = { year = 1955 } }
+					AND = { NOT = { life_rating = 29 } NOT = { year = 1959 } }
+					AND = { NOT = { life_rating = 41 } NOT = { year = 1971 } }
+					AND = { NOT = { life_rating = 49 } NOT = { year = 1979 } }
+					AND = { NOT = { life_rating = 57 } NOT = { year = 1987 } }
+					AND = { NOT = { life_rating = 65 } NOT = { year = 1995 } }
+					AND = { life_rating = 65 NOT = { year = 2000 } }
+					# what about provinces that start with low life_rating due to high death rates?
+				}
 			}
 			life_rating = -5
-		}
-		any_owned = {
-			limit = { 
-				NOT = { year = 1990 }
-				NOT = { literacy = 0.02 }
-			}
-			life_rating = 2
 		}
 	}
 }
@@ -53,15 +84,17 @@ country_event = {
 
 	trigger = {
 		NOT = { year = 1990 }
-		NOT = { literacy = 0.02 }
+		any_owned_province = {
+			NOT = { literacy = 0.02 }
+			OR = { 
+				AND = { continent = africa NOT = { year = 1980 } }
+				AND = { OR = { continent = asia continent = mena continent = oceania } NOT = { year = 1970 } }
+			}
+		}
 	}
 
 	mean_time_to_happen = {
 		months = 60
-		modifier = { pop_majority_religion = secularism factor = 0.5 }
-		modifier = { any_owned_province = { NOT = { life_rating = 28 } } year = 1982 factor = 2 }
-		modifier = { any_owned_province = { NOT = { life_rating = 42 } } year = 1968 factor = 2 }
-		modifier = { any_owned_province = { NOT = { life_rating = 56 } } year = 1954 factor = 2 }
 	}
 
 	option = {
@@ -70,8 +103,13 @@ country_event = {
 		any_owned = {
 			limit = { 
 				NOT = { literacy = 0.02 }
+				NOT = { year = 1990 }
+				OR = { 
+					AND = { continent = africa NOT = { year = 1980 } }
+					AND = { OR = { continent = asia continent = mena continent = oceania } NOT = { year = 1970 } }
+				}
 			}
-			life_rating = 5
+			life_rating = 2
 		}
 	}
 }
