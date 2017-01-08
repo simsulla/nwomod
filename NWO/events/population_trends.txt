@@ -7,12 +7,18 @@
 #
 # population_trends will be retired untill something can be figured out. At the moment hard coded. 
 
-#country_event = {
-#	id = 22600 
-#	title = EVT_22600_NAME # The Demographic Transition
-#	desc = EVT_22600_DESC
-#	picture = "demographic_transition"
-#}
+country_event = {
+	id = 22600 
+	title = EVT_22600_NAME # The Demographic Transition
+	desc = EVT_22600_DESC
+	picture = "demographic_transition"
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		any_core = { limit = { owned_by = FROM } secede_province = THIS }
+	}
+}
 
 #country_event = {
 #	id = 22601
