@@ -7,13 +7,69 @@
 #
 # population_trends will be retired untill something can be figured out. At the moment hard coded. 
 
-#country_event = {
-#	id = 22600 
-#	title = EVT_22600_NAME # The Demographic Transition
-#	desc = EVT_22600_DESC
-#	picture = "demographic_transition"
+country_event = {
+	id = 22600 
+	title = EVT_22600_NAME # The Demographic Transition
+	desc = EVT_22600_DESC
+	picture = "demographic_transition"
 
-#}
+	trigger = {
+		year = 1990
+		NOT = { has_country_flag = demographic_transition_2000 }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = { pop_majority_religion = secularism  factor = 0.1 }
+		modifier = { literacy = 0.01 factor = 2.0 }
+		modifier = { literacy = 0.2 factor = 0.5 }
+		modifier = { literacy = 0.4 factor = 0.1 }
+	}
+
+	option = {
+		name = OK
+		set_country_flag = demographic_transition_2000
+		any_owned = { limit = { life_rating = 18 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 21 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 25 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 30 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 35 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 40 } life_rating = -3 }
+	}
+	
+}
+
+country_event = {
+	id = 22601
+	title = EVT_22600_NAME # The Demographic Transition
+	desc = EVT_22600_DESC
+	picture = "demographic_transition"
+
+	trigger = {
+		year = 2040
+		NOT = { has_country_flag = demographic_transition_2050 }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = { pop_majority_religion = secularism  factor = 0.1 }
+		modifier = { literacy = 0.01 factor = 2.0 }
+		modifier = { literacy = 0.2 factor = 0.5 }
+		modifier = { literacy = 0.4 factor = 0.1 }
+	}
+
+	option = {
+		name = OK
+		set_country_flag = demographic_transition_2050
+		any_owned = { limit = { life_rating = 18 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 21 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 25 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 30 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 35 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 40 } life_rating = -1 }
+	}
+	
+}
 
 #country_event = {
 #	id = 22601

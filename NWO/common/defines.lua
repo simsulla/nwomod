@@ -627,7 +627,7 @@ pops = {
 	BASE_POPGROWTH = -0.0001, -- % per month:  reflects death rates with "some" aging TFR 1.8 is zero growth
 	MIN_LIFE_RATING_FOR_GROWTH = 18, 
 	LIFE_RATING_GROWTH_BONUS = 0.00014, -- % per month * life_rating (TFR / 10) - Liferating calc based on 0.0001
-	LIFE_NEED_STARVATION_LIMIT = 0.0, -- temporary to be reenabled 0.5
+	LIFE_NEED_STARVATION_LIMIT = 0.1, 
 
 	MIL_LACK_EVERYDAY_NEED = 0.05,
 	MIL_HAS_EVERYDAY_NEED = -0.075,
