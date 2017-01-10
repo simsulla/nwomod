@@ -360,7 +360,7 @@ emigration_chance = {
 	# no life needs - leave!
 	modifier = { factor = 0.1 NOT = { life_needs = 1.0 } }
 	modifier = { factor = 0.1 NOT = { life_needs = 0.5 } }
-	modifier = { factor = 0.1 NOT = { life_needs = 0.1 } }
+	modifier = { factor = 0.5 NOT = { life_needs = 0.1 } }
 
 	# need to prevent rural provinces going empty - pops will move to the state_capital by getting promoted
 	modifier = { factor = -1.0 location = { NOT = { total_pops = 10000 } } }
