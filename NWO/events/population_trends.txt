@@ -4,158 +4,118 @@
 #															#
 #############################################################
 
-# Demographic factors
-# 1. Demographic transition - hardcoded timing
-# 2.a literacy - influences when the transition happens 
-# 2.b secular pop majority - Y|N influences when the transition happens 
-# 3. special - haredim_jewish, roma and mennonites and not prim/accept
+#
+# population_trends will be retired untill something can be figured out. At the moment hard coded. 
+
 country_event = {
 	id = 22600 
 	title = EVT_22600_NAME # The Demographic Transition
 	desc = EVT_22600_DESC
 	picture = "demographic_transition"
-	#is_triggered_only = yes # on_actions
-	#allow_multiple_instances = yes
 
 	trigger = {
-		any_owned_province = {
-			life_rating = 25
-			NOT = { pop_majority_culture = haredim_jewish pop_majority_culture = mennonites pop_majority_culture = roma }
-			OR = { 
-				AND = { 
-					year = 1890 
-					OR = { continent = europe is_core = JAP is_core = AZO is_core = MAE is_core = POR is_core = SPA is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } 
-					NOT = { pop_majority_religion = sunni }
-				}
-				AND = { 
-					is_primary_culture = yes
-					OR = { continent = north_america continent = south_america continent = europe continent = asia continent = oceania } 
-					NOT = { is_core = PHI } NOT = { pop_majority_religion = sunni continent = asia } 
-					year = 1965 
-				}
-				AND = { 
-					is_core = TUR 
-					year = 1965 
-				}
-				AND = { 
-					NOT = { continent = africa } 
-					year = 1980 
-				}
-				AND = { 
-					continent = africa 
-					NOT = { pop_majority_religion = sunni } 
-					year = 1990 
-				}
-				year = 2010 
-			}
-		}
+		year = 1990
+		NOT = { has_country_flag = demographic_transition_2000 }
 	}
 
 	mean_time_to_happen = {
-		months = 60
-		modifier = { NOT = { literacy = 0.02 } factor = 2 }
-		modifier = { literacy = 0.02 factor = 1.2 }
-		modifier = { literacy = 0.05 factor = 0.8 }
-		modifier = { literacy = 0.10 factor = 0.8 }
-		modifier = { literacy = 0.20 factor = 0.8 }
-		modifier = { pop_majority_religion = secularism factor = 0.5 }
+		months = 120
+		modifier = { pop_majority_religion = secularism  factor = 0.1 }
+		modifier = { literacy = 0.01 factor = 2.0 }
+		modifier = { literacy = 0.2 factor = 0.5 }
+		modifier = { literacy = 0.4 factor = 0.1 }
 	}
 
 	option = {
 		name = OK
-		# changes in birth rates
-		any_owned = {
-			limit = { 
-				life_rating = 20
-				NOT = { pop_majority_culture = haredim_jewish pop_majority_culture = mennonites pop_majority_culture = roma }
-				OR = { 
-					AND = { 
-						year = 1890 
-						OR = { continent = europe is_core = JAP is_core = RUS is_core = AZO is_core = MAE is_core = POR is_core = SPA is_core = CHL is_core = ARG is_core = URU is_core = USA is_core = CAN is_core = AST is_core = NZL } 
-						NOT = { pop_majority_religion = sunni }
-					}
-					AND = { 
-						is_primary_culture = yes
-						OR = { continent = north_america continent = south_america continent = europe continent = asia continent = oceania } 
-						NOT = { is_core = PHI } NOT = { pop_majority_religion = sunni continent = asia } 
-						year = 1965 
-					}
-					AND = { 
-						is_core = TUR 
-						year = 1965 
-					}
-					AND = { 
-						NOT = { continent = africa } 
-						year = 1980 
-					}
-					AND = { 
-						continent = africa 
-						NOT = { pop_majority_religion = sunni } 
-						year = 1990 
-					}
-					year = 2010 
-				}
-			}
-			life_rating = -5
-		}
+		set_country_flag = demographic_transition_2000
+		any_owned = { limit = { life_rating = 18 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 21 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 25 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 30 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 35 } life_rating = -3 }
+		any_owned = { limit = { life_rating = 40 } life_rating = -3 }
 	}
+	
 }
 
-country_event = { # High Mortality negation of The Demographic Transition -0.024/LIFE_RATING_GROWTH_BONUS=33(africa), -0.012/LIFE_RATING_GROWTH_BONUS=-22(asia)
+country_event = {
 	id = 22601
-	title = EVT_22601_NAME # High Mortality
-	desc = EVT_22601_DESC
-	picture = "high_mortality"
-	#is_triggered_only = yes # on_actions
-	#allow_multiple_instances = yes
+	title = EVT_22600_NAME # The Demographic Transition
+	desc = EVT_22600_DESC
+	picture = "demographic_transition"
 
 	trigger = {
-		NOT = { year = 2010 } 
-		any_owned_province = {
-			OR = { 
-				AND = { 
-					OR = { continent = mena continent = asia is_core = SAF } 
-					NOT = { is_core = TUR }
-					NOT = { is_core = JAP }
-					NOT = { year = 1970 } 
-				}
-				AND = { 
-					continent = africa
-					NOT = { is_core = SAF }
-					year = 1960
-					NOT = { year = 2010 } 
-				}
-			}		
-		}
+		year = 2040
+		NOT = { has_country_flag = demographic_transition_2050 }
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		months = 120
+		modifier = { pop_majority_religion = secularism  factor = 0.1 }
+		modifier = { literacy = 0.01 factor = 2.0 }
+		modifier = { literacy = 0.2 factor = 0.5 }
+		modifier = { literacy = 0.4 factor = 0.1 }
+	}
+
+	option = {
+		name = OK
+		set_country_flag = demographic_transition_2050
+		any_owned = { limit = { life_rating = 18 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 21 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 25 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 30 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 35 } life_rating = -1 }
+		any_owned = { limit = { life_rating = 40 } life_rating = -1 }
+	}
+	
+}
+
+#country_event = {
+#	id = 22601
+#	title = EVT_22601_NAME # High Mortality
+#	desc = EVT_22601_DESC
+#	picture = "high_mortality"
+
+#}
+
+country_event = { 
+# initiall setup of literacy among non primary/accepted pops
+	id = 22602
+	title = EVT_22602_NAME
+	desc = EVT_22602_DESC
+	picture = "education"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_init }
+	}
+
+	mean_time_to_happen = {
+		months = 1
 	}
 
 	option = {
 		name = OK
 		set_country_flag = demographic_init
-		any_owned = {
+		any_pop = { 
 			limit = { 
-				OR = { 
-					AND = { 
-						OR = { continent = mena continent = asia is_core = SAF } 
-						NOT = { is_core = TUR }
-						NOT = { is_core = JAP }
-						NOT = { year = 1970 } 
-					}
-					AND = { 
-						continent = africa 
-						NOT = { is_core = SAF }
-						year = 1960
-						NOT = { year = 2010 } 
-					}
-				}		
+				is_primary_culture = no
+				OR = { culture = german culture = estonian culture = latvian culture = lithuanian culture = catalan culture = basque culture = portuguese }
 			}
-			life_rating = 5
+			literacy = 0.1
 		}
-		ai_chance = { factor = 100 }
+		any_pop = { 
+			limit = { culture = haredim_jewish }
+			country = { set_country_flag = haredim_jewish }
+		}
+		any_pop = { 
+			limit = { culture = mennonites }
+			country = { set_country_flag = mennonites }
+		}
+		any_pop = { 
+			limit = { culture = roma }
+			country = { set_country_flag = roma }
+		}
 	}
 }
 
@@ -169,15 +129,12 @@ country_event = { # haredim_jewish
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_haredim_jewish }
-		any_pop = { 
-			has_pop_culture = haredim_jewish
-			location = { NOT = { pop_majority_culture = haredim_jewish } }
-		}
+		has_country_flag = haredim_jewish
 	}
 	
-	#mean_time_to_happen = {
-    #    months = 120
-	#}
+	mean_time_to_happen = {
+        months = 12
+	}
 	
 	option = {
 		name = EVT_22612_OPTA
@@ -215,15 +172,12 @@ country_event = { # mennonites
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_mennonites }
-		any_pop = { 
-			has_pop_culture = mennonites
-			location = { NOT = { pop_majority_culture = mennonites } }
-		}
+		has_country_flag = mennonites
 	}
 	
-	#mean_time_to_happen = {
-    #    months = 120
-	#}
+	mean_time_to_happen = {
+        months = 12
+	}
 	
 	option = {
 		name = EVT_22613_OPTA
@@ -263,15 +217,12 @@ country_event = { # romani
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_romani }
-		any_pop = { 
-			has_pop_culture = roma
-			location = { NOT = { pop_majority_culture = roma } }
-		}
+		has_country_flag = roma
 	}
 	
-	#mean_time_to_happen = {
-    #    months = 12
-	#}
+	mean_time_to_happen = {
+        months = 12
+	}
 	
 	option = {
 		name = EVT_22614_OPTA

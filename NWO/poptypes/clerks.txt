@@ -1083,11 +1083,11 @@ issues = {
 	}
 
 # criminology
-	# criminology_classical_school
-	criminology_corporal_punishment = {
+	# criminology_classical
+	criminology_corporal = {
 		factor = 0.6
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 OR = { is_next_reform = criminology_corporal_punishment NOT = { consciousness = 5 } } }
+		modifier = { factor = 0 OR = { is_next_reform = criminology_corporal NOT = { consciousness = 5 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
 		modifier = { factor = 1.25 literacy = 0.40 }
@@ -1101,10 +1101,10 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 8 }
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
-	criminology_capital_punishment = {
+	criminology_capital = {
 		factor = 0.4
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 OR = { is_next_reform = criminology_capital_punishment NOT = { consciousness = 6 } } }
+		modifier = { factor = 0 OR = { is_next_reform = criminology_capital NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
 		modifier = { factor = 1.25 literacy = 0.40 }
@@ -1117,10 +1117,10 @@ issues = {
 		modifier = { factor = 1.25 consciousness = 8 }
 		modifier = { factor = 1.25 consciousness = 9 }
 	}
-	criminology_social_justice = {
+	criminology_social = {
 		factor = 0.2
 		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
-		modifier = { factor = 0 is_next_reform = criminology_social_justice }
+		modifier = { factor = 0 is_next_reform = criminology_social }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }

@@ -18,3 +18,102 @@ country_event = {
 	add_country_modifier = { name = economic_boom duration = 750 }
   }
 }
+
+country_event = {
+  id = 8009510
+  title = EVT_8009510_NAME
+  desc = EVT_8009510_DESC
+  picture = "mexican_drug_war"
+  fire_only_once = yes
+
+  trigger = {
+    tag = MEX
+    year = 2006 NOT = { year = 2007 }
+  }
+
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = EVT_8009509_A
+	2138 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2139 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2140 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2141 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2142 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2143 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2144 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2145 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2146 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2147 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2148 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2149 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2150 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2152 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2155 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2156 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2158 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2159 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2161 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2162 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2164 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2166 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2168 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2170 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2171 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2177 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2178 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+	2179 = { add_province_modifier = { name = mexican_drug_war duration = 4745 } }
+  }
+}
+
+country_event = {
+  id = 8009511
+  title = EVT_8009511_NAME
+  desc = EVT_8009511_DESC
+  picture = "chiapas_conflict"
+  fire_only_once = yes
+
+  trigger = {
+    tag = MEX
+    year = 1994 NOT = { year = 1995 }
+  }
+
+  mean_time_to_happen = { months = 33 }
+
+  option = {
+    name = EVT_8009511_A
+	any_pop = { limit = { NOT = { culture = mayan } } militancy = 8.0 consciousness = 5.0 }
+  }
+
+  option = {
+    name = EVT_8009511_B
+	1681 = { secede_province = CIP } 
+	1682 = { secede_province = CIP } 
+        create_vassal = CIP
+  }
+}
+
+country_event = {
+  id = 8009512
+  title = EVT_8009512_NAME
+  desc = EVT_8009512_DESC
+  picture = "chiapas_conflict"
+  fire_only_once = yes
+
+  trigger = {
+    tag = MEX
+    year = 1996 NOT = { year = 1997 }
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8009512_A
+	any_pop = { limit = { NOT = { culture = mayan } } militancy = -4.0 consciousness = -2.0 }
+  }
+
+  option = {
+    name = EVT_8009512_B
+	any_pop = { limit = { NOT = { culture = mayan } } militancy = 5.0 consciousness = 3.0 }
+  }
+}

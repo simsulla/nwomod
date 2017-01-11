@@ -1,5 +1,25 @@
 political_decisions = {
 
+	expulsion_of_chagos_islanders = {
+		picture = "chagos_islander"
+		potential = {
+			tag = GBR
+			year = 1971 NOT = { year = 1990 }
+            owns = 2128
+		}
+
+		ai_will_do = { factor = 1 }
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			relation = { who = USA value = 200 } 
+			any_pop = { limit = { location = { province_id = 2128 } NOT = { is_primary_culture = yes } } move_pop = 2125 } # Posen -> E.Berlin
+		}
+	}
+
 	end_the_uk = {
 		picture = "end_the_uk"
 		potential = {
@@ -16,9 +36,6 @@ political_decisions = {
 		effect = {
 			prestige = 10
 			all_core = { 
-				limit = { 
-					NOT = { owned_by = GBR } 
-				}
 				remove_core = GBR
 			}
 			change_tag = ENG

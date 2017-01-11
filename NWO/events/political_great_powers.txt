@@ -227,7 +227,7 @@ country_event = { # Demand install democracy
 	option = {
 		name = EVT_19004_B
 		FROM = { country_event = 19007 }
-		ai_chance = { factor = 0.1 modifier = { factor = 0 FROM = { tag = YUG } } }
+		ai_chance = { factor = 0.1 modifier = { factor = 0 FROM = { tag = YUG } } modifier = { factor = 0 FROM = { tag = SAA } }   modifier = { factor = 0 FROM = { tag = UAE } }  modifier = { factor = 0 FROM = { tag = QAT } } }
 	}
 }
 country_event = {
@@ -327,11 +327,11 @@ country_event = { # Demand install democracy
 		name = EVT_19004_B
 		set_country_flag = soi_demand_install
 		random_country = { 
-			limit = { government = absolute_monarchy }
+			limit = { tag = THIS government = absolute_monarchy }
 			government = hms_government country_event = 800054
 		}
 		random_country = { 
-			limit = { NOT = { government = absolute_monarchy } }
+			limit = {  tag = THIS NOT = { government = absolute_monarchy } }
 			government = democracy country_event = 800044
 		}
 		ai_chance = { factor = 0.5 }
@@ -758,7 +758,7 @@ country_event = {
 	immediate = { 
 		great_wars_enabled = yes
 		set_global_flag = great_wars_enabled
-		set_global_flag = NWO_v1_11 # TODO change with a new version
+		set_global_flag = NWO_v1_12 # TODO change with a new version
 	}
 	
 	option = {
@@ -770,11 +770,12 @@ country_event = {
 			set_country_flag = recognized_government
 			
 		}
-		USA = { remove_accepted_culture = german } # due to literacy Vic2 mod limitations
-		FRA = { remove_accepted_culture = german }
-		SPA = { remove_accepted_culture = catalan remove_accepted_culture = basque }
-		SUN = { remove_accepted_culture = german remove_accepted_culture= estonian remove_accepted_culture = latvian remove_accepted_culture = lithuanian }
-		GBR = { remove_accepted_culture = german }
+		# TODO remove instad add literacy i neparate event
+		#USA = { remove_accepted_culture = german } # due to literacy Vic2 mod limitations
+		#FRA = { remove_accepted_culture = german }
+		#SPA = { remove_accepted_culture = catalan remove_accepted_culture = basque }
+		#SUN = { remove_accepted_culture = german remove_accepted_culture= estonian remove_accepted_culture = latvian remove_accepted_culture = lithuanian }
+		#GBR = { remove_accepted_culture = german }
 	}
 }
 
@@ -803,7 +804,7 @@ country_event = {
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
-                                political_reform = criminology_classical_school
+                                political_reform = criminology_classical
                                 political_reform = censored_publishing
                                 political_reform = gender_role_based
                                 political_reform = parties_not_allowed
@@ -860,7 +861,7 @@ country_event = {
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
-                                political_reform = criminology_classical_school
+                                political_reform = criminology_classical
                                 political_reform = censored_publishing
                                 political_reform = gender_role_based
                                 political_reform = parties_not_allowed
@@ -917,7 +918,7 @@ country_event = {
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
-                                political_reform = criminology_classical_school
+                                political_reform = criminology_classical
                                 political_reform = censored_publishing
                                 political_reform = gender_role_based
                                 political_reform = parties_not_allowed
@@ -1137,7 +1138,7 @@ country_event = {
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
-                                political_reform = criminology_classical_school
+                                political_reform = criminology_classical
                                 political_reform = censored_publishing
                                 political_reform = gender_role_based
                                 political_reform = parties_not_allowed
@@ -2052,6 +2053,7 @@ country_event = {
   option = {
     name = EVT_DEMOSWITCH_SWITCH
 	clr_country_flag = was_commi
+	SUN = { plurality = 4 }
 	prestige = 5
   }
 
@@ -2074,6 +2076,7 @@ country_event = {
   option = {
     name = EVT_COMMIESWITCH_CELEBRATE
 	set_country_flag = was_commi
+	SUN = { plurality = -1 }
 	prestige = 5
   }
 }
@@ -2097,6 +2100,7 @@ country_event = {
     name = EVT_COMMIESWITCH_CELEBRATE
 	set_country_flag = was_commi
 	government = proletarian_dictatorship
+	SUN = { plurality = -1 }
 	country_event = 800052
 	ai_chance = { factor = 100 }
   }
