@@ -126,15 +126,12 @@ country_event = { # haredim_jewish
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_haredim_jewish }
-		any_pop = { 
-			has_pop_culture = haredim_jewish
-			location = { NOT = { pop_majority_culture = haredim_jewish } }
-		}
+		any_pop = { has_pop_culture = haredim_jewish }
 	}
 	
-	#mean_time_to_happen = {
-    #    months = 120
-	#}
+	mean_time_to_happen = {
+        months = 12
+	}
 	
 	option = {
 		name = EVT_22612_OPTA
@@ -172,15 +169,12 @@ country_event = { # mennonites
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_mennonites }
-		any_pop = { 
-			has_pop_culture = mennonites
-			location = { NOT = { pop_majority_culture = mennonites } }
-		}
+		any_pop = { has_pop_culture = mennonites }
 	}
 	
-	#mean_time_to_happen = {
-    #    months = 120
-	#}
+	mean_time_to_happen = {
+        months = 12
+	}
 	
 	option = {
 		name = EVT_22613_OPTA
@@ -220,15 +214,12 @@ country_event = { # romani
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_romani }
-		any_pop = { 
-			has_pop_culture = roma
-			location = { NOT = { pop_majority_culture = roma } }
-		}
+		any_pop = { has_pop_culture = roma }
 	}
 	
-	#mean_time_to_happen = {
-    #    months = 12
-	#}
+	mean_time_to_happen = {
+        months = 12
+	}
 	
 	option = {
 		name = EVT_22614_OPTA

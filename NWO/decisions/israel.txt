@@ -65,5 +65,83 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 modifier = { factor = 0 exists = PAL owns = 917 } }
 	}
+
+	form_sanhedrin = {
+		picture = "form_sanhedrin"
+
+		potential = {
+			tag = ISR
+		}
+		  
+		allow = {
+			pop_majority_culture = haredim_jewish
+			accepted_culture  = haredim_jewish
+			government = democracy
+			religious_policy = moralism
+		}
+		  
+		effect = {
+			badboy = 10
+			government = theocracy country_event = 800051
+			religion = jewish
+			primary_culture = haredim_jewish
+			accepted_culture = jewish
+			set_country_flag = sanhedrin
+		}
+			  
+		ai_will_do = { factor = 1 }
+  
+	}
+  
+
+	third_temple = {
+        picture = "third_temple"
+
+        potential = {
+            tag = ISR
+            has_country_flag = sanhedrin
+			NOT = { has_country_flag = third_temple_rebuilt }
+        }
+      
+        allow = {
+			917 = { is_capital = yes owned_by = ISR } 
+			religion = jewish
+            money = 1000000
+        }
+      
+        effect = {
+            prestige = 20
+            badboy = 10
+            set_country_flag = third_temple_rebuilt
+			any_country = { limit = { OR = { religion = sunni religion = shiite } } relation = { who = THIS value = -200 } }
+        }
+          
+        ai_will_do = { factor = 1 }
+  
+    }
+  
+	shabbat_laws = {
+        picture = "shabbat_laws" 
+
+        potential = {
+            tag = ISR
+            has_country_flag = sanhedrin
+			NOT = { has_country_flag = shabbat_laws }			
+        }
+      
+        allow = {
+			religious_policy = moralism
+			moralism = 50
+        }
+      
+        effect = {
+            badboy = 10
+            government = theocracy 
+            religion = jewish  
+			set_country_flag = shabbat_laws
+        }
+          
+        ai_will_do = { factor = 1 }
+	}
 	
 }
