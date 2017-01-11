@@ -87,15 +87,7 @@ country_event = {
 	picture = "education"
 
 	trigger = {
-		NOT = { year = 1990 } 
 		NOT = { has_country_flag = demographic_init }
-		OR = { tag = USA tag = FRA tag = GBR tag = SUN tag = SPA } 
-		any_pop = {
-			location = { is_colonial = no }
-			is_accepted_culture = no
-			# TODO extend this
-			OR = { culture = german culture = estonian culture = latvian culture = lithuanian culture = catalan culture = basque culture = portuguese }
-		}
 	}
 
 	mean_time_to_happen = {
@@ -107,11 +99,22 @@ country_event = {
 		set_country_flag = demographic_init
 		any_pop = { 
 			limit = { 
-				location = { is_colonial = no }
-				is_accepted_culture = no
+				is_primary_culture = no
 				OR = { culture = german culture = estonian culture = latvian culture = lithuanian culture = catalan culture = basque culture = portuguese }
 			}
 			literacy = 0.1
+		}
+		any_pop = { 
+			limit = { culture = haredim_jewish }
+			country = { set_country_flag = haredim_jewish }
+		}
+		any_pop = { 
+			limit = { culture = mennonites }
+			country = { set_country_flag = mennonites }
+		}
+		any_pop = { 
+			limit = { culture = roma }
+			country = { set_country_flag = roma }
 		}
 	}
 }
@@ -126,7 +129,7 @@ country_event = { # haredim_jewish
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_haredim_jewish }
-		any_pop = { has_pop_culture = haredim_jewish }
+		has_country_flag = haredim_jewish
 	}
 	
 	mean_time_to_happen = {
@@ -169,7 +172,7 @@ country_event = { # mennonites
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_mennonites }
-		any_pop = { has_pop_culture = mennonites }
+		has_country_flag = mennonites
 	}
 	
 	mean_time_to_happen = {
@@ -214,7 +217,7 @@ country_event = { # romani
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_romani }
-		any_pop = { has_pop_culture = roma }
+		has_country_flag = roma
 	}
 	
 	mean_time_to_happen = {
