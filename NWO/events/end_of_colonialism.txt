@@ -402,5 +402,16 @@ country_event = { # Demand Immediate Repay 1mil of WW2 War Dept!
 }
 # If as a consequence of 15503 we are bancryot we have to give all countrie we previously denied independance independance.
 
+country_event = { # Decolonialization
+  id = 15420
+  title = EVT_fullindependence_NAME
+  desc = EVT_fullindependence_DESC
+  picture = "colonialism_end"
+  is_triggered_only = yes
 
+  option = {
+    name = EVT_fullindependence_A
+	any_pop = { militancy = 10 }
+  }
+}
 
