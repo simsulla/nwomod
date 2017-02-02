@@ -3187,5 +3187,99 @@ political_decisions = {
                 }
 
         }
+
+		claim_greater_turkey = {
+				picture = "claim_greater_turkey"
+                potential = {
+                        tag = TUR
+                        NOT = { has_country_flag = claim_greater_turkey }
+                }
+
+                allow = {
+                       tag = TUR
+						part_of_sphere = no
+						has_unclaimed_cores = no
+						NOT = {	
+							has_country_flag = claim_greater_tibet
+							ruling_party_ideology = socialist
+							ruling_party_ideology = progressive
+							ruling_party_ideology = liberal 
+						}
+						is_vassal = no
+                        prestige = 45
+                        OR = {
+                                ruling_party_ideology = populist
+                                jingoism = 24
+                        }
+                }
+
+                effect = {
+                        badboy = 12
+                        set_country_flag = claim_greater_turkey
+                        1096 = { 
+                                add_core = TUR
+                        }
+						830 = { 
+                                add_core = TUR
+                        }
+						923 = { 
+                                add_core = TUR
+                        }
+						924 = { 
+                                add_core = TUR
+                        }
+						925 = { 
+                                add_core = TUR
+                        }
+						1011 = { 
+                                add_core = TUR
+                        }
+						897 = { 
+                                add_core = TUR
+                        }
+						907 = { 
+                                add_core = TUR
+                        }
+						901 = { 
+                                add_core = TUR
+                        }
+                }
+
+        }
+        abandon_claim_greater_turkey = {
+				picture = "claim_greater_turkey"
+                potential = {
+                        tag = TUR
+                        has_country_flag = claim_greater_turkey
+                        OR = {
+                                government = democracy
+                                government = hms_government
+                        }
+                }
+
+                allow = {
+                        war = no
+                        is_vassal = no
+                        has_country_flag = claim_greater_turkey
+                        OR = {
+                                ruling_party_ideology = socialist
+                                ruling_party_ideology = progressive
+                                ruling_party_ideology = liberal
+                        }
+                }
+
+                effect = {
+						prestige = 10
+                        any_pop = {
+                                consciousness = 1
+                        }
+                        clr_country_flag = claim_greater_turkey
+                        all_core = { 
+                                limit = { NOT = { owned_by = THIS } }
+                                remove_core = TUR
+                        }
+                }
+
+        }
 	
 }
