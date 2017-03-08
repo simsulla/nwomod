@@ -27,7 +27,7 @@ country_event = {
 		prestige = -20 
 		release = SVI
 		release_vassal = CAM diplomatic_influence = { who = CAM value = -100 }
-		release_vassal = LUA diplomatic_influence = { who = LUA value = -100 }
+		release_vassal = LAO diplomatic_influence = { who = LAO value = -100 }
 	}
 	
 	option = {
@@ -35,7 +35,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		USA = { country_event = 1228002 }
 		release_vassal = CAM diplomatic_influence = { who = CAM value = -100 }
-		release_vassal = LUA diplomatic_influence = { who = LUA value = -100 }
+		release_vassal = LAO diplomatic_influence = { who = LAO value = -100 }
 	}
 
 	option = {
@@ -76,7 +76,7 @@ country_event = {
 			value = 200
 		}
 		diplomatic_influence = {
-			who = LUA
+			who = LAO
 			value = 200
 		}
 	}
@@ -1008,8 +1008,8 @@ country_event = {
 
   trigger = {
     tag = VNM
-    NOT = { war_with = LUA }
-    exists = LUA
+    NOT = { war_with = LAO }
+    exists = LAO
 	government = proletarian_dictatorship
     owns = 1380 # Saigon
   }
@@ -1018,9 +1018,9 @@ country_event = {
 
   option = {
     name = EVT_8228200_A
-	casus_belli = { target = LUA type = make_puppet months = 24 }
-	casus_belli = { target = LUA type = install_communist_gov_cb months = 24 }
-	LUA = { country_event = 8228201 }
+	casus_belli = { target = LAO type = make_puppet months = 24 }
+	casus_belli = { target = LAO type = install_communist_gov_cb months = 24 }
+	LAO = { country_event = 8228201 }
 	ai_chance = { factor = 100 }
    }
 
@@ -1039,7 +1039,7 @@ country_event = {
   option = {
     name = EVT_8228201_A
 	# infamy unsanctioned war
-	VNM = { war = { target = LUA attacker_goal = { casus_belli = make_puppet } attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = { casus_belli = status_quo } } } 
+	VNM = { war = { target = LAO attacker_goal = { casus_belli = make_puppet } attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = { casus_belli = status_quo } } } 
 	ai_chance = { factor = 100 }
    }
   

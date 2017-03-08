@@ -1166,8 +1166,8 @@ country_event = { # Regime bends under dissent
 	country_event = 8014246 # release the baltics
 	release = GEO 
 	release = ARM 
-	release = MOL
-	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MOL } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
+	release = MDA
+	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MDA } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
 	any_pop = { consciousness = -1 }
 	ai_chance = { factor = 0 }
   }
@@ -1192,8 +1192,8 @@ country_event = { # Soviet Union referendum $YEAR$
 	country_event = 8014246 # release the baltics
 	release = GEO 
 	release = ARM 
-	release = MOL	
-	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MOL } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
+	release = MDA	
+	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MDA } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
 	ai_chance = { factor = 100 }
   }
 
@@ -1210,8 +1210,8 @@ country_event = { # Soviet Union referendum $YEAR$
 	country_event = 8014246 # release the baltics
 	release = GEO 
 	release = ARM 
-	release = MOL
-	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MOL } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
+	release = MDA
+	any_country = { limit = { OR = { tag = ARM tag = GEO tag = MDA } } add_casus_belli = { target = THIS type = make_puppet months = 12 } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -1343,7 +1343,7 @@ country_event = { # Belavezha Accords
 	release = AZB 
 	release = ARM 
 	release = TKR
-	release = MOL
+	release = MDA
 	release = UZB 
 	release = KYR 
 	release = TAJ 
@@ -1364,7 +1364,7 @@ country_event = { # Fall of USSR
 	any_pop = { militancy = -2.5  consciousness = -2 }
 	government = democracy country_event = 800054
 	random_country = { limit = { NOT = { exists = EST } tag = THIS } country_event = 8014246 } 
-	MOL = { release = TRD }
+	MDA = { release = TRD }
 	create_alliance = TRD
 	diplomatic_influence = { who = TRD value = 100 }
   }
