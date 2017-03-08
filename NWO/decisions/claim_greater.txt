@@ -510,12 +510,12 @@ political_decisions = {
         claim_greater_bosnia = {
 				picture = "claim_greater_bosnia"
                 potential = {
-                        tag = BOS
+                        tag = BIH
                         NOT = { has_country_flag = claim_greater_bosnia }
                 }
 
                 allow = {
-                       tag = BOS
+                       tag = BIH
 						part_of_sphere = no
 						has_unclaimed_cores = no
 						NOT = {	
@@ -535,15 +535,15 @@ political_decisions = {
                 effect = {
                         badboy = 12
                         set_country_flag = claim_greater_bosnia
-                        2577 = { add_core = BOS }
-                        804 = { add_core = BOS }
+                        2577 = { add_core = BIH }
+                        804 = { add_core = BIH }
                 }
 
         }
         abandon_claim_greater_bosnia = {
 				picture = "claim_greater_bosnia"
                 potential = {
-                        tag = BOS
+                        tag = BIH
                         has_country_flag = claim_greater_bosnia
                         OR = {
                                 government = democracy
@@ -570,7 +570,7 @@ political_decisions = {
                         clr_country_flag = claim_greater_bosnia
                         all_core = { 
                                 limit = { NOT = { owned_by = THIS } is_primary_culture = yes }
-                                remove_core = BOS
+                                remove_core = BIH
                         }
                 }
 

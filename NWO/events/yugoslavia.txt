@@ -323,7 +323,7 @@ country_event = {
 	any_pop = { militancy = 0.5 consciousness = 1.0 }
 	release_vassal = SLO
 	release_vassal = CRO
-	release_vassal = BOS
+	release_vassal = BIH
 	release_vassal = MON
 	release_vassal = MAC
 	random_country = { limit = { NOT = { exists = BUL } } release_vassal = BUL }
@@ -390,20 +390,20 @@ country_event = {
 	release = SLO
 	release = CRO
 	release = MAC
-	release = BOS
+	release = BIH
 	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
 	MAC = {	government = democracy country_event = 800054 }
-	BOS = { release = RSR }
-	RSR = { 786 = { state_scope = { any_owned = { secede_province = BOS } } } } # Tuzla 
+	BIH = { release = RSR }
+	RSR = { 786 = { state_scope = { any_owned = { secede_province = BIH } } } } # Tuzla 
 	create_alliance = RSR
 	relation = { who = RSR value = 200 }
-	relation = { who = BOS value = -200 }
+	relation = { who = BIH value = -200 }
 	change_tag = SER
 	# Serbia get infamy by attack
 	war = { target = CRO attacker_goal = { casus_belli = liberate_country country = SRK } defender_goal = { casus_belli = status_quo } }
-	BOS = { country_event = 8022743 }
+	BIH = { country_event = 8022743 }
 	overlord = { country_event = 8014250 }
 	ai_chance = { factor = 100 }
   }
@@ -415,7 +415,7 @@ country_event = {
 	government = democracy country_event = 800054
 	release = SLO
 	release = CRO
-	release = BOS
+	release = BIH
 	release = MAC	
 	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
@@ -434,15 +434,15 @@ country_event = {
 	any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 1.5 consciousness = 0.8 }
 	release = SLO
 	release = CRO
-	release = BOS
+	release = BIH
 	random_country = { limit = { OR = { NOT = { exists = BUL } is_our_vassal = BUL } } release = BUL }
 	CRO = {	government = democracy country_event = 800054 }
 	SLO = {	government = democracy country_event = 800054 }
-	BOS = {	government = populist_dictatorship country_event = 800050 }
+	BIH = {	government = populist_dictatorship country_event = 800050 }
 	# Serbia get infamy by attack
 	war = { target = CRO attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
 	war = { target = SLO attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
-	war = { target = BOS attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
+	war = { target = BIH attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 0 }
   }  
 }
@@ -462,7 +462,7 @@ country_event = {
 	any_pop = { militancy = 0.5 consciousness = 0.8 }
 	government = populist_dictatorship country_event = 800050
 	release_vassal = HZB
-	HZB = { 2688 = { state_scope = { any_owned = { secede_province = BOS } } } }
+	HZB = { 2688 = { state_scope = { any_owned = { secede_province = BIH } } } }
 	# release = RSR in calling event
 	casus_belli = { target = RSR type = annex_core_country months = 12 }
 	war = { target = RSR attacker_goal = { casus_belli = annex_core_country country = RSR } defender_goal = { casus_belli = status_quo } }
@@ -489,9 +489,9 @@ country_event = {
 
   trigger = {
     tag = HZB
-	vassal_of = BOS
+	vassal_of = BIH
 	war = no
-	NOT = { truce_with = BOS }
+	NOT = { truce_with = BIH }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -501,7 +501,7 @@ country_event = {
 	# EVT_8022744_A;Become independent
 	any_pop = { militancy = 0.5 consciousness = 1.0 }
 	# gets infamy as this is not a internationally recognized move.
-	war = { target = BOS attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli = annex_core_country } }
+	war = { target = BIH attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli = annex_core_country } }
 	ai_chance = { factor = 100 }
   }
 
@@ -524,17 +524,17 @@ country_event = {
 
   trigger = {
 	exists = CRO
-	exists = BOS
+	exists = BIH
 	CRO = { war = no is_vassal = no }
-	BOS = { war = no is_vassal = no }
+	BIH = { war = no is_vassal = no }
 	NOT = { exists = YUG } # 8022742 yugoslav_wars has happened
     OR = { tag = GER tag = USA }
 	is_greater_power = yes
 	OR = { NOT = { exists = SRK } NOT = { truce_with = SRK } } # Prereq for new war with SRK
-	OR = { HZB = { vassal_of = BOS } NOT = { exists = HZB } } # Bosnia must win this war or Croatia don't what compromise
+	OR = { HZB = { vassal_of = BIH } NOT = { exists = HZB } } # Bosnia must win this war or Croatia don't what compromise
 	war = no
 	CRO = { NOT = { truce_with = SRK } }
-	BOS = { NOT = { truce_with = RSR } }
+	BIH = { NOT = { truce_with = RSR } }
   }
 
   mean_time_to_happen = { months = 6  }
@@ -543,11 +543,11 @@ country_event = {
     name = EVT_8022745_A
 	# EVT_8022745_A;Support the Croat-Bosnian alliance
 	create_alliance = CRO
-	create_alliance = BOS
+	create_alliance = BIH
 	diplomatic_influence = { who = CRO value = 200 }
-	diplomatic_influence = { who = BOS value = 200 }
+	diplomatic_influence = { who = BIH value = 200 }
 	relation = { who = CRO value = 200 }
-	relation = { who = BOS value = 200 }
+	relation = { who = BIH value = 200 }
 	CRO = { country_event = 8022746 }
 	ai_chance = { factor = 100 }
   }
@@ -557,9 +557,9 @@ country_event = {
 	# EVT_8022745_B;Do not get involved
 	prestige = -20
 	diplomatic_influence = { who = CRO value = -100 }
-	diplomatic_influence = { who = BOS value = -100 }
+	diplomatic_influence = { who = BIH value = -100 }
 	relation = { who = CRO value = 200 }
-	relation = { who = BOS value = 200 }
+	relation = { who = BIH value = 200 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -576,9 +576,9 @@ country_event = {
   option = {
     name = EVT_8022746_A
 	# EVT_8022746_A;Liberate Croatia and Support Bosnia
-	create_alliance = BOS
-	relation = { who = BOS value = 200 }
-	BOS = { country_event = { id = 8022747 days = 30 } }
+	create_alliance = BIH
+	relation = { who = BIH value = 200 }
+	BIH = { country_event = { id = 8022747 days = 30 } }
 	any_country = { 
 		limit = { tag = CRO exists = SRK } 
 		casus_belli = { target = SRK type = annex_core_country months = 12 }
@@ -610,7 +610,7 @@ country_event = {
 	create_alliance = CRO
 	relation = { who = CRO value = 200 }
 	any_country = { 
-		limit = { tag = BOS exists = RSR } 
+		limit = { tag = BIH exists = RSR } 
 		casus_belli = { target = RSR type = make_puppet months = 12 }
 		war = { 
 			target = RSR 
@@ -641,8 +641,8 @@ country_event = {
 
   trigger = {
 	exists = CRO
-	exists = BOS
-	tag = BOS
+	exists = BIH
+	tag = BIH
 	OR = { NOT = { exists = RSR } is_our_vassal = RSR } 
 	war = no
   }
@@ -661,7 +661,7 @@ country_event = {
     name = EVT_8022748_B
 	# EVT_8022748_B;No, Bosnia is Muslim
 	prestige = -20
-	random_country = { limit = { is_sphere_leader_of = BOS } diplomatic_influence = { who = BOS value = -100 } }
+	random_country = { limit = { is_sphere_leader_of = BIH } diplomatic_influence = { who = BIH value = -100 } }
 	relation = { who = CRO value = -200 }
 	leave_alliance = CRO
 	release_vassal = RSR
