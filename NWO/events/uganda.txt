@@ -9,7 +9,7 @@ country_event = {
 	option = {
 		name = "EVT_1027002_A" # accept
 		relation = { who = RWA value = 100 }
-		relation = { who = CNG value = -200 }
+		relation = { who = COD value = -200 }
 		create_alliance = RWA
 		ai_chance = { factor = 100 }
 	}
@@ -31,7 +31,7 @@ country_event = {
 	
 	trigger = {
 		tag = UGA
-		CNG = { government = democracy } # Mubutu has fallen
+		COD = { government = democracy } # Mubutu has fallen
 		year = 1991
 	}
 	
@@ -42,7 +42,7 @@ country_event = {
 	option = {
 		name = "EVT_1027003_A" 
 		country_event = 1027002 # alliance with Rwanda
-		CNG = { country_event = 1003302 } # support Ituri rebellion
+		COD = { country_event = 1003302 } # support Ituri rebellion
 		ai_chance = { factor = 100 }
 	}
 	
