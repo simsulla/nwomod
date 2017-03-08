@@ -38,7 +38,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-    		name = EVT_8011433_A
+    		name = EVT_8011441_A
 		ai_chance = { factor = 100 }
 		relation = { who = SAA value = -200 }
 		prestige = 20
@@ -63,6 +63,7 @@ country_event = {
 	        exists = HOU
 	        exists = YEM
 		has_global_flag = yemeni_civil_war
+	}
 
 	option = {
     		name = EVT_8011434_A
@@ -106,9 +107,10 @@ country_event = {
 		YEM = { government = nationalist_dictatorship }
 		YEM = { primary_culture = shia_arab }
 		NOT = { exists = HOU }
-		YEM = 1412
+		YEM = { owns = 1412 }
 		NOT = { exists = SYE }
-                war = no
+        war = no
+	}
 
 	option = {
     		name = EVT_8011435_A
@@ -135,9 +137,10 @@ country_event = {
 		year = 2015
 		YEM = { primary_culture = sunni_arab }
 		NOT = { exists = HOU }
-		YEM = 1178
+		YEM = { owns = 1178 }
 		NOT = { exists = SYE }
-                war = no
+        war = no
+	}
 
 	option = {
     		name = EVT_8011436_A
@@ -165,7 +168,8 @@ country_event = {
 		YEM = { primary_culture = shia_arab }
 		NOT = { exists = HOU }
 		exists = SYE
-                war = no
+        war = no
+	}
 
 	option = {
     		name = EVT_8011437_A
@@ -223,7 +227,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-    		name = EVT_8011440_A
+    	name = EVT_8011440_A
 		ai_chance = { factor = 100 }
 		relation = { who = YEM value = 150 }
 		relation = { who = SYE value = -150 }
@@ -243,10 +247,9 @@ country_event = {
 
 	trigger = {
 		tag = PER
-	        exists = USY
-	        exists = SYR
+        exists = USY
+        exists = SYR
 		has_global_flag = syrian_civil_war
-		}
 	}
 
 	mean_time_to_happen = {
@@ -265,14 +268,14 @@ country_event = {
 	}
 
 	option = {
-    		name = EVT_8011442_C
+    		name = EVT_8011442_B
 		ai_chance = { factor = 0 }
 		prestige = -10	
 	}
 }
 
 country_event = {
-	id = 8011442
+	id = 8011443
 	title = EVT_8011442_NAME
 	# EVT_8011442_NAME;Saudi Arabian involvement in the Syrian Civil War
 	desc = EVT_8011442_DESC
@@ -281,10 +284,9 @@ country_event = {
 
 	trigger = {
 		tag = PER
-	        exists = USY
-	        exists = SYR
+        exists = USY
+        exists = SYR
 		has_global_flag = syrian_civil_war
-		}
 	}
 
 	mean_time_to_happen = {
@@ -292,7 +294,7 @@ country_event = {
 	}
 
 	option = {
-    		name = EVT_8011442_A
+   		name = EVT_8011443_A
 		ai_chance = { factor = 100 }
 		treasury = -250
 		prestige = 10
@@ -304,7 +306,7 @@ country_event = {
 	}
 
 	option = {
-    		name = EVT_8011442_C
+   		name = EVT_8011443_B
 		ai_chance = { factor = 0 }
 		prestige = -10	
 	}
@@ -362,10 +364,11 @@ country_event = {
 
 	trigger = {
 		tag = SAA
-	        exists = SYR
-	        exists = ALW
+        exists = SYR
+        exists = ALW
 		SYR = { primary_culture = sunni_arab }
-                war = no
+        war = no
+	}
 
 	option = {
     		name = EVT_8011446_A
@@ -389,13 +392,14 @@ country_event = {
 
 	trigger = {
 		tag = PER
-	        exists = SYR
-	        exists = ALW
+	    exists = SYR
+	    exists = ALW
 		SYR = { primary_culture = sunni_arab }
-                war = no
-
+        war = no
+	}
+	
 	option = {
-    		name = EVT_8011446_A
+    	name = EVT_8011446_A
 		ai_chance = { factor = 100 }
 		relation = { who = ALW value = 200 }
 		relation = { who = SYR value = -200 }
@@ -416,18 +420,21 @@ country_event = {
 
 	trigger = {
 		tag = SAA
-	        exists = SYR
+	    exists = SYR
 		year = 2013
 		SYR = { primary_culture = shia_arab }
 		NOT = { exists = USY }
-		SYR = 897
-		SYR = 902
-		SYR = 905
+		SYR = {
+			owns = 897
+			owns = 902
+			owns = 905
+		}
 		NOT = { exists = ALW }
-                war = no
+        war = no
+	}
 
 	option = {
-    		name = EVT_8011448_A
+    	name = EVT_8011448_A
 		ai_chance = { factor = 100 }
 		relation = { who = SYR value = 200 }
 		relation = { who = RUS value = -125 }
@@ -450,11 +457,14 @@ country_event = {
 		year = 2013
 		SYR = { primary_culture = shia_arab }
 		NOT = { exists = USY }
-		SYR = 897
-		SYR = 902
-		SYR = 905
+		SYR = {
+			owns = 897
+			owns = 902
+			owns = 905
+		}
 		NOT = { exists = ALW }
-                war = no
+        war = no
+	}
 
 	option = {
     		name = EVT_8011449_A
