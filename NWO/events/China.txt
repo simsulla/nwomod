@@ -3070,10 +3070,10 @@ country_event = {
     OR = { tag = KMT AND = { tag = CHI has_global_flag = KMT_won_civil_war } }
 	year = 1945 NOT = { year = 1990 }
 	OR = { 
-		is_our_vassal = DAI 
+		is_our_vassal = VNM 
 		AND = { 
 			owns = 1369 # Hanoi
-			NOT = { exists = DAI }
+			NOT = { exists = VNM }
 		}
 	}
   }
@@ -3082,8 +3082,8 @@ country_event = {
 
   option = {
     name = EVT_8002950_A
-	release = DAI
-	DAI = { government = nationalist_dictatorship  country_event = 800050 }
+	release = VNM
+	VNM = { government = nationalist_dictatorship  country_event = 800050 }
     ai_chance = { factor = 100 }
   }
 

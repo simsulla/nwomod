@@ -10,7 +10,7 @@ country_event = {
 	trigger = {
 		tag = FRA
 		NOT = { exists = SVI }
-		exists = DAI
+		exists = VNM
 		NOT = { year = 1990 }
 		war = no
 		1380 = { controlled_by = FRA } # Saigon
@@ -66,7 +66,7 @@ country_event = {
 		name = EVT_1228002_A # South Vietnam Independence
 		ai_chance = { factor = 100 }
 		FRA = { release = SVI }
-		DAI = { country_event = 8228005 }
+		VNM = { country_event = 8228005 }
 		diplomatic_influence = {
 			who = SVI
 			value = 200
@@ -84,13 +84,13 @@ country_event = {
 	option = {
 		name = EVT_1228002_B # Leave Vietnam to it's faith
 		ai_chance = { factor = 0 }
-		FRA = { release = DAI }
+		FRA = { release = VNM }
 	}
 	
 	option = {
 		name = EVT_8228002_A # Let's ask Chiang to help
 		FRA = { release = SVI }
-		FRA = { release = DAI }
+		FRA = { release = VNM }
 		KMT = { country_event = 8228003 }
 		ai_chance = { factor = 0 }
 	}
@@ -108,7 +108,7 @@ country_event = {
 	trigger = {
 		tag = FRA
 		NOT = { exists = SVI }
-		NOT = { exists = DAI }
+		NOT = { exists = VNM }
 		war = no
 		owns = 1380 # Saigon
 		owns = 1369 # Hanoi
@@ -123,10 +123,10 @@ country_event = {
 		name = EVT_1228003_A # Vietnam Independence
 		ai_chance = { factor = 0 }
 		prestige = -2
-		release_vassal = DAI
-		DAI = { government = hms_government }
+		release_vassal = VNM
+		VNM = { government = hms_government }
 		diplomatic_influence = {
-			who = DAI
+			who = VNM
 			value = 200
 		}
 	}
@@ -161,8 +161,8 @@ country_event = {
 
   option = {
     name = EVT_8228003_B
-	casus_belli = { target = DAI type = make_puppet months = 12 }
-	war = { target = DAI attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo } }
+	casus_belli = { target = VNM type = make_puppet months = 12 }
+	war = { target = VNM attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 0 }
 	badboy = 10 
 	relation = { who = FRA value = -150 } 
@@ -173,7 +173,7 @@ country_event = {
   title = EVT_8228005_NAME
   desc = EVT_8228005_DESC
   picture = "nwo2_american_support_for_vietnam"
-  is_triggered_only = yes # DAI
+  is_triggered_only = yes # VNM
   
   option = {
     name = EVT_8228005_A
@@ -192,24 +192,24 @@ country_event = {
   trigger = {
     tag = SVI
     year = 1948 NOT = { year = 1964 }
-    NOT = { SVI = { war_with = DAI } }
-    exists = DAI
+    NOT = { SVI = { war_with = VNM } }
+    exists = VNM
     
-	DAI = { brigades_compare = 1.5 } 
+	VNM = { brigades_compare = 1.5 } 
   }
 
   mean_time_to_happen = { months = 4  }
 
   option = {
     name = EVT_8228010_A
-	casus_belli = { target = DAI type = annex_core_country months = 12 }
-	war = { target = DAI attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
+	casus_belli = { target = VNM type = annex_core_country months = 12 }
+	war = { target = VNM attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8228010_B
-	relation = { who = DAI value = 25 } 
+	relation = { who = VNM value = 25 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -221,9 +221,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1948 NOT = { year = 1964 }
-    NOT = { SVI = { war_with = DAI } }
+    NOT = { SVI = { war_with = VNM } }
     exists = SVI
     
 	SVI = { brigades_compare = 1.5 } 
@@ -252,9 +252,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1949 NOT = { year = 1955 }
-    war_with = DAI
+    war_with = VNM
   }
 
   mean_time_to_happen = { months = 6  }
@@ -282,7 +282,7 @@ country_event = {
   trigger = {
     tag = SVI
     year = 1949 NOT = { year = 1955 }
-    war_with = DAI
+    war_with = VNM
   }
 
   mean_time_to_happen = { months = 6  }
@@ -310,7 +310,7 @@ country_event = {
   trigger = {
     tag = FRA
     year = 1947 NOT = { year = 1955 }
-    war_with = DAI
+    war_with = VNM
   }
 
   mean_time_to_happen = { months = 2 }
@@ -337,7 +337,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1949 NOT = { year = 1955 }
     war_with = FRA
   }
@@ -359,7 +359,7 @@ country_event = {
   trigger = {
     tag = FRA
     year = 1948 NOT = { year = 1952 }
-    war_with = DAI
+    war_with = VNM
   }
 
   mean_time_to_happen = { months = 24  }
@@ -377,7 +377,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1948 NOT = { year = 1955 }
     has_global_flag = CHI_won_civil_war
     war = yes
@@ -402,7 +402,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1948 NOT = { year = 1955 }
     war_with = FRA
   }
@@ -425,7 +425,7 @@ country_event = {
   trigger = {
     tag = FRA
     year = 1948 NOT = { year = 1955 }
-    war_with = DAI
+    war_with = VNM
   }
 
   mean_time_to_happen = { months = 2 }
@@ -453,7 +453,7 @@ country_event = {
 
   option = {
     name = EVT_8228040_B
-	DAI = { country_event = 8228041 } 
+	VNM = { country_event = 8228041 } 
   }
 }
 country_event = {
@@ -461,7 +461,7 @@ country_event = {
   title = EVT_8228041_NAME
   desc = EVT_8228041_DESC
   picture = "nwo2_geneva_conference"
-  is_triggered_only = yes # DAI
+  is_triggered_only = yes # VNM
 
   option = {
     name = EVT_8228041_A
@@ -485,7 +485,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
 	war = no
     year = 1955 NOT = { year = 1963 }
     exists = SVI
@@ -522,7 +522,7 @@ country_event = {
   option = {
     name = EVT_8228051_B
 	any_pop = { militancy = -0.3 consciousness = -0.1 }
-	DAI = { country_event = 8228052 }
+	VNM = { country_event = 8228052 }
 	ai_chance = { factor = 100 }
   }
 }
@@ -531,12 +531,12 @@ country_event = {
   title = EVT_8228052_NAME
   desc = EVT_8228052_DESC
   picture = "nwo2_vietnam_elections"
-  is_triggered_only = yes # DAI
+  is_triggered_only = yes # VNM
 
   option = {
     name = EVT_8228052_A
 	any_pop = { militancy = 0.5 consciousness = 0.6 }
-	set_global_flag = vietnamese_elections_rigged_by_DAI 
+	set_global_flag = vietnamese_elections_rigged_by_VNM 
 	SVI = { country_event = 8228060 }
 	ai_chance = { factor = 100 }
   }
@@ -559,7 +559,7 @@ country_event = {
     name = EVT_8228053_A
 	any_pop = { militancy = 0.5 consciousness = 0.8 }
 	set_global_flag = vietnamese_elections_rigged_by_SVI 
-	DAI = { country_event = 8228062 }
+	VNM = { country_event = 8228062 }
 	ai_chance = { factor = 100 }
   }
 
@@ -579,13 +579,13 @@ country_event = {
   
   option = {
     name = EVT_8228060_A
-	war = { target = DAI attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
+	war = { target = VNM attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = civil_war } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8228060_B
-	DAI = { country_event = 8228061 }
+	VNM = { country_event = 8228061 }
 	ai_chance = { factor = 0 }
   }
 }
@@ -594,7 +594,7 @@ country_event = {
   title = EVT_8228061_NAME
   desc = EVT_8228061_DESC
   picture = "nwo2_united_vietnam_under_hanoi"
-  is_triggered_only = yes # DAI
+  is_triggered_only = yes # VNM
 
   option = {
     name = EVT_8228061_A
@@ -606,7 +606,7 @@ country_event = {
   title = EVT_8228062_NAME
   desc = EVT_8228062_DESC
   picture = "nwo2_vietnam_elections"
-  is_triggered_only = yes # DAI
+  is_triggered_only = yes # VNM
 
   option = {
     name = EVT_8228060_A
@@ -628,7 +628,7 @@ country_event = {
 
   option = {
     name = EVT_8228063_A
-    inherit = DAI 
+    inherit = VNM 
   }
 }
 country_event = {
@@ -640,13 +640,13 @@ country_event = {
 
   option = {
     name = EVT_8228064_A
-	war = DAI 
+	war = VNM 
 	any_pop = { militancy = 0.8 consciousness = 1 }
   }
 
   option = {
     name = EVT_8228060_B
-	DAI = { country_event = 8228061 }
+	VNM = { country_event = 8228061 }
   }
 }
 country_event = {
@@ -657,9 +657,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1954 NOT = { year = 1964 }
-    NOT = { DAI = { war_with = SVI } }
+    NOT = { VNM = { war_with = SVI } }
     exists = SVI
     
   }
@@ -762,9 +762,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1956 NOT = { year = 1975 }
-    DAI = { war_with = SVI }
+    VNM = { war_with = SVI }
   }
 
   mean_time_to_happen = { months = 8  }
@@ -792,7 +792,7 @@ country_event = {
   trigger = {
     tag = SVI
     year = 1956 NOT = { year = 1975 }
-    DAI = { war_with = SVI }
+    VNM = { war_with = SVI }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -821,7 +821,7 @@ country_event = {
   trigger = {
     tag = USA
     year = 1957 NOT = { year = 1963 }
-    DAI = { war_with = SVI }
+    VNM = { war_with = SVI }
   }
 
   mean_time_to_happen = { months = 24  }
@@ -829,7 +829,7 @@ country_event = {
   option = {
     name = EVT_8228120_A
 	relation = { who = SVI value = 50 } 
-	relation = { who = DAI value = -50 } 
+	relation = { who = VNM value = -50 } 
 	diplomatic_influence = { who = SVI value = 100 }
 	any_pop = { militancy = -0.5 consciousness = -0.1 }
 	ai_chance = { factor = 100 }
@@ -838,7 +838,7 @@ country_event = {
   option = {
     name = EVT_8228120_B
 	relation = { who = SVI value = 100 } 
-	relation = { who = DAI value = -100 } 
+	relation = { who = VNM value = -100 } 
 	any_pop = { militancy = 0.5 consciousness = 0.5 }
 	ai_chance = { factor = 0 }
   }
@@ -859,7 +859,7 @@ country_event = {
   trigger = {
     tag = SVI
     year = 1957 NOT = { year = 1963 }
-    DAI = { war_with = SVI }
+    VNM = { war_with = SVI }
   }
 
   mean_time_to_happen = { months = 4  }
@@ -878,9 +878,9 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1958 NOT = { year = 1963 }
-    DAI = { war_with = SVI }
+    VNM = { war_with = SVI }
   }
 
   mean_time_to_happen = { months = 4  }
@@ -907,7 +907,7 @@ country_event = {
   trigger = {
     tag = SVI
     year = 1958 NOT = { year = 1963 }
-    DAI = { war_with = SVI }
+    VNM = { war_with = SVI }
   }
 
   mean_time_to_happen = { months = 4  }
@@ -932,7 +932,7 @@ country_event = {
   trigger = {
     tag = SVI
     year = 1970 NOT = { year = 1990 }
-    DAI = { war_with = SVI }
+    VNM = { war_with = SVI }
   }
 
   mean_time_to_happen = { months = 6  }
@@ -952,7 +952,7 @@ country_event = {
   trigger = {
     tag = USA
     year = 1958 NOT = { year = 1963 }
-    DAI = { war_with = SVI }
+    VNM = { war_with = SVI }
   }
 
   mean_time_to_happen = { months = 1 }
@@ -970,7 +970,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     year = 1945 NOT = { year = 1963 }
   }
 
@@ -1007,7 +1007,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = DAI
+    tag = VNM
     NOT = { war_with = LUA }
     exists = LUA
 	government = proletarian_dictatorship
@@ -1039,13 +1039,13 @@ country_event = {
   option = {
     name = EVT_8228201_A
 	# infamy unsanctioned war
-	DAI = { war = { target = LUA attacker_goal = { casus_belli = make_puppet } attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = { casus_belli = status_quo } } } 
+	VNM = { war = { target = LUA attacker_goal = { casus_belli = make_puppet } attacker_goal = { casus_belli = install_communist_gov_cb } defender_goal = { casus_belli = status_quo } } } 
 	ai_chance = { factor = 100 }
    }
   
   option = {
     name = EVT_8228201_B
-	DAI = { military_access = THIS } 
+	VNM = { military_access = THIS } 
 	government = proletarian_dictatorship country_event = 800052
  	ai_chance = { factor = 0 }
   }

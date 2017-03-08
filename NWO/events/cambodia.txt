@@ -49,7 +49,7 @@ country_event = {
   trigger = {
     tag = CAM
 	year = 1975 NOT = { year = 1980 }
-	DAI = { government = proletarian_dictatorship }
+	VNM = { government = proletarian_dictatorship }
     NOT = { government = proletarian_dictatorship } 
   }
 
@@ -94,7 +94,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-	OR = { tag = DAI tag = SVI }
+	OR = { tag = VNM tag = SVI }
 	owns = 1380 # Saigon
 	CAM = { has_country_modifier = ethnic_cleansing }
   }
