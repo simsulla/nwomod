@@ -8,7 +8,7 @@ country_event = {
 	trigger = {
 		tag = GBR
 		year = 1947
-		NOT = { exists = BUR }
+		NOT = { exists = MMR }
 		war = no
 		NOT = { year = 1990 }
 		1330 = { controlled_by = GBR } # Rangoon
@@ -70,8 +70,8 @@ country_event = {
 		name = EVT_1214002_A # Burmese Independence
 		ai_chance = { factor = 100 }
 		prestige = -20 
-		release = BUR
-		BUR = { government = democracy  country_event = 800054 }
+		release = MMR
+		MMR = { government = democracy  country_event = 800054 }
 		remove_country_modifier = denied_independence
 	}
 	
@@ -115,8 +115,8 @@ country_event = {
 			consciousness = 2
 			militancy = 7
 		}
-		release_vassal = BUR
-		BUR = { government = hms_government  country_event = 800054 }
+		release_vassal = MMR
+		MMR = { government = hms_government  country_event = 800054 }
 		remove_country_modifier = denied_independence
 	}
 	
@@ -145,7 +145,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = BUR
+    tag = MMR
     year = 1962
     NOT = { year = 1966 }
   }
@@ -167,7 +167,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = BUR
+    tag = MMR
 	year = 1963
     NOT = { year = 1966 }
   }
@@ -188,8 +188,8 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = BUR
-	exists = BUR
+    tag = MMR
+	exists = MMR
     year = 1948
 	war = no
 	NOT = { year = 1955 }
@@ -220,8 +220,8 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = BUR
-	exists = BUR
+    tag = MMR
+	exists = MMR
     year = 1949
 	war = no
 	NOT = { year = 1955 }
