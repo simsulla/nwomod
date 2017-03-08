@@ -2130,12 +2130,12 @@ political_decisions = {
         claim_greater_iran = {
 				picture = "claim_greater_iran"
                 potential = {
-                        tag = PER
+                        tag = IRN
                         NOT = { has_country_flag = claim_greater_iran }
                 }
 
                 allow = {
-                       tag = PER
+                       tag = IRN
 						part_of_sphere = no
 						has_unclaimed_cores = no
 						NOT = {	
@@ -2155,34 +2155,34 @@ political_decisions = {
                 effect = {
                         badboy = 12
                         set_country_flag = claim_greater_iran
-						IRQ = { all_core = { limit = { NOT = { province_id = 931 } } add_core = PER } }
-						ARM = { all_core = { add_core = PER } }
-						AFG = { all_core = { add_core = PER } }
-						AZB = { all_core = { add_core = PER } }
-						TAJ = { all_core = { add_core = PER } }
-						TKR = { all_core = { add_core = PER } }
-						UZB = { all_core = { add_core = PER } }
-                        890 = { add_core = PER }
-                        891 = { add_core = PER }
-                        892 = { add_core = PER }
-                        1090 = { add_core = PER }
-                        1091 = { add_core = PER }
-                        1057 = { add_core = PER }
-                        1203 = { add_core = PER }
-                        1223 = { add_core = PER }
-                        2653 = { add_core = PER }
-                        1218 = { add_core = PER }
-                        1219 = { add_core = PER }
-                        1220 = { add_core = PER }
-                        1221 = { add_core = PER }
-                        1222 = { add_core = PER }
+						IRQ = { all_core = { limit = { NOT = { province_id = 931 } } add_core = IRN } }
+						ARM = { all_core = { add_core = IRN } }
+						AFG = { all_core = { add_core = IRN } }
+						AZB = { all_core = { add_core = IRN } }
+						TAJ = { all_core = { add_core = IRN } }
+						TKR = { all_core = { add_core = IRN } }
+						UZB = { all_core = { add_core = IRN } }
+                        890 = { add_core = IRN }
+                        891 = { add_core = IRN }
+                        892 = { add_core = IRN }
+                        1090 = { add_core = IRN }
+                        1091 = { add_core = IRN }
+                        1057 = { add_core = IRN }
+                        1203 = { add_core = IRN }
+                        1223 = { add_core = IRN }
+                        2653 = { add_core = IRN }
+                        1218 = { add_core = IRN }
+                        1219 = { add_core = IRN }
+                        1220 = { add_core = IRN }
+                        1221 = { add_core = IRN }
+                        1222 = { add_core = IRN }
                 }
 
         }
         abandon_claim_greater_iran = {
 				picture = "claim_greater_iran"
                 potential = {
-                        tag = PER
+                        tag = IRN
                         has_country_flag = claim_greater_iran
 						OR = {
 							government = democracy
@@ -2209,7 +2209,7 @@ political_decisions = {
                         clr_country_flag = claim_greater_iran
 						all_core = { 
 							limit = { NOT = { owned_by = THIS } is_primary_culture = yes }
-							remove_core = PER
+							remove_core = IRN
 						}
                 }
 

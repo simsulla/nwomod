@@ -19,7 +19,7 @@ country_event = {
 	option = {
     		name = EVT_8011433_A
 		ai_chance = { factor = 100 }
-		PER = { country_event = 8011441 }
+		IRN = { country_event = 8011441 }
 		prestige = 20
 	}
 	option = {
@@ -59,7 +59,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = PER
+		tag = IRN
 	        exists = HOU
 	        exists = YEM
 		has_global_flag = yemeni_civil_war
@@ -117,8 +117,8 @@ country_event = {
 		ai_chance = { factor = 100 }
 		any_pop = { militancy = 2.5 consciousness = 4 }
 		relation = { who = YEM value = -150 }
-		relation = { who = PER value = -50 }
-		PER = { country_event = 8011438 }
+		relation = { who = IRN value = -50 }
+		IRN = { country_event = 8011438 }
 		prestige = -15
 	}
 }
@@ -146,8 +146,8 @@ country_event = {
     		name = EVT_8011436_A
 		ai_chance = { factor = 100 }
 		relation = { who = YEM value = 150 }
-		relation = { who = PER value = -50 }
-		PER = { country_event = 8011439 }
+		relation = { who = IRN value = -50 }
+		IRN = { country_event = 8011439 }
 		prestige = 15
 	}
 }
@@ -176,9 +176,9 @@ country_event = {
 		ai_chance = { factor = 100 }
 		relation = { who = YEM value = -150 }
 		relation = { who = SYE value = 150 }
-		relation = { who = PER value = -50 }
+		relation = { who = IRN value = -50 }
 		any_pop = { consciousness = -2 }
-		PER = { country_event = 8011440 }
+		IRN = { country_event = 8011440 }
 		prestige = 5
 	}
 }
@@ -246,7 +246,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = PER
+		tag = IRN
         exists = USY
         exists = SYR
 		has_global_flag = syrian_civil_war
@@ -283,7 +283,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = PER
+		tag = IRN
         exists = USY
         exists = SYR
 		has_global_flag = syrian_civil_war
@@ -301,7 +301,7 @@ country_event = {
 		USY = { small_arms = 300 weaponry = 75 petroleum = 75 }
 		relation = { who = USY value = 150 }
 		relation = { who = SYR value = -150 }
-		relation = { who = PER value = -150 }
+		relation = { who = IRN value = -150 }
 		relation = { who = RUS value = -150 }
 	}
 
@@ -348,7 +348,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		relation = { who = SYR value = -200 }
 		relation = { who = RUS value = -150 }
-		relation = { who = PER value = -150 }
+		relation = { who = IRN value = -150 }
 		any_pop = { consciousness = -4 }
 		prestige = -15
 	}
@@ -376,7 +376,7 @@ country_event = {
 		relation = { who = ALW value = -200 }
 		relation = { who = SYR value = -200 }
 		relation = { who = RUS value = -125 }
-		relation = { who = PER value = -150 }
+		relation = { who = IRN value = -150 }
 		any_pop = { consciousness = 2 }
 		prestige = 5
 	}
@@ -391,7 +391,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = PER
+		tag = IRN
 	    exists = SYR
 	    exists = ALW
 		SYR = { primary_culture = sunni_arab }
@@ -438,7 +438,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		relation = { who = SYR value = 200 }
 		relation = { who = RUS value = -125 }
-		relation = { who = PER value = -150 }
+		relation = { who = IRN value = -150 }
 		prestige = 15
 	}
 }
@@ -452,7 +452,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = PER
+		tag = IRN
 	        exists = SYR
 		year = 2013
 		SYR = { primary_culture = shia_arab }

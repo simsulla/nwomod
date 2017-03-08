@@ -6,7 +6,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = PER
+    tag = IRN
     year = 1951 NOT = { year = 1952 }
     
   }
@@ -38,15 +38,15 @@ country_event = {
   option = { # Impose sanctions
     name = EVT_8501002_A
 	badboy = 10 
-	relation = { who = PER value = -100 } 
+	relation = { who = IRN value = -100 } 
 	set_global_flag = abadan_crisis
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8501002_B
-	PER = { add_country_modifier = { name = great_depression duration = 60 } }
-	relation = { who = PER value = 100 } 
+	IRN = { add_country_modifier = { name = great_depression duration = 60 } }
+	relation = { who = IRN value = 100 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -58,7 +58,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = PER
+    tag = IRN
     year = 1953 NOT = { year = 1954 } 
     has_global_flag = abadan_crisis
   }
@@ -116,14 +116,14 @@ country_event = {
 
   option = {
     name = EVT_8501005_A # Help out
-	relation = { who = PER value = 50 } 
+	relation = { who = IRN value = 50 } 
 	USA = { country_event = 8501006 }  # American ultimatum
 	ai_chance = { factor = 75 }
   }
 
   option = {
     name = EVT_8501005_B # Refrain
-	relation = { who = PER value = -50 } 
+	relation = { who = IRN value = -50 } 
 	ai_chance = { factor = 25 }
   }
 }
@@ -138,7 +138,7 @@ country_event = {
 
   option = {
     name = EVT_8501006_A # Soviet reaction
-	relation = { who = PER value = -50 } 
+	relation = { who = IRN value = -50 } 
 	SUN = { country_event = 8501007 } 
 	ai_chance = { factor = 60 }
   }
@@ -160,13 +160,13 @@ country_event = {
 
   option = {
     name = EVT_8501007_A
-	relation = { who = PER value = -50 } 
+	relation = { who = IRN value = -50 } 
 	ai_chance = { factor = 75 }
   }
 
   option = {
     name = EVT_8501007_B
-	PER = { country_event = 8501010 } 
+	IRN = { country_event = 8501010 } 
 	USA = { country_event = 8501008 }
 	ai_chance = { factor = 25 }
   }
