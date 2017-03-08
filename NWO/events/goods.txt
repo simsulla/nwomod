@@ -81,3 +81,93 @@ country_event = { # Large Oil Field 30+ bill barels
 	}
   }
 }
+
+country_event = { # Seven Sisters
+  id = 1102
+  title = seven_sisters_title
+  desc = seven_sisters_desc
+  picture = "seven_sisters"
+
+  trigger = {
+	is_greater_power = yes
+	OR = { government = democracy government = hms_government }
+	NOT = { has_country_modifier = seven_sisters has_country_modifier = seven_sisters_nonpart  has_global_flag = opec }
+	OR = { 
+		owns = 232 # New York
+		owns = 243 # Boston
+		owns = 84 # San Fransico
+		owns = 376 # Den Haag
+		owns = 300 # London
+	}
+    year = 1954
+  }
+
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = seven_sisters_A
+	any_country = { limit = { in_sphere = THIS is_our_vassal = THIS } add_country_modifier = { name = seven_sisters duration = 3650 } }
+	add_country_modifier = { name = seven_sisters duration = 3650 }
+  }
+  
+  option = {
+    name = seven_sisters_B
+	add_country_modifier = { name = ruling_party_scandal duration = 730 }
+	add_country_modifier = { name = seven_sisters_nonpart duration = 3650 }
+  }
+  
+}
+
+country_event = { # OPEC is formed
+  id = 1103
+  title = opec_title
+  desc = opec_desc
+  major = yes
+  fire_only_once = yes
+  #picture = "opec_event"
+
+  trigger = {
+	NOT = { has_global_flag = opec }
+	OR = { tag = VNZ tag = IRQ tag = SAA tag = PER}
+    year = 1959 # TODO #918
+  }
+
+  mean_time_to_happen = { 
+	months = 12 
+	# modifier = {  # TODO #918 }
+  }
+
+  option = {
+    name = opec_A
+	prestige = 5
+	set_global_flag = opec
+  }
+  
+}
+
+country_event = { # OPEC is formed
+  id = 1103
+  title = opec_title
+  desc = opec_desc
+  major = yes
+  #picture = "opec_event"
+
+  trigger = {
+	has_global_flag = opec }
+	OR = { tag = VNZ tag = IRQ tag = SAA tag = PER}
+    year = 1959 # TODO #918
+  }
+
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = opec_A
+	prestige = 5
+	set_country_flag = opec_formation
+	random_country = { limit = { VNZ = { has_country_flag = opec_formation } IRQ = { has_country_flag = opec_formation } SAA = { has_country_flag = opec_formation } } set_global_flag = opec }
+	random_country = { limit = { PER = { has_country_flag = opec_formation } IRQ = { has_country_flag = opec_formation } SAA = { has_country_flag = opec_formation } } set_global_flag = opec }
+	random_country = { limit = { VNZ = { has_country_flag = opec_formation } PER = { has_country_flag = opec_formation } SAA = { has_country_flag = opec_formation } } set_global_flag = opec }
+	random_country = { limit = { VNZ = { has_country_flag = opec_formation } PER = { has_country_flag = opec_formation } IRQ = { has_country_flag = opec_formation } } set_global_flag = opec }
+  }
+  
+}
