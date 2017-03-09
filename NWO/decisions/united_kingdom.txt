@@ -6,6 +6,7 @@ political_decisions = {
 			tag = GBR
 			year = 1971 NOT = { year = 1990 }
             owns = 2128
+			NOT = { has_country_flag = chagos_islander }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -16,6 +17,7 @@ political_decisions = {
 
 		effect = {
 			relation = { who = USA value = 200 } 
+			set_country_flag = chagos_islander
 			any_pop = { limit = { location = { province_id = 2128 } NOT = { is_primary_culture = yes } } move_pop = 2125 } # Posen -> E.Berlin
 		}
 	}
