@@ -28,7 +28,7 @@ country_event = {
 
   trigger = {
     tag = ALB
-    year = 1946
+    year = 1946 NOT = { year = 1990 }
     NOT = { has_global_flag = tito_stalin_split }
     has_global_flag = united_balkans
     exists = YUG
@@ -167,7 +167,7 @@ country_event = {
 
   trigger = {
     tag = YUG
-    year = 1947
+    year = 1947 NOT = { year = 1990 }
     NOT = { has_global_flag = tito_stalin_split }
     exists = BUL
   }
