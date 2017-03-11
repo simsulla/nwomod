@@ -1618,6 +1618,10 @@ political_decisions = {
                 potential = {
                         tag = IRE
                         NOT = { has_country_flag = claim_greater_ireland }
+						# the games starts with these cores as Irish
+						254 = { NOT = { is_core = IRE } } 
+						255 = { NOT = { is_core = IRE } }
+						256 = { NOT = { is_core = IRE } }
                 }
 
                 allow = {
