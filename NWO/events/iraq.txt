@@ -213,10 +213,10 @@ country_event = {
   trigger = {
     tag = IRQ
 	year = 1980 NOT = { year = 1988 }
-    exists = PER
+    exists = IRN
     war = no
     any_owned_province = { province_id = 686 }  
-	PER = { government = theocracy }
+	IRN = { government = theocracy }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -246,7 +246,7 @@ country_event = {
   option = {
     name = EVT_8007541_A
 	# infamy unsanctioned
-	war = { target = PER attacker_goal = { casus_belli = acquire_core_state state_province_id = 1132 } defender_goal = { casus_belli = status_quo } } 
+	war = { target = IRN attacker_goal = { casus_belli = acquire_core_state state_province_id = 1132 } defender_goal = { casus_belli = status_quo } } 
 	any_pop = { militancy = 3.0 }
 	ai_chance = { factor = 100 }
   }
@@ -278,7 +278,7 @@ country_event = {
   option = {
     name = EVT_8007542_A
 	any_pop = { militancy = -2.0  consciousness = -1 }
-	PER = { country_event = 8007543 }
+	IRN = { country_event = 8007543 }
   }
 }
 country_event = {
@@ -322,7 +322,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = PER
+    tag = IRN
 	year = 1981 NOT = { year = 1988 }
 	owns = 1132
 	has_recently_lost_war  = no 

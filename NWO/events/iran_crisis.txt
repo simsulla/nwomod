@@ -19,14 +19,14 @@ country_event = {
     name = EVT_8500901_A
 	release = KUR 
 	create_vassal = KUR 
-	relation = { who = PER value = -100 } 
+	relation = { who = IRN value = -100 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500901_B
 	any_pop = {  consciousness = 2 }
-	relation = { who = PER value = 50 } 
+	relation = { who = IRN value = 50 } 
 	ai_chance = { factor = 0 }
   }
 }
@@ -62,14 +62,14 @@ country_event = {
 	year = 1946 NOT = { year = 1947 }
 	exists = KUR
 	is_our_vassal = KUR
-    exists = PER
+    exists = IRN
   }
 
   mean_time_to_happen = { months = 1  }
 
   option = {
     name = EVT_8500903_A
-	relation = { who = PER value = 50 } 
+	relation = { who = IRN value = 50 } 
 	relation = { who = KUR value = -200 } 
 	country_event = 8500911 
 	#country_event =  { id = 8500921 days = 1 } 
@@ -78,7 +78,7 @@ country_event = {
 
   option = {
     name = EVT_8500903_B
-	relation = { who = PER value = -100 } 
+	relation = { who = IRN value = -100 } 
 	relation = { who = KUR value = 200 } 
 	USA = { country_event = 8500904 } 
 	ai_chance = { factor = 0 }
@@ -101,7 +101,7 @@ country_event = {
 
   option = {
     name = EVT_8500904_B
-	relation = { who = PER value = -100 } 
+	relation = { who = IRN value = -100 } 
 	relation = { who = KUR value = 200 } 
 	country_event = 8500910 
 	country_event = 8500909 
@@ -126,7 +126,7 @@ country_event = {
 
   option = {
     name = EVT_8500905_B
-	relation = { who = PER value = -100 } 
+	relation = { who = IRN value = -100 } 
 	relation = { who = KUR value = 200 } 
 	USA = { country_event = 8500906 }
 	any_pop = { consciousness = 0.5 }
@@ -144,15 +144,15 @@ country_event = {
     name = EVT_8500906_A
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.55 } } }
 	SUN = { country_event = 8500910 } 
-	PER = { country_event = 8500909 } 
+	IRN = { country_event = 8500909 } 
 	country_event =  { id = 8500908 days = 1 } 
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8500906_B
-	create_alliance = PER 
-	PER = { country_event =  8500908 } 
+	create_alliance = IRN 
+	IRN = { country_event =  8500908 } 
 	ai_chance = { factor = 100 }
   }
 }
@@ -216,7 +216,7 @@ country_event = {
 	overlord = { release_vassal = THIS } 
 	SUN = { end_military_access = THIS } 
 	leave_alliance = SUN
-	PER = { country_event = 8500908 }
+	IRN = { country_event = 8500908 }
   }
 }
 country_event = {
@@ -230,7 +230,7 @@ country_event = {
     tag = SUN
 	year = 1954 NOT = { year = 1947 }
     NOT = { exists = KUR }
-    exists = PER
+    exists = IRN
     
   }
 
@@ -249,7 +249,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = PER
+    tag = IRN
 	year = 1946 NOT = { year = 1947 }
     
     is_vassal = yes

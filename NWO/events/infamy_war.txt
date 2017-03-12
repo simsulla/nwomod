@@ -490,13 +490,14 @@ country_event = {
 	mean_time_to_happen = {
 		months = 12
 	}
+	
+	immediate = { badboy = -1000 }
 
 	option = {
 		name = "EVTOPTA96150" #Excellent
 		clr_global_flag = ultimatum_refused
 		remove_country_modifier = international_pariah
 		prestige = 25
-		random_country = { limit = { tag = THIS } badboy = -1000 } # to avoid validator syntactic error
 		badboy = 24.99
 	}
 }

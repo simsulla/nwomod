@@ -9,7 +9,7 @@ country_event = { # Rwanda Independence
     tag = BEL
 	NOT = { exists = RWA }
 	NOT = { exists = BRN }
-	exists = CNG
+	exists = COD
 	war = no
 	owns = 2034
   }
@@ -45,7 +45,7 @@ country_event = {
 		government = nationalist_dictatorship
 		primary_culture = tutsi
 		year = 1991
-		CNG = { NOT = { government = democracy } }
+		COD = { NOT = { government = democracy } }
 	}
 	
 	mean_time_to_happen = {
@@ -56,7 +56,7 @@ country_event = {
 		name = "EVT_1029501_A" 
 		BRN = { country_event = 1029502 } # offer alliance
 		UGA = { country_event = 1029502 } # offer alliance
-		CNG = { country_event = 1003301 } # support rebellion
+		COD = { country_event = 1003301 } # support rebellion
 		small_arms = 200
 		treasury = 10000		
 		ai_chance = { factor = 100 }
@@ -79,7 +79,7 @@ country_event = {
 	option = {
 		name = "EVT_1029502_A" # accept
 		relation = { who = RWA value = 100 }
-		relation = { who = CNG value = -200 }
+		relation = { who = COD value = -200 }
 		create_alliance = RWA
 		ai_chance = { factor = 100 }
 	}

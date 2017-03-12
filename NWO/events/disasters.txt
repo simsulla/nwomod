@@ -245,6 +245,7 @@ country_event = {
 	trigger = {
 		year = 1986 NOT = { year = 1992 }
 		owns = 962 # Cernigov
+		NOT = { safety_regulations = rigid_regulations } 
 	}
 
 	mean_time_to_happen = {
@@ -584,7 +585,7 @@ country_event = {
 	
 	trigger = {
 		year = 2004
-		OR = { tag = IDO tag = THI tag = SRL tag = HND tag = MAL tag = BUR tag = SWE }
+		OR = { tag = IDO tag = THI tag = SRL tag = HND tag = MAL tag = MMR tag = SWE }
 		NOT = { has_country_flag = indian_ocean_tsunami }
 	}
 
@@ -1061,7 +1062,7 @@ province_event = {
 	
 	trigger = {
 		continent = asia 
-		OR = { is_core = HND is_core = BNG is_core = BUR }
+		OR = { is_core = HND is_core = BNG is_core = MMR }
 	}
 
 	mean_time_to_happen = {
@@ -1095,7 +1096,7 @@ province_event = {
 	
 	trigger = {
 		OR = { 
-			AND = { continent = asia OR = { is_core = IDO is_core = DAI is_core = PHI is_core = CHI is_core = KMT is_core = JAP } }
+			AND = { continent = asia OR = { is_core = IDO is_core = VNM is_core = PHI is_core = CHI is_core = KMT is_core = JAP } }
 			AND = { continent = oceania NOT = { is_core = AST is_core = NZL } }
 		}
 	}

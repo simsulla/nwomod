@@ -858,6 +858,7 @@ country_event = {
 
   option = {
     name = EVT_8007684_A
+	set_country_flag = yom_kippur_war
 	any_pop = {  consciousness = 2 }
 	country_event = { id = 8007686 days = 10 } 
   }
@@ -907,8 +908,9 @@ country_event = {
 
   trigger = {
     tag = ISR
-    year = 1974 NOT = { year = 1990 }
+    NOT = { year = 1990 }
 	war = no
+	has_country_flag = yom_kippur_war
 	has_recently_lost_war = no
   }
 
@@ -943,8 +945,8 @@ country_event = {
 
   trigger = {
     OR = { tag = EGY tag = SYR }
-    year = 1974 NOT = { year = 1990 }
-	NOT = { has_country_flag = yom_kippur_war_victory }
+    NOT = { year = 1990 }
+	ISR = { has_country_flag = yom_kippur_war }
     OR = {
 		owns = 2687
 		owns = 920

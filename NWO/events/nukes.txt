@@ -20,10 +20,11 @@ country_event = {
 
   option = {
     name = EVT_8233000_A
-	any_country = { 
-		limit = { war_with = THIS } 
-		country_event = 8233001
-	}
+	any_greater_power = { limit = { war_with = THIS } country_event = 8233001 }
+	any_country = { limit = { war_with = THIS has_country_flag = develop_atomic_bomb is_greater_power = no } country_event = 8233001 }
+	random_country = { limit = { war_with = THIS NOT = { has_country_flag = develop_atomic_bomb } is_greater_power = no } country_event = 8233001 }
+
+	random_country = { limit = { ai = yes } country_event = 8233002 }
 	add_country_modifier = { name = nukes_enabled duration = 350 } 
 	badboy = 5
 	ai_chance = { factor = 0.1 modifier = { factor = 10 NOT = { badboy = 15 } } }
@@ -38,7 +39,7 @@ country_event = {
   id = 8233001
   title = EVT_8233001_NAME
   desc = EVT_8233001_DESC
-  picture = "nwo2_hiroshima_nuke"
+  picture = "nuke"
 
   is_triggered_only = yes
   
@@ -48,6 +49,19 @@ country_event = {
 	random_province = { add_province_modifier = { name = nuked duration = 1500 } }
 	random_province = { add_province_modifier = { name = nuked duration = 1500 } }
 	random_province = { add_province_modifier = { name = nuked duration = 1500 } }
+  }
+  
+}
+country_event = {
+  id = 8233002
+  title = EVT_8233002_NAME
+  desc = EVT_8233002_DESC
+  picture = "nwo2_hiroshima_nuke"
+
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_8233002_A
   }
   
 }

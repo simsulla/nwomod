@@ -98,6 +98,12 @@ gunboat = {
 			has_country_modifier = in_bankrupcy
 			has_country_modifier = generalised_debt_default
 		}
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 		always = no
 		in_default = THIS
 	}
@@ -325,6 +331,12 @@ add_to_sphere = {
 		is_independant = yes
 		part_of_sphere = no
 		NOT = { relation = { who = THIS value = 0 } }
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
 	is_valid = {
@@ -368,6 +380,12 @@ take_from_sphere = {
 		NOT = { is_our_vassal = THIS }
 		THIS = { is_greater_power = yes }
 		is_greater_power = yes
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 
 	
@@ -424,6 +442,12 @@ acquire_core_state = {
 		NOT = { relation = { who = THIS value = 0 } }
 		THIS = { OR = { NOT = { war_policy = pacifism } war = yes } }
 		#NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
 	allowed_states = {
@@ -486,6 +510,12 @@ annex_core_country = {
 		}
 		THIS = { NOT = { war_policy = pacifism } }
 		#NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 
 	po_annex = yes
@@ -558,6 +588,12 @@ acquire_state = {
 				}
 			}
 		}
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 		is_independant = yes
 	}
 	
@@ -618,6 +654,12 @@ cut_down_to_size = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		is_disarmed = no
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
 	on_add = {
@@ -654,6 +696,12 @@ free_allied_cores = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
 		number_of_states = 2
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 
 	# THIS - us
@@ -733,6 +781,12 @@ annex_allied_core_country = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
 		number_of_states = 1
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 
 	# THIS - us
@@ -810,6 +864,12 @@ free_peoples = {
 			ai = no
 			part_of_sphere = no # if we are part of spher the spher ruler guides policies - not us.
 		}
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 
 	# THIS - us
@@ -884,6 +944,12 @@ liberate_country = {
 	
 	can_use = {
 		NOT = { is_our_vassal = THIS }
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }		
 	}
 
 	# THIS - us
@@ -951,6 +1017,12 @@ release_puppet = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		num_of_vassals_no_substates = 1
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
 	# THIS - us
@@ -1001,6 +1073,12 @@ make_puppet = {
 		NOT = { number_of_states = 9 }
 		is_greater_power = no
 		is_vassal = no
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
 	# THIS - us
@@ -1119,6 +1197,12 @@ humiliate = {
 				}
 			}
 		}
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
  	}	
 	on_add = {
 		move_issue_percentage = { 
@@ -1183,30 +1267,30 @@ territorial_dispute = {
 			AND = { tag = SPA exists = SPA THIS = { tag = MOR } } AND = { tag = MOR exists = MOR THIS = { tag = SPA } } # Islas Chafarinas
 			AND = { tag = SSU exists = SSU THIS = { tag = SUD } } AND = { tag = SUD exists = SUD THIS = { tag = SSU } } # Heglig,Kafia Kingi
 			AND = { tag = UGA exists = UGA THIS = { tag = RWA } } AND = { tag = RWA exists = RWA THIS = { tag = UGA } } # Kabale District
-			AND = { tag = CNG exists = CNG THIS = { tag = ANG } } AND = { tag = ANG exists = ANG THIS = { tag = CNG } } # Kahemba
-			AND = { tag = BUR exists = BUR THIS = { tag = BEN } } AND = { tag = BEN exists = BEN THIS = { tag = BUR } } # Koualou
+			AND = { tag = COD exists = COD THIS = { tag = ANG } } AND = { tag = ANG exists = ANG THIS = { tag = COD } } # Kahemba
+			AND = { tag = MMR exists = MMR THIS = { tag = BEN } } AND = { tag = BEN exists = BEN THIS = { tag = MMR } } # Koualou
 			AND = { tag = IVC exists = IVC THIS = { tag = GUI } } AND = { tag = GUI exists = GUI THIS = { tag = IVC } } # Sipilou
 			AND = { tag = SSU exists = SSU THIS = { tag = UGA } } AND = { tag = UGA exists = UGA THIS = { tag = SSU } } # Moyo District
 			AND = { tag = MLW exists = MLW THIS = { tag = TAN } } AND = { tag = TAN exists = TAN THIS = { tag = MLW } } # Lake Malawi
 			AND = { tag = GAB exists = GAB THIS = { tag = EQG } } AND = { tag = EQG exists = EQG THIS = { tag = GAB } } # Congas Island
 			AND = { tag = UGA exists = UGA THIS = { tag = KEN } } AND = { tag = KEN exists = KEN THIS = { tag = UGA } } # Migingo Island
-			AND = { tag = CNG exists = CNG THIS = { tag = ROC } } AND = { tag = ROC exists = ROC THIS = { tag = CNG } } # Congo River
+			AND = { tag = COD exists = COD THIS = { tag = ROC } } AND = { tag = ROC exists = ROC THIS = { tag = COD } } # Congo River
 			AND = { tag = CMR exists = CMR THIS = { tag = EQG } } AND = { tag = EQG exists = EQG THIS = { tag = CMR } } # Ntem River
 			AND = { tag = NAM exists = NAM THIS = { tag = SAF } } AND = { tag = SAF exists = SAF THIS = { tag = NAM } } # Okpara River
 			AND = { tag = ERI exists = ERI THIS = { tag = DJI } } AND = { tag = DJI exists = DJI THIS = { tag = ERI } } # Ras Doumeira and Doumeira Island
-			AND = { tag = UGA exists = UGA THIS = { tag = CNG } } AND = { tag = CNG exists = CNG THIS = { tag = UGA } } # Rukwanzi Island 
+			AND = { tag = UGA exists = UGA THIS = { tag = COD } } AND = { tag = COD exists = COD THIS = { tag = UGA } } # Rukwanzi Island 
 			AND = { tag = ZAM exists = ZAM THIS = { tag = ZIM } } AND = { tag = ZIM exists = ZIM THIS = { tag = ZAM } } # Sindabezi Island
 			AND = { tag = EGY exists = EGY THIS = { tag = SAA } } AND = { tag = SAA exists = SAA THIS = { tag = EGY } } # Tiran Island
 			AND = { tag = LBY exists = LBY THIS = { tag = ALG } } AND = { tag = ALG exists = ALG THIS = { tag = LBY } } # South East Algeria
 			# Asia and the Pacific
 			AND = { tag = SYR exists = SYR THIS = { tag = LEB } } AND = { tag = LEB exists = LEB THIS = { tag = SYR } } # Aarsal
-			AND = { tag = PER exists = PER THIS = { tag = UAE } } AND = { tag = UAE exists = UAE THIS = { tag = PER } } # Abu Musa
+			AND = { tag = IRN exists = IRN THIS = { tag = UAE } } AND = { tag = UAE exists = UAE THIS = { tag = IRN } } # Abu Musa
 			AND = { tag = NKO exists = NKO THIS = { tag = JAP } } AND = { tag = JAP exists = JAP THIS = { tag = NKO } } # Liancourt Rocks
 			AND = { tag = NKO exists = NKO THIS = { tag = CHI } } AND = { tag = CHI exists = CHI THIS = { tag = NKO } } # Baekdu Mountain
 			AND = { tag = BHU exists = BHU THIS = { tag = CHI } } AND = { tag = CHI exists = CHI THIS = { tag = BHU } } # Bhutanese enclaves
-			AND = { tag = DAI exists = DAI THIS = { tag = CAM } } AND = { tag = CAM exists = CAM THIS = { tag = DAI } } # Koh Thonsay
+			AND = { tag = VNM exists = VNM THIS = { tag = CAM } } AND = { tag = CAM exists = CAM THIS = { tag = VNM } } # Koh Thonsay
 			AND = { tag = AZB exists = AZB THIS = { tag = GEO } } AND = { tag = GEO exists = GEO THIS = { tag = AZB } } # David Gareja monastery complex
-			AND = { tag = BUR exists = BUR THIS = { tag = THI } } AND = { tag = THI exists = THI THIS = { tag = BUR } } # Doi Lang
+			AND = { tag = MMR exists = MMR THIS = { tag = THI } } AND = { tag = THI exists = THI THIS = { tag = MMR } } # Doi Lang
 			AND = { tag = BAH exists = BAH THIS = { tag = QAT } } AND = { tag = QAT exists = QAT THIS = { tag = BAH } } # Fasht Ad Dibal
 			AND = { tag = UZB exists = UZB THIS = { tag = KYR } } AND = { tag = KYR exists = KYR THIS = { tag = UZB } } # Fergana Valley
 			AND = { tag = TAJ exists = TAJ THIS = { tag = KYR } } AND = { tag = KYR exists = KYR THIS = { tag = TAJ } } # Isfara Valley
@@ -1218,13 +1302,13 @@ territorial_dispute = {
 			AND = { tag = VAN exists = VAN THIS = { tag = FRA } } AND = { tag = FRA exists = FRA THIS = { tag = VAN } } # Matthew and Hunter Islands
 			AND = { tag = FIJ exists = FIJ THIS = { tag = TON } } AND = { tag = TON exists = TON THIS = { tag = FIJ } } # Minerva Reefs
 			AND = { tag = HND exists = HND THIS = { tag = BNG } } AND = { tag = BNG exists = BNG THIS = { tag = HND } } # Indo-Bangladesh enclaves
-			AND = { tag = BUR exists = BUR THIS = { tag = BNG } } AND = { tag = BNG exists = BNG THIS = { tag = BUR } } # Naf River
+			AND = { tag = MMR exists = MMR THIS = { tag = BNG } } AND = { tag = BNG exists = BNG THIS = { tag = MMR } } # Naf River
 			AND = { tag = MSY exists = MSY THIS = { tag = SNG } } AND = { tag = SNG exists = SNG THIS = { tag = MSY } } # Pedra Branca
 			AND = { tag = CAM exists = CAM THIS = { tag = THI } } AND = { tag = THI exists = THI THIS = { tag = CAM } } # Prachinburi 
 			AND = { tag = KUW exists = KUW THIS = { tag = SAA } } AND = { tag = SAA exists = SAA THIS = { tag = KUW } } # Qarooh
 			AND = { tag = PHI exists = PHI THIS = { tag = MSY } } AND = { tag = MSY exists = MSY THIS = { tag = PHI } } # Sabah
 			AND = { tag = UAE exists = UAE THIS = { tag = SAA } } AND = { tag = SAA exists = SAA THIS = { tag = UAE } } # Saudi Arabia–UAEborder dispute
-			AND = { tag = IRQ exists = IRQ THIS = { tag = PER } } AND = { tag = PER exists = PER THIS = { tag = IRQ } } # Shatt al-Arab
+			AND = { tag = IRQ exists = IRQ THIS = { tag = IRN } } AND = { tag = IRN exists = IRN THIS = { tag = IRQ } } # Shatt al-Arab
 			AND = { tag = LEB exists = LEB THIS = { tag = ISR } } AND = { tag = ISR exists = ISR THIS = { tag = LEB } } # Shebaa Farms
 			AND = { tag = TOK exists = TOK THIS = { tag = USA } } AND = { tag = USA exists = USA THIS = { tag = TOK } } # Swains Island
 			AND = { tag = KAZ exists = KAZ THIS = { tag = RUS } } AND = { tag = RUS exists = RUS THIS = { tag = KAZ } } # Malozhemchuzny
@@ -1238,12 +1322,19 @@ territorial_dispute = {
 			AND = { tag = SER exists = SER THIS = { tag = CRO } } AND = { tag = CRO exists = CRO THIS = { tag = SER } } # Croatia-Serbia border dispute
 			AND = { tag = SLO exists = SLO THIS = { tag = CRO } } AND = { tag = CRO exists = CRO THIS = { tag = SLO } } # Gulf of Piran
 			AND = { tag = MON exists = MON THIS = { tag = CRO } } AND = { tag = CRO exists = CRO THIS = { tag = MON } } # Prevlaka
-			AND = { tag = SER exists = SER THIS = { tag = BOS } } AND = { tag = BOS exists = BOS THIS = { tag = SER } } # Sastavci
-			AND = { tag = MON exists = MON THIS = { tag = BOS } } AND = { tag = BOS exists = BOS THIS = { tag = MON } } # Sutorina
-			AND = { tag = CRO exists = CRO THIS = { tag = BOS } } AND = { tag = BOS exists = BOS THIS = { tag = CRO } } # Neum
+			AND = { tag = SER exists = SER THIS = { tag = BIH } } AND = { tag = BIH exists = BIH THIS = { tag = SER } } # Sastavci
+			AND = { tag = MON exists = MON THIS = { tag = BIH } } AND = { tag = BIH exists = BIH THIS = { tag = MON } } # Sutorina
+			AND = { tag = CRO exists = CRO THIS = { tag = BIH } } AND = { tag = BIH exists = BIH THIS = { tag = CRO } } # Neum
 			# South America
 			#AND = { tag = TG1 exists = TG1 THIS = { tag = TG2 } } AND = { tag = TG2 exists = TG2 THIS = { tag = TG1 } } # TerrName
+			
 		}
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
  	}	
 	on_add = {
 		move_issue_percentage = { 
@@ -1470,7 +1561,6 @@ install_theocratic_regime = {
 		NOT = {
 			government = theocracy
 		}
-		
 	}
 	
 	po_remove_prestige = yes
@@ -1636,6 +1726,12 @@ rude_boy = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		badboy = 1
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
 	po_remove_prestige = yes
@@ -1707,6 +1803,12 @@ dismantle_cb = {
 			NOT = { has_country_modifier = neutrality }
 			#NOT = { war_policy = pacifism }
 		}	
+		NOT = { 
+			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
+			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
+		}
+				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
 	po_disarmament = yes

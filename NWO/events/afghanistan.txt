@@ -352,7 +352,8 @@ country_event = {
 				has_pop_religion = sunni
 				is_primary_culture = no
 			}
-            militancy = 5
+			ideology = { factor = 0.5 value = traditionalist }
+            militancy = 10
 			consciousness = 2 
 		}
 	}
@@ -369,9 +370,10 @@ country_event = {
 	trigger = {
 		tag = AFG
 		OR = { 
-			NOT = { ideology  = traditionalist }
+			NOT = { ideology = traditionalist }
 			NOT = { has_country_modifier = sharia }
 		}
+		NOT = { government = proletarian_dictatorship }
 		year = 1996
 	}
 
@@ -391,7 +393,6 @@ country_event = {
 		}
 		government = theocracy religion = sunni country_event = 800051
 		add_country_modifier = { name = sharia duration = 1750 }
-		
 	}
 
 	option = {

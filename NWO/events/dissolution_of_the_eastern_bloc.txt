@@ -1,4 +1,4 @@
-### Soviet control over CEE gets higher
+### Prelude to the dissolution
 country_event = {
   id = 8225000
   title = EVT_8225000_NAME
@@ -22,6 +22,147 @@ country_event = {
   option = {
     name = EVT_8225001_A
 	plurality = 4
+  }
+}
+# STAGE 1. Mikhail Gorbachev
+# Starting event from dissolution_of_the_eastern_bloc.txt decision
+country_event = { # Mikhail Gorbachev 
+  id = 8014237
+  title = EVT_8014237_NAME
+  desc = EVT_8014237_DESC
+  picture = "nwo2_mikhail_gorbachev"
+  fire_only_once = yes
+
+  trigger = { 
+    tag = SUN
+	government = proletarian_dictatorship
+    has_country_modifier = in_bankrupcy
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8014237_A
+	define_general = { name = "Mikhail Gorbachev" personality = energetic background = no_background }
+	country_event = 8014243
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8014237_B
+	add_country_modifier = { name = dour_economist duration = 3605 }
+	any_pop = { militancy = 1.5 consciousness = 2 }
+	country_event = 8014239 
+	random_country = { limit = { tag = THIS NOT = { has_global_flag = depuppetize_warsaw_pact } } country_event = { id = 8225005 days = 10 } } # end the warsaw pact
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = { # Structural Weaknesses of the Eastern Bloc
+  id = 8014243
+  title = EVT_8014243_NAME
+  desc = EVT_8014243_DESC
+  picture = "nwo2_usa_ussr_thaw"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SUN
+	government = proletarian_dictatorship
+	plurality = 50
+  }
+
+  mean_time_to_happen = { months = 12  }
+
+  option = {
+    name = EVT_8014243_A
+	any_pop = { militancy = -0.5  consciousness = -0.1 }
+	set_country_flag = perestroika
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8014243_B
+	any_pop = { militancy = 1.0  consciousness = 1}
+	badboy = 5 
+	country_event = { id = 8014244 days = 10 }
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8014244
+  title = EVT_8014244_NAME
+  desc = EVT_8014244_DESC
+  picture = "nwo2_ussr_protests"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8014244_A
+	any_pop = { militancy = 2.0  consciousness = 1 }
+	relation = { who = USA value = -50 } 
+	relation = { who = GBR value = -20 } 
+	relation = { who = FRA value = -20 } 
+	relation = { who = GER value = -20 } 
+	random_country = { limit = { tag = THIS NOT = { has_global_flag = depuppetize_warsaw_pact } } country_event = { id = 8225005 days = 10 } } # end the warsaw pact	
+	country_event = { id = 8014239 days = 180 }
+  }
+
+}
+country_event = { # Perestroika
+  id = 8014242
+  title = EVT_8014242_NAME
+  desc = EVT_8014242_DESC
+  picture = "nwo2_perestroika"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SUN
+	has_country_flag = perestroika
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8014242_A
+	any_pop = { militancy = 0.5  consciousness = 1 }
+	country_event = 8225005 # end the warsaw pact
+	prestige = 10
+  }
+}
+country_event = { # Perestroika
+  id = 8014240
+  title = EVT_8014240_NAME
+  desc = EVT_8014240_DESC
+  picture = "nwo2_perestroika"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SUN
+    war = no
+	has_country_flag = perestroika
+	government = proletarian_dictatorship
+  }
+
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = EVT_8014240_A
+	any_pop = { militancy = 0.3 consciousness = 1.0}
+	country_event = 8014245
+  }
+}
+# STAGE 2. FREE EAST EUROPE
+country_event = {
+  id = 8225005
+  title = EVT_8225005_NAME
+  desc = EVT_8225005_DESC
+  picture = "nwo2_masses_at_the_lenin_statue"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8225005_A
+	any_pop = { militancy = 1.0 consciousness = 1 }
+	set_global_flag = depuppetize_warsaw_pact 
+	set_global_flag = dissolve_warsaw_pact 
   }
 }
 country_event = {
@@ -49,18 +190,18 @@ country_event = {
   id = 8225004
   title = EVT_8225004_NAME
   desc = EVT_8225004_DESC
-  picture = "nwo2_masses_at_the_lenin_statue"
+  picture = "nwo2_wind_of_change"
 
   trigger = {
     has_global_flag = depuppetize_warsaw_pact
 	government = proletarian_dictatorship
-	NOT = { tag = SUN }
-	NOT = { tag = YUG }
-	OR = { vassal_of = SUN vassal_of = RUS is_vassal = no }
+	OR = { vassal_of = SUN in_sphere = SUN }
 	OR = { capital_scope = { continent = europe } tag = KAZ tag = UZB tag = TAJ tag = TRD tag = KYR tag = ARM tag = GEO tag = MON tag = TKR }
 	NOT = { has_country_flag = depuppetize_warsaw_pact }
   }
 
+  immediate = { set_country_flag = depuppetize_warsaw_pact }
+  
   mean_time_to_happen = { months = 24 }
   
   option = {
@@ -68,7 +209,6 @@ country_event = {
 	overlord = { country_event = 8014250 } 
 	government = democracy country_event = 800054
 	election = yes
-	set_country_flag = depuppetize_warsaw_pact
   }
 
   option = {
@@ -76,51 +216,6 @@ country_event = {
 	overlord = { country_event = 8014250 } 
 	government = democracy country_event = 800054
 	ruling_party_ideology = communist
-	set_country_flag = depuppetize_warsaw_pact
-  }
-}
-country_event = {
-  id = 8225005
-  title = EVT_8225005_NAME
-  desc = EVT_8225005_DESC
-  picture = "nwo2_masses_at_the_lenin_statue"
-  fire_only_once = yes
-
-  trigger = {
-    tag = SUN
-	government = proletarian_dictatorship
-	has_global_flag = breakup_of_ussr # DH alt history
-  }
-
-  mean_time_to_happen = { months = 1  }
-
-  option = {
-    name = EVT_8225005_A
-	any_pop = { militancy = 1.0 consciousness = 1 }
-	set_global_flag = depuppetize_warsaw_pact 
-	set_global_flag = dissolve_warsaw_pact 
-  }
-}
-country_event = {
-  id = 8225006
-  title = EVT_8225006_NAME
-  desc = EVT_8225006_DESC
-  picture = "nwo2_wind_of_change"
-  fire_only_once = yes
-
-  trigger = {
-    tag = SUN
-	government = proletarian_dictatorship
-    has_global_flag = autumn_of_nations 
-	OR = { exists = LAT exists = LIT exists = EST }
-  }
-
-  mean_time_to_happen = { months = 6  }
-
-  option = {
-    name = EVT_8225006_A
-	set_global_flag = depuppetize_warsaw_pact 
-	set_global_flag = dissolve_warsaw_pact 
   }
 }
 country_event = { 
@@ -148,7 +243,6 @@ country_event = {
   }	
   
 }
-
 country_event = { 
   id = 80142501
   title = EVT_80142501_NAME
@@ -162,6 +256,202 @@ country_event = {
 	add_casus_belli = { target = FROM type = install_communist_gov_cb months = 12 } 
 	ai_chance = { factor = 0 }
   }
-  
-}
+ }
+# STAGE 3. THE REGIME BENDS AND THE COUP
+country_event = { # Regime bends under dissent 
+  id = 8014245
+  title = EVT_8014245_NAME
+  desc = EVT_8014245_DESC
+  picture = "nwo2_ussr_protests"
 
+  trigger = {
+    tag = SUN
+	government = proletarian_dictatorship
+    NOT = { has_global_flag = autumn_of_nations }
+	NOT = { has_global_flag = august_coup }
+    average_militancy  = 8
+	NOT = { rank = 1 }
+	year = 1971 # Nixon Shock
+  }
+  
+  immediate = { set_global_flag = autumn_of_nations }
+
+  mean_time_to_happen = { months = 6  }
+
+  option = {
+    name = EVT_8014245_A
+	country_event = { id = 8014252 days = 120 }
+	prestige = -200
+	ai_chance = { factor = 100 }
+  }  
+}
+country_event = { # Soviet Union referendum $YEAR$
+  id = 8014252
+  title = EVT_8014252_NAME
+  desc = EVT_8014252_DESC
+  picture = "soviet_union_referendum"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8014252_A
+	random_country = { limit = { tag = THIS NOT = { has_global_flag = the_baltic_way } } country_event = 8014246 } # release the baltics and caucasus
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8014252_B
+	random_country = { limit = { tag = THIS NOT = { has_global_flag = the_baltic_way } } country_event = 8014246 } # release the baltics
+	country_event = 8014249 # Belavezha Accords
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = { # August Coup
+  id = 8014239
+  title = EVT_8014239_NAME
+  desc = EVT_8014239_DESC
+  picture = "nwo2_august_coup"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SUN
+    has_global_flag = autumn_of_nations
+	NOT = { has_global_flag = august_coup }
+  }
+
+  option = {
+    name = EVT_8014239_A
+	any_pop = { militancy = 2.0  consciousness = 1 }
+	add_country_modifier = { name = great_depression duration = 3650 }
+	set_global_flag = august_coup
+	random_country = { limit = { tag = THIS NOT = { has_global_flag = the_baltic_way } } country_event = 8014246 }
+	country_event = { id = 8014248 days = 30 } 
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = { # soviet_civil_war
+  id = 8014248
+  title = EVT_8014248_NAME
+  desc = EVT_8014248_DESC
+  picture = "soviet_civil_war"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8014248_A
+	any_pop = { militancy = 2.0  consciousness = 2 }
+	any_owned = { limit = { is_core = UKR OR = { state_id = 702 state_id = 956 state_id = 958 } } secede_province = UKR }
+	casus_belli = { target = UKR type = conquest months = 12 }
+	casus_belli = { target = UKR type = make_puppet months = 12 }
+	any_owned = { limit = { is_core = RUS NOT = { state_id = 1008 } } secede_province = RUS }
+	war = { target = RUS  attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = dismantle_cb } }
+	war = { target = UKR attacker_goal = { casus_belli = conquest } defender_goal = { casus_belli = status_quo } }
+	RUS = { capital = 994 } # Leningrad
+	ai_chance = { factor = 10 }
+  }
+
+  option = {
+    name = EVT_8014248_B
+	any_pop = { militancy = -1.0  consciousness = 2 }
+	country_event = { id = 8014249 days = 180 } # Belavezha Accords
+	ai_chance = { factor = 90 }
+  }
+}
+# STAGE 4. THE END
+country_event = { 
+  id = 8014246
+  title = EVT_8014246_NAME
+  desc = EVT_8014246_DESC
+  picture = "nwo2_baltic_way"
+  is_triggered_only = yes
+
+  immediate = { set_global_flag = the_baltic_way }
+  
+  option = {
+    name = EVT_8014246_A
+	any_country = { # release the baltics and caucasus
+		limit = { 
+			OR = { 
+				AND = { tag = LIT THIS = { owns = 361 } } 
+				AND = { tag = LAT THIS = { owns = 354 } }
+				AND = { tag = EST THIS = { owns = 349 } }
+				AND = { tag = GEO THIS = { owns = 1090 } } 
+				AND = { tag = ARM THIS = { owns = 1098 } }
+				AND = { tag = MDA THIS = { owns = 676 } }
+			}
+			exists = no
+		}
+		country_event = 8014247
+		add_casus_belli = { target = THIS type = make_puppet months = 24 }
+		add_casus_belli = { target = THIS type = install_communist_gov_cb months = 24 }
+	}
+  }
+}
+country_event = {
+  id = 8014247
+  title = EVT_8014247_NAME
+  desc = EVT_8014247_DESC
+  picture = "nwo2_wind_of_change"
+  is_triggered_only = yes 
+  
+  option = {
+    name = EVT_8014247_A
+	FROM = {
+		any_state = {
+			limit = {
+				any_owned_province = { is_core = THIS }
+				NOT = { any_owned_province = { is_capital = yes } }
+			}
+			any_owned = { secede_province = THIS }
+		}
+	}
+	diplomatic_influence = { who = FROM value = -200 }
+	relation = { who = FROM value = -200 }
+	government = democracy country_event = 800054
+	random_country = { limit = { tag = THIS OR = { tag = LIT tag = LAT tag = EST } } USA = { diplomatic_influence = { who = THIS value = 200 } } } 
+	any_pop = { militancy = -10.0  consciousness = -2 }
+  }
+}country_event = { # Belavezha Accords
+  id = 8014249
+  title = EVT_8014249_NAME
+  desc = EVT_8014249_DESC
+  picture = "nwo2_belavezha_accords"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8014249_A
+	RUS = { capital = 1008 } # Moscow
+	any_pop = { militancy = -2.5  consciousness = -2 }
+	any_country = { # release the baltics and caucasus
+		limit = { 
+			any_core = { 
+				owned_by = THIS 
+				state_scope = { # prevent for YUG/SUN/super states releaseing the "founding" nation. 
+					NOT = { any_owned_province = { is_capital = yes } }
+				}
+			}
+			exists = no
+		}
+		country_event = 8014247
+		add_casus_belli = { target = THIS type = make_puppet months = 24 }
+		add_casus_belli = { target = THIS type = install_communist_gov_cb months = 24 }
+	}
+	country_event = 8014271
+  }
+}
+country_event = { # Fall of USSR
+  id = 8014271
+  title = EVT_8014271_NAME
+  desc = EVT_8014271_DESC
+  picture = "nwo2_end_of_ussr"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8014271_A
+    change_tag = RUS
+	any_pop = { militancy = -2.5  consciousness = -2 }
+	government = democracy country_event = 800054
+	random_country = { limit = { NOT = { exists = EST } tag = THIS } country_event = 8014246 } 
+	MDA = { release = TRD }
+	create_alliance = TRD
+	diplomatic_influence = { who = TRD value = 100 }
+  }
+}
