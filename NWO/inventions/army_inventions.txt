@@ -66,11 +66,15 @@ r7semyorka = {
 		base = 1
 		modifier = {
 			factor = 3
-			mobile_network = 1
+			tag = SUN
 		}
 		modifier = {
 			factor = 2
-			microcomputer = 1
+			tag = USA
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { rank = 2 }
 		}
 	}
 	effect = {
@@ -92,6 +96,126 @@ ballistic_missile_submarines = {
 		modifier = {
 			factor = 2
 			microcomputer = 1
+		}
+	}
+	effect = {
+		army_base = {
+			default_organisation = 0.1
+			supply_consumption = 0.1
+		}
+	}
+}
+man_in_space = {
+	limit = { mutual_assured_destruction = 1 }
+	chance = {
+		base = 1.0
+		modifier = {
+			factor = 3
+			rank = 1
+		}
+		modifier = {
+			factor = 2
+			invention = r7semyorka
+		}
+	}
+	effect = {
+		army_base = {
+			default_organisation = 0.1
+			supply_consumption = 0.1
+		}
+	}
+}
+space_rendezvous = {
+	limit = { submarine_launched_ballistic_missile = 1 }
+	chance = {
+		base = 1.0
+		modifier = {
+			factor = 3
+			rank = 1
+		}
+		modifier = {
+			factor = 2
+			invention = man_in_space
+		}
+	}
+	effect = {
+		army_base = {
+			default_organisation = 0.1
+			supply_consumption = 0.1
+		}
+	}
+}
+lunar_orbit = {
+	limit = { assymetric_warfare = 1 }
+	chance = {
+		base = 1.0
+		modifier = {
+			factor = 3
+			rank = 1
+		}
+		modifier = {
+			factor = 2
+			invention = space_rendezvous
+		}
+	}
+	effect = {
+		army_base = {
+			default_organisation = 0.1
+			supply_consumption = 0.1
+		}
+	}
+}
+lunar_landing = {
+	limit = { assymetric_warfare = 1 }
+	chance = {
+		base = 1.0
+		modifier = {
+			factor = 3
+			rank = 1
+		}
+		modifier = {
+			factor = 2
+			invention = lunar_orbit
+		}
+	}
+	effect = {
+		army_base = {
+			default_organisation = 0.1
+			supply_consumption = 0.1
+		}
+	}
+}
+mars_orbit = {
+	limit = { thaa_defense = 1 }
+	chance = {
+		base = 1.0
+		modifier = {
+			factor = 3
+			rank = 1
+		}
+		modifier = {
+			factor = 2
+			invention = lunar_orbit
+		}
+	}
+	effect = {
+		army_base = {
+			default_organisation = 0.1
+			supply_consumption = 0.1
+		}
+	}
+}
+mars_landing = {
+	limit = { ascent_phase_defense = 1 }
+	chance = {
+		base = 1.0
+		modifier = {
+			factor = 3
+			rank = 1
+		}
+		modifier = {
+			factor = 2
+			invention = mars_orbit
 		}
 	}
 	effect = {

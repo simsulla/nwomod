@@ -1,0 +1,216 @@
+political_decisions = {
+
+	satellite = {
+		picture = "satellite"
+		potential = {
+			is_greater_power = yes
+			NOT = { has_country_flag = satellite }
+		}
+		allow = {
+			#invention = r7semyorka
+			tag = SUN
+		}
+		effect = {
+			prestige = 10
+			set_country_flag = satellite
+			any_country = { limit = { NOT = { has_global_flag = first_satellite } tag = THIS } prestige = 20 }
+			# Soviet union is first
+			# usa
+			random_country = { limit = { NOT = { has_global_flag = first_satellite } tag = USA THIS = { tag = SUN } } country_event = 8211009 }
+			# player
+			random_country = { limit = { NOT = { has_global_flag = first_satellite } ai = no THIS = { tag = SUN } } country_event = 8211008 }
+			# USA is first
+			# soviet
+			random_country = { limit = { NOT = { has_global_flag = first_satellite } tag = SUN THIS = { tag = USA } NOT = { tag = THIS } } country_event = 8211011 }
+			# player
+			random_country = { limit = { NOT = { has_global_flag = first_satellite } ai = no THIS = { NOT = { tag = SUN } } } country_event = 8211010 }
+			set_global_flag = first_satellite
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	man_in_space = {
+		picture = "man_in_space"
+		potential = {
+			rank = 2
+			NOT = { has_country_flag = man_in_space }
+		}
+		allow = {
+			invention = man_in_space
+		}
+		effect = {
+			prestige = 10
+			set_country_flag = man_in_space
+			any_country = { limit = { NOT = { has_global_flag = first_man_in_space } tag = THIS } prestige = 20 }
+			# Soviet union is first
+			# usa
+			random_country = { limit = { NOT = { has_global_flag = first_man_in_space } tag = USA THIS = { tag = SUN } } country_event = 8211016 }
+			# player
+			random_country = { limit = { NOT = { has_global_flag = first_man_in_space } ai = no THIS = { tag = SUN } } country_event = 8211015 }
+			# USA is first
+			# soviet
+			random_country = { limit = { NOT = { has_global_flag = first_man_in_space } tag = SUN THIS = { tag = USA } NOT = { tag = THIS } } country_event = 8211018 }
+			# player
+			random_country = { limit = { NOT = { has_global_flag = first_man_in_space } ai = no THIS = { NOT = { tag = SUN } } } country_event = 8211017 }
+			set_global_flag = first_man_in_space
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	man_in_orbit = {
+		picture = "man_in_orbit"
+		potential = {
+			rank = 2
+			has_country_flag = man_in_space
+			NOT = { has_country_flag = man_in_orbit }
+		}
+		allow = {
+			invention = man_in_orbit
+		}
+		effect = {
+			set_country_flag = man_in_orbit
+			prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	space_rendezvous = {
+		picture = "space_rendezvous"
+		potential = {
+			rank = 2
+			has_country_flag = man_in_orbit
+			NOT = { has_country_flag = space_rendezvous }
+		}
+		allow = {
+			invention = space_rendezvous
+		}
+		effect = {
+			set_country_flag = space_rendezvous
+			prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	space_docking = {
+		picture = "space_docking"
+		potential = {
+			rank = 2
+			has_country_flag = space_rendezvous
+			NOT = { has_country_flag = space_docking }
+		}
+		allow = {
+			invention = space_docking
+		}
+		effect = {
+			set_country_flag = space_docking
+			prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	lunar_orbit = {
+		picture = "lunar_orbit"
+		potential = {
+			rank = 2
+			has_country_flag = space_docking
+			NOT = { has_country_flag = lunar_orbit }
+		}
+		allow = {
+			invention = lunar_orbit
+		}
+		effect = {
+			set_country_flag = lunar_orbit
+			prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	lunar_landing = {
+		picture = "lunar_landing"
+		potential = {
+			rank = 2
+			has_country_flag = lunar_orbit
+			NOT = { has_country_flag = lunar_landing }
+		}
+		allow = {
+			invention = lunar_landing
+		}
+		effect = {
+			prestige = 10
+			set_country_flag = lunar_landing
+			any_country = { limit = { NOT = { has_global_flag = first_lunar_landing } tag = THIS } prestige = 20 }
+			# Soviet union is first
+			# usa
+			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } tag = USA THIS = { tag = SUN } } country_event = 8211016 }
+			# player
+			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } ai = no THIS = { tag = SUN } } country_event = 8211015 }
+			# USA is first
+			# soviet
+			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } tag = SUN THIS = { tag = USA } NOT = { tag = THIS } } country_event = 8211018 }
+			# player
+			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } ai = no THIS = { NOT = { tag = SUN } } } country_event = 8211017 }
+			set_global_flag = first_lunar_landing
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	mars_orbit = {
+		picture = "mars_orbit"
+		potential = {
+			rank = 2
+			has_country_flag = lunar_landing
+			NOT = { has_country_flag = mars_orbit }
+		}
+		allow = {
+			invention = mars_orbit
+		}
+		effect = {
+			set_country_flag = mars_orbit
+			prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	mars_landing = {
+		picture = "mars_landing"
+		potential = {
+			rank = 2
+			has_country_flag = mars_orbit
+			NOT = { has_country_flag = mars_landing }
+		}
+		allow = {
+			invention = mars_landing
+		}
+		effect = {
+			set_country_flag = mars_landing
+			any_country = { limit = { NOT = { has_global_flag = first_mars_landing } tag = THIS } prestige = 20 }
+			random_country = { limit = { NOT = { has_global_flag = first_mars_landing } NOT = { tag = THIS } rank = 1 } country_event = 8211027 }
+			random_country = { limit = { NOT = { has_global_flag = first_mars_landing } NOT = { tag = THIS } ai = no } country_event = 8211026 }
+			set_global_flag = first_mars_landing
+			prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	space_station = {
+		picture = "space_station"
+		potential = {
+			rank = 2
+			has_country_flag = space_docking
+			NOT = { has_country_flag = space_station }
+		}
+		allow = {
+			invention = space_station
+		}
+		effect = {
+			set_country_flag = space_station
+			any_country = { limit = { NOT = { has_global_flag = first_space_station } tag = THIS } prestige = 20 }
+			random_country = { limit = { NOT = { has_global_flag = first_space_station } NOT = { tag = THIS } rank = 1  } country_event = 8211029 }
+			random_country = { limit = { NOT = { has_global_flag = first_space_station } NOT = { tag = THIS } ai = no } country_event = 8211028 }
+			set_global_flag = first_space_station
+			prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}	
+	
+}
