@@ -19,14 +19,14 @@ country_event = {
   mean_time_to_happen = { months = 12 }
 
   option = {
-    name = "EVT_1014199_OPTA"
+    name = "EVT_1014199_A"
 	government = nationalist_dictatorship  country_event = 800054 # cpcn cahnges culture to russian
 	any_pop = { militancy = 3 consciousness = 1 }
 	ai_chance = { factor = 0.1 modifier = { factor = 2 NOT = { RUS = { has_country_modifier = in_bankrupcy } } in_sphere = RUS } }
   }
 
   option = {
-    name = "EVT_1014199_OPTB"
+    name = "EVT_1014199_B"
 	any_pop = { militancy = 1.0  consciousness = 2 }
 	add_accepted_culture = russian
 	RUS = { casus_belli = { target = UKR type = install_authoritarian_regime  months = 24 } }
