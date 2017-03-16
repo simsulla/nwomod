@@ -1,0 +1,49 @@
+political_decisions = {
+
+	form_scandinavia = {
+		picture = "form_scandinavia"
+		potential = {
+			OR = { tag = FIN tag = SWE tag = NOR tag = DEN tag = FAR tag = ICL }
+			NOT = {
+				exists = SCA
+			}
+		}
+		
+		allow = {
+			is_greater_power = yes
+			prestige = 150
+			war = no
+			SCA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 20
+			change_tag = SCA
+			add_accepted_culture = danish
+			add_accepted_culture = finns
+			add_accepted_culture = swedish
+			add_accepted_culture = norwegian
+			add_accepted_culture = icelandic
+			add_accepted_culture = faroe
+			any_country = {
+				limit = {
+					OR = { tag = FIN tag = SWE tag = NOR tag = DEN tag = FAR tag = ICL }
+					in_sphere = THIS
+				}
+				country_event = { id = 11101 days = 0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
