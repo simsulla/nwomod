@@ -1,4 +1,143 @@
 country_event = {
+  id = 8012610
+  title = EVT_8012610_NAME # Defiance Campaign
+  desc = EVT_8012610_DESC
+  picture = "defiance_campaign"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAF
+    year = 1952 NOT = { year = 1999 }
+	has_country_modifier = apartheid
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8012610_A
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo } } militancy = 1.0 }
+	prestige = -5
+	ai_chance = { factor = 0.9 }
+  }
+  option = {
+    name = EVT_8012610_B
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo } } consciousness = 1.0 }
+	any_pop = { limit = { culture = afrikaaner } militancy = 0.5 }
+	prestige = -5
+	ai_chance = { factor = 0.1 }
+  }
+}
+country_event = {
+  id = 8012611
+  title = EVT_8012611_NAME # Freedom Charter
+  desc = EVT_8012611_DESC
+  picture = "freedom_charter"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAF
+    year = 1955 NOT = { year = 1999 }
+	has_country_modifier = apartheid
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8012611_A
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo } } consciousness = 1.0 militancy = 0.5 }
+	ai_chance = { factor = 0.9 }
+  }
+  option = {
+    name = EVT_8012611_B
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo } } consciousness = 2 }
+	prestige = -5
+	ai_chance = { factor = 0.1 }
+  }
+}
+country_event = {
+  id = 8012612
+  title = EVT_8012612_NAME # Sharpeville Massacre
+  desc = EVT_8012612_DESC
+  picture = "sharpeville_massacre"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAF
+    year = 1960 NOT = { year = 1999 }
+	has_country_modifier = apartheid
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8012612_A
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo } } militancy = 1.0 }
+	prestige = -10
+  }
+  option = {
+    name = EVT_8012612_B
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo } } militancy = 1.0 consciousness = 2.0 }
+  }
+}
+country_event = {
+  id = 8012613
+  title = EVT_8012613_NAME # Botha's Reforms
+  desc = EVT_8012613_DESC
+  picture = "bothas_reforms"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAF
+    year = 1984 NOT = { year = 1999 }
+	has_country_modifier = apartheid
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8012613_A
+	any_pop = { limit = { OR = { culture = coloured culture = indian } } militancy = -5 consciousness = -5 }
+	any_pop = { limit = { culture = afrikaaner } consciousness = 2.0 }
+	prestige = 2
+  }
+  option = {
+    name = EVT_8012613_B
+  }
+}
+country_event = {
+  id = 8012614
+  title = EVT_8012614_NAME # Unban the ANC
+  desc = EVT_8012614_DESC
+  picture = "unban_the_anc"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAF
+    year = 1990 NOT = { year = 1993 }
+	has_country_modifier = apartheid
+  }
+
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = EVT_8012614_A
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo culture = coloured culture = indian } } militancy = -1 }
+	set_country_flag = unban_the_anc
+	prestige = 2
+  }
+  option = {
+    name = EVT_8012614_B
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo culture = coloured culture = indian } } militancy = -2 }
+	set_country_flag = unban_the_anc
+	prestige = 4
+  }
+  option = {
+    name = EVT_8012614_C
+	any_pop = { limit = { NOT = { culture = afrikaaner culture = white_anglo culture = coloured culture = indian } } militancy = 2 }
+  }
+}
+
+country_event = {
   id = 8012621
   title = EVT_8012621_NAME
   desc = EVT_8012621_DESC

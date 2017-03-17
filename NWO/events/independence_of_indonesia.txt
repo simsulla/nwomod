@@ -448,6 +448,7 @@ country_event = { # End of the Indonesian National Revolution IDO victory
     name = EVT_8206071_A
 	any_owned = { limit = { is_core = IDO NOT = { is_core = WPA }  } secede_province = IDO }
 	release_vassal = IDO
+	prestige = -100
 	any_pop = { militancy = -2.0 }
   }
 }
@@ -494,7 +495,7 @@ country_event = { # End of the Indonesian National Revolution NET victory
 	diplomatic_influence = { who = IDO value = 200 }
 	relation = { who = IDO value = 100 }
 	relation = { who = NET value = -50 }
-	NET = { country_event = 8206034 }
+	NET = { prestige = -50 country_event = 8206034 }
 	set_global_flag = USA_pressure_the_dutch_on_indonesia
 	ai_chance = { factor = 100 }
   }
@@ -517,6 +518,7 @@ country_event = { # End of the Indonesian National Revolution NET victory
   option = {
     name = EVT_8206034_A
 	any_pop = { limit = { culture = indonesian } consciousness = 2 militancy = 3 }
+	prestige = -50
 	country_event = 8206030
 	ai_chance = { factor = 0 }
   }

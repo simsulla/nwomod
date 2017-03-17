@@ -1,0 +1,46 @@
+political_decisions = {
+
+	form_benelux = {
+		picture = "form_benelux"
+		potential = {
+			OR = { tag = NET tag = BEL tag = LUX }
+			NOT = {
+				exists = BNL
+			}
+		}
+		
+		allow = {
+			is_greater_power = yes
+			prestige = 150
+			war = no
+			BNL = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 20
+			change_tag = BNL
+			add_accepted_culture = wallonian
+			add_accepted_culture = flemish
+			add_accepted_culture = dutch
+			any_country = {
+				limit = {
+					OR = { tag = NET tag = BEL tag = LUX }
+					in_sphere = THIS
+				}
+				country_event = { id = 11101 days = 0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
