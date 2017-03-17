@@ -141,14 +141,14 @@ political_decisions = {
 			any_country = { limit = { NOT = { has_global_flag = first_lunar_landing } tag = THIS } prestige = 20 }
 			# Soviet union is first
 			# usa
-			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } tag = USA THIS = { tag = SUN } } country_event = 8211016 }
+			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } tag = USA THIS = { tag = SUN } } country_event = 8211023 }
 			# player
-			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } ai = no THIS = { tag = SUN } } country_event = 8211015 }
+			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } ai = no THIS = { tag = SUN } } country_event = 8211022 }
 			# USA is first
 			# soviet
-			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } tag = SUN THIS = { tag = USA } NOT = { tag = THIS } } country_event = 8211018 }
+			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } tag = SUN THIS = { tag = USA } NOT = { tag = THIS } } country_event = 8211025 }
 			# player
-			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } ai = no THIS = { NOT = { tag = SUN } } } country_event = 8211017 }
+			random_country = { limit = { NOT = { has_global_flag = first_lunar_landing } ai = no THIS = { NOT = { tag = SUN } } } country_event = 8211024 }
 			set_global_flag = first_lunar_landing
 		}
 		ai_will_do = { factor = 1 }
