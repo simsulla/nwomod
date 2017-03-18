@@ -1,0 +1,62 @@
+political_decisions = {
+
+	hollywood = {
+		picture = "hollywood"
+		potential = {
+			owns = 89
+			rank = 1
+			is_greater_power = yes
+			NOT = { has_country_modifier = hollywood }
+		}
+		allow = {
+			war = no
+			containment = 1
+		}
+		effect = {
+			add_country_modifier = { name = hollywood duration = 36000 }
+			prestige = 50
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	bollywood  = {
+		picture = "bollywood"
+		potential = {
+			owns = 1297
+			rank = 4
+			year = 1950
+			is_greater_power = yes
+			NOT = { has_country_flag = bollywood }
+		}
+		allow = {
+			war = no
+			containment = 1
+		}
+		effect = {
+			prestige = 10
+			set_country_flag = bollywood
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	nollywood  = {
+		picture = "nollywood"
+		potential = {
+			owns = 1923
+			year = 1970
+			rank = 10
+			is_greater_power = yes
+			NOT = { has_country_flag = nollywood }
+		}
+		allow = {
+			war = no
+			containment = 1
+		}
+		effect = {
+			prestige = 10
+			set_country_flag = nollywood
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+}
