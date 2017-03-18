@@ -214,7 +214,7 @@ country_event = { # The establishment of the ROK
 	}
 
 	option = {
-		name = EVT_1209005_A
+		name = EVT_1209007_A
 		set_country_flag = end_korea_trusteeship
 		any_owned = { limit = { OR = { is_core = SKO is_core = NKO } } secede_province = KOR add_core = KOR remove_core = SKO remove_core = NKO }
 		KOR = { election = yes }
@@ -240,15 +240,15 @@ country_event = { # First elections of the ROK
 
 	option = {
 		name = EVT_1209008_A
-		random_country = { 
+		any_country = { 
 			limit = { tag = THIS ruling_party_ideology = communist } 
 			government = proletarian_dictatorship country_event = 800052
-			diplomatic_influence = { who = SUN value = 150 } 
+			SUN = { diplomatic_influence = { who = THIS value = 150 } }
 			relation = { who = SUN value = 150 }
 		}
-		random_country = { 
+		any_country = { 
 			limit = { tag = THIS NOT = { ruling_party_ideology = communist } } 
-			diplomatic_influence = { who = USA value = 200 } 
+			USA = { diplomatic_influence = { who = THIS value = 200 } }
 			relation = { who = USA value = 150 }
 		}
 	}
