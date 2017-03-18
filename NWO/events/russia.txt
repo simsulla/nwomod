@@ -1823,3 +1823,35 @@ country_event = {
 	}
 }
 
+country_event = { # Request to join the USSR
+	id = 32510
+	title = EVT_32510_NAME
+	desc = EVT_32510_DESC
+	picture = "request_to_join_the_ussr"
+	
+	trigger = {
+		war = no
+		any_core = { owned_by = SUN }
+		NOT = { has_country_flag = join_the_ussr }
+		NOT = { has_country_flag = reject_join_the_ussr }
+		has_unclaimed_cores = yes
+		government = proletarian_dictatorship
+		overlord = { tag = SUN } 
+		sphere_owner = { tag = SUN } 
+	}
+	
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = EVT_32510_A
+		set_country_flag = join_the_ussr
+		SUN = { set_country_flag = join_the_ussr } # triggers USSR decition join_the_ussr
+		ai_chance = { factor = 0.9 modifier = { tag = FIN factor = 0.1 } }
+	}
+	option = {
+		name = EVT_32510_B
+		set_country_flag = reject_join_the_ussr
+		ai_chance = { factor = 0.1 }
+	}
+}
+

@@ -88,7 +88,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-
 	sino_soviet_friendship = {
 		picture = "sino_soviet_friendship"
 		potential = {
@@ -194,5 +193,27 @@ political_decisions = {
 		}		
 		
 	}	
-	
+
+	join_the_ussr = {
+		picture = "join_the_ussr"
+		potential = {
+			tag = SUN
+			is_greater_power = yes
+			government = proletarian_dictatorship
+			has_country_flag = join_the_ussr
+		}
+		allow = {
+			war = no
+			containment = 1
+			any_neighbor_country = { relation = { who = SUN value = 100 } has_country_flag = join_the_ussr has_unclaimed_cores = yes any_core = { owned_by = SUN } }
+		}
+		effect = {
+			clr_country_flag = join_the_ussr
+			any_neighbor_country = { 
+				limit = { relation = { who = SUN value = 100 } has_country_flag = join_the_ussr has_unclaimed_cores = yes any_core = { owned_by = SUN } }
+				country_event = 11101
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
