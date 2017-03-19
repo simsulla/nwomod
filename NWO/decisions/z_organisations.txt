@@ -1,0 +1,21 @@
+political_decisions = {
+	# the purpose of these decistions is ONLY to display to the player membership in various organisations
+	opec_org = { # OPEC
+		picture = opec_org 
+		potential = { 
+			has_global_flag = opec
+			has_country_modifier = opec 
+			NOT = { has_country_flag = hide_organizations }
+		} 
+		allow = { 
+			has_global_flag = only_for_information
+		} # TODO #918
+		effect = { 
+			any_country = {
+				limit = { has_country_modifier = opec }
+				# do nothing
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

@@ -1,7 +1,7 @@
 defines = {
 
 start_date = '1946.1.1',
-end_date = '2246.1.1',
+end_date = '2300.1.1',
 
 country = {
 	YEARS_OF_NATIONALISM 	= 50,   -- Years of Nationalism
@@ -15,7 +15,7 @@ country = {
 	GREATNESS_DAYS = 360, 	   -- how many days until country risks losing status as great nation
 	BADBOY_LIMIT = 25,
 	MAX_BUREAUCRACY_PERCENTAGE = 0.002, -- More than max percent bureaucrats of poplation will give no additional benefits
-	BUREAUCRACY_PERCENTAGE_INCREMENT = 0.001, -- For each social administrative reform level, this is added to MAX_BUREAUCRACY_PERCENTAGE
+	BUREAUCRACY_PERCENTAGE_INCREMENT = 0.004, -- 40x social reforms For each social administrative reform level, this is added to MAX_BUREAUCRACY_PERCENTAGE
 	MIN_CRIMEFIGHT_PERCENT = 0.2,
 	MAX_CRIMEFIGHT_PERCENT = 0.99,
 	ADMIN_EFFICIENCY_CRIMEFIGHT_PERCENT = 0.75, -- Crimefight depends on both state admin eff. and admin spending, admin spending percent effect is set to (1-ADMIN_EFFICIENCY_CRIMEFIGHT_PERCENT)
