@@ -856,12 +856,17 @@ automobiles_factory = {
 jewellery_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		gold_silver = 6
+		gold_silver = 3
+		diamonds = 3
 	}
 	output_goods = jewellery 
 	value = 18
 	bonus = {
-		trigger = { trade_goods_in_state = gold_silver }
+		trigger = { 
+			OR = {
+				trade_goods_in_state = gold_silver 
+				trade_goods_in_state = diamonds 
+			}
 		value = 0.125
 	}
 }
