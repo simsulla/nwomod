@@ -43,7 +43,7 @@ gas_turbine_plants = {
 		}
 	}
 	effect = {
-		factory_throughput = 0.05
+		activate_building = gas_fuel_factory
 	}
 }
 reciprocating_engines = {
@@ -196,10 +196,10 @@ lng_storag_tank = {
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			gas = 0.1
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+		 	gas = 0.1
 		}
 	}
 }
@@ -218,10 +218,10 @@ apci_technology = {
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			gas = 0.1
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+		 	gas = 0.1
 		}
 	}
 }
@@ -308,10 +308,10 @@ horizontal_drilling = {
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			gas = 0.1
 		}
 		rgo_size = {
-			petroleum = 0.1
+			gas = 0.1
 		}
 	}
 }
@@ -330,10 +330,10 @@ fracturing_fluids = {
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			gas = 0.1
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+		 	gas = 0.1
 		}
 	}
 }
@@ -352,10 +352,10 @@ microseismic_monitoring = {
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			gas = 0.1
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+		 	gas = 0.1
 		}
 	}
 }
@@ -1164,7 +1164,7 @@ managed_intensive_rotational_grazing = {
 		}
 	}
 	effect = {
-		rgo_goods_output = { cattle = 1 }
+		activate_building = beverages_tea_factory
 	}
 }
 intensive_crop_farming = {
@@ -1232,7 +1232,7 @@ intensive_oil_seeds_crop_farming = {
 		}
 	}
 	effect = {
-        rgo_goods_output = { grain = 1 }
+        rgo_goods_output = { oil_seeds = 1 }
 	}
 }
 # mineral_processing
@@ -1569,7 +1569,7 @@ system_of_rice_intensification = {
 		}
 	}
 	effect = {
-        rgo_goods_output = { grain = 1 }
+        rgo_goods_output = { rice = 1 }
 	}
 }
 marker_assisted_selection = {
@@ -2467,7 +2467,7 @@ wheat_reduced_height_genes = {
 	}
 	effect = {
 		factory_goods_output = {
-			grain = 0.1
+			rice = 0.1
 		}
 	}
 }

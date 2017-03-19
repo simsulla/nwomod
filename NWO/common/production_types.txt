@@ -203,6 +203,36 @@ grain_canned_food_factory = {
 	}
 }
 
+rice_canned_food_factory = {       
+	template = factory_template	
+	input_goods = { 
+		rice = 40
+	}
+	output_goods = canned_food 
+	value = 137
+	bonus = {
+		trigger = { 
+			trade_goods_in_state = rice 
+		}
+		value = 0.25
+	}
+}
+
+oil_seeds_canned_food_factory = {       
+	template = factory_template	
+	input_goods = { 
+		oil_seeds = 15
+	}
+	output_goods = canned_food 
+	value = 67
+	bonus = {
+		trigger = { 
+			trade_goods_in_state = oil_seeds 
+		}
+		value = 0.25
+	}
+}
+
 cement_factory = {       
 	template = cement_template
 	input_goods = {           
@@ -239,6 +269,20 @@ petroleum_fuel_factory = {
 	value = 100
 	bonus = {
 		trigger = { trade_goods_in_state = petroleum }
+		value = 0.25
+	}
+}
+
+gas_fuel_factory = {    # liquefied natural gas  
+	template = factory_template
+	input_goods = {    
+		gas = 24
+	} 
+	output_goods = fuel 
+	# make this more profitable than coal fuel
+	value = 100
+	bonus = {
+		trigger = { trade_goods_in_state = gas }
 		value = 0.25
 	}
 }
@@ -436,10 +480,15 @@ machine_parts_factory = {
 aluminium_factory = {       
 	template = factory_template
 	input_goods = {    
+		bauxite = 140.00	
 		coal = 21	
 	}
 	output_goods = aluminium 
 	value = 20.00
+	bonus = {
+		trigger = { trade_goods_in_state = bauxite }
+		value = 0.125
+	}
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.125
@@ -464,6 +513,7 @@ small_arms_factory = {
 		trigger = { 
 			OR = {
 				has_building = petroleum_fuel_factory 
+				has_building = gas_fuel_factory 
 				has_building = coal_fuel_factory 
 			}
 		}
@@ -482,6 +532,7 @@ heating_electricity_factory = {
 		trigger = { 
 			OR = {
 				has_building = petroleum_fuel_factory 
+				has_building = gas_fuel_factory 
 				has_building = coal_fuel_factory 
 			}
 		}
@@ -505,6 +556,7 @@ integrated_circuits_factory = {
 		trigger = { 
 			OR = {
 				has_building = petroleum_fuel_factory 
+				has_building = gas_fuel_factory 
 				has_building = coal_fuel_factory 
 			}
 		}
@@ -640,6 +692,8 @@ beverages_factory = {
 				has_building = wool_canned_food_factory 
 				has_building = fruit_canned_food_factory 
 				has_building = grain_canned_food_factory 
+				has_building = rice_canned_food_factory 
+				has_building = oil_seeds_canned_food_factory 
 			}
 		}
 		value = 0.125
@@ -686,6 +740,28 @@ beverages_coffee_factory = {
         }
 }
 
+beverages_tea_factory = {
+        template = factory_template
+        input_goods = { 
+                tea = 240 # TODO
+                glass = 30
+        }       
+        output_goods = beverages
+        value = 71
+        bonus = {
+                trigger = { has_building = glass_factory }
+                value = 0.125
+        }       
+        bonus = {
+                trigger = {
+                        trade_goods_in_state = tea
+                }
+                value = 0.125
+        }
+}
+
+
+
 electric_gear_factory = {       
 	template = factory_template
 	input_goods = {    
@@ -702,6 +778,7 @@ electric_gear_factory = {
 		trigger = { 
 			OR = {
 				has_building = petroleum_fuel_factory 
+				has_building = gas_fuel_factory 
 				has_building = coal_fuel_factory 
 			}
 		}
@@ -730,6 +807,7 @@ pharmaceuticals_factory = {
 		trigger = { 
 			OR = {
 				has_building = petroleum_fuel_factory 
+				has_building = gas_fuel_factory 
 				has_building = coal_fuel_factory 
 			}
 		}
@@ -1000,6 +1078,7 @@ transport_factory = {
 		trigger = { 
 			OR = {
 				has_building = petroleum_fuel_factory 
+				has_building = gas_fuel_factory 
 				has_building = coal_fuel_factory 
 			}
 		}
@@ -1187,9 +1266,23 @@ grain_farm = {
 	farm = yes
 }
 
+rice_farm = {
+	template = RGO_template_farmers
+	output_goods = rice 
+	value = 2.0
+	farm = yes
+}
+
 timber_lodge = {
 	template = RGO_template_farmers
 	output_goods = timber 
+	value = 2.0
+	farm = yes
+}
+
+oil_seeds_ranch = {
+	template = RGO_template_farmers
+	output_goods = oil_seeds 
 	value = 2.0
 	farm = yes
 }
@@ -1215,16 +1308,9 @@ copper_mine = {
 	mine = yes
 }
 
-aluminium_mine = {
+bauxite_mine = {
 	template = RGO_template_labourers
-	output_goods = aluminium 
-	value = 2.0
-	mine = yes
-}
-
-diamonds_mine = {
-	template = RGO_template_labourers
-	output_goods = diamonds 
+	output_goods = bauxite 
 	value = 2.0
 	mine = yes
 }
@@ -1232,6 +1318,13 @@ diamonds_mine = {
 coal_mine = {
 	template = RGO_template_labourers
 	output_goods = coal 
+	value = 2.0
+	mine = yes
+}
+
+gas_rig = {
+	template = RGO_template_labourers
+	output_goods = gas 
 	value = 2.0
 	mine = yes
 }
@@ -1260,6 +1353,13 @@ precious_metal_mine = {
 sugar_plantation = {
 	template = RGO_template_farmers
 	output_goods = sugar 
+	value = 2.0
+	farm = yes
+}
+
+tea_plantation = {
+	template = RGO_template_farmers
+	output_goods = tea 
 	value = 2.0
 	farm = yes
 }
@@ -1353,6 +1453,57 @@ artisan_baker = {
 	output_goods = canned_food 
 	value = 124
 	
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+artisan_rice_trader = {       
+	input_goods = { 
+		rice = 40
+	}
+	output_goods = canned_food 
+	value = 124
+	
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+
+artisan_seeds_trader = {       
+	input_goods = { 
+		oil_seeds = 15
+	}
+	output_goods = canned_food 
+	value = 54
+	
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 40000
+}
+
+artisan_gas_fuel = {    # liquefied natural gas  
+	input_goods = {    
+		gas = 24
+	} 
+	output_goods = fuel 
+	value = 80
 	owner = {
 		poptype = artisan 
 		effect = output
