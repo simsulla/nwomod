@@ -33,6 +33,6 @@ country_event = {
 
   option = {
     name = EVT_8010619_A
-	any_owned = { limit = { OR = { produces = petroleum produces = gas NOT = { has_province_modifier = oil_field } } } add_province_modifier = { name = oil_field duration = -1 } }
+	any_owned = { limit = { produces = petroleum NOT = { has_province_modifier = oil_field } } add_province_modifier = { name = oil_field duration = -1 } }
   }
 }
