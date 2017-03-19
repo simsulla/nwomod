@@ -40,11 +40,15 @@ oil_well = {
 	cost = 5400
 
 	rgo_goods_output = { petroleum = 1.0 }
+	rgo_goods_output = { gas = 0.3 }
 	ai_chance = {
 		factor = 1.1
 		modifier = {
 			factor = 2
-			big_producer = petroleum
+			OR = {
+				big_producer = petroleum
+				big_producer = gas
+			}
 		}
 		modifier = {
 			factor = 1.2
@@ -109,13 +113,17 @@ liquefied_natural_gas = {
 	area = tech_power
 	year = 1965 
 	cost = 7200
-
+	
+	rgo_goods_output = { gas = 0.25 }
 	rgo_goods_output = { petroleum = 0.1 }
 	ai_chance = {
 		factor = 1.01
 		modifier = {
 			factor = 2
-			big_producer = petroleum
+			OR = {
+				big_producer = gas
+				big_producer = petroleum
+			}
 		}
 		modifier = {
 			factor = 2
@@ -145,12 +153,16 @@ offshore_drilling = {
 	year = 1990
 	cost = 12600
 	
+	rgo_goods_output = { gas = 0.25 }
 	rgo_goods_output = { petroleum = 0.25 }
 	ai_chance = {
 		factor = 1.01
 		modifier = {
 			factor = 2
-			big_producer = petroleum
+			OR = {
+				big_producer = gas
+				big_producer = petroleum
+			}
 		}
 		modifier = {
 			factor = 2
@@ -181,11 +193,15 @@ hydraulic_fracturing = {
 	cost = 14400
 
 	mine_rgo_eff = 0.2
+	rgo_goods_output = { gas = 1.6 }
 	ai_chance = {
 		factor = 1.1
 		modifier = {
 			factor = 2
-			big_producer = petroleum
+			OR = {
+				big_producer = gas
+				big_producer = petroleum
+			}
 		}
 		modifier = {
 			factor = 1.02
@@ -701,6 +717,7 @@ intensive_farming = {
 	rgo_goods_output = { cotton = 0.3 }
 	rgo_goods_output = { timber = 0.1 }
 	rgo_goods_output = { coffee = 0.3 }
+	rgo_goods_output = { tea = 0.1 }
 	
 	ai_chance = {
 		factor = 1.1
@@ -816,6 +833,7 @@ heavy_mining = {
 	rgo_size = { other_minerals = 0.2 }
 	rgo_goods_output = { iron = 0.75 }
 	rgo_size = { iron = 0.2 }
+	rgo_size = { bauxite = 0.1 }
 	rgo_goods_output = { gold_silver =1 }
 	rgo_size = { gold_silver = 1 }
 	
@@ -931,6 +949,7 @@ green_revolution = {
 	rgo_goods_output = { grain = 0.25 }
 	rgo_goods_output = { cattle = 0.25 }
 	rgo_goods_output = { timber = 0.1 }
+	rgo_goods_output = { tea = 0.35 }
 	rgo_goods_output = { tobacco = 0.4 }
 	rgo_goods_output = { cotton = 0.3 }
 	rgo_goods_output = { coffee = 0.3 }
@@ -988,6 +1007,8 @@ contemporary_agriculture = {
 	rgo_size = { rubber = 0.1 }
 	rgo_goods_output = { fruit = 0.25 }
 	rgo_size = { fruit = 0.1 }
+	rgo_goods_output = { tea = 0.25 }
+	rgo_size = { tea = 0.1 }
 	rgo_goods_output = { coffee = 0.25 }
 	rgo_size = { coffee = 0.1 }
 	rgo_goods_output = { tobacco = 0.25 }
@@ -1001,6 +1022,10 @@ contemporary_agriculture = {
 		modifier = {
 			factor = 1.6
 			big_producer = fruit
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = tea
 		}
 		modifier = {
 			factor = 1.4
@@ -1026,6 +1051,7 @@ automated_mining = {
 	rgo_goods_output = { coal = 0.25 }
 	rgo_goods_output = { iron = 0.25 }
 	rgo_size = { gold_silver = 0.2 }
+	rgo_size = { bauxite = 0.1 }
 	
 	ai_chance = {
 		factor = 1.1
@@ -1137,6 +1163,8 @@ new_green_revolution = {
 	
 	rgo_goods_output = { fruit = 0.25 }
 	rgo_size = { fruit = 0.1 }
+	rgo_goods_output = { tea = 0.25 }
+	rgo_size = { tea = 0.1 }
 	rgo_goods_output = { coffee = 0.25 }
 	rgo_size = { coffee = 0.1 }
 	
@@ -1145,6 +1173,10 @@ new_green_revolution = {
 		modifier = {
 			factor = 1.6
 			big_producer = fruit
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = tea
 		}
 		modifier = {
 			factor = 1.4

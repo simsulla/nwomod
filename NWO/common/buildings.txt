@@ -87,6 +87,48 @@ grain_canned_food_factory = {
 	default_enabled = yes
 }
 
+rice_canned_food_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		fuel = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = rice_canned_food_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+oil_seeds_canned_food_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		fuel = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = oil_seeds_canned_food_factory
+	pop_build_factory = yes
+	default_enabled = yes	
+}
+
 #
 # FOOTWEAR AND FOOD
 #
@@ -329,6 +371,27 @@ petroleum_fuel_factory = {
 	production_type = petroleum_fuel_factory
 	pop_build_factory = yes
 }
+
+gas_fuel_factory = {    # liquefied natural gas
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		gas = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = gas_fuel_factory
+	pop_build_factory = yes
+}
+
 
 nuclear_fuel_factory = {
 	type = factory
@@ -736,6 +799,27 @@ beverages_coffee_factory = {
         production_type = beverages_coffee_factory
         pop_build_factory = yes
 }
+
+beverages_tea_factory = {
+        type = factory
+        on_completion = factory
+        completion_size = 0.2
+        max_level = 255
+        cost = 0
+        goods_cost =
+        {
+			cement = 60 
+			machine_parts = 80 
+			fuel = 125 
+        }
+        time = 365
+        visibility = yes
+        onmap = no
+
+        production_type = beverages_tea_factory
+        pop_build_factory = yes
+}
+
 
 electric_gear_factory = {
 	type = factory
@@ -1227,7 +1311,7 @@ railroad = {
 	}
 	time = 720
 	visibility = yes
-	onmap = no
+	onmap = yes
 	max_level = 6
 	province = yes
 	
@@ -1235,5 +1319,5 @@ railroad = {
 	movement_cost = -0.05
 	
 	pop_build_factory = yes
-	spawn_railway_track = no
+	spawn_railway_track = yes
 }
