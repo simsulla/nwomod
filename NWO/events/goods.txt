@@ -128,7 +128,7 @@ country_event = { # OPEC is formed
 
   trigger = {
 	NOT = { has_global_flag = opec }
-	OR = { tag = VNZ tag = IRQ tag = SAA tag = PER}
+	OR = { tag = VNZ tag = IRQ tag = SAA tag = IRN}
     year = 1959 # TODO #918
   }
 
@@ -146,7 +146,7 @@ country_event = { # OPEC is formed
 }
 
 country_event = { # OPEC is formed
-  id = 1103
+  id = 1104
   title = opec_title
   desc = opec_desc
   major = yes
@@ -154,7 +154,7 @@ country_event = { # OPEC is formed
 
   trigger = {
 	has_global_flag = opec
-	OR = { tag = VNZ tag = IRQ tag = SAA tag = PER }
+	OR = { tag = VNZ tag = IRQ tag = SAA tag = IRN }
     year = 1959 # TODO #918
   }
 
@@ -165,9 +165,9 @@ country_event = { # OPEC is formed
 	prestige = 5
 	set_country_flag = opec_formation
 	random_country = { limit = { VNZ = { has_country_flag = opec_formation } IRQ = { has_country_flag = opec_formation } SAA = { has_country_flag = opec_formation } } set_global_flag = opec }
-	random_country = { limit = { PER = { has_country_flag = opec_formation } IRQ = { has_country_flag = opec_formation } SAA = { has_country_flag = opec_formation } } set_global_flag = opec }
-	random_country = { limit = { VNZ = { has_country_flag = opec_formation } PER = { has_country_flag = opec_formation } SAA = { has_country_flag = opec_formation } } set_global_flag = opec }
-	random_country = { limit = { VNZ = { has_country_flag = opec_formation } PER = { has_country_flag = opec_formation } IRQ = { has_country_flag = opec_formation } } set_global_flag = opec }
+	random_country = { limit = { IRN = { has_country_flag = opec_formation } IRQ = { has_country_flag = opec_formation } SAA = { has_country_flag = opec_formation } } set_global_flag = opec }
+	random_country = { limit = { VNZ = { has_country_flag = opec_formation } IRN = { has_country_flag = opec_formation } SAA = { has_country_flag = opec_formation } } set_global_flag = opec }
+	random_country = { limit = { VNZ = { has_country_flag = opec_formation } IRN = { has_country_flag = opec_formation } IRQ = { has_country_flag = opec_formation } } set_global_flag = opec }
   }
   
 }
