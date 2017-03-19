@@ -91,7 +91,7 @@ country_event = { # Seven Sisters
   trigger = {
 	is_greater_power = yes
 	OR = { government = democracy government = hms_government }
-	NOT = { has_country_modifier = seven_sisters has_country_modifier = seven_sisters_nonpart  has_global_flag = opec }
+	NOT = { has_country_flag = seven_sisters  has_global_flag = opec }
 	OR = { 
 		owns = 232 # New York
 		owns = 243 # Boston
@@ -101,19 +101,27 @@ country_event = { # Seven Sisters
 	}
     year = 1954
   }
+  
+  immediate  = { set_country_flag = seven_sisters }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = seven_sisters_A
-	any_country = { limit = { in_sphere = THIS is_our_vassal = THIS } add_country_modifier = { name = seven_sisters duration = 3650 } }
-	add_country_modifier = { name = seven_sisters duration = 3650 }
+	any_country = { 
+		limit = { OR = {in_sphere = THIS is_our_vassal = THIS } } 
+		any_owned = { limit = { trade_goods = petroleum } 
+			add_province_modifier = { name = seven_sisters duration = 3650 } 
+		}
+	}
+	prestige = 5
+	any_owned = { limit = { trade_goods = petroleum }  add_province_modifier = { name = seven_sisters duration = 3650 } }
   }
   
   option = {
     name = seven_sisters_B
 	add_country_modifier = { name = ruling_party_scandal duration = 730 }
-	add_country_modifier = { name = seven_sisters_nonpart duration = 3650 }
+	any_owned = { limit = { trade_goods = petroleum }  add_province_modifier = { name = seven_sisters_nonpart duration = 3650 } }
   }
   
 }
