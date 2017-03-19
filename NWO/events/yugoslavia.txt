@@ -493,6 +493,8 @@ country_event = {
 	war = no
 	NOT = { truce_with = BIH }
   }
+  
+  immediate = { create_alliance = CRO }
 
   mean_time_to_happen = { months = 1  }
 
@@ -501,6 +503,7 @@ country_event = {
 	# EVT_8022744_A;Become independent
 	any_pop = { militancy = 0.5 consciousness = 1.0 }
 	# gets infamy as this is not a internationally recognized move.
+	BIH = { release = HZB }
 	war = { target = BIH attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli = annex_core_country } }
 	ai_chance = { factor = 100 }
   }
@@ -583,6 +586,7 @@ country_event = {
 		limit = { tag = CRO exists = SRK } 
 		casus_belli = { target = SRK type = annex_core_country months = 12 }
 		war = { target = SRK attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } } 
+		set_country_flag = operation_storm
 	}
 	ai_chance = { factor = 100 }
   }
@@ -591,6 +595,35 @@ country_event = {
     name = EVT_8022746_B
 	# EVT_8022746_B;Avoid war
 	any_pop = { militancy = 3.0 consciousness = 2.0 }
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 8022750
+  title = EVT_8022750_NAME
+  desc = EVT_8022750_DESC
+  picture = "operation_storm_serb_refugee"
+  fire_only_once = yes 
+
+  trigger = {
+	tag = CRO
+	owns = 774
+	war = no
+	has_country_flag = operation_storm
+  }
+
+  mean_time_to_happen = { months = 1  }
+  option = {
+    name = EVT_8022750_A
+	badboy = 4
+	774 = { add_province_modifier = { name = ethnic_cleansing duration = 350 } }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8022750_B
+	any_pop = { limit = { culture = croat }  militancy = 3.0 consciousness = 2.0 }
 	ai_chance = { factor = 0 }
   }
 }
