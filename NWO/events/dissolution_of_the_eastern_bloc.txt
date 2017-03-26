@@ -341,22 +341,22 @@ country_event = { # soviet_civil_war
 	any_owned = { limit = { is_core = UKR OR = { state_id = 702 state_id = 956 state_id = 958 } } secede_province = UKR }
 	casus_belli = { target = UKR type = conquest months = 12 }
 	casus_belli = { target = UKR type = make_puppet months = 12 }
-	any_owned = { limit = { is_core = RUS NOT = { state_id = 1008 } } secede_province = RUS }
+	any_owned = { limit = { OR = { province_id = 994 AND = { is_core = RUS NOT = { state_id = 1008 } militancy = 8 } } secede_province = RUS }
 	war = { target = RUS  attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = dismantle_cb } }
 	war = { target = UKR attacker_goal = { casus_belli = conquest } defender_goal = { casus_belli = status_quo } }
 	RUS = { capital = 994 } # Leningrad
-	ai_chance = { factor = 10 }
+	ai_chance = { factor = 0.1 }
   }
 
   option = {
     name = EVT_8014248_B
 	any_pop = { militancy = -1.0  consciousness = 2 }
 	country_event = { id = 8014249 days = 180 } # Belavezha Accords
-	ai_chance = { factor = 90 }
+	ai_chance = { factor = 0.9 }
   }
 }
 # STAGE 4. THE END
-country_event = { 
+country_event = { # release the baltics and caucasus
   id = 8014246
   title = EVT_8014246_NAME
   desc = EVT_8014246_DESC
@@ -420,13 +420,14 @@ country_event = {
     name = EVT_8014249_A
 	RUS = { capital = 1008 } # Moscow
 	any_pop = { militancy = -2.5  consciousness = -2 }
-	any_country = { # release the baltics and caucasus
+	any_country = { 
 		limit = { 
 			any_core = { 
 				owned_by = THIS 
 				state_scope = { # prevent for YUG/SUN/super states releaseing the "founding" nation. 
 					NOT = { any_owned_province = { is_capital = yes } }
 				}
+				NOT = { is_core = RUS }
 			}
 			exists = no
 		}
