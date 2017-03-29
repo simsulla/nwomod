@@ -1,20 +1,60 @@
 # keep as reference - correct syntax but not used
-#song = {
-#	name = "sovetsky_soyuz.mp3" # thecoronation_titletheme.mp3
-#	
-#	chance = {
-#		modifier = {
-#			factor = 2
-#			OR = { government = democracy government = hms_government }
-#			war = yes
-#		}
-#		modifier = {
-#			factor = 0
-#			NOT = { OR = { government = democracy government = hms_government } }
-#		}
-#		modifier = {
-#			factor = 0
-#			war = no
-#		}		
-#	}
-#}
+song = {
+	name = "thecoronation_titletheme.mp3" # the_time_to_run_finale.mp3
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "seeing_the_future.mp3"
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "waking_up_instrumental.mp3"
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "wonderland_instrumental.mp3" 
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "the_time_to_run.mp3"
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "moonlight_reprise.mp3" 
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "after_christmas.mp3" 
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "the_time_to_run_finale.mp3" 
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "chasing_time.mp3" 
+	chance = { factor = 1.0 }
+}
+
+song = {
+	name = "sovetsky_soyuz.mp3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.2
+			NOT = { OR = { government = democracy government = hms_government } }
+		}
+	}
+}
