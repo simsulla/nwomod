@@ -629,8 +629,8 @@ country_event = {
 	option = {
 		name = EVT_8008015_A
 		ai_chance = { factor = 100 }
-		any_pop = { limit = { OR = { culture = sunni_arab } } militancy = 3.0  consciousness = 4 }
-		any_pop = { limit = { OR = { culture = shia_arab } } militancy = 2.0  consciousness = 3 }
+		any_pop = { limit = {culture = sunni_arab } militancy = 3.0  consciousness = 4 }
+		any_pop = { limit = { culture = shia_arab } militancy = 2.0  consciousness = 3 }
 	}
 }
 
@@ -656,8 +656,8 @@ country_event = {
 	option = {
 		name = EVT_8008016_A
 		ai_chance = { factor = 100 }
-		any_pop = { limit = { OR = { culture = sunni_arab } } militancy = 5.0  consciousness = 6 }
-		any_pop = { limit = { OR = { culture = shia_arab } } militancy = 3.0  consciousness = 4 }
+		any_pop = { limit = { culture = sunni_arab } militancy = 5.0  consciousness = 6 }
+		any_pop = { limit = { culture = shia_arab } militancy = 3.0  consciousness = 4 }
 	}
 }
 
@@ -698,7 +698,7 @@ country_event = {
 	option = {
 		name = EVT_8008018_A
 		ai_chance = { factor = 100 }
-		any_pop = { limit = { OR = { culture = sunni_arab } } militancy = 3.0  consciousness = 4 }
+		any_pop = { limit = { culture = sunni_arab } militancy = 3.0  consciousness = 4 }
 		set_country_flag = iraqi_insurgency_2011_2014
 	}
 }
@@ -741,7 +741,6 @@ country_event = {
 		prestige = -20
 	}
 
-
 	option = {
 		name = EVT_8008019_B
 		ai_chance = { factor = 0 }
@@ -759,7 +758,6 @@ country_event = {
 			attacker_goal = { casus_belli = acquire_core_state state_province_id = 927 } #Samarra
 			defender_goal = { casus_belli = civil_war }
 		}
-		prestige = -20
 	}
 }
 
@@ -959,7 +957,7 @@ country_event = {
 				flashpoint_tension = 30
 			}
 		}
-		any_pop = { limit = { OR = { culture = sunni_arab } } militancy = 3.0  consciousness = 4 }
+		any_pop = { limit = { culture = sunni_arab } militancy = 3.0  consciousness = 4 }
 		prestige = 10
 	}
 }
