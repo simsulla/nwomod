@@ -91,7 +91,8 @@ country_event = { # Seven Sisters
   trigger = {
 	is_greater_power = yes
 	OR = { government = democracy government = hms_government }
-	NOT = { has_country_flag = seven_sisters  has_global_flag = opec }
+	NOT = { has_country_flag = seven_sisters }
+	NOT = { has_global_flag = opec }
 	OR = { 
 		owns = 232 # New York
 		owns = 243 # Boston
@@ -135,7 +136,7 @@ country_event = { # OPEC is formed
   #picture = "opec_event"
 
   trigger = {
-	NOT = { has_global_flag = opec }
+	has_global_flag = opec
 	OR = { tag = VNZ tag = IRQ tag = SAA tag = IRN}
     year = 1959 # TODO #918
   }
@@ -148,7 +149,6 @@ country_event = { # OPEC is formed
   option = {
     name = opec_A
 	prestige = 5
-	set_global_flag = opec
   }
   
 }
@@ -157,13 +157,13 @@ country_event = { # OPEC is formed
   id = 1104
   title = opec_title
   desc = opec_desc
-  major = yes
-  #picture = "opec_event"
+  picture = "opec_event"
 
   trigger = {
 	has_global_flag = opec
 	OR = { tag = VNZ tag = IRQ tag = SAA tag = IRN }
     year = 1959 # TODO #918
+	NOT = { has_country_flag = opec_formation }
   }
 
   mean_time_to_happen = { months = 12 }
