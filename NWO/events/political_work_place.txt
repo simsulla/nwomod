@@ -934,7 +934,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		any_state = { has_building = inorganic_chemicals_factory }
+		any_state = { has_building = chemical_products_factory }
 	}
 	
 	mean_time_to_happen = {
@@ -959,9 +959,9 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA12170"
-		inorganic_chemicals = -200
+		chemical_products = -200
 		random_state = {
-			limit = { has_building = inorganic_chemicals_factory }
+			limit = { has_building = chemical_products_factory }
 			poor_strata = {
 				militancy = -1
 				consciousness = 1
@@ -975,9 +975,9 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB12170"
-		inorganic_chemicals = 200
+		chemical_products = 200
 		random_state = {
-			limit = { has_building = inorganic_chemicals_factory }
+			limit = { has_building = chemical_products_factory }
 			poor_strata = {
 				militancy = 1
 				consciousness = 2
@@ -997,9 +997,9 @@ province_event = {
 	picture = "Christiansborgs"
 	
 	trigger = {
-		produces = fuel
+		produces = petrochemicals
 		owner = {
-			fuel = 50
+			petrochemicals = 50
 		}
 	}
 	mean_time_to_happen = {
@@ -1027,7 +1027,7 @@ province_event = {
 	option = {
 		name = "EVTOPTA12180"
 		owner = {
-			fuel = -15
+			petrochemicals = -15
 		}
 		any_pop = {
 			militancy = 1
@@ -1037,7 +1037,7 @@ province_event = {
 	option = {
 		name = "EVTOPTB12180"
 		owner = {
-			fuel = -50
+			petrochemicals = -50
 		}
 	}
 }
@@ -1049,7 +1049,7 @@ province_event = {
 	desc = "EVTDESC12190"
 	
 	trigger = {
-		produces = fuel
+		produces = petrochemicals
 		owner = {
 			OR = {
 				safety_regulations = some_regulations
@@ -1079,7 +1079,7 @@ province_event = {
 	option = {
 		name = "EVTOPTA12190"
 		owner = {
-			fuel = 20
+			petrochemicals = 20
 		}
 	}
 	
@@ -1302,7 +1302,7 @@ province_event = {
 	
 	trigger = {
 		OR = {
-			produces = beverage_tobacco
+			produces = milk_cheese
 			produces = beverages
 		}
 	}
@@ -1332,7 +1332,7 @@ province_event = {
 	option = {
 		name = "EVTOPTA12240"
 		owner = {
-			beverage_tobacco = 15
+			milk_cheese = 15
 			beverages = 5
 		}
 		middle_strata = {
@@ -1355,7 +1355,7 @@ province_event = {
 	desc = "EVTDESC12250"
 	
 	trigger = {
-		produces = fuel
+		produces = petrochemicals
 		is_capital = no
 	}
 	

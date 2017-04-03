@@ -5,7 +5,7 @@ factory_template = {
 	efficiency = {
 		cement = 0.1 #if no cement, work at 75% efficiency 
 		machine_parts = 0.15 
-		fuel = 0.05 
+		petrochemicals = 0.05 
 	}
 	
 	owner =
@@ -229,13 +229,13 @@ copper_wire_factory = {
 	}
 }
 
-petroleum_fuel_factory = {       
+petroleum_petrochemicals_factory = {       
 	template = factory_template
 	input_goods = {    
 		petroleum = 24
 	} 
-	output_goods = fuel 
-	# make this more profitable than coal fuel
+	output_goods = petrochemicals 
+	# make this more profitable than coal petrochemicals
 	value = 100
 	bonus = {
 		trigger = { trade_goods_in_state = petroleum }
@@ -243,12 +243,12 @@ petroleum_fuel_factory = {
 	}
 }
 
-coal_fuel_factory = {    
+coal_petrochemicals_factory = {    
 	template = factory_template
 	input_goods = {    
 		coal = 48
 	} 
-	output_goods = fuel 
+	output_goods = petrochemicals 
 	value = 160
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
@@ -256,7 +256,7 @@ coal_fuel_factory = {
 	}
 }
 
-nuclear_fuel_factory = {    
+nuclear_petrochemicals_factory = {    
 	template = factory_template
 	input_goods = {    
 		other_minerals = 48
@@ -300,13 +300,13 @@ lumber_factory = {
 	}
 }
 
-inorganic_chemicals_factory = {       
+chemical_products_factory = {       
 	template = factory_template
 	input_goods = {    
 		other_minerals = 20	# see glass
 		coal = 10
 	}
-	output_goods = inorganic_chemicals 
+	output_goods = chemical_products 
 	value = 10
 	bonus = {
 		trigger = { trade_goods_in_state = other_minerals }
@@ -452,7 +452,7 @@ small_arms_factory = {
 	template = factory_template
 	input_goods = {    
 		steel = 30.00	
-		fuel = 30.00	
+		petrochemicals = 30.00	
 	}
 	output_goods = small_arms 
 	value = 57
@@ -463,8 +463,8 @@ small_arms_factory = {
 	bonus = {
 		trigger = { 
 			OR = {
-				has_building = petroleum_fuel_factory 
-				has_building = coal_fuel_factory 
+				has_building = petroleum_petrochemicals_factory 
+				has_building = coal_petrochemicals_factory 
 			}
 		}
 		value = 0.125
@@ -474,15 +474,15 @@ small_arms_factory = {
 heating_electricity_factory = {       
 	template = factory_template
 	input_goods = {    
-		fuel = 120
+		petrochemicals = 120
 	}
 	output_goods = heating_electricity 
 	value = 104
 	bonus = {
 		trigger = { 
 			OR = {
-				has_building = petroleum_fuel_factory 
-				has_building = coal_fuel_factory 
+				has_building = petroleum_petrochemicals_factory 
+				has_building = coal_petrochemicals_factory 
 			}
 		}
 		value = 0.25
@@ -492,20 +492,20 @@ heating_electricity_factory = {
 integrated_circuits_factory = {       
 	template = factory_template
 	input_goods = {    
-		inorganic_chemicals = 60	
-		fuel = 30
+		chemical_products = 60	
+		petrochemicals = 30
 	}
 	output_goods = integrated_circuits 
 	value = 30
 	bonus = {
-		trigger = { has_building = inorganic_chemicals_factory }
+		trigger = { has_building = chemical_products_factory }
 		value = 0.125
 	}
 	bonus = {
 		trigger = { 
 			OR = {
-				has_building = petroleum_fuel_factory 
-				has_building = coal_fuel_factory 
+				has_building = petroleum_petrochemicals_factory 
+				has_building = coal_petrochemicals_factory 
 			}
 		}
 		value = 0.125
@@ -531,13 +531,13 @@ clothes_factory = {
 	}
 }
 
-optics_factory = {       
+instruments_factory = {       
 	template = factory_template
 	input_goods = {    
 		plastics = 8	
 		glass = 8	
 	}
-	output_goods = optics 
+	output_goods = instruments 
 	value = 2
 	bonus = {
 		trigger = { 
@@ -690,7 +690,7 @@ electric_gear_factory = {
 	template = factory_template
 	input_goods = {    
 		copper_wire = 50	
-		fuel = 50	
+		petrochemicals = 50	
 	}
 	output_goods = electric_gear 
 	value = 38
@@ -701,8 +701,8 @@ electric_gear_factory = {
 	bonus = {
 		trigger = { 
 			OR = {
-				has_building = petroleum_fuel_factory 
-				has_building = coal_fuel_factory 
+				has_building = petroleum_petrochemicals_factory 
+				has_building = coal_petrochemicals_factory 
 			}
 		}
 		value = 0.125
@@ -713,7 +713,7 @@ pharmaceuticals_factory = {
 	template = factory_template
 	input_goods = {    
 		plastics = 30	
-		fuel = 30
+		petrochemicals = 30
 	}
 	output_goods = pharmaceuticals 
 	value = 75
@@ -729,8 +729,8 @@ pharmaceuticals_factory = {
 	bonus = {
 		trigger = { 
 			OR = {
-				has_building = petroleum_fuel_factory 
-				has_building = coal_fuel_factory 
+				has_building = petroleum_petrochemicals_factory 
+				has_building = coal_petrochemicals_factory 
 			}
 		}
 		value = 0.125
@@ -779,13 +779,13 @@ aeroplane_factory = {
 computers_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 6
+		instruments = 6
 		integrated_circuits = 6
 	}
 	output_goods = computers 
 	value = 43
 	bonus = {
-		trigger = { has_building = optics_factory }
+		trigger = { has_building = instruments_factory }
 		value = 0.125
 	}
 	bonus = {
@@ -797,13 +797,13 @@ computers_factory = {
 telecommunications_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		optics = 1	
+		instruments = 1	
 		integrated_circuits = 2
 	}
 	output_goods = telecommunications 
 	value = 18
 	bonus = {
-		trigger = { has_building = optics_factory }
+		trigger = { has_building = instruments_factory }
 		value = 0.125
 	}
 	bonus = {
@@ -872,13 +872,13 @@ jewellery_factory = {
 	}
 }
 
-beverage_tobacco_factory = {       
+milk_cheese_factory = {       
 	template = modern_factory_template
 	input_goods = {    
 		cigarettes = 60	
 		beverages = 40	
 	}
-	output_goods = beverage_tobacco 
+	output_goods = milk_cheese 
 	value = 65
 	bonus = {
 		trigger = { has_building = cigarettes_factory }
@@ -894,7 +894,7 @@ health_factory = {
 	template = bank_template
 	input_goods = {    
 		pharmaceuticals = 4.5	
-		optics = 8.0	
+		instruments = 8.0	
 	}
 	output_goods = health 
 	value = 54
@@ -903,7 +903,7 @@ health_factory = {
 		value = 0.125
 	}
 	bonus = {
-		trigger = { has_building = optics_factory }
+		trigger = { has_building = instruments_factory }
 		value = 0.125
 	}
 }
@@ -993,7 +993,7 @@ advanced_weaponry_factory = {
 transport_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		fuel = 30.00	
+		petrochemicals = 30.00	
 		automobiles = 30.00	
 	}
 	output_goods = transport 
@@ -1005,21 +1005,20 @@ transport_factory = {
 	bonus = {
 		trigger = { 
 			OR = {
-				has_building = petroleum_fuel_factory 
-				has_building = coal_fuel_factory 
+				has_building = petroleum_petrochemicals_factory 
+				has_building = coal_petrochemicals_factory 
 			}
 		}
 		value = 0.125
 	}
 }
-
-communication_factory = {       
+telephonesfactory = {       
 	template = modern_factory_template
 	input_goods = {    
 		telecommunications = 30
 		computers = 30
 	}
-	output_goods = communication 
+	output_goods =telephones
 	value = 59
 	bonus = {
 		trigger = { has_building = computers_factory }
@@ -1063,7 +1062,7 @@ culture_factory = {
 	template = bank_template
 	input_goods = {    
 		health = 30.00	
-		beverage_tobacco = 30.00	
+		milk_cheese = 30.00	
 	}
 	output_goods = culture 
 	value = 58
@@ -1072,7 +1071,7 @@ culture_factory = {
 		value = 0.125
 	}
 	bonus = {
-		trigger = { has_building = beverage_tobacco_factory }
+		trigger = { has_building = milk_cheese_factory }
 		value = 0.125
 	}
 }
