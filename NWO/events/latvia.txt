@@ -1,0 +1,34 @@
+country_event = {
+	id = 8002150
+	title = EVT_8002150_NAME
+	desc = EVT_8002150_DESC
+	picture = "constitutional_referendum"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LAT
+		year = 2012 NOT = {year = 2013}
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	option = {
+		name = EVT_8002150_A
+		# EVT_8002150_A;Latvia is for Latvians!
+		relation = {
+			who = RUS
+			value = -10 }
+	}
+
+	option = {
+		name = EVT_8002150_B
+		# EVT_8002150_B;Maybe Latvia can be for Russians too?
+		any_pop = { militancy = 4.0  consciousness = 4 }
+		add_accepted_culture = russian
+		relation = {
+			who = RUS
+			value = +40 }
+  }
+}
