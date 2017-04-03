@@ -18,7 +18,7 @@
 # 
 # cement = 1000 x 0.06 = 60 TODO
 # machine_parts = 500 x 0.16 = 80 TODO
-# fuel = 2500 x 0.05 = 125 TODO
+# petrochemicals = 2500 x 0.05 = 125 TODO
 #
 
 #
@@ -34,7 +34,7 @@ fish_canned_food_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -55,7 +55,7 @@ fruit_canned_food_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -76,7 +76,7 @@ grain_canned_food_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -100,7 +100,7 @@ cattle_canned_food_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -124,7 +124,7 @@ wool_canned_food_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -144,7 +144,7 @@ fabric_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -164,7 +164,7 @@ wool_fabric_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -184,7 +184,7 @@ footwear_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -208,7 +208,7 @@ cement_factory = {
 	{
 		coal = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -229,7 +229,7 @@ machine_parts_factory = {
 	{
 		cement = 60 
 		iron = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -240,7 +240,7 @@ machine_parts_factory = {
 	default_enabled = yes
 }
 
-coal_fuel_factory = {
+coal_petrochemicals_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -256,7 +256,7 @@ coal_fuel_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = coal_fuel_factory
+	production_type = coal_petrochemicals_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
@@ -274,7 +274,7 @@ jewellery_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -299,7 +299,7 @@ lumber_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -310,7 +310,7 @@ lumber_factory = {
 	default_enabled = yes
 }
 
-petroleum_fuel_factory = {
+petroleum_petrochemicals_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -326,11 +326,11 @@ petroleum_fuel_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = petroleum_fuel_factory
+	production_type = petroleum_petrochemicals_factory
 	pop_build_factory = yes
 }
 
-nuclear_fuel_factory = {
+nuclear_petrochemicals_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -346,7 +346,7 @@ nuclear_fuel_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = nuclear_fuel_factory
+	production_type = nuclear_petrochemicals_factory
 	pop_build_factory = yes
 }
 
@@ -360,7 +360,7 @@ copper_wire_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -380,7 +380,7 @@ steel_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -390,7 +390,7 @@ steel_factory = {
 	pop_build_factory = yes
 }
 
-inorganic_chemicals_factory = {
+chemical_products_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -400,13 +400,13 @@ inorganic_chemicals_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
 	onmap = no
 
-	production_type = inorganic_chemicals_factory
+	production_type = chemical_products_factory
 	pop_build_factory = yes
 }
 
@@ -420,7 +420,7 @@ petroleum_fabric_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -441,7 +441,7 @@ petroleum_plastics_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -462,7 +462,7 @@ rubber_plastics_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -482,7 +482,7 @@ paper_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -503,7 +503,7 @@ glass_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -523,7 +523,7 @@ aluminium_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -544,7 +544,7 @@ small_arms_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -565,7 +565,7 @@ heating_electricity_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -586,7 +586,7 @@ integrated_circuits_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -606,7 +606,7 @@ clothes_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -616,7 +616,7 @@ clothes_factory = {
 	pop_build_factory = yes
 }
 
-optics_factory = {
+instruments_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -626,13 +626,13 @@ optics_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
 	onmap = no
 
-	production_type = optics_factory
+	production_type = instruments_factory
 	pop_build_factory = yes
 }
 
@@ -646,7 +646,7 @@ cigarettes_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -667,7 +667,7 @@ furniture_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -687,7 +687,7 @@ beverages_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -707,7 +707,7 @@ beverages_sugar_factory = {
         {
 			cement = 60 
 			machine_parts = 80 
-			fuel = 125 
+			petrochemicals = 125 
         }
         time = 365
         visibility = yes
@@ -727,7 +727,7 @@ beverages_coffee_factory = {
         {
 			cement = 60 
 			machine_parts = 80 
-			fuel = 125 
+			petrochemicals = 125 
         }
         time = 365
         visibility = yes
@@ -747,7 +747,7 @@ electric_gear_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -767,7 +767,7 @@ pharmaceuticals_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -789,7 +789,7 @@ ships_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -810,7 +810,7 @@ aeroplane_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -831,7 +831,7 @@ computers_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -852,7 +852,7 @@ telecommunications_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -873,7 +873,7 @@ electric_telecommunications_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -894,7 +894,7 @@ automobiles_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -905,7 +905,7 @@ automobiles_factory = {
 	advanced_factory = yes
 }
 
-beverage_tobacco_factory = {
+milk_cheese_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -915,13 +915,13 @@ beverage_tobacco_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
 	onmap = no
 
-	production_type = beverage_tobacco_factory
+	production_type = milk_cheese_factory
 	pop_build_factory = yes
 	advanced_factory = yes
 }
@@ -936,7 +936,7 @@ health_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -957,7 +957,7 @@ furniture_houseware_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -978,7 +978,7 @@ clothes_footwear_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -999,7 +999,7 @@ weaponry_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -1020,7 +1020,7 @@ advanced_weaponry_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -1041,7 +1041,7 @@ transport_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -1051,8 +1051,7 @@ transport_factory = {
 	pop_build_factory = yes
 	advanced_factory = yes
 }
-
-communication_factory = {
+telephonesfactory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -1062,13 +1061,13 @@ communication_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
 	onmap = no
 
-	production_type = communication_factory
+	production_type =telephonesfactory
 	pop_build_factory = yes
 	advanced_factory = yes
 }
@@ -1083,7 +1082,7 @@ education_rnd_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -1104,7 +1103,7 @@ culture_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -1125,7 +1124,7 @@ recreation_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -1146,7 +1145,7 @@ financial_services_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		fuel = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
@@ -1186,7 +1185,7 @@ fort = {
 # cement = 100 x 0.06 = 6
 # steel = 200 x 0.38 = 76
 # machine_parts = 10 x 0.16 = 1.6
-# fuel = 2500 x 0.05 = 125 TODO
+# petrochemicals = 2500 x 0.05 = 125 TODO
 naval_base = {    
 	type = naval_base
 	cost = 15000
@@ -1216,7 +1215,7 @@ naval_base = {
 # timber = 100 x 0.14 = 14
 # cement = 2000 x 0.06 = 120
 # steel = 200 x 0.38 = 76
-# fuel = 250 x 0.05 = 12.5 TODO
+# petrochemicals = 250 x 0.05 = 12.5 TODO
 railroad = {   
 	type = infrastructure
 	goods_cost =
