@@ -98,12 +98,7 @@ gunboat = {
 			has_country_modifier = in_bankrupcy
 			has_country_modifier = generalised_debt_default
 		}
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 
 		always = no
 		in_default = THIS
 	}
@@ -331,13 +326,7 @@ add_to_sphere = {
 		is_independant = yes
 		part_of_sphere = no
 		NOT = { relation = { who = THIS value = 0 } }
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 	
 	is_valid = {
 		THIS = { is_greater_power = yes }
@@ -380,13 +369,7 @@ take_from_sphere = {
 		NOT = { is_our_vassal = THIS }
 		THIS = { is_greater_power = yes }
 		is_greater_power = yes
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 
 	
 	# THIS - us
@@ -442,13 +425,7 @@ acquire_core_state = {
 		NOT = { relation = { who = THIS value = 0 } }
 		THIS = { OR = { NOT = { war_policy = pacifism } war = yes } }
 		#NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 	
 	allowed_states = {
 		any_owned_province = {
@@ -510,13 +487,7 @@ annex_core_country = {
 		}
 		THIS = { NOT = { war_policy = pacifism } }
 		#NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 
 	po_annex = yes
 	
@@ -588,13 +559,7 @@ acquire_state = {
 				}
 			}
 		}
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-		is_independant = yes
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 		is_independant = yes
 	}
 	
 	allowed_states = {
@@ -654,13 +619,7 @@ cut_down_to_size = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		is_disarmed = no
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 	
 	on_add = {
 		move_issue_percentage = { 
@@ -696,13 +655,7 @@ free_allied_cores = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
 		number_of_states = 2
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 
 	# THIS - us
 	# FROM - country scope is possible match?
@@ -781,13 +734,7 @@ annex_allied_core_country = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
 		number_of_states = 1
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 
 	# THIS - us
 	# FROM - country scope is possible match?
@@ -864,13 +811,7 @@ free_peoples = {
 			ai = no
 			part_of_sphere = no # if we are part of spher the spher ruler guides policies - not us.
 		}
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 
 	# THIS - us
 	# FROM - country scope is possible match?
@@ -1017,13 +958,7 @@ release_puppet = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		num_of_vassals_no_substates = 1
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 	
 	# THIS - us
 	# FROM - country scope is possible match?
@@ -1073,13 +1008,7 @@ make_puppet = {
 		NOT = { number_of_states = 9 }
 		is_greater_power = no
 		is_vassal = no
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
-	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
 	
 	# THIS - us
 	# FROM - country scope is possible match?
@@ -1197,13 +1126,7 @@ humiliate = {
 				}
 			}
 		}
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
- 	}	
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } }  	}	
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
@@ -1329,13 +1252,7 @@ territorial_dispute = {
 			#AND = { tag = TG1 exists = TG1 THIS = { tag = TG2 } } AND = { tag = TG2 exists = TG2 THIS = { tag = TG1 } } # TerrName
 			
 		}
-		NOT = { 
-			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
-			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
-		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
-		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
- 	}	
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } }  	}	
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
@@ -1730,7 +1647,7 @@ rude_boy = {
 			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
 			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
 		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
 		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
@@ -1807,7 +1724,7 @@ dismantle_cb = {
 			OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } 
 			THIS = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } 
 		}
-				NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
+		NOT = { has_country_modifier = csto_alliance THIS = { has_country_modifier = csto_alliance } }
 		NOT = { has_country_modifier = sco_pact THIS = { has_country_modifier = sco_pact } }
 	}
 	
