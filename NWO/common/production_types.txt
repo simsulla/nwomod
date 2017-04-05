@@ -908,13 +908,13 @@ health_factory = {
 	}
 }
 
-furniture_houseware_factory = {       
+tvs_factory = {       
 	template = modern_factory_template
 	input_goods = {    
 		furniture = 15.0	
 		heating_electricity = 6.0
 	}
-	output_goods = furniture_houseware 
+	output_goods = tvs 
 	value = 14
 	bonus = {
 		trigger = { has_building = furniture_factory }
@@ -1035,13 +1035,13 @@ transport_factory = {
 	}
 }
 
-education_rnd_factory = {       
+computer_peripherals_factory = {       
 	template = bank_template
 	input_goods = {    
 		telecommunications = 30
 		computers = 30
 	}
-	output_goods = education_rnd 
+	output_goods = computer_peripherals 
 	value = 59
 	bonus = {
 		trigger = { has_building = computers_factory }
@@ -1058,13 +1058,13 @@ education_rnd_factory = {
 	}
 }
 
-culture_factory = {       
+cosmetics_factory = {       
 	template = bank_template
 	input_goods = {    
 		health = 30.00	
 		milk_cheese = 30.00	
 	}
-	output_goods = culture 
+	output_goods = cosmetics 
 	value = 58
 	bonus = {
 		trigger = { has_building = health_factory }
