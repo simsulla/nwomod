@@ -15,13 +15,13 @@ political_decisions = {
 		}
 
 		allow = {
-			small_arms = 1000
+			trucks_vans = 1000
 		}
 
 		effect = {
 			remove_country_modifier = call_for_support_against_democracy
-			small_arms = -1000
-			random_country = { limit = { war = yes has_country_modifier = call_for_support_against_democracy } small_arms = 1000 }
+			trucks_vans = -1000
+			random_country = { limit = { war = yes has_country_modifier = call_for_support_against_democracy } trucks_vans = 1000 }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -35,13 +35,13 @@ political_decisions = {
 		}
 
 		allow = {
-			small_arms = 1000
+			trucks_vans = 1000
 		}
 
 		effect = {
 			remove_country_modifier = call_for_support_against_communism
-			small_arms = -1000
-			random_country = { limit = { war = yes has_country_modifier = call_for_support_against_communism } small_arms = 1000 }
+			trucks_vans = -1000
+			random_country = { limit = { war = yes has_country_modifier = call_for_support_against_communism } trucks_vans = 1000 }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -54,13 +54,13 @@ political_decisions = {
 		}
 
 		allow = {
-			small_arms = 1000
+			trucks_vans = 1000
 		}
 
 		effect = {
 			remove_country_modifier = call_for_support_against_dictatorship
-			small_arms = -1000
-			random_country = { limit = { war = yes has_country_modifier = call_for_support_against_dictatorship } small_arms = 1000 }
+			trucks_vans = -1000
+			random_country = { limit = { war = yes has_country_modifier = call_for_support_against_dictatorship } trucks_vans = 1000 }
 		}
 		ai_will_do = { factor = 1 }
 	}	

@@ -534,7 +534,7 @@ aluminium_factory = {
 	default_enabled = no	
 }
 
-small_arms_factory = { 
+trucks_vans_factory = { 
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -550,7 +550,7 @@ small_arms_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = small_arms_factory
+	production_type = trucks_vans_factory
 	pop_build_factory = yes
 	strategic_factory = yes
 }
@@ -989,7 +989,7 @@ clothes_footwear_factory = {
 	advanced_factory = yes
 }
 
-weaponry_factory = { 	
+specialized_machinery_factory = { 	
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -1005,12 +1005,12 @@ weaponry_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = weaponry_factory
+	production_type = specialized_machinery_factory
 	pop_build_factory = yes
 	strategic_factory = yes
 }
 
-advanced_weaponry_factory = { 	
+advanced_specialized_machinery_factory = { 	
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -1026,7 +1026,7 @@ advanced_weaponry_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = advanced_weaponry_factory
+	production_type = advanced_specialized_machinery_factory
 	pop_build_factory = yes
 	strategic_factory = yes
 }
@@ -1164,7 +1164,7 @@ fort = {
 		lumber = 1000
 		cement = 1000
 		explosives = 500
-		small_arms = 500
+		trucks_vans = 500
 		artillery = 400
 	}
 	time = 1080 

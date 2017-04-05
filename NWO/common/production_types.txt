@@ -448,13 +448,13 @@ aluminium_factory = {
 
 ############# LEVEL_2
 
-small_arms_factory = {       
+trucks_vans_factory = {       
 	template = factory_template
 	input_goods = {    
 		steel = 30.00	
 		petrochemicals = 30.00	
 	}
-	output_goods = small_arms 
+	output_goods = trucks_vans 
 	value = 57
 	bonus = {
 		trigger = { has_building = steel_factory }
@@ -944,13 +944,13 @@ clothes_footwear_factory = {
 	}
 }
 
-weaponry_factory = {       
+specialized_machinery_factory = {       
 	template = modern_factory_template
 	input_goods = {    
 		electric_gear = 30	
 		automobiles = 30	
 	}
-	output_goods = weaponry 
+	output_goods = specialized_machinery 
 	value = 75
 	bonus = {
 		trigger = { has_building = automobiles_factory }
@@ -967,13 +967,13 @@ weaponry_factory = {
 	}
 }
 
-advanced_weaponry_factory = {       
+advanced_specialized_machinery_factory = {       
 	template = modern_factory_template
 	input_goods = {    
 		telecommunications = 30	
 		automobiles = 30	
 	}
-	output_goods = weaponry 
+	output_goods = specialized_machinery 
 	value = 59
 	bonus = {
 		trigger = { has_building = automobiles_factory }
