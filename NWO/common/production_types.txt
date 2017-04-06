@@ -127,12 +127,12 @@ cement_template = {
 
 ############# LEVEL_1
 
-fish_canned_food_factory = {       
+fish_fertilizers_factory = {       
 	template = factory_template	
 	input_goods = { 
 		fish = 15
 	}
-	output_goods = canned_food 
+	output_goods = fertilizers 
 	value = 67
 	bonus = {
 		trigger = { 
@@ -142,12 +142,12 @@ fish_canned_food_factory = {
 	}
 }
 
-cattle_canned_food_factory = {       
+cattle_fertilizers_factory = {       
 	template = factory_template	
 	input_goods = { 
 		cattle = 15
 	}
-	output_goods = canned_food 
+	output_goods = fertilizers 
 	value = 67
 	bonus = {
 		trigger = { 
@@ -158,12 +158,12 @@ cattle_canned_food_factory = {
 }
 
 # not used
-wool_canned_food_factory = {       
+wool_fertilizers_factory = {       
 	template = factory_template	
 	input_goods = { 
 		wool = 15
 	}
-	output_goods = canned_food 
+	output_goods = fertilizers 
 	value = 67
 	bonus = {
 		trigger = { 
@@ -173,12 +173,12 @@ wool_canned_food_factory = {
 	}
 }
 
-fruit_canned_food_factory = {       
+fruit_fertilizers_factory = {       
 	template = factory_template	
 	input_goods = { 
 		fruit = 15
 	}
-	output_goods = canned_food 
+	output_goods = fertilizers 
 	value = 67
 	bonus = {
 		trigger = { 
@@ -188,12 +188,12 @@ fruit_canned_food_factory = {
 	}
 }
 
-grain_canned_food_factory = {       
+grain_fertilizers_factory = {       
 	template = factory_template	
 	input_goods = { 
 		grain = 40
 	}
-	output_goods = canned_food 
+	output_goods = fertilizers 
 	value = 137
 	bonus = {
 		trigger = { 
@@ -287,12 +287,12 @@ steel_factory = {
 	}
 }
 
-lumber_factory = {       
+engines_factory = {       
 	template = factory_template
 	input_goods = {    
 		timber = 28	
 	}
-	output_goods = lumber 
+	output_goods = engines 
 	value = 52
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
@@ -554,13 +554,13 @@ instruments_factory = {
 	}
 }
 
-cigarettes_factory = {       
+turbines_factory = {       
 	template = factory_template
 	input_goods = {    
 		paper = 30	
 		tobacco = 205	
 	}
-	output_goods = cigarettes 
+	output_goods = turbines 
 	value = 167
 	bonus = {
 		trigger = { has_building = paper_factory }
@@ -599,7 +599,7 @@ footwear_factory = {
 furniture_factory = {       
 	template = factory_template
 	input_goods = {    
-		lumber = 30.00	
+		engines = 30.00	
 		fabric = 120.00	
 	}
 	output_goods = furniture 
@@ -615,7 +615,7 @@ furniture_factory = {
 		value = 0.125
 	}
 	bonus = {
-		trigger = { has_building = lumber_factory }
+		trigger = { has_building = engines_factory }
 		value = 0.125
 	}
 }
@@ -623,7 +623,7 @@ furniture_factory = {
 beverages_factory = {       
 	template = factory_template
 	input_goods = {    
-		canned_food = 30	
+		fertilizers = 30	
 		glass = 30
 	}
 	output_goods = beverages 
@@ -635,11 +635,11 @@ beverages_factory = {
 	bonus = {
 		trigger = { 
 			OR = {
-				has_building = fish_canned_food_factory 
-				has_building = cattle_canned_food_factory 
-				has_building = wool_canned_food_factory 
-				has_building = fruit_canned_food_factory 
-				has_building = grain_canned_food_factory 
+				has_building = fish_fertilizers_factory 
+				has_building = cattle_fertilizers_factory 
+				has_building = wool_fertilizers_factory 
+				has_building = fruit_fertilizers_factory 
+				has_building = grain_fertilizers_factory 
 			}
 		}
 		value = 0.125
@@ -709,13 +709,13 @@ electric_gear_factory = {
 	}
 }
 
-pharmaceuticals_factory = {       
+advanced_instruments_factory = {       
 	template = factory_template
 	input_goods = {    
 		plastics = 30	
 		petrochemicals = 30
 	}
-	output_goods = pharmaceuticals 
+	output_goods = advanced_instruments 
 	value = 75
 	bonus = {
 		trigger = { 
@@ -853,13 +853,32 @@ automobiles_factory = {
 	}
 }
 
-jewellery_factory = {       
+diamonds_factory = {       
 	template = modern_factory_template
 	input_goods = {    
 		gold_silver = 3
 		diamonds = 3
 	}
-	output_goods = jewellery 
+	output_goods = diamonds 
+	value = 18
+	bonus = {
+		trigger = { 
+			OR = {
+				trade_goods_in_state = gold_silver 
+				trade_goods_in_state = diamonds 
+			}
+		}
+		value = 0.125
+	}
+}
+
+advanced_machinery_factory = {       
+	template = modern_factory_template
+	input_goods = {    
+		gold_silver = 3
+		diamonds = 3
+	}
+	output_goods = advanced_machinery 
 	value = 18
 	bonus = {
 		trigger = { 
@@ -875,13 +894,13 @@ jewellery_factory = {
 milk_cheese_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		cigarettes = 60	
+		turbines = 60	
 		beverages = 40	
 	}
 	output_goods = milk_cheese 
 	value = 65
 	bonus = {
-		trigger = { has_building = cigarettes_factory }
+		trigger = { has_building = turbines_factory }
 		value = 0.125
 	}
 	bonus = {
@@ -893,13 +912,13 @@ milk_cheese_factory = {
 health_factory = {       
 	template = bank_template
 	input_goods = {    
-		pharmaceuticals = 4.5	
+		advanced_instruments = 4.5	
 		instruments = 8.0	
 	}
 	output_goods = health 
 	value = 54
 	bonus = {
-		trigger = { has_building = pharmaceuticals_factory }
+		trigger = { has_building = advanced_instruments_factory }
 		value = 0.125
 	}
 	bonus = {

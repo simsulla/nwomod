@@ -24,7 +24,7 @@
 #
 # FOOD
 #
-fish_canned_food_factory = {
+fish_fertilizers_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -40,12 +40,12 @@ fish_canned_food_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = fish_canned_food_factory
+	production_type = fish_fertilizers_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
 
-fruit_canned_food_factory = {
+fruit_fertilizers_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -61,12 +61,12 @@ fruit_canned_food_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = fruit_canned_food_factory
+	production_type = fruit_fertilizers_factory
 	pop_build_factory = yes
 	default_enabled = yes	
 }
 
-grain_canned_food_factory = {
+grain_fertilizers_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -82,7 +82,7 @@ grain_canned_food_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = grain_canned_food_factory
+	production_type = grain_fertilizers_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
@@ -90,7 +90,7 @@ grain_canned_food_factory = {
 #
 # FOOTWEAR AND FOOD
 #
-cattle_canned_food_factory = {
+cattle_fertilizers_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -106,7 +106,7 @@ cattle_canned_food_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = cattle_canned_food_factory
+	production_type = cattle_fertilizers_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
@@ -114,7 +114,7 @@ cattle_canned_food_factory = {
 #
 # TEXTILES AND FOOD
 #
-wool_canned_food_factory = {
+wool_fertilizers_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -130,7 +130,7 @@ wool_canned_food_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = wool_canned_food_factory
+	production_type = wool_fertilizers_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
@@ -264,7 +264,7 @@ coal_petrochemicals_factory = {
 #
 # INITIAL CONSUMER GOODS
 #
-jewellery_factory = {
+diamonds_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -280,7 +280,7 @@ jewellery_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = jewellery_factory
+	production_type = diamonds_factory
 	pop_build_factory = yes
 	advanced_factory = yes
 	default_enabled = yes
@@ -289,7 +289,7 @@ jewellery_factory = {
 #
 # INITIAL INDUSTRIAL GOODS
 #
-lumber_factory = {
+advanced_machinery_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -305,7 +305,29 @@ lumber_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = lumber_factory
+	production_type = advanced_machinery_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+	default_enabled = yes
+}
+
+engines_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = engines_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
@@ -636,7 +658,7 @@ instruments_factory = {
 	pop_build_factory = yes
 }
 
-cigarettes_factory = {
+turbines_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -652,7 +674,7 @@ cigarettes_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = cigarettes_factory
+	production_type = turbines_factory
 	pop_build_factory = yes
 }
 
@@ -757,7 +779,7 @@ electric_gear_factory = {
 	pop_build_factory = yes
 }
 
-pharmaceuticals_factory = {
+advanced_instruments_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -773,7 +795,7 @@ pharmaceuticals_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = pharmaceuticals_factory
+	production_type = advanced_instruments_factory
 	pop_build_factory = yes
 }
 
@@ -1161,7 +1183,7 @@ fort = {
 	goods_cost =
 	{
 		timber = 100
-		lumber = 1000
+		engines = 1000
 		cement = 1000
 		explosives = 500
 		trucks_vans = 500
@@ -1181,7 +1203,7 @@ fort = {
 # Ph 2 $932 million
 # i.e. c1 bil -> 250 £
 # timber = 100 x 0.14 = 14
-# lumber = 100 x 0.10 = 10
+# engines = 100 x 0.10 = 10
 # cement = 100 x 0.06 = 6
 # steel = 200 x 0.38 = 76
 # machine_parts = 10 x 0.16 = 1.6
@@ -1192,7 +1214,7 @@ naval_base = {
 	goods_cost =
 	{
 		timber = 100
-		lumber = 100
+		engines = 100
 		cement = 100
 		steel = 200
 		machine_parts = 10
