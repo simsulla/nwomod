@@ -9,17 +9,71 @@
 # time = x #==> number of days to build.
 #
 
-# IRL cost of factory
-# Example Volkswagen $208,000,000 -> 116 Rcars/day
-# 0.51 cost/unit -> c.2,000,000 -> 10 Rcars
-# 58 cars -> 580 Rcars
-# $1,000,000,000 -> c580 Rcars and 
-# $1,000,000,000 -> 250 £ in building cost
-# 
-# cement = 1000 x 0.06 = 60 TODO
-# machine_parts = 500 x 0.16 = 80 TODO
-# petrochemicals = 2500 x 0.05 = 125 TODO
 #
+# BUILDING MATERIALS
+#
+coal_petrochemicals_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		coal = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = coal_petrochemicals_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+machine_parts_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		iron = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = machine_parts_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+cement_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		coal = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = cement_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
 
 #
 # FOOD
@@ -195,71 +249,6 @@ footwear_factory = {
 	default_enabled = yes
 }
 
-#
-# BUILDING MATERIALS
-#
-cement_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		coal = 60 
-		machine_parts = 80 
-		petrochemicals = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = cement_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-machine_parts_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		cement = 60 
-		iron = 80 
-		petrochemicals = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = machine_parts_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-coal_petrochemicals_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		cement = 60 
-		machine_parts = 80 
-		coal = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = coal_petrochemicals_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
 
 #
 # INITIAL CONSUMER GOODS
@@ -474,7 +463,7 @@ petroleum_plastics_factory = {
 	default_enabled = no	
 }
 
-rubber_plastics_factory = {
+rubber_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -490,7 +479,7 @@ rubber_plastics_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = rubber_plastics_factory
+	production_type = rubber_factory
 	pop_build_factory = yes
 }
 
@@ -552,6 +541,27 @@ aluminium_factory = {
 	onmap = no
 
 	production_type = aluminium_factory
+	pop_build_factory = yes
+	default_enabled = no	
+}
+
+petroleum_aluminium_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = petroleum_aluminium_factory
 	pop_build_factory = yes
 	default_enabled = no	
 }

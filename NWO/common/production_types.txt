@@ -35,7 +35,8 @@ factory_template = {
 
 bank_template = {
 	efficiency = {
-		computers = 0.06
+		telecommunications = 0.06
+		petrochemicals = 0.04 
 	}
 	
 	owner =
@@ -66,7 +67,8 @@ modern_factory_template = {
 	efficiency = {
 		cement = 0.1 #if no cement, work at 75% efficiency 
 		machine_parts = 0.15 
-		heating_electricity = 0.25
+		petrochemicals = 0.05 
+		heating_electricity = 0.2
 	}
 	
 	owner =
@@ -371,17 +373,13 @@ petroleum_plastics_factory = {
 	}
 }
 
-rubber_plastics_factory = {       
+rubber_factory = {       
 	template = factory_template
 	input_goods = {    
-		rubber = 47.00	
+		petroleum = 47.00	
 	}
-	output_goods = plastics 
+	output_goods = rubber 
 	value = 49
-	bonus = {
-		trigger = { trade_goods_in_state = rubber }
-		value = 0.25
-	}
 }
 
 paper_factory = {       
@@ -442,6 +440,19 @@ aluminium_factory = {
 	value = 20.00
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
+		value = 0.125
+	}
+}
+
+petroleum_aluminium_factory = {       
+	template = factory_template
+	input_goods = {    
+		petroleum = 21	
+	}
+	output_goods = aluminium 
+	value = 20.00
+	bonus = {
+		trigger = { trade_goods_in_state = petroleum }
 		value = 0.125
 	}
 }
@@ -856,20 +867,10 @@ automobiles_factory = {
 diamonds_factory = {       
 	template = modern_factory_template
 	input_goods = {    
-		gold_silver = 3
-		diamonds = 3
+		coal = 60
 	}
 	output_goods = diamonds 
 	value = 18
-	bonus = {
-		trigger = { 
-			OR = {
-				trade_goods_in_state = gold_silver 
-				trade_goods_in_state = diamonds 
-			}
-		}
-		value = 0.125
-	}
 }
 
 advanced_machinery_factory = {       
