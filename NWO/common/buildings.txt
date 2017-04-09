@@ -12,7 +12,7 @@
 #
 # BUILDING MATERIALS
 #
-coal_petrochemicals_factory = {
+petrochemicals_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -28,7 +28,7 @@ coal_petrochemicals_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = coal_petrochemicals_factory
+	production_type = petrochemicals_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
@@ -54,6 +54,27 @@ machine_parts_factory = {
 	default_enabled = yes
 }
 
+modern_machine_parts_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		iron = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = modern_machine_parts_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
 cement_factory = {
 	type = factory
 	on_completion = factory
@@ -75,10 +96,7 @@ cement_factory = {
 	default_enabled = yes
 }
 
-#
-# FOOD
-#
-fish_fertilizers_factory = {
+fertilizers_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -94,100 +112,11 @@ fish_fertilizers_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type = fish_fertilizers_factory
+	production_type = fertilizers_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
 
-fruit_fertilizers_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		cement = 60 
-		machine_parts = 80 
-		petrochemicals = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = fruit_fertilizers_factory
-	pop_build_factory = yes
-	default_enabled = yes	
-}
-
-grain_fertilizers_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		cement = 60 
-		machine_parts = 80 
-		petrochemicals = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = grain_fertilizers_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-#
-# FOOTWEAR AND FOOD
-#
-cattle_fertilizers_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		cement = 60 
-		machine_parts = 80 
-		petrochemicals = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = cattle_fertilizers_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-#
-# TEXTILES AND FOOD
-#
-wool_fertilizers_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		cement = 60 
-		machine_parts = 80 
-		petrochemicals = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = wool_fertilizers_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
 fabric_factory = {
 	type = factory
 	on_completion = factory
@@ -225,6 +154,26 @@ wool_fabric_factory = {
 	onmap = no
 
 	production_type = wool_fabric_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+synthetic_fabric_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = synthetic_fabric_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
@@ -321,7 +270,7 @@ engines_factory = {
 	default_enabled = yes
 }
 
-petroleum_petrochemicals_factory = {
+modern_copper_wire_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -331,33 +280,13 @@ petroleum_petrochemicals_factory = {
 	{
 		cement = 60 
 		machine_parts = 80 
-		petroleum = 125 
+		petrochemicals = 125 
 	}
 	time = 365
 	visibility = yes
 	onmap = no
 
-	production_type = petroleum_petrochemicals_factory
-	pop_build_factory = yes
-}
-
-nuclear_petrochemicals_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		cement = 60 
-		machine_parts = 80 
-		other_minerals = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = nuclear_petrochemicals_factory
+	production_type = modern_copper_wire_factory
 	pop_build_factory = yes
 }
 
@@ -419,27 +348,6 @@ chemical_products_factory = {
 
 	production_type = chemical_products_factory
 	pop_build_factory = yes
-}
-
-petroleum_fabric_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 255
-	cost = 0
-	goods_cost = 
-	{
-		cement = 60 
-		machine_parts = 80 
-		petrochemicals = 125 
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = petroleum_fabric_factory
-	pop_build_factory = yes
-	default_enabled = no	
 }
 
 petroleum_plastics_factory = {
@@ -521,6 +429,25 @@ glass_factory = {
 	onmap = no
 
 	production_type = glass_factory
+	pop_build_factory = yes
+}
+modern_glass_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = modern_glass_factory
 	pop_build_factory = yes
 }
 
@@ -608,6 +535,48 @@ heating_electricity_factory = {
 	#strategic_factory = yes
 }
 
+petroleum_heating_electricity_factory = { 	
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = petroleum_heating_electricity_factory
+	pop_build_factory = yes
+	#strategic_factory = yes
+}
+
+other_minerals_heating_electricity_factory = { 	
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = other_minerals_heating_electricity_factory
+	pop_build_factory = yes
+	#strategic_factory = yes
+}
+
 integrated_circuits_factory = {
 	type = factory
 	on_completion = factory
@@ -628,6 +597,26 @@ integrated_circuits_factory = {
 	pop_build_factory = yes
 }
 
+modern_integrated_circuits_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = modern_integrated_circuits_factory
+	pop_build_factory = yes
+}
+
 clothes_factory = {
 	type = factory
 	on_completion = factory
@@ -645,6 +634,26 @@ clothes_factory = {
 	onmap = no
 
 	production_type = clothes_factory
+	pop_build_factory = yes
+}
+
+luxury_clothes_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = luxury_clothes_factory
 	pop_build_factory = yes
 }
 
@@ -688,6 +697,25 @@ turbines_factory = {
 	pop_build_factory = yes
 }
 
+luxury_furniture_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = luxury_furniture_factory
+	pop_build_factory = yes
+}
 
 furniture_factory = {
 	type = factory
@@ -729,44 +757,24 @@ beverages_factory = {
 	pop_build_factory = yes
 }
 
-beverages_sugar_factory = {
-        type = factory
-        on_completion = factory
-        completion_size = 0.2
-        max_level = 255
-        cost = 0
-        goods_cost =
-        {
-			cement = 60 
-			machine_parts = 80 
-			petrochemicals = 125 
-        }
-        time = 365
-        visibility = yes
-        onmap = no
+modern_beverages_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
 
-        production_type = beverages_sugar_factory
-        pop_build_factory = yes
-}
-
-beverages_coffee_factory = {
-        type = factory
-        on_completion = factory
-        completion_size = 0.2
-        max_level = 255
-        cost = 0
-        goods_cost =
-        {
-			cement = 60 
-			machine_parts = 80 
-			petrochemicals = 125 
-        }
-        time = 365
-        visibility = yes
-        onmap = no
-
-        production_type = beverages_coffee_factory
-        pop_build_factory = yes
+	production_type = modern_beverages_factory
+	pop_build_factory = yes
 }
 
 electric_gear_factory = {
@@ -849,6 +857,27 @@ aeroplane_factory = {
 	onmap = no
 
 	production_type = aeroplane_factory
+	pop_build_factory = yes
+	strategic_factory = yes
+}
+
+modern_aeroplane_factory = { 	
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = modern_aeroplane_factory
 	pop_build_factory = yes
 	strategic_factory = yes
 }
@@ -937,6 +966,27 @@ automobiles_factory = {
 	advanced_factory = yes
 }
 
+modern_automobiles_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = modern_automobiles_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+
 milk_cheese_factory = {
 	type = factory
 	on_completion = factory
@@ -979,6 +1029,27 @@ health_factory = {
 	advanced_factory = yes
 }
 
+modern_tvs_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = modern_tvs_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+
 tvs_factory = {
 	type = factory
 	on_completion = factory
@@ -1017,6 +1088,26 @@ home_appliance_factory = {
 	onmap = no
 
 	production_type = home_appliance_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+modern_home_appliance_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = modern_home_appliance_factory
 	pop_build_factory = yes
 	advanced_factory = yes
 }
@@ -1083,7 +1174,7 @@ transport_factory = {
 	pop_build_factory = yes
 	advanced_factory = yes
 }
-telephonesfactory = {
+modern_telephones_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -1099,7 +1190,28 @@ transport_factory = {
 	visibility = yes
 	onmap = no
 
-	production_type =telephonesfactory
+	production_type = modern_telephones_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+
+telephones_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 255
+	cost = 0
+	goods_cost = 
+	{
+		cement = 60 
+		machine_parts = 80 
+		petrochemicals = 125 
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type =telephones_factory
 	pop_build_factory = yes
 	advanced_factory = yes
 }
