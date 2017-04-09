@@ -142,7 +142,7 @@ radioactive_waste_handling = {
 		}
 	}
 	effect = {
-		activate_building =telephonesfactory
+		activate_building =telephones_factory
 	}
 }
 reprocessing_depleted_uranium = {
@@ -1181,7 +1181,7 @@ intensive_crop_farming = {
 		}
 	}
 	effect = {
-		activate_building = beverages_sugar_factory
+		activate_building = modern_beverages_factory
 	}
 }
 intensive_rice_crop_farming = {
@@ -1198,7 +1198,7 @@ intensive_rice_crop_farming = {
 		}
 	}
 	effect = {
-		activate_building = beverages_coffee_factory
+		activate_building = beverages_factory
 	}
 }
 intensive_fruit_crop_farming = {
@@ -2346,6 +2346,44 @@ blotting = {
 	}
 	effect = {
 		increase_research = 0.01 
+	}
+}
+darwinism = {
+	limit = { molecular_biology = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			distributed_computations = 1
+		}
+		modifier = {
+			factor = 2
+			invention = transgenic_plants
+		}
+		modifier = {
+			factor = 1
+			invention = philosophy_of_language
+		}
+	}
+	effect = {
+		education_efficiency = 0.50
+	}
+}
+social_darwinism = {
+	limit = { molecular_biology = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = darwinism
+		}
+		modifier = {
+			factor = 2
+			invention = national_fraternity
+		}
+	}
+	effect = {
+		war_exhaustion = -0.05
 	}
 }
 #biotechnology

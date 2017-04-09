@@ -522,45 +522,6 @@ quantum_theory = {
 		shared_prestige = 25
 	}
 }
-#molecular_biology
-darwinism = {
-	limit = { molecular_biology = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			distributed_computations = 1
-		}
-		modifier = {
-			factor = 2
-			invention = transgenic_plants
-		}
-		modifier = {
-			factor = 1
-			invention = philosophy_of_language
-		}
-	}
-	effect = {
-		education_efficiency = 0.50
-	}
-}
-social_darwinism = {
-	limit = { molecular_biology = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = darwinism
-		}
-		modifier = {
-			factor = 2
-			invention = national_fraternity
-		}
-	}
-	effect = {
-		war_exhaustion = -0.05
-	}
-}
 #blended_learning
 sociology = {
 	limit = { blended_learning = 1 }
@@ -575,7 +536,9 @@ sociology = {
 			vanguard_method = 1
 		}
 	}
-	core_pop_consciousness_modifier = 0.01
+	effect = {
+		core_pop_consciousness_modifier = 0.01
+	}
 }
 social_psychology = {
 	limit = { blended_learning = 1 }
@@ -590,7 +553,9 @@ social_psychology = {
 			next_generation_subcultures = 1
 		}
 	}
-	core_pop_consciousness_modifier = 0.01
+	effect = {
+		core_pop_consciousness_modifier = 0.01
+	}
 }
 political_science = {
 	limit = { blended_learning = 1 }
@@ -609,7 +574,9 @@ political_science = {
 			ship_defense_system = 1
 		}
 	}
-	core_pop_consciousness_modifier = 0.01
+	effect = {
+		core_pop_consciousness_modifier = 0.01
+	}
 }
 social_anthropology = {
 	limit = { blended_learning = 1 }
@@ -701,6 +668,7 @@ space_docking = {
                 base = 2
                 modifier = {
                     factor = 12
+                    factor = 12
 					OR = { 
 						tag = USA 
 						tag = SUN 
@@ -766,7 +734,9 @@ the_decline_of_the_west_and_the_lost_generation = {
 			fifth_generation_warfare = 1
 		}
 	}
-	core_pop_consciousness_modifier = 0.05
+	effect = {
+		core_pop_consciousness_modifier = 0.05
+	}
 }
 #globalization
 individualism = {
