@@ -158,7 +158,8 @@ country_event = {
   option = {
     name = EVT_8000318_A
 	# EVT_8000318_A;Prevent Islamist takeover
-	any_pop = { militancy = 1.0 consciousness = 1 }
+	any_pop = { ideology = { factor = 0.2 value = traditionalist } }
+	any_pop = { limit = { pop_majority_ideology = traditionalist } militancy = 10.0 consciousness = 1 }
 	define_general = { name = "Abdelaziz Bouteflika" personality = energetic background = no_background }
 	any_owned = { 
 		limit = { is_state_capital = no OR = { region = SID_1700 region = SID_1704 region = SID_1708 } is_primary_culture = yes }
@@ -173,7 +174,8 @@ country_event = {
   option = {
     name = EVT_8000318_B
 	# EVT_8000318_B;Follow the will of the people
-	any_pop = { militancy = 1.0 consciousness = 1 }
+	any_pop = { ideology = { factor = 0.2 value = traditionalist } }
+	any_pop = { limit = { pop_majority_ideology = traditionalist } militancy = -1.0 consciousness = 1 }
 	government = theocracy religion = sunni country_event = 800051
 	badboy = 10
 	random_country = { limit = { tag = ALG part_of_sphere = yes } sphere_owner = { diplomatic_influence = { who = ALG value = -200 } } }
