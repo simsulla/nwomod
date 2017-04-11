@@ -91,7 +91,8 @@ country_event = {
   trigger = {
     OR = { tag = KOR tag = SKO }
 	government = presidential_dictatorship
-    year = 1960 NOT = { year = 1980 }
+    year = 1974 NOT = { year = 1980 }
+	has_country_flag = fourth_republic
   }
 
   mean_time_to_happen = { months = 1  }
@@ -131,7 +132,7 @@ country_event = {
   trigger = {
     OR = { tag = KOR tag = SKO }
     year = 1972 NOT = { year = 1978 }
-	NOT = { government = democracy }
+	government = presidential_dictatorship
   }
 
   mean_time_to_happen = { months = 5 }
@@ -139,7 +140,7 @@ country_event = {
   option = {
     name = EVT_8008122_A
 	any_pop = { militancy = -1.0  consciousness = -2 }
-	government = democracy country_event = 800054
+	set_country_flag = fourth_republic
   }
 }
 country_event = {
