@@ -78,6 +78,7 @@ country_event = {
   option = {
     name = EVT_8008107_A
 	government = presidential_dictatorship country_event = 800050
+	ruling_party_ideology = conservative
     define_general = { name = "Yun Bo-seon" personality = energetic background = no_background }
   }
 }
@@ -139,7 +140,7 @@ country_event = {
 
   option = {
     name = EVT_8008122_A
-	any_pop = { militancy = -1.0  consciousness = -2 }
+	any_pop = { any_pop = { NOT = { ideology = conservative } militancy = -1.0  consciousness = -2 }
 	set_country_flag = fourth_republic
   }
 }
