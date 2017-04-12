@@ -1,0 +1,94 @@
+country_event = {
+	id = 23000
+	title = EVT_23000_NAME
+	# EVT_23000_NAME;The Principality of Andorra
+	desc = EVT_23000_DESC
+	picture = "andorra"
+	fire_only_once = yes
+
+	trigger = {
+		owns = 457
+		457 = { NOT = { has_province_modifier = andorra } }
+	}
+
+	option = {
+    		name = EVT_23000_A
+		457 = { add_province_modifier = { name = andorra duration = -1 } }
+	}
+}
+
+country_event = {
+	id = 23001
+	title = EVT_23001_NAME
+	# EVT_23001_NAME;The Principality of Liechtenstein
+	desc = EVT_23001_DESC
+	picture = "liechtenstein"
+	fire_only_once = yes
+
+	trigger = {
+		owns = 603
+		603 = { NOT = { has_province_modifier = liechtenstein } }
+	}
+
+	option = {
+    		name = EVT_23001_A
+		603 = { add_province_modifier = { name = liechtenstein duration = -1 } }
+	}
+}
+
+country_event = {
+	id = 23002
+	title = EVT_23002_NAME
+	# EVT_23002_NAME;The Principality of Monaco
+	desc = EVT_23002_DESC
+	picture = "monaco"
+	fire_only_once = yes
+
+	trigger = {
+		owns = 472
+		472 = { NOT = { has_province_modifier = monaco } }
+	}
+
+	option = {
+    		name = EVT_23002_A
+		472 = { add_province_modifier = { name = monaco duration = -1 } }
+	}
+}
+
+country_event = {
+	id = 23003
+	title = EVT_23003_NAME
+	# EVT_23003_NAME;The Republic of San Marino
+	desc = EVT_23003_DESC
+	picture = "san_marino"
+	fire_only_once = yes
+
+	trigger = {
+		owns = 743
+		743 = { NOT = { has_province_modifier = san_marino } }
+	}
+
+	option = {
+    		name = EVT_23003_A
+		743 = { add_province_modifier = { name = san_marino duration = -1 } }
+	}
+}
+
+country_event = {
+	id = 23004
+	title = EVT_23004_NAME
+	# EVT_23004_NAME;The Vatican City State
+	desc = EVT_23004_DESC
+	picture = "vatican_city"
+	fire_only_once = yes
+
+	trigger = {
+		owns = 749
+		749 = { NOT = { has_province_modifier = vatican_city } }
+	}
+
+	option = {
+    		name = EVT_23004_A
+		749 = { add_province_modifier = { name = vatican_city duration = -1 } }
+	}
+}
