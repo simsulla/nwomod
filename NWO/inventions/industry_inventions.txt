@@ -1,6 +1,7 @@
-#fossil_fuel_power
 coal_transport_delivery = {
-	limit = { fossil_fuel_power = 1 }
+	limit = {
+		photography = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -10,12 +11,14 @@ coal_transport_delivery = {
 	}
 	effect = {
 		factory_goods_output = {
-			cement = 0.05 
+			cement = 0.0500
 		}
 	}
 }
 thermal_power_station = {
-	limit = { fossil_fuel_power = 1 }
+	limit = {
+		photography = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -24,30 +27,35 @@ thermal_power_station = {
 		}
 	}
 	effect = {
-		activate_building = furniture_factory
-		factory_goods_output = { machine_parts = 0.05 }
+		activate_building = "furniture_factory"
+		factory_goods_output = {
+			machine_parts = 0.0500
+		}
 	}
 }
-
 gas_turbine_plants = {
-	limit = { fossil_fuel_power = 1 }
+	limit = {
+		photography = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
-		factory_throughput = 0.05
+		factory_throughput = 0.0500
 	}
 }
 reciprocating_engines = {
-	limit = { fossil_fuel_power = 1 }
+	limit = {
+		photography = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -56,80 +64,86 @@ reciprocating_engines = {
 		}
 	}
 	effect = {
-		rgo_output = 0.05
-		factory_throughput = 0.05
+		rgo_output = 0.0500
+		factory_throughput = 0.0500
 	}
 }
-#oil_well
 drilling_rig = {
-	limit = { oil_well = 1 }
+	limit = {
+		modern_medicine = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
 drill_completion = {
-	limit = { oil_well = 1 }
+	limit = {
+		modern_medicine = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
 water_injectors = {
-	limit = { oil_well = 1 }
+	limit = {
+		modern_medicine = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
-#nuclear_power
 radioactive_waste_handling = {
-	limit = { nuclear_power = 1 }
+	limit = {
+		motion_picture = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -138,15 +152,17 @@ radioactive_waste_handling = {
 		}
 		modifier = {
 			factor = 2
-			ruling_party_ideology = liberal
+			ruling_party_ideology = "liberal"
 		}
 	}
 	effect = {
-		activate_building =telephones_factory
+		activate_building = "telephones_factory"
 	}
 }
 reprocessing_depleted_uranium = {
-	limit = { nuclear_power = 1 }
+	limit = {
+		motion_picture = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
@@ -155,16 +171,17 @@ reprocessing_depleted_uranium = {
 		}
 		modifier = {
 			factor = 3
-			invention = electrical_grid_access
+			invention = "electrical_grid_access"
 		}
 	}
 	effect = {
-		factory_throughput = 0.05
+		factory_throughput = 0.0500
 	}
 }
-#liquefied_natural_gas
 lng_carrier = {
-	limit = { liquefied_natural_gas = 1 }
+	limit = {
+		penicillin = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -177,421 +194,454 @@ lng_carrier = {
 		}
 	}
 	effect = {
-		rgo_output = 0.05
-		factory_throughput = 0.05
+		rgo_output = 0.0500
+		factory_throughput = 0.0500
 	}
 }
 lng_storag_tank = {
-	limit = { liquefied_natural_gas = 1 }
+	limit = {
+		penicillin = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
 apci_technology = {
-	limit = { liquefied_natural_gas = 1 }
+	limit = {
+		penicillin = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
-#offshore_drilling
 deepwater_drilling = {
-	limit = { offshore_drilling = 1 }
+	limit = {
+		molecular_biology = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
 offshore_platform = {
-	limit = { offshore_drilling = 1 }
+	limit = {
+		molecular_biology = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
 oil_sands = {
-	limit = { offshore_drilling = 1 }
+	limit = {
+		molecular_biology = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
-#hydraulic_fracturing
 horizontal_drilling = {
-	limit = { hydraulic_fracturing = 1 }
+	limit = {
+		clinical_pharmacology = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
 fracturing_fluids = {
-	limit = { hydraulic_fracturing = 1 }
+	limit = {
+		clinical_pharmacology = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
 microseismic_monitoring = {
-	limit = { hydraulic_fracturing = 1 }
+	limit = {
+		clinical_pharmacology = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			petroleum = 0.1
+			petroleum = 0.1000
 		}
 		rgo_size = {
-		 	petroleum = 0.1
+			petroleum = 0.1000
 		}
 	}
 }
-#sustainable_energy
 solar_power = {
-	limit = { sustainable_energy = 1 }
+	limit = {
+		digital_photography = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-		 	coal = 0.1
+			coal = 0.1000
 		}
 	}
 }
 wind_power = {
-	limit = { sustainable_energy = 1 }
+	limit = {
+		digital_photography = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-		 	coal = 0.1
+			coal = 0.1000
 		}
 	}
 }
 biofuels = {
-	limit = { sustainable_energy = 1 }
+	limit = {
+		digital_photography = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-		 	coal = 0.1
+			coal = 0.1000
 		}
 	}
 }
 geothermal = {
-	limit = { sustainable_energy = 1 }
+	limit = {
+		digital_photography = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-		 	coal = 0.1
+			coal = 0.1000
 		}
 	}
 }
-#microgeneration
 electrical_grid_access = {
-	limit = { microgeneration = 1 }
+	limit = {
+		genetic_engineering = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			heating_electricity = 0.05 
+			heating_electricity = 0.0500
 		}
 	}
 }
 energy_storage = {
-	limit = { microgeneration = 1 }
+	limit = {
+		genetic_engineering = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			heating_electricity = 0.05 
+			heating_electricity = 0.0500
 		}
 	}
 }
-#microgeneration
 breeder_reactor = {
-	limit = { microgeneration = 1 }
+	limit = {
+		genetic_engineering = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			heating_electricity = 0.05 
+			heating_electricity = 0.0500
 		}
 	}
 }
 integral_fast_reactor = {
-	limit = { microgeneration = 1 }
+	limit = {
+		genetic_engineering = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			heating_electricity = 0.05 
+			heating_electricity = 0.0500
 		}
 	}
 }
-#micropower
 nanogenerator = {
-	limit = { micropower = 1 }
+	limit = {
+		nanomedicine = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			heating_electricity = 0.05 
+			heating_electricity = 0.0500
 		}
 	}
 }
 piezoelectric_nanofibers = {
-	limit = { micropower = 1 }
+	limit = {
+		nanomedicine = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			heating_electricity = 0.05 
+			heating_electricity = 0.0500
 		}
 	}
 }
 microturbine_technology = {
-	limit = { micropower = 1 }
+	limit = {
+		nanomedicine = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			heating_electricity = 0.05 
+			heating_electricity = 0.0500
 		}
 	}
 }
-#radio
 radio_navigation = {
-	limit = { radio = 1 }
+	limit = {
+		electric_generator = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -600,17 +650,19 @@ radio_navigation = {
 	}
 	effect = {
 		factory_goods_output = {
-			machine_parts = 0.05 
+			machine_parts = 0.0500
 		}
 	}
 }
 radar = {
-	limit = { radio = 1 }
+	limit = {
+		electric_generator = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -619,17 +671,19 @@ radar = {
 	}
 	effect = {
 		factory_goods_output = {
-			machine_parts = 0.05 
+			machine_parts = 0.0500
 		}
 	}
 }
 radio_broadcasting = {
-	limit = { radio = 1 }
+	limit = {
+		electric_generator = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -638,17 +692,19 @@ radio_broadcasting = {
 	}
 	effect = {
 		factory_goods_output = {
-			electric_gear = 0.05 
+			electric_gear = 0.0500
 		}
 	}
 }
 digital_radio = {
-	limit = { radio = 1 }
+	limit = {
+		electric_generator = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -656,20 +712,21 @@ digital_radio = {
 		}
 	}
 	effect = {
-        activate_building = instruments_factory
+		activate_building = "instruments_factory"
 		factory_goods_output = {
-			telecommunications = 0.05 
+			telecommunications = 0.0500
 		}
 	}
 }
-#television
 electronic_television = {
-	limit = { television = 1 }
+	limit = {
+		electrical_machines = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -678,17 +735,19 @@ electronic_television = {
 	}
 	effect = {
 		factory_goods_output = {
-			electric_gear = 0.05 
+			electric_gear = 0.0500
 		}
 	}
 }
 color_television = {
-	limit = { television = 1 }
+	limit = {
+		electrical_machines = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -697,17 +756,19 @@ color_television = {
 	}
 	effect = {
 		factory_goods_output = {
-			telecommunications = 0.05 
+			telecommunications = 0.0500
 		}
 	}
 }
 digital_television = {
-	limit = { television = 1 }
+	limit = {
+		electrical_machines = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -716,18 +777,19 @@ digital_television = {
 	}
 	effect = {
 		factory_goods_output = {
-			telecommunications = 0.05 
+			telecommunications = 0.0500
 		}
 	}
 }
-#semiconductor
 vacuum_tubes = {
-	limit = { television = 1 }
+	limit = {
+		electrical_machines = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -736,17 +798,19 @@ vacuum_tubes = {
 	}
 	effect = {
 		factory_goods_output = {
-			integrated_circuits = 0.05 
+			integrated_circuits = 0.0500
 		}
 	}
 }
 semiconductor_device_fabrication = {
-	limit = { television = 1 }
+	limit = {
+		electrical_machines = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -755,18 +819,19 @@ semiconductor_device_fabrication = {
 	}
 	effect = {
 		factory_goods_output = {
-			integrated_circuits = 0.05 
+			integrated_circuits = 0.0500
 		}
 	}
 }
-#microprocessor
 integrated_circuit = {
-	limit = { microprocessor = 1 }
+	limit = {
+		machine_industry = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -774,16 +839,18 @@ integrated_circuit = {
 		}
 	}
 	effect = {
-		activate_building = integrated_circuits_factory
+		activate_building = "integrated_circuits_factory"
 	}
 }
 bit_design = {
-	limit = { microprocessor = 1 }
+	limit = {
+		machine_industry = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -792,17 +859,19 @@ bit_design = {
 	}
 	effect = {
 		factory_goods_output = {
-			integrated_circuits = 0.05 
+			integrated_circuits = 0.0500
 		}
 	}
 }
 multi_core_design = {
-	limit = { microprocessor = 1 }
+	limit = {
+		machine_industry = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -811,18 +880,19 @@ multi_core_design = {
 	}
 	effect = {
 		factory_goods_output = {
-			integrated_circuits = 0.05 
+			integrated_circuits = 0.0500
 		}
 	}
 }
-#microcomputer
 transistor_transistor_logic = {
-	limit = { microcomputer = 1 }
+	limit = {
+		trucks = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -830,16 +900,18 @@ transistor_transistor_logic = {
 		}
 	}
 	effect = {
-		activate_building = computers_factory
+		activate_building = "computers_factory"
 	}
 }
 commodore64 = {
-	limit = { microcomputer = 1 }
+	limit = {
+		trucks = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -848,17 +920,19 @@ commodore64 = {
 	}
 	effect = {
 		factory_goods_output = {
-			computers = 0.05 
+			computers = 0.0500
 		}
 	}
 }
 programmable_device = {
-	limit = { microcomputer = 1 }
+	limit = {
+		trucks = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = work_classification
+			invention = "work_classification"
 		}
 		modifier = {
 			factor = 2
@@ -867,18 +941,19 @@ programmable_device = {
 	}
 	effect = {
 		factory_goods_output = {
-			telecommunications = 0.05 
+			telecommunications = 0.0500
 		}
 	}
 }
-#personal_computer
 apple = {
-	limit = { personal_computer = 1 }
+	limit = {
+		circuit_breakers = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = programmable_device
+			invention = "programmable_device"
 		}
 		modifier = {
 			factor = 2
@@ -887,37 +962,40 @@ apple = {
 	}
 	effect = {
 		factory_goods_output = {
-			telecommunications = 0.05 
+			telecommunications = 0.0500
 		}
 	}
 }
 ibm_pc = {
-	limit = { personal_computer = 1 }
+	limit = {
+		circuit_breakers = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = apple
+			invention = "apple"
 		}
 		modifier = {
 			factor = 2
-			invention = programmable_device
+			invention = "programmable_device"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			telecommunications = 0.05 
+			telecommunications = 0.0500
 		}
 	}
 }
-#handheld_devices
 smartphones = {
-	limit = { handheld_devices = 1 }
+	limit = {
+		color_tvs = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = programmable_device
+			invention = "programmable_device"
 		}
 		modifier = {
 			factor = 2
@@ -926,220 +1004,238 @@ smartphones = {
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05 
+			telephones = 0.0500
 		}
 	}
 }
 pads = {
-	limit = { handheld_devices = 1 }
+	limit = {
+		color_tvs = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = apple
+			invention = "apple"
 		}
 		modifier = {
 			factor = 2
-			invention = programmable_device
+			invention = "programmable_device"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05 
+			telephones = 0.0500
 		}
 	}
 }
 applications_stores = {
-	limit = { handheld_devices = 1 }
+	limit = {
+		color_tvs = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = apple
+			invention = "apple"
 		}
 		modifier = {
 			factor = 2
-			invention = programmable_device
+			invention = "programmable_device"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05 
+			telephones = 0.0500
 		}
 	}
 }
-#cloud_computing
 virtualization = {
-	limit = { cloud_computing = 1 }
+	limit = {
+		platform_sharing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = applications_stores
+			invention = "applications_stores"
 		}
 		modifier = {
 			factor = 2
-			invention = pads
+			invention = "pads"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05
+			telephones = 0.0500
 		}
 	}
 }
 grid_computing = {
-	limit = { cloud_computing = 1 }
+	limit = {
+		platform_sharing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = applications_stores
+			invention = "applications_stores"
 		}
 		modifier = {
 			factor = 2
-			invention = pads
+			invention = "pads"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			integrated_circuits = 0.05
+			integrated_circuits = 0.0500
 		}
 	}
 }
 utility_computing = {
-	limit = { cloud_computing = 1 }
+	limit = {
+		platform_sharing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = applications_stores
+			invention = "applications_stores"
 		}
 		modifier = {
 			factor = 2
-			invention = pads
+			invention = "pads"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			telecommunications = 0.05
+			telecommunications = 0.0500
 		}
 	}
 }
-#artificial_intelligence
 search_optimization = {
-	limit = { artificial_intelligence = 1 }
+	limit = {
+		led = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = applications_stores
+			invention = "applications_stores"
 		}
 		modifier = {
 			factor = 2
-			invention = pads
+			invention = "pads"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05
+			telephones = 0.0500
 		}
 		factory_goods_output = {
-			computers = 0.05
+			computers = 0.0500
 		}
 	}
 }
 statistical_learning_methods = {
-	limit = { artificial_intelligence = 1 }
+	limit = {
+		led = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = applications_stores
+			invention = "applications_stores"
 		}
 		modifier = {
 			factor = 2
-			invention = pads
+			invention = "pads"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05
+			telephones = 0.0500
 		}
 		factory_goods_output = {
-			computers = 0.05
+			computers = 0.0500
 		}
 	}
 }
 uncertain_reasoning = {
-	limit = { artificial_intelligence = 1 }
+	limit = {
+		led = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = applications_stores
+			invention = "applications_stores"
 		}
 		modifier = {
 			factor = 2
-			invention = pads
+			invention = "pads"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05
+			telephones = 0.0500
 		}
 		factory_goods_output = {
-			computers = 0.05
+			computers = 0.0500
 		}
 	}
 }
-#quantum_computer
 quantum_complexity_theory = {
-	limit = { quantum_computer = 1 }
+	limit = {
+		GPGPU = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = applications_stores
+			invention = "applications_stores"
 		}
 		modifier = {
 			factor = 2
-			invention = pads
+			invention = "pads"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05
+			telephones = 0.0500
 		}
 	}
 }
 quantum_gate = {
-	limit = { quantum_computer = 1 }
+	limit = {
+		GPGPU = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = applications_stores
+			invention = "applications_stores"
 		}
 		modifier = {
 			factor = 2
-			invention = pads
+			invention = "pads"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-		telephones= 0.05
+			telephones = 0.0500
 		}
 	}
 }
-#intensive_farming
 confined_animal_feeding_operations = {
-	limit = { intensive_farming = 1 }
+	limit = {
+		toys_mass_market = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = asphalt_paving
+			invention = "asphalt_paving"
 		}
 		modifier = {
 			factor = 2
@@ -1147,16 +1243,18 @@ confined_animal_feeding_operations = {
 		}
 	}
 	effect = {
-		activate_building = beverages_factory
+		activate_building = "beverages_factory"
 	}
 }
 managed_intensive_rotational_grazing = {
-	limit = { intensive_farming = 1 }
+	limit = {
+		toys_mass_market = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = asphalt_paving
+			invention = "asphalt_paving"
 		}
 		modifier = {
 			factor = 2
@@ -1164,16 +1262,20 @@ managed_intensive_rotational_grazing = {
 		}
 	}
 	effect = {
-		rgo_goods_output = { cattle = 1 }
+		rgo_goods_output = {
+			cattle = 1
+		}
 	}
 }
 intensive_crop_farming = {
-	limit = { intensive_farming = 1 }
+	limit = {
+		toys_mass_market = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = asphalt_paving
+			invention = "asphalt_paving"
 		}
 		modifier = {
 			factor = 2
@@ -1181,16 +1283,18 @@ intensive_crop_farming = {
 		}
 	}
 	effect = {
-		activate_building = modern_beverages_factory
+		activate_building = "modern_beverages_factory"
 	}
 }
 intensive_rice_crop_farming = {
-	limit = { intensive_farming = 1 }
+	limit = {
+		toys_mass_market = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = asphalt_paving
+			invention = "asphalt_paving"
 		}
 		modifier = {
 			factor = 2
@@ -1198,16 +1302,18 @@ intensive_rice_crop_farming = {
 		}
 	}
 	effect = {
-		activate_building = beverages_factory
+		activate_building = "beverages_factory"
 	}
 }
 intensive_fruit_crop_farming = {
-	limit = { intensive_farming = 1 }
+	limit = {
+		toys_mass_market = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = asphalt_paving
+			invention = "asphalt_paving"
 		}
 		modifier = {
 			factor = 2
@@ -1215,16 +1321,20 @@ intensive_fruit_crop_farming = {
 		}
 	}
 	effect = {
-        rgo_goods_output = { fruit = 1 }
+		rgo_goods_output = {
+			fruit = 1
+		}
 	}
 }
 intensive_oil_seeds_crop_farming = {
-	limit = { intensive_farming = 1 }
+	limit = {
+		toys_mass_market = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = asphalt_paving
+			invention = "asphalt_paving"
 		}
 		modifier = {
 			factor = 2
@@ -1232,12 +1342,15 @@ intensive_oil_seeds_crop_farming = {
 		}
 	}
 	effect = {
-        rgo_goods_output = { grain = 1 }
+		rgo_goods_output = {
+			grain = 1
+		}
 	}
 }
-# mineral_processing
 automated_ore_sorting = {
-	limit = { mineral_processing = 1 }
+	limit = {
+		calculators = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1246,38 +1359,43 @@ automated_ore_sorting = {
 		}
 	}
 	effect = {
-		activate_building = chemical_products_factory
+		activate_building = "chemical_products_factory"
 	}
 }
 magnetic_separation = {
-	limit = { mineral_processing = 1 }
+	limit = {
+		calculators = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = automated_ore_sorting
+			invention = "automated_ore_sorting"
 		}
 	}
 	effect = {
-		mine_rgo_eff = 0.01
+		mine_rgo_eff = 0.0100
 	}
 }
 froth_flotation = {
-	limit = { mineral_processing = 1 }
+	limit = {
+		calculators = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = automated_ore_sorting
+			invention = "automated_ore_sorting"
 		}
 	}
 	effect = {
-		mine_rgo_eff = 0.01
+		mine_rgo_eff = 0.0100
 	}
 }
-#heavy_mining
 heavy_machinery = {
-	limit = { heavy_mining = 1 }
+	limit = {
+		electronic_circuit = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1291,20 +1409,22 @@ heavy_machinery = {
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-			coal = 0.1
+			coal = 0.1000
 		}
 	}
 }
 underground_mining = {
-	limit = { heavy_mining = 1 }
+	limit = {
+		electronic_circuit = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = heavy_machinery
+			invention = "heavy_machinery"
 		}
 		modifier = {
 			factor = 2
@@ -1313,20 +1433,22 @@ underground_mining = {
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-			coal = 0.01
+			coal = 0.0100
 		}
 	}
 }
 surface_mining = {
-	limit = { heavy_mining = 1 }
+	limit = {
+		electronic_circuit = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = heavy_machinery
+			invention = "heavy_machinery"
 		}
 		modifier = {
 			factor = 2
@@ -1335,16 +1457,17 @@ surface_mining = {
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-			coal = 0.01
+			coal = 0.0100
 		}
 	}
 }
-#deep_mining
 shrinkage_stoping = {
-	limit = { deep_mining = 1 }
+	limit = {
+		stored_program_computer = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1358,20 +1481,22 @@ shrinkage_stoping = {
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-			coal = 0.1
+			coal = 0.1000
 		}
 	}
 }
 ground_support = {
-	limit = { deep_mining = 1 }
+	limit = {
+		stored_program_computer = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = heavy_machinery
+			invention = "heavy_machinery"
 		}
 		modifier = {
 			factor = 2
@@ -1380,20 +1505,22 @@ ground_support = {
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.1
+			coal = 0.1000
 		}
 		rgo_size = {
-			coal = 0.01
+			coal = 0.0100
 		}
 	}
 }
 bulk_mining_methods = {
-	limit = { deep_mining = 1 }
+	limit = {
+		stored_program_computer = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = heavy_machinery
+			invention = "heavy_machinery"
 		}
 		modifier = {
 			factor = 2
@@ -1401,12 +1528,13 @@ bulk_mining_methods = {
 		}
 	}
 	effect = {
-		mine_rgo_eff = 0.1
+		mine_rgo_eff = 0.1000
 	}
 }
-#green_revolution
 modern_irrigation_projects = {
-	limit = { green_revolution = 1 }
+	limit = {
+		magnetic_storage = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1419,16 +1547,18 @@ modern_irrigation_projects = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
 pesticides = {
-	limit = { green_revolution = 1 }
+	limit = {
+		magnetic_storage = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = heavy_machinery
+			invention = "heavy_machinery"
 		}
 		modifier = {
 			factor = 2
@@ -1436,16 +1566,18 @@ pesticides = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
 synthetic_nitrogen_fertilizer = {
-	limit = { green_revolution = 1 }
+	limit = {
+		magnetic_storage = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = heavy_machinery
+			invention = "heavy_machinery"
 		}
 		modifier = {
 			factor = 2
@@ -1453,12 +1585,13 @@ synthetic_nitrogen_fertilizer = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
-#contemporary_agriculture
 integrated_pest_management = {
-	limit = { contemporary_agriculture = 1 }
+	limit = {
+		computer_peripherals = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1467,25 +1600,28 @@ integrated_pest_management = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
 selective_breeding = {
-	limit = { contemporary_agriculture = 1 }
+	limit = {
+		computer_peripherals = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = synthetic_nitrogen_fertilizer
+			invention = "synthetic_nitrogen_fertilizer"
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
-#automated_mining
 mine_automation_software = {
-	limit = { automated_mining = 1 }
+	limit = {
+		personal_computer = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1495,12 +1631,14 @@ mine_automation_software = {
 	}
 	effect = {
 		factory_goods_throughput = {
-			fertilizers = 0.05
+			fertilizers = 0.0500
 		}
 	}
 }
 mining_equipment_automation = {
-	limit = { automated_mining = 1 }
+	limit = {
+		personal_computer = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1510,13 +1648,14 @@ mining_equipment_automation = {
 	}
 	effect = {
 		factory_goods_throughput = {
-			steel = 0.05
+			steel = 0.0500
 		}
 	}
 }
-#genetically_modified_organism
 transgenic_plants = {
-	limit = { genetically_modified_organism = 1 }
+	limit = {
+		tablet_computer = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1525,11 +1664,15 @@ transgenic_plants = {
 		}
 	}
 	effect = {
-        rgo_goods_output = { grain = 1 }
+		rgo_goods_output = {
+			grain = 1
+		}
 	}
 }
 genetically_modified_crops = {
-	limit = { genetically_modified_organism = 1 }
+	limit = {
+		tablet_computer = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1538,16 +1681,18 @@ genetically_modified_crops = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
 genetically_modified_food = {
-	limit = { genetically_modified_organism = 1 }
+	limit = {
+		tablet_computer = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = mining_equipment_automation
+			invention = "mining_equipment_automation"
 		}
 		modifier = {
 			factor = 2
@@ -1555,12 +1700,13 @@ genetically_modified_food = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
-#new_green_revolution
 system_of_rice_intensification = {
-	limit = { new_green_revolution = 1 }
+	limit = {
+		cloud_computing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1569,11 +1715,15 @@ system_of_rice_intensification = {
 		}
 	}
 	effect = {
-        rgo_goods_output = { grain = 1 }
+		rgo_goods_output = {
+			grain = 1
+		}
 	}
 }
 marker_assisted_selection = {
-	limit = { new_green_revolution = 1 }
+	limit = {
+		cloud_computing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1582,16 +1732,18 @@ marker_assisted_selection = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
 agroecology = {
-	limit = { new_green_revolution = 1 }
+	limit = {
+		cloud_computing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = mining_equipment_automation
+			invention = "mining_equipment_automation"
 		}
 		modifier = {
 			factor = 2
@@ -1599,12 +1751,13 @@ agroecology = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
-#landfill_mining_and_recycling
 landfill_mining = {
-	limit = { landfill_mining_and_recycling = 1 }
+	limit = {
+		artificial_intelligence = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1613,15 +1766,17 @@ landfill_mining = {
 		}
 		modifier = {
 			factor = 2
-			invention = bulk_mining_methods
+			invention = "bulk_mining_methods"
 		}
 	}
 	effect = {
-		mine_rgo_eff = 0.1
+		mine_rgo_eff = 0.1000
 	}
 }
 curbside_collection = {
-	limit = { landfill_mining_and_recycling = 1 }
+	limit = {
+		artificial_intelligence = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1630,15 +1785,17 @@ curbside_collection = {
 		}
 		modifier = {
 			factor = 2
-			invention = bulk_mining_methods
+			invention = "bulk_mining_methods"
 		}
 	}
 	effect = {
-		mine_rgo_eff = 0.1
+		mine_rgo_eff = 0.1000
 	}
 }
 recycling_industrial_waste = {
-	limit = { landfill_mining_and_recycling = 1 }
+	limit = {
+		artificial_intelligence = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1647,15 +1804,17 @@ recycling_industrial_waste = {
 		}
 		modifier = {
 			factor = 2
-			invention = bulk_mining_methods
+			invention = "bulk_mining_methods"
 		}
 	}
 	effect = {
-		mine_rgo_eff = 0.1
+		mine_rgo_eff = 0.1000
 	}
 }
 ewaste_recycling = {
-	limit = { landfill_mining_and_recycling = 1 }
+	limit = {
+		artificial_intelligence = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1664,16 +1823,17 @@ ewaste_recycling = {
 		}
 		modifier = {
 			factor = 2
-			invention = bulk_mining_methods
+			invention = "bulk_mining_methods"
 		}
 	}
 	effect = {
-		mine_rgo_eff = 0.1
+		mine_rgo_eff = 0.1000
 	}
 }
-#modern_roads
 asphalt_paving = {
-	limit = { modern_roads = 1 }
+	limit = {
+		break_bulk_cargo = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1682,15 +1842,17 @@ asphalt_paving = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		rgo_throughput = 0.01
+		rgo_throughput = 0.0100
 	}
 }
 concrete_paving = {
-	limit = { modern_roads = 1 }
+	limit = {
+		break_bulk_cargo = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1699,16 +1861,17 @@ concrete_paving = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		rgo_throughput = 0.01
+		rgo_throughput = 0.0100
 	}
 }
-#early_highway
 classic_car = {
-	limit = { early_highway = 1 }
+	limit = {
+		processed_aluminium = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1717,16 +1880,18 @@ classic_car = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		rgo_throughput = 0.01
-		activate_building = tvs_factory
+		rgo_throughput = 0.0100
+		activate_building = "tvs_factory"
 	}
 }
 autobahn = {
-	limit = { early_highway = 1 }
+	limit = {
+		processed_aluminium = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1735,17 +1900,18 @@ autobahn = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		rgo_throughput = 0.01
-		activate_building = home_appliance_factory
+		rgo_throughput = 0.0100
+		activate_building = "home_appliance_factory"
 	}
 }
-#high_speed_rail
 shinkansen = {
-	limit = { high_speed_rail = 1 }
+	limit = {
+		continuous_track = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1754,15 +1920,17 @@ shinkansen = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		rgo_throughput = 0.01
+		rgo_throughput = 0.0100
 	}
 }
 high_speed_rail_network = {
-	limit = { high_speed_rail = 1 }
+	limit = {
+		continuous_track = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1771,16 +1939,17 @@ high_speed_rail_network = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		rgo_throughput = 0.01
+		rgo_throughput = 0.0100
 	}
 }
-#interstate_highway_system
 highway_construction = {
-	limit = { interstate_highway_system = 1 }
+	limit = {
+		reinforced_concrete = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1789,16 +1958,18 @@ highway_construction = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		rgo_throughput = 0.01
-		activate_building = transport_factory
+		rgo_throughput = 0.0100
+		activate_building = "transport_factory"
 	}
 }
 international_highways = {
-	limit = { interstate_highway_system = 1 }
+	limit = {
+		reinforced_concrete = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1807,16 +1978,17 @@ international_highways = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		rgo_throughput = 0.01
+		rgo_throughput = 0.0100
 	}
 }
-#early_backbone
 collapsed_backbone = {
-	limit = { early_backbone = 1 }
+	limit = {
+		prestressed_concrete = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1825,15 +1997,17 @@ collapsed_backbone = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 parallel_backbone = {
-	limit = { early_backbone = 1 }
+	limit = {
+		prestressed_concrete = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1842,15 +2016,17 @@ parallel_backbone = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 serial_backbone = {
-	limit = { early_backbone = 1 }
+	limit = {
+		prestressed_concrete = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1859,16 +2035,17 @@ serial_backbone = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
-#modern_backbone
 tier_one_providers = {
-	limit = { modern_backbone = 1 }
+	limit = {
+		basic_oxygen_steelmaking = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1877,15 +2054,17 @@ tier_one_providers = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 fiber_optics = {
-	limit = { modern_backbone = 1 }
+	limit = {
+		basic_oxygen_steelmaking = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1894,15 +2073,17 @@ fiber_optics = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 routing = {
-	limit = { modern_backbone = 1 }
+	limit = {
+		basic_oxygen_steelmaking = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1911,15 +2092,17 @@ routing = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 switching = {
-	limit = { modern_backbone = 1 }
+	limit = {
+		basic_oxygen_steelmaking = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1928,16 +2111,17 @@ switching = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
-#mobile_network
 frequency_reuse = {
-	limit = { mobile_network = 1 }
+	limit = {
+		bulk_materials_handling = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1946,15 +2130,17 @@ frequency_reuse = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 cellular_radio = {
-	limit = { mobile_network = 1 }
+	limit = {
+		bulk_materials_handling = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1963,15 +2149,17 @@ cellular_radio = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 mobile_phone_network = {
-	limit = { mobile_network = 1 }
+	limit = {
+		bulk_materials_handling = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1980,15 +2168,17 @@ mobile_phone_network = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 directional_antennas = {
-	limit = { mobile_network = 1 }
+	limit = {
+		bulk_materials_handling = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1997,16 +2187,17 @@ directional_antennas = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
-#dynamic_infrastructure
 peering_agreements = {
-	limit = { high_speed_rail = 1 }
+	limit = {
+		continuous_track = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2015,15 +2206,17 @@ peering_agreements = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 transit_agreements = {
-	limit = { high_speed_rail = 1 }
+	limit = {
+		continuous_track = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2032,16 +2225,17 @@ transit_agreements = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
-#universal_wireless_access
 city_wide_wifi = {
-	limit = { universal_wireless_access = 1 }
+	limit = {
+		intermodal_freight_transport = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2050,15 +2244,17 @@ city_wide_wifi = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 long_range_wifi = {
-	limit = { universal_wireless_access = 1 }
+	limit = {
+		intermodal_freight_transport = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2067,16 +2263,17 @@ long_range_wifi = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
-#future_data_centers
 high_avialability_architecture = {
-	limit = { future_data_centers = 1 }
+	limit = {
+		industrial_printing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2085,15 +2282,17 @@ high_avialability_architecture = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
 automation = {
-	limit = { future_data_centers = 1 }
+	limit = {
+		industrial_printing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2102,39 +2301,44 @@ automation = {
 		}
 		modifier = {
 			factor = 2
-			invention = radio_navigation
+			invention = "radio_navigation"
 		}
 	}
 	effect = {
-		factory_throughput = 0.01
+		factory_throughput = 0.0100
 	}
 }
-#electricity
 electric_grid = {
-	limit = { electricity = 1 }
+	limit = {
+		petrochemical_industry = 1
+	}
 	chance = {
 		base = 8
 	}
 	effect = {
-		activate_building = heating_electricity_factory
+		activate_building = "heating_electricity_factory"
 	}
 }
 spinning = {
-	limit = { electricity = 1 }
+	limit = {
+		petrochemical_industry = 1
+	}
 	chance = {
 		base = 4
 	}
 	effect = {
-		activate_building = clothes_factory
+		activate_building = "clothes_factory"
 	}
 }
 circuits = {
-	limit = { electricity = 1 }
+	limit = {
+		petrochemical_industry = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = classic_car
+			invention = "classic_car"
 		}
 		modifier = {
 			factor = 2
@@ -2143,17 +2347,19 @@ circuits = {
 	}
 	effect = {
 		factory_goods_output = {
-			integrated_circuits = 0.05 
+			integrated_circuits = 0.0500
 		}
 	}
 }
 electric_power = {
-	limit = { electricity = 1 }
+	limit = {
+		petrochemical_industry = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = classic_car
+			invention = "classic_car"
 		}
 		modifier = {
 			factor = 2
@@ -2161,14 +2367,16 @@ electric_power = {
 		}
 	}
 	effect = {
-		activate_building = aluminium_factory
+		activate_building = "aluminium_factory"
 		factory_goods_output = {
-			heating_electricity = 0.05 
+			heating_electricity = 0.0500
 		}
 	}
 }
-synthetic_polymers = { # part of electricity because 1946 we need plastics
-	limit = { electricity = 1 }
+synthetic_polymers = {
+	limit = {
+		petrochemical_industry = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2177,12 +2385,13 @@ synthetic_polymers = { # part of electricity because 1946 we need plastics
 		}
 	}
 	effect = {
-		activate_building = petroleum_plastics_factory
+		activate_building = "petroleum_plastics_factory"
 	}
 }
-#petrochemical_industry
 petroleum_coke = {
-	limit = { petrochemical_industry = 1 }
+	limit = {
+		vulcanization = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2192,32 +2401,35 @@ petroleum_coke = {
 	}
 	effect = {
 		factory_goods_output = {
-			plastics = 0.05 
+			plastics = 0.0500
 		}
 	}
 }
 lubricants = {
-	limit = { petrochemical_industry = 1 }
+	limit = {
+		vulcanization = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			clothes = 0.05 
+			clothes = 0.0500
 		}
 	}
 }
-#plastic_industry
 thermoplastics = {
-	limit = { plastic_industry = 1 }
+	limit = {
+		polystyrene = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2226,13 +2438,15 @@ thermoplastics = {
 		}
 	}
 	effect = {
-		activate_building = milk_cheese_factory
-		rgo_output = 0.05
-		factory_throughput = 0.05
+		activate_building = "milk_cheese_factory"
+		rgo_output = 0.0500
+		factory_throughput = 0.0500
 	}
 }
 polystyrene = {
-	limit = { plastic_industry = 1 }
+	limit = {
+		polystyrene = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2242,32 +2456,35 @@ polystyrene = {
 	}
 	effect = {
 		factory_goods_output = {
-			instruments = 0.05 
+			instruments = 0.0500
 		}
 	}
 }
 nylon = {
-	limit = { plastic_industry = 1 }
+	limit = {
+		polystyrene = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
 			factor = 2
 			average_consciousness = 2
 		}
-		modifier = { 
+		modifier = {
 			factor = 2
-			economic_policy = laissez_faire
+			economic_policy = "laissez_faire"
 		}
 	}
 	effect = {
 		factory_goods_output = {
-			fabric = 0.1
+			fabric = 0.1000
 		}
 	}
 }
-#modern_medicine
 pharmacologic_industry = {
-	limit = { modern_medicine = 1 }
+	limit = {
+		synthetic_rubber = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2280,13 +2497,15 @@ pharmacologic_industry = {
 		}
 	}
 	effect = {
-		activate_building = advanced_instruments_factory 
-		land_attrition = -0.05 
-		soldier_to_pop_loss = 0.01
+		activate_building = "advanced_instruments_factory"
+		land_attrition = -0.0500
+		soldier_to_pop_loss = 0.0100
 	}
 }
 vaccination = {
-	limit = { modern_medicine = 1 }
+	limit = {
+		synthetic_rubber = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2296,16 +2515,17 @@ vaccination = {
 		modifier = {
 			factor = 2
 			multilateral_development_bank = 1
-		}	
+		}
 	}
 	effect = {
-		land_attrition = -0.05 
-		soldier_to_pop_loss = 0.01
+		land_attrition = -0.0500
+		soldier_to_pop_loss = 0.0100
 	}
 }
-#molecular_biology
 polymerase_chain_reaction = {
-	limit = { molecular_biology = 1 }
+	limit = {
+		styropor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2314,12 +2534,14 @@ polymerase_chain_reaction = {
 		}
 	}
 	effect = {
-		land_attrition = -0.01  
-		soldier_to_pop_loss = 0.01
+		land_attrition = -0.0100
+		soldier_to_pop_loss = 0.0100
 	}
 }
 gel_electrophoresis = {
-	limit = { clinical_pharmacology = 1 }
+	limit = {
+		foams = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2328,16 +2550,18 @@ gel_electrophoresis = {
 		}
 	}
 	effect = {
-		land_attrition = -0.01 
+		land_attrition = -0.0100
 	}
 }
 blotting = {
-	limit = { molecular_biology = 1 }
+	limit = {
+		styropor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention =  vaccination 
+			invention = "vaccination"
 		}
 		modifier = {
 			factor = 2
@@ -2345,11 +2569,13 @@ blotting = {
 		}
 	}
 	effect = {
-		increase_research = 0.01 
+		increase_research = 0.0100
 	}
 }
 darwinism = {
-	limit = { molecular_biology = 1 }
+	limit = {
+		styropor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2358,42 +2584,45 @@ darwinism = {
 		}
 		modifier = {
 			factor = 2
-			invention = transgenic_plants
+			invention = "transgenic_plants"
 		}
 		modifier = {
 			factor = 1
-			invention = philosophy_of_language
+			invention = "philosophy_of_language"
 		}
 	}
 	effect = {
-		education_efficiency = 0.50
+		education_efficiency = 0.5000
 	}
 }
 social_darwinism = {
-	limit = { molecular_biology = 1 }
+	limit = {
+		styropor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = darwinism
+			invention = "darwinism"
 		}
 		modifier = {
 			factor = 2
-			invention = national_fraternity
+			invention = "national_fraternity"
 		}
 	}
 	effect = {
-		war_exhaustion = -0.05
+		war_exhaustion = -0.0500
 	}
 }
-#biotechnology
 insulin = {
-	limit = { biotechnology = 1 }
+	limit = {
+		polyurethanes = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention =  vaccination 
+			invention = "vaccination"
 		}
 		modifier = {
 			factor = 2
@@ -2401,16 +2630,18 @@ insulin = {
 		}
 	}
 	effect = {
-		increase_research = 0.01 
+		increase_research = 0.0100
 	}
 }
 white_biotechnology = {
-	limit = { biotechnology = 1 }
+	limit = {
+		polyurethanes = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention =  vaccination 
+			invention = "vaccination"
 		}
 		modifier = {
 			factor = 2
@@ -2418,12 +2649,13 @@ white_biotechnology = {
 		}
 	}
 	effect = {
-		increase_research = 0.01 
+		increase_research = 0.0100
 	}
 }
-#clinical_pharmacology
 combat_clinical_pharmacology = {
-	limit = { clinical_pharmacology = 1 }
+	limit = {
+		foams = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2433,15 +2665,17 @@ combat_clinical_pharmacology = {
 		modifier = {
 			factor = 2
 			multilateral_development_bank = 1
-		}	
+		}
 	}
 	effect = {
-		land_attrition = -0.05 
-		soldier_to_pop_loss = 0.01
+		land_attrition = -0.0500
+		soldier_to_pop_loss = 0.0100
 	}
 }
 aerial_bacteria_and_antiseptic_principle = {
-	limit = { clinical_pharmacology = 1 }
+	limit = {
+		foams = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2451,21 +2685,22 @@ aerial_bacteria_and_antiseptic_principle = {
 		modifier = {
 			factor = 2
 			multilateral_development_bank = 1
-		}	
+		}
 	}
 	effect = {
-		land_attrition = -0.05 
-		soldier_to_pop_loss = 0.01
+		land_attrition = -0.0500
+		soldier_to_pop_loss = 0.0100
 	}
 }
-# genomics
 sequencing = {
-	limit = { genomics = 1 }
+	limit = {
+		polyester_film_stock = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention =  vaccination 
+			invention = "vaccination"
 		}
 		modifier = {
 			factor = 2
@@ -2473,16 +2708,18 @@ sequencing = {
 		}
 	}
 	effect = {
-		increase_research = 0.01 
+		increase_research = 0.0100
 	}
 }
 sequence_assembly = {
-	limit = { genomics = 1 }
+	limit = {
+		polyester_film_stock = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention =  vaccination 
+			invention = "vaccination"
 		}
 		modifier = {
 			factor = 2
@@ -2490,12 +2727,13 @@ sequence_assembly = {
 		}
 	}
 	effect = {
-		increase_research = 0.01 
+		increase_research = 0.0100
 	}
 }
-#pharmacogenomics
 wheat_reduced_height_genes = {
-	limit = { pharmacogenomics = 1 }
+	limit = {
+		silicon_carbide = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2505,12 +2743,14 @@ wheat_reduced_height_genes = {
 	}
 	effect = {
 		factory_goods_output = {
-			grain = 0.1
+			grain = 0.1000
 		}
 	}
 }
 rice_semidwarf_gene = {
-	limit = { pharmacogenomics = 1 }
+	limit = {
+		silicon_carbide = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -2519,17 +2759,18 @@ rice_semidwarf_gene = {
 		}
 	}
 	effect = {
-		farm_rgo_eff = 0.1
+		farm_rgo_eff = 0.1000
 	}
 }
-#evidence_based_medicine
 clinical_reasoning = {
-	limit = { evidence_based_medicine = 1 }
+	limit = {
+		carbon_fiber = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention =  vaccination 
+			invention = "vaccination"
 		}
 		modifier = {
 			factor = 2
@@ -2537,16 +2778,18 @@ clinical_reasoning = {
 		}
 	}
 	effect = {
-		increase_research = 0.01 
+		increase_research = 0.0100
 	}
 }
 tailor_treatments = {
-	limit = { evidence_based_medicine = 1 }
+	limit = {
+		carbon_fiber = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention =  vaccination 
+			invention = "vaccination"
 		}
 		modifier = {
 			factor = 2
@@ -2554,16 +2797,18 @@ tailor_treatments = {
 		}
 	}
 	effect = {
-		increase_research = 0.01 
+		increase_research = 0.0100
 	}
 }
 forensic_pathology = {
-	limit = { evidence_based_medicine = 1 }
+	limit = {
+		carbon_fiber = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention =  vaccination 
+			invention = "vaccination"
 		}
 		modifier = {
 			factor = 2
@@ -2571,8 +2816,6 @@ forensic_pathology = {
 		}
 	}
 	effect = {
-		increase_research = 0.01 
+		increase_research = 0.0100
 	}
 }
-
-

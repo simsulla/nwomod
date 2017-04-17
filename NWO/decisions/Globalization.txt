@@ -24,14 +24,14 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_modifier = cyber_warfare }
 			rank = 8
-			strd_internet = 1
+			comprehensive_school = 1
 		}
 		allow = {
 			NOT = { has_country_modifier = cyber_warfare }
 			war = no
 			rank = 2
 			OR = { government = hms_government government = democracy }	
-			uni_internet = 1
+			international_science = 1
 			money = 24000
 		}
 		effect = {
@@ -341,7 +341,7 @@ political_decisions = {
 			NOT = { has_country_modifier = bretton_system }
 		}
 		allow = {
-			strd_internet = 1 # i.e 1990+
+			comprehensive_school = 1 # i.e 1990+
 			OR = {
 				is_secondary_power = yes
 				is_greater_power = yes

@@ -1166,7 +1166,7 @@ issues = {
 	# criminology_classical
 	criminology_corporal = {
 		factor = 0.6
-		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
+		modifier = { factor = 0 country = { NOT = { comprehensive_school = 1 } } }
 		modifier = { factor = 0 OR = { is_next_reform = criminology_corporal NOT = { consciousness = 5 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
@@ -1183,7 +1183,7 @@ issues = {
 	}
 	criminology_capital = {
 		factor = 0.4
-		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
+		modifier = { factor = 0 country = { NOT = { comprehensive_school = 1 } } }
 		modifier = { factor = 0 OR = { is_next_reform = criminology_capital NOT = { consciousness = 6 } } }
 		modifier = { factor = 1.25 literacy = 0.20 }
 		modifier = { factor = 1.25 literacy = 0.30 }
@@ -1199,7 +1199,7 @@ issues = {
 	}
 	criminology_social = {
 		factor = 0.2
-		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
+		modifier = { factor = 0 country = { NOT = { comprehensive_school = 1 } } }
 		modifier = { factor = 0 is_next_reform = criminology_social }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -1216,7 +1216,7 @@ issues = {
 	# censored_publishing
 	firewall_publishing = {
 		factor = 0.6 
-		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
+		modifier = { factor = 0 country = { NOT = { comprehensive_school = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = firewall_publishing } luxury_needs =  0.3 } NOT = { consciousness = 4 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -1235,7 +1235,7 @@ issues = {
 	}
 	unregulated_publishing = {
 		factor = 0.4
-		modifier = { factor = 0 country = { NOT = { strd_internet = 1 } } }
+		modifier = { factor = 0 country = { NOT = { comprehensive_school = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = unregulated_publishing } luxury_needs =  0.3 } NOT = { consciousness = 7 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -1268,7 +1268,7 @@ issues = {
 	# gender_role_based
 	gender_equal = {
 		factor = 0.6
-		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
+		modifier = { factor = 0 country = { NOT = { geneva_conventions = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = gender_equal } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -1286,7 +1286,7 @@ issues = {
 	}
 	gender_promotive = {
 		factor = 0.4
-		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
+		modifier = { factor = 0 country = { NOT = { geneva_conventions = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = gender_promotive } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -1303,7 +1303,7 @@ issues = {
 	}
 	feminist = {
 		factor = 0.2
-		modifier = { factor = 0 country = { NOT = { cultural_imperialism = 1 } } }
+		modifier = { factor = 0 country = { NOT = { civil_rights = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = feminist } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -1355,7 +1355,7 @@ issues = {
 	}
 	parties_promote_democratic = {
 		factor = 0.8
-		modifier = { factor = 0 country = { NOT = { cultural_imperialism = 1 } } }
+		modifier = { factor = 0 country = { NOT = { civil_rights = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = parties_promote_democratic } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -1423,7 +1423,7 @@ issues = {
 	}
 	naturalization = {
 		factor = 1
-		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
+		modifier = { factor = 0 country = { NOT = { geneva_conventions = 1 } } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = naturalization } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.20 } }
@@ -1439,7 +1439,7 @@ issues = {
 	}
 	promoted_immigration = {
 		factor = 1
-		modifier = { factor = 0 country = { NOT = { cultural_imperialism = 1 } } }
+		modifier = { factor = 0 country = { NOT = { civil_rights = 1 } } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = promoted_immigration } luxury_needs = 0.2 } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
@@ -1476,7 +1476,7 @@ issues = {
 	}
 	lgbt_equal_rights = {
 		factor = 0.3
-		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
+		modifier = { factor = 0 country = { NOT = { geneva_conventions = 1 } } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = lgbt_equal_rights } luxury_needs = 0.2 } consciousness = 6 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1494,7 +1494,7 @@ issues = {
 	}
 	gender_neutrallity = {
 		factor = 0.2
-		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
+		modifier = { factor = 0 country = { NOT = { geneva_conventions = 1 } } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = gender_neutrallity } luxury_needs = 0.2 } consciousness = 7 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1511,7 +1511,7 @@ issues = {
 	}
 	lgbt_promoted = {
 		factor = 0.1
-		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
+		modifier = { factor = 0 country = { NOT = { geneva_conventions = 1 } } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = lgbt_promoted } luxury_needs = 0.2 } consciousness = 8 }
 		modifier = { factor = 0.5 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 1.25 NOT = { agree_with_ruling_party = 0.10 } }
@@ -1554,7 +1554,7 @@ issues = {
 	}
 	minorities_affirmative_action = {
 		factor = 0.4
-		modifier = { factor = 0 country = { NOT = { seventies_subcultures = 1 } } }
+		modifier = { factor = 0 country = { NOT = { geneva_conventions = 1 } } }
 		modifier = { factor = 0 OR = { NOT = { is_next_reform = minorities_affirmative_action } luxury_needs = 0.2 } consciousness = 7 }
 		modifier = { factor = 0.1 country = { has_country_flag = sectarianism }  }
 		modifier = { factor = 0.6 OR = { is_primary_culture = yes is_accepted_culture = yes } }

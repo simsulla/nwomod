@@ -32,10 +32,6 @@ country_event = {
 				plurality = 4
 			}
 		}
-		modifier = {
-			factor = 1.5
-			microgeneration = 1
-		}
 	}
 	
 	option = {
@@ -158,7 +154,7 @@ country_event = {
 	trigger = {
 		colonial_nation = yes
 		NOT = {
-			age_of_protests = 1
+			neoprotectionism = 1
 		}
 	}
 	
@@ -293,12 +289,6 @@ country_event = {
 			factor = 0.9
 			average_consciousness = 4
 		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				high_speed_uni_network = 1
-			}
-		}
 	}
 	
 	option = {
@@ -335,7 +325,7 @@ country_event = {
 	
 	trigger = {
 		colonial_nation = yes
-		age_of_protests = 1
+		neoprotectionism = 1
 	}
 	
 	mean_time_to_happen = {
@@ -538,7 +528,7 @@ province_event = {
 		modifier = {
 			factor = 2 # 1.5
 			owner = {
-				age_of_protests = 1
+				neoprotectionism = 1
 			}
 		}
 	}
@@ -1178,7 +1168,7 @@ country_event = {
 	
 	trigger = {
 		colonial_nation = yes
-		commodities_and_credit = 1
+		globalization = 1
 	}
 	
 	mean_time_to_happen = {
@@ -1193,7 +1183,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			age_of_protests = 1
+			neoprotectionism = 1
 		}
 		modifier = {
 			factor = 0.9
@@ -1224,7 +1214,7 @@ country_event = {
 	trigger = {
 		colonial_nation = yes
 		is_greater_power = yes
-		neoeconomic_responsibility = 1
+		colour_revolution = 1
 	}
 	
 	mean_time_to_happen = {
@@ -1349,7 +1339,7 @@ country_event = {
 	trigger = {
 		colonial_nation = yes
 		is_ideology_enabled = socialist
-		age_of_protests = 1
+		neoprotectionism = 1
 		NOT = {
 			government = proletarian_dictatorship
 			ruling_party_ideology = socialist
@@ -1809,7 +1799,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			uni_internet = 1
+			international_science = 1
 		}
 		modifier = {
 			factor = 1.5
@@ -1860,7 +1850,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			age_of_protests = 1
+			neoprotectionism = 1
 		}
 		modifier = {
 			factor = 0.9

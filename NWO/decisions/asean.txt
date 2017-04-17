@@ -14,7 +14,7 @@ political_decisions = {
 			has_country_flag = trade_block_ambition 
 			NOT = { has_country_modifier = in_bankrupcy } 
 			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xan_ambition } } } }
-			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_socialism government = proletarian_dictatorship } }
 			bank_for_international_settlements = 1
 			war = no
 		}
@@ -46,7 +46,7 @@ political_decisions = {
 		allow = {
 			OR = { 
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xan_ambition } } }
-				NOT = { OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } } }
+				NOT = { OR = { government = democracy government = hms_government AND = { has_country_flag = market_socialism government = proletarian_dictatorship } } }
 				has_country_modifier = in_bankrupcy
 				exists = XAL exists = XGC
 			}
@@ -84,8 +84,8 @@ political_decisions = {
 		}
 		allow = {
 			has_country_flag = xan_ambition
-			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
-			capitalism = 1
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_socialism government = proletarian_dictatorship } }
+			nuclear_power = 1
 			war = no
 		}
 		effect = {
@@ -103,8 +103,8 @@ political_decisions = {
 		allow = {
 			has_country_flag = xan_ambition
 			capital_scope = { has_province_modifier = single_market }
-			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
-			economic_globalization = 1
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_socialism government = proletarian_dictatorship } }
+			oil_cartel = 1
 			election = no
 			war = no
 		}
@@ -123,11 +123,11 @@ political_decisions = {
 		allow = {
 			has_country_flag = xan_ambition
 			capital_scope = { has_province_modifier = currency_union_province }
-			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_socialism government = proletarian_dictatorship } }
 			election = no
 			has_unclaimed_cores = no
 			war = no
-			commodities_and_credit = 1
+			globalization = 1
 		}
 		effect = {
 			all_core = { add_core = XAN }
@@ -143,10 +143,10 @@ political_decisions = {
 		allow = {
 			has_country_flag = xan_ambition
 			capital_scope = { is_core = XAN }
-			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_socialism government = proletarian_dictatorship } }
 			election = no
 			war = no
-			age_of_protests = 1
+			neoprotectionism = 1
 			has_unclaimed_cores = no
 		}
 		effect = {
@@ -167,7 +167,7 @@ political_decisions = {
 		allow = {
 			has_country_flag = xan_ambition
 			capital_scope = { has_province_modifier = defence_union } 
-			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_socialism government = proletarian_dictatorship } }
 			election = no
 			is_greater_power = yes
 			political_polarization = 1
@@ -196,7 +196,7 @@ political_decisions = {
 			any_neighbor_country = { has_country_flag = xan_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
 		}
 		allow = {
-			OR = { government = democracy government = hms_government AND = { has_country_flag = market_communism government = proletarian_dictatorship } }
+			OR = { government = democracy government = hms_government AND = { has_country_flag = market_socialism government = proletarian_dictatorship } }
 			election = no
 			is_greater_power = yes
 			political_polarization = 1

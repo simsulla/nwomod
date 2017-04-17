@@ -1,12 +1,12 @@
-
-#anti_ship_missiles
 long_range_fire_tactic = {
-	limit = { anti_ship_missiles = 1 }
+	limit = {
+		standardization = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = ww2_destroyer
+			invention = "ww2_destroyer"
 		}
 		modifier = {
 			factor = 2
@@ -14,19 +14,20 @@ long_range_fire_tactic = {
 		}
 	}
 	effect = {
-		#activate_unit = modern_cruiser
 		navy_base = {
 			default_organisation = 5
 		}
 	}
 }
 speedy_maneuvering_tactic = {
-	limit = { anti_ship_missiles = 1 }
+	limit = {
+		standardization = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = ww2_destroyer
+			invention = "ww2_destroyer"
 		}
 		modifier = {
 			factor = 1
@@ -39,12 +40,13 @@ speedy_maneuvering_tactic = {
 		}
 	}
 }
-#overseas_naval_base
 sealane_hunters = {
-	limit = { overseas_naval_base = 1 }
+	limit = {
+		lean_manufacturing = 1
+	}
 	chance = {
 		base = 2
-		modifier = {	
+		modifier = {
 			factor = 2
 			supercarriers = 1
 		}
@@ -60,7 +62,9 @@ sealane_hunters = {
 	}
 }
 fast_ship_killer = {
-	limit = { overseas_naval_base = 1 }
+	limit = {
+		lean_manufacturing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -75,7 +79,9 @@ fast_ship_killer = {
 	}
 }
 big_ship_competitor = {
-	limit = { overseas_naval_base = 1 }
+	limit = {
+		lean_manufacturing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -94,7 +100,9 @@ big_ship_competitor = {
 	}
 }
 standard_overseas_naval_base = {
-	limit = { overseas_naval_base = 1 }
+	limit = {
+		lean_manufacturing = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -112,9 +120,10 @@ standard_overseas_naval_base = {
 		}
 	}
 }
-#naval_warfare_center
 blue_water_school = {
-	limit = { naval_warfare_center = 1 }
+	limit = {
+		modern_workforce_management = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -128,12 +137,14 @@ blue_water_school = {
 	}
 	effect = {
 		navy_base = {
-			build_time = -10 
+			build_time = -10
 		}
 	}
 }
 brown_water_school = {
-	limit = { naval_warfare_center = 1 }
+	limit = {
+		modern_workforce_management = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -147,13 +158,14 @@ brown_water_school = {
 	}
 	effect = {
 		navy_base = {
-			build_time = -10 
+			build_time = -10
 		}
 	}
 }
-#anti_ship_ballistic_missile
 offensive_attitude = {
-	limit = { anti_ship_ballistic_missile = 1 }
+	limit = {
+		robotization_industry = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -176,16 +188,18 @@ offensive_attitude = {
 	}
 }
 defensive_attitude = {
-	limit = { anti_ship_ballistic_missile = 1 }
+	limit = {
+		robotization_industry = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = protected_cruisers
+			invention = "protected_cruisers"
 		}
 		modifier = {
 			factor = 2
-			invention = armour_piercing_projectiles
+			invention = "armour_piercing_projectiles"
 		}
 	}
 	effect = {
@@ -195,21 +209,21 @@ defensive_attitude = {
 		cruiser = {
 			hull = 5
 		}
-	
 	}
 }
-#mobile_offshore_base
 decisive_firepower_doctrine = {
-	limit = { mobile_offshore_base = 1 }
+	limit = {
+		service_revolution = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			age_of_protests = 1
+			neoprotectionism = 1
 		}
 		modifier = {
 			factor = 2
-			invention = work_control_and_hierarchy
+			invention = "work_control_and_hierarchy"
 		}
 	}
 	effect = {
@@ -219,7 +233,9 @@ decisive_firepower_doctrine = {
 	}
 }
 naval_firepower_doctrine = {
-	limit = { mobile_offshore_base = 1 }
+	limit = {
+		service_revolution = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -233,61 +249,10 @@ naval_firepower_doctrine = {
 		}
 	}
 }
-#fleet_auxiliary_cv_doctrine = {
-#	limit = { mobile_offshore_base = 1 }
-#	chance = {
-#		base = 6
-#	}
-#	effect = {
-#	}
-#}
-#fleet_auxiliary_ss_doctrine = {
-#	limit = { mobile_offshore_base = 1 }
-#	chance = {
-#		base = 6
-#	}
-#	effect = {
-#	}
-#}
-#convoy_sailing = {
-#	limit = { mobile_offshore_base = 1 }
-#	chance = {
-#		base = 6
-#	}
-#	effect = {
-#	}
-#}
-#integrated_naval_doctrine = {
-#	limit = { mobile_offshore_base = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = convoy_sailing
-#		}
-#		modifier = {
-#			factor = 2
-#			invention = fleet_auxiliary_ss_doctrine
-#		}
-#		modifier = {
-#			factor = 2
-#			invention = fleet_auxiliary_cv_doctrine
-#		}
-#		modifier = {
-#			factor = 2
-#			invention = naval_firepower_doctrine
-#		}
-#		modifier = {
-#			factor = 2
-#			invention = modern_cruisers
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#destroyers
 building_station_shipyards = {
-	limit = { destroyers = 1 }
+	limit = {
+		postwar_modernism = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -301,13 +266,14 @@ building_station_shipyards = {
 	}
 	effect = {
 		factory_goods_throughput = {
-			ships = 0.10
+			ships = 0.1000
 		}
 	}
 }
-#modern_shipbuilding
 fish_processing = {
-	limit = { modern_shipbuilding = 1 }
+	limit = {
+		beaux_arts_architecture = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -317,12 +283,14 @@ fish_processing = {
 	}
 	effect = {
 		factory_goods_throughput = {
-			fertilizers = 0.05
+			fertilizers = 0.0500
 		}
 	}
 }
 steamer_transports = {
-	limit = { modern_shipbuilding = 1 }
+	limit = {
+		beaux_arts_architecture = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -331,11 +299,13 @@ steamer_transports = {
 		}
 	}
 	effect = {
-		activate_unit = transportship 
+		activate_unit = "transportship"
 	}
 }
 commerce_raiders = {
-	limit = { modern_shipbuilding = 1 }
+	limit = {
+		beaux_arts_architecture = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -348,12 +318,13 @@ commerce_raiders = {
 		}
 	}
 	effect = {
-		activate_unit = submarine 
+		activate_unit = "submarine"
 	}
 }
-#corvette_building
 ww2_frigate = {
-	limit = { corvettes = 1 }
+	limit = {
+		art_nouveau = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -362,11 +333,13 @@ ww2_frigate = {
 		}
 	}
 	effect = {
-		activate_unit = frigate
+		activate_unit = "frigate"
 	}
 }
 ww2_destroyer = {
-	limit = { corvettes = 1 }
+	limit = {
+		art_nouveau = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -375,15 +348,17 @@ ww2_destroyer = {
 		}
 		modifier = {
 			factor = 2
-			invention = radar
+			invention = "radar"
 		}
 	}
 	effect = {
-		activate_unit = destroyer
+		activate_unit = "destroyer"
 	}
 }
 mechanized_fishing_vessels = {
-	limit = { nuclear_submarine = 1 }
+	limit = {
+		international_style = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -392,20 +367,22 @@ mechanized_fishing_vessels = {
 		}
 		modifier = {
 			factor = 2
-			invention = work_specialization
+			invention = "work_specialization"
 		}
 	}
 	effect = {
 		rgo_goods_output = {
-			fish = 0.5
+			fish = 0.5000
 		}
 		rgo_size = {
-			fish = -0.25
+			fish = -0.2500
 		}
 	}
 }
 steamer_automatic_construction_plants = {
-	limit = { nuclear_submarine = 1 }
+	limit = {
+		international_style = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -414,39 +391,24 @@ steamer_automatic_construction_plants = {
 		}
 		modifier = {
 			factor = 2
-			invention = building_station_shipyards
+			invention = "building_station_shipyards"
 		}
 	}
 	effect = {
 		factory_goods_throughput = {
-			ships = 0.10
+			ships = 0.1000
 		}
 	}
 }
-#torpedo_boats = {
-#	limit = { guided_missile_destroyers = 1 }
-#	chance = {
-#		base = 4
-#		modifier = {
-#			factor = 2
-#			invention = ww2_destroyer
-#		}
-#		modifier = {
-#			factor = 2
-#			invention = torpedo_gyroscope
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#ballistic_missile_submarine
 protected_cruisers = {
-	limit = { ballistic_missile_submarine = 1 }
+	limit = {
+		contemporary_architecture = 1
+	}
 	chance = {
 		base = 1
 		modifier = {
 			factor = 2
-			invention = ww2_destroyer
+			invention = "ww2_destroyer"
 		}
 		modifier = {
 			factor = 2
@@ -454,40 +416,18 @@ protected_cruisers = {
 		}
 	}
 	effect = {
-		activate_unit = cruiser 
+		activate_unit = "cruiser"
 	}
 }
-#destroyers = {
-#	limit = { ballistic_missile_submarine = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = torpedo_boats
-#		}
-#	}
-#	effect = {
-#	}
-#}
-#submarines = {
-#	limit = { ballistic_missile_submarine = 1 }
-#	chance = {
-#		base = 5
-#		modifier = {
-#			factor = 2
-#			invention = torpedo_boats
-#		}
-#	}
-#	effect = {
-#	}
-#}
 early_carrier = {
-	limit = { ballistic_missile_submarine = 1 }
+	limit = {
+		contemporary_architecture = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = ww2_destroyer
+			invention = "ww2_destroyer"
 		}
 		modifier = {
 			factor = 1
@@ -507,7 +447,9 @@ early_carrier = {
 	}
 }
 advanced_cruisers = {
-	limit = { magnetohydrodynamic_propulsors = 1 }
+	limit = {
+		urban_renewal = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -523,16 +465,18 @@ advanced_cruisers = {
 		cruiser = {
 			hull = 1
 			gun_power = 1
-		} 
+		}
 	}
 }
 modern_cruisers = {
-	limit = { magnetohydrodynamic_propulsors = 1 }
+	limit = {
+		urban_renewal = 1
+	}
 	chance = {
 		base = 1
 		modifier = {
 			factor = 2
-			invention = advanced_cruisers
+			invention = "advanced_cruisers"
 		}
 		modifier = {
 			factor = 2
@@ -546,11 +490,13 @@ modern_cruisers = {
 	effect = {
 		cruiser = {
 			maximum_speed = 1
-		}  
+		}
 	}
 }
 advanced_battleships = {
-	limit = { magnetohydrodynamic_propulsors = 1 }
+	limit = {
+		urban_renewal = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -566,16 +512,18 @@ advanced_battleships = {
 		carrier = {
 			hull = 1
 			gun_power = 1
-		} 
+		}
 	}
 }
 modern_battleships = {
-	limit = { magnetohydrodynamic_propulsors = 1 }
+	limit = {
+		urban_renewal = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = advanced_battleships
+			invention = "advanced_battleships"
 		}
 		modifier = {
 			factor = 2
@@ -585,21 +533,24 @@ modern_battleships = {
 	effect = {
 		carrier = {
 			maximum_speed = 1
-		} 
+		}
 	}
 }
 experimental_carriers = {
-	limit = { aircraft_carrier = 1 }
+	limit = {
+		interstate_highway_system = 1
+	}
 	chance = {
 		base = 6
 	}
-	effect = { 
-		activate_unit = carrier 
+	effect = {
+		activate_unit = "carrier"
 	}
 }
-#nuclear_reactors
 optical_rangefinders = {
-	limit = { nuclear_reactors = 1 }
+	limit = {
+		early_high_speed_rail = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -618,7 +569,9 @@ optical_rangefinders = {
 	}
 }
 gyrostabilized_fire_control = {
-	limit = { nuclear_reactors = 1 }
+	limit = {
+		early_high_speed_rail = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -629,11 +582,13 @@ gyrostabilized_fire_control = {
 	effect = {
 		navy_base = {
 			gun_power = 1
-		} 
+		}
 	}
 }
 armour_piercing_projectiles = {
-	limit = { supercarriers = 1 }
+	limit = {
+		rapid_transit = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -648,16 +603,18 @@ armour_piercing_projectiles = {
 	effect = {
 		navy_base = {
 			gun_power = 1
-		} 
+		}
 	}
 }
 armour_piercing_exploding_projectiles = {
-	limit = { supercarriers = 1 }
+	limit = {
+		rapid_transit = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = armour_piercing_projectiles
+			invention = "armour_piercing_projectiles"
 		}
 		modifier = {
 			factor = 1
@@ -667,16 +624,18 @@ armour_piercing_exploding_projectiles = {
 	effect = {
 		navy_base = {
 			gun_power = 1
-		} 
+		}
 	}
 }
 armoured_turrets = {
-	limit = { supercarriers = 1 }
+	limit = {
+		rapid_transit = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = ww2_destroyer
+			invention = "ww2_destroyer"
 		}
 		modifier = {
 			factor = 2
@@ -686,17 +645,18 @@ armoured_turrets = {
 	effect = {
 		navy_base = {
 			hull = 1
-		} 
+		}
 	}
 }
-#electromagnetic_aircraft_launch
 bomb_guns = {
-	limit = { electromagnetic_aircraft_launch = 1 }
+	limit = {
+		modern_backbone = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = armour_piercing_exploding_projectiles
+			invention = "armour_piercing_exploding_projectiles"
 		}
 		modifier = {
 			factor = 2
@@ -710,7 +670,9 @@ bomb_guns = {
 	}
 }
 rifled_guns = {
-	limit = { electromagnetic_aircraft_launch = 1 }
+	limit = {
+		modern_backbone = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -725,12 +687,14 @@ rifled_guns = {
 	}
 }
 quick_firing_guns = {
-	limit = { electromagnetic_aircraft_launch = 1 }
+	limit = {
+		modern_backbone = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = rifled_guns
+			invention = "rifled_guns"
 		}
 		modifier = {
 			factor = 1
@@ -744,12 +708,14 @@ quick_firing_guns = {
 	}
 }
 armoured_citadels = {
-	limit = { electromagnetic_aircraft_launch = 1 }
+	limit = {
+		modern_backbone = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = armoured_turrets
+			invention = "armoured_turrets"
 		}
 		modifier = {
 			factor = 1
@@ -763,16 +729,17 @@ armoured_citadels = {
 		carrier = {
 			hull = 2
 		}
-	
 	}
 }
 heavy_caliber_guns = {
-	limit = { electromagnetic_aircraft_launch = 1 }
+	limit = {
+		modern_backbone = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = rifled_guns
+			invention = "rifled_guns"
 		}
 		modifier = {
 			factor = 2
@@ -788,9 +755,10 @@ heavy_caliber_guns = {
 		}
 	}
 }
-#higher_density_reactor
 on_board_recon_aircraft = {
-	limit = { higher_density_reactor = 1 }
+	limit = {
+		dynamic_infrastructure = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -805,7 +773,9 @@ on_board_recon_aircraft = {
 	}
 }
 gun_hydraulics = {
-	limit = { higher_density_reactor = 1 }
+	limit = {
+		dynamic_infrastructure = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -820,7 +790,9 @@ gun_hydraulics = {
 	}
 }
 heavy_armour_plates = {
-	limit = { higher_density_reactor = 1 }
+	limit = {
+		dynamic_infrastructure = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -831,16 +803,18 @@ heavy_armour_plates = {
 	effect = {
 		carrier = {
 			hull = 2
-		} 
+		}
 	}
 }
 large_hull_form = {
-	limit = { higher_density_reactor = 1 }
+	limit = {
+		dynamic_infrastructure = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 1
-			invention = fordism
+			invention = "fordism"
 		}
 		modifier = {
 			factor = 3
@@ -850,21 +824,22 @@ large_hull_form = {
 	effect = {
 		navy_base = {
 			hull = 1
-		} 
+		}
 	}
 }
-#nextgen_supercarriers
 wireless = {
-	limit = { nextgen_supercarriers = 1 }
+	limit = {
+		future_backbone = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 3
-			invention = national_radio_networks
+			invention = "national_radio_networks"
 		}
 		modifier = {
 			factor = 2
-			invention = industrial_rnd_investments
+			invention = "industrial_rnd_investments"
 		}
 	}
 	effect = {
@@ -874,7 +849,9 @@ wireless = {
 	}
 }
 advanced_fire_control = {
-	limit = { nextgen_supercarriers = 1 }
+	limit = {
+		future_backbone = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -896,7 +873,9 @@ advanced_fire_control = {
 	}
 }
 electromagnetic_aircraft_launch = {
-	limit = { nextgen_supercarriers = 1 }
+	limit = {
+		future_backbone = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -918,14 +897,15 @@ electromagnetic_aircraft_launch = {
 		}
 	}
 }
-#aegis_combat
 night_training = {
-	limit = { aegis_combat = 1 }
+	limit = {
+		internet = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = transistor_transistor_logic
+			invention = "transistor_transistor_logic"
 		}
 		modifier = {
 			factor = 2
@@ -938,9 +918,10 @@ night_training = {
 		}
 	}
 }
-
 enemy_plotting_cards = {
-	limit = { aegis_combat = 1 }
+	limit = {
+		internet = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -958,9 +939,10 @@ enemy_plotting_cards = {
 		}
 	}
 }
-
 target_hit_profile_analysis = {
-	limit = { aegis_combat = 1 }
+	limit = {
+		internet = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -978,10 +960,10 @@ target_hit_profile_analysis = {
 		}
 	}
 }
-
-#aegis_defense
 hit_evaluation_reports = {
-	limit = { aegis_defense = 1 }
+	limit = {
+		mobile_phones_2g = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -999,9 +981,10 @@ hit_evaluation_reports = {
 		}
 	}
 }
-
 empirical_interdiction_reports = {
-	limit = { aegis_defense = 1 }
+	limit = {
+		mobile_phones_2g = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1019,9 +1002,10 @@ empirical_interdiction_reports = {
 		}
 	}
 }
-
 naval_strike_success_criterium = {
-	limit = { aegis_defense = 1 }
+	limit = {
+		mobile_phones_2g = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1039,15 +1023,15 @@ naval_strike_success_criterium = {
 		}
 	}
 }
-
-#aegis_combined
 underway_refueling = {
-	limit = { aegis_combined = 1 }
+	limit = {
+		native_ip_networks = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = horizontal_drilling
+			invention = "horizontal_drilling"
 		}
 		modifier = {
 			factor = 2
@@ -1060,18 +1044,19 @@ underway_refueling = {
 		}
 	}
 }
-
 ammunition_conservation_system = {
-	limit = { aegis_combined = 1 }
+	limit = {
+		native_ip_networks = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = armoured_turrets
+			invention = "armoured_turrets"
 		}
 		modifier = {
 			factor = 2
-			invention = time_studies
+			invention = "time_studies"
 		}
 	}
 	effect = {
@@ -1080,9 +1065,10 @@ ammunition_conservation_system = {
 		}
 	}
 }
-
 radio_telegraphy = {
-	limit = { aegis_combined = 1 }
+	limit = {
+		native_ip_networks = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1091,7 +1077,7 @@ radio_telegraphy = {
 		}
 		modifier = {
 			factor = 4
-			invention = national_radio_networks
+			invention = "national_radio_networks"
 		}
 	}
 	effect = {
@@ -1100,9 +1086,10 @@ radio_telegraphy = {
 		}
 	}
 }
-#ship_defense_system
 political_lobbying = {
-	limit = { ship_defense_system = 1 }
+	limit = {
+		rfid = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1120,9 +1107,10 @@ political_lobbying = {
 		}
 	}
 }
-
 military_political_decision_making = {
-	limit = { ship_defense_system = 1 }
+	limit = {
+		rfid = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1131,7 +1119,7 @@ military_political_decision_making = {
 		}
 		modifier = {
 			factor = 2
-			age_of_protests = 1
+			neoprotectionism = 1
 		}
 	}
 	effect = {
@@ -1140,9 +1128,10 @@ military_political_decision_making = {
 		}
 	}
 }
-
 local_military_government = {
-	limit = { ship_defense_system = 1 }
+	limit = {
+		rfid = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1151,7 +1140,7 @@ local_military_government = {
 		}
 		modifier = {
 			factor = 2
-			invention = pragmatism
+			invention = "pragmatism"
 		}
 	}
 	effect = {
@@ -1160,10 +1149,10 @@ local_military_government = {
 		}
 	}
 }
-
-#plasma_gasification
 war_gamming = {
-	limit = { plasma_gasification = 1 }
+	limit = {
+		argumented_reality = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1181,9 +1170,10 @@ war_gamming = {
 		}
 	}
 }
-
 combined_arms_planning = {
-	limit = { plasma_gasification = 1 }
+	limit = {
+		argumented_reality = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1194,7 +1184,6 @@ combined_arms_planning = {
 			factor = 2
 			supercarrier_battle_group = 1
 		}
-			
 	}
 	effect = {
 		navy_base = {
@@ -1202,10 +1191,10 @@ combined_arms_planning = {
 		}
 	}
 }
-
-#carrier_battle_group
 academic_training = {
-	limit = { carrier_battle_group = 1 }
+	limit = {
+		steam_locomotive = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1223,9 +1212,10 @@ academic_training = {
 		}
 	}
 }
-
 combat_station_training = {
-	limit = { carrier_battle_group = 1 }
+	limit = {
+		steam_locomotive = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1243,14 +1233,15 @@ combat_station_training = {
 		}
 	}
 }
-
 societal_status = {
-	limit = { carrier_battle_group = 1 }
+	limit = {
+		steam_locomotive = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = national_fraternity
+			invention = "national_fraternity"
 		}
 		modifier = {
 			factor = 2
@@ -1263,10 +1254,10 @@ societal_status = {
 		}
 	}
 }
-
-#salvo_combat_model
 independent_command = {
-	limit = { salvo_combat_model = 1 }
+	limit = {
+		electric_aluminium_motor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1285,17 +1276,19 @@ independent_command = {
 	}
 }
 continuous_issuing_of_orders = {
-	limit = { salvo_combat_model = 1 }
+	limit = {
+		electric_aluminium_motor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = radio_telegraphy
+			invention = "radio_telegraphy"
 		}
 		modifier = {
 			factor = 1
 			aegis_combined = 1
-		}	
+		}
 	}
 	effect = {
 		navy_base = {
@@ -1303,9 +1296,10 @@ continuous_issuing_of_orders = {
 		}
 	}
 }
-
 delegated_power = {
-	limit = { salvo_combat_model = 1 }
+	limit = {
+		electric_aluminium_motor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1319,10 +1313,10 @@ delegated_power = {
 		}
 	}
 }
-
-#supercarrier_battle_group
 wargames = {
-	limit = { supercarrier_battle_group = 1 }
+	limit = {
+		electric_ball_bearing_motor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1341,12 +1335,14 @@ wargames = {
 	}
 }
 alternative_plans = {
-	limit = { supercarrier_battle_group = 1 }
+	limit = {
+		electric_ball_bearing_motor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 1
-			invention = academic_training
+			invention = "academic_training"
 		}
 		modifier = {
 			factor = 2
@@ -1359,18 +1355,19 @@ alternative_plans = {
 		}
 	}
 }
-
 n_saddle_orders = {
-	limit = { supercarrier_battle_group = 1 }
+	limit = {
+		electric_ball_bearing_motor = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 1
-			invention = night_training
+			invention = "night_training"
 		}
 		modifier = {
 			factor = 2
-			invention = delegated_power
+			invention = "delegated_power"
 		}
 	}
 	effect = {
@@ -1379,18 +1376,19 @@ n_saddle_orders = {
 		}
 	}
 }
-#seabasing
 literate_ncos = {
-	limit = { seabasing = 1 }
+	limit = {
+		cogeneration = 1
+	}
 	chance = {
 		base = 4
 		modifier = {
 			factor = 2
-			invention = academic_training
+			invention = "academic_training"
 		}
 		modifier = {
 			factor = 2
-			uni_internet = 1
+			international_science = 1
 		}
 	}
 	effect = {
@@ -1400,12 +1398,14 @@ literate_ncos = {
 	}
 }
 nco_combat_station_training = {
-	limit = { seabasing = 1 }
+	limit = {
+		cogeneration = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = combat_station_training
+			invention = "combat_station_training"
 		}
 		modifier = {
 			factor = 2
@@ -1419,12 +1419,14 @@ nco_combat_station_training = {
 	}
 }
 nco_tactical_training = {
-	limit = { seabasing = 1 }
+	limit = {
+		cogeneration = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = political_lobbying
+			invention = "political_lobbying"
 		}
 		modifier = {
 			factor = 2
@@ -1437,9 +1439,10 @@ nco_tactical_training = {
 		}
 	}
 }
-#modern_battlespace
 amphibious_warfare_training = {
-	limit = { modern_battlespace = 1 }
+	limit = {
+		electric_car = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1458,24 +1461,25 @@ amphibious_warfare_training = {
 	}
 }
 naval_exercises = {
-	limit = { modern_battlespace = 1 }
+	limit = {
+		electric_car = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = war_gamming
+			invention = "war_gamming"
 		}
 		modifier = {
 			factor = 1
-			invention = offensive_attitude
+			invention = "offensive_attitude"
 		}
 		modifier = {
 			factor = 1
-			invention = defensive_attitude
+			invention = "defensive_attitude"
 		}
 	}
 	effect = {
-		naval_attrition = -0.1
+		naval_attrition = -0.1000
 	}
 }
-

@@ -1,6 +1,7 @@
-#programming_language
 plankalkul = {
-	limit = { programming_language = 1 }
+	limit = {
+		eastern_question = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -13,13 +14,14 @@ plankalkul = {
 		}
 	}
 	effect = {
-		activate_building = telecommunications_factory
+		activate_building = "telecommunications_factory"
 		shared_prestige = 10
 	}
 }
-
 programming_c = {
-	limit = { programming_language = 1 }
+	limit = {
+		eastern_question = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -35,9 +37,10 @@ programming_c = {
 		shared_prestige = 10
 	}
 }
-
 programming_java = {
-	limit = { programming_language = 1 }
+	limit = {
+		eastern_question = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -53,9 +56,10 @@ programming_java = {
 		shared_prestige = 10
 	}
 }
-
 information_quantities_of_information = {
-	limit = { information_theory = 1 }
+	limit = {
+		united_nations = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -71,9 +75,10 @@ information_quantities_of_information = {
 		shared_prestige = 20
 	}
 }
-
 infromation_coding_theory = {
-	limit = { information_theory = 1 }
+	limit = {
+		united_nations = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -89,9 +94,10 @@ infromation_coding_theory = {
 		shared_prestige = 20
 	}
 }
-
 information_gambling_theory = {
-	limit = { information_theory = 1 }
+	limit = {
+		united_nations = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -107,9 +113,10 @@ information_gambling_theory = {
 		shared_prestige = 20
 	}
 }
-
 medical_pharmaceutical_drug = {
-	limit = { medical_science = 1 }
+	limit = {
+		cold_war = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -125,9 +132,10 @@ medical_pharmaceutical_drug = {
 		shared_prestige = 20
 	}
 }
-
 medical_health_care_delivery = {
-	limit = { medical_science = 1 }
+	limit = {
+		cold_war = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -143,9 +151,10 @@ medical_health_care_delivery = {
 		shared_prestige = 20
 	}
 }
-
 medical_industrial_complex = {
-	limit = { medical_science = 1 }
+	limit = {
+		cold_war = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -161,9 +170,10 @@ medical_industrial_complex = {
 		shared_prestige = 20
 	}
 }
-
 military_funding_of_science = {
-	limit = { big_science = 1 }
+	limit = {
+		liberation_wars = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -179,9 +189,10 @@ military_funding_of_science = {
 		shared_prestige = 20
 	}
 }
-
 big_laboratories = {
-	limit = { big_science = 1 }
+	limit = {
+		liberation_wars = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -197,9 +208,10 @@ big_laboratories = {
 		shared_prestige = 20
 	}
 }
-
 human_genome_project = {
-	limit = { big_science = 1 }
+	limit = {
+		liberation_wars = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -215,10 +227,10 @@ human_genome_project = {
 		shared_prestige = 20
 	}
 }
-
-# quantum_science
 surcontemporary_science = {
-	limit = { quantum_science = 1 }
+	limit = {
+		clash_of_civilizations = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -227,11 +239,13 @@ surcontemporary_science = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 25
 	}
 }
 modern_design = {
-	limit = { quantum_science = 1 }
+	limit = {
+		clash_of_civilizations = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -240,72 +254,78 @@ modern_design = {
 		}
 		modifier = {
 			factor = 2
-			invention = sociology
+			invention = "sociology"
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 25
 	}
 }
 jazz = {
-	limit = { quantum_science = 1 }
+	limit = {
+		clash_of_civilizations = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			fifth_generation_warfare = 1
+			modern_battlespace = 1
 		}
 		modifier = {
 			factor = 2
-			invention = biased_multiculturalism
+			invention = "biased_multiculturalism"
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 25
 	}
 }
 socialist_contemporary_science = {
-	limit = { quantum_science = 1 }
+	limit = {
+		clash_of_civilizations = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			government = proletarian_dictatorship
+			government = "proletarian_dictatorship"
 		}
 		modifier = {
 			factor = 2
-			ruling_party_ideology = socialist
+			ruling_party_ideology = "socialist"
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 25
 	}
 }
-# pstn_network
 satellite = {
-        limit = { pstn_network = 1 }
-        chance = {
-                base = 2
-                modifier = {
-                    factor = 12
-					OR = { 
-						tag = USA 
-						tag = SUN 
-					} 
-                }
-                modifier = {
-                        factor = 2
-                        is_greater_power = yes
-                }
-        }
-        effect = {
-            permanent_prestige = 2
-			education_efficiency = 0.25
-        }
+	limit = {
+		quantum_physics = 1
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 12
+			OR = {
+				tag = {
+					"USA" "SUN" 	}
+			}
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		permanent_prestige = 2
+		education_efficiency = 0.2500
+	}
 }
-#strd_internet
 neokantian_strd_internet = {
-	limit = { strd_internet = 1 }
+	limit = {
+		comprehensive_school = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -318,12 +338,14 @@ neokantian_strd_internet = {
 		}
 	}
 	effect = {
-		activate_building = cosmetics_factory 
-		shared_prestige = 5 
+		activate_building = "cosmetics_factory"
+		shared_prestige = 5
 	}
 }
 hegelian_strd_internet = {
-	limit = { strd_internet = 1 }
+	limit = {
+		comprehensive_school = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -332,16 +354,17 @@ hegelian_strd_internet = {
 		}
 		modifier = {
 			factor = 2
-			digital_revolution = 1
+			war_on_terror = 1
 		}
 	}
 	effect = {
-		shared_prestige = 5 
+		shared_prestige = 5
 	}
 }
-#high_speed_uni_network
 pragmatism = {
-	limit = { high_speed_uni_network = 1 }
+	limit = {
+		international_science = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -354,16 +377,18 @@ pragmatism = {
 		}
 	}
 	effect = {
-		shared_prestige = 10 
+		shared_prestige = 10
 	}
 }
 i_high_speed_uni_network = {
-	limit = { high_speed_uni_network = 1 }
+	limit = {
+		international_science = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			digital_revolution = 1
+			war_on_terror = 1
 		}
 		modifier = {
 			factor = 2
@@ -371,12 +396,13 @@ i_high_speed_uni_network = {
 		}
 	}
 	effect = {
-		shared_prestige = 10 
+		shared_prestige = 10
 	}
 }
-#uni_internet
 i_uni_internet = {
-	limit = { uni_internet = 1 }
+	limit = {
+		blended_learning = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -386,18 +412,20 @@ i_uni_internet = {
 		modifier = {
 			factor = 2
 			molecular_biology = 1
-		}	
+		}
 		modifier = {
 			factor = 1
 			plurality = 5
 		}
 	}
 	effect = {
-		shared_prestige = 15 
+		shared_prestige = 15
 	}
 }
 modern_logics = {
-	limit = { uni_internet = 1 }
+	limit = {
+		blended_learning = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -410,11 +438,13 @@ modern_logics = {
 		}
 	}
 	effect = {
-		shared_prestige = 15 
+		shared_prestige = 15
 	}
 }
 logical_global_enrollment = {
-	limit = { uni_internet = 1 }
+	limit = {
+		blended_learning = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -427,11 +457,13 @@ logical_global_enrollment = {
 		}
 	}
 	effect = {
-		shared_prestige = 15 
+		shared_prestige = 15
 	}
 }
 philosophy_of_language = {
-	limit = { uni_internet = 1 }
+	limit = {
+		blended_learning = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -440,16 +472,17 @@ philosophy_of_language = {
 		}
 		modifier = {
 			factor = 2
-			age_of_protests = 1
+			neoprotectionism = 1
 		}
 	}
 	effect = {
 		shared_prestige = 15
 	}
 }
-#digital_revolution
 phenomenology = {
-	limit = { digital_revolution = 1 }
+	limit = {
+		neoliberalism = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -458,11 +491,13 @@ phenomenology = {
 		}
 	}
 	effect = {
-		shared_prestige = 20 
+		shared_prestige = 20
 	}
 }
 hermeneutics = {
-	limit = { digital_revolution = 1 }
+	limit = {
+		neoliberalism = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -471,30 +506,33 @@ hermeneutics = {
 		}
 		modifier = {
 			factor = 2
-			invention = darwinism
+			invention = "darwinism"
 		}
 	}
 	effect = {
-		shared_prestige = 20 
+		shared_prestige = 20
 	}
 }
-#virtual_science
 existentialism = {
-	limit = { virtual_science = 1 }
+	limit = {
+		political_polarization = 1
+	}
 	chance = {
 		base = 2
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 25
 	}
 }
 futurism = {
-	limit = { virtual_science = 1 }
+	limit = {
+		political_polarization = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = mining_equipment_automation
+			invention = "mining_equipment_automation"
 		}
 		modifier = {
 			factor = 2
@@ -502,11 +540,13 @@ futurism = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 25
 	}
 }
 quantum_theory = {
-	limit = { virtual_science = 1 }
+	limit = {
+		political_polarization = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -515,21 +555,22 @@ quantum_theory = {
 		}
 		modifier = {
 			factor = 2
-			invention = phenomenology
+			invention = "phenomenology"
 		}
 	}
 	effect = {
 		shared_prestige = 25
 	}
 }
-#blended_learning
 sociology = {
-	limit = { blended_learning = 1 }
+	limit = {
+		quantitative_behavioural_finance = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			uni_internet = 1
+			international_science = 1
 		}
 		modifier = {
 			factor = 2
@@ -537,11 +578,13 @@ sociology = {
 		}
 	}
 	effect = {
-		core_pop_consciousness_modifier = 0.01
+		core_pop_consciousness_modifier = 0.0100
 	}
 }
 social_psychology = {
-	limit = { blended_learning = 1 }
+	limit = {
+		quantitative_behavioural_finance = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -554,11 +597,13 @@ social_psychology = {
 		}
 	}
 	effect = {
-		core_pop_consciousness_modifier = 0.01
+		core_pop_consciousness_modifier = 0.0100
 	}
 }
 political_science = {
-	limit = { blended_learning = 1 }
+	limit = {
+		quantitative_behavioural_finance = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -575,16 +620,18 @@ political_science = {
 		}
 	}
 	effect = {
-		core_pop_consciousness_modifier = 0.01
+		core_pop_consciousness_modifier = 0.0100
 	}
 }
 social_anthropology = {
-	limit = { blended_learning = 1 }
+	limit = {
+		quantitative_behavioural_finance = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = darwinism
+			invention = "darwinism"
 		}
 		modifier = {
 			factor = 2
@@ -592,122 +639,131 @@ social_anthropology = {
 		}
 	}
 	effect = {
-		colonial_prestige = 0.1 
+		colonial_prestige = 0.1000
 	}
 }
-#cold war
 the_atomic_bomb = {
-        limit = { cold_war = 1 }
-        chance = {
-                base = 2
-                modifier = {
-                        factor = 12
-                        OR = { 
-				tag = USA 
-				tag = SUN 
-			} 
-                }
-                modifier = {
-                        factor = 2
-                        is_greater_power = yes
-                }
-        }
-        effect = {
-            permanent_prestige = 5
-            rebel_org_gain = {
-                faction = separatist_rebels
-                value = 0.50
-            }
-        }
+	limit = {
+		gold_bullion = 1
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 12
+			OR = {
+				tag = {
+					"USA" "SUN" 	}
+			}
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		permanent_prestige = 5
+		rebel_org_gain = {
+			faction = "separatist_rebels"
+			value = 0.5000
+		}
+	}
 }
 man_in_orbit = {
-        limit = { cold_war = 1 }
-        chance = {
-                base = 2
-                modifier = {
-                    factor = 12
-					OR = { 
-						tag = USA 
-						tag = SUN 
-					} 
-                }
-                modifier = {
-                        factor = 2
-                        is_greater_power = yes
-                }
-        }
-        effect = {
-            permanent_prestige = 2
-			education_efficiency = 0.25
-        }
+	limit = {
+		gold_bullion = 1
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 12
+			OR = {
+				tag = {
+					"USA" "SUN" 	}
+			}
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		permanent_prestige = 2
+		education_efficiency = 0.2500
+	}
 }
 spacewalk = {
-        limit = { cold_war = 1 }
-        chance = {
-                base = 2
-                modifier = {
-                    factor = 12
-					OR = { 
-						tag = USA 
-						tag = SUN 
-					} 
-                }
-                modifier = {
-                        factor = 2
-                        is_greater_power = yes
-                }
-        }
-        effect = {
-            permanent_prestige = 2
-			education_efficiency = 0.25
-        }
+	limit = {
+		gold_bullion = 1
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 12
+			OR = {
+				tag = {
+					"USA" "SUN" 	}
+			}
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		permanent_prestige = 2
+		education_efficiency = 0.2500
+	}
 }
 space_docking = {
-        limit = { detente = 1 }
-        chance = {
-                base = 2
-                modifier = {
-                    factor = 12
-					OR = { 
-						tag = USA 
-						tag = SUN 
-					} 
-                }
-                modifier = {
-                        factor = 2
-                        is_greater_power = yes
-                }
-        }
-        effect = {
-            permanent_prestige = 2
-			education_efficiency = 0.25
-        }
+	limit = {
+		bank_for_international_settlements = 1
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 12
+			OR = {
+				tag = {
+					"USA" "SUN" 	}
+			}
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		permanent_prestige = 2
+		education_efficiency = 0.2500
+	}
 }
 space_station = {
-        limit = { detente = 1 }
-        chance = {
-                base = 2
-                modifier = {
-                    factor = 12
-					OR = { 
-						tag = USA 
-						tag = SUN 
-					} 
-                }
-                modifier = {
-                        factor = 2
-                        is_greater_power = yes
-                }
-        }
-        effect = {
-            permanent_prestige = 2
-			education_efficiency = 0.25
-        }
+	limit = {
+		bank_for_international_settlements = 1
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 12
+			OR = {
+				tag = {
+					"USA" "SUN" 	}
+			}
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+	}
+	effect = {
+		permanent_prestige = 2
+		education_efficiency = 0.2500
+	}
 }
-
-#preschool_education
 the_revolt_of_the_masses = {
-	limit = { preschool_education = 1 }
+	limit = {
+		new_keynesian = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -716,35 +772,38 @@ the_revolt_of_the_masses = {
 		}
 		modifier = {
 			factor = 2
-			fifth_generation_warfare = 1
+			modern_battlespace = 1
 		}
 	}
 	effect = {
-		plurality = 0.10
-		war_exhaustion = -0.25
+		plurality = 0.1000
+		war_exhaustion = -0.2500
 	}
 }
 the_decline_of_the_west_and_the_lost_generation = {
-	limit = { preschool_education = 1 }
+	limit = {
+		new_keynesian = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			fifth_generation_warfare = 1
+			modern_battlespace = 1
 		}
 	}
 	effect = {
-		core_pop_consciousness_modifier = 0.05
+		core_pop_consciousness_modifier = 0.0500
 	}
 }
-#globalization
 individualism = {
-	limit = { globalization = 1 }
+	limit = {
+		washington_consensus = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 3
-			nationalvalue = nv_liberty
+			nationalvalue = "nv_liberty"
 		}
 		modifier = {
 			factor = 1
@@ -752,41 +811,45 @@ individualism = {
 		}
 	}
 	effect = {
-		plurality = 0.05
-		suppression_points_modifier = -0.05
+		plurality = 0.0500
+		suppression_points_modifier = -0.0500
 	}
 }
 secularization = {
-	limit = { globalization = 1 }
+	limit = {
+		washington_consensus = 1
+	}
 	chance = {
 		base = 1
 		modifier = {
 			factor = 3
-			nationalvalue = nv_equality
+			nationalvalue = "nv_equality"
 		}
 		modifier = {
 			factor = 1
 			OR = {
-				ruling_party_ideology = socialist
-				ruling_party_ideology = liberal
+				ruling_party_ideology = {
+					"socialist" "liberal" 	}
 			}
 		}
 	}
 	effect = {
-		plurality = 0.05
-        rebel_org_gain = {
-            faction = islamist_rebels
-            value = 0.50
-        }
+		plurality = 0.0500
+		rebel_org_gain = {
+			faction = "islamist_rebels"
+			value = 0.5000
+		}
 	}
 }
 social_conscience = {
-	limit = { globalization = 1 }
+	limit = {
+		washington_consensus = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 3
-			nationalvalue = nv_equality
+			nationalvalue = "nv_equality"
 		}
 		modifier = {
 			factor = 3
@@ -794,34 +857,36 @@ social_conscience = {
 		}
 	}
 	effect = {
-		plurality = 0.05
-		suppression_points_modifier = -0.05
+		plurality = 0.0500
+		suppression_points_modifier = -0.0500
 	}
 }
 social_justice = {
-	limit = { globalization = 1 }
+	limit = {
+		washington_consensus = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			nationalvalue = nv_equality
+			nationalvalue = "nv_equality"
 		}
 		modifier = {
 			factor = 1
 			OR = {
-				ruling_party_ideology = liberal
-				ruling_party_ideology = socialist
+				ruling_party_ideology = {
+					"liberal" "socialist" 	}
 			}
 		}
 	}
 	effect = {
-		plurality = 0.05
+		plurality = 0.0500
 	}
 }
-#war_on_terror
-#age_of_protests
 national_fraternity = {
-	limit = { age_of_protests = 1 }
+	limit = {
+		wto = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -834,151 +899,150 @@ national_fraternity = {
 		}
 	}
 	effect = {
-		war_exhaustion = -0.05
-		plurality = 0.05
+		war_exhaustion = -0.0500
+		plurality = 0.0500
 	}
 }
 biased_multiculturalism = {
-	limit = { age_of_protests = 1 }
+	limit = {
+		wto = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 1
-			ruling_party_ideology = populist
+			ruling_party_ideology = "populist"
 		}
 		modifier = {
 			factor = 2
-			OR = { 
-				ruling_party_ideology = conservative
-				ruling_party_ideology = big_tent
+			OR = {
+				ruling_party_ideology = {
+					"conservative" "big_tent" 	}
 			}
 		}
 		modifier = {
 			factor = 1
-			nationalvalue = nv_order
+			nationalvalue = "nv_order"
 		}
 	}
 	effect = {
-		colonial_migration = 0.05
+		colonial_migration = 0.0500
 	}
 }
-#revanchism = {
-#	limit = { age_of_protests = 1 }
-#	chance = {
-#		base = 5
-#	}
-#	effect = { 
-#	}
-#}
-#political_polarization
 terrorism = {
-	limit = { political_polarization = 1 }
+	limit = {
+		cips = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			ruling_party_ideology = socialist
+			ruling_party_ideology = "socialist"
 		}
 		modifier = {
 			factor = 3
 			OR = {
-				ruling_party_ideology = populist
-				ruling_party_ideology = traditionalist
-				ruling_party_ideology = communist
+				ruling_party_ideology = {
+					"populist" "traditionalist" "communist" 	}
 			}
 		}
 		modifier = {
 			factor = -1
-			nationalvalue = nv_liberty
+			nationalvalue = "nv_liberty"
 		}
 	}
 	effect = {
-		enable_crime = terrorist_cells 
-        rebel_org_gain = {
-            faction = islamist_rebels
-            value = 0.75
-        }		
+		enable_crime = "terrorist_cells"
+		rebel_org_gain = {
+			faction = "islamist_rebels"
+			value = 0.7500
+		}
 	}
 }
 identity_politics = {
-	limit = { political_polarization = 1 }
+	limit = {
+		cips = 1
+	}
 	chance = {
 		base = 5
 	}
-	effect = { 
-        rebel_org_gain = {
-            faction = populist_rebels
-            value = 0.75
-        }
+	effect = {
+		rebel_org_gain = {
+			faction = "populist_rebels"
+			value = 0.7500
+		}
 	}
 }
 secret_police = {
-	limit = { political_polarization = 1 }
+	limit = {
+		cips = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 3
 			OR = {
-				ruling_party_ideology = populist
-				ruling_party_ideology = traditionalist
-				ruling_party_ideology = communist
+				ruling_party_ideology = {
+					"populist" "traditionalist" "communist" 	}
 			}
 		}
 		modifier = {
 			factor = 2
-			nationalvalue = nv_order
+			nationalvalue = "nv_order"
 		}
 	}
 	effect = {
 		rebel_org_gain = {
-			faction = all
-			value = -0.25
+			faction = "all"
+			value = -0.2500
 		}
-		
-		suppression_points_modifier = 0.25
+		suppression_points_modifier = 0.2500
 	}
 }
-#new_world_order
 the_police_state = {
-	limit = { new_world_order = 1 }
+	limit = {
+		beijing_consensus = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 3
 			OR = {
-				ruling_party_ideology = populist
-				ruling_party_ideology = traditionalist
-				ruling_party_ideology = communist
+				ruling_party_ideology = {
+					"populist" "traditionalist" "communist" 	}
 			}
 		}
 		modifier = {
 			factor = 2
-			nationalvalue = nv_order
+			nationalvalue = "nv_order"
 		}
 	}
 	effect = {
 		rebel_org_gain = {
-			faction = all
-			value = -0.25
+			faction = "all"
+			value = -0.2500
 		}
-		suppression_points_modifier = 0.25
+		suppression_points_modifier = 0.2500
 	}
 }
 national_trauma = {
-	limit = { new_world_order = 1 }
+	limit = {
+		beijing_consensus = 1
+	}
 	chance = {
 		base = 5
 	}
 	effect = {
-        rebel_org_gain = {
-            faction = populist_rebels
-            value = 0.25
-        }		
+		rebel_org_gain = {
+			faction = "populist_rebels"
+			value = 0.2500
+		}
 	}
 }
-#decolonization
 separatism = {
-	limit = { decolonization = 1 }
+	limit = {
+		socialism = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -991,15 +1055,17 @@ separatism = {
 		}
 	}
 	effect = {
-		seperatism = 0.5
+		seperatism = 0.5000
 		rebel_org_gain = {
-			faction = separatist_rebels 
-			value = 0.33
+			faction = "separatist_rebels"
+			value = 0.3300
 		}
 	}
 }
 anti_imperialism = {
-	limit = { decolonization = 1 }
+	limit = {
+		socialism = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -1012,39 +1078,42 @@ anti_imperialism = {
 		}
 	}
 	effect = {
-		seperatism = 0.5
+		seperatism = 0.5000
 		rebel_org_gain = {
-			faction = communist_rebels 
-			value = 0.33
+			faction = "communist_rebels"
+			value = 0.3300
 		}
 	}
 }
-#next_generation_subcultures
 mass_advertising = {
-	limit = { next_generation_subcultures = 1 }
+	limit = {
+		new_progressive = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 7
-			nationalvalue = nv_liberty
+			nationalvalue = "nv_liberty"
 		}
 		modifier = {
 			factor = 2
-			government = democracy
+			government = "democracy"
 		}
 		modifier = {
 			factor = 1
-			government = hms_government
+			government = "hms_government"
 		}
 	}
 	effect = {
-		education_efficiency = 0.25
-		suppression_points_modifier = -0.05
+		education_efficiency = 0.2500
+		suppression_points_modifier = -0.0500
 	}
-	core_pop_consciousness_modifier = 0.01
+	core_pop_consciousness_modifier = 0.0100
 }
 national_radio_networks = {
-	limit = { next_generation_subcultures = 1 }
+	limit = {
+		new_progressive = 1
+	}
 	chance = {
 		base = 3
 		modifier = {
@@ -1053,31 +1122,33 @@ national_radio_networks = {
 		}
 		modifier = {
 			factor = 2
-			government = democracy
+			government = "democracy"
 		}
 		modifier = {
 			factor = -1
 			NOT = {
-				publishing_rights = unregulated_publishing
+				publishing_rights = "unregulated_publishing"
 			}
 		}
 	}
-	effect = { 
-		suppression_points_modifier = -0.05
-        rebel_org_gain = {
-            faction = communist_rebels
-            value = 0.25
-        }		
+	effect = {
+		suppression_points_modifier = -0.0500
+		rebel_org_gain = {
+			faction = "communist_rebels"
+			value = 0.2500
+		}
 	}
-	core_pop_consciousness_modifier = 0.01
+	core_pop_consciousness_modifier = 0.0100
 }
 the_talkies = {
-	limit = { next_generation_subcultures = 1 }
+	limit = {
+		new_progressive = 1
+	}
 	chance = {
 		base = 2
 		modifier = {
 			factor = 2
-			nationalvalue = nv_liberty
+			nationalvalue = "nv_liberty"
 		}
 		modifier = {
 			factor = 2
@@ -1086,7 +1157,7 @@ the_talkies = {
 	}
 	effect = {
 		shared_prestige = 20
-		suppression_points_modifier = -0.05
+		suppression_points_modifier = -0.0500
 	}
-	core_pop_consciousness_modifier = 0.01
+	core_pop_consciousness_modifier = 0.0100
 }
