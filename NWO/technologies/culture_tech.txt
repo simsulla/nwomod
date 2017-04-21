@@ -1,31 +1,9 @@
-imperialism = {
-	area = "social_culture_tech"
-	year = 1870
-	cost = 2400
-	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-	}
-	prestige = 0.0500
-	education_efficiency = 0.1000
-}
 the_great_powers = {
 	area = "geopolitics_tech"
 	year = 1870
 	cost = 2400
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -34,30 +12,18 @@ eastern_question = {
 	area = "geopolitics_tech"
 	year = 1900
 	cost = 5400
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	prestige = 0.0500
-	education_efficiency = 0.1000
 }
 league_of_nations = {
 	area = "geopolitics_tech"
 	year = 1920
 	cost = 7400
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -66,30 +32,18 @@ united_nations = {
 	area = "geopolitics_tech"
 	year = 1940
 	cost = 9400
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	administrative_efficiency = 0.0500
-	prestige = 0.0500
 }
 marshall_plan = {
 	area = "geopolitics_tech"
 	year = 1946
 	cost = 10000
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -98,30 +52,18 @@ cold_war = {
 	area = "geopolitics_tech"
 	year = 1950
 	cost = 10400
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	activate_building = "health_factory"
-	prestige = 0.0500
 }
 containment = {
 	area = "geopolitics_tech"
 	year = 1950
 	cost = 10400
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -130,30 +72,18 @@ liberation_wars = {
 	area = "geopolitics_tech"
 	year = 1950
 	cost = 10400
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	prestige = 0.0500
-	education_efficiency = 0.1000
 }
 era_of_stagnation = {
 	area = "geopolitics_tech"
 	year = 1964
 	cost = 11800
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -162,40 +92,18 @@ detente = {
 	area = "geopolitics_tech"
 	year = 1969
 	cost = 12300
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0500
-		modifier = {
-			factor = 1000
-			continent = "north_america"
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.1000
-			not = {
-				literacy = 0.5000
-			}
-			is_greater_power = no
-		}
-		modifier = {
-			factor = 1.0500
-			literacy = 0.6000
-		}
-		modifier = {
-			factor = 2
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	prestige = 0.0500
-	education_efficiency = 0.1000
 }
 new_world_order = {
 	area = "geopolitics_tech"
 	year = 1972
 	cost = 12600
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -204,35 +112,18 @@ globalization = {
 	area = "geopolitics_tech"
 	year = 1995
 	cost = 14900
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0500
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.1000
-			not = {
-				literacy = 0.3000
-			}
-			is_greater_power = no
-		}
-		modifier = {
-			factor = 1.0500
-			literacy = 0.6000
-		}
-		modifier = {
-			factor = 2
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	prestige = 0.0500
-	education_efficiency = 0.1000
 }
 colour_revolution = {
 	area = "geopolitics_tech"
 	year = 2000
 	cost = 15400
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -241,35 +132,18 @@ war_on_terror = {
 	area = "geopolitics_tech"
 	year = 2000
 	cost = 15400
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0500
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.1000
-			not = {
-				literacy = 0.4000
-			}
-			is_greater_power = no
-		}
-		modifier = {
-			factor = 1.0500
-			literacy = 0.6000
-		}
-		modifier = {
-			factor = 2
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	prestige = 0.0500
-	education_efficiency = 0.1000
 }
 neoprotectionism = {
 	area = "geopolitics_tech"
 	year = 2015
 	cost = 16900
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -278,35 +152,18 @@ political_polarization = {
 	area = "geopolitics_tech"
 	year = 2030
 	cost = 18400
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0500
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.1000
-			not = {
-				literacy = 0.5000
-			}
-			is_greater_power = no
-		}
-		modifier = {
-			factor = 1.0500
-			literacy = 0.6000
-		}
-		modifier = {
-			factor = 2
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	prestige = 0.0500
-	education_efficiency = 0.1000
 }
 second_cold_war = {
 	area = "geopolitics_tech"
 	year = 2049
 	cost = 20300
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -315,35 +172,18 @@ clash_of_civilizations = {
 	area = "geopolitics_tech"
 	year = 2050
 	cost = 20400
+
+	max_national_focus = 1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 0.1000
-			not = {
-				literacy = 0.5000
-			}
-			is_greater_power = no
-		}
-		modifier = {
-			factor = 1.0500
-			literacy = 0.6000
-		}
-		modifier = {
-			factor = 2
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	prestige = 0.0500
-	education_efficiency = 0.1000
 }
 global_governance = {
 	area = "geopolitics_tech"
 	year = 2070
 	cost = 22400
+
+	max_national_focus = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -352,41 +192,18 @@ religous_education = {
 	area = "education_policy_tech"
 	year = 1870
 	cost = 2400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 2
-		modifier = {
-			factor = 2
-			government = "proletarian_dictatorship"
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 2
-			year = 1950
-		}
-		modifier = {
-			factor = 1.1000
-			year = 1960
-		}
-		modifier = {
-			factor = 2
-			year = 1970
-		}
-		modifier = {
-			factor = 2
-			year = 1980
-		}
+		factor = 1
 	}
-	increase_research = 0.5000
-	administrative_efficiency = 0.0500
-	education_efficiency = 0.1500
 }
 preschool_education = {
 	area = "education_policy_tech"
 	year = 1885
 	cost = 3900
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -395,41 +212,18 @@ compulsory_primary_education = {
 	area = "education_policy_tech"
 	year = 1900
 	cost = 5400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 2
-		modifier = {
-			factor = 2
-			government = "proletarian_dictatorship"
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 2
-			year = 1950
-		}
-		modifier = {
-			factor = 1.1000
-			year = 1960
-		}
-		modifier = {
-			factor = 2
-			year = 1970
-		}
-		modifier = {
-			factor = 2
-			year = 1980
-		}
+		factor = 1
 	}
-	increase_research = 0.5000
-	administrative_efficiency = 0.0500
-	education_efficiency = 0.1500
 }
 theory_of_relativity = {
 	area = "education_policy_tech"
 	year = 1910
 	cost = 6400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -438,42 +232,18 @@ quantum_physics = {
 	area = "education_policy_tech"
 	year = 1920
 	cost = 7400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 2
-		modifier = {
-			factor = 2
-			government = "proletarian_dictatorship"
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 2
-			year = 1950
-		}
-		modifier = {
-			factor = 1.1000
-			year = 1960
-		}
-		modifier = {
-			factor = 2
-			year = 1970
-		}
-		modifier = {
-			factor = 2
-			year = 1980
-		}
+		factor = 1
 	}
-	increase_research = 0.5000
-	activate_building = "electric_telecommunications_factory"
-	administrative_efficiency = 0.0500
-	education_efficiency = 0.1000
 }
 nuclear_fission = {
 	area = "education_policy_tech"
 	year = 1930
 	cost = 8400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -482,33 +252,18 @@ atom_bomb = {
 	area = "education_policy_tech"
 	year = 1940
 	cost = 9400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 2
-		modifier = {
-			factor = 2
-			government = "proletarian_dictatorship"
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 2
-			year = 1970
-		}
-		modifier = {
-			factor = 2
-			year = 1980
-		}
+		factor = 1
 	}
-	increase_research = 0.5000
-	administrative_efficiency = 0.0500
-	education_efficiency = 0.1500
 }
 tripartite_system = {
 	area = "education_policy_tech"
 	year = 1940
 	cost = 9400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -517,41 +272,18 @@ programming_language = {
 	area = "education_policy_tech"
 	year = 1950
 	cost = 10400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 6
-		modifier = {
-			factor = 2
-			government = "proletarian_dictatorship"
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 2
-			year = 2000
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2010
-		}
-		modifier = {
-			factor = 2
-			year = 2020
-		}
-		modifier = {
-			factor = 2
-			year = 2030
-		}
+		factor = 1
 	}
-	increase_research = 0.5000
-	administrative_efficiency = 0.0500
-	education_efficiency = 0.1500
 }
 big_science = {
 	area = "education_policy_tech"
 	year = 1960
 	cost = 11400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -560,45 +292,18 @@ comprehensive_school = {
 	area = "education_policy_tech"
 	year = 1970
 	cost = 12400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 6
-		modifier = {
-			factor = 2
-			government = "proletarian_dictatorship"
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2010
-		}
-		modifier = {
-			factor = 2
-			year = 2020
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2030
-		}
-		modifier = {
-			factor = 2
-			year = 2040
-		}
-		modifier = {
-			factor = 2
-			year = 2050
-		}
+		factor = 1
 	}
-	increase_research = 0.5000
-	administrative_efficiency = 0.0500
-	education_efficiency = 0.0500
 }
 compulsory_secondary_education = {
 	area = "education_policy_tech"
 	year = 1980
 	cost = 13400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -607,32 +312,18 @@ international_science = {
 	area = "education_policy_tech"
 	year = 1990
 	cost = 14400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 6
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2010
-		}
-		modifier = {
-			factor = 2
-			year = 2020
-		}
-		modifier = {
-			factor = 2
-			year = 2030
-		}
+		factor = 1
 	}
-	increase_research = 0.5000
-	education_efficiency = 0.0500
 }
 e_learning = {
 	area = "education_policy_tech"
 	year = 2020
 	cost = 17400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -641,28 +332,18 @@ blended_learning = {
 	area = "education_policy_tech"
 	year = 2030
 	cost = 18400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 6
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2030
-		}
-		modifier = {
-			factor = 2
-			year = 2040
-		}
+		factor = 1
 	}
-	increase_research = 1
-	education_efficiency = 0.0500
 }
 quantum_science = {
 	area = "education_policy_tech"
 	year = 2040
 	cost = 19400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -671,28 +352,18 @@ brain_computer_interface = {
 	area = "education_policy_tech"
 	year = 2050
 	cost = 20400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 6
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2050
-		}
-		modifier = {
-			factor = 2
-			year = 2060
-		}
+		factor = 1
 	}
-	increase_research = 1
-	education_efficiency = 0.0500
 }
 brain_reading = {
 	area = "education_policy_tech"
 	year = 2060
 	cost = 21400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -701,28 +372,18 @@ virtual_science = {
 	area = "education_policy_tech"
 	year = 2070
 	cost = 22400
+
+	education_efficiency = 0.1
 	ai_chance = {
-		factor = 6
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2080
-		}
-		modifier = {
-			factor = 2
-			year = 2090
-		}
+		factor = 1
 	}
-	increase_research = 1
-	education_efficiency = 0.0500
 }
 immersion = {
 	area = "education_policy_tech"
 	year = 2080
 	cost = 23400
+
+	education_efficiency = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -731,31 +392,18 @@ classical_economics = {
 	area = "economy_tech"
 	year = 1850
 	cost = 400
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.2000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.4000
 }
 marxian_economics = {
 	area = "economy_tech"
 	year = 1880
 	cost = 3400
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -764,31 +412,18 @@ neoclassical_economics = {
 	area = "economy_tech"
 	year = 1895
 	cost = 4900
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.2000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 mathematical_economics = {
 	area = "economy_tech"
 	year = 1920
 	cost = 7400
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -797,31 +432,18 @@ keynesian_economics = {
 	area = "economy_tech"
 	year = 1936
 	cost = 9000
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.2000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 international_financial_institutions = {
 	area = "economy_tech"
 	year = 1941
 	cost = 9500
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -830,31 +452,18 @@ credit_rating_agency = {
 	area = "economy_tech"
 	year = 1971
 	cost = 12500
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.2000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 new_institutional_economics = {
 	area = "economy_tech"
 	year = 1972
 	cost = 12600
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -863,31 +472,18 @@ new_keynesian = {
 	area = "economy_tech"
 	year = 1980
 	cost = 13400
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.5000
-			not = {
-				literacy = 0.2000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 basel_i = {
 	area = "economy_tech"
 	year = 1988
 	cost = 14200
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -896,25 +492,18 @@ new_synthesis = {
 	area = "economy_tech"
 	year = 1990
 	cost = 14400
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 3
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 cross_listing = {
 	area = "economy_tech"
 	year = 2000
 	cost = 15400
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -923,25 +512,18 @@ quantitative_easing = {
 	area = "economy_tech"
 	year = 2010
 	cost = 16400
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 3
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 competitive_credit_rating = {
 	area = "economy_tech"
 	year = 2010
 	cost = 16400
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -950,25 +532,18 @@ basel_iii = {
 	area = "economy_tech"
 	year = 2020
 	cost = 17400
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 3
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 liquidity_trap_theory = {
 	area = "economy_tech"
 	year = 2030
 	cost = 18400
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -977,25 +552,18 @@ quantitative_behavioural_finance = {
 	area = "economy_tech"
 	year = 2030
 	cost = 18400
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 3
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 clearing_union = {
 	area = "economy_tech"
 	year = 2050
 	cost = 20400
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -1004,29 +572,18 @@ financial_stability_board = {
 	area = "economy_tech"
 	year = 2060
 	cost = 21400
+
+	influence = 0.1
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 3
-			not = {
-				literacy = 0.3000
-			}
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	education_efficiency = 0.2000
 }
 neofinancial_system = {
 	area = "economy_tech"
 	year = 2090
 	cost = 24400
+
+	influence = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -1035,24 +592,18 @@ gold_specie = {
 	area = "financial_institutions_tech"
 	year = 1870
 	cost = 2400
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 6
-			is_greater_power = yes
-			year = 2030
-		}
+		factor = 1
 	}
-	max_national_focus = 1
 }
 fiat_money = {
 	area = "financial_institutions_tech"
 	year = 1910
 	cost = 6400
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1061,32 +612,18 @@ gold_bullion = {
 	area = "financial_institutions_tech"
 	year = 1920
 	cost = 7400
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 6
-			OR = {
-				tag = {
-					"USA" "SUN" 	}
-			}
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 6
-			is_greater_power = yes
-			year = 2030
-		}
+		factor = 1
 	}
-	max_national_focus = 1
 }
 sterling_area = {
 	area = "financial_institutions_tech"
 	year = 1930
 	cost = 8400
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1095,24 +632,18 @@ bank_for_international_settlements = {
 	area = "financial_institutions_tech"
 	year = 1930
 	cost = 8400
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 6
-			is_greater_power = yes
-			year = 2030
-		}
+		factor = 1
 	}
-	max_national_focus = 1
 }
 bretton_system = {
 	area = "financial_institutions_tech"
 	year = 1944
 	cost = 9800
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1121,24 +652,18 @@ imf = {
 	area = "financial_institutions_tech"
 	year = 1946
 	cost = 10000
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 6
-			is_greater_power = yes
-			year = 2030
-		}
+		factor = 1
 	}
-	max_national_focus = 1
 }
 world_bank = {
 	area = "financial_institutions_tech"
 	year = 1946
 	cost = 10000
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1147,24 +672,18 @@ gatt = {
 	area = "financial_institutions_tech"
 	year = 1962
 	cost = 11600
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 6
-			is_greater_power = yes
-			year = 2030
-		}
+		factor = 1
 	}
-	max_national_focus = 1
 }
 dollar_standard = {
 	area = "financial_institutions_tech"
 	year = 1971
 	cost = 12500
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1173,36 +692,18 @@ washington_consensus = {
 	area = "financial_institutions_tech"
 	year = 1973
 	cost = 12700
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 6
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.5000
-			total_pops = 1000000
-		}
-		modifier = {
-			factor = 51
-			rank = 16
-			year = 2020
-		}
-		modifier = {
-			factor = 51
-			year = 2030
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	max_national_focus = 1
 }
 swift = {
 	area = "financial_institutions_tech"
 	year = 1973
 	cost = 12700
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1211,36 +712,18 @@ flexible_exchange_rates = {
 	area = "financial_institutions_tech"
 	year = 1973
 	cost = 12700
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 3.5000
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.5000
-			total_pops = 2000000
-		}
-		modifier = {
-			factor = 51
-			rank = 16
-			year = 2030
-		}
-		modifier = {
-			factor = 51
-			year = 2040
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	max_national_focus = 1
 }
 managed_exchange_rates = {
 	area = "financial_institutions_tech"
 	year = 1985
 	cost = 13900
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1249,47 +732,19 @@ wto = {
 	area = "financial_institutions_tech"
 	year = 1995
 	cost = 14900
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1500
-		modifier = {
-			factor = 2
-			has_country_modifier = "internationalism"
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 11
-			rank = 16
-			year = 2040
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-			year = 2045
-		}
-		modifier = {
-			factor = 51
-			rank = 16
-			year = 2050
-		}
-		modifier = {
-			factor = 1.5000
-			total_pops = 3000000
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	max_national_focus = 1
-	cb_creation_speed = 0.1000
+
 }
 new_bretton = {
 	area = "financial_institutions_tech"
 	year = 2000
 	cost = 15400
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1298,32 +753,18 @@ cips = {
 	area = "financial_institutions_tech"
 	year = 2020
 	cost = 17400
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 2
-			has_country_modifier = "internationalism"
-		}
-		modifier = {
-			factor = 1.5000
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.3000
-			total_pops = 4000000
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	max_national_focus = 1
-	diplomatic_points = 0.2500
 }
 delhi_declaration = {
 	area = "financial_institutions_tech"
 	year = 2030
 	cost = 18400
+
+	tax_eff = 1
 	ai_chance = {
 		factor = 1
 	}
@@ -1332,27 +773,27 @@ beijing_consensus = {
 	area = "financial_institutions_tech"
 	year = 2070
 	cost = 22400
+
+	tax_eff = 1
 	ai_chance = {
-		factor = 1.1000
-		modifier = {
-			factor = 1.5000
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0300
-			total_pops = 5000000
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
+		factor = 1
 	}
-	max_national_focus = 1
 }
 end_of_money = {
 	area = "financial_institutions_tech"
 	year = 2100
 	cost = 25400
+
+	tax_eff = 1
+	ai_chance = {
+		factor = 1
+	}
+}
+imperialism = {
+	area = "social_culture_tech"
+	year = 1870
+	cost = 2400
+
 	ai_chance = {
 		factor = 1
 	}
@@ -1361,58 +802,28 @@ socialism = {
 	area = "social_culture_tech"
 	year = 1870
 	cost = 2400
+
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2020
-		}
-		modifier = {
-			factor = 2
-			year = 2030
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
+
 }
 marxism = {
 	area = "social_culture_tech"
 	year = 1880
 	cost = 3400
+
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2020
-		}
-		modifier = {
-			factor = 2
-			year = 2030
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
+
 }
 nationalism = {
 	area = "social_culture_tech"
 	year = 1900
 	cost = 5400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -1421,32 +832,18 @@ geneva_conventions = {
 	area = "social_culture_tech"
 	year = 1910
 	cost = 6400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2020
-		}
-		modifier = {
-			factor = 2
-			year = 2030
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
 }
 fascism = {
 	area = "social_culture_tech"
 	year = 1920
 	cost = 7400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -1455,32 +852,18 @@ decolonization = {
 	area = "social_culture_tech"
 	year = 1930
 	cost = 8400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2020
-		}
-		modifier = {
-			factor = 2
-			year = 2030
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
 }
 east_vs_west = {
 	area = "social_culture_tech"
 	year = 1940
 	cost = 9400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -1489,32 +872,18 @@ wars_of_national_liberation = {
 	area = "social_culture_tech"
 	year = 1945
 	cost = 9900
+
+	administrative_efficiency = 0.05
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2020
-		}
-		modifier = {
-			factor = 2
-			year = 2030
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
 }
 youth_subcultures = {
 	area = "social_culture_tech"
 	year = 1950
 	cost = 10400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -1523,31 +892,18 @@ civil_rights = {
 	area = "social_culture_tech"
 	year = 1960
 	cost = 11400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2020
-		}
-		modifier = {
-			factor = 2
-			year = 2030
-		}
+		factor = 1
 	}
-	activate_building = "cosmetics_factory"
 }
 market_socialism = {
 	area = "social_culture_tech"
 	year = 1970
 	cost = 12400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -1556,32 +912,18 @@ neoliberalism = {
 	area = "social_culture_tech"
 	year = 1980
 	cost = 13400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2040
-		}
-		modifier = {
-			factor = 2
-			year = 2060
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
 }
 feminism = {
 	area = "social_culture_tech"
 	year = 1990
 	cost = 14400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -1590,32 +932,18 @@ islamism = {
 	area = "social_culture_tech"
 	year = 1990
 	cost = 14400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2040
-		}
-		modifier = {
-			factor = 2
-			year = 2050
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
 }
 social_networking = {
 	area = "social_culture_tech"
 	year = 2000
 	cost = 15400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -1624,32 +952,18 @@ norm_breaking = {
 	area = "social_culture_tech"
 	year = 2010
 	cost = 16400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.0500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2060
-		}
-		modifier = {
-			factor = 2
-			year = 2070
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
 }
 new_populism = {
 	area = "social_culture_tech"
 	year = 2010
 	cost = 16400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -1658,32 +972,18 @@ new_progressive = {
 	area = "social_culture_tech"
 	year = 2030
 	cost = 18400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
-		factor = 1.0100
-		modifier = {
-			factor = 1.2500
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.0200
-			tech_school = "culture_tech_school"
-		}
-		modifier = {
-			factor = 1.1000
-			year = 2090
-		}
-		modifier = {
-			factor = 2
-			year = 2100
-		}
+		factor = 1
 	}
-	regular_experience_level = 5
-	reinforce_rate = 0.0500
 }
 domestisation = {
 	area = "social_culture_tech"
 	year = 2050
 	cost = 20400
+
+	administrative_efficiency = 0.05
 	ai_chance = {
 		factor = 1
 	}
