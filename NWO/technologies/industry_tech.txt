@@ -3,6 +3,7 @@ photography = {
 	year = 1881
 	cost = 3500
 
+	activate_building = chemical_products_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -11,6 +12,9 @@ film_base = {
 	area = "healt_related_tech"
 	year = 1889
 	cost = 4300
+
+	activate_building = recording_media_factory 
+
 	ai_chance = {
 		factor = 1
 	}
@@ -20,6 +24,7 @@ modern_medicine = {
 	year = 1908
 	cost = 6200
 
+	activate_building = instruments_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -28,6 +33,8 @@ antibiotics = {
 	area = "healt_related_tech"
 	year = 1910
 	cost = 6400
+	
+	activate_building = health_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -37,6 +44,7 @@ motion_picture = {
 	year = 1912
 	cost = 6600
 
+	factory_goods_output = { tvs = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -45,6 +53,8 @@ color_photography = {
 	area = "healt_related_tech"
 	year = 1920
 	cost = 7400
+
+	factory_goods_output = { recording_media = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -54,6 +64,7 @@ penicillin = {
 	year = 1928
 	cost = 8200
 
+	factory_goods_output = { health = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -62,6 +73,8 @@ technicolor = {
 	area = "healt_related_tech"
 	year = 1932
 	cost = 8600
+
+	factory_goods_output = { tvs = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -71,6 +84,7 @@ molecular_biology = {
 	year = 1953
 	cost = 10700
 
+	activate_building = advanced_instruments_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -79,6 +93,8 @@ biotechnology = {
 	area = "healt_related_tech"
 	year = 1971
 	cost = 12500
+	
+	activate_building = modern_glass_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -88,6 +104,7 @@ clinical_pharmacology = {
 	year = 1980
 	cost = 13400
 
+	factory_goods_output = { health = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -96,6 +113,8 @@ evidence_based_medicine = {
 	area = "healt_related_tech"
 	year = 1980
 	cost = 13400
+
+	factory_goods_output = { health = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -105,6 +124,7 @@ digital_photography = {
 	year = 1980
 	cost = 13400
 
+	factory_goods_output = { recording_media = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -113,6 +133,9 @@ medical_instruments = {
 	area = "healt_related_tech"
 	year = 1990
 	cost = 14400
+
+	factory_goods_output = { advanced_instruments = 0.05 }
+	factory_goods_output = { instruments = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -122,6 +145,8 @@ genetic_engineering = {
 	year = 1990
 	cost = 14400
 
+	factory_goods_output = { advanced_instruments = 0.05 }
+	factory_goods_output = { instruments = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -130,6 +155,8 @@ genomics = {
 	area = "healt_related_tech"
 	year = 2000
 	cost = 15400
+
+	factory_goods_output = { health = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -139,6 +166,7 @@ pharmacogenomics = {
 	year = 2020
 	cost = 17400
 
+	factory_goods_output = { health = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -147,6 +175,8 @@ gene_therapy = {
 	area = "healt_related_tech"
 	year = 2040
 	cost = 19400
+
+	factory_goods_output = { health = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -156,6 +186,7 @@ nanomedicine = {
 	year = 2060
 	cost = 21400
 
+	factory_goods_output = { health = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -164,6 +195,8 @@ stem_cell_therapy = {
 	area = "healt_related_tech"
 	year = 2080
 	cost = 23400
+
+	factory_goods_output = { health = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -173,6 +206,7 @@ electric_generator = {
 	year = 1870
 	cost = 2400
 
+	activate_building = copper_wire_factory
 	ai_chance = {
 		factor = 1
 	}
@@ -181,6 +215,8 @@ electric_light = {
 	area = "machinery_tech"
 	year = 1878
 	cost = 3200
+	
+	activate_building = telephones_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -190,6 +226,7 @@ electrical_machines = {
 	year = 1890
 	cost = 4400
 
+	activate_building = specialized_machinery_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -198,6 +235,10 @@ sewing_machine = {
 	area = "machinery_tech"
 	year = 1900
 	cost = 5400
+	
+	factory_goods_output = { fabric = 0.05 }
+	factory_goods_output = { clothes = 0.05 }
+	factory_goods_output = { footwear = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -207,6 +248,7 @@ electric_power_stations = {
 	year = 1900
 	cost = 5400
 
+	factory_goods_output = { heating_electricity = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -215,6 +257,8 @@ piston_engines = {
 	area = "machinery_tech"
 	year = 1892
 	cost = 4600
+	
+	activate_building = engines_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -224,6 +268,7 @@ machine_industry = {
 	year = 1907
 	cost = 6100
 
+	activate_building = advanced_specialized_machinery_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -232,6 +277,8 @@ cars = {
 	area = "machinery_tech"
 	year = 1908
 	cost = 6200
+
+	activate_building = automobiles_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -241,6 +288,7 @@ trucks = {
 	year = 1914
 	cost = 6800
 
+	activate_building = trucks_vans_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -249,6 +297,8 @@ electric_grid = {
 	area = "machinery_tech"
 	year = 1926
 	cost = 8000
+	
+	activate_building = tvs_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -258,6 +308,7 @@ circuit_breakers = {
 	year = 1935
 	cost = 8900
 
+	activate_building = integrated_circuits_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -266,6 +317,8 @@ engine_power = {
 	area = "machinery_tech"
 	year = 1950
 	cost = 10400
+	
+	activate_building = modern_aeroplane_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -275,6 +328,7 @@ color_tvs = {
 	year = 1955
 	cost = 10900
 
+	activate_building = modern_tvs_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -283,6 +337,8 @@ consolidation = {
 	area = "machinery_tech"
 	year = 1960
 	cost = 11400
+	
+	activate_building = modern_automobiles_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -292,6 +348,7 @@ platform_sharing = {
 	year = 1970
 	cost = 12400
 
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -300,6 +357,8 @@ computer_aided_design = {
 	area = "machinery_tech"
 	year = 1990
 	cost = 14400
+	
+	activate_building = modern_integrated_circuits_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -309,6 +368,7 @@ led = {
 	year = 2000
 	cost = 15400
 
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -317,6 +377,8 @@ displays_3d = {
 	area = "machinery_tech"
 	year = 2010
 	cost = 16400
+	
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -326,6 +388,7 @@ GPGPU = {
 	year = 2020
 	cost = 17400
 
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -334,6 +397,8 @@ memristor = {
 	area = "machinery_tech"
 	year = 2050
 	cost = 20400
+	
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -343,6 +408,7 @@ toys_mass_market = {
 	year = 1900
 	cost = 5400
 
+	activate_building = glass_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -351,6 +417,8 @@ analog_computer = {
 	area = "electronics_tech"
 	year = 1929
 	cost = 8300
+	
+	activate_building = electric_gear_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -360,6 +428,7 @@ calculators = {
 	year = 1935
 	cost = 8900
 
+	activate_building = computers_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -368,6 +437,8 @@ electromechanical_computers = {
 	area = "electronics_tech"
 	year = 1939
 	cost = 9300
+	
+	activate_building = telecommunications_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -377,6 +448,7 @@ electronic_circuit = {
 	year = 1939
 	cost = 9300
 
+	activate_building = electric_telecommunications_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -385,6 +457,8 @@ colossus_computer = {
 	area = "electronics_tech"
 	year = 1946
 	cost = 10000
+	
+	activate_building = modern_telephones_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -394,6 +468,7 @@ stored_program_computer = {
 	year = 1950
 	cost = 10400
 
+	activate_building = computer_peripherals_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -402,6 +477,8 @@ microprogramming = {
 	area = "electronics_tech"
 	year = 1955
 	cost = 10900
+
+	factory_goods_output = { advanced_machinery = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -411,6 +488,7 @@ magnetic_storage = {
 	year = 1955
 	cost = 10900
 
+	factory_goods_output = { recording_media = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -419,6 +497,8 @@ transistor_computer = {
 	area = "electronics_tech"
 	year = 1955
 	cost = 10900
+
+	factory_goods_output = { electric_gear = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -428,6 +508,7 @@ computer_peripherals = {
 	year = 1960
 	cost = 11400
 
+	factory_goods_output = { computer_peripherals = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -437,6 +518,9 @@ integrated_circuit = {
 	area = "electronics_tech"
 	year = 1960
 	cost = 11400
+
+	factory_goods_output = { advanced_machinery = 0.05 }
+	factory_goods_output = { advanced_instruments = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -446,6 +530,7 @@ personal_computer = {
 	year = 1970
 	cost = 12400
 
+	factory_goods_output = { computers = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -455,6 +540,8 @@ home_computers = {
 	area = "electronics_tech"
 	year = 1980
 	cost = 13400
+	
+	activate_building = financial_services_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -464,6 +551,7 @@ tablet_computer = {
 	year = 2000
 	cost = 15400
 
+	factory_goods_output = { computers = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -473,15 +561,18 @@ smart_phones = {
 	area = "electronics_tech"
 	year = 2010
 	cost = 16400
+
+	factory_goods_output = { telephones = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
 }
 cloud_computing = {
 	area = "electronics_tech"
-	year = NaN
-	cost = NaN
+	year = 2020
+	cost = 17400
 
+	factory_goods_output = { telecommunications = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -491,6 +582,8 @@ machine_learning = {
 	area = "electronics_tech"
 	year = 2020
 	cost = 17400
+
+	factory_goods_output = { computers = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -500,15 +593,17 @@ artificial_intelligence = {
 	year = 2040
 	cost = 19400
 
+	factory_goods_output = { computers = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
-
 }
 bessemer_process = {
 	area = "construction_tech"
 	year = 1860
 	cost = 1400
+	
+	activate_building = machine_parts_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -518,6 +613,7 @@ break_bulk_cargo = {
 	year = 1880
 	cost = 3400
 
+	activate_building = ships_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -526,6 +622,8 @@ electric_wire = {
 	area = "construction_tech"
 	year = 1890
 	cost = 4400
+	
+	activate_building = cement_factory  
 	ai_chance = {
 		factor = 1
 	}
@@ -535,6 +633,7 @@ processed_aluminium = {
 	year = 1900
 	cost = 5400
 
+	activate_building = aluminium_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -543,6 +642,8 @@ open_hearth_furnace = {
 	area = "construction_tech"
 	year = 1900
 	cost = 5400
+	
+	activate_building = home_appliance_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -552,6 +653,7 @@ continuous_track = {
 	year = 1910
 	cost = 6400
 
+	activate_building = aeroplane_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -560,6 +662,8 @@ cranes = {
 	area = "construction_tech"
 	year = 1920
 	cost = 7400
+	
+	activate_building = furniture_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -569,6 +673,7 @@ reinforced_concrete = {
 	year = 1936
 	cost = 9000
 
+	activate_building = modern_home_appliance_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -577,6 +682,8 @@ continuous_wide_strip_rolling = {
 	area = "construction_tech"
 	year = 1930
 	cost = 8400
+	
+	activate_building = petroleum_aluminium_factory  
 	ai_chance = {
 		factor = 1
 	}
@@ -586,6 +693,7 @@ prestressed_concrete = {
 	year = 1940
 	cost = 9400
 
+	factory_goods_output = { cement = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -594,6 +702,8 @@ palletization = {
 	area = "construction_tech"
 	year = 1950
 	cost = 10400
+
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -603,6 +713,7 @@ basic_oxygen_steelmaking = {
 	year = 1950
 	cost = 10400
 
+	factory_goods_output = { steel = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -611,6 +722,8 @@ continuous_casting = {
 	area = "construction_tech"
 	year = 1950
 	cost = 10400
+
+	factory_goods_output = { steel = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -620,6 +733,7 @@ bulk_materials_handling = {
 	year = 1960
 	cost = 11400
 
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -628,6 +742,8 @@ modern_cranes = {
 	area = "construction_tech"
 	year = 1962
 	cost = 11600
+
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -637,6 +753,7 @@ containerization = {
 	year = 1970
 	cost = 12400
 
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -645,6 +762,8 @@ piggyback_rail = {
 	area = "construction_tech"
 	year = 1980
 	cost = 13400
+
+	activate_building = transport_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -654,6 +773,7 @@ intermodal_freight_transport = {
 	year = 2010
 	cost = 16400
 
+	factory_goods_output = { transport = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -663,6 +783,8 @@ printing_3d = {
 	area = "construction_tech"
 	year = 2030
 	cost = 18400
+	
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -672,6 +794,7 @@ industrial_printing = {
 	year = 2050
 	cost = 20400
 
+	factory_input = -0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -681,6 +804,8 @@ pvc = {
 	area = "petro_chemicals_tech"
 	year = 1872
 	cost = 2600
+	
+	activate_building = petrochemicals_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -690,6 +815,7 @@ petrochemical_industry = {
 	year = 1880
 	cost = 5000
 
+	factory_goods_output = { petrochemicals = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -699,6 +825,8 @@ synthetic_detergents = {
 	area = "petro_chemicals_tech"
 	year = 1910
 	cost = 6400
+	
+	activate_building = cosmetics_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -708,6 +836,7 @@ vulcanization = {
 	year = 1910
 	cost = 6400
 
+	factory_goods_output = { rubber = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -717,6 +846,8 @@ cellophane = {
 	area = "petro_chemicals_tech"
 	year = 1930
 	cost = 8400
+
+	factory_goods_output = { plastics = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -726,6 +857,7 @@ polystyrene = {
 	year = 1931
 	cost = 8500
 
+	activate_building = synthetic_fabric_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -735,6 +867,8 @@ nylon = {
 	area = "petro_chemicals_tech"
 	year = 1935
 	cost = 8900
+	
+	activate_building = petroleum_plastics_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -744,6 +878,7 @@ synthetic_rubber = {
 	year = 1930
 	cost = 8400
 
+	activate_building = rubber_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -753,6 +888,8 @@ perfumery_and_cosmetics = {
 	area = "petro_chemicals_tech"
 	year = 1940
 	cost = 9400
+	
+	factory_goods_output = { cosmetics = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -762,6 +899,7 @@ styropor = {
 	year = 1951
 	cost = 10500
 
+	factory_goods_output = { plastics = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -771,6 +909,8 @@ high_density_polyethylene = {
 	area = "petro_chemicals_tech"
 	year = 1960
 	cost = 11400
+
+	factory_goods_output = { plastics = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -780,6 +920,7 @@ polyurethanes = {
 	year = 1969
 	cost = 12300
 
+	factory_goods_output = { plastics = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -789,6 +930,8 @@ kevlar = {
 	area = "petro_chemicals_tech"
 	year = 1970
 	cost = 12400
+	
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -798,6 +941,7 @@ foams = {
 	year = 1972
 	cost = 12600
 
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -808,6 +952,7 @@ polyester_film_stock = {
 	year = 1980
 	cost = 13400
 
+	factory_goods_output = { plastics = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -816,6 +961,8 @@ polyester_film_stock = {
 engineering_plastics = {
 	area = "petro_chemicals_tech"
 	year = 1990
+
+	factory_goods_output = { plastics = 0.05 }
 	cost = 14400
 	ai_chance = {
 		factor = 1
@@ -826,6 +973,7 @@ silicon_carbide = {
 	year = 2000
 	cost = 15400
 
+	factory_goods_output = { petrochemicals = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -835,6 +983,8 @@ biodegradable_plastics = {
 	area = "petro_chemicals_tech"
 	year = 2010
 	cost = 16400
+
+	factory_goods_output = { plastics = 0.05 }
 	ai_chance = {
 		factor = 1
 	}
@@ -844,6 +994,7 @@ carbon_fiber = {
 	year = 2010
 	cost = 16400
 
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -852,6 +1003,8 @@ neo_plastics = {
 	area = "petro_chemicals_tech"
 	year = 2030
 	cost = 18400
+
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}

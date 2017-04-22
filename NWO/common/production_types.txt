@@ -472,12 +472,41 @@ petroleum_heating_electricity_factory = {#
 other_minerals_heating_electricity_factory = {#       
 	template = factory_template
 	input_goods = {    
-		other_minerals = 5
+		other_minerals = 1
+		turbines = 1
 	}
 	output_goods = heating_electricity 
 	value = 10
 	bonus = {
 		trigger = { trade_goods_in_state = other_minerals }
+		value = 0.25
+	}
+}
+
+advanced_heating_electricity_factory = {#       
+	template = factory_template
+	input_goods = {    
+		coal = 1
+		turbines = 1
+	}
+	output_goods = heating_electricity 
+	value = 10
+	bonus = {
+		trigger = { trade_goods_in_state = coal }
+		value = 0.25
+	}
+}
+
+advanced_petroleum_heating_electricity_factory = {#       
+	template = factory_template
+	input_goods = {    
+		petroleum = 2
+		turbines = 1
+	}
+	output_goods = heating_electricity 
+	value = 10
+	bonus = {
+		trigger = { trade_goods_in_state = petroleum }
 		value = 0.25
 	}
 }

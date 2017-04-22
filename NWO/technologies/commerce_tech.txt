@@ -13,7 +13,7 @@ combine_harvester = {
 	year = 1880
 	cost = 3400
 
-	farm_rgo_eff = 0.1
+	activate_building = beverages_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -87,7 +87,7 @@ insecticide = {
 	year = 1945
 	cost = 9900
 
-	farm_rgo_eff = 0.1
+	activate_building = modern_beverages_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -426,9 +426,7 @@ mechanical_cotton_grin = {
 	year = 1870
 	cost = 2400
 
-	rgo_goods_output = {
-		cotton = 0.15
-	}
+	activate_building = fabric_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -438,9 +436,7 @@ droving = {
 	year = 1870
 	cost = 2400
 	
-	rgo_goods_output = {
-		cattle = 0.15
-	}
+	activate_building = footwear_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -450,9 +446,7 @@ yarn = {
 	year = 1870
 	cost = 2400
 
-	rgo_goods_output = {
-		wool = 0.15
-	}
+	activate_building = wool_fabric_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -474,9 +468,7 @@ dairy_products = {
 	year = 1890
 	cost = 4400
 
-	rgo_goods_output = {
-		cattle = 0.15
-	}
+	activate_building = milk_cheese_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -684,12 +676,7 @@ fossil_fuel_power = {
 	year = 1870
 	cost = 2400
 
-	rgo_goods_output = {
-		coal = 0.15
-	}
-	rgo_goods_output = {
-		petroleum = 0.15
-	}
+	activate_building = heating_electricity_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -722,6 +709,7 @@ oil_refinery = {
 	year = 1920
 	cost = 7400
 
+	activate_building = petroleum_heating_electricity_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -743,9 +731,7 @@ nuclear_power = {
 	year = 1956
 	cost = 11000
 
-	rgo_goods_output = {
-		other_minerals = 0.15
-	}
+	activate_building = other_minerals_heating_electricity_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -803,7 +789,7 @@ advanced_turbine = {
 	year = 1996
 	cost = 15000
 
-
+	activate_building = turbines_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -813,6 +799,8 @@ renewable_energy = {
 	year = 2000
 	cost = 15400
 
+	activate_building = advanced_heating_electricity_factory 
+	factory_input = -0.01
 	ai_chance = {
 		factor = 1
 	}
@@ -821,6 +809,8 @@ hydraulic_fracturing = {
 	area = "energy_resources_tech"
 	year = 2013
 	cost = 16700
+
+	activate_building = advanced_petroleum_heating_electricity_factory  
 	ai_chance = {
 		factor = 1
 	}
@@ -830,6 +820,9 @@ deepwater_drilling = {
 	year = 2030
 	cost = 18400
 
+	rgo_goods_output = {
+		petroleum = 0.1
+	}
 	ai_chance = {
 		factor = 1
 	}
@@ -838,6 +831,10 @@ oil_sands = {
 	area = "energy_resources_tech"
 	year = 2050
 	cost = 20400
+
+	rgo_goods_output = {
+		petroleum = 0.1
+	}
 	ai_chance = {
 		factor = 1
 	}
@@ -847,6 +844,9 @@ nuclear_gen_iv = {
 	year = 2050
 	cost = 20400
 
+	rgo_goods_output = {
+		other_minerals = 0.1
+	}
 	ai_chance = {
 		factor = 1
 	}
@@ -855,6 +855,8 @@ advanced_batteries = {
 	area = "energy_resources_tech"
 	year = 2070
 	cost = 22400
+
+	factory_input = -0.01
 	ai_chance = {
 		factor = 1
 	}
@@ -864,6 +866,7 @@ advanced_photovoltaics = {
 	year = 2080
 	cost = 23400
 
+	factory_input = -0.01
 	ai_chance = {
 		factor = 1
 	}
@@ -872,6 +875,10 @@ advanced_fracking = {
 	area = "energy_resources_tech"
 	year = 2100
 	cost = 25400
+
+	rgo_goods_output = {
+		petroleum = 0.1
+	}
 	ai_chance = {
 		factor = 1
 	}
@@ -881,6 +888,7 @@ mushet_steel = {
 	year = 1868
 	cost = 2200
 
+	activate_building = steel_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -889,6 +897,8 @@ soda_ash = {
 	area = "new_materials_tech"
 	year = 1870
 	cost = 2400
+
+	activate_building = paper_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -898,6 +908,7 @@ synthetic_dye = {
 	year = 1890
 	cost = 4400
 
+	activate_building = fertilizers_factory  
 	ai_chance = {
 		factor = 1
 	}
@@ -906,6 +917,8 @@ high_speed_steel = {
 	area = "new_materials_tech"
 	year = 1910
 	cost = 6400
+	
+	factory_throughput = 0.1
 	ai_chance = {
 		factor = 1
 	}
@@ -915,6 +928,7 @@ tungsten_carbide = {
 	year = 1930
 	cost = 8400
 
+	activate_building = modern_machine_parts_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -923,6 +937,8 @@ composite_material = {
 	area = "new_materials_tech"
 	year = 1950
 	cost = 10400
+	
+	activate_building = luxury_furniture_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -957,6 +973,8 @@ synthetic_diamond = {
 	area = "new_materials_tech"
 	year = 1970
 	cost = 12400
+	
+	activate_building = diamonds_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -966,6 +984,7 @@ dematerialization = {
 	year = 1980
 	cost = 13400
 
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -974,6 +993,8 @@ stainless_steel = {
 	area = "new_materials_tech"
 	year = 1980
 	cost = 13400
+
+	factory_throughput = 0.05
 	ai_chance = {
 		factor = 1
 	}
@@ -983,6 +1004,7 @@ fold_forming = {
 	year = 1984
 	cost = 13800
 
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -991,6 +1013,8 @@ metal_foam = {
 	area = "new_materials_tech"
 	year = 2010
 	cost = 16400
+
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -1000,6 +1024,7 @@ cemented_carbide = {
 	year = 2010
 	cost = 16400
 
+	activate_building = advanced_machinery_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -1017,6 +1042,7 @@ lab_on_a_chip = {
 	year = 2020
 	cost = 17400
 
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -1025,6 +1051,8 @@ high_temp_superconductivity = {
 	area = "new_materials_tech"
 	year = 2030
 	cost = 18400
+
+	activate_building = modern_copper_wire_factory 
 	ai_chance = {
 		factor = 1
 	}
@@ -1034,6 +1062,7 @@ superplasticity = {
 	year = 2050
 	cost = 20400
 
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
@@ -1042,6 +1071,8 @@ quantum_dot = {
 	area = "new_materials_tech"
 	year = 2090
 	cost = 24400
+
+	factory_input = -0.02
 	ai_chance = {
 		factor = 1
 	}
