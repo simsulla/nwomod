@@ -3,15 +3,7 @@ stratofortress = {
 		barracks = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			year = 1978
-		}
-		modifier = {
-			factor = 2
-			year = 1984
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -24,15 +16,7 @@ synthetic_aperture_radar = {
 		fortress = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			year = 1978
-		}
-		modifier = {
-			factor = 2
-			year = 1984
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -45,15 +29,7 @@ pulse_doppler_radar = {
 		fortress = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			year = 1978
-		}
-		modifier = {
-			factor = 2
-			year = 1984
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -67,20 +43,6 @@ r7semyorka = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			tag = "SUN"
-		}
-		modifier = {
-			factor = 2
-			tag = "USA"
-		}
-		modifier = {
-			factor = 0.1000
-			NOT = {
-				rank = 2
-			}
-		}
 	}
 	effect = {
 		army_base = {
@@ -95,14 +57,6 @@ ballistic_missile_submarines = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			mobile_network = 1
-		}
-		modifier = {
-			factor = 2
-			microcomputer = 1
-		}
 	}
 	effect = {
 		army_base = {
@@ -117,14 +71,6 @@ man_in_space = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			rank = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "r7semyorka"
-		}
 	}
 	effect = {
 		army_base = {
@@ -139,14 +85,6 @@ space_rendezvous = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			rank = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "man_in_space"
-		}
 	}
 	effect = {
 		army_base = {
@@ -161,14 +99,6 @@ lunar_orbit = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			rank = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "space_rendezvous"
-		}
 	}
 	effect = {
 		army_base = {
@@ -183,14 +113,6 @@ lunar_landing = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			rank = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "lunar_orbit"
-		}
 	}
 	effect = {
 		army_base = {
@@ -205,14 +127,6 @@ mars_orbit = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			rank = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "lunar_orbit"
-		}
 	}
 	effect = {
 		army_base = {
@@ -227,14 +141,6 @@ mars_landing = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			rank = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "mars_orbit"
-		}
 	}
 	effect = {
 		army_base = {
@@ -249,14 +155,6 @@ hydrazine_propulsion = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			mobile_network = 1
-		}
-		modifier = {
-			factor = 2
-			microcomputer = 1
-		}
 	}
 	effect = {
 		army_base = {
@@ -271,13 +169,6 @@ lband_navigation_signals = {
 	}
 	chance = {
 		base = 2
-		modifier = {
-			factor = -10
-		}
-		modifier = {
-			factor = 2
-			year = 1984
-		}
 	}
 	effect = {
 		army_base = {
@@ -291,22 +182,6 @@ block_2_satellites = {
 	}
 	chance = {
 		base = 0
-		modifier = {
-			factor = 2
-			invention = "hydrazine_propulsion"
-		}
-		modifier = {
-			factor = 2
-			invention = "lband_navigation_signals"
-		}
-		modifier = {
-			factor = 2
-			year = 1986
-		}
-		modifier = {
-			factor = 4
-			year = 1989
-		}
 	}
 	effect = {
 		army_base = {
@@ -319,19 +194,7 @@ civilian_gps = {
 		ww2_command_system = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 2
-			year = 1989
-		}
-		modifier = {
-			factor = 4
-			year = 1992
-		}
-		modifier = {
-			factor = 4
-			year = 1998
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -344,15 +207,7 @@ selective_availability = {
 		ww2_command_system = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 2
-			year = 1990
-		}
-		modifier = {
-			factor = 4
-			invention = "civilian_gps"
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -365,11 +220,7 @@ launch_control_center = {
 		mobile_air_base = 1
 	}
 	chance = {
-		base = -4
-		modifier = {
-			factor = 4
-			invention = "block_2_satellites"
-		}
+		base = 1
 	}
 	effect = {
 		gas_attack = yes
@@ -380,15 +231,7 @@ inertial_navigation_system = {
 		mobile_air_base = 1
 	}
 	chance = {
-		base = -3
-		modifier = {
-			factor = 3
-			microcomputer = 1
-		}
-		modifier = {
-			factor = 3
-			personal_computer = 1
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -401,19 +244,7 @@ primary_alert_system = {
 		mobile_air_base = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			mobile_network = 1
-		}
-		modifier = {
-			factor = 2
-			early_backbone = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "block_2_satellites"
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -428,14 +259,6 @@ SLFCS = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 2
-			mobile_network = 1
-		}
-		modifier = {
-			factor = 2
-			early_backbone = 1
-		}
 	}
 	effect = {
 		army_base = {
@@ -448,15 +271,7 @@ ground_based_interceptor = {
 		overseas_naval_base = 1
 	}
 	chance = {
-		base = 4
-		modifier = {
-			factor = 2
-			invention = "launch_control_center"
-		}
-		modifier = {
-			factor = 2
-			invention = "primary_alert_system"
-		}
+		base = 1
 	}
 	effect = {
 		gas_defence = yes
@@ -468,10 +283,6 @@ exoatmospheric_kill_vehicle = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			war_on_terror = 1
-		}
 	}
 	effect = {
 		army_base = {
@@ -485,7 +296,7 @@ m_code = {
 		mobile_offshore_base = 1
 	}
 	chance = {
-		base = 4
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -499,7 +310,7 @@ civilian_l1 = {
 		mobile_offshore_base = 1
 	}
 	chance = {
-		base = 4
+		base = 1
 	}
 	effect = {
 		core_pop_consciousness_modifier = -0.0100
@@ -510,15 +321,7 @@ civilian_l2 = {
 		mobile_offshore_base = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			invention = "civilian_l1"
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
+		base = 1
 	}
 	effect = {
 		war_exhaustion = -0.0200
@@ -529,11 +332,7 @@ retroreflector = {
 		mobile_offshore_base = 1
 	}
 	chance = {
-		base = 3
-		modifier = {
-			factor = 2
-			distributed_computations = 1
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -546,7 +345,7 @@ HEMTT_load_handling = {
 		main_operating_base = 1
 	}
 	chance = {
-		base = 5
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -560,11 +359,7 @@ x_band_radar = {
 		main_operating_base = 1
 	}
 	chance = {
-		base = 5
-		modifier = {
-			factor = 2
-			invention = "HEMTT_load_handling"
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -578,11 +373,7 @@ medium_eads = {
 		main_operating_base = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 4
-			invention = "x_band_radar"
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -597,15 +388,7 @@ personnel_asgt = {
 		cold_war_doctrine = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			arms_race_doctrine = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		infantry = {
@@ -624,15 +407,7 @@ paratroopers = {
 		conscription = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			arms_race_doctrine = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		irregular = {
@@ -645,11 +420,7 @@ helicpeter_delivery = {
 		conscription = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "personnel_asgt"
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -662,11 +433,7 @@ counter_guerrilla_warfare = {
 		fleet_in_being = 1
 	}
 	chance = {
-		base = 4
-		modifier = {
-			factor = 4
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -679,23 +446,7 @@ cordon_and_search = {
 		fleet_in_being = 1
 	}
 	chance = {
-		base = -4
-		modifier = {
-			factor = 5
-			invention = "bullpup"
-		}
-		modifier = {
-			factor = 4
-			year = 1992
-		}
-		modifier = {
-			factor = 4
-			year = 1994
-		}
-		modifier = {
-			factor = 4
-			year = 1998
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -708,19 +459,7 @@ population_control = {
 		fleet_in_being = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 4
-			invention = "picatinny_rail"
-		}
-		modifier = {
-			factor = 12
-			tag = "SWE"
-		}
-		modifier = {
-			factor = 8
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -733,11 +472,7 @@ apcs = {
 		total_war = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "personnel_asgt"
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -750,11 +485,7 @@ infantry_fighting_vehicle = {
 		total_war = 1
 	}
 	chance = {
-		base = 4
-		modifier = {
-			factor = 4
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -767,19 +498,7 @@ rpg7_unit = {
 		total_war = 1
 	}
 	chance = {
-		base = -4
-		modifier = {
-			factor = 4
-			year = 1992
-		}
-		modifier = {
-			factor = 4
-			year = 1994
-		}
-		modifier = {
-			factor = 4
-			year = 1998
-		}
+		base = 1
 	}
 	effect = {
 		irregular = {
@@ -792,14 +511,12 @@ commandos = {
 		air_supremacy = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 4
-			year = 2004
-		}
+		base = 1
 	}
 	effect = {
-		activate_unit = "modern_infantry"
+		irregular = {
+			defence = 0.5000
+		}
 	}
 }
 range_reconnaissance_patrol = {
@@ -807,11 +524,7 @@ range_reconnaissance_patrol = {
 		air_supremacy = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 4
-			year = 2001
-		}
+		base = 1
 	}
 	effect = {
 		infantry = {
@@ -824,11 +537,7 @@ modular_olle = {
 		cold_war_doctrine = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "personnel_asgt"
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -841,11 +550,7 @@ bullpup = {
 		cold_war_doctrine = 1
 	}
 	chance = {
-		base = 4
-		modifier = {
-			factor = 4
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -858,23 +563,7 @@ picatinny_rail = {
 		cold_war_doctrine = 1
 	}
 	chance = {
-		base = -4
-		modifier = {
-			factor = 5
-			invention = "bullpup"
-		}
-		modifier = {
-			factor = 4
-			year = 1992
-		}
-		modifier = {
-			factor = 4
-			year = 1994
-		}
-		modifier = {
-			factor = 4
-			year = 1998
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -887,19 +576,7 @@ red_dot_sight = {
 		cold_war_doctrine = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 4
-			invention = "picatinny_rail"
-		}
-		modifier = {
-			factor = 12
-			tag = "SWE"
-		}
-		modifier = {
-			factor = 8
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		infantry = {
@@ -918,15 +595,7 @@ second_gen_guidance = {
 		proxy_war = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 4
-			anti_tank_missile = 1
-		}
-		modifier = {
-			factor = 4
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 	}
@@ -936,23 +605,7 @@ third_gen_guidance = {
 		proxy_war = 1
 	}
 	chance = {
-		base = -50
-		modifier = {
-			factor = 50
-			invention = "second_gen_guidance"
-		}
-		modifier = {
-			factor = 4
-			man_portable_uavs = 1
-		}
-		modifier = {
-			factor = 4
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 2
-			international_science = 1
-		}
+		base = 1
 	}
 	effect = {
 	}
@@ -962,23 +615,7 @@ heat_warhead = {
 		proxy_war = 1
 	}
 	chance = {
-		base = -10
-		modifier = {
-			factor = 10
-			invention = "second_gen_guidance"
-		}
-		modifier = {
-			factor = 4
-			man_portable_uavs = 1
-		}
-		modifier = {
-			factor = 4
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 2
-			international_science = 1
-		}
+		base = 1
 	}
 	effect = {
 	}
@@ -988,19 +625,7 @@ tandem_charge = {
 		proxy_war = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 4
-			man_portable_uavs = 1
-		}
-		modifier = {
-			factor = 4
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 2
-			international_science = 1
-		}
+		base = 1
 	}
 	effect = {
 	}
@@ -1010,19 +635,7 @@ interceptor_body_armor = {
 		green_blue_water_navies = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 4
-			fourth_generation_warfare = 1
-		}
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 4
-			year = 2004
-		}
+		base = 1
 	}
 	effect = {
 		infantry = {
@@ -1041,19 +654,7 @@ special_reconnaissance = {
 		green_blue_water_navies = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 4
-			fourth_generation_warfare = 1
-		}
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 4
-			year = 2001
-		}
+		base = 1
 	}
 	effect = {
 		infantry = {
@@ -1066,19 +667,7 @@ direct_action = {
 		green_blue_water_navies = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 4
-			fourth_generation_warfare = 1
-		}
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 4
-			year = 2001
-		}
+		base = 1
 	}
 	effect = {
 		infantry = {
@@ -1091,19 +680,7 @@ universal_camouflage_pattern = {
 		green_blue_water_navies = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 4
-			fourth_generation_warfare = 1
-		}
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 4
-			year = 2001
-		}
+		base = 1
 	}
 	effect = {
 		infantry = {
@@ -1122,19 +699,7 @@ plastic_tipped_bullets = {
 		power_projection = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 2
-			asymmetric_warfare = 1
-		}
-		modifier = {
-			factor = 2
-			international_science = 1
-		}
+		base = 1
 	}
 	effect = {
 		modern_infantry = {
@@ -1147,15 +712,7 @@ llm01 = {
 		power_projection = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 2
-			asymmetric_warfare = 1
-		}
+		base = 1
 	}
 	effect = {
 		modern_fighter = {
@@ -1169,19 +726,7 @@ caseless_ammunition = {
 		power_projection = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 2
-			international_science = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "polymer_cased_ammunition"
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -1194,15 +739,7 @@ polymer_cased_ammunition = {
 		power_projection = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			international_science = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -1215,19 +752,7 @@ adaptiv = {
 		salvo_combat_model = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			virtual_science = 1
-		}
-		modifier = {
-			factor = 2
-			artificial_intelligence = 1
-		}
-		modifier = {
-			factor = 2
-			attack_helicopter = 1
-		}
+		base = 1
 	}
 	effect = {
 		cavalry = {
@@ -1245,15 +770,7 @@ phased_array_optics = {
 		salvo_combat_model = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			virtual_science = 1
-		}
-		modifier = {
-			factor = 2
-			attack_helicopter = 1
-		}
+		base = 1
 	}
 	effect = {
 		army_base = {
@@ -1267,15 +784,7 @@ diffused_lighting_camouflage = {
 		salvo_combat_model = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			virtual_science = 1
-		}
-		modifier = {
-			factor = 2
-			fifth_generation_jets = 1
-		}
+		base = 1
 	}
 	effect = {
 		artillery = {
@@ -1289,15 +798,7 @@ multicam = {
 		salvo_combat_model = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 2
-			virtual_science = 1
-		}
-		modifier = {
-			factor = 2
-			attack_helicopter = 1
-		}
+		base = 1
 	}
 	effect = {
 		modern_infantry = {
@@ -1311,19 +812,7 @@ ct2ws = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -4
-		modifier = {
-			factor = 4
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_science = 1
-		}
-		modifier = {
-			factor = 2
-			modern_battlespace = 1
-		}
+		base = 1
 	}
 	effect = {
 		morale = 0.1000
@@ -1334,19 +823,7 @@ intelligent_munitions_system = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -2
-		modifier = {
-			factor = 4
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_science = 1
-		}
-		modifier = {
-			factor = 2
-			modern_battlespace = 1
-		}
+		base = 1
 	}
 	effect = {
 		modern_infantry = {
@@ -1359,19 +836,7 @@ lower_extremity_exoskeleton = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -4
-		modifier = {
-			factor = 4
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 2
-			modern_battlespace = 1
-		}
+		base = 1
 	}
 	effect = {
 		modern_infantry = {
@@ -1384,19 +849,7 @@ powered_exoskeleton = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -8
-		modifier = {
-			factor = 8
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 2
-			modern_battlespace = 1
-		}
+		base = 1
 	}
 	effect = {
 		modern_infantry = {
@@ -1410,27 +863,7 @@ power_subsystem = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -30
-		modifier = {
-			factor = 8
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 5
-			modern_battlespace = 1
-		}
-		modifier = {
-			factor = 5
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 20
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		modern_infantry = {
@@ -1444,27 +877,7 @@ microclimate_cooling_system = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -30
-		modifier = {
-			factor = 8
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 5
-			modern_battlespace = 1
-		}
-		modifier = {
-			factor = 5
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 20
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		modern_infantry = {
@@ -1478,27 +891,7 @@ wpsm_future = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -30
-		modifier = {
-			factor = 8
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 5
-			modern_battlespace = 1
-		}
-		modifier = {
-			factor = 5
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 20
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		modern_infantry = {
@@ -1512,27 +905,7 @@ combat_uniform_subsystem = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -30
-		modifier = {
-			factor = 8
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 5
-			modern_battlespace = 1
-		}
-		modifier = {
-			factor = 5
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 20
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		mechanized_infantry = {
@@ -1546,27 +919,7 @@ nett_warrior = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -30
-		modifier = {
-			factor = 8
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 5
-			modern_battlespace = 1
-		}
-		modifier = {
-			factor = 5
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 20
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		mechanized_infantry = {
@@ -1580,27 +933,7 @@ headgear_subsystem = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -30
-		modifier = {
-			factor = 8
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 5
-			modern_battlespace = 1
-		}
-		modifier = {
-			factor = 5
-			quantum_computer = 1
-		}
-		modifier = {
-			factor = 20
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		mechanized_infantry = {
@@ -1614,31 +947,7 @@ force_warrior = {
 		network_centric_warfare = 1
 	}
 	chance = {
-		base = -50
-		modifier = {
-			factor = 10
-			invention = "power_subsystem"
-		}
-		modifier = {
-			factor = 10
-			invention = "microclimate_cooling_system"
-		}
-		modifier = {
-			factor = 10
-			invention = "wpsm_future"
-		}
-		modifier = {
-			factor = 10
-			invention = "combat_uniform_subsystem"
-		}
-		modifier = {
-			factor = 10
-			invention = "nett_warrior"
-		}
-		modifier = {
-			factor = 10
-			invention = "headgear_subsystem"
-		}
+		base = 1
 	}
 	effect = {
 	}
@@ -1648,15 +957,7 @@ t10 = {
 		torpedo_boat_destroyer = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			arms_race_doctrine = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		artillery = {
@@ -1669,15 +970,7 @@ wire_guided_missiles = {
 		submarines = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			arms_race_doctrine = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		artillery = {
@@ -1690,15 +983,7 @@ highexplosive_antitank_warhead = {
 		submarines = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			arms_race_doctrine = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		artillery = {
@@ -1711,15 +996,7 @@ explosive_reactive_armour = {
 		anti_submarine_warfare = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			arms_race_doctrine = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		artillery = {
@@ -1733,15 +1010,7 @@ ceramic_armor = {
 		anti_submarine_warfare = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			arms_race_doctrine = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		artillery = {
@@ -1754,11 +1023,7 @@ mech_prototypes = {
 		mutlirole_corvettes = 1
 	}
 	chance = {
-		base = 5
-		modifier = {
-			factor = 10
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		artillery = {
@@ -1771,11 +1036,7 @@ laser_guided_munition = {
 		tanks = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		bomber = {
@@ -1794,11 +1055,7 @@ supercruise = {
 		lightweight_small_arms = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		bomber = {
@@ -1814,15 +1071,7 @@ JDAM_smart_bomb_kit = {
 		special_forces = 1
 	}
 	chance = {
-		base = -3
-		modifier = {
-			factor = 6
-			military_gps_system = 1
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		bomber = {
@@ -1835,11 +1084,7 @@ autonomous_drones = {
 		apcs = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 5
-			artificial_intelligence = 1
-		}
+		base = 1
 	}
 	effect = {
 		tactical_drone = {
@@ -1852,15 +1097,7 @@ advanced_drone_ai = {
 		man_portable_uavs = 1
 	}
 	chance = {
-		base = -5
-		modifier = {
-			factor = 6
-			invention = "autonomous_drones"
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		tactical_drone = {
@@ -1873,11 +1110,7 @@ hypercruise = {
 		man_portable_uavs = 1
 	}
 	chance = {
-		base = 5
-		modifier = {
-			factor = 10
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		modern_fighter = {

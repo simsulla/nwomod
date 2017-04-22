@@ -3,15 +3,7 @@ long_range_fire_tactic = {
 		standardization = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "ww2_destroyer"
-		}
-		modifier = {
-			factor = 2
-			nuclear_submarine = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -24,15 +16,7 @@ speedy_maneuvering_tactic = {
 		standardization = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "ww2_destroyer"
-		}
-		modifier = {
-			factor = 1
-			nuclear_reactors = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -45,15 +29,7 @@ sealane_hunters = {
 		lean_manufacturing = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			supercarriers = 1
-		}
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -66,11 +42,7 @@ fast_ship_killer = {
 		lean_manufacturing = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			carrier_battle_group = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -83,15 +55,7 @@ big_ship_competitor = {
 		lean_manufacturing = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			guided_missile_destroyers = 1
-		}
-		modifier = {
-			factor = 2
-			aegis_defense = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -104,15 +68,7 @@ standard_overseas_naval_base = {
 		lean_manufacturing = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nuclear_reactors = 1
-		}
-		modifier = {
-			factor = 2
-			guided_missile_destroyers = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -125,15 +81,7 @@ blue_water_school = {
 		modern_workforce_management = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 2
-			colonial_nation = yes
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -146,15 +94,7 @@ brown_water_school = {
 		modern_workforce_management = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			high_speed_uni_network = 1
-		}
-		modifier = {
-			factor = 2
-			aegis_defense = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -167,19 +107,7 @@ offensive_attitude = {
 		robotization_industry = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			colonial_nation = yes
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1
-			salvo_combat_model = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -192,15 +120,7 @@ defensive_attitude = {
 		robotization_industry = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "protected_cruisers"
-		}
-		modifier = {
-			factor = 2
-			invention = "armour_piercing_projectiles"
-		}
+		base = 1
 	}
 	effect = {
 		carrier = {
@@ -216,15 +136,7 @@ decisive_firepower_doctrine = {
 		service_revolution = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			neoprotectionism = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "work_control_and_hierarchy"
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -237,11 +149,7 @@ naval_firepower_doctrine = {
 		service_revolution = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			higher_density_reactor = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -254,15 +162,7 @@ building_station_shipyards = {
 		postwar_modernism = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			destroyers = 1
-		}
-		modifier = {
-			factor = 1
-			aircraft_carrier = 1
-		}
+		base = 1
 	}
 	effect = {
 		factory_goods_throughput = {
@@ -275,11 +175,7 @@ fish_processing = {
 		beaux_arts_architecture = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			post_war_radar = 1
-		}
+		base = 1
 	}
 	effect = {
 		factory_goods_throughput = {
@@ -292,14 +188,12 @@ steamer_transports = {
 		beaux_arts_architecture = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			personal_computer = 1
-		}
+		base = 1
 	}
 	effect = {
-		activate_unit = "transportship"
+		rgo_goods_output = {
+			fish = 0.5000
+		}
 	}
 }
 commerce_raiders = {
@@ -307,18 +201,12 @@ commerce_raiders = {
 		beaux_arts_architecture = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			nuclear_reactors = 1
-		}
-		modifier = {
-			factor = 3
-			overseas_naval_base = 1
-		}
+		base = 1
 	}
 	effect = {
-		activate_unit = "submarine"
+		rgo_goods_output = {
+			fish = 0.5000
+		}
 	}
 }
 ww2_frigate = {
@@ -326,14 +214,12 @@ ww2_frigate = {
 		art_nouveau = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			post_war_radar = 1
-		}
+		base = 1
 	}
 	effect = {
-		activate_unit = "frigate"
+		rgo_goods_output = {
+			fish = 0.5000
+		}
 	}
 }
 ww2_destroyer = {
@@ -341,18 +227,12 @@ ww2_destroyer = {
 		art_nouveau = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			post_war_radar = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "radar"
-		}
+		base = 1
 	}
 	effect = {
-		activate_unit = "destroyer"
+		rgo_goods_output = {
+			fish = 0.5000
+		}
 	}
 }
 mechanized_fishing_vessels = {
@@ -360,15 +240,7 @@ mechanized_fishing_vessels = {
 		international_style = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nuclear_submarine = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "work_specialization"
-		}
+		base = 1
 	}
 	effect = {
 		rgo_goods_output = {
@@ -384,15 +256,7 @@ steamer_automatic_construction_plants = {
 		international_style = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nuclear_submarine = 1
-		}
-		modifier = {
-			factor = 2
-			invention = "building_station_shipyards"
-		}
+		base = 1
 	}
 	effect = {
 		factory_goods_throughput = {
@@ -406,17 +270,11 @@ protected_cruisers = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 2
-			invention = "ww2_destroyer"
-		}
-		modifier = {
-			factor = 2
-			sustainable_energy = 1
-		}
 	}
 	effect = {
-		activate_unit = "cruiser"
+		factory_goods_throughput = {
+			ships = 0.1000
+		}
 	}
 }
 early_carrier = {
@@ -424,19 +282,7 @@ early_carrier = {
 		contemporary_architecture = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "ww2_destroyer"
-		}
-		modifier = {
-			factor = 1
-			sustainable_energy = 1
-		}
-		modifier = {
-			factor = 1
-			electromagnetic_aircraft_launch = 1
-		}
+		base = 1
 	}
 	effect = {
 		destroyer = {
@@ -451,15 +297,7 @@ advanced_cruisers = {
 		urban_renewal = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			ship_defense_system = 1
-		}
-		modifier = {
-			factor = 2
-			micropower = 1
-		}
+		base = 1
 	}
 	effect = {
 		cruiser = {
@@ -474,18 +312,6 @@ modern_cruisers = {
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 2
-			invention = "advanced_cruisers"
-		}
-		modifier = {
-			factor = 2
-			micropower = 1
-		}
-		modifier = {
-			factor = 2
-			deep_mining = 1
-		}
 	}
 	effect = {
 		cruiser = {
@@ -498,15 +324,7 @@ advanced_battleships = {
 		urban_renewal = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			evidence_based_medicine = 1
-		}
-		modifier = {
-			factor = 2
-			higher_density_reactor = 1
-		}
+		base = 1
 	}
 	effect = {
 		carrier = {
@@ -520,15 +338,7 @@ modern_battleships = {
 		urban_renewal = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "advanced_battleships"
-		}
-		modifier = {
-			factor = 2
-			modern_battlespace = 1
-		}
+		base = 1
 	}
 	effect = {
 		carrier = {
@@ -541,10 +351,12 @@ experimental_carriers = {
 		interstate_highway_system = 1
 	}
 	chance = {
-		base = 6
+		base = 1
 	}
 	effect = {
-		activate_unit = "carrier"
+		navy_base = {
+			gun_power = 1
+		}
 	}
 }
 optical_rangefinders = {
@@ -552,15 +364,7 @@ optical_rangefinders = {
 		early_high_speed_rail = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			personal_computer = 1
-		}
-		modifier = {
-			factor = 2
-			toyotism = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -573,11 +377,7 @@ gyrostabilized_fire_control = {
 		early_high_speed_rail = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			carrier_battle_group = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -590,15 +390,7 @@ armour_piercing_projectiles = {
 		rapid_transit = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			attack_helicopter = 1
-		}
-		modifier = {
-			factor = 2
-			guided_missile_destroyers = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -611,15 +403,7 @@ armour_piercing_exploding_projectiles = {
 		rapid_transit = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "armour_piercing_projectiles"
-		}
-		modifier = {
-			factor = 1
-			contemporary_agriculture = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -632,15 +416,7 @@ armoured_turrets = {
 		rapid_transit = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "ww2_destroyer"
-		}
-		modifier = {
-			factor = 2
-			contemporary_agriculture = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -653,15 +429,7 @@ bomb_guns = {
 		modern_backbone = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "armour_piercing_exploding_projectiles"
-		}
-		modifier = {
-			factor = 2
-			stealth_aircraft = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -674,11 +442,7 @@ rifled_guns = {
 		modern_backbone = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			quantum_computer = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -691,15 +455,7 @@ quick_firing_guns = {
 		modern_backbone = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "rifled_guns"
-		}
-		modifier = {
-			factor = 1
-			quantum_computer = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -712,15 +468,7 @@ armoured_citadels = {
 		modern_backbone = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "armoured_turrets"
-		}
-		modifier = {
-			factor = 1
-			sustainable_energy = 1
-		}
+		base = 1
 	}
 	effect = {
 		destroyer = {
@@ -736,15 +484,7 @@ heavy_caliber_guns = {
 		modern_backbone = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "rifled_guns"
-		}
-		modifier = {
-			factor = 2
-			mounted_combat_system = 1
-		}
+		base = 1
 	}
 	effect = {
 		destroyer = {
@@ -760,11 +500,7 @@ on_board_recon_aircraft = {
 		dynamic_infrastructure = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			supercarrier_battle_group = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -777,11 +513,7 @@ gun_hydraulics = {
 		dynamic_infrastructure = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			evidence_based_medicine = 1
-		}
+		base = 1
 	}
 	effect = {
 		carrier = {
@@ -794,11 +526,7 @@ heavy_armour_plates = {
 		dynamic_infrastructure = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			sustainable_energy = 1
-		}
+		base = 1
 	}
 	effect = {
 		carrier = {
@@ -811,15 +539,7 @@ large_hull_form = {
 		dynamic_infrastructure = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			invention = "fordism"
-		}
-		modifier = {
-			factor = 3
-			quantum_computer = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -832,15 +552,7 @@ wireless = {
 		future_backbone = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			invention = "national_radio_networks"
-		}
-		modifier = {
-			factor = 2
-			invention = "industrial_rnd_investments"
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -853,15 +565,7 @@ advanced_fire_control = {
 		future_backbone = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			modern_battlespace = 1
-		}
-		modifier = {
-			factor = 2
-			ship_defense_system = 1
-		}
+		base = 1
 	}
 	effect = {
 		carrier = {
@@ -877,19 +581,7 @@ electromagnetic_aircraft_launch = {
 		future_backbone = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			deep_mining = 1
-		}
-		modifier = {
-			factor = 2
-			sustainable_energy = 1
-		}
-		modifier = {
-			factor = 1
-			electric_gun_technology = 1
-		}
+		base = 1
 	}
 	effect = {
 		carrier = {
@@ -902,15 +594,7 @@ night_training = {
 		internet = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "transistor_transistor_logic"
-		}
-		modifier = {
-			factor = 2
-			aegis_defense = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -923,15 +607,7 @@ enemy_plotting_cards = {
 		internet = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 2
-			carrier_battle_group = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -944,15 +620,7 @@ target_hit_profile_analysis = {
 		internet = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nuclear_reactors = 1
-		}
-		modifier = {
-			factor = 1
-			guided_missile_destroyers = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -965,15 +633,7 @@ hit_evaluation_reports = {
 		mobile_phones_2g = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			supercarriers = 1
-		}
-		modifier = {
-			factor = 2
-			overseas_naval_base = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -986,15 +646,7 @@ empirical_interdiction_reports = {
 		mobile_phones_2g = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			high_speed_uni_network = 1
-		}
-		modifier = {
-			factor = 2
-			carrier_battle_group = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1007,15 +659,7 @@ naval_strike_success_criterium = {
 		mobile_phones_2g = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			overseas_naval_base = 1
-		}
-		modifier = {
-			factor = 1
-			supercarriers = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1028,15 +672,7 @@ underway_refueling = {
 		native_ip_networks = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "horizontal_drilling"
-		}
-		modifier = {
-			factor = 2
-			colonial_nation = yes
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1049,15 +685,7 @@ ammunition_conservation_system = {
 		native_ip_networks = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "armoured_turrets"
-		}
-		modifier = {
-			factor = 2
-			invention = "time_studies"
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1070,15 +698,7 @@ radio_telegraphy = {
 		native_ip_networks = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			evidence_based_medicine = 1
-		}
-		modifier = {
-			factor = 4
-			invention = "national_radio_networks"
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1091,15 +711,7 @@ political_lobbying = {
 		rfid = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 2
-			vanguard_method = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1112,15 +724,7 @@ military_political_decision_making = {
 		rfid = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			war_on_terror = 1
-		}
-		modifier = {
-			factor = 2
-			neoprotectionism = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1133,15 +737,7 @@ local_military_government = {
 		rfid = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 2
-			invention = "pragmatism"
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1154,15 +750,7 @@ war_gamming = {
 		argumented_reality = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			anti_ship_ballistic_missile = 1
-		}
-		modifier = {
-			factor = 2
-			higher_density_reactor = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1175,15 +763,7 @@ combined_arms_planning = {
 		argumented_reality = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			sixth_generation_jets = 1
-		}
-		modifier = {
-			factor = 2
-			supercarrier_battle_group = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1196,15 +776,7 @@ academic_training = {
 		steam_locomotive = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			globalization = 1
-		}
-		modifier = {
-			factor = 2
-			strd_internet = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1217,15 +789,7 @@ combat_station_training = {
 		steam_locomotive = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nuclear_reactors = 1
-		}
-		modifier = {
-			factor = 2
-			aegis_defense = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1238,15 +802,7 @@ societal_status = {
 		steam_locomotive = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "national_fraternity"
-		}
-		modifier = {
-			factor = 2
-			informatization_education = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1259,15 +815,7 @@ independent_command = {
 		electric_aluminium_motor = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			naval_warfare_center = 1
-		}
-		modifier = {
-			factor = 2
-			vanguard_method = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1280,15 +828,7 @@ continuous_issuing_of_orders = {
 		electric_aluminium_motor = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "radio_telegraphy"
-		}
-		modifier = {
-			factor = 1
-			aegis_combined = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1301,11 +841,7 @@ delegated_power = {
 		electric_aluminium_motor = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			electromagnetic_aircraft_launch = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1318,15 +854,7 @@ wargames = {
 		electric_ball_bearing_motor = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			prestige = 40
-		}
-		modifier = {
-			factor = 2
-			high_speed_uni_network = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1339,15 +867,7 @@ alternative_plans = {
 		electric_ball_bearing_motor = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			invention = "academic_training"
-		}
-		modifier = {
-			factor = 2
-			anti_ship_ballistic_missile = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1360,15 +880,7 @@ n_saddle_orders = {
 		electric_ball_bearing_motor = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			invention = "night_training"
-		}
-		modifier = {
-			factor = 2
-			invention = "delegated_power"
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1381,15 +893,7 @@ literate_ncos = {
 		cogeneration = 1
 	}
 	chance = {
-		base = 4
-		modifier = {
-			factor = 2
-			invention = "academic_training"
-		}
-		modifier = {
-			factor = 2
-			international_science = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1402,15 +906,7 @@ nco_combat_station_training = {
 		cogeneration = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "combat_station_training"
-		}
-		modifier = {
-			factor = 2
-			ship_defense_system = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1423,15 +919,7 @@ nco_tactical_training = {
 		cogeneration = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "political_lobbying"
-		}
-		modifier = {
-			factor = 2
-			mobile_offshore_base = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1444,15 +932,7 @@ amphibious_warfare_training = {
 		electric_car = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			ascent_phase_defense = 1
-		}
-		modifier = {
-			factor = 2
-			mobile_offshore_base = 1
-		}
+		base = 1
 	}
 	effect = {
 		navy_base = {
@@ -1465,19 +945,7 @@ naval_exercises = {
 		electric_car = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "war_gamming"
-		}
-		modifier = {
-			factor = 1
-			invention = "offensive_attitude"
-		}
-		modifier = {
-			factor = 1
-			invention = "defensive_attitude"
-		}
+		base = 1
 	}
 	effect = {
 		naval_attrition = -0.1000

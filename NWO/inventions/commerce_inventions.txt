@@ -3,15 +3,7 @@ the_imf = {
 		grain_cradle = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_liberty"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -22,15 +14,7 @@ world_bank = {
 		fertilizers = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_liberty"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		loan_interest = -0.0100
@@ -42,15 +26,7 @@ reserve_transparency = {
 		farm_machinery = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_liberty"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		loan_interest = -0.0100
@@ -62,18 +38,9 @@ multitude_of_financial_instruments = {
 		intensive_farming = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_liberty"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
-		activate_building = "financial_services_factory"
 		tax_eff = 1
 	}
 }
@@ -82,11 +49,7 @@ insurance_companies = {
 		intensive_farming = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -97,15 +60,7 @@ industrial_rnd_investments = {
 		insecticide = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "protectionism"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -116,15 +71,7 @@ industrial_production_investments = {
 		insecticide = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 1
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -135,15 +82,7 @@ industrial_distribution_investments = {
 		insecticide = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 1
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -154,15 +93,7 @@ regulated_buying_and_selling_of_stocks = {
 		green_revolution = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "state_capitalism"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -173,15 +104,7 @@ liquidation_of_assets = {
 		plant_breeding = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "protectionism"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -192,18 +115,7 @@ capital_for_investors = {
 		plant_breeding = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 1
-			OR = {
-				ruling_party_ideology = {
-					"conservative" "big_tent" 	}
-			}
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -214,15 +126,7 @@ distribution_channels = {
 		plant_breeding = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "laissez_faire"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -233,19 +137,7 @@ zero_interest_rate_policy = {
 		high_yielding_grain = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 1
-			nationalvalue = "nv_order"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -256,19 +148,7 @@ open_market_operation = {
 		high_yielding_grain = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 1
-			nationalvalue = "nv_order"
-		}
+		base = 1
 	}
 	effect = {
 		loan_interest = -0.0100
@@ -279,19 +159,7 @@ private_bank_monitoring = {
 		modern_plant_breeding = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 1
-			nationalvalue = "nv_order"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -302,15 +170,7 @@ market_behaviour_monitoring = {
 		modern_plant_breeding = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_order"
-		}
-		modifier = {
-			factor = 1
-			ruling_party_ideology = "socialist"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -321,15 +181,7 @@ buying_on_margin = {
 		precision_agriculture = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
-		modifier = {
-			factor = 1
-			nationalvalue = "nv_liberty"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -340,15 +192,7 @@ end_of_pound_sterling = {
 		surface_mining = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -359,15 +203,7 @@ anchored_dollar_standard = {
 		vanning = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 3
@@ -378,15 +214,7 @@ decimal_monetary_system = {
 		vanning = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_order"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 3
@@ -397,15 +225,7 @@ nixon_shock = {
 		mining_hard_rock = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_order"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		loan_interest = -0.0100
@@ -416,15 +236,7 @@ pegged_float = {
 		froth_flotation = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_order"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		loan_interest = -0.0100
@@ -435,15 +247,7 @@ double_standard = {
 		mining_soft_rock = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "nixon_shock"
-		}
-		modifier = {
-			factor = 3
-			average_consciousness = 3
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 2
@@ -454,15 +258,7 @@ fixed_intramonetary_exchange_rates = {
 		large_scale_surface_mining = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			average_consciousness = 2
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "planned_economy"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -473,19 +269,7 @@ international_monetary_exchange_rates = {
 		haul_truck = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "fixed_intramonetary_exchange_rates"
-		}
-		modifier = {
-			factor = 1
-			prestige = 40
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -496,19 +280,7 @@ delhi_declaration = {
 		large_scale_surface_mining = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			invention = "double_standard"
-		}
-		modifier = {
-			factor = 2
-			invention = "kenneth_arrow"
-		}
-		modifier = {
-			factor = 3
-			economic_policy = "laissez_faire"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 3
@@ -519,15 +291,7 @@ state_bond_monetary_mechanism = {
 		landfill_mining = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_order"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -538,19 +302,7 @@ interest_inflation_weapon = {
 		landfill_mining = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "international_monetary_exchange_rates"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 1
-			trade_policy = "protectionism"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -561,15 +313,7 @@ hyperinflation = {
 		recycling = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			war_exhaustion = 4
-		}
+		base = 1
 	}
 	core_pop_consciousness_modifier = 0.0100
 	effect = {
@@ -582,20 +326,9 @@ john_maynard_keynes = {
 	}
 	news = no
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			NOT = {
-				literacy = 0.7000
-			}
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
+		base = 1
 	}
 	effect = {
-		activate_building = "paper_factory"
 		permanent_prestige = 3
 		factory_goods_throughput = {
 			financial_services = 0.0200
@@ -607,15 +340,7 @@ hirofumi_uzawa = {
 		yarn = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_liberty"
-		}
-		modifier = {
-			factor = 1
-			gender_rights = "feminist"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -626,15 +351,7 @@ kenneth_arrow = {
 		yarn = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 1
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -645,15 +362,7 @@ robert_lucas_jr = {
 		dairy_products = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "socialist"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -664,19 +373,7 @@ milton_friedman = {
 		dairy_products = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			ruling_party_ideology = "communist"
-		}
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "planned_economy"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -687,19 +384,7 @@ ludwig_von_mises = {
 		refrigeration = 1
 	}
 	chance = {
-		base = 0
-		modifier = {
-			factor = 10
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 3
-			trade_policy = "free_trade"
-		}
-		modifier = {
-			factor = 1
-			prestige = 10
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -710,15 +395,7 @@ friedrich_hayek = {
 		refrigeration = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			is_ideology_enabled = "socialist"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "socialist"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -729,15 +406,7 @@ dominique_strauss_kahn = {
 		intensive_pig_farming = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 1
-			prestige = 30
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -748,15 +417,7 @@ robert_shiller = {
 		intensive_pig_farming = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 1
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -767,15 +428,7 @@ david_romer = {
 		intensive_pig_farming = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 1
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -786,15 +439,7 @@ paul_krugman = {
 		intensive_pig_farming = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 1
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -805,18 +450,7 @@ johann_heinrich_von_thunen = {
 		modern_chees_factory = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			OR = {
-				ruling_party_ideology = {
-					"conservative" "big_tent" 	}
-			}
-		}
-		modifier = {
-			factor = 1
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -827,15 +461,7 @@ gnu = {
 		modern_chees_factory = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "planned_economy"
-		}
-		modifier = {
-			factor = 1
-			nationalvalue = "nv_equality"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -846,17 +472,7 @@ ben_bernanke = {
 		livestock_transportation = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			NOT = {
-				literacy = 0.7000
-			}
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -867,15 +483,7 @@ giulio_tremonti = {
 		livestock_transportation = 1
 	}
 	chance = {
-		base = 3
-		modifier = {
-			factor = 3
-			invention = "john_maynard_keynes"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -886,15 +494,7 @@ zhou_xiaochuan = {
 		livestock_transportation = 1
 	}
 	chance = {
-		base = 3
-		modifier = {
-			factor = 3
-			invention = "john_maynard_keynes"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -905,15 +505,7 @@ ray_dalio = {
 		animal_vaccines = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -924,15 +516,7 @@ steve_keen = {
 		animal_vaccines = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -943,15 +527,7 @@ zero_lower_bound_problem = {
 		rotary_milking = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -962,15 +538,7 @@ lost_decade = {
 		rotary_milking = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -981,15 +549,7 @@ vernon_smith = {
 		gmo_meat = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		permanent_prestige = 1
@@ -1000,15 +560,7 @@ debt_finace = {
 		gmo_meat = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		loan_interest = -0.0100
@@ -1019,18 +571,10 @@ economic_cooperation_act = {
 		coal_mining = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_liberty"
-		}
+		base = 1
 	}
 	effect = {
-		activate_building = "turbines_factory"
+		factory_cost = -0.0100
 	}
 }
 post_war_consensus = {
@@ -1038,15 +582,7 @@ post_war_consensus = {
 		oil_well = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_liberty"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1057,22 +593,10 @@ anti_trust_laws = {
 		oil_well = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "socialist"
-		}
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_equality"
-		}
+		base = 1
 	}
 	effect = {
-		activate_building = "petroleum_plastics_factory"
+		factory_cost = -0.0100
 	}
 }
 mixed_economy = {
@@ -1080,15 +604,7 @@ mixed_economy = {
 		oil_refinery = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1099,15 +615,7 @@ centralized_economic_planning = {
 		oil_refinery = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 3
-			economic_policy = "planned_economy"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1118,19 +626,7 @@ import_substitution_industrialization = {
 		oil_refinery = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "planned_economy"
-		}
-		modifier = {
-			factor = 3
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "protectionism"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -1141,15 +637,7 @@ polypoly_structure = {
 		nuclear_power = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_liberty"
-		}
+		base = 1
 	}
 	effect = {
 		factory_input = -0.0100
@@ -1160,18 +648,7 @@ oligopoly_structure = {
 		nuclear_power = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_order"
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				ruling_party_ideology = {
-					"conservative" "big_tent" 	}
-			}
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1182,15 +659,7 @@ monopoly_structure = {
 		nuclear_power = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1201,15 +670,7 @@ limited_partnership_company = {
 		oil_cartel = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -1220,15 +681,7 @@ joint_stock_company = {
 		oil_cartel = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "limited_partnership_company"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -1239,19 +692,7 @@ patent = {
 		oil_cartel = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_order"
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0300
@@ -1262,19 +703,7 @@ trademark = {
 		oil_cartel = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 2
-			prestige = 10
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0200
@@ -1285,15 +714,7 @@ financial_regulations = {
 		oil_tanker = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "protectionism"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -1304,15 +725,7 @@ banking_regulations = {
 		oil_tanker = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "socialist"
-		}
+		base = 1
 	}
 	effect = {
 		tax_eff = 1
@@ -1323,15 +736,7 @@ working_board_of_directors = {
 		renewable_energy = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1342,15 +747,7 @@ bankruptcy_proceedings = {
 		renewable_energy = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1361,18 +758,7 @@ annual_report_proceedings = {
 		renewable_energy = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				ruling_party_ideology = {
-					"conservative" "big_tent" 	}
-			}
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1383,15 +769,7 @@ creative_trade_legislation = {
 		deepwater_drilling = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 3
-			economic_policy = "planned_economy"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "socialist"
-		}
+		base = 1
 	}
 	effect = {
 		loan_interest = -0.0100
@@ -1402,15 +780,7 @@ trade_block_protectionism = {
 		nuclear_gen_iv = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1421,15 +791,7 @@ infant_industry = {
 		nuclear_gen_iv = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = "nv_equality"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
+		base = 1
 	}
 	effect = {
 		factory_cost = -0.0100
@@ -1440,18 +802,10 @@ fordism = {
 		mushet_steel = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
-		activate_building = "automobiles_factory"
+		factory_cost = -0.0100
 	}
 }
 taylorism = {
@@ -1459,15 +813,7 @@ taylorism = {
 		synthetic_dye = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1478,15 +824,7 @@ work_classification = {
 		tungsten_carbide = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1497,19 +835,7 @@ work_specialization = {
 		tungsten_carbide = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "work_classification"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1520,19 +846,7 @@ work_control_and_hierarchy = {
 		tungsten_carbide = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = "work_specialization"
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1543,18 +857,7 @@ sequence_planning = {
 		explosives = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				ruling_party_ideology = {
-					"conservative" "big_tent" 	}
-			}
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1565,15 +868,7 @@ inventory_planning = {
 		explosives = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1584,15 +879,7 @@ quality_assurance_procedure = {
 		explosives = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			average_consciousness = 4
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1603,15 +890,7 @@ time_studies = {
 		liquid_crystal_display = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "socialist"
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1622,15 +901,7 @@ time_clock = {
 		liquid_crystal_display = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			average_consciousness = 2
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0250
@@ -1641,15 +912,7 @@ lighting = {
 		liquid_crystal_display = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 4
-			evidence_based_medicine = 1
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0250
@@ -1660,17 +923,7 @@ old_style_family_business = {
 		dematerialization = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "interventionism"
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				average_consciousness = 3
-			}
-		}
+		base = 1
 	}
 	effect = {
 		factory_input = -0.0300
@@ -1681,15 +934,7 @@ anynomous_investor_business = {
 		dematerialization = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			average_consciousness = 3
-		}
-		modifier = {
-			factor = 2
-			economic_policy = "state_capitalism"
-		}
+		base = 1
 	}
 	effect = {
 		factory_input = -0.0300
@@ -1700,15 +945,7 @@ marketized_smallholder_business = {
 		dematerialization = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			trade_policy = "free_trade"
-		}
-		modifier = {
-			factor = 2
-			ruling_party_ideology = "liberal"
-		}
+		base = 1
 	}
 	effect = {
 		factory_input = -0.0300
@@ -1719,15 +956,7 @@ i_vanguard_method = {
 		fold_forming = 1
 	}
 	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			economic_policy = "laissez_faire"
-		}
-		modifier = {
-			factor = 2
-			average_consciousness = 3
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
@@ -1738,15 +967,7 @@ human_resource_development = {
 		cemented_carbide = 1
 	}
 	chance = {
-		base = 3
-		modifier = {
-			factor = 2
-			average_consciousness = 3
-		}
-		modifier = {
-			factor = 2
-			gender_rights = "feminist"
-		}
+		base = 1
 	}
 	effect = {
 		factory_output = 0.0100
