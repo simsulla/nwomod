@@ -686,27 +686,14 @@ nationalist_rebels = {
 	
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
-		factor = 1.05
+		factor = 1.2
 		
 		modifier = {
 			factor = 0
-			country = { civilized = no }
-		}
-		modifier = {
-			factor = 0.25
-			is_primary_culture = yes
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				location = {
-					any_core = {
-						is_cultural_union = no
-						is_primary_culture = THIS
-						exists = no
-			 		}
-			 	}
-		 	}
+			OR = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
 		}
 		modifier = {
 			factor = 3
@@ -722,47 +709,16 @@ nationalist_rebels = {
 				is_cultural_union = THIS
 		}
 		modifier = {
-			factor = 1.01
-			pop_majority_ideology = communist
+			factor = 0
+			NOT = { pop_majority_ideology = nationalist }
 		}
 		modifier = {
-			factor = 1.01
-			pop_majority_ideology = socialist
+			factor = 2
+			pop_majority_ideology = nationalist
 		}
-		modifier = {
-			factor = 1.03
-			pop_majority_ideology = progressive
-		}
-		modifier = {
-			factor = 1.05
-			pop_majority_ideology = liberal
-		}
-		modifier = {
-			factor = 1.07
-			pop_majority_ideology = conservative
-		}
-		modifier = {
-			factor = 1.09
-			pop_majority_ideology = traditionalist
-		}
-		modifier = {
-			factor = 1.11
-			pop_majority_ideology = populist
-		}
-		
-
-		modifier = {
-			factor = 1.015
-			NOT = { is_culture_group = THIS }
-		}
-		
 		modifier = {
 			factor = 0.4
 			is_accepted_culture = yes
-		}
-		modifier = {
-			factor = 1.02
-			is_accepted_culture = no
 		}
 		modifier = {
 			factor = 1.2
