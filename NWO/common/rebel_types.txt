@@ -686,7 +686,7 @@ nationalist_rebels = {
 	
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
-		factor = 3
+		factor = 1.05
 		
 		modifier = {
 			factor = 0
@@ -823,10 +823,10 @@ nationalist_rebels = {
 	}
 	demands_enforced_effect = {
 		release_vassal = REB
-		modify_relation = {
-			tag = REB
-			relation = -150
-		}
+		#modify_relation = {
+		#	tag = REB
+		#	relation = -150
+		#}
 	}
 }
 
@@ -901,7 +901,7 @@ separatist_rebels = {
 	
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
-		factor = 50
+		factor = 1.05
 		modifier = {
 			factor = 0
 			is_primary_culture = yes
@@ -913,20 +913,20 @@ separatist_rebels = {
 		modifier = {
 			factor = 0
 			NOT = {
-				AND = {
-					country = { any_neighbor_country = { have_core_in = THIS } }  # invalid acc to validator, but occay acc to wiki
+				#AND = {
+					#country = { any_neighbor_country = { have_core_in = THIS } }  # invalid acc to validator, but occay acc to wiki
 					location = {
 						any_core = {
 							is_primary_culture = THIS
 							exists = yes
 						}
 					}
-				}
+				#}
 			}
 		}
 		modifier = {
-			factor = 10
-			country = { any_neighbor_country = { have_core_in = THIS } } # invalid acc to validator, but occay acc to wiki
+			factor = 2
+			#country = { any_neighbor_country = { have_core_in = THIS } } # invalid acc to validator, but occay acc to wiki
 			location = {
 				any_core = {
 					is_primary_culture = THIS
