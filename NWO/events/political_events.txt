@@ -124,16 +124,16 @@ country_event = {
 	option = {
 		name = EVT_15620_A 
 		prestige = 10
-		influence = { who = FROM value = 50 }
+		diplomatic_influence = { who = FROM value = 50 }
 		relation = { who = FROM value = 50 }
 		FROM = { set_country_flag = market_communism_accepted }
-		ai_chance = { factor = 0.1 modifier = { value = 10 OR = { FROM = { tag = CHI } NOT = { exists = SUN } } } } 
+		ai_chance = { factor = 0.1 modifier = { factor = 10 OR = { FROM = { tag = CHI } NOT = { exists = SUN } } } } 
 	}
 	
 	option = {
 		name = EVT_15620_A 
 		FROM = { relation = { who = THIS value = -100 } }
-		ai_chance = { factor = 0.9 modifier = { value = 0.1 FROM = { tag = CHI } } } 
+		ai_chance = { factor = 0.9 modifier = { factor = 0.1 FROM = { tag = CHI } } } 
 	}
 	
 }
