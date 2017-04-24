@@ -62,7 +62,8 @@ country_event = {
 	picture = "five_year_plan"
 
 	trigger = {
-		has_country_modifier = five_year_plan
+		NOT = { invention = market_communism }
+		OR = { government = proletarian_dictatorship economic_policy = planned_economy }
 		NOT = { has_country_modifier = central_planning_inflexibility }
 		war = no
 	}
@@ -90,7 +91,8 @@ country_event = {
 	picture = "five_year_plan"
 
 	trigger = {
-		has_country_modifier = five_year_plan
+		OR = { government = proletarian_dictatorship economic_policy = planned_economy }
+		NOT = { invention  = market_communism }
 		has_country_modifier = central_planning_inflexibility
 		NOT = { has_country_modifier = central_planning_inflexibility2 }
 		war = no
@@ -109,6 +111,31 @@ country_event = {
 	}
 	
 
+}
+
+country_event = {
+	id = 15620
+	title = EVT_15620_NAME
+	desc = EVT_15620_DESC
+	picture = market_reform
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_15620_A 
+		prestige = 10
+		influence = { who = FROM value = 50 }
+		relation = { who = FROM value = 50 }
+		FROM = { set_country_flag = market_communism_accepted }
+		ai_chance = { factor = 0.1 modifier = { value = 10 OR = { FROM = { tag = CHI } NOT = { exists = SUN } } } } 
+	}
+	
+	option = {
+		name = EVT_15620_A 
+		FROM = { relation = { who = THIS value = -100 } }
+		ai_chance = { factor = 0.9 modifier = { value = 0.1 FROM = { tag = CHI } } } 
+	}
+	
 }
 
 #### Press Rights ####

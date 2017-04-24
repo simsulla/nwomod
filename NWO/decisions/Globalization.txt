@@ -336,12 +336,14 @@ political_decisions = {
 		picture = "market_communism"
 		potential = {
 			government = proletarian_dictatorship
-			NOT = { has_country_flag = market_communism }
+			NOT = { has_country_flag = market_communism_denied }
+			NOT = { has_country_flag = market_socialism }
+			NOT = { invention = market_communism }
 			NOT = { has_country_modifier = comecon_excluded }
 			NOT = { has_country_modifier = bretton_system }
 		}
 		allow = {
-			comprehensive_school = 1 # i.e 1990+
+			market_socialism = 1 # i.e 1990+
 			OR = {
 				is_secondary_power = yes
 				is_greater_power = yes
@@ -349,7 +351,8 @@ political_decisions = {
 			}
 		}
 		effect = {
-			set_country_flag = market_communism
+			set_country_flag = market_socialism
+			any_country = { limit = { has_country_flag = world_bank	} country_event = 15620 }
 		}
 		ai_will_do = { factor = 1 }
 	}

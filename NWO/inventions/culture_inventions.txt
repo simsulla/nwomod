@@ -1,3 +1,22 @@
+market_communism = {
+	limit = {
+		market_socialism = 1
+	}
+	chance = {
+		base = 0
+		modifier = { 
+			factor = 0.05
+			has_country_flag = market_socialism
+		}
+		modifier = { 
+			factor = 1
+			has_country_flag = market_communism_accepted
+		}
+	}
+	effect = {
+		shared_prestige = 10
+	}
+}
 plankalkul = {
 	limit = {
 		eastern_question = 1
