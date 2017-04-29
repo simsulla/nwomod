@@ -10,7 +10,7 @@ political_decisions = {
 		}
 
 		allow = {
-			security_reform = security_data_cohesion
+			wage_reform = low_minimum_wage
 		}
 
 		effect = {
@@ -38,8 +38,8 @@ political_decisions = {
 		allow = {
 			NOT = { has_country_modifier = transition_to_dictatorship }
 			OR = { 
-				security_reform = security_clearance_for_gov_services
-				security_reform = preemptive_security_actions
+				wage_reform = acceptable_minimum_wage
+				wage_reform = good_minimum_wage
 			}
 		}
 
@@ -67,7 +67,7 @@ political_decisions = {
 
 		allow = {
 			NOT = { has_country_modifier = transition_to_dictatorship }
-			security_reform = preemptive_security_actions
+			wage_reform = good_minimum_wage
 		}
 
 		effect = {

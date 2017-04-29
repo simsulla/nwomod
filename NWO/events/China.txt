@@ -447,9 +447,9 @@ country_event = {
 
   option = {
     name = EVT_8002810_A
-	social_reform = unregulated_hours
-	social_reform = minimal_subsidies
-	social_reform = trinket_pensions
+	work_hours = unregulated_hours
+	unemployment_subsidies = minimal_subsidies
+	pensions = trinket_pensions
 	any_pop = { militancy = 0.5 }
 	ai_chance = { factor = 100 }
   }
@@ -893,7 +893,7 @@ country_event = {
 
   option = {
     name = EVT_8002840_A
-	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.1 } } }
+	random_state = { any_pop = { dominant_issue = { value = full_citizenship factor = 0.1 } } }
 	ai_chance = { factor = 100 }
   }
 
@@ -953,7 +953,7 @@ country_event = {
     name = EVT_8002842_A
 	any_pop = { consciousness = 2 }
 	country_event =  { id = 8002843 days = 10 } 
-	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.65 } } }
+	random_state = { any_pop = { dominant_issue = { value = full_citizenship factor = 0.65 } } }
 	ai_chance = { factor = 100 }
   }
 

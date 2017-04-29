@@ -8530,8 +8530,8 @@ country_event = {
 		NOT = { has_country_modifier = election_cooldown }
 		NOT = { has_country_flag = election_minorities }
 		OR = {
-			minorities_reform = minorities_oppression
-			minorities_reform = minorities_equal_rights
+			immigration_policy = quota_immigration
+			immigration_policy = naturalization
 		}
 		OR = {
 			vote_franschise = universal_weighted_voting
@@ -8629,7 +8629,7 @@ country_event = {
 			}
 			dominant_issue = {
 				factor = 0.10
-				value = minorities_oppression
+				value = quota_immigration
 			}
 			ideology = {
 				value = populist
@@ -8648,7 +8648,7 @@ country_event = {
 			}
 			dominant_issue = {
 				factor = 0.10
-				value = minorities_oppression
+				value = quota_immigration
 			}
 			ideology = {
 				value = traditionalist
@@ -8657,7 +8657,7 @@ country_event = {
 		}
 		random_owned = {
 			limit = {
-				owner = { minorities_reform = minorities_oppression }
+				owner = { immigration_policy = quota_immigration }
 			}
 			owner = {
 				any_pop = {
@@ -8678,7 +8678,7 @@ country_event = {
 		}
 		random_owned = {
 			limit = {
-				owner = { minorities_reform = minorities_equal_rights }
+				owner = { immigration_policy = naturalization }
 			}
 			owner = {
 				any_pop = {
@@ -8708,7 +8708,7 @@ country_event = {
 		} 
 		random_owned = {
 			limit = {
-				owner = { minorities_reform = minorities_oppression }
+				owner = { immigration_policy = quota_immigration }
 			}
 			owner = {
 				any_pop = {
@@ -8732,7 +8732,7 @@ country_event = {
 		}
 		random_owned = {
 			limit = {
-				owner = { minorities_reform = minorities_equal_rights }
+				owner = { immigration_policy = naturalization }
 			}
 			owner = {
 				any_pop = {
@@ -8745,7 +8745,7 @@ country_event = {
 					}
 					dominant_issue = {
 						factor = 0.10
-						value = minorities_equal_rights
+						value = naturalization
 					}
 					scaled_consciousness = { 
 						factor = 3

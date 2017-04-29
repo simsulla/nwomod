@@ -821,14 +821,11 @@ country_event = { #The New Regime - populist or dictatorship
 
 		# rom rebel_types
 		political_reform = none_voting
-		political_reform = ruling_party_opinion
 		political_reform = criminology_classical
 		political_reform = censored_publishing
 		political_reform = gender_role_based
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
-		political_reform = lgbt_outlawed
-		political_reform = minorities_oppression
 		# end - from rebel_types
 		
 	}
@@ -861,14 +858,11 @@ country_event = { #The New Regime- traditionalist
 
 		# rom rebel_types
 		political_reform = none_voting
-		political_reform = ruling_party_opinion
 		political_reform = criminology_classical
 		political_reform = censored_publishing
 		political_reform = gender_role_based
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
-		political_reform = lgbt_outlawed
-		political_reform = minorities_oppression
 		# end - from rebel_types		
 	}
 }
@@ -884,14 +878,11 @@ country_event = { # The New Regime - Communist
 		religion = secularism
 		# from rebel_types
 		political_reform = none_voting
-		political_reform = ruling_party_opinion
 		political_reform = criminology_classical
 		political_reform = censored_publishing
 		political_reform = gender_equal
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
-		political_reform = lgbt_outlawed
-		political_reform = minorities_equal_rights
 		
 		add_country_modifier = { name = pending_nationalize duration = 700 }
 		any_greater_power = { limit = { THIS = { can_nationalize = yes } NOT = { government = proletarian_dictatorship } } country_event = 800053 }
@@ -948,7 +939,6 @@ country_event = { # The New Regime - Democracy
 		# from rebel_types
 		random_owned = { limit = { owner = { vote_franschise = none_voting } } owner = { political_reform = promoted_voting } }		
 		random_owned = { limit = { owner = { NOT = { vote_franschise = promoted_voting } } } owner = { political_reform = universal_weighted_voting } }
-		political_reform = democratic_opinion
 		political_reform = criminology_corporal
 		political_reform = unregulated_publishing
 		random_owned = { limit = { owner = { gender_rights = gender_equal } } owner = { political_reform = gender_promotive } } 

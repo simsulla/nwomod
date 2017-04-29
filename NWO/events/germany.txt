@@ -267,7 +267,7 @@ country_event = { # Stasi
 
   option = {
     name = EVT_8004312_A
-	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.65 } } }
+	random_state = { any_pop = { dominant_issue = { value = full_citizenship factor = 0.65 } } }
 	SUN  = { country_event = 8225000 } 
   }
 }
@@ -329,7 +329,7 @@ country_event = { # Construction of the Berlin Wall;
 
   option = {
     name = EVT_8004314_A
-	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
+	random_state = { any_pop = { dominant_issue = { value = full_citizenship factor = 0.6 } } }
 	SUN  = { country_event = 8225000 } 
   }
 }
@@ -476,7 +476,7 @@ country_event = { # Fall of the Berlin Wall
   option = {
     name = EVT_8004320_B
 	any_pop = { militancy = 5.0 consciousness = 4 }
-	any_pop = { dominant_issue = { value = free_opinion factor = 0.2 } }
+	any_pop = { dominant_issue = { value = full_citizenship factor = 0.2 } }
 	relation = { who = GER value = -50 } 
 	overlord = { country_event = 8014250 } 
 	ai_chance = { factor = 0 }

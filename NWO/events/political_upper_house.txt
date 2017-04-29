@@ -299,7 +299,7 @@ country_event = {
 	
 	trigger = {
 		NOT = {
-			political_opinions = ruling_party_opinion
+			political_parties = parties_only_nominated
 		}
 		ruling_party_ideology = traditionalist
 		upper_house = {
@@ -314,7 +314,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA18070"
-		political_reform = ruling_party_opinion
+		political_reform = parties_only_nominated
 		any_pop = {
 			militancy = 1
 			consciousness = 2
@@ -339,7 +339,7 @@ country_event = {
 	trigger = {
 		social_reform_want = 0.2
 		NOT = {
-			wage_and_work_hours = six_hours
+			work_hours = six_hours
 		}
 		upper_house = {
 			ideology = socialist
@@ -436,7 +436,7 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB18100"
-		social_reform = trinket_health_care
+		health_care = trinket_health_care
 		scaled_militancy = {
 			ideology = conservative
 			factor = 4
@@ -475,7 +475,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA18110"
-		social_reform = minimal_subsidies
+		unemployment_subsidies = minimal_subsidies
 		any_pop = {
 			militancy = -1
 			consciousness = 0.5

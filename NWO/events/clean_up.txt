@@ -16,7 +16,6 @@ country_event = {
 		civilized = yes
 		political_parties = parties_not_allowed
 		vote_franschise = none_voting
-		political_opinions = ruling_party_opinion
 		OR = {
 			ruling_party_ideology = socialist
 			ruling_party_ideology = communist
@@ -51,7 +50,6 @@ country_event = {
 		civilized = yes
 		political_parties = parties_not_allowed
 		vote_franschise = none_voting
-		political_opinions = ruling_party_opinion
 		ruling_party_ideology = populist
 	}
 	
@@ -83,7 +81,6 @@ country_event = {
 		civilized = yes
 		political_parties = parties_not_allowed
 		vote_franschise = none_voting
-		political_opinions = ruling_party_opinion
 		ruling_party_ideology = nationalist
 	}
 	
@@ -115,7 +112,6 @@ country_event = {
 		civilized = yes
 		political_parties = parties_not_allowed
 		vote_franschise = none_voting
-		political_opinions = ruling_party_opinion
 		ruling_party_ideology = traditionalist
 	}
 	
@@ -148,7 +144,6 @@ country_event = {
 		NOT = {
 			political_parties = parties_not_allowed
 			vote_franschise = none_voting
-			political_opinions = ruling_party_opinion
 		}
 	}
 	
@@ -184,7 +179,6 @@ country_event = {
 		civilized = yes
 		ruling_party_ideology = conservative
 		vote_franschise = none_voting
-		political_opinions = ruling_party_opinion
 	}
 	
 	mean_time_to_happen = {
@@ -214,7 +208,6 @@ country_event = {
 		}
 		political_parties = parties_not_allowed
 		vote_franschise = none_voting
-		political_opinions = ruling_party_opinion
 		NOT = {
 			ruling_party_ideology = populist
 			ruling_party_ideology = communist
@@ -243,7 +236,6 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
-		political_opinions = ruling_party_opinion
 		ruling_party_ideology = liberal 
 	}
 	
@@ -253,7 +245,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA60140"
-		political_reform = regulated_opinion
+		political_reform = parties_promote_democratic
 	}
 }
 

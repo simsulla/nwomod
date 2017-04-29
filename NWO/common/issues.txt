@@ -42,7 +42,6 @@ party_issues = {
 			factory_owner_cost = 1
 			max_tax = 0.75
 			min_tax = 0.1
-
 			rules = {
 				build_factory = yes
 				expand_factory = yes
@@ -69,7 +68,7 @@ party_issues = {
 			min_tax = 0.25
 			max_tax = 0.9
 			factory_owner_cost = 1.5
-
+			factory_throughput = -0.05
 			rules = {
 				build_factory = yes
 				expand_factory = yes
@@ -93,6 +92,7 @@ party_issues = {
 		planned_economy = {
 			min_tax = 0.5
 			factory_owner_cost = -1	#negative costs, can't build.
+			factory_throughput = -0.10
 			rules = {
 				build_factory = yes
 				expand_factory = yes
@@ -117,19 +117,23 @@ party_issues = {
 			global_population_growth = -0.001
 		}
 		secularized = {
+			#no effect
 		}
 		moralism = {
 			global_population_growth = 0.001
-			#no effect
 		}
 	}
 	citizenship_policy = {
-		residency = { 
+		residency = {
+			rules = { primary_culture_voting = yes }
 			non_accepted_pop_militancy_modifier = 0.03
 		}
 		limited_citizenship = {
+			rules = { culture_voting = yes }
 		}
 		full_citizenship = {
+			rules = { all_voting = yes }
+			global_assimilation_rate = 0.05
 			non_accepted_pop_militancy_modifier = -0.03
 		}
 	}
@@ -165,84 +169,87 @@ party_issues = {
 ##########################################
 political_reforms = {
 
-	vote_franschise = {
+	vote_franschise = { 
 		next_step_only = yes
 		none_voting = {
+			rules = { same_as_ruling_party = yes }
 			rich_vote = 0
 			middle_vote = 0
 			poor_vote = 0
 		}
-		registered_voting = { # landed_voting  
+		registered_voting = {   
+			rules = { state_vote = yes }
 			rich_vote = 2
-			middle_vote = 1
-			poor_vote = 0
+			middle_vote = 2
+			poor_vote = 1
 		}
-		universal_weighted_voting = { # wealth_weighted_voting 
-			rich_vote = 1
-			middle_vote = 1
-			poor_vote = 0
-		}
-		universal_voting = { # wealth_voting
+		universal_weighted_voting = { 
+			rules = { state_vote = yes }
 			rich_vote = 1
 			middle_vote = 1
 			poor_vote = 1
+			#allow = { OR = { government = democracy government = hms_government } }
 		}
-		promoted_voting = { # universal_voting
+		universal_voting = { 
+			rules = { population_vote = yes }
+			rich_vote = 1
+			middle_vote = 1
+			poor_vote = 1
+			#allow = { OR = { government = democracy government = hms_government } }
+		}
+		promoted_voting = {
+			rules = { population_vote = yes }
 			rich_vote = 2
 			middle_vote = 1
 			poor_vote = 1
+			#allow = { OR = { government = democracy government = hms_government } }
 		}
 	}
-	political_opinions = { # upper_house_composition
+	political_parties = {
 		next_step_only = yes
-		ruling_party_opinion = { # party_appointed
-			rules = { same_as_ruling_party = yes }
-			global_pop_consciousness_modifier = -0.02
-			ruling_party_support = 0.1
-			issue_change_speed = -0.8			
-		}
-		regulated_opinion = { # appointed
-			rules = { population_vote = yes }		
-			global_pop_consciousness_modifier = -0.01
-			ruling_party_support = 0.1
-			issue_change_speed = -0.4
-		}
-		open_opinion = { # state_equal_weight
-			rules = { population_vote = yes }
-			issue_change_speed = 0.4
-			global_pop_consciousness_modifier = 0.01			
-			allow = { 
-				NOT = { vote_franschise = none_voting }
-			}
-		}
-		free_opinion = { # population_equal_weight
-			rules = { population_vote = yes }
-			global_pop_consciousness_modifier = 0.02
-			issue_change_speed = 0.8
+		parties_not_allowed = { 
+			ruling_party_support = 0.2
+			rules = { primary_culture_voting = yes }
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
 		}
-		democratic_opinion = { # appointed
-			rules = { population_vote = yes }
-			global_pop_consciousness_modifier = 0.01
-			issue_change_speed = 0.6
-			global_pop_militancy_modifier = -0.01			
+		parties_only_nominated = { 
+			ruling_party_support = 0.15
+			rules = { culture_voting = yes }
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
 		}
+		parties_allowed = { 
+			ruling_party_support = 0.1
+			rules = { culture_voting = yes }
+			allow = {
+				NOT = { vote_franschise = none_voting }
+				NOT = { vote_franschise = registered_voting }
+				#OR = { government = democracy government = hms_government }
+			}
+		}
+		parties_promote_democratic = { 
+			rules = { all_voting = yes }
+			allow = {
+				NOT = { vote_franschise = none_voting }
+				NOT = { vote_franschise = registered_voting }
+				#OR = { government = democracy government = hms_government }
+			}
+		}
+		parties_restrict_non_democratic = { 
+			ruling_party_support = 0.1
+			rules = { all_voting = yes }
+			allow = {
+				year = 2010 #colour_revolution = 1
+				NOT = { vote_franschise = none_voting }
+				NOT = { vote_franschise = registered_voting }
+				#OR = { government = democracy government = hms_government }
+			}
+		}
 	}
-	religious_rights = { 
-		next_step_only = yes
-		state_religion = { 
-		}
-		no_state_religion = { 
-		}
-		secularism_religion = { 
-		}
-	}
-	criminology = { # public_meetings
+	criminology = {
 		next_step_only = yes
 		criminology_classical = { 
 		}
@@ -258,21 +265,22 @@ political_reforms = {
 			issue_change_speed = 0.5
 			suppression_points_modifier = 0.05
 		}
+		# TODO gap
 	}
-	publishing_rights = { # press_rights
+	publishing_rights = {
 		next_step_only = yes
-		censored_publishing = { # state_press 
+		censored_publishing = {  
 			suppression_points_modifier = 0.05
 			cb_generation_speed_modifier = 0.1
 			issue_change_speed = -0.1
 		}
-		firewall_publishing = { # censored_press
+		free_press = { 
 			literacy_con_impact = 0.5
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
 		}
-		unregulated_publishing = { # free_press
+		unregulated_publishing = { 
 			literacy_con_impact = 1
 			suppression_points_modifier = -0.25
 			cb_generation_speed_modifier = -0.1
@@ -289,65 +297,33 @@ political_reforms = {
 			allow = {
 				NOT = { vote_franschise = none_voting }
 			}
-		}		
+		}
+		# TODO gap		
 	}
-	gender_rights = { # trade_unions
+	gender_rights = { 
 		next_step_only = yes
-		gender_role_based = { # no_trade_unions
+		gender_role_based = { 
 			#no immediate effect
 		}
-		gender_equal = { # state_controlled
+		gender_equal = { 
 			social_reform_desire = 0.1
 			global_population_growth = -0.001
-			factory_throughput = 0.02
-			allow = { year = 1968 } # seventies_subcultures = 1
+			factory_throughput = 0.05
+			allow = { year = 1968 } 
 		}
-		gender_promotive = { # non_socialist
+		gender_promotive = { 
 			social_reform_desire = 0.2
 			global_population_growth = -0.005
-			factory_throughput = 0.02
-			allow = { year = 1968 } # seventies_subcultures = 1
+			factory_throughput = 0.1
+			allow = { year = 1968 } 
 		}
-		feminist = { # all_trade_unions
+		feminist = { 
 			social_reform_desire = 0.3
 			global_population_growth = -0.01
-			factory_throughput = 0.01
-			allow = { year = 1968 } # seventies_subcultures = 1
+			factory_throughput = 0.15
+			allow = { year = 1968 } 
 		}
-	}
-	political_parties = {
-		next_step_only = yes
-		parties_not_allowed = { # underground_parties
-			ruling_party_support = 0.2
-			allow = {
-				NOT = { vote_franschise = none_voting }
-			}
-		}
-		parties_only_nominated = { # harassment
-			ruling_party_support = 0.15
-			allow = {
-				NOT = { vote_franschise = none_voting }
-			}
-		}
-		parties_allowed = { # gerrymandering
-			allow = {
-				NOT = { vote_franschise = none_voting }
-			}
-		}
-		parties_promote_democratic = { # non_secret_ballots
-			#Yearly event will increase support of democratic ideologies and eat a percentage of money
-			allow = {
-				year = 1990 # cultural_imperialism = 1
-				NOT = { vote_franschise = none_voting }
-			}
-		}
-		parties_restrict_non_democratic = { # secret_ballots
-			#Same as promotion of democratic plus decrease of support for non-democratic ideologies
-			allow = {
-				year = 2010 #colour_revolution = 1
-				NOT = { vote_franschise = none_voting }
-			}
-		}
+		# TODO gap
 	}
 	immigration_policy = {
 		next_step_only = yes
@@ -373,57 +349,29 @@ political_reforms = {
 		}
 
 	}
-	lgbt_rights = { # conscription
+	pollution = { 
+		administrative = yes
 		next_step_only = yes
-		lgbt_outlawed = { # mandatory_service
-			mobilisation_size = 0.04
-			mobilisation_economy_impact = 2
-			global_pop_militancy_modifier = 0.01
+		no_controls = {
 		}
-		lgbt_allowed = { # four_year_draft
-			mobilisation_size = 0.03
-			mobilisation_economy_impact = 1.5
-			global_pop_militancy_modifier = 0.005
+		trinket_envir = {
+			social_reform_desire = 0.1
+			global_immigrant_attract = 0.01
 		}
-		lgbt_equal_rights = { # two_year_draft
-			mobilisation_size = 0.02
-			mobilisation_economy_impact = 1
-			global_population_growth = -0.001
-			allow = { year = 1968 } # seventies_subcultures = 1
+		low_envir = {
+			social_reform_desire = 0.2
+			global_immigrant_attract = 0.02
 		}
-		gender_neutrallity = { # one_year_draft
-			mobilisation_size = 0.01
-			mobilisation_economy_impact = 0.5
-			global_pop_militancy_modifier = -0.005
-			global_population_growth = -0.002
-			allow = { year = 1968 } # seventies_subcultures = 1
+		acceptable_envir = {
+			social_reform_desire = 0.2
+			global_immigrant_attract = 0.02
 		}
-		lgbt_promoted = { # no_draft
-			mobilisation_size = 0.005
-			global_pop_militancy_modifier = -0.01
-			mobilisation_economy_impact = 0.1
-			global_population_growth = -0.005
-			allow = { year = 1990 } # cultural_imperialism = 1
-		}
-		
-	}
-	minorities_reform = {
-		next_step_only = yes
-		minorities_oppression = { #oppression
-			rules = { culture_voting = yes } # primary_culture_voting
-			global_immigrant_attract = -0.1
-		}
-		minorities_equal_rights = { # limited
-			rules = { all_voting = yes }
-			allow = { not = { citizenship_policy = residency } }
-		}
-		minorities_affirmative_action = { # protected
-			rules = { all_voting = yes }
-			global_immigrant_attract = 0.1
-			allow = { citizenship_policy = full_citizenship year = 1968 } # seventies_subcultures = 1 } 
+		good_envir = {
+			social_reform_desire = 0.3
+			global_immigrant_attract = 0.03
 		}
 	}
-	voting_system = {
+	voting_system = { 
 		next_step_only = no
 		first_past_the_post = {
 			rules = { largest_share = yes }
@@ -471,8 +419,9 @@ political_reforms = {
 				NOT = { vote_franschise = none_voting }
 			}			
 		}
+		# TODO gap
+		# TODO gap
 	}
-	
 }
 
 ##########################################
@@ -480,61 +429,56 @@ political_reforms = {
 ##########################################
 social_reforms = {
 
-	wage_and_work_hours = { # wage_reform
+	wage_reform = { 
 		administrative = yes
 		next_step_only = yes
-		unregulated_hours = { # no_minimum_wage
+		no_minimum_wage = {
 		}
-		eight_work_hours = { # trinket_wage
+		trinket_wage = {
 			minimum_wage = 0.20
+			administrative_multiplier = 1
+			global_immigrant_attract = 0.01
+		}
+		low_minimum_wage = {
+			minimum_wage = 0.40
+			administrative_multiplier = 2
+			global_immigrant_attract = 0.02
+		}
+		acceptable_minimum_wage = {
+			minimum_wage = 0.60
+			administrative_multiplier = 3
+			global_immigrant_attract = 0.03
+		}
+		good_minimum_wage = {
+			minimum_wage = 0.80
+			administrative_multiplier = 4
+			global_immigrant_attract = 0.04
+		}
+	}
+	work_hours = { 
+		administrative = yes
+		next_step_only = yes
+		unregulated_hours = { 
+		}
+		eight_work_hours = { 
+			factory_throughput = -0.05
 			global_immigrant_attract = 0.05
 			administrative_multiplier = 1
 		}
-		paid_vacation_hours = { # low_minimum_wage
-			minimum_wage = 0.40
+		paid_vacation_hours = {
+			factory_throughput = -0.1
 			global_immigrant_attract = 0.1
 			administrative_multiplier = 2
 		}
-		paid_sick_leave_hours = { # acceptable_minimum_wage
-			minimum_wage = 0.60
+		paid_sick_leave_hours = { 
+			factory_throughput = -0.15
 			global_immigrant_attract = 0.15
-			global_pop_consciousness_modifier = -0.01
 			administrative_multiplier = 3
 		}
-		six_hours = { # good_minimum_wage
-			minimum_wage = 0.80
+		six_hours = { 
+			factory_throughput = -0.2
 			global_immigrant_attract = 0.2
-			global_pop_consciousness_modifier = -0.02
 			administrative_multiplier = 4
-		}
-	}
-	security_reform = { # work_hours 
-		administrative = yes
-		next_step_only = yes
-		police = { # no_work_hour_limit
-		}
-		security_service = { # fourteen_hours
-			administrative_multiplier = 1
-			global_pop_militancy_modifier = -0.01
-		}
-		security_data_cohesion = { # twelve_hours
-			administrative_multiplier = 2
-			global_pop_militancy_modifier = -0.02
-			allow = { year = 2000 } # war_on_terror = 1
-		}
-		security_clearance_for_gov_services = { # ten_hours
-			factory_throughput = -0.05
-			administrative_multiplier = 3
-			global_pop_consciousness_modifier = -0.01
-			global_pop_militancy_modifier = -0.03
-			allow = { year = 2000 } # war_on_terror = 1
-		}
-		preemptive_security_actions = { # eight_hours
-			factory_throughput = -0.10
-			administrative_multiplier = 4
-			global_pop_consciousness_modifier = -0.02
-			global_pop_militancy_modifier = -0.04
-			allow = { year = 2020 } # political_polarization = 1
 		}
 	}
 	safety_regulations = {
@@ -592,7 +536,7 @@ social_reforms = {
 			global_pop_consciousness_modifier = -0.02
 		}
 	}
-	child_care = { # child_labor
+	child_care = { 
 		next_step_only = yes
 		administrative = yes
 		no_child_care = { # child_labor_legal
@@ -671,44 +615,6 @@ social_reforms = {
 			global_pop_consciousness_modifier = -0.02
 		}
 	}
-	pollution = {
-		administrative = yes
-		next_step_only = yes
-		no_controls = {
-			factory_throughput = 0.01
-		}
-		trinket_envir = {
-			factory_maintenance = 0.1
-			rich_life_needs = -0.05
-			middle_life_needs = -0.05
-			poor_life_needs = -0.05
-			administrative_multiplier = 1
-		}
-		low_envir = {
-			factory_maintenance = 0.2
-			rich_life_needs = -0.1
-			middle_life_needs = -0.1
-			poor_life_needs = -0.1
-			factory_throughput = -0.04			
-			administrative_multiplier = 2
-		}
-		acceptable_envir = {
-			factory_maintenance = 0.3
-			factory_throughput = -0.02			
-			rich_life_needs = -0.15
-			middle_life_needs = -0.15
-			poor_life_needs = -0.15
-			administrative_multiplier = 3
-		}
-		good_envir = {
-			factory_maintenance = 0.4
-			factory_throughput = -0.04			
-			rich_life_needs = -0.2
-			middle_life_needs = -0.2
-			poor_life_needs = -0.2
-			administrative_multiplier = 4
-		}
-	}
 	education = {
 		next_step_only = yes
 		administrative = yes
@@ -735,29 +641,6 @@ social_reforms = {
 			administrative_multiplier = 4
 		}
 	}
-	social_service_reform = { # arts_endowment
-		administrative = yes
-		next_step_only = yes
-		no_social_service = { # no_endowment
-		}
-		social_services = { # small_endowment
-			administrative_multiplier = 1
-			global_pop_consciousness_modifier = -0.01
-		}
-		social_abuse_protection = { # medium_endowment
-			administrative_multiplier = 2
-			global_pop_consciousness_modifier = -0.02
-		}
-		anti_terror_surveillance  = { # large_endowment
-			administrative_multiplier = 3
-			global_pop_consciousness_modifier = -0.03
-		}
-		the_safety_grid = { # massive_endowment
-			administrative_multiplier = 4
-			global_pop_consciousness_modifier = -0.04
-		}
-	}
-
 }
 
 ##########################################

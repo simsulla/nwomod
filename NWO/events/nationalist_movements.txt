@@ -1,4 +1,4 @@
-province_event = { #Boy shot by police!
+province_event = { #Boy shot by no_minimum_wage!
 	id = 15000
 	title = "EVT_15000_NAME"
 	desc = "EVT_15000_DESC"
@@ -654,8 +654,8 @@ province_event = { #Sons of $PROVINCECULTURE$ Labour
 		is_accepted_culture = no
 		owner = {
 			OR = {
-				minorities_reform = minorities_oppression
-				minorities_reform = minorities_equal_rights
+				immigration_policy = quota_immigration
+				immigration_policy = naturalization
 			}
 		}
  		has_pop_type = craftsmen
@@ -2363,12 +2363,12 @@ province_event = { #Literary Association
 		owner = {
 			NOT = {
 				citizenship_policy = full_citizenship
-				minorities_reform = minorities_affirmative_action
+				immigration_policy = promoted_immigration
 			}
 		}
 		any_greater_power = {
 			NOT = { tag = THIS }
-			minorities_reform = minorities_affirmative_action
+			immigration_policy = promoted_immigration
 		}
 		controlled_by = owner
 	}
@@ -2444,7 +2444,7 @@ province_event = { #Literary Association
 				is_greater_power = yes
 				civilized = yes
 				citizenship_policy = full_citizenship
-				minorities_reform = minorities_affirmative_action
+				immigration_policy = promoted_immigration
 				NOT = {
 					tag = THIS
 				}
@@ -2583,7 +2583,7 @@ province_event = { #Building permits
 			nationalvalue = nv_order
 			NOT = {
 				has_country_modifier = minority_building_restrictions
-				minorities_reform = minorities_equal_rights
+				immigration_policy = naturalization
 			}
 		}
 		controlled_by = owner

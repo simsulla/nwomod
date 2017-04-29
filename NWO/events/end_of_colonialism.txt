@@ -15,7 +15,7 @@ province_event = { # Demand Autonomy
 		owner = {
 			OR = { 
 				has_country_flag = sectarianism
-				minorities_reform = minorities_equal_rights
+				immigration_policy = naturalization
 				colonial_nation = yes
 			}
 		}
@@ -66,7 +66,7 @@ province_event = { # Demand Autonomy
 		}
 		modifier = {
 			factor = 4
-			owner = { NOT = { minorities_reform = minorities_equal_rights } }
+			owner = { NOT = { immigration_policy = naturalization } }
 		}
 	}
 	
@@ -77,7 +77,7 @@ province_event = { # Demand Autonomy
 			consciousness = 0.5
 		}
 		add_province_modifier = { name = promised_autonomy duration = 1080 }
-		ai_chance = { factor = 0.5 modifier = { NOT = { minorities_reform = minorities_equal_rights } factor = 0  } }
+		ai_chance = { factor = 0.5 modifier = { NOT = { immigration_policy = naturalization } factor = 0  } }
 	}
 	option = {
 		name = "EVT_15500_A"		#Deny Autonomy
@@ -86,7 +86,7 @@ province_event = { # Demand Autonomy
 			consciousness = 1
 		}
 		add_province_modifier = { name = denied_independence duration = 1080 }
-		ai_chance = { factor = 0.5 modifier = { minorities_reform = minorities_equal_rights factor = 0 } }
+		ai_chance = { factor = 0.5 modifier = { immigration_policy = naturalization factor = 0 } }
 	}
 }
 province_event = { # Separatists demands freedom
@@ -124,7 +124,7 @@ province_event = { # Separatists demands freedom
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { minorities_reform = minorities_equal_rights }
+			NOT = { immigration_policy = naturalization }
 		}
 	}	
 	
@@ -146,7 +146,7 @@ province_event = { # Separatists demands freedom
 		name = "EVT_15501_B" #Reject
 		remove_province_modifier = promised_autonomy
 		add_province_modifier = { name = denied_independence duration = 1080 }
-		ai_chance = { factor = 0.9 modifier = { owner = { minorities_reform = minorities_equal_rights citizenship_policy = full_citizenship } factor = 0 } }
+		ai_chance = { factor = 0.9 modifier = { owner = { immigration_policy = naturalization citizenship_policy = full_citizenship } factor = 0 } }
 	}
 }
 country_event = { # $FROMCOUNTRY$ offers the return of provinces

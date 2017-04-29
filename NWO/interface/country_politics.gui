@@ -105,12 +105,12 @@ guiTypes = {
 			maxHeight = 30	
 		}
 		
-		#iconType = {
-		#	name = "plurality"
-		#	spriteType = "GFX_politics_pluralism"
-		#	position = { x = 245 y = 52 }
-		#	Orientation = "UPPER_LEFT"
-		#}
+		iconType = {
+			name = "plurality"
+			spriteType = "GFX_politics_pluralism"
+			position = { x = 245 y = 52 }
+			Orientation = "UPPER_LEFT"
+		}
 		
 		instantTextBoxType = { 
 			name = "plurality_value"
@@ -121,12 +121,12 @@ guiTypes = {
 			maxHeight = 30	
 		}	
 
-		#iconType = {
-		#	name = "revanchism"
-		#	spriteType = "GFX_politics_revanchism"
-		#	position = { x = 308 y = 51 }
-		#	Orientation = "UPPER_LEFT"
-		#}
+		iconType = {
+			name = "revanchism"
+			spriteType = "GFX_politics_revanchism"
+			position = { x = 308 y = 51 }
+			Orientation = "UPPER_LEFT"
+		}
 		
 		instantTextBoxType = { 
 			name = "revanchism_value"
@@ -150,7 +150,7 @@ guiTypes = {
 		instantTextBoxType = { 
 			name = "can_do_social_reforms"
 			position = { x = 43 y = 211 }
-			font = "Arial12"
+			font = "Arial12_black"
 			text = "POLITICS_CAN_DO_SOCIAL_REFORMS"	
 			maxWidth = 250
 			maxHeight = 20	
@@ -165,7 +165,7 @@ guiTypes = {
 		instantTextBoxType = { 
 			name = "can_do_political_reforms"
 			position = { x = 200 y = 211 }
-			font = "Arial12"
+			font = "Arial12_black"
 			text = "POLITICS_CAN_DO_POLITICAL_REFORMS"	
 			maxWidth = 250
 			maxHeight = 20	
@@ -575,522 +575,210 @@ guiTypes = {
 				format = centre			
 			}
 			
-			########################		
-			### political
-			########################			
-#		windowType = {
-#			name = "slavery"
-#			backGround =""
-#			position = { x = 834 y = 258 }
-#			size = { x=310 y=100 }
-#			moveable = 0
-#			dontRender = ""
-#			horizontalBorder = "0"
-#			verticalBorder = ""
-#			fullScreen = no
-			
-#			iconType = {
-#			 name = "politics_slavery"
-#			 spriteType = "GFX_politics_slavery"
-#			 position = { x= 10 y = 7 } #WAS { x= 5 y = 7 }
-#			 Orientation = "UPPER_LEFT"
-#		 }
-			
-#			instantTextBoxType = { 
-#				name = "reform_name"
-#				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-#				font = "vic_18"
-#				text = "REFORM_NAME"	
-#				maxWidth = 100
-#				maxHeight = 20	
-#			}
-#		}
-		
-		windowType = {
-			name = "political_opinions"
-			backGround =""
-			position = { x = 834 y = 158 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_upperhouse"
-			 spriteType = "GFX_politics_upperhouse"
-			 position = { x= 12 y = 5 } #WAS { x= 7 y = 7 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
-		
-		windowType = {
-			name = "vote_franschise"
-			backGround =""
-			position = { x = 834 y = 58 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_votefran"
-			 spriteType = "GFX_politics_votefran"
-			 position = { x= 12 y = 5 } #WAS { x= 7 y = 7 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
-		
-		windowType = {
-			name = "immigration_policy"
-			backGround =""
-			position = { x = 686 y = 258 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_votingsys"
-			 spriteType = "GFX_politics_immigration"
-			 position = { x= 11 y = 7 } #WAS { x= 6 y = 9 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
-		
-		windowType = {
-			name = "criminology"
-			backGround =""
-			position = { x = 834 y = 258 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_publicmeet"
-			 spriteType = "GFX_politics_criminology"
-			 position = { x= 12 y = 5 } #WAS { x= 7 y = 7 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
-		
-		windowType = {
-			name = "publishing_rights"
-			backGround =""
-			position = { x = 834 y = 358 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_pressrights"
-			 spriteType = "GFX_politics_pressrights"
-			 position = { x= 10 y = 5 } #WAS { x= 7 y = 6 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
-		
-		windowType = {
-			name = "gender_rights"
-			backGround =""
-			position = { x = 686 y = 358 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_tradeunions"
-			 spriteType = "GFX_politics_feminism"
-			 position = { x= 8 y = 7 } #WAS { x= 6 y = 8 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
-		
-		
-		windowType = {
-			name = "political_parties"
-			backGround =""
-			position = { x = 686 y = 58 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_polparties"
-			 spriteType = "GFX_politics_polparties"
-			 position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
-			 Orientation = "UPPER_LEFT"
-		 }
-				instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-
-		}
-		
-		windowType = {
-			name = "religious_rights"
-			backGround =""
-			position = { x = 834 y = 458 }
-			size = { x=686 y= 100}
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-				name = "politics_polparties"
-			    spriteType = "GFX_politics_secularism"
-				position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
-				Orientation = "UPPER_LEFT"
-			}
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-
-		}
-
-		windowType = {
-			name = "lgbt_rights"
-			backGround =""
-			position = { x = 686 y = 158 }
-			size = { x=686 y= 100}
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-				iconType = {
-				name = "politics_polparties"
-				spriteType = "GFX_politics_lgbt"
-				position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
-				Orientation = "UPPER_LEFT"
-					}
-				instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-					}
-
-			}
-			windowType = {
-			name = "minorities_reform"
-			backGround =""
-			position = { x = 686 y = 458 }
-			size = { x=686 y= 100}
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-				iconType = {
-				name = "politics_polparties"
-				spriteType = "GFX_politics_minorities"
-				position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
-				Orientation = "UPPER_LEFT"
-					}
-				instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-					}
-
-			}
-			
-		windowType = {
-			name = "voting_system"
-			backGround =""
-			position = { x = 686 y = 528 }
-			size = { x=686 y= 100}
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-				name = "politics_votingsys"
-			    spriteType = "GFX_politics_votingsys"
-				position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
-				Orientation = "UPPER_LEFT"
-			}
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-
-		}
-
-
 			########################
 			### social
 			########################
 		
 			windowType = {
-			name = "wage_and_work_hours"
-			backGround =""
-			position = { x = 382 y = 58 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
+				name = "wage_reform"
+				backGround =""
+				position = { x = 382 y = 65 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_unemplsub"
+				 spriteType = "GFX_politics_maxwork"
+				 position = { x= 7 y = 8 } 
+				 Orientation = "UPPER_LEFT"
+				}
 			
-			iconType = {
-			 name = "politics_unemplsub"
-			 spriteType = "GFX_politics_unemplsub"
-			 position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 } 
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
 			}
-		}
 		
-		windowType = {
-			name = "security_reform" # work_hours
-			backGround =""
-			position = { x = 382 y = 158 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_slavery"
-			 spriteType = "GFX_politics_slavery"
-			 position = { x= 11 y = 6 } #WAS { x= 7 y = 8 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
+			windowType = {
+				name = "work_hours" 
+				backGround =""
+				position = { x = 382 y = 137 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_slavery"
+				 spriteType = "GFX_politics_slavery"
+				 position = { x= 7 y = 8 } 
+				 Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 } 
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
 			}
-		}
-		
-		windowType = {
-			name = "safety_regulations"
-			backGround =""
-			position = { x = 382 y = 258 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
 			
-			iconType = {
-			 name = "politics_safetyreg"
-			 spriteType = "GFX_politics_safetyreg"
-			 position = { x= 11 y = 6 } #WAS { x= 7 y = 10 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
+			windowType = {
+				name = "safety_regulations"
+				backGround =""
+				position = { x = 382 y = 209 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_safetyreg"
+				 spriteType = "GFX_politics_safetyreg"
+				 position = { x= 7 y = 8 } 
+				 Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
 			}
-		}
-		
-		windowType = {
-			name = "unemployment_subsidies"
-			backGround =""
-			position = { x = 382 y = 358 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
 			
-			iconType = {
-			 name = "politics_unemplsub"
-			 spriteType = "GFX_politics_maxwork"
-			 position = { x= 11 y =6 } #WAS { x= 7 y = 11 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
+			windowType = {
+				name = "unemployment_subsidies"
+				backGround =""
+				position = { x = 382 y = 281 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_unemplsub"
+				 spriteType = "GFX_politics_unemplsub"
+				 position = { x= 7 y =8 } 
+				 Orientation = "UPPER_LEFT"
+			 }
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
 			}
-		}
-		
-		windowType = {
-			name = "pensions"
-			backGround =""
-			position = { x = 530 y = 58 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
 			
-			iconType = {
-			 name = "politics_pensions"
-			 spriteType = "GFX_politics_pensions"
-			 position = { x= 12 y = 8 } #WAS { x= 7 y = 10 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
+			windowType = {
+				name = "child_care"
+				backGround =""
+				position = { x = 382 y = 353 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_maxwork"
+				 spriteType = "GFX_politics_childlabor"
+				 position = { x= 7 y = 8 } 
+				 Orientation = "UPPER_LEFT"
+			 }
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 } 
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
 			}
-		}
-		
-		windowType = {
-			name = "health_care"
-			backGround =""
-			position = { x = 530 y = 158 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_healthcare"
-			 spriteType = "GFX_politics_healthcare"
-			 position = { x= 10 y = 6 } #WAS { x= 7 y = 7 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
+				
+			windowType = {
+				name = "pensions"
+				backGround =""
+				position = { x = 382 y = 425 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_pensions"
+				 spriteType = "GFX_politics_pensions"
+				 position = { x= 7 y = 8 } 
+				 Orientation = "UPPER_LEFT"
+			 }
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 } 
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
 			}
-		}
 			
+			windowType = {
+				name = "health_care"
+				backGround =""
+				position = { x = 382 y = 497 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_healthcare"
+				 spriteType = "GFX_politics_healthcare"
+				 position = { x= 7 y = 8 } 
+				 Orientation = "UPPER_LEFT"
+			 }
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 } 
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+			}
+				
 			windowType = {
 				name = "education"
 				backGround =""
-				position = { x = 530 y = 458 }
+				position = { x = 382 y = 569 }
 				size = { x=310 y=100 }
 				moveable = 0
 				dontRender = ""
@@ -1101,131 +789,250 @@ guiTypes = {
 				iconType = {
 					 name = "politics_school"
 					 spriteType = "GFX_politics_school"
-					 position = { x= 7 y = 7 }
+					 position = { x= 7 y = 8 }
 					 Orientation = "UPPER_LEFT"
 				 }
 				
 				instantTextBoxType = { 
 				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
+				position = { x = 40 y = 15 } 
 				font = "vic_18"
 				text = "REFORM_NAME"	
 				maxWidth = 100
 				maxHeight = 20	
 				}
 			}
-			
-		windowType = {
-			name = "pollution"
-			backGround =""
-			position = { x = 530 y = 258}
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_healthcare"
-			 spriteType = "GFX_politics_pollution"
-			 position = { x= 10 y = 6 } #WAS { x= 7 y = 7 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
-		
-		windowType = {
-			name = "social_service_reform"
-			backGround =""
-			position = { x = 530 y = 358 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_healthcare"
-			 spriteType = "GFX_politics_tradeunions"
-			 position = { x= 10 y = 6 } #WAS { x= 7 y = 7 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
-		
-		windowType = {
-			name = "child_care"
-			backGround =""
-			position = { x = 382 y = 458 }
-			size = { x=310 y=100 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-			iconType = {
-			 name = "politics_maxwork"
-			 spriteType = "GFX_politics_childlabor"
-			 position = { x= 10 y = 6 } #WAS { x= 7 y = 7 }
-			 Orientation = "UPPER_LEFT"
-		 }
-			
-			instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 40 y = 14 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-			}
-		}
 				
-			#windowType = {
-			#	name = "citizen_reforms"
-			#	backGround =""
-			#	position = { x = 382 y = 531 }
-			#	size = { x=310 y=100 }
-			#	moveable = 0
-			#	dontRender = ""
-			#	horizontalBorder = "0"
-			#	verticalBorder = ""
-			#	fullScreen = no
-			#	
-			#	iconType = {
-			#		 name = "politics_school"
-			#		 spriteType = "GFX_politics_school"
-			#		 position = { x= 7 y = 7 }
-			#		 Orientation = "UPPER_LEFT"
-			#	 }
-			#	
-			#	instantTextBoxType = { 
-			#		name = "reform_name"
-			#		position = { x = 686 y = 15 }
-			#		font = "vic_18"
-			#		text = "REFORM_NAME"	
-			#		maxWidth = 100
-			#		maxHeight = 20	
-			#	}
-			#}
+			########################		
+			### political
+			########################			
+		
+			windowType = {
+				name = "vote_franschise"
+				backGround =""
+				position = { x = 686 y = 65 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_votefran"
+				 spriteType = "GFX_politics_votefran"
+				 position = { x= 7 y = 8 }
+				 Orientation = "UPPER_LEFT"
+			 }
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+			}
+			
+			windowType = {
+				name = "political_parties"
+				backGround =""
+				position = { x = 686 y = 137 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_polparties"
+				 spriteType = "GFX_politics_polparties"
+				 position = { x= 7 y = 8 }
+				 Orientation = "UPPER_LEFT"
+			 }
+					instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+
+			}
+
+			windowType = {
+				name = "criminology"
+				backGround =""
+				position = { x = 686 y = 209 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_publicmeet"
+				 spriteType = "GFX_politics_criminology"
+				 position = { x= 7 y = 8 }
+				 Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+			}
+			
+			windowType = {
+				name = "publishing_rights"
+				backGround =""
+				position = { x = 686 y = 281 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_pressrights"
+				 spriteType = "GFX_politics_pressrights"
+				 position = { x= 7 y = 8 }
+				 Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+			}
+			
+			windowType = {
+				name = "gender_rights"
+				backGround =""
+				position = { x = 686 y = 353 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_tradeunions"
+				 spriteType = "GFX_politics_feminism"
+				 position = { x= 7 y = 8 }
+				 Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+			}
+			
+			
+
+			windowType = {
+				name = "immigration_policy"
+				backGround =""
+				position = { x = 686 y = 425 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_immigration"
+				 spriteType = "GFX_politics_immigration"
+				 position = { x= 7 y = 8 }
+				 Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+			}
+			
+			windowType = {
+				name = "pollution"
+				backGround =""
+				position = { x = 686 y = 497}
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+				 name = "politics_healthcare"
+				 spriteType = "GFX_politics_pollution"
+				 position = { x= 7 y = 8 }
+				 Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+			}
+			
+			windowType = {
+				name = "voting_system"
+				backGround =""
+				position = { x = 686 y = 569 }
+				size = { x=310 y=100 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+				
+				iconType = {
+					name = "politics_votingsys"
+					spriteType = "GFX_politics_votingsys"
+					position = { x= 7 y = 8 }
+					Orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+
+			}
+
 		} # end reforms
 		
 		######################
@@ -2129,7 +1936,7 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "reform_option"
-			position = { x = 9 y = 40 } #WAS { x = 168 y = 9 }
+			position = { x = 166 y = 9 }
 			quadTextureSprite ="GFX_politics_reform_select"
 			buttonText = ""
 			buttonFont = "Arial14"
@@ -2138,17 +1945,18 @@ guiTypes = {
 		iconType = {
 			name = "selected"
 			spriteType = "GFX_politics_reform_selected"
-			position = { x = 9 y = 40 } #WAS { x = 150 y = 8 }
+			position = { x = 148 y = 8 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		instantTextBoxType = { 
 			name = "reform_name"
-			position = { x = 11 y = 41 } #WAS { x = 170 y = 10 }
-			font = "Arial12"
+			position = { x = 169 y = 10 }
+			font = "Arial12_black"
 			text = "REFORM_OPTION_NAME"	
 			maxWidth = 130
 			maxHeight = 16
+			fixedsize = yes
 		}
 		
 		
