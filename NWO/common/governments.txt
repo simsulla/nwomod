@@ -1,10 +1,10 @@
 # either group dictatorship
 presidential_dictatorship =
 {
-	socialist = yes
 	conservative = yes
 	big_tent = yes
-	election = no
+	election = yes
+	duration = 90
 	appoint_ruling_party = yes
 }
 # left_group dictatorship
@@ -18,7 +18,7 @@ proletarian_dictatorship =
 nationalist_dictatorship =
 {
 	#which ideology of parties.
-	nationalist = yes	
+	conservative = yes
 	election = no
 	appoint_ruling_party = no
 	flagType = nationalist
@@ -34,10 +34,11 @@ theocracy =
 populist_dictatorship =
 {
 	populist = yes	
+	conservative = yes
 	big_tent = yes
 	communist = yes
-	traditionalist = yes
-	election = yes
+	election = yes # will be triggered by a new leader 100080127
+	duration = 600
 	appoint_ruling_party = yes
 	flagType = populist
 }

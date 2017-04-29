@@ -6621,3 +6621,78 @@ country_event = {
 		}
 	}
 }
+#
+# communist regimes
+#
+country_event = {
+	id = 100080127
+	title = EVT_100080127_NAME
+	desc = EVT_100080127_DESC
+	picture = leader_death
+	trigger = {
+		government = populist_dictatorship
+		OR = { 			
+			has_country_modifier = expert_diplomat
+			has_country_modifier = successful_industrialist
+			has_country_modifier = ivory_tower_intellectual
+			has_country_modifier = man_of_the_people
+			has_country_modifier = landed_gentleman
+			has_country_modifier = military_man
+			has_country_modifier = lord_admiral
+			has_country_modifier = raving_loon
+			has_country_modifier = luddite
+			has_country_modifier = great_statesman
+			has_country_modifier = backroom_boy
+			has_country_modifier = great_reformer
+			has_country_modifier = gauche_buffoon
+			has_country_modifier = administrative_genius
+			has_country_modifier = visionary_thinker
+			has_country_modifier = competent_placeholder
+			has_country_modifier = imperious_autocrat
+			has_country_modifier = prince_of_terror
+			has_country_modifier = efficient_sociopath
+			has_country_modifier = pig_headed_isolationist
+			has_country_modifier = ambitious_union_boss
+			has_country_modifier = dour_economist
+		 }
+
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	option = {
+		name = EVT_100080127_A
+		remove_country_modifier = expert_diplomat
+		remove_country_modifier = successful_industrialist
+		remove_country_modifier = ivory_tower_intellectual
+		remove_country_modifier = man_of_the_people
+		remove_country_modifier = landed_gentleman
+		remove_country_modifier = military_man
+		remove_country_modifier = lord_admiral
+		remove_country_modifier = raving_loon
+		remove_country_modifier = luddite
+		remove_country_modifier = great_statesman
+		remove_country_modifier = backroom_boy
+		remove_country_modifier = great_reformer
+		remove_country_modifier = gauche_buffoon
+		remove_country_modifier = administrative_genius
+		remove_country_modifier = visionary_thinker
+		remove_country_modifier = competent_placeholder
+		remove_country_modifier = imperious_autocrat
+		remove_country_modifier = prince_of_terror
+		remove_country_modifier = efficient_sociopath
+		remove_country_modifier = pig_headed_isolationist
+		remove_country_modifier = ambitious_union_boss
+		remove_country_modifier = dour_economist
+		random_list = {
+			20 = { add_country_modifier = { name = prince_of_terror duration = 5475 } }
+			20 = { add_country_modifier = { name = efficient_sociopath duration = 5475 } }
+			20 = { add_country_modifier = { name = luddite duration = 5475 } }
+			20 = { add_country_modifier = { name = raving_loon duration = 5475 } }
+			20 = { add_country_modifier = { name = expert_diplomat duration = 5475 } }
+		}
+		election = yes
+	}
+}
