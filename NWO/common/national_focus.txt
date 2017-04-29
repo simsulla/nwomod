@@ -288,15 +288,16 @@ military_goods_focus =
 	munitions_focus = 
 	{
 		trucks_vans = 10.5
+		specialized_machinery = 10.5
 		icon = 31
 		limit = { 
 			civilized = yes
 		}
 	}
 	
-	armaments_focus = 
+	naval_focus = 
 	{
-		aeroplanes = 10.5
+		ships = 10.5
 		icon = 32
 		limit = { 
 			civilized = yes
@@ -305,7 +306,7 @@ military_goods_focus =
 	
 	cavalry_focus =
 	{
-		specialized_machinery = 10.5
+		aeroplanes = 10.5
 		icon = 33
 		limit = { 
 			civilized = yes
@@ -318,8 +319,8 @@ immigration_colonization_focus =
 	immigration =
 	{
 		immigrant_attract = 1 #increases attactiveness to immigrants by 100 %
-		#global_immigrant_attract = 0.2
-		icon = 35
+		global_immigrant_attract = 0.05
+		icon = 34
 	}
 	increase_tension =
 	{
@@ -344,114 +345,66 @@ immigration_colonization_focus =
 			}
 		}
 	}
-	
-	traditionalist_ngo_focus =
-	{
-		own_provinces = no
-		ideology = traditionalist
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 36
-	}
-	
-	populist_ngo_focus =
-	{
-		own_provinces = no
-		ideology = populist
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 37
-	}
-	
-	conservative_ngo_focus =
-	{
-		own_provinces = no
-		ideology = conservative
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 38
-	}
-	
-	socialist_ngo_focus =
-	{
-		own_provinces = no
-		ideology = socialist
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 39
-	}
-	
-	communist_ngo_focus =
-	{
-		own_provinces = no
-		ideology = communist
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 40
-	}
-	
-	liberal_ngo_focus =
-	{
-		own_provinces = no
-		ideology = liberal
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 41
-	}
-	
-	progressive_ngo_focus =
-	{
-		own_provinces = no
-		ideology = progressive
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 42
-	}	
+
 }
 
 
 
 party_loyalty_focus =
 {
+	big_tent_focus =
+	{
+		ideology = big_tent_focus
+		loyalty_value = 0.1 # By that much pops will be more loyal
+		icon = 36
+	}
+
 	traditionalist_focus =
 	{
 		ideology = traditionalist
-		loyalty_value = 0.01 # By that much pops will be more loyal
+		loyalty_value = 0.1 # By that much pops will be more loyal
 		icon = 36
 	}
 	
 	populist_focus =
 	{
 		ideology = populist
-		loyalty_value = 0.01 # By that much pops will be more loyal
+		loyalty_value = 0.1 # By that much pops will be more loyal
 		icon = 37
 	}
 	
 	conservative_focus =
 	{
 		ideology = conservative
-		loyalty_value = 0.01 # By that much pops will be more loyal
+		loyalty_value = 0.1 # By that much pops will be more loyal
 		icon = 38
 	}
 	
 	socialist_focus =
 	{
 		ideology = socialist
-		loyalty_value = 0.01 # By that much pops will be more loyal
+		loyalty_value = 0.1 # By that much pops will be more loyal
 		icon = 39
 	}
 	
 	communist_focus =
 	{
 		ideology = communist
-		loyalty_value = 0.01 # By that much pops will be more loyal
+		loyalty_value = 0.1 # By that much pops will be more loyal
 		icon = 40
 	}
 	
 	liberal_focus =
 	{
 		ideology = liberal
-		loyalty_value = 0.01 # By that much pops will be more loyal
+		loyalty_value = 0.1 # By that much pops will be more loyal
 		icon = 41
 	}
 	
 	progressive_focus =
 	{
 		ideology = progressive
-		loyalty_value = 0.01 # By that much pops will be more loyal
+		loyalty_value = 0.1 # By that much pops will be more loyal
 		icon = 42
 	}
 }
