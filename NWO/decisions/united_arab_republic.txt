@@ -58,7 +58,7 @@ political_decisions = {
 			war = no
 			OR = { 
 				SYR = { war = no exists = SYR is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship }  
-				IRQ = { war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = nationalist_dictatorship NOT = {exists = SYR } }  
+				IRQ = { war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = provisional_government NOT = {exists = SYR } }  
 				PAL = { war = no exists = PAL is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = {exists = IRQ }}  
 				JOR = { war = no exists = JOR is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = {exists = IRQ }}  
 				LEB = { war = no exists = LEB is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = {exists = JOR }}  
@@ -86,7 +86,7 @@ political_decisions = {
 				country_event = 8218001
 			}
 			random_country = { 
-				limit = { tag = IRQ war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = nationalist_dictatorship NOT = {exists = SYR } }  
+				limit = { tag = IRQ war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = provisional_government NOT = {exists = SYR } }  
 				country_event = 8218004
 			}
 			random_country = { 
@@ -98,7 +98,7 @@ political_decisions = {
 				country_event = 8218007
 			}
 			random_country = { 
-				limit = { tag = LEB war = no exists = LEB is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = nationalist_dictatorship NOT = {exists = JOR } }  
+				limit = { tag = LEB war = no exists = LEB is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = provisional_government NOT = {exists = JOR } }  
 				country_event = 8218021
 			}
 			random_country = { 

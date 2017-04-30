@@ -7,7 +7,7 @@ political_decisions = {
 		potential = {
 			ai = no
 			exists = yes
-			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+			OR = { government = presidential_dictatorship government = provisional_government government = populist_dictatorship }
 			NOT = { has_country_flag = new_constitution }
 		}
 
@@ -35,7 +35,7 @@ political_decisions = {
 			ai = no
 			exists = yes
 			has_country_flag = new_constitution
-			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+			OR = { government = presidential_dictatorship government = provisional_government government = populist_dictatorship }
 			NOT = { has_country_flag = presidential_plebiscite }
 		}
 
@@ -65,7 +65,7 @@ political_decisions = {
 			ai = no
 			exists = yes
 			has_country_flag = presidential_plebiscite
-			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+			OR = { government = presidential_dictatorship government = provisional_government government = populist_dictatorship }
 		}
 
 		allow = {

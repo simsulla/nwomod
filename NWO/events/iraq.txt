@@ -46,7 +46,7 @@ country_event = {
 
   option = {
     name = EVT_8007520_A
-	government = nationalist_dictatorship country_event = 800050
+	government = provisional_government country_event = 800050
 	ruling_party_ideology = socialist
 	prestige = 10
 	ai_chance = { factor = 100 }
@@ -326,7 +326,7 @@ country_event = {
 	year = 1981 NOT = { year = 1988 }
 	owns = 1132
 	has_recently_lost_war  = no 
-	IRQ = { NOT = { government = nationalist_dictatorship } }
+	IRQ = { NOT = { government = provisional_government } }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -586,7 +586,7 @@ country_event = {
 
 	trigger = {
 		tag = IRQ
-		government  = nationalist_dictatorship
+		government  = provisional_government
 		war = no
 		has_global_flag = iraq_war
 	}

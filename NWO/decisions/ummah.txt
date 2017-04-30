@@ -13,7 +13,7 @@ political_decisions = {
 			#has_country_flag = trade_block_ambition 
 			NOT = { has_country_modifier = in_bankrupcy } 
 			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xum_ambition } } } }
-			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
+			OR = { government = provisional_government pop_majority_religion = shiite }
 			bank_for_international_settlements = 1
 			war = no
 		}
@@ -45,7 +45,7 @@ political_decisions = {
 		allow = {
 			OR = { 
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xum_ambition } } }
-				NOT = { OR = { government = nationalist_dictatorship pop_majority_religion = shiite } }
+				NOT = { OR = { government = provisional_government pop_majority_religion = shiite } }
 				has_country_modifier = in_bankrupcy
 			}
 			war = no
@@ -82,7 +82,7 @@ political_decisions = {
 		}
 		allow = {
 			has_country_flag = xum_ambition
-			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
+			OR = { government = provisional_government pop_majority_religion = shiite }
 			nuclear_power = 1
 			war = no
 		}
@@ -101,7 +101,7 @@ political_decisions = {
 		allow = {
 			has_country_flag = xum_ambition
 			capital_scope = { has_province_modifier = single_market }
-			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
+			OR = { government = provisional_government pop_majority_religion = shiite }
 			oil_cartel = 1
 			election = no
 			war = no
@@ -121,7 +121,7 @@ political_decisions = {
 		allow = {
 			has_country_flag = xum_ambition
 			capital_scope = { has_province_modifier = currency_union_province }
-			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
+			OR = { government = provisional_government pop_majority_religion = shiite }
 			election = no
 			has_unclaimed_cores = no
 			war = no
@@ -141,7 +141,7 @@ political_decisions = {
 		allow = {
 			has_country_flag = xum_ambition
 			capital_scope = { is_core = XUM }
-			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
+			OR = { government = provisional_government pop_majority_religion = shiite }
 			election = no
 			war = no
 			neoprotectionism = 1
@@ -165,7 +165,7 @@ political_decisions = {
 		allow = {
 			has_country_flag = xum_ambition
 			capital_scope = { has_province_modifier = defence_union } 
-			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
+			OR = { government = provisional_government pop_majority_religion = shiite }
 			election = no
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1
@@ -193,7 +193,7 @@ political_decisions = {
 			any_neighbor_country = { has_country_flag = xum_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } has_unclaimed_cores = no }
 		}
 		allow = {
-			OR = { government = nationalist_dictatorship pop_majority_religion = shiite }
+			OR = { government = provisional_government pop_majority_religion = shiite }
 			election = no
 			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1

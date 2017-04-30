@@ -614,8 +614,8 @@ ideologies = {
 		factor = 1
 		# type
 		# government and ruling_party_ideology
-		modifier = { factor = 10.0 is_primary_culture = yes government = nationalist_dictatorship } 
-		modifier = { factor = 0 location = { is_primary_culture = yes } NOT = { government = nationalist_dictatorship } }
+		modifier = { factor = 10.0 is_primary_culture = yes government = provisional_government } 
+		modifier = { factor = 0 location = { is_primary_culture = yes } NOT = { government = provisional_government } }
 		# geography
 		modifier = { factor = 10.0 location = { is_overseas = no is_primary_culture = no is_accepted_culture = no }  }
 		modifier = { factor = 10.0 location = { OR = { is_colonial = yes is_overseas = yes } is_primary_culture = no } country = {  } }

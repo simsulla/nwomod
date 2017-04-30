@@ -839,15 +839,15 @@ country_event = {
                 }
                 random_owned = {
                         limit = {
-                                FROM = { government = nationalist_dictatorship }
+                                FROM = { government = provisional_government }
                                 owner = {
                                         civilized = yes
-                                        NOT = { government = nationalist_dictatorship }
+                                        NOT = { government = provisional_government }
                                 }
                         }
                         owner = {
                                 ruling_party_ideology = populist
-                                government = nationalist_dictatorship
+                                government = provisional_government
                                 political_reform = none_voting
                                 political_reform = criminology_classical
                                 political_reform = censored_publishing
@@ -1030,7 +1030,7 @@ country_event = {
                                 owner = {
                                         civilized = yes
                                         OR = {
-                                                government = nationalist_dictatorship
+                                                government = provisional_government
                                                 government = populist_dictatorship
                                                 government = proletarian_dictatorship
                                                 government = theocracy
@@ -1721,7 +1721,7 @@ country_event = {
 	
 	option = {
 		name = EVT_96088_A
-		government = nationalist_dictatorship country_event = 800050
+		government = provisional_government country_event = 800050
 		ruling_party_ideology = populist
 		clr_country_flag = tory_election_win
 		clr_country_flag = socialist_election_win

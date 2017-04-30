@@ -65,14 +65,14 @@ country_event = {
 	relation = { who = UAR value = -100 } 
 	any_pop = { militancy = -0.2 consciousness = -0.1 }
 	add_country_modifier = { name = reject_uar duration = 3500 }
-	ai_chance = { factor = 0.9 modifier = { OR = { year = 1975 NOT = { government = nationalist_dictatorship } } factor = 0 } }
+	ai_chance = { factor = 0.9 modifier = { OR = { year = 1975 NOT = { government = provisional_government } } factor = 0 } }
   }
 
   option = {
     name = EVT_8218004_B
 	relation = { who = UAR value = 200 } 
 	UAR = { country_event = 8218005 }
-	ai_chance = { factor = 0.1 modifier = { government = nationalist_dictatorship factor = 10 } }
+	ai_chance = { factor = 0.1 modifier = { government = provisional_government factor = 10 } }
   }
 }
 country_event = {
