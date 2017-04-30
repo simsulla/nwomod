@@ -47,8 +47,8 @@ country_event = { # Federation of Rhodesia and Nyasaland
 	badboy = -2
 	release_vassal = ZAM
 	release_vassal = MLW
-	random_country = { limit = { tag = MLW vassal_of = RHO } government = hms_government country_event = 800054 primary_culture = white_anglo }
-	random_country = { limit = { tag = ZAM vassal_of = RHO } government = hms_government country_event = 800054 primary_culture = white_anglo }
+	random_country = { limit = { tag = MLW vassal_of = RHO } government = hms_government country_event = 800054 primary_culture = british }
+	random_country = { limit = { tag = ZAM vassal_of = RHO } government = hms_government country_event = 800054 primary_culture = british }
   }
 }
 country_event = {
@@ -118,7 +118,7 @@ country_event = {
 	  name = EVT_8012210_B
 	  prestige = -10
 	  any_pop = { limit = { location = { OR = { is_core = ZAM is_core = MLW } } } militancy = 8 consciousness = 5 }
-	  random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } add_casus_belli = { target = RHO type = make_puppet } primary_culture = black_anglo }
+	  random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } add_casus_belli = { target = RHO type = make_puppet } primary_culture = anglo_african }
 	  random_country = { limit = { is_vassal = yes tag = MLW } release_vassal = MLW MLW = { government = democracy country_event = 800054 } add_casus_belli = { target = RHO type = make_puppet } primary_culture = chewa }
 	  ai_chance = { factor = 0 }
     }	
@@ -133,7 +133,7 @@ country_event = { # Unilateral Declaration of Independence
   option = {
     name = EVT_8012212_A
 	any_pop = { militancy = 0.5 consciousness = 1 }
-	random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } primary_culture = black_anglo }
+	random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } primary_culture = anglo_african }
 	random_country = { limit = { is_vassal = yes tag = MLW } release_vassal = MLW MLW = { government = democracy country_event = 800054 } primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
 	badboy = 5
@@ -152,7 +152,7 @@ country_event = { # Unilateral Declaration of Independence
   option = {
     name = EVT_8012212_C
 	any_pop = { militancy = 0.5 }
-	random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } primary_culture = black_anglo }
+	random_country = { limit = { is_vassal = yes tag = ZAM } release_vassal = ZAM ZAM = { government = democracy country_event = 800054 } primary_culture = anglo_african }
 	random_country = { limit = { is_vassal = yes tag = MLW } release_vassal = MLW MLW = { government = democracy country_event = 800054 } primary_culture = chewa }
 	overlord = { release_vassal = THIS country_event = 8012213 } 
 	government = democracy country_event = 800054

@@ -7,8 +7,8 @@ political_decisions = {
 		picture = "xsu_ambition"
 		potential = {
 			OR = { XMS = { exists = yes } XAC = { exists = yes } }
-			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = south_america } primary_culture = white_spanish primary_culture = mestizo 
-			primary_culture = white_portuguese }
+			has_country_flag = trade_block_ambition OR = { capital_scope = { continent = south_america } primary_culture = rioplatense primary_culture = andean_spanish 
+			primary_culture = brazilian }
 			NOT = { has_country_flag = xsu_ambition }
 			#NOT = { has_country_flag = in_trade_block }
 			NOT = { tag =XSU }
@@ -96,7 +96,7 @@ political_decisions = {
 		picture = "single_market"
 		potential = {
 			has_country_flag = trade_block_ambition 
-			OR = { capital_scope = { continent = south_america } primary_culture = white_spanish primary_culture = mestizo }
+			OR = { capital_scope = { continent = south_america } primary_culture = rioplatense primary_culture = andean_spanish primary_culture = brazilian }
 			has_country_flag = xsu_ambition
 			OR = {
 				ruling_party_ideology = socialist
@@ -127,7 +127,7 @@ political_decisions = {
 		picture = "currency_union"
 		potential = {
 			has_country_flag = trade_block_ambition
-			OR = { capital_scope = { continent = south_america } primary_culture = white_spanish primary_culture = mestizo }
+			OR = { capital_scope = { continent = south_america } primary_culture = rioplatense primary_culture = andean_spanish primary_culture = brazilian }
 			has_country_flag = xsu_ambition
 			OR = {
 				ruling_party_ideology = socialist
@@ -164,7 +164,7 @@ political_decisions = {
 		picture = "xsu_ambition"
 		potential = {
 			has_country_flag = trade_block_ambition
-			OR = { capital_scope = { continent = south_america } primary_culture = white_spanish primary_culture = mestizo }
+			OR = { capital_scope = { continent = south_america } primary_culture = rioplatense primary_culture = andean_spanish primary_culture = brazilian }
 			has_country_flag = xsu_ambition
 			NOT = { capital_scope = { is_core = XSU } }
 			OR = {
@@ -200,7 +200,7 @@ political_decisions = {
 		picture = "defence_union"
 		potential = {
 			has_country_flag = trade_block_ambition 
-			OR = { capital_scope = { continent = south_america } primary_culture = white_spanish primary_culture = mestizo }
+			OR = { capital_scope = { continent = south_america } primary_culture = rioplatense primary_culture = andean_spanish primary_culture = brazilian }
 			has_country_flag = xsu_ambition
 			is_vassal = no
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
@@ -231,7 +231,7 @@ political_decisions = {
 		picture = "xsu_parlament"
 		potential = {
 			has_country_flag = trade_block_ambition
-			OR = { capital_scope = { continent = south_america } primary_culture = white_spanish primary_culture = mestizo }
+			OR = { capital_scope = { continent = south_america } primary_culture = rioplatense primary_culture = andean_spanish primary_culture = brazilian }
 			has_country_flag = xsu_ambition
 			XSU = { exists = no }
 		}
@@ -266,12 +266,11 @@ political_decisions = {
 			}
 			change_tag = XSU
 			#primary_culture from forming nation
-			add_accepted_culture = white_spanish
-			add_accepted_culture = white_portuguese
-			add_accepted_culture = black_spanish
-			add_accepted_culture = black_portuguese
-			add_accepted_culture = mestizo
-			add_accepted_culture = pardo_portuguese
+			add_accepted_culture = andean_spanish
+			add_accepted_culture = rioplatense
+			add_accepted_culture = afro_spanish
+			add_accepted_culture = afro_portuguese
+			add_accepted_culture = brazilian
 			clr_country_flag = in_trade_block
 		}
 		ai_will_do = {

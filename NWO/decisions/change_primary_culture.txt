@@ -4,10 +4,7 @@ political_decisions = {
 		picture = pink_tide 
 		
 		potential = { 
-			NOT = { tag = ARG }
-			NOT = { tag = CHI }
-			capital_scope = { OR = { continent = north_america continent = south_america }  NOT = { pop_majority_culture = white_spanish } } 
-			primary_culture = white_spanish
+			capital_scope = { OR = { continent = north_america continent = south_america } } 
 			NOT = { has_country_flag = pink_tide }
 		} 
 		
@@ -20,9 +17,6 @@ political_decisions = {
 		
 		effect = { 
 			prestige = 5
-			random_country = { limit = { tag = THIS THIS = { tag = BRZ }  } primary_culture = pardo_portuguese add_accepted_culture = white_portuguese }  
-			random_country = { limit = { NOT = { tag = BRZ } tag = THIS } primary_culture = mestizo add_accepted_culture = white_spanish }  
-			any_pop = { limit = { OR = { culture =  pardo_portuguese culture =  mestizo } } militancy = -2.0 consciousness = 1.0 } 
 			set_country_flag = pink_tide
 		} 
 		
@@ -32,8 +26,8 @@ political_decisions = {
 	cpcn_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = pashtun government = provisional_government } allow = { } effect = { prestige = -2 primary_culture = tajik  add_accepted_culture = uzbek } ai_will_do = { factor = 1 } }
 	cpc_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = tajik NOT = { government = provisional_government } } allow = { } effect = { prestige = -2 primary_culture = pashtun  remove_accepted_culture = uzbek } ai_will_do = { factor = 1 } }
 
-	cpcn_ALG = { picture = cpc alert = no potential = { tag = ALG primary_culture = sunni_arab government = provisional_government } allow = { } effect = { prestige = -2 primary_culture = white_french  add_accepted_culture = jewish } ai_will_do = { factor = 1 } }
-	cpc_ALG = { picture = cpc alert = no potential = { tag = ALG primary_culture = white_french NOT = { government = provisional_government } } allow = { } effect = { prestige = -2 primary_culture = sunni_arab  remove_accepted_culture = jewish } ai_will_do = { factor = 1 } }
+	cpcn_ALG = { picture = cpc alert = no potential = { tag = ALG primary_culture = sunni_arab government = provisional_government } allow = { } effect = { prestige = -2 primary_culture = french  add_accepted_culture = jewish } ai_will_do = { factor = 1 } }
+	cpc_ALG = { picture = cpc alert = no potential = { tag = ALG primary_culture = french NOT = { government = provisional_government } } allow = { } effect = { prestige = -2 primary_culture = sunni_arab  remove_accepted_culture = jewish } ai_will_do = { factor = 1 } }
 
 	cpcn_BHR = { picture = cpc alert = no potential = { tag = BHR primary_culture = shia_arab government = provisional_government } allow = { } effect = { prestige = -2 primary_culture = sunni_arab  } ai_will_do = { factor = 1 } }
 	cpc_BHR = { picture = cpc alert = no potential = { tag = BHR primary_culture = sunni_arab NOT = { government = provisional_government } } allow = { } effect = { prestige = -2 primary_culture = shia_arab  } ai_will_do = { factor = 1 } }
@@ -56,8 +50,8 @@ political_decisions = {
 	cpcn_SAL = { picture = cpc alert = no potential = { tag = SAL primary_culture = german government = provisional_government } allow = { } effect = { prestige = -2 primary_culture = french  } ai_will_do = { factor = 1 } }
 	cpc_SAL = { picture = cpc alert = no potential = { tag = SAL primary_culture = french NOT = { government = provisional_government } } allow = { } effect = { prestige = -2 primary_culture = german  } ai_will_do = { factor = 1 } }
 
-	cpcn_SAF = { picture = cpc alert = no potential = { tag = SAF NOT = { primary_culture = afrikaaner } government = provisional_government } allow = { } effect = { prestige = -2 primary_culture = afrikaaner  add_accepted_culture = white_anglo } ai_will_do = { factor = 1 } }
-	cpc_SAF = { picture = cpc alert = no potential = { tag = SAF primary_culture = afrikaaner NOT = { government = provisional_government } } allow = { } effect = { prestige = -2 primary_culture = black_anglo } ai_will_do = { factor = 1 } }
+	cpcn_SAF = { picture = cpc alert = no potential = { tag = SAF NOT = { primary_culture = afrikaaner } government = provisional_government } allow = { } effect = { prestige = -2 primary_culture = afrikaaner  add_accepted_culture = british } ai_will_do = { factor = 1 } }
+	cpc_SAF = { picture = cpc alert = no potential = { tag = SAF primary_culture = afrikaaner NOT = { government = provisional_government } } allow = { } effect = { prestige = -2 primary_culture = anglo_african } ai_will_do = { factor = 1 } }
 
 	cpcn_SSU = { picture = cpc alert = no potential = { tag = SSU primary_culture = nuer government = provisional_government } allow = { } effect = { prestige = -2 primary_culture = dinka  } ai_will_do = { factor = 1 } }
 	cpc_SSU = { picture = cpc alert = no potential = { tag = SSU primary_culture = dinka NOT = { government = provisional_government } } allow = { } effect = { prestige = -2 primary_culture = nuer  } ai_will_do = { factor = 1 } }

@@ -501,12 +501,6 @@ assimilation_chance = { # 1
 		factor = -10
 		NOT = { religion = secularism }
 	}
-	modifier = {
-		factor = -10
-		NOT = { is_culture_group = THIS }
-		NOT = { is_culture_group = african_diaspora_cultures THIS = { is_culture_group = african } }
-		NOT = { is_culture_group = neo_european_cultures THIS = { is_culture_group = european } }
-	}
 }
 
 #general conversion mtth, same for all pops

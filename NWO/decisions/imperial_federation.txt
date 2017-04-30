@@ -4,7 +4,10 @@ political_decisions = {
 		picture = "IMP_ambition"
 		potential = {
 			OR = {
-				primary_culture = white_anglo
+				primary_culture = anglo_canadian
+				primary_culture = british
+				primary_culture = aussie
+				primary_culture = kiwi
 				primary_culture = english
 			}
 			NOT = { tag = USA }
@@ -89,7 +92,10 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
 			OR = {
-				primary_culture = white_anglo
+				primary_culture = anglo_canadian
+				primary_culture = british
+				primary_culture = aussie
+				primary_culture = kiwi
 				primary_culture = english
 			}
 			has_country_flag = IMP_ambition
@@ -97,7 +103,10 @@ political_decisions = {
 		}
 		allow = {
 			OR = {
-				primary_culture = white_anglo
+				primary_culture = anglo_canadian
+				primary_culture = british
+				primary_culture = aussie
+				primary_culture = kiwi
 				primary_culture = english
 			}
 			government = hms_government
@@ -115,7 +124,10 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
 			OR = {
-				primary_culture = white_anglo
+				primary_culture = anglo_canadian
+				primary_culture = british
+				primary_culture = aussie
+				primary_culture = kiwi
 				primary_culture = english
 			}
 			has_country_flag = IMP_ambition
@@ -138,8 +150,11 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { is_core = IMP } }
 			OR = {
+				primary_culture = anglo_canadian
+				primary_culture = british
+				primary_culture = aussie
+				primary_culture = kiwi
 				primary_culture = english
-				primary_culture = white_anglo
 			}
 			has_country_flag = IMP_ambition
 			capital_scope = { has_province_modifier = currency_union_province }
@@ -154,7 +169,10 @@ political_decisions = {
 		effect = {
 			all_core = { add_core = IMP }
 			add_accepted_culture = english
-			add_accepted_culture = white_anglo
+			add_accepted_culture = anglo_canadian
+			add_accepted_culture = aussie
+			add_accepted_culture = kiwi
+			add_accepted_culture = british
 		}
 		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
 	}
@@ -163,8 +181,11 @@ political_decisions = {
 		potential = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 			OR = {
+				primary_culture = anglo_canadian
+				primary_culture = british
+				primary_culture = aussie
+				primary_culture = kiwi
 				primary_culture = english
-				primary_culture = white_anglo
 			}
 			has_country_flag = IMP_ambition
 			capital_scope = { is_core = IMP }
@@ -190,8 +211,11 @@ political_decisions = {
 		potential = {
 			IMP = { exists = no }
 			OR = {
+				primary_culture = anglo_canadian
+				primary_culture = british
+				primary_culture = aussie
+				primary_culture = kiwi
 				primary_culture = english
-				primary_culture = white_anglo
 			}
 			has_country_flag = IMP_ambition
 			capital_scope = { has_province_modifier = defence_union } 
@@ -223,7 +247,10 @@ political_decisions = {
 			}
 			change_tag = IMP
 			add_accepted_culture = english
-			add_accepted_culture = white_anglo
+			add_accepted_culture = anglo_canadian
+			add_accepted_culture = aussie
+			add_accepted_culture = kiwi
+			add_accepted_culture = british
 		}
 		ai_will_do = {
 			factor = 1

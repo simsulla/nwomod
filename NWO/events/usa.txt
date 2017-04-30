@@ -30,14 +30,14 @@ country_event = {
 		ai_chance = { factor = 0 }
 		any_pop = {
 			limit = {
-				OR = { culture = mestizo culture = white_spanish culture = black_spanish }
+				OR = { culture = mexican culture = caribbean_spanish culture = afro_spanish }
 			}
 			consciousness = 1
 		}
 		any_country = {
 			limit = { 
 				OR = { 
-					primary_culture = mestizo primary_culture = white_spanish primary_culture = black_spanish } 
+					primary_culture = mexican primary_culture = caribbean_spanish primary_culture = afro_spanish } 
 				}
 			relation = { who = THIS value = -5 }
 		}
@@ -716,7 +716,7 @@ country_event = {
   option = {
     name = EVT_8015844_A
 	any_pop = { militancy = 1.0 consciousness = 1.0 }
-	add_accepted_culture = black_anglo
+	add_accepted_culture = anglo_african
 	ai_chance = { factor = 0 }
   }
 
@@ -745,7 +745,7 @@ country_event = {
 
   option = {
     name = EVT_8015845_A
-	add_accepted_culture = black_anglo
+	add_accepted_culture = anglo_african
 	any_pop = { consciousness = 0.5 }
 	any_pop = { militancy = -0.5 }
   }

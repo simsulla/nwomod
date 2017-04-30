@@ -24,12 +24,6 @@ european_french = {
 		 first_names = { Yann Yannic Pierre Jakez Elouan Frasez Jaoua Paol Segal Alain Henri Hoel Michel Theodore }
 		 last_names = { "de Cornouaille" Karter Gallo Kergoulay Bellec "le Goff" Treguier Riou Morvan Peron Jezeguel Salaun "le Bihan" }
 	}
-	white_french = {
-		 #!religion = { catholic }
-		 color = { 135 206 250 }
-		 first_names = { Narcisse René Èdouard Luc Letellier Théodore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eugéne Èssioff Huguel Jean-Pierre Gilles }
-		 last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantaléon Langelier Damasne LeBlanc Brodeur Perodeau }
-	}
 	occitans = {
 		 #!religion = { catholic }
 		 color = { 0 255 255 }
@@ -180,6 +174,12 @@ british_cultures = {
 		 first_names = { Alexander Arthur Brian Cathal Christopher Con Daniel Denis Desmond Éamon Edward Ernes Fionán Frank George Harry Jack James John Joseph Kevin Liam Michael Patrick Peter Richard Robert Séan Thomas William }
 		 last_names = { Aiken Ashe Breen Brugha Collins Connolly Cosgrave Craig "de Valera" Donnelly FitzGerald Griffith Kelly Larkin Lynch Mallin McCartan McCullough McGarry McGuinness Mulcahy O'Brien O'Connor O'Doherty O'Higgins O'Leary O'Mara Pearse Plunket White }
 	}
+	british = {
+		 #!religion = { protestant }
+		 color = { 255 192 203 }
+		 first_names = { Alexander Arthur Brian Cathal Christopher Con Daniel Denis Desmond Éamon Edward Ernes Fionán Frank George Harry Jack James John Joseph Kevin Liam Michael Patrick Peter Richard Robert Séan Thomas William }
+		 last_names = { Aiken Ashe Breen Brugha Collins Connolly Cosgrave Craig "de Valera" Donnelly FitzGerald Griffith Kelly Larkin Lynch Mallin McCartan McCullough McGarry McGuinness Mulcahy O'Brien O'Connor O'Doherty O'Higgins O'Leary O'Mara Pearse Plunket White }
+	}
 	irish = {
 		 #!religion = { catholic }
 		 color = { 193 205 193  }
@@ -316,9 +316,15 @@ european = {
 neo_european_cultures = {
 	leader = european
 	unit = UsGC
-	white_anglo = { # tag = USA ...
+	anglo_american = { # tag = USA ...
 		 #!religion = { protestant }
-		 color = { 255 255 240 }
+		 color = { 135 206 235 }
+		 first_names = { Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses Joseph Charles Russell Benjamin Robert Christopher Richard Chester Lafayette Nathaniel Francis James Donald Cyrus Ambrose Edward Eugene Augustus Norton Abner Isaac Amos Thomas Randolph }
+		 last_names = { Smith Washington Grant Sherman Chamberlain Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Butler Caldwell Campbell Carr Chapman Chipman Clayton Coburn Connor Conrad Cook Cooper Crittenden Custer Davies Davis Doubleday Ewing Farnsworth Ford Forsyth Foster Franklin Fry Gilbert Gregg Griffin Halleck Hamlin Hancock Harrison Hatch Hayes Heintzelman Hooker Howard Hunter Jackson Johnson Jones Keyes Kimball Lyon McArthur McClellan McCook McDowell Meade Mitchell Morgan Paine Phelps Porter Potter Reynolds Rice Rhodes Robinson Rosencrans Saloman Schenck Schofield Scott Sedgwick Seward Sheridan Sickles Sprague Stevens Stevenson Stone Sullivan Taylor Tyler Wade Wadsworth Wallace Ward Warner Wilson Wright Young }
+	}
+	african_american = { # tag = USA ...
+		 #!religion = { protestant }
+		 color = { 128 128 128 }
 		 first_names = { Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses Joseph Charles Russell Benjamin Robert Christopher Richard Chester Lafayette Nathaniel Francis James Donald Cyrus Ambrose Edward Eugene Augustus Norton Abner Isaac Amos Thomas Randolph }
 		 last_names = { Smith Washington Grant Sherman Chamberlain Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Butler Caldwell Campbell Carr Chapman Chipman Clayton Coburn Connor Conrad Cook Cooper Crittenden Custer Davies Davis Doubleday Ewing Farnsworth Ford Forsyth Foster Franklin Fry Gilbert Gregg Griffin Halleck Hamlin Hancock Harrison Hatch Hayes Heintzelman Hooker Howard Hunter Jackson Johnson Jones Keyes Kimball Lyon McArthur McClellan McCook McDowell Meade Mitchell Morgan Paine Phelps Porter Potter Reynolds Rice Rhodes Robinson Rosencrans Saloman Schenck Schofield Scott Sedgwick Seward Sheridan Sickles Sprague Stevens Stevenson Stone Sullivan Taylor Tyler Wade Wadsworth Wallace Ward Warner Wilson Wright Young }
 	}
@@ -328,6 +334,41 @@ neo_european_cultures = {
 		 first_names = { Narcisse René Èdouard Luc Letellier Théodore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eugéne Èssioff Huguel Jean-Pierre Gilles }
 		 last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantaléon Langelier Damasne LeBlanc Brodeur Perodeau }
 	}
+}
+down_under_cultures = {
+	leader = european
+	unit = UsGC
+	aussie = { 
+		 #!religion = { protestant }
+		 color = { 255 182 193 }
+		 first_names = { Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses Joseph Charles Russell Benjamin Robert Christopher Richard Chester Lafayette Nathaniel Francis James Donald Cyrus Ambrose Edward Eugene Augustus Norton Abner Isaac Amos Thomas Randolph }
+		 last_names = { Smith Washington Grant Sherman Chamberlain Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Butler Caldwell Campbell Carr Chapman Chipman Clayton Coburn Connor Conrad Cook Cooper Crittenden Custer Davies Davis Doubleday Ewing Farnsworth Ford Forsyth Foster Franklin Fry Gilbert Gregg Griffin Halleck Hamlin Hancock Harrison Hatch Hayes Heintzelman Hooker Howard Hunter Jackson Johnson Jones Keyes Kimball Lyon McArthur McClellan McCook McDowell Meade Mitchell Morgan Paine Phelps Porter Potter Reynolds Rice Rhodes Robinson Rosencrans Saloman Schenck Schofield Scott Sedgwick Seward Sheridan Sickles Sprague Stevens Stevenson Stone Sullivan Taylor Tyler Wade Wadsworth Wallace Ward Warner Wilson Wright Young }
+	}
+	kiwi = { 
+		 #!religion = { protestant }
+		 color = { 255 105 180 }
+		 first_names = { Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses Joseph Charles Russell Benjamin Robert Christopher Richard Chester Lafayette Nathaniel Francis James Donald Cyrus Ambrose Edward Eugene Augustus Norton Abner Isaac Amos Thomas Randolph }
+		 last_names = { Smith Washington Grant Sherman Chamberlain Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Butler Caldwell Campbell Carr Chapman Chipman Clayton Coburn Connor Conrad Cook Cooper Crittenden Custer Davies Davis Doubleday Ewing Farnsworth Ford Forsyth Foster Franklin Fry Gilbert Gregg Griffin Halleck Hamlin Hancock Harrison Hatch Hayes Heintzelman Hooker Howard Hunter Jackson Johnson Jones Keyes Kimball Lyon McArthur McClellan McCook McDowell Meade Mitchell Morgan Paine Phelps Porter Potter Reynolds Rice Rhodes Robinson Rosencrans Saloman Schenck Schofield Scott Sedgwick Seward Sheridan Sickles Sprague Stevens Stevenson Stone Sullivan Taylor Tyler Wade Wadsworth Wallace Ward Warner Wilson Wright Young }
+	}
+	union = XPI
+}
+canadian_cultures = {
+	leader = european
+	unit = UsGC
+	anglo_canadian = {
+		 #!religion = { protestant }
+		color = {255 228 225}
+		first_names = { Charles John Frederick Douglas Patrick Leonard Henry Arthur Alexander Campbell Gilbert Albert Victor Julian Francis James }
+		last_names = { Grey Elliot Hamilton Gordon Stanley Campbell Ross Petty-Fitzmaurice Windham Young Doyle Hastings Blackwood MacDougall }
+	}
+	french_canadian = { 
+		 #!religion = { catholic }
+		color = {173 216 230}
+		first_names = { Narcisse René Èdouard Luc Letellier Théodore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eugéne Èssioff Huguel Jean-Pierre Gilles }
+		last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantaléon Langelier Damasne LeBlanc Brodeur Perodeau }
+		radicalism = 10
+	}
+	union = CAN
 }
 levantine = {
 	leader = european
@@ -414,6 +455,7 @@ scandinavian = {
 		 first_names = { Albrecht Alexander Arnold August Axel Baltzar Carl Christofer Didrik Edvard Elias Emil Erik Esaias Fabian Frans Fredrik Gunnar Gustav Henrik Jakob Jesper Johan Julius Knut Lars Ludvig Magnus Michael Nikolaus Nils Olof Oscar Per Rudolf Sten Theodor Verner Viktor Vilhelm }
 		 last_names = { Abelin Bernardotte Bildt Björnstjerna Brahe Brakenhielm Breitholtz Chrsiterson Crusebjörn Dyrssen Ehnemark Ehrenstam Gyllengranat Gyndestolpe Ingelman Leijonhufvud Lindman Mörner Nordenskiöld "Palanger af Vega" Palmstierna Peyron Rappe Reuterskiöld Rosensvärd Ryding Sprengtportem Ström Taube Tawast Thörnell Thulstrup Tingsten Ulner Virgin "von Essen" "von Hohenhausen" "von Otter" "von Platen" Weidenhielm }
 	}
+	union = SCA
 }
 pan_albanian = {
 	leader = european
@@ -580,35 +622,90 @@ oceanic = {
 latin_american_cultures = {
 	leader = southamerican
 	unit = SouthAmericanGC
-	white_spanish = { # tag = MEX ...
-		 #!religion = { catholic }
-		 color = { 238 203 173 }
-		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
-		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
-	}
-	mestizo = { # tag = _MEX ...
-		 #!religion = { catholic }
-		 color = { 205 133 63 }
-		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
-		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
-	}
-	black_spanish = {
+	afro_spanish = {
 		 #!religion = { catholic }
 		 color = { 139 125 107 }
 		 first_names = { Afonso Aleixo Alexandre Anderson André Artur Cândido Carlos Denílson Djalma Félix Francisco Guilherme Itamar João Joaquim Jorge José Kléber Leandro Luís Manuel Marco Marcos Maurício Mauro Nilo Procópio Ricardo Ronaldo }
 		 last_names = { Aragão Assunçao Bahia Barbosa Borges "de Cruz e Sousa" "da Lima" "de Lima Barreto" "de Ouro" "de Sousa" "de Souza" "dos Reis" "dos Santos" Fidalgo Filho Gil Gomes "Machado de Assis" Nunes Oliveira Otelo Paim Pandeiro Peçanha Pereira Pitanga Rodrigues Santos Silva Teixeira }
 	}
+	chilean = {
+		 #!religion = { catholic }
+		 color = { 218 165 32 }
+		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
+		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
+	}
+}
+rioplatense_cultures = {
+	leader = southamerican
+	unit = SouthAmericanGC
+	rioplatense = { 
+		 #!religion = { catholic }
+		 color = { 255 20 147 }
+		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
+		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
+	}
+	union = XMS
+}
+mexican_cultures = {
+	leader = southamerican
+	unit = SouthAmericanGC
+	mexican = { 
+		 #!religion = { catholic }
+		 color = { 75 0 130 }
+		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
+		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
+	}
+	union = MEX
+}
+central_american_cultures = {
+	leader = southamerican
+	unit = SouthAmericanGC
+	central_american_spanish = { 
+		 #!religion = { catholic }
+		 color = { 238 130 238 }
+		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
+		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
+	}
+	union = XCI
+}
+andean_cultures = {
+	leader = southamerican
+	unit = SouthAmericanGC
+	andean_spanish = { 
+		 #!religion = { catholic }
+		 color = { 255 165 0 }
+		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
+		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
+	}
+	union = XAC
+}
+caribbean_cultures = {
+	leader = southamerican
+	unit = SouthAmericanGC
+	caribbean_spanish = { 
+		 #!religion = { catholic }
+		 color = { 255 215 0 }
+		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
+		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
+	}
+	caribbean_french = {
+		 #!religion = { catholic }
+		 color = { 112 138 144 }
+		 first_names = { Afonso Aleixo Alexandre Anderson André Artur Cândido Carlos Denílson Djalma Félix Francisco Guilherme Itamar João Joaquim Jorge José Kléber Leandro Luís Manuel Marco Marcos Maurício Mauro Nilo Procópio Ricardo Ronaldo }
+		 last_names = { Aragão Assunçao Bahia Barbosa Borges "de Cruz e Sousa" "da Lima" "de Lima Barreto" "de Ouro" "de Sousa" "de Souza" "dos Reis" "dos Santos" Fidalgo Filho Gil Gomes "Machado de Assis" Nunes Oliveira Otelo Paim Pandeiro Peçanha Pereira Pitanga Rodrigues Santos Silva Teixeira }
+	}
+	afro_caribbean = {
+		 #!religion = { protestant }
+		 color = {  32 57 32  }
+		 first_names = { Anderson Anselm Arthur Ben Colville Cyril Earl Edwin Ellis Eric Geoffrey George Graham Henry Herbert Hubert Jeffrey John Josiah Lennox Lloyd Malcolm Mervyn Nicholas Rainford Reginald Robert Stokely William Winston }
+		 last_names = { Abbott Best Blaize Brathwaite Carmichael Chambers Clark Douglas Dymally Findley Goddard Hall Henson Holder James Jones Julian Kilgour Lassalle Lovelace McIntosh Nurse Perry Roberts Robinson Shadd Stollmeyer Sylvester Williams Young }
+	}
+	union = XCC
 }
 lusophone_cultures = {
 	leader = southamerican
 	unit = SouthAmericanGC
-	white_portuguese = { # tag = BRZ
-		 #!religion = { catholic }
-		 color = { 255 228 181 }
-		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
-		 last_names = { Barreto Bernardes Bittencourt Brandão Bras "Cabral da Silva" Caldwell Constant Costa "da Camara" "da Costa" "da Fonseca" "de Aguiar" "de Barros" "de Beaurepaire-Rohan" "de Bragança" "de Carvalho" "de Itapevi" "de Lima e Silva" "de Melo" "de Noronha" "de Oliveira" "de Orleans" "de Souza Neto" "de Suruf" Dutra Fragoso Frontin Galvão Jordão Labatut Lopes Maciel Mallet Marques "Marques de Sousa" Maurity Moreira Osório Peixoto Pena Pessoa Pinto Rondon "Saldanha da Gama" Santos Soares Tavares Vargas Wandenkolk }
-	}
-	pardo_portuguese = { # tag = _BRZ
+	brazilian = { # tag = _BRZ
 		 #!religion = { catholic }
 		 color = { 143 101 4 }
 		 first_names = { Afonso Antônio Artur Augusto Aurélio Benjamin Cândido Carlos Celso Custódio Delfim Deodoro Eduardo Emílio Epitácio Ernesto Fábio Fernando Filipe Floriano "Francisco de Paula" "Francisco Xavier" Federico Gaspar Gastão Getúlio Henrique Hermes Humberto Isaías João Joaquim José Júlio Juscelino Luís Manuel "Marco Antônio" Mário Miguel Nereu Nilo Paulo Pedro Prudente Silviano Tancredo Urbano Venceslau Vital }
@@ -620,7 +717,7 @@ lusophone_cultures = {
 		 first_names = { Abel Adriano Afonso Alberto Alexandre Alfredo Álvaro André António Aquilino Artur Augusto Bartolomeu Bernardo Bruno Caetano Cândido Carlos Christovão Cláudio Damião Daniel David Dinis Diogo Duarte Ernesto Estêvão Eugénio Fernando Filipe Francisco "Francisco Xavier" Gastão Hermenegildo Ignácio JErónimo João Joaquim Jorge José Júlio Leopoldo Luís Manuel Mário Miguel Nicolau Nuno Orlando Óscar Pascoal Paulo Pedro Rafael Raul Roberto Rodrigo Rui Santiago Sebastião Teodoro Teófilo Tiago Tomé Urbano Vasco Vicente Vitorino Vitório }
 		 last_names = { Amaral Barreto Bleck Braga Cabral Capelo Carmona Coelho Correia Coutinho "da Costa" "da Cunha" "da Silva" "de Albuquerque" "de Almeida" "de Arriaga" "de Bragança" "de Bragança-Coburgo" "de Carvalho" "de Castro" "de Gusmão" "de Lacerda" "de Mesquita" "de Moura" "de Noronha" "de Oliveira" "de Paiva" "de Sousa" "de Vasconcelos" Dias "dos Reis" "dos Santos" Fernandes Ferreira Figueira "Freire de Andrade" Gago Gil Gomes Herculano Ivens Keil Lopes Machado Magalhães Mendes Moniz Mouzinho Nogueira Nunes Ortigão Pereira Pinheiro Pinto Pires Pomar Pulido Queiroz Quintanilha Ribeiro Rodrigues Salazar Sampaio Sérgio Silveira Tavares Teixeira Vidigal Vieira }
 	}
-	black_portuguese = {
+	afro_portuguese = {
 		 #!religion = { catholic }
 		 color = { 49 79 79 }
 		 first_names = { Afonso Aleixo Alexandre Anderson André Artur Cândido Carlos Denílson Djalma Félix Francisco Guilherme Itamar João Joaquim Jorge José Kléber Leandro Luís Manuel Marco Marcos Maurício Mauro Nilo Procópio Ricardo Ronaldo }
@@ -1490,31 +1587,25 @@ african_diaspora_cultures = {
 		 first_names = { Afonso Aleixo Alexandre Anderson André Artur Cândido Carlos Denílson Djalma Félix Francisco Guilherme Itamar João Joaquim Jorge José Kléber Leandro Luís Manuel Marco Marcos Maurício Mauro Nilo Procópio Ricardo Ronaldo }
 		 last_names = { Aragão Assunçao Bahia Barbosa Borges "de Cruz e Sousa" "da Lima" "de Lima Barreto" "de Ouro" "de Sousa" "de Souza" "dos Reis" "dos Santos" Fidalgo Filho Gil Gomes "Machado de Assis" Nunes Oliveira Otelo Paim Pandeiro Peçanha Pereira Pitanga Rodrigues Santos Silva Teixeira }
 	}
-	afro_caribbean = {
-		 #!religion = { protestant }
-		 color = {  32 57 32  }
-		 first_names = { Anderson Anselm Arthur Ben Colville Cyril Earl Edwin Ellis Eric Geoffrey George Graham Henry Herbert Hubert Jeffrey John Josiah Lennox Lloyd Malcolm Mervyn Nicholas Rainford Reginald Robert Stokely William Winston }
-		 last_names = { Abbott Best Blaize Brathwaite Carmichael Chambers Clark Douglas Dymally Findley Goddard Hall Henson Holder James Jones Julian Kilgour Lassalle Lovelace McIntosh Nurse Perry Roberts Robinson Shadd Stollmeyer Sylvester Williams Young }
-	}
 	afro_caribeno = {
 		 #!religion = { catholic }
 		 color = {  12 83 12  }
 		 first_names = { Antonio Armando Arsenio Arturo Bartolomé Carlos Dámaso Enrique Francisco Generoso Guillermo Gumersindo Ignacio Israel Jacinto Jaime "José Celso" Juan Luciano Mario Máximo Nelson Nicolás Orestes Orlando Pedro Pío Ramón Rubén Wifredo }
 		 last_names = { Albizu Barbosa Barreto Bauzá Díaz Egües Estupiñán Garay González Guillén Gutiérrez Hurtado Jiménez Jorrín Lam Leyva López Maceo Moré Morel Peraza Pérez Piñeiro Pozo Repilado Rodríguez Santamaría Schomburg Valdés Villa }
 	}
-	black_anglo = {
+	anglo_african = {
 		 #!religion = { protestant }
 		 color = { 105 105 105 }
 		 first_names = { Afonso Aleixo Alexandre Anderson André Artur Cândido Carlos Denílson Djalma Félix Francisco Guilherme Itamar João Joaquim Jorge José Kléber Leandro Luís Manuel Marco Marcos Maurício Mauro Nilo Procópio Ricardo Ronaldo }
 		 last_names = { Aragão Assunçao Bahia Barbosa Borges "de Cruz e Sousa" "da Lima" "de Lima Barreto" "de Ouro" "de Sousa" "de Souza" "dos Reis" "dos Santos" Fidalgo Filho Gil Gomes "Machado de Assis" Nunes Oliveira Otelo Paim Pandeiro Peçanha Pereira Pitanga Rodrigues Santos Silva Teixeira }
 	}
-	black_dutch = {
+	dutch_african = {
 		 #!religion = { protestant }
 		 color = { 112 138 144 }
 		 first_names = { Afonso Aleixo Alexandre Anderson André Artur Cândido Carlos Denílson Djalma Félix Francisco Guilherme Itamar João Joaquim Jorge José Kléber Leandro Luís Manuel Marco Marcos Maurício Mauro Nilo Procópio Ricardo Ronaldo }
 		 last_names = { Aragão Assunçao Bahia Barbosa Borges "de Cruz e Sousa" "da Lima" "de Lima Barreto" "de Ouro" "de Sousa" "de Souza" "dos Reis" "dos Santos" Fidalgo Filho Gil Gomes "Machado de Assis" Nunes Oliveira Otelo Paim Pandeiro Peçanha Pereira Pitanga Rodrigues Santos Silva Teixeira }
 	}
-	black_french = {
+	french_african = {
 		 #!religion = { catholic }
 		 color = { 112 138 144 }
 		 first_names = { Afonso Aleixo Alexandre Anderson André Artur Cândido Carlos Denílson Djalma Félix Francisco Guilherme Itamar João Joaquim Jorge José Kléber Leandro Luís Manuel Marco Marcos Maurício Mauro Nilo Procópio Ricardo Ronaldo }

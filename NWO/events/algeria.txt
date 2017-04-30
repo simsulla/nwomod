@@ -400,7 +400,7 @@ country_event = { # The week of barricades
 	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 1 }
 	release = ALG
 	ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1704 province_id = 1705 province_id = 1700 province_id = 1709 province_id = 1708 province_id = 1707 } } } change_controller = REB } }
-	ALG = { government = provisional_government ruling_party_ideology = populist  country_event = 800050 } # party_populist_2_white_french_ALG
+	ALG = { government = provisional_government ruling_party_ideology = populist  country_event = 800050 } # party_populist_2_french_ALG
 	casus_belli = { target = ALG type = annex_core_country months = 12 }
 	war = { target = ALG attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = free_peoples } }
 	ai_chance = { factor = 100 }
@@ -465,8 +465,8 @@ country_event = { # Algerian Independence
   option = {
     name = EVT_8000320_A
 	all_core = { limit = { is_core = ALG } remove_core = FRA }
-	any_pop = { limit = { location = { is_core = ALG } culture = white_french strata = middle } move_pop = 425 } # Paris
-	any_pop = { limit = { location = { is_core = ALG } culture = white_french NOT = { strata = middle } } move_pop = 467 } # Marseilles
+	any_pop = { limit = { location = { is_core = ALG } culture = french strata = middle } move_pop = 425 } # Paris
+	any_pop = { limit = { location = { is_core = ALG } culture = french NOT = { strata = middle } } move_pop = 467 } # Marseilles
 	any_pop = { limit = { location = { is_core = ALG } culture = jewish } move_pop = 425 } # Paris
 	release = ALG	
 	diplomatic_influence = { who = ALG value = 200 }
