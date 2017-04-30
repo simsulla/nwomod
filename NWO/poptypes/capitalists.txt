@@ -553,14 +553,10 @@ promote_to =
 ideologies = {
 	nationalist = {
 		factor = 1
-		# type
-		# government and ruling_party_ideology
-		modifier = { factor = 4.0 is_primary_culture = yes government = provisional_government } 
-		modifier = { factor = 0 location = { is_primary_culture = yes } NOT = { government = provisional_government } }
 		# geography
-		modifier = { factor = 4.0 location = { is_overseas = no is_primary_culture = no is_accepted_culture = no }  NOT = { government = provisional_government } }
-		modifier = { factor = 4.0 location = { OR = { is_colonial = yes is_overseas = yes } is_primary_culture = no } country = {  } NOT = { government = provisional_government } }
-		modifier = { factor = 4.0 location = { OR = { is_colonial = yes is_overseas = yes } is_primary_culture = no is_accepted_culture = no }  NOT = { government = provisional_government } }
+		modifier = { factor = 10.0 location = { is_overseas = no is_primary_culture = no is_accepted_culture = no }  }
+		modifier = { factor = 10.0 location = { OR = { is_colonial = yes is_overseas = yes } is_primary_culture = no is_accepted_culture = no }  }
+		modifier = { factor = 0 NOT = { OR = { is_accepted_culture = yes is_primary_culture = yes } } }
 		# ideology special
 		modifier = { factor = 1.2 militancy = 1 }
 		modifier = { factor = 1.2 militancy = 2 }
@@ -570,15 +566,6 @@ ideologies = {
 		modifier = { factor = 1.2 militancy = 7 }
 		modifier = { factor = 1.2 militancy = 8 }
 		modifier = { factor = 1.2 militancy = 9 }
-		modifier = { factor = 1.2 consciousness = 1 }
-		modifier = { factor = 1.2 consciousness = 2 }
-		modifier = { factor = 1.2 consciousness = 3 }
-		modifier = { factor = 1.2 consciousness = 4 }
-		modifier = { factor = 1.2 consciousness = 5 }
-		modifier = { factor = 1.2 consciousness = 6 }
-		modifier = { factor = 1.2 consciousness = 7 }
-		modifier = { factor = 1.2 consciousness = 8 }
-		modifier = { factor = 1.2 consciousness = 9 }
 	}
 	populist = { # pragmatic social reformist and revert reforms militancy
 		factor = 0.5 # 0.0-0.48
@@ -645,7 +632,7 @@ ideologies = {
 	liberal = { # political reformist
 		factor = 1
 		# type
-		modifier = { factor = 1.5 }
+		modifier = { factor = 0.5 NOT = { ruling_party_ideology = liberal } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = liberal } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = liberal } NOT = { everyday_needs = 0.5 } }
@@ -672,6 +659,7 @@ ideologies = {
 	socialist = { # pragmatic social reformist
 		factor = 1
 		# type
+		modifier = { factor = 0.5 NOT = { ruling_party_ideology = socialist } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = socialist } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = socialist } NOT = { everyday_needs = 0.5 } }
@@ -698,7 +686,7 @@ ideologies = {
 	communist = { # social reformist militancy
 		factor = 1
 		# type
-		modifier = { factor = 0.1 }
+		modifier = { factor = 0.5 NOT = { ruling_party_ideology = communist } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = communist } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = communist } NOT = { everyday_needs = 0.5 } }
@@ -721,6 +709,7 @@ ideologies = {
 	progressive = { # political reformist
 		factor = 1
 		# type
+		modifier = { factor = 0.5 NOT = { ruling_party_ideology = progressive } }
 		# government and ruling_party_ideology
 		modifier = { factor = 4 country = { ruling_party_ideology = progressive } everyday_needs = 0.5 }
 		modifier = { factor = 0.25 country = { ruling_party_ideology = progressive } NOT = { everyday_needs = 0.5 } }
@@ -965,34 +954,40 @@ issues = {
 		factor = 0.6
 		modifier = { factor = 0 country = { NOT = { comprehensive_school = 1 } } }
 		modifier = { factor = 0 OR = { is_next_reform = criminology_corporal NOT = { consciousness = 5 } } }
-		modifier = { factor = 1.25 literacy = 0.20 }
-		modifier = { factor = 1.25 literacy = 0.30 }
-		modifier = { factor = 1.25 literacy = 0.40 }
-		modifier = { factor = 1.25 literacy = 0.50 }
-		modifier = { factor = 1.25 literacy = 0.60 }
-		modifier = { factor = 1.25 literacy = 0.70 }
-		modifier = { factor = 1.25 literacy = 0.80 }
-		modifier = { factor = 1.25 literacy = 0.90 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.40 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.50 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.60 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.70 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.80 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.90 }
+		modifier = { factor = 1.25 consciousness = 5 }
 		modifier = { factor = 1.25 consciousness = 6 }
 		modifier = { factor = 1.25 consciousness = 7 }
 		modifier = { factor = 1.25 consciousness = 8 }
 		modifier = { factor = 1.25 consciousness = 9 }
+		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.80 } } }
+		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 1.0 } } }
 	}
 	criminology_capital = {
 		factor = 0.4
 		modifier = { factor = 0 country = { NOT = { comprehensive_school = 1 } } }
 		modifier = { factor = 0 OR = { is_next_reform = criminology_capital NOT = { consciousness = 6 } } }
-		modifier = { factor = 1.25 literacy = 0.20 }
-		modifier = { factor = 1.25 literacy = 0.30 }
-		modifier = { factor = 1.25 literacy = 0.40 }
-		modifier = { factor = 1.25 literacy = 0.50 }
-		modifier = { factor = 1.25 literacy = 0.60 }
-		modifier = { factor = 1.25 literacy = 0.70 }
-		modifier = { factor = 1.25 literacy = 0.80 }
-		modifier = { factor = 1.25 literacy = 0.90 }
-		modifier = { factor = 1.25 consciousness = 7 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.40 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.50 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.60 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.70 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.80 }
+		modifier = { factor = 1.25 agree_with_ruling_party = 0.90 }
 		modifier = { factor = 1.25 consciousness = 8 }
 		modifier = { factor = 1.25 consciousness = 9 }
+		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.80 } } }
+		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 1.0 } } }
 	}
 	criminology_social = {
 		factor = 0.2
@@ -1007,6 +1002,8 @@ issues = {
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.70 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.80 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.90 }
+		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.80 } } }
+		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 1.0 } } }
 	}
 
 # publishing_rights
@@ -1315,14 +1312,6 @@ issues = {
 	trinket_wage = {
 		factor = 1
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = trinket_wage } } }
-		modifier = { factor = 1.25 country = { has_unclaimed_cores = yes } } 
-		modifier = { factor = 1.25 country = { has_recently_lost_war = yes } } 
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.10 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.20 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.40 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.60 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.80 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 1.0 } } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }
@@ -1337,12 +1326,6 @@ issues = {
 		factor = 1
 		modifier = { factor = 0 country = { NOT = { war_on_terror = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = low_minimum_wage } } }
-		modifier = { factor = 1.25 country = { has_unclaimed_cores = yes } }
-		modifier = { factor = 1.25 country = { has_recently_lost_war = yes } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.40 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.60 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.80 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 1.0 } } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }
@@ -1357,10 +1340,6 @@ issues = {
 		factor = 1
 		modifier = { factor = 0 country = { NOT = { war_on_terror = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = acceptable_minimum_wage } } }
-		modifier = { factor = 1.25 country = { has_unclaimed_cores = yes } }
-		modifier = { factor = 1.25 country = { has_recently_lost_war = yes } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 0.80 } } }
-		modifier = { factor = 1.25 country = { NOT = { crime_fighting = 1.0 } } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }
@@ -1375,8 +1354,6 @@ issues = {
 		factor = 1
 		modifier = { factor = 0 country = { NOT = { political_polarization = 1 } } }
 		modifier = { factor = 0 OR = { vote_franschise = none_voting NOT = { is_next_reform = good_minimum_wage } } }
-		modifier = { factor = 1.25 country = { has_unclaimed_cores = yes } }
-		modifier = { factor = 1.25 country = { has_recently_lost_war = yes } }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.10 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.20 }
 		modifier = { factor = 1.25 agree_with_ruling_party = 0.30 }
@@ -1402,6 +1379,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	restrictive_regulations = { 
 		factor = 1
@@ -1414,6 +1393,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	strict_regulations = { 
 		factor = 1
@@ -1425,6 +1406,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	rigid_regulations  = { 
 		factor = 1
@@ -1435,6 +1418,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 
 # unemployment_subsidies
@@ -1451,6 +1436,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	ghent_system = { 
 		factor = 1
@@ -1463,6 +1450,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	generous_subsidies = { 
 		factor = 1
@@ -1474,6 +1463,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	citizen_salary  = { 
 		factor = 1
@@ -1484,6 +1475,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 
 # child_care
@@ -1500,6 +1493,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	supported_child_care = { 
 		factor = 1
@@ -1512,6 +1507,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	parental_leave_child_care = { 
 		factor = 1
@@ -1523,6 +1520,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	state_provided_child_care  = { 
 		factor = 1
@@ -1533,6 +1532,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	
 # pensions
@@ -1548,6 +1549,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	low_pensions = { 
 		factor = 1
@@ -1560,6 +1563,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	acceptable_pensions = { 
 		factor = 1
@@ -1571,6 +1576,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	good_pensions  = { 
 		factor = 1
@@ -1581,6 +1588,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 
 # health_care
@@ -1596,6 +1605,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	low_health_care = { 
 		factor = 1
@@ -1608,6 +1619,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	acceptable_health_care = { 
 		factor = 1
@@ -1619,6 +1632,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	good_health_care  = { 
 		factor = 1
@@ -1629,6 +1644,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 
 # pollution
@@ -1645,6 +1662,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	low_envir = { 
 		factor = 1
@@ -1657,6 +1676,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	acceptable_envir = { 
 		factor = 1
@@ -1668,6 +1689,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	good_envir  = { 
 		factor = 1
@@ -1678,6 +1701,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 
 # education
@@ -1695,6 +1720,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	subsidised_higher_education = { 
 		factor = 1
@@ -1707,6 +1734,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	public_higher_education = { 
 		factor = 1
@@ -1718,6 +1747,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }	
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 	unlimited_education  = { 
 		factor = 1
@@ -1728,8 +1759,8 @@ issues = {
 		modifier = { factor = 1.25 everyday_needs = 0.5 }	
 		modifier = { factor = 1.25 everyday_needs = 0.75 }	
 		modifier = { factor = 1.25 everyday_needs = 1.0 }
+		modifier = { factor = 1.25 country = { money = 20000 } }
+		modifier = { factor = 1.25 country = { money = 40000 } }
 	}
 
 }
-
-
