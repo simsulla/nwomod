@@ -73,19 +73,19 @@ country_event = { # Country is sphered change government
 
 	trigger = {
 		part_of_sphere = yes
-		is_vassal = no
+		is_vassal = yes
 		NOT = { has_country_flag = accept_differances_in_gov_by_democracy }
-		sphere_owner = { OR = { government = democracy government = hms_government } } 
+		overlord = { is_sphere_leader_of = THIS OR = { government = democracy government = hms_government } } 
 		NOT = { OR = { government = democracy government = hms_government government = presidential_dictatorship } }
 	}
 
 	mean_time_to_happen = {
-		months = 48
+		months = 12
 	}
 	
 	option = {
 		name = EVT_19001_A
-		sphere_owner = { country_event = 19004 }
+		overlord = { country_event = 19004 }
 		ai_chance = { factor = 1 }
 	}
 
@@ -98,19 +98,19 @@ country_event = {
 
 	trigger = {
 		part_of_sphere = yes
-		is_vassal = no
+		is_vassal = yes
 		NOT = { has_country_flag = accept_differances_in_gov_by_communist }
-		sphere_owner = { government = proletarian_dictatorship } 
+		overlord = { is_sphere_leader_of = THIS government = proletarian_dictatorship } 
 		NOT = { government = proletarian_dictatorship }
 	}
 
 	mean_time_to_happen = {
-		months = 48
+		months = 12
 	}
 
 	option = {
 		name = EVT_19002_A
-		sphere_owner = { country_event = 19003 }
+		overlord = { country_event = 19003 }
 		ai_chance = { factor = 100 }
 	}
 
@@ -124,9 +124,9 @@ country_event = {
 
 	trigger = {
 		part_of_sphere = yes
-		is_vassal = no
+		is_vassal = yes
 		NOT = { has_country_flag = accept_differances_in_gov_by_authoritarian_regime }
-		sphere_owner = { government = presidential_dictatorship } 
+		overlord = { is_sphere_leader_of = THIS government = presidential_dictatorship } 
 		OR = { government = democracy government = hms_government }
 	}
 
@@ -146,7 +146,7 @@ country_event = { # Demand install communist in-power
 	title = EVT_19003_NAME
 	desc = EVT_19003_DESC
 	picture = "remain_independent_from_communist"
-	is_triggered_only = yes # sphere_leader
+	is_triggered_only = yes # vassal leader
 
 	option = {
 		name = EVT_19003_A
@@ -166,7 +166,7 @@ country_event = { # Demand adopt presidential dictatorship
 	title = EVT_19003_NAME
 	desc = EVT_19003_DESC
 	picture = "remain_independent_from_authoritarian"
-	is_triggered_only = yes # sphere_leader
+	is_triggered_only = yes # vassal leader
 
 	option = {
 		name = EVT_19003_A
@@ -186,7 +186,7 @@ country_event = { # Demand install democracy
 	title = EVT_19004_NAME
 	desc = EVT_19004_DESC
 	picture = "remain_independent_from_democracy"
-	is_triggered_only = yes # sphere_leader
+	is_triggered_only = yes # vassal leader
 
 	option = {
 		name = EVT_19004_A

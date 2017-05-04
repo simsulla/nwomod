@@ -108,20 +108,23 @@ country_event = {
   trigger = {
     tag = POL
 	year = 1946 NOT = { year = 1950 }
-    
-	government = proletarian_dictatorship
+	government = democracy
   }
 
   mean_time_to_happen = { months = 1  }
+  
+  immediate = { random_country = { limit = { tag = SUN government = proletarian_dictatorship ai = yes } relation = { who = SUN value = 100 } } }
 
   option = {
     name = EVT_8023227_A
+	relation = { who = SUN value = 80 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8023227_B
 	any_pop = { militancy = 0.5 consciousness = 1 }
+	relation = { who = SUN value = -20 }
 	ai_chance = { factor = 0 }
   }
 }

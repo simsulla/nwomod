@@ -214,4 +214,24 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	satellite_state = {
+		picture = "satellite_state"
+		potential = {
+			is_greater_power = yes
+			government = proletarian_dictatorship
+			tag = SUN
+		}
+		allow = {
+			any_neighbor_country = { government = proletarian_dictatorship is_vassal = no in_sphere = THIS relation = { who = SUN value = 180 } }
+		}
+		effect = {
+			any_neighbor_country = { 
+				limit = { government = proletarian_dictatorship is_vassal = no in_sphere = THIS relation = { who = SUN value = 180 } }
+				relation = { who = SUN value = -100 }
+				country_event = 32512
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 }

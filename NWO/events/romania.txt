@@ -249,3 +249,39 @@ country_event = { # Transnistria War
   }
 }
 
+country_event = { 
+  id = 8023021
+  title = EVT_8023021_NAME
+  desc = EVT_8023021_DESC 
+  picture = "romania_1946_elections"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ROM
+	government = hms_government
+	NOT = { year = 1990 } 
+  }
+
+  mean_time_to_happen = { months = 9 }
+  
+  immediate = { 
+	election = yes
+	random_country = { limit = { tag = SUN government = proletarian_dictatorship ai = yes } relation = { who = SUN value = 100 } }
+  }
+
+  option = {
+    name = EVT_8023021_A
+	any_pop = { ideology = { value = communist factor = 0.5 } }
+	relation = { who = SUN value = 50 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8023021_B
+	any_pop = { ideology = { value = communist factor = 0.35 } militancy = 2 } 
+	relation = { who = SUN value = -10 }
+	ai_chance = { factor = 0 }
+  }
+}
+
+

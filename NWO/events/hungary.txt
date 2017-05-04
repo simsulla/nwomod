@@ -8,16 +8,27 @@ country_event = {
   trigger = {
     tag = HUN
     year = 1948 NOT = { year = 1950 }
-    
   }
 
   mean_time_to_happen = { months = 2 }
+  
+  immediate = { 
+	random_country = { limit = { tag = SUN government = proletarian_dictatorship ai = yes } relation = { who = SUN value = 100 } }
+  }
 
   option = {
     name = EVT_8021317_A
-	relation = { who = SUN value = 50 }
+	relation = { who = SUN value = 80 }
+	ai_chance = { factor = 1 }
+  }
+  
+  option = {
+    name = EVT_8021317_B
+	relation = { who = SUN value = -20 }
+	ai_chance = { factor = 0 }
   }
 }
+
 country_event = {
   id = 8021318
   title = EVT_8021318_NAME

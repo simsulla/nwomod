@@ -141,6 +141,37 @@ country_event = {
 	ai_chance = { factor = 100 }
   }
 }
+
+country_event = { # 1948 Czechoslovak coup d'état
+  id = 8023115
+  title = EVT_8023115_NAME
+  desc = EVT_8023115_DESC
+  picture = "czechoslovak_coup_1948"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CZH
+    year = 1948 NOT = { year = 1952 }
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  immediate = { random_country = { limit = { tag = SUN government = proletarian_dictatorship ai = yes } relation = { who = SUN value = 100 } } }
+
+  option = {
+    name = EVT_8023115_A
+	relation = { who = SUN value = 80 } 
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+    name = EVT_8023115_B
+	relation = { who = SUN value = -20 } 
+	any_pop = {consciousness = 1 }
+	ai_chance = { factor = 0 }
+  }
+}
+
 country_event = {
   id = 8023120
   title = EVT_8023120_NAME

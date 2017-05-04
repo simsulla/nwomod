@@ -1855,3 +1855,24 @@ country_event = { # Request to join the USSR
 	}
 }
 
+country_event = {
+	id = 32512
+	title = EVT_32512_NAME
+	desc = EVT_32512_DESC
+	picture = "satellite_state"
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_32512_A
+		FROM = { create_vassal = THIS }
+		upper_house = { ideology = communist value = 0.3 } 
+		prestige = -50
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = EVT_32512_B
+		FROM = { create_vassal = THIS }
+		war = { target = FROM attacker_goal = { casus_belli = become_independent } defender_goal = { casus_belli = status_quo } }
+		ai_chance = { factor = 0 }
+	}
+}
