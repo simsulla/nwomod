@@ -4,8 +4,6 @@ country_event = {
   desc = EVT_8008101_DESC
   picture = "tulip_revolution"
   fire_only_once = yes
-
-  mean_time_to_happen = { months = 3  }
   
   trigger = {
     tag = KYR
@@ -13,6 +11,8 @@ country_event = {
 	government = presidential_dictatorship
 	year = 2005
   }
+
+  mean_time_to_happen = { months = 3 }
 
   option = {
     name = EVT_8008101_A
@@ -36,8 +36,6 @@ country_event = {
   picture = "2010_kyrgyz_revolution"
   fire_only_once = yes
 
-  mean_time_to_happen = { months = 3  }
-  
   trigger = {
     tag = KYR
 	has_country_flag = tulip_revolution_aftermath
@@ -46,11 +44,12 @@ country_event = {
 	year = 2010
   }
 
+  mean_time_to_happen = { months = 3 }
+
   option = {
     name = EVT_8008102_A
 	any_pop = { militancy = -3 consciousness = -2 }
 	clr_country_flag = tulip_revolution_aftermath
-	country_event = 8008103
 	ai_chance = { factor = 100 }
   }
   
@@ -69,11 +68,14 @@ country_event = {
   picture = "2010_kyrgyz_uzbek_ethnic_clashes"
   fire_only_once = yes
 
+  is_triggered_only = yes
+
   option = {
     name = EVT_8008103_A
 	any_pop = { limit = { culture = kirgiz } militancy = -1.5  consciousness = 0.5 }
 	any_pop = { limit = { culture = uzbek } militancy = 3  consciousness = 2 }
 	1203 = { add_province_modifier = { name = ethnic_cleansing duration = 6 } }
+	clr_country_flag = second_kyrgz_revolution
 	UZB = { country_event = 8008104 }
 	ai_chance = { factor = 95 }
   }
@@ -93,6 +95,8 @@ country_event = {
   desc = EVT_8008104_DESC
   picture = "2010_kyrgyz_uzbek_ethnic_clashes"
   fire_only_once = yes
+
+  is_triggered_only = yes
 
   option = {
     name = EVT_8008104_A
