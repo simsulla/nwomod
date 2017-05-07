@@ -136,7 +136,34 @@ country_event = {
 	any_pop = { limit = { NOT = { culture = afrikaaner culture = british culture = coloured culture = indian } } militancy = 2 }
   }
 }
+country_event = {
+  id = 8012615
+  title = EVT_8012615_NAME # Integrate South West Africa
+  desc = EVT_8012615_DESC
+  picture = "south_west_africa"
+  fire_only_once = yes
 
+  trigger = {
+    tag = SAF
+    NOT = { year = 1990 }
+	is_our_vassal = NAM
+	NAM = { ai = yes }
+  }
+
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = EVT_8012615_A
+	any_pop = { limit = { culture = afrikaaner } ideology = { value = nationalist factor = 0.1 } }
+	inherit = NAM
+	badboy = 1
+	prestige = -2
+  }
+  option = {
+    name = EVT_8012615_B
+	prestige = 4
+  }
+}
 country_event = {
   id = 8012621
   title = EVT_8012621_NAME

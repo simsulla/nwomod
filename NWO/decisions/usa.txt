@@ -5,7 +5,7 @@ political_decisions = {
 		potential = {
 			tag = USA
 			rank = 1
-			ISR = { exists = no }
+			ISR = { OR = { exists = no government = provisional_government } }
 			919 = { owned_by = GBR } 
 			NOT = { has_country_modifier = support_zionism }
 		}

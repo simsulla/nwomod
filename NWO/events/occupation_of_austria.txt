@@ -6,24 +6,22 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
+	is_our_vassal = BAV # USA
     year = 1944 NOT = { year = 1963 }
-	AUS = { exists = no }
-	NOT = { government = proletarian_dictatorship }
-	owns = 619 # Wien
+	AUS = { owns = 619 	government = provisional_government } # Wien
   }
 
   mean_time_to_happen = { months = 3  }
 
   option = {
     name = "EVT_8203000_A"
-	country_event = 8203002
-	any_pop = { consciousness = 2  }
+	BAV = { any_pop = {  limit = { culture = german } consciousness = 1 } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = "EVT_8203000_B"
-	any_pop = { limit = { culture = german } militancy = 5  }
+	BAV = { any_pop = { limit = { culture = german } militancy = 8  } }
 	badboy = 15 
 	ai_chance = { factor = 0 }
   }
@@ -39,7 +37,8 @@ country_event = {
     tag = SUN
 	year = 1944 
 	government = proletarian_dictatorship
-	owns = 619 # Wien
+	is_our_vassal = AUS
+	AUS = { owns = 619 	government = provisional_government } # Wien
   }
 
   mean_time_to_happen = { months = 1  }
@@ -52,7 +51,7 @@ country_event = {
 
   option = {
     name = "EVT_8203001_B"
-	any_pop = { limit = { culture = german } militancy = 4 consciousness = 2 }
+	AUS = { any_pop = { limit = { culture = german } militancy = 8 consciousness = 2 } }
 	badboy = 15 
 	ai_chance = { factor = 0 }
   }
@@ -69,8 +68,9 @@ country_event = {
   option = {
     name = "EVT_8203002_A"
 	release = AUS
+	AUS = { country_event = 8202999 }
 	diplomatic_influence = { who = AUS value = 100 }
-	any_country = { limit = { any_owned_province = { is_core = AUS } NOT = { tag = THIS } } country_event = { id = 8203003 days = 90 } } 
+	any_country = { limit = { any_owned_province = { is_core = AUS } NOT = { tag = THIS } } country_event = { id = 8202998 days = 90 } } 
 	ai_chance = { factor = 100 }
   }
 
@@ -78,6 +78,46 @@ country_event = {
     name = "EVT_8203002_B"
 	release_vassal = AUS
 	AUS = { country_event = { id = 8203004 days = 180 } } 
+	prestige = -10
+	badboy = 5 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8202999
+  title = "EVT_8203002_NAME" # Renner's cabinet
+  desc = "EVT_8203002_DESC"
+  picture = "nwo2_karl_renner"
+  is_triggered_only = yes 
+  
+  mean_time_to_happen = { months = 3  }
+
+  option = {
+    name = "EVT_8203002_A"
+	primary_culture = german
+	government = democracy country_event = 800054
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = {
+  id = 8202998
+  title = "EVT_8203003_NAME"
+  desc = "EVT_8203003_DESC"
+  picture = "nwo2_karl_renner"
+  is_triggered_only = yes
+
+  option = {
+    name = "EVT_8203003_A"
+	any_country = { limit = { tag = THIS is_vassal = yes } overlord = { country_event = 8203003 } }
+	any_country = { limit = { tag = THIS is_vassal = no } release = AUS }
+	diplomatic_influence = { who = AUS value = 100 }
+	AUS = { country_event = 8203010 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "EVT_8203003_B"
+	AUS = { country_event = 8203004 } 
 	prestige = -10
 	badboy = 5 
 	ai_chance = { factor = 0 }
@@ -115,6 +155,7 @@ country_event = {
 
   option = {
     name = "EVT_8203004_A"
+	primary_culture = german
 	government = proletarian_dictatorship country_event = 800054
 	AUS = { all_core = { add_core = GER } }
   }

@@ -1,4 +1,83 @@
 # Papua New Guinea
+country_event = { # Papua New Guinea Trust
+  id = 8001101
+  title = EVT_8001101_NAME
+  desc = EVT_8001101_DESC
+  picture = "papua_new_guinea_independence"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AST
+    year = 1948 NOT = { year = 1990 }
+	owns = 2528 # Port Moresby
+	is_our_vassal = BOU
+	war = no
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8001101_A
+	any_owned = { limit = { is_core = PPN } secede_province = BOU }
+	prestige = 10
+	ai_chance = { factor = 100 }
+  }
+  option = {
+    name = EVT_8001101_B
+	badboy = 10
+	prestige = -10
+	any_pop = { limit = { location = { is_core = PPN } }  militancy = 5 consciousness = 5  }
+	ai_chance = { factor = 0 }
+  }
+}
+# Papua New Guinea
+country_event = { # Papua New Guinea Self-government
+  id = 8001102
+  title = EVT_8001102_NAME
+  desc = EVT_8001102_DESC
+  picture = "papua_new_guinea_independence"
+  fire_only_once = yes
+
+  trigger = {
+    tag = AST
+    year = 1972 NOT = { year = 1990 }
+	is_our_vassal = BOU
+	war = no
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8001102_A
+	prestige = 10
+	BOU = { country_event = 8001103 }
+	ai_chance = { factor = 100 }
+  }
+}
+country_event = { # Papua New Guinea Self-government
+  id = 8001103
+  title = EVT_8001102_NAME
+  desc = EVT_8001102_DESC
+  picture = "papua_new_guinea_independence"
+
+  fire_only_once = yes # or triggered
+
+  trigger = {
+    tag = BOU
+    year = 1972 NOT = { year = 1990 }
+	is_vassal = no
+	owns = 2528
+	war = no
+  }
+  option = {
+    name = EVT_8001102_A
+	change_tag = PPN
+	capital = 2528
+	primary_culture = papua
+	government = hms_government country_event = 800054
+	ai_chance = { factor = 100 }
+  }
+}
 country_event = { # Papua New Guinea Independence
   id = 8001100
   title = EVT_8001100_NAME
@@ -9,14 +88,14 @@ country_event = { # Papua New Guinea Independence
   trigger = {
     tag = AST
     year = 1977 NOT = { year = 1990 }
-	owns = 2528 # Port Moresby
+	is_our_vassal = PPN
 	war = no
   }
 
   mean_time_to_happen = { months = 2 }
 
   option = {
-    name = EVT_8014150_A
+    name = EVT_8001100_A
 	release = PPN
 	relation = { who = PPN value = 100 }
 	create_alliance = PPN
@@ -24,7 +103,7 @@ country_event = { # Papua New Guinea Independence
 	ai_chance = { factor = 100 }
   }
   option = {
-    name = EVT_8014150_B
+    name = EVT_8001100_B
 	badboy = 10
 	prestige = -10
 	any_pop = { limit = { location = { is_core = PPN } }  militancy = 5 consciousness = 5  }

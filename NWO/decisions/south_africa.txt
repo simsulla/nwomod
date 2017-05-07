@@ -57,8 +57,13 @@ political_decisions = {
 		picture = "apartheid_free_namibia"
 		potential = {
 			tag = SAF
-			NOT = { exists = NAM }
-			owns = 2078
+			OR = { 
+				AND = { 
+					owns = 2078
+					NOT = { exists = NAM }
+				}
+				is_our_vassal = NAM
+			}
 			war = no
 		}
 

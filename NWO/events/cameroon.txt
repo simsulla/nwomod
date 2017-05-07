@@ -9,7 +9,11 @@ country_event = { # Southern Cameroons Plebiscite
 	tag = GBR
 	owns = 1957 # Buea
 	exists = CMR
-	NOT = { exists = ABZ }
+	exists = NGE
+	OR = {
+		NOT = { exists = ABZ }
+		is_our_vassal = ABZ
+	}
 	war = no
   }
 
@@ -17,7 +21,8 @@ country_event = { # Southern Cameroons Plebiscite
 
   option = {
     name = "EVT_8002500_A"
-	any_owned = { limit = { is_core = CMR } secede_province = CMR } 
+	release = ABZ
+	CMR = { inherit = ABZ }
 	prestige = 5
 	ai_chance = { factor = 100 }
   }
@@ -25,7 +30,8 @@ country_event = { # Southern Cameroons Plebiscite
     name = "EVT_8002500_B"
 	badboy = 1
 	prestige = -10
-	any_owned = { limit = { is_core = CMR } secede_province = NGE } 
+	release = ABZ
+	NGE = { inherit = ABZ }
 	ai_chance = { factor = 0 }
   }
   option = {
@@ -33,6 +39,7 @@ country_event = { # Southern Cameroons Plebiscite
 	badboy = 1
 	prestige = -10
 	release = ABZ
+	ABZ = { primary_culture = anglo_african government = democracy country_event = 800054 }
 	diplomatic_influence = { who = GBR value = 200 }
 	ai_chance = { factor = 0 }
   }  

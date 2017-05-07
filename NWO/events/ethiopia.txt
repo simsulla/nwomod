@@ -7,7 +7,10 @@ country_event = {
 
 	trigger = {
 		tag = GBR
-		NOT = { exists = ERI }
+		OR = {
+			NOT = { exists = ERI }
+			is_our_vassal = ERI
+		}
 		exists = ETH
 		war = no
 		1848 = { controlled_by = GBR } # Assmara
@@ -30,6 +33,7 @@ country_event = {
 		}
 		release = ERI
 		ERI = { government = absolute_monarchy country_event = 800050  }
+		primary_culture = tigre
 		ETH = { create_vassal = ERI }
 	}
 	

@@ -10,14 +10,15 @@ country_event = {
     NOT = { year = 1990 }
     NOT = { YUG = { war_with = ITA } }
     war = no
-	owns = 736 # USA
+	TRE = { owns = 736 }
+	is_our_vassal = TRE # USA
   }
 
   mean_time_to_happen = { months = 2  }
 
   option = {
     name = EVT_8020300_A
-	release_vassal = TRE 
+	TRE = { country_event = 8020299 }
 	badboy = -5 
 	relation = { who = YUG value = 100 } 
 	relation = { who = SUN value = 25 } 
@@ -33,6 +34,20 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
+country_event = {
+  id = 8020299
+  title = EVT_8020300_NAME
+  desc = EVT_8020300_DESC
+  picture = "nwo2_free_city_of_trieste"
+  is_triggered_only = yes 
+  
+  option = { 
+		name = EVT_8020300_A
+		government = democracy
+		primary_culture = italian
+  }
+}
+
 country_event = {
   id = 8020301
   title = EVT_8020301_NAME

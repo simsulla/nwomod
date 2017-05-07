@@ -42,7 +42,10 @@ country_event = {
 
 	trigger = { 
 		NOT = { exists = SUD }
-		owns = 1827 # Khartorum
+		OR = {
+			is_our_vassal = SUD
+			owns = 1827 # Khartorum
+		}
 		exists = EGY
 		year = 1958
 	}
@@ -50,6 +53,7 @@ country_event = {
 	option = {
 		name = EVT_1004903_A 
 		release = SUD
+		SUD = { primary_culture = sunni_arab government = democracy country_event = 800054 }
 		prestige = 5
 		random_country = { limit = { has_country_flag = claim_the_sudan } country_event = 1004904 }
 		diplomatic_influence = { who = SUD value = 200 }

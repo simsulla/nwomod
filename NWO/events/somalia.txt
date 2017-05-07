@@ -7,7 +7,12 @@ country_event = { # Trust Territory of Somaliland
 
   trigger = {
     tag = GBR
-	owns = 1869
+	OR = {
+		owns = 1869
+		is_our_vassal = SOM
+	}
+	exists = ITA
+	ITA = { NOT = { government = presidential_dictatorship } }
 	year = 1949 NOT = { year = 1990 }
   }
 
@@ -15,7 +20,8 @@ country_event = { # Trust Territory of Somaliland
 
   option = {
     name = EVT_8014100_A
-	any_owned = { limit = { is_core = SOM NOT = { is_core = SML } } secede_province = ITA }
+	release = SOM
+	ITA = { country_event = 8014101 }
   }
 }
 country_event = {
@@ -23,22 +29,12 @@ country_event = {
   title = EVT_8014100_NAME
   desc = EVT_8014100_DESC
   picture = "somalia_trust_territory"
-  fire_only_once = yes
-
-  trigger = {
-    tag = ITA
-	owns = 1869
-	year = 1949 NOT = { year = 1990 }
-	NOT = { exists = SOM }
-  }
-
-  mean_time_to_happen = { months = 1 }
+  is_triggered_only = yes
 
   option = {
     name = EVT_8014101_A
-	release_vassal = SOM
-	create_vassal = SOM # some strange bug makes SOM UK vassal!!
-	SOM = { government = hms_government } # country_event = 800054 }
+	create_vassal = SOM 
+	SOM = { primary_culture = somali government = hms_government } # country_event = 800054 }
   }
 }
 country_event = { # Somalia Independence
