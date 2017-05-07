@@ -76,7 +76,7 @@ country_event = { # Country is sphered change government
 		is_vassal = yes
 		NOT = { has_country_flag = accept_differances_in_gov_by_democracy }
 		overlord = { is_sphere_leader_of = THIS OR = { government = democracy government = hms_government } } 
-		NOT = { OR = { government = democracy government = hms_government government = presidential_dictatorship } }
+		NOT = { OR = { government = democracy government = hms_government government = presidential_dictatorship government = provisional_government } }
 	}
 
 	mean_time_to_happen = {
@@ -101,7 +101,7 @@ country_event = {
 		is_vassal = yes
 		NOT = { has_country_flag = accept_differances_in_gov_by_communist }
 		overlord = { is_sphere_leader_of = THIS government = proletarian_dictatorship } 
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = provisional_government government = proletarian_dictatorship } }
 	}
 
 	mean_time_to_happen = {
