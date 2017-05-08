@@ -1228,6 +1228,31 @@ country_event = {
   }
 }
 country_event = {
+  id = 8007701
+  title = EVT_8007701_NAME # Judaization of Jerusalem
+  desc = EVT_8007701_DESC
+  picture = "judaization_of_jerusalem"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    war = no
+	owns = 917 # Jerusalem
+  }
+
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = EVT_8007701_A
+	917 = { add_core = ISR }
+	badboy = 3
+	capital = 917 
+  }
+  option = {
+    name = EVT_8007701_B
+  }
+}
+country_event = {
   id = 8007721
   title = EVT_8007721_NAME
   desc = EVT_8007721_DESC
@@ -1238,4 +1263,5 @@ country_event = {
 	money = 300000
   }
 }
+
 
