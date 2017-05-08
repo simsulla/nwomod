@@ -1503,24 +1503,7 @@ country_event = {
 	title = "EVTNAME19380"
 	desc = "EVTDESC19380"
 	picture = "nuclear_peace"
-
-	trigger = { 
-		national_provinces_occupied = 0.08
-		OR = { 
-			#has_country_modifier = has_the_atomic_bomb
-			has_country_modifier = nuclear_weapon_power
-			AND = { has_country_modifier = alliance_nato USA = { has_country_modifier = nuclear_weapon_power } }
-			AND = { has_country_modifier = rio_pact USA = { has_country_modifier = nuclear_weapon_power } }
-			AND = { has_country_modifier = warsaw_pact SUN = { has_country_modifier = nuclear_weapon_power } }
-			AND = { has_country_modifier = csto_alliance RUS = { has_country_modifier = nuclear_weapon_power } }
-			AND = { has_country_modifier = anzus_alliance USA = { has_country_modifier = nuclear_weapon_power } }
-			AND = { has_country_modifier = sco_pact CHI = { has_country_modifier = nuclear_weapon_power } }
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "EVTOPTA19380"
@@ -1621,6 +1604,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA19384"
+		end_war = FROM
 	}
 	
 }
