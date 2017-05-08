@@ -91,7 +91,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 1
+		months = 12
 	}
 
 	option = {
@@ -124,8 +124,6 @@ country_event = { # haredim_jewish
 	title = EVT_22612_NAME 
 	desc = EVT_22612_DESC
 	picture = "haredim_jewish"
-	is_triggered_only = yes # on_actions
-	allow_multiple_instances = yes
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_haredim_jewish }
@@ -167,8 +165,6 @@ country_event = { # mennonites
 	title = EVT_22613_NAME 
 	desc = EVT_22613_DESC
 	picture = "family_values"
-	is_triggered_only = yes # on_actions
-	allow_multiple_instances = yes
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_mennonites }
@@ -212,8 +208,6 @@ country_event = { # romani
 	title = EVT_22614_NAME 
 	desc = EVT_22614_DESC
 	picture = "romani"
-	is_triggered_only = yes # on_actions
-	allow_multiple_instances = yes
 	
 	trigger = {
 		NOT = { has_country_modifier = demographic_romani }
