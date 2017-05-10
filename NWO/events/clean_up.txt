@@ -132,14 +132,7 @@ country_event = {
 	picture = "Unite"
 	
 	trigger = {
-		OR = {
-			government = proletarian_dictatorship
-			government = presidential_dictatorship
-			government = populist_dictatorship
-			government = provisional_government
-			government = absolute_monarchy
-			government = theocracy
-		}
+		government = proletarian_dictatorship
 		civilized = yes
 		NOT = {
 			political_parties = parties_not_allowed
@@ -154,10 +147,6 @@ country_event = {
 	option = {
 		name = "EVTOPTA60050"
 		government = democracy
-	}
-	option = {
-		name = "EVTOPTB60050"
-		government = hms_government
 	}
 }
 

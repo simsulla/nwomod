@@ -276,7 +276,7 @@ country_event = { # Maintaining security in Europe
     
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8215011_A
@@ -300,19 +300,18 @@ country_event = {
   picture = "nwo2_western_allies"
 
   trigger = {
-	OR = { 
+	OR = {
 		capital_scope = { continent = europe  }
 		tag = CAN
 	}
 	NOT = { government = proletarian_dictatorship }
+	is_vassal = no
     year = 1946 NOT = { year = 1949 }
-    has_global_flag = ww3
-    war_with = SUN
 	NOT = { has_country_flag = western_allies_in_war }
 	war = no
   }
 
-  mean_time_to_happen = { months = 1  }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8215012_A

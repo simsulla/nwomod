@@ -62,7 +62,10 @@ political_decisions = {
 					owns = 2078
 					NOT = { exists = NAM }
 				}
-				is_our_vassal = NAM
+				AND = {
+					NAM = { NOT = { government = provisional_government } }
+					is_our_vassal = NAM
+				}
 			}
 			war = no
 		}
