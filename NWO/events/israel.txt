@@ -1089,12 +1089,12 @@ country_event = {
   id = 8007697
   title = EVT_8007697_NAME
   desc = EVT_8007697_DESC
-  picture = "nwo2_camp_david_accords"
+  picture = "first_intifada"
   fire_only_once = yes
 
   trigger = {
     tag = ISR
-    year = 1978 NOT = { year = 1990 }
+    year = 1987 NOT = { year = 1991 }
     NOT = { exists = PAL }
 	owns = 918
     war = no
@@ -1102,14 +1102,15 @@ country_event = {
   
   immediate = { 918 = { add_core = ISR } }
 
-  mean_time_to_happen = { months = 8 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8007697_A
 	any_pop = { militancy = 2.0 }
 	any_owned = { limit = { OR = { province_id = 920 province_id = 918 } } secede_province = PAL }
-	casus_belli = { target = PAL type = acquire_core_state months = 12 }
-	war = { target = PAL attacker_goal = { casus_belli = acquire_core_state state_province_id = 918 } defender_goal = { casus_belli = status_quo }}
+	any_owned = { limit = { OR = { province_id = 920 } } add_core = ISR  }
+	casus_belli = { target = PAL type = annex_core_country months = 12 }
+	war = { target = PAL attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo }}
 	ai_chance = { factor = 100 }
   }
 
@@ -1123,7 +1124,7 @@ country_event = {
 country_event = {
   id = 8007698
   title = EVT_8007698_NAME
-  # EVT_8007698_NAME;The Intifada
+  # EVT_8007698_NAME;The Second Intifada
   desc = EVT_8007698_DESC
   # EVT_8007698_DESC;Palestinian uprising against Israel – was a Palestinian uprising against the Israeli occupation of the West Bank and Gaza. How shall the Jewish state handle the Palestinians? Shall we follow the Oslo Accords, Israel committed to the phased withdrawal of its forces from parts of the Gaza Strip and West Bank, and affirmed the Palestinian right to self-government within those areas through the creation of a Palestinian Authority. For their part, the Palestine Liberation Organization formally recognized Israel and committed to adopting responsibility for internal security in population centers in the areas evacuated. Or shall we pursue a policy of continued occupation and settlement of the West Bank?
   picture = "intifada"
@@ -1151,7 +1152,7 @@ country_event = {
 	any_owned = { limit = { province_id = 918 } secede_province = PAL }
 	# infamy unsanctioned
 	war = { target = PAL attacker_goal = { casus_belli = acquire_core_state state_province_id = 918 } defender_goal = { casus_belli = status_quo }}
-	war = { target = GAZ attacker_goal = { casus_belli = make_puppet } defender_goal = { casus_belli = status_quo }}
+	war = { target = GAZ attacker_goal = { casus_belli = acquire_core_state state_province_id = 920 } defender_goal = { casus_belli = status_quo }}
 	ai_chance = { factor = 100 }
   }
 
@@ -1161,7 +1162,7 @@ country_event = {
 	any_pop = { limit = { location = { province_id = 917 } NOT = { strata = poor } } move_pop = 918 } # Settlements on the West Bank
 	any_owned = { limit = { OR = { province_id = 918 province_id = 920 } } secede_province = PAL }
 	# infamy unsanctioned
-	war = { target = PAL attacker_goal = { casus_belli = acquire_core_state state_province_id = 918 } defender_goal = { casus_belli = status_quo }}
+	war = { target = PAL attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo }}
 	badboy = 10
 	ai_chance = { factor = 0 }
   }
@@ -1264,5 +1265,192 @@ country_event = {
 	money = 300000
   }
 }
+
+country_event = {
+  id = 8007722
+  title = EVT_8007722_NAME
+  desc = EVT_8007722_DESC
+  picture = "oslo_accords"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 1993 NOT = { year = 1996 }
+    NOT = { exists = PAL }
+	owns = 918
+    war = no
+  }
+  
+  option = {
+    name = EVT_8007722_A
+	any_pop = { militancy = -3.0   consciousness = -5 }
+	any_owned = { limit = { OR = { province_id = 916  province_id = 919 province_id = 921 } } remove_core = PAL }
+	badboy = -5
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007722_B
+	any_pop = { limit = { culture = sunni_arab } militancy = 5 consciousness = 7 }
+	badboy = 10
+	ai_chance = { factor = 0 }
+  }
+
+  option = {
+    name = EVT_8007722_C
+	any_pop = { limit = { culture = jewish } militancy = 1 consciousness = 3 }
+	any_owned = { limit = { OR = { province_id = 916  province_id = 919 province_id = 921 } } remove_core = PAL }
+	release = PAL
+	badboy = -10
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 8007723
+  title = EVT_8007723_NAME
+  # EVT_8007723_NAME;Israeli withdrawal from Gaza
+  desc = EVT_8007723_DESC
+  picture = "israeli_withdrawal_from_gaza"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 2005
+    NOT = { exists = PAL }
+    NOT = { exists = GAZ }
+	owns = 920
+    war = no
+  }
+  
+  mean_time_to_happen = { months = 8 }
+  
+  option = {
+    name = EVT_8007723_A
+	# EVT_8007723_A;Withdraw from Gaza, dismantle the Jewish settlements there
+	any_owned = { limit = { OR = { province_id = 920 } } remove_core = ISR }
+	any_pop = { limit = { location = { province_id = 920 } culture = haredim_jewish } move_pop = 919 } # Gaza -> Tel Aviv
+	any_pop = { limit = { location = { province_id = 920 } culture = jewish } move_pop = 919 } # Gaza -> Tel Aviv
+	any_pop = { limit = { culture = jewish } militancy = 0.2 consciousness = 0.3 }
+	any_owned = { limit = { province_id = 920 } secede_province = GAZ }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007723_B
+	# EVT_8007723_B;Don't withdraw from Gaza, continue the  Jewish settlements there
+	any_pop = { limit = { culture = sunni_arab } militancy = 3 consciousness = 5 }
+	badboy = 5
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 8007724
+  title = EVT_8007724_NAME
+  desc = EVT_8007724_DESC
+  picture = "gaza_war_2008_2009"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 2008 NOT = { year = 2010 }
+    exists = GAZ
+    war = no
+  }
+  
+  mean_time_to_happen = { months = 12 }
+  
+  option = {
+    name = EVT_8007724_A
+	prestige = 10
+	war = { target = GAZ attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = humiliate }}
+	badboy = 5
+	any_pop = { limit = { culture = jewish } militancy = -1 consciousness = -3 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 4 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007724_B
+	prestige = -10
+	any_pop = { limit = { culture = jewish } militancy = -1 consciousness = -3 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 4 }
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 8007725
+  title = EVT_8007725_NAME
+  desc = EVT_8007725_DESC
+  picture = "pillar_of_defense"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 2012 NOT = { year = 2013 }
+    exists = GAZ
+    war = no
+  }
+  
+  mean_time_to_happen = { months = 11 }
+  
+  option = {
+    name = EVT_8007725_A
+	prestige = 10
+	war = { target = GAZ attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = humiliate }}
+	badboy = 5
+	any_pop = { limit = { culture = jewish } militancy = -1 consciousness = -3 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 4 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007725_B
+	prestige = -10
+	any_pop = { limit = { culture = jewish } militancy = -1 consciousness = -3 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 4 }
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 8007726
+  title = EVT_8007726_NAME
+  desc = EVT_8007726_DESC
+  picture = "2014_israel_gaza_conflict"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ISR
+    year = 2014 NOT = { year = 2015 }
+    exists = GAZ
+    war = no
+  }
+  
+  mean_time_to_happen = { months = 7 }
+  
+  option = {
+    name = EVT_8007726_A
+	prestige = 10
+	war = { target = GAZ attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = humiliate }}
+	badboy = 5
+	any_pop = { limit = { culture = jewish } militancy = -1 consciousness = -3 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 4 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = EVT_8007726_B
+	prestige = -10
+	any_pop = { limit = { culture = jewish } militancy = -1 consciousness = -3 }
+	any_pop = { limit = { culture = sunni_arab } militancy = 2 consciousness = 4 }
+	ai_chance = { factor = 0 }
+  }
+}
+
+
+
 
 
