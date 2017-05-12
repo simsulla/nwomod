@@ -5,30 +5,17 @@ political_decisions = {
 		picture = "denazification"
 		potential = {
 			OR = { 
-				AND = { tag = USA 564 = { owned_by = USA } }
-				AND = { tag = GBR 369 = { owned_by = GBR } }
-				AND = { tag = SUN 551 = { owned_by = SUN } }
+				is_our_vassal = IAR
+				is_our_vassal = GER
+				is_our_vassal = DDR
 			}
 			NOT = { has_country_flag = denazification }
 		}
 
 		allow = {
-			OR = { 
-				AND = { tag = USA 564 = { owned_by = USA } }
-				AND = { tag = GBR 369 = { owned_by = GBR } }
-				AND = { tag = SUN 551 = { owned_by = SUN } }
-			}
-			NOT = { has_country_flag = denazification }
 			OR = {
-				AND = {
-					year = 1947
-					ai = yes
-				}
-				AND = {
-					marshall_plan = 1
-					#compulsory_primary_education = 1
-					ai = no
-				}
+				year = 1947
+				marshall_plan = 1
 			}
 		}
 
@@ -112,18 +99,16 @@ political_decisions = {
 	establish_west_germany = {
 		picture = "establish_west_germany"
 		potential = {
-			OR = { is_our_vassal = GER GER = { exists = no } }
+			is_our_vassal = GER GER = { government = provisional_government }
 			OR = { 
 				AND = { 
 					has_country_flag = denazification
 					tag = GBR
 					year = 1952
-					369 = { OR = { owned_by = GBR owned_by = IAR } }
 				}
 				AND = { 
 					has_country_flag = denazification
 					tag = USA 
-					564 = { OR = { owned_by = USA  owned_by = BAV } NOT = { has_province_modifier = denazification } }
 				}
 			}
 			NOT = { has_country_flag = establish_west_germany }
@@ -171,34 +156,20 @@ political_decisions = {
 	establish_east_germany = {
 		picture = "establish_east_germany"
 		potential = {
-			OR = { is_our_vassal = DDR DDR = { exists = no } }
-			has_country_flag = denazification
+			is_our_vassal = DDR
 			tag = SUN
 			OR = { 
-				year = 1952
+				year = 1951
 				GER = { exists = yes is_vassal = no }
 			}
 			NOT = { has_country_flag = establish_east_germany }
 		}
 
 		allow = {
-			DDR = { exists = no }
 			has_country_flag = denazification
-			tag = SUN
-			OR = { 
-				year = 1952
-				GER = { exists = yes is_vassal = no }
-			}
-			NOT = { has_country_flag = establish_east_germany }
 			OR = {
-				AND = {
-					year = 1952
-					ai = yes
-				}
-				AND = {
-					NOT = { relation = { who = USA value = 0 } }
-					ai = no
-				}
+				year = 1952
+				NOT = { relation = { who = USA value = 0 } }
 			}
 			war = no
 		}
@@ -220,30 +191,25 @@ political_decisions = {
 		picture = "establish_west_germany"
 		potential = {
 			GER = { exists = yes is_vassal = no }
-			IAR = { OR = { exists = no overlord = {tag = GBR } } }
-			BAV = { OR = { exists = no overlord = {tag = GBR }  } }
 			OR = { 
-				AND = { tag = USA 564 = { OR = { owned_by = USA owned_by = BAV } } }
-				AND = { tag = GBR 369 = { OR = { owned_by = BAV owned_by = IAR } } }
+				IAR = { vassal_of  = THIS ai = yes }
+				BAV = { vassal_of  = THIS ai = yes }
 			}
 			NOT = { has_country_flag = end_occupation_of_germany }
 		}
 
 		allow = {
 			OR = { 
-				AND = { tag = USA 564 = { OR = { owned_by = USA owned_by = BAV } } GER = { has_country_flag = end_of_sonderweg } }
-				AND = { tag = GBR 369 = { OR = { owned_by = BAV owned_by = IAR } } GER = { has_country_flag = end_of_sonderweg } }
+				IAR = { vassal_of  = THIS }
+				BAV = { vassal_of  = THIS }
 			}
-			NOT = { has_country_flag = end_occupation_of_germany }
-			GER = { exists = yes is_vassal = no }
 			war = no
 		}
 
 		effect = {
 			set_country_flag = end_occupation_of_germany
-			release = GER
-			random_country = { limit = { THIS = { tag = GBR } tag = IAR } GER = { inherit = IAR } }
-			random_country = { limit = { THIS = { tag = USA } tag = BAV } GER = { inherit = BAV } }
+			random_country = { limit = {  vassal_of  = THIS tag = IAR } GER = { inherit = IAR } }
+			random_country = { limit = {  vassal_of  = THIS tag = BAV } GER = { inherit = BAV } }
 			diplomatic_influence = { who = GER value = 100 }
 		}
 		ai_will_do = {

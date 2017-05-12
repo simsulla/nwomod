@@ -300,10 +300,7 @@ country_event = {
   picture = "nwo2_western_allies"
 
   trigger = {
-	OR = {
-		capital_scope = { continent = europe  }
-		tag = CAN
-	}
+	capital_scope = { continent = europe  }
 	NOT = { government = proletarian_dictatorship }
 	is_vassal = no
     year = 1946 NOT = { year = 1949 }
@@ -451,6 +448,7 @@ country_event = {
   trigger = {
     tag = USA
 	exists = GER
+	GER = { NOT = { government = provisional_government } }
     NOT = { year = 1960 }
     NOT = { has_global_flag = isolationist_usa }
     NOT = { THIS = { alliance_with = USA } }

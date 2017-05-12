@@ -8,6 +8,7 @@ country_event = {
 	option = {
 		name = EVT_1008601_A 
 		change_tag = LBY
+		LBY = { government = absolute_monarchy country_event = 800050 } 
 		primary_culture = sunni_arab
 	}
 }
@@ -69,10 +70,7 @@ country_event = {
 
 	trigger = {
 		year = 1946 NOT = { year = 1990 }
-		OR = {
-			owns = 1743 # Fezzan / Ghat
-			is_our_vassal = FEZ
-		}
+		is_our_vassal = FEZ
 		tag = FRA
 		NOT = { has_country_flag = king_idris_of_libya }
 		# war = no
@@ -123,10 +121,7 @@ country_event = {
 		tag = GBR
 		year = 1951 NOT = { year = 1990 }
 		has_country_flag = king_idris_of_libya
-		OR = {
-			AND = { owns = 1731 NOT = { exists = LBY } }
-			is_our_vassal = LBY
-		}
+		is_our_vassal = LBY
 	}
 
 	mean_time_to_happen = {
@@ -139,7 +134,6 @@ country_event = {
 		badboy = -1
 		release_vassal = LBY
 		diplomatic_influence = { who = LBY value = 100 }
-		LBY = { government = absolute_monarchy country_event = 800050 } 
 	}
 	
 	option = {
@@ -173,16 +167,17 @@ country_event = {
 		tag = FRA
 		has_country_flag = king_idris_of_libya
 		exists = LBY
-		1743 = { controlled_by = FRA }
+		is_our_vassal = FEZ
+		FEZ = { ai = yes }
 	}
 
 	option = {
 		name = EVT_1008603_A 
-		ai_chance = { factor = 100 }
 		badboy = -1
-		any_owned = { limit = { is_core = LBY } secede_province = LBY }
+		LBY = { inherit = FEZ }
 		diplomatic_influence = { who = LBY value = 100 }
 		clr_country_flag = king_idris_of_libya
+		ai_chance = { factor = 100 }
 	}
 	
 	option = {
@@ -200,7 +195,6 @@ country_event = {
 			relation = { who = THIS value = -50 }
 		}
 	}
-
 }
 
 country_event = {

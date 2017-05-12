@@ -162,6 +162,7 @@ country_event = {
 		NOT = { has_global_flag = the_cold_war }
 		SUN = { government = proletarian_dictatorship }
 		USA = { government = democracy }
+		exists = SUN
 	}
 	
 	mean_time_to_happen = { months = 1 }
@@ -218,18 +219,24 @@ country_event = {
 	trigger = {
 		OR = { has_global_flag = cold_war_ussr has_global_flag = cold_war_usa }
 		NOT = { has_country_flag = end_of_the_cold_war }
+		ai = no
 	}
+	
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "EVT_19806_A" # EVT_19806_A;Is that good news?
-		remove_country_modifier = independent_fraction
-		remove_country_modifier = communist_fraction
-		remove_country_modifier = democratic_fraction
-		remove_country_modifier = nam_fraction
-		remove_country_modifier = communist_fraction_leader
-		remove_country_modifier = democratic_fraction_leader
-		clr_global_flag =  the_cold_war
-		set_country_flag = end_of_the_cold_war
+		any_country = { 
+			limit = { exists = yes }
+			remove_country_modifier = independent_fraction
+			remove_country_modifier = communist_fraction
+			remove_country_modifier = democratic_fraction
+			remove_country_modifier = nam_fraction
+			remove_country_modifier = communist_fraction_leader
+			remove_country_modifier = democratic_fraction_leader
+			clr_global_flag =  the_cold_war
+			set_country_flag = end_of_the_cold_war
+		}
 	}
 
 }
@@ -239,9 +246,9 @@ country_event = {
 
 country_event = {
 	id = 19807
-	title = EVT_19807_NAME # EVT_19808_NAME;End of the Cold War
-	desc = EVT_19807_DESC # EVT_19808_DESC;With the fall of the USA, the Cold War has ended!
-	picture = "endofcoldwar"
+	title = EVT_19807_NAME 
+	desc = EVT_19807_DESC 
+	picture = "us_victory_cold_war"
 
 	trigger = {
 		USA = { government = democracy }
@@ -254,6 +261,8 @@ country_event = {
 		ai = no
 	}
 
+	mean_time_to_happen = { months = 12 }
+
 	option = {
 		name = EVT_19807_A #EVT_19808_A;A New World Order is emerging
 		set_global_flag = cold_war_usa
@@ -265,9 +274,9 @@ country_event = {
 
 country_event = {
 	id = 19808
-	title = EVT_19808_NAME #EVT_19807_NAME;End of the Cold War
-	desc = EVT_19808_DESC #EVT_19807_DESC;With the fall of the USSR, the Cold War has ended!
-	picture = "endofcoldwar"
+	title = EVT_19808_NAME 
+	desc = EVT_19808_DESC 
+	picture = "soviet_victory_cold_war"
 
 	trigger = {
 		SUN = { government = proletarian_dictatorship }
@@ -277,6 +286,8 @@ country_event = {
 		has_global_flag = the_cold_war
 		ai = no
 	}
+
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = EVT_19808_A # EVT_19807_A;A New World Order is emerging

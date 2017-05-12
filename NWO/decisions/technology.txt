@@ -143,42 +143,4 @@ political_decisions = {
 			tech_school = industrial_tech_school
 		}
 	}
-	switch_to_traditional_academic = {
-		picture = "switch_to_traditional_academic"
-		alert = no
-		potential = {
-			OR =  { # other X-core techscools not allowed
-				tech_school = army_tech_school
-				tech_school = naval_tech_school
-				tech_school = culture_tech_school
-				tech_school = commerce_tech_school
-			}
-			NOT = {
-				tech_school = traditional_academic
-				has_country_modifier = academic_confusion
-			}
-			OR = {
-				ruling_party_ideology = conservative
-				ruling_party_ideology = big_tent
-				ruling_party_ideology = populist
-				ruling_party_ideology = traditionalist
-			}
-			civilized = yes
-		}
-		
-		allow = {
-			prestige = 45
-		}
-		effect = {
-			prestige = -15
-			add_country_modifier = {
-				name = academic_confusion
-				duration = 3650
-			}
-			tech_school = traditional_academic
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
 }

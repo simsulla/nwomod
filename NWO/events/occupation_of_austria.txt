@@ -13,9 +13,10 @@ country_event = {
 
   mean_time_to_happen = { months = 3  }
 
-  option = {
+  option = { 
     name = "EVT_8203000_A"
 	BAV = { any_pop = {  limit = { culture = german } consciousness = 1 } }
+	SUN = { country_event = 8203001 }
 	ai_chance = { factor = 100 }
   }
 
@@ -45,7 +46,7 @@ country_event = {
 
   option = {
     name = "EVT_8203001_A"
-	country_event = 8203002
+	overlord = { country_event = 8203002 }
 	ai_chance = { factor = 100 }
   }
 
@@ -63,8 +64,6 @@ country_event = {
   picture = "nwo2_karl_renner"
   is_triggered_only = yes 
   
-  mean_time_to_happen = { months = 3  }
-
   option = {
     name = "EVT_8203002_A"
 	release = AUS
@@ -108,20 +107,11 @@ country_event = {
 
   option = {
     name = "EVT_8203003_A"
-	any_country = { limit = { tag = THIS is_vassal = yes } overlord = { country_event = 8203003 } }
-	any_country = { limit = { tag = THIS is_vassal = no } release = AUS }
-	diplomatic_influence = { who = AUS value = 100 }
+	overlord = { country_event = 8203003 }
 	AUS = { country_event = 8203010 }
 	ai_chance = { factor = 100 }
   }
 
-  option = {
-    name = "EVT_8203003_B"
-	AUS = { country_event = 8203004 } 
-	prestige = -10
-	badboy = 5 
-	ai_chance = { factor = 0 }
-  }
 }
 country_event = {
   id = 8203003
@@ -132,8 +122,8 @@ country_event = {
 
   option = {
     name = "EVT_8203003_A"
-	release = AUS
 	diplomatic_influence = { who = AUS value = 100 }
+	FROM = { release = AUS }
 	AUS = { country_event = 8203010 }
 	ai_chance = { factor = 100 }
   }
@@ -170,10 +160,7 @@ country_event = {
   option = {
     name = "EVT_8203010_A"
 	set_global_flag = neutral_austria
-	SUN = { military_access = THIS } 
-	GBR = { military_access = THIS } 
-	USA = { military_access = THIS } 
-	FRA = { military_access = THIS } 
+	FROM = { military_access = THIS } 
   }
 }
 country_event = {

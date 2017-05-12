@@ -199,6 +199,8 @@ country_event = {
   trigger = {
 	year = 1987
 	ai = no
+	money = 2000
+	exists = USA
   }
   
   mean_time_to_happen = { months = 4 }
@@ -207,6 +209,7 @@ country_event = {
     name = EVT_9005_A
 	prestige = 2
 	money = -1000
+	USA = { random_pop = { limit = { location = { province_id = 232 } type = capitalists } money = 1000 } }
   }
 }
 country_event = {

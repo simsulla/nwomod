@@ -38,8 +38,13 @@ country_event = {
 	government = proletarian_dictatorship
 	tag = SUN
 	year = 1960 NOT = { year = 1963 }
-    owns = 551 # East Berlin
-	NOT = { exists = DDR }
+	OR = {
+		AND = { 
+			owns = 551 # East Berlin
+			NOT = { exists = DDR }
+		}
+		is_our_vassal = DDR
+	}
 	war = no
   }
 
@@ -69,10 +74,17 @@ country_event = {
   trigger = {
     OR = { tag = USA tag = FRA tag = GBR }
 	year = 1944 NOT = { year = 1963 }
-	NOT = { exists = GER }
-    NOT = { exists = IAR }
-    NOT = { exists = DDR }
-    OR = { owns = 579 owns = 583 owns = 565 }
+	OR = {
+		AND = { 
+			NOT = { exists = GER }
+			NOT = { exists = IAR }
+			NOT = { exists = DDR }
+			OR = { owns = 579 owns = 583 owns = 565 }
+		}
+		is_our_vassal = GER
+		is_our_vassal = IAR
+		is_our_vassal = BAV
+	}
 	NOT = {has_country_flag = occupation_zones_in_germany }
   }
 
@@ -95,10 +107,17 @@ country_event = {
   trigger = {
     tag = SUN
 	year = 1944 NOT = { year = 1963 }
-	NOT = { exists = GER }
-    NOT = { exists = IAR }
-    NOT = { exists = DDR }
-    
+	OR = {
+		AND = { 
+			NOT = { exists = GER }
+			NOT = { exists = IAR }
+			NOT = { exists = DDR }
+			OR = { owns = 579 owns = 583 owns = 565 }
+		}
+		is_our_vassal = GER
+		is_our_vassal = IAR
+		is_our_vassal = BAV
+	}
   }
 
   mean_time_to_happen = { months = 1  }
@@ -117,6 +136,7 @@ country_event = {
 
   trigger = {
     tag = GER
+	NOT = { government = provisional_government }
 	year = 1947 NOT = { year = 1963 }
   }
 
@@ -136,6 +156,7 @@ country_event = {
 
   trigger = {
     tag = DDR
+	NOT = { government = provisional_government }
 	year = 1947 NOT = { year = 1963 }
   }
 
@@ -156,24 +177,31 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1946 NOT = { year = 1963 }
-    
-	NOT = { exists = GER }
+	OR = { 
+		is_our_vassal = BAV
+		NOT = { exists = GER }
+	}
   }
 
   mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8204010_A
-	any_pop = { limit = { culture = german } consciousness = 2  }
-	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 200 } }
+	any_country = { 
+		limit = { overlord = { tag = USA } any_owned_province = { is_core = GER } } 
+		any_pop = { limit = { culture = german } consciousness = 2  }
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 200 } } 
+	}
     ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8204010_B
-	any_pop = { limit = { culture = german } militancy = 1.5 }
-    ai_chance = { factor = 0 }
-	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = 1000 } }
+	any_country = { 
+		limit = { overlord = { tag = USA } any_owned_province = { is_core = GER } } 
+		any_pop = { limit = { culture = german } militancy = 1.5 }
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = 1000 } }
+	}
   }
 
   option = {
@@ -191,7 +219,6 @@ country_event = {
   trigger = {
     OR = { tag = GBR tag = FRA }
 	year = 1954 NOT = { year = 1959 }
-    
 	NOT = { has_country_flag = morgenthau_plan }
   }
 
@@ -201,15 +228,21 @@ country_event = {
   
   option = {
     name = "EVT_8204011_A"
-	any_pop = { limit = { culture = german } militancy = 1.5 }
-	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = 1000 } }
+	any_country = { 
+		limit = { overlord = { OR = { tag = GBR tag = FRA } } any_owned_province = { is_core = GER } } 
+		any_pop = { limit = { culture = german } militancy = 1.5 }
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = 1000 } }
+	}
     ai_chance = { factor = 0 }
   }
 
   option = {
     name = "EVT_8204011_B"
-	any_pop = { limit = { culture = german } consciousness = 2 }
-	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 1000 } }
+	any_country = { 
+		limit = { overlord = { OR = { tag = GBR tag = FRA } } any_owned_province = { is_core = GER } } 
+		any_pop = { limit = { culture = german } consciousness = 2 }
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 1000 } }
+	}
     ai_chance = { factor = 100 }
   }
 
@@ -228,8 +261,8 @@ country_event = {
 
   trigger = {
     tag = GER
+	NOT = { government = provisional_government }
 	year = 1944 NOT = { year = 1955 }
-    
   }
 
   mean_time_to_happen = { months = 2  }
@@ -250,23 +283,31 @@ country_event = {
   trigger = {
     tag = SUN
 	year = 1946 NOT = { year = 1963 }
-    NOT = { exists = DDR }
-    
+	OR = { 
+		NOT = { exists = DDR }
+		DDR = { government = provisional_government }
+	}
   }
 
   mean_time_to_happen = { months = 2 }
 
   option = {
     name = EVT_8204020_A
-	any_pop = { limit = { culture = german } militancy = 1.5 }
-	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = 1000 } }
+	any_country = { 
+		limit = { overlord = { tag = SUN } any_owned_province = { is_core = GER } } 
+		any_pop = { limit = { culture = german } militancy = 1.5 }
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = 1000 } }
+	}
     ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8204020_B
-	any_pop = { limit = { culture = german } consciousness = 2 }
-	any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 1000 } }
+	any_country = { 
+		limit = { overlord = { tag = SUN } any_owned_province = { is_core = GER } } 
+		any_pop = { limit = { culture = german } consciousness = 2 }
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 1000 } }
+	}
     ai_chance = { factor = 0 }
   }
 
@@ -285,7 +326,7 @@ country_event = {
   trigger = {
     tag = DDR
 	year = 1944 NOT = { year = 1955 }
-    
+ 	NOT = { government = provisional_government }
   }
 
   mean_time_to_happen = { months = 2  }
@@ -323,6 +364,7 @@ country_event = {
   trigger = {
     tag = GER
 	year = 1944 NOT = { year = 1963 }
+	NOT = { government = provisional_government }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -341,6 +383,7 @@ country_event = {
   trigger = {
     tag = DDR
 	year = 1944 NOT = { year = 1963 }
+	NOT = { government = provisional_government }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -371,6 +414,7 @@ country_event = {
     tag = SAL
 	year = 1956 NOT = { year = 1963 }
 	exists = GER
+	GER = { NOT = { government = provisional_government } }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -411,9 +455,13 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1948 NOT = { year = 1949 }
-    NOT = { exists = GER }
-    NOT = { exists = DDR }
-    
+	OR = {
+		AND = { 
+			NOT = { exists = GER }
+			NOT = { exists = DDR }
+		}
+		is_our_vassal = BAV
+	}
   }
 
   mean_time_to_happen = { months = 1  }
@@ -470,7 +518,10 @@ country_event = {
 
   option = {
     name = EVT_8204042_C
-	any_owned = { limit = { is_core = GER } add_province_modifier = { name = silk_famine duration = 3500 } }
+	any_country = {
+		limit = { OR = { tag = THIS vassal_of = THIS } }
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = silk_famine duration = 3500 } }
+	}
     ai_chance = { factor = 0 }
   }
 }
@@ -537,13 +588,12 @@ country_event = {
 
   trigger = {
     tag = SUN
-	owns = 551
 	GBR = { has_country_flag = accept_united_germany } 
 	USA = { has_country_flag = accept_united_germany } 
 	FRA = { has_country_flag = accept_united_germany } 
     has_global_flag = divided_berlin
-	NOT = { exists = GER }
-	NOT = { exists = DDR }
+	GER = { is_vassal = yes }
+	DDR = { is_our_vassal = SUN ai = no }
 	war = no
   }
 
@@ -557,8 +607,11 @@ country_event = {
 
   option = {
     name = EVT_8204061_B
-	release = GER
-	any_country = { limit = { has_country_flag = accept_united_germany } country_event = 8204070 }  
+	GER = { inherit = DDR }
+	any_country = {
+		limit = { is_vassal = yes overlord = { has_country_flag = accept_united_germany } any_owned_province = { is_core = GER } }
+		country_event = 8204070
+	}
     ai_chance = { factor = 0 }
   }
 }
@@ -571,7 +624,7 @@ country_event = {
 
   option = {
     name = EVT_8204070_A
-	release = GER
+	GER = { inherit = THIS }
 	prestige = 10
   }
 }
@@ -585,7 +638,7 @@ country_event = {
   trigger = {
     tag = GER
 	year = 1944 NOT = { year = 1963 }
-    
+    NOT = { government = provisional_government }
 	NOT = { owns = 551 } # East Berlin
   }
 
@@ -607,7 +660,7 @@ country_event = {
   trigger = {
     tag = DDR
 	year = 1944 NOT = { year = 1963 }
-    
+    NOT = { government = provisional_government }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -628,6 +681,7 @@ country_event = {
   trigger = {
     tag = GER
 	year = 1955 NOT = { year = 1963 }
+    NOT = { government = provisional_government }
   }
 
   mean_time_to_happen = { months = 2 }
