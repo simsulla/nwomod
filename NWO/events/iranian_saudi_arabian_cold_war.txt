@@ -243,7 +243,6 @@ country_event = {
 	# EVT_8011442_NAME;Iranian involvement in the Syrian Civil War
 	desc = EVT_8011442_DESC
 	picture = "iranian_involvement_in_the_syrian_civil_war"
-	is_triggered_only = yes
 
 	trigger = {
 		tag = IRN
@@ -280,12 +279,11 @@ country_event = {
 	# EVT_8011442_NAME;Saudi Arabian involvement in the Syrian Civil War
 	desc = EVT_8011442_DESC
 	picture = "foreign_involvement_in_the_syrian_civil_war"
-	is_triggered_only = yes
 
 	trigger = {
 		tag = IRN
-        exists = USY
-        exists = SYR
+		exists = USY
+		exists = SYR
 		has_global_flag = syrian_civil_war
 	}
 

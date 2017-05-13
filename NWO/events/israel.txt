@@ -1108,7 +1108,7 @@ country_event = {
     name = EVT_8007697_A
 	any_pop = { militancy = 2.0 }
 	any_owned = { limit = { OR = { province_id = 920 province_id = 918 } } secede_province = PAL }
-	any_owned = { limit = { OR = { province_id = 920 } } add_core = ISR  }
+	920 = { add_core = ISR }
 	casus_belli = { target = PAL type = annex_core_country months = 12 }
 	war = { target = PAL attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo }}
 	ai_chance = { factor = 100 }
@@ -1328,7 +1328,7 @@ country_event = {
   option = {
     name = EVT_8007723_A
 	# EVT_8007723_A;Withdraw from Gaza, dismantle the Jewish settlements there
-	any_owned = { limit = { OR = { province_id = 920 } } remove_core = ISR }
+	920 = { remove_core = ISR }
 	any_pop = { limit = { location = { province_id = 920 } culture = haredim_jewish } move_pop = 919 } # Gaza -> Tel Aviv
 	any_pop = { limit = { location = { province_id = 920 } culture = jewish } move_pop = 919 } # Gaza -> Tel Aviv
 	any_pop = { limit = { culture = jewish } militancy = 0.2 consciousness = 0.3 }
