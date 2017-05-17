@@ -178,6 +178,8 @@ country_event = {
 		name = EVT_1014204_A
 		# EVT_1014204_A;Demand return of Criema
 		# infamy this is aginst UN-law
+		badboy = 15
+		set_global_flag = 2014_ukraine_crisis
 		war = {
 			target = UKR
 			attacker_goal = { casus_belli = acquire_core_state state_province_id = 964 }
@@ -277,4 +279,96 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 	
+}
+
+country_event = {
+	id = 1014207
+	title = EVT_1014207_NAME
+	# EVT_1014207_NAME;International sanctions during the Ukrainian crisis
+	desc = EVT_1014207_DESC
+	# EVT_1014207_DESC;The Russian military intervention in Ukraine, which began in late February 2014, prompted a number of governments to apply sanctions against individuals, businesses and officials from Russia and Ukraine. Sanctions were approved by the United States, the European Union and other countries and international organisations. Russia has responded with sanctions against a number of countries, including a total ban on food imports from the EU, United States, Norway, Canada and Australia. The sanctions contributed to the collapse of the Russian ruble and the Russian financial crisis. They also caused economic damage to a number of EU countries, with the total losses estimated at €100 billion.
+	picture = "economic_sanctions_on_russia_2014"
+	fire_only_once = yes
+
+	trigger = {
+		war = no
+		has_global_flag = 2014_ukraine_crisis
+		has_country_flag = xeu_ambition
+	        NOT = { tag = TUR }
+		OR = {
+			has_country_modifier = alliance_nato
+			has_global_flag = 2014_ukraine_crisis
+	        	NOT = { tag = TUR }
+		}
+		OR = {
+			tag = AST
+			relation = { who = USA value = 100 }
+			has_global_flag = 2014_ukraine_crisis
+		}
+		OR = {
+			tag = NZL
+			relation = { who = USA value = 100 }
+			has_global_flag = 2014_ukraine_crisis
+		}
+		OR = {
+			tag = JAP
+			relation = { who = USA value = 100 }
+			has_global_flag = 2014_ukraine_crisis
+		}
+		OR = {
+			tag = UKR
+			relation = { who = RUS value = -100 }
+			NOT = { in_sphere = RUS }
+			has_global_flag = 2014_ukraine_crisis
+		}
+		OR = {
+			tag = GEO
+			relation = { who = RUS value = -100 }
+			NOT = { in_sphere = RUS }
+			has_global_flag = 2014_ukraine_crisis
+		}
+		OR = {
+			tag = SWI
+			government = democracy
+			government = hms_government
+			has_global_flag = 2014_ukraine_crisis
+		}
+		OR = {
+			tag = ALB
+			relation = { who = USA value = 100 }
+			NOT = { in_sphere = RUS }
+			has_global_flag = 2014_ukraine_crisis
+		}
+		OR = {
+			tag = MON
+			relation = { who = USA value = 100 }
+			NOT = { in_sphere = RUS }
+			has_global_flag = 2014_ukraine_crisis
+		}
+		OR = {
+			tag = KOS
+			relation = { who = USA value = 100 }
+			NOT = { in_sphere = RUS }
+			has_global_flag = 2014_ukraine_crisis
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = EVT_1014207_A
+		# EVT_1014207_A;Apply sanctions on Russia
+		casus_belli = { target = RUS type = sanctions months = 12 }
+		ai_chance = { factor = 100 }
+		relation = { who = RUS value = -100 }
+	}
+
+	option = {
+		name = EVT_1014207_B
+		# EVT_1014207_B;Don't even bother with this minor issue
+		prestige = -5
+		ai_chance = { factor = 5 }
+	}
 }
