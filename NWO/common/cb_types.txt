@@ -192,6 +192,8 @@ conquest = {
 			}
 		}
 		is_independant = yes
+		NOT = { has_country_modifier = neutrality }
+		THIS = { NOT = { has_country_modifier = neutrality } }
 	}
 
 	badboy_factor = 2.2
@@ -425,7 +427,10 @@ acquire_core_state = {
 		NOT = { relation = { who = THIS value = 0 } }
 		THIS = { OR = { NOT = { war_policy = pacifism } war = yes } }
 		#NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
-		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	
+		NOT = { has_country_modifier = neutrality }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+	}
 	
 	allowed_states = {
 		any_owned_province = {
@@ -487,7 +492,10 @@ annex_core_country = {
 		}
 		THIS = { NOT = { war_policy = pacifism } }
 		#NOT = { AND = { THIS = { ai = yes } part_of_sphere  = yes }} # the ai shall not attack a sphered nation.
-		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	}
+		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 	
+		NOT = { has_country_modifier = neutrality }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+	}
 
 	po_annex = yes
 	
@@ -560,6 +568,8 @@ acquire_state = {
 			}
 		}
 		OR = { AND = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact }  THIS = { NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact } } } } AND = { has_country_modifier = csto_alliance THIS = { NOT = { has_country_modifier = csto_alliance } } } AND = { has_country_modifier = sco_pact THIS = { NOT = { has_country_modifier = sco_pact } } } NOT = { OR = { has_country_modifier = alliance_nato has_country_modifier = anzus_alliance has_country_modifier = rio_pact has_country_modifier = csto_alliance has_country_modifier = sco_pact } } } 		is_independant = yes
+		NOT = { has_country_modifier = neutrality }
+		THIS = { NOT = { has_country_modifier = neutrality } }
 	}
 	
 	allowed_states = {
