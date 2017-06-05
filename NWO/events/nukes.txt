@@ -20,9 +20,9 @@ country_event = {
 
   option = {
     name = EVT_8233000_A
-	any_greater_power = { limit = { war_with = THIS } country_event = 8233001 }
-	any_country = { limit = { war_with = THIS has_country_flag = develop_atomic_bomb is_greater_power = no } country_event = 8233001 }
-	random_country = { limit = { war_with = THIS NOT = { has_country_flag = develop_atomic_bomb } is_greater_power = no } country_event = 8233001 }
+	any_greater_power = { limit = { war_with = THIS is_vassal = no } country_event = 8233001 }
+	any_country = { limit = { war_with = THIS  is_vassal = no has_country_flag = develop_atomic_bomb is_greater_power = no } country_event = 8233001 }
+	random_country = { limit = { war_with = THIS  is_vassal = no NOT = { has_country_flag = develop_atomic_bomb } is_greater_power = no } country_event = 8233001 }
 	add_country_modifier = { name = nukes_enabled duration = 350 } 
 	badboy = 5
 	ai_chance = { factor = 0.1 modifier = { factor = 10 NOT = { badboy = 15 } } }
