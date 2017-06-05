@@ -909,7 +909,16 @@ liberate_country = {
 	allowed_countries = {
 		# number_of_states = 2
 		NOT = { tag = FROM }
-		FROM = { exists = no }
+		FROM = { 
+			exists = no
+			OR = {
+				# this prevents liberate CB on any union tag - see cultures.txt - a bit to drastic
+				# superstates should also not be allowed.
+				is_cultural_union = no
+				tag = KUR
+				tag = SOT
+			}
+		}
 		any_owned_province = {
 			is_core = FROM
 			is_capital = no
