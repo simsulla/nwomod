@@ -249,6 +249,7 @@ country_event = { # Maintaining security in Europe
 	any_country = { 
 		limit = { 
 			NOT = { government = proletarian_dictatorship } 
+			NOT = { ruling_party_ideology = communist } 
 			capital_scope = { OR = { continent = north_america continent = south_america } }
 		}
 		country_event = 8215012
@@ -302,6 +303,7 @@ country_event = {
   trigger = {
 	capital_scope = { continent = europe  }
 	NOT = { government = proletarian_dictatorship }
+	NOT = { ruling_party_ideology = communist } 
 	is_vassal = no
     year = 1946 NOT = { year = 1949 }
 	NOT = { has_country_flag = western_allies_in_war }
