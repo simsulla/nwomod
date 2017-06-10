@@ -1855,6 +1855,31 @@ country_event = { # Request to join the USSR
 	}
 }
 
+country_event = { # Cooperation with the USSR
+	id = 32511
+	title = EVT_32511_NAME
+	desc = EVT_32511_DESC
+	picture = "request_to_join_the_ussr"
+	
+	trigger = {
+		war = no
+		NOT = { has_country_flag = cooperation_with_the_ussr }
+		NOT = { government = proletarian_dictatorship }
+		ruling_party_ideology = communist
+		is_vassal = no
+		sphere_owner = { tag = SUN } 
+		relation = { who = SUN value = 180 }
+		SUN = { exists = yes government = proletarian_dictatorship ai = yes }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = EVT_32511_A
+		set_country_flag = cooperation_with_the_ussr # decision
+	}
+}
+
 country_event = {
 	id = 32512
 	title = EVT_32512_NAME

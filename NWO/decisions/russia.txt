@@ -203,12 +203,12 @@ political_decisions = {
 		allow = {
 			war = no
 			containment = 1
-			any_neighbor_country = { relation = { who = SUN value = 100 } has_country_flag = join_the_ussr has_unclaimed_cores = yes any_core = { owned_by = SUN } }
+			any_neighbor_country = { has_country_flag = join_the_ussr has_unclaimed_cores = yes any_core = { owned_by = THIS } }
 		}
 		effect = {
 			clr_country_flag = join_the_ussr
 			any_neighbor_country = { 
-				limit = { relation = { who = SUN value = 100 } has_country_flag = join_the_ussr has_unclaimed_cores = yes any_core = { owned_by = SUN } }
+				limit = { has_country_flag = join_the_ussr has_unclaimed_cores = yes any_core = { owned_by = THIS } }
 				country_event = 11101
 			}
 		}
@@ -223,11 +223,12 @@ political_decisions = {
 			tag = SUN
 		}
 		allow = {
-			any_neighbor_country = { government = proletarian_dictatorship is_vassal = no in_sphere = THIS relation = { who = SUN value = 180 } }
+			any_neighbor_country = { ruling_party_ideology = communist is_vassal = no in_sphere = THIS has_country_flag = cooperation_with_the_ussr }
 		}
 		effect = {
-			any_neighbor_country = { 
-				limit = { government = proletarian_dictatorship is_vassal = no in_sphere = THIS relation = { who = SUN value = 180 } }
+			any_country = { 
+				limit = { ruling_party_ideology = communist is_vassal = no in_sphere = THIS has_country_flag = cooperation_with_the_ussr }
+				clr_country_flag = cooperation_with_the_ussr
 				relation = { who = SUN value = -100 }
 				country_event = 32512
 			}
