@@ -13,7 +13,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		relation = { who = USA value = 10 }
 		prestige = -2
-		country_event = 8007623
+		ISR = { country_event = 8007623 }
 		country_event = { id = 1007602 days = 335 } 
 	}
 	
@@ -28,19 +28,22 @@ country_event = {
 	option = {
 		name = EVT_1007601_C 
 		ai_chance = { factor = 0 }
-		any_pop = {
-			limit = {
-				culture = sunni_arab
+		any_country = {
+			limit = { tag = ISR }
+			any_pop = {
+				limit = {
+					culture = sunni_arab
+				}
+				consciousness = 1
+				militancy = 2
 			}
-			consciousness = 1
-			militancy = 2
-		}
-		any_pop = {
-			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
-				location = { province_id = 919 }
+			any_pop = {
+				limit = {
+					OR = { culture = jewish culture =  haredim_jewish }
+					location = { province_id = 919 }
+				}
+				reduce_pop = 1.1
 			}
-			reduce_pop = 1.1
 		}
 		any_country = {
 			limit = { primary_culture = sunni_arab }
@@ -60,16 +63,16 @@ country_event = {
 	desc = EVT_1007602_DESC
 	picture = "un_parition_of_palestine"
 
-	is_triggered_only = yes # GBR
+	is_triggered_only = yes # ISR Mandate
 	
 	option = {
 		name = EVT_1007602_A 
 		ai_chance = { factor = 100 }
 		prestige = -2
-		release = ISR
-		ISR = { government = democracy primary_culture = jewish }
+		overlord = { release = THIS }
+		government = democracy primary_culture = jewish
 		release = PAL
-		ISR = { country_event = 8007624 }
+		country_event = 8007624
 		PAL = { country_event = 8007626 }
 		end_military_access = EGY
 		set_global_flag = end_palestine_mandate
@@ -102,8 +105,9 @@ country_event = {
 		}
 		badboy = -2
 		add_country_modifier =  { name = stock_market_crash duration = 365 }
-		release = PAL
-		PAL = { country_event = 8007626 }
+		overlord = { release_vassal = ISR }
+		change_tag = PAL
+		country_event = 8007626
 	}	
 }
 
