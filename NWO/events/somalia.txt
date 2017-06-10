@@ -7,10 +7,8 @@ country_event = { # Trust Territory of Somaliland
 
   trigger = {
     tag = GBR
-	OR = {
-		owns = 1869
-		is_our_vassal = SOM
-	}
+	is_our_vassal = SOM
+	SOM = { government = provisional_government }
 	exists = ITA
 	ITA = { NOT = { government = presidential_dictatorship } }
 	year = 1949 NOT = { year = 1990 }
@@ -20,7 +18,7 @@ country_event = { # Trust Territory of Somaliland
 
   option = {
     name = EVT_8014100_A
-	release = SOM
+	release_vassal = SOM
 	ITA = { country_event = 8014101 }
   }
 }

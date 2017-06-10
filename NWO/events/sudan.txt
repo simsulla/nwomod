@@ -9,7 +9,8 @@ country_event = {
 		NOT = { exists = SUD }
 		NOT = { year = 1990 }
 		tag = EGY
-		1827 = { owned_by = GBR } # Khartoum
+		1827 = { owned_by = SUD } # Khartoum
+		SUD = { government = provisional_government is_vassal = yes  }
 		NOT = { OR = { government = democracy government = hms_government government = absolute_monarchy } }
 	}
 
@@ -41,18 +42,15 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = { 
-		NOT = { exists = SUD }
-		OR = {
-			is_our_vassal = SUD
-			owns = 1827 # Khartorum
-		}
+		is_our_vassal = SUD
+		SUD = { government = provisional_government }
 		exists = EGY
 		year = 1958
 	}
 	
 	option = {
 		name = EVT_1004903_A 
-		release = SUD
+		release_vassal = SUD
 		SUD = { primary_culture = sunni_arab government = democracy country_event = 800054 }
 		prestige = 5
 		random_country = { limit = { has_country_flag = claim_the_sudan } country_event = 1004904 }
@@ -64,6 +62,7 @@ country_event = {
 		name = EVT_1004903_B
 		ai_chance = { factor = 0 }
 		badboy = 4.0
+		inherit = SUD
 		relation = { who = EGY value = -200 }
 		any_pop = { limit = { culture = sunni_arab } militancy = 6  consciousness = 5.0 }
 	}

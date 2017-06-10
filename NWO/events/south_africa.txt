@@ -147,14 +147,15 @@ country_event = {
     tag = SAF
     NOT = { year = 1990 }
 	is_our_vassal = NAM
-	NAM = { ai = yes }
+	NAM = { government = provisional_government }
+	year = 1966 # TODO should be tech triggered
   }
 
   mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8012615_A
-	any_pop = { limit = { culture = afrikaaner } ideology = { value = nationalist factor = 0.1 } }
+	any_pop = { limit = { culture = afrikaaner } ideology = { value = conservative factor = 0.1 } }
 	inherit = NAM
 	badboy = 1
 	prestige = -2
@@ -183,7 +184,7 @@ country_event = {
   option = {
     name = EVT_8012621_A
 	any_pop = { limit = { NOT = { culture = afrikaaner } militancy = 1.0  consciousness = 2.0 } }
-	any_pop = { limit = { culture = afrikaaner } ideology = { value = nationalist factor = 0.9 } }
+	any_pop = { limit = { culture = afrikaaner } ideology = { value = conservative factor = 0.9 } }
 	ruling_party_ideology = nationalist
 	add_country_modifier = { name = apartheid duration = -1 }
   }
