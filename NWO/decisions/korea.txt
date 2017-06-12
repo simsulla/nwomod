@@ -79,10 +79,12 @@ political_decisions = {
 						AND = {
 							SKO = {government = hms_government}
 							NKO = {government = hms_government}
+							NOT = { ruling_party_ideology = communist }
 						}
 						AND = {
 							SKO = {government = democracy}
 							NKO = {government = democracy}
+							NOT = { ruling_party_ideology = communist }
 						}
 					}
 				}
