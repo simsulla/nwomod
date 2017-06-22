@@ -179,3 +179,35 @@ country_event = { # OPEC is formed
   }
   
 }
+
+country_event = { # Energy Triangle- Gas deposits in the Mediterranean
+  id = 1105
+  title = EVT_1105_NAME
+  desc = EVT_1105_DESC
+  picture = "energy_triangle"
+  fire_only_once = yes
+
+  trigger = {
+	year = 2015
+	NOT = { has_country_flag = energy_triangle }
+	OR = { 
+		owns = 916
+		owns = 856
+	}
+  }
+
+  immediate = { set_country_flag = energy_triangle }
+  
+  mean_time_to_happen = { months = 12 }
+
+  option = {
+    name = EVT_1105_A
+	any_owned = { limit = { OR = { province_id = 916 province_id = 865 } } trade_goods = petroleum }
+  }
+
+  option = {
+    name = EVT_1105_B
+  }
+  
+}
+
