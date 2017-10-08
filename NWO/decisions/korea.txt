@@ -36,45 +36,45 @@ political_decisions = {
 					exists = SKO
 					exists = NKO
 					NOT = { has_global_flag = korea_reformed }
-					SKO = {NOT = {war_with = NKO}}
+					SKO = { NOT = {war_with = NKO} }
 					OR = { # both can't be ai - find with multi player
 						AND = {
 							tag = SKO
-							NKO = {ai = yes is_vassal = no part_of_sphere = no }
+							NKO = { ai = yes is_vassal = no part_of_sphere = no }
 							is_vassal = no
 						}
 						AND = {
 							ai = no
 							tag = NKO
-							SKO = {ai = yes is_vassal = no part_of_sphere = no}
+							SKO = { ai = yes is_vassal = no part_of_sphere = no }
 							is_vassal = no
 						}
 					}
 					OR = {
 						AND = {
-							SKO = {government = proletarian_dictatorship}
-							NKO = {government = proletarian_dictatorship}
+							SKO = { government = proletarian_dictatorship }
+							NKO = { government = proletarian_dictatorship }
 						}
 						AND = {
-							SKO = {government = presidential_dictatorship}
-							NKO = {government = presidential_dictatorship}
+							SKO = { government = presidential_dictatorship }
+							NKO = { government = presidential_dictatorship }
 						}
 						AND = {
-							SKO = {government = populist_dictatorship}
-							NKO = {government = populist_dictatorship}
+							SKO = { government = populist_dictatorship }
+							NKO = { government = populist_dictatorship }
 						}
 						AND = {
-							SKO = {government = absolute_monarchy}
-							NKO = {government = absolute_monarchy}
+							SKO = { government = absolute_monarchy }
+							NKO = { government = absolute_monarchy }
 						}
 						AND = {
-							SKO = {government = hms_government}
-							NKO = {government = hms_government}
+							SKO = { government = hms_government }
+							NKO = { government = hms_government }
 							NOT = { ruling_party_ideology = communist }
 						}
 						AND = {
-							SKO = {government = democracy}
-							NKO = {government = democracy}
+							SKO = { government = democracy }
+							NKO = { government = democracy }
 							NOT = { ruling_party_ideology = communist }
 						}
 					}

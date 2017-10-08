@@ -58,10 +58,10 @@ political_decisions = {
 			war = no
 			OR = { 
 				SYR = { war = no exists = SYR is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship }  
-				IRQ = { war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = provisional_government NOT = {exists = SYR } }  
-				PAL = { war = no exists = PAL is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = {exists = IRQ }}  
-				JOR = { war = no exists = JOR is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = {exists = IRQ }}  
-				LEB = { war = no exists = LEB is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = {exists = JOR }}  
+				IRQ = { war = no exists = IRQ is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = provisional_government NOT = { exists = SYR } }  
+				PAL = { war = no exists = PAL is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = { exists = IRQ } }  
+				JOR = { war = no exists = JOR is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = { exists = IRQ } }  
+				LEB = { war = no exists = LEB is_vassal = no part_of_sphere = no NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship NOT = { exists = JOR } }  
 
 				YEM = { war = no exists = YEM OR = { vassal_of = THIS in_sphere = THIS } NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship }  
 				LBY = { war = no exists = LBY OR = { vassal_of = THIS in_sphere = THIS } NOT = { has_country_modifier = reject_uar } government = presidential_dictatorship } 
