@@ -902,7 +902,7 @@ province_event = {
 	desc = "EVTDESC14650"
 	
 	trigger = {
-		NOT = { has_country_modifier = recent_safari2 }
+		owner = { NOT = { has_country_modifier = recent_safari2 } }
 		is_colonial = yes
 		continent = africa
 	}

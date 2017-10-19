@@ -15,7 +15,7 @@ province_event = {
 	
 	trigger = {
 		is_ideology_enabled = socialist
-		civilized = yes
+		owner = { civilized = yes }
 		is_colonial = no
 		OR = {
 			has_pop_type = artisans
@@ -365,7 +365,7 @@ province_event = {
 	
 	trigger = {
 		is_ideology_enabled = socialist
-		civilized = yes
+		owner = { civilized = yes }
 		socialist = 10
 		owner = {
 			OR = {
@@ -701,7 +701,7 @@ province_event = {
 	trigger = {
 		is_ideology_enabled = socialist
 		is_colonial = no
-		civilized = yes
+		owner = { civilized = yes }
 		socialist = 10
 		owner = {
 			OR = {
