@@ -105,12 +105,12 @@ political_decisions = {
 			NOT = { # must not have all
 				has_country_flag = world_bank 
 				OR = { has_country_flag = the_imf  has_country_flag = dev_bank } 
-				GBR = { capital_scope = { NOT = { trade_goods = credit } } }
+				300 = { NOT = { trade_goods = credit } } # London
 			}
 			NOT = { # must not have all, except wb but not be rank = 1
 				rank = 1
 				OR = { has_country_flag = the_imf  has_country_flag = dev_bank } 
-				GBR = { capital_scope = { NOT = { trade_goods = credit } } }
+				300 = { NOT = { trade_goods = credit } } # London
 			}			
 			#year = 1968
 		}
@@ -136,7 +136,7 @@ political_decisions = {
 				limit = {
 					OR = { has_country_flag = the_imf has_country_flag = dev_bank }
 					NOT = { tag = THIS }
-					GBR = { capital_scope = { NOT = { trade_goods = credit } } }
+					300 = { NOT = { trade_goods = credit } }
 				}
 				country_event = 15606
 			}
@@ -178,7 +178,7 @@ political_decisions = {
 		potential = {
 			is_greater_power = yes
 			NOT = { tag = GBR }
-			GBR = { capital_scope = { trade_goods = credit } }
+			300 = { trade_goods = credit }
 			has_country_modifier = special_drawing_rights
 			year = 1952
 		}
@@ -186,8 +186,8 @@ political_decisions = {
 			GBR = { 
 				OR = { NOT = { money = 100000 } has_country_modifier = in_bankrupcy has_country_flag = end_of_the_city } 
 				has_country_modifier = special_drawing_rights 
-				capital_scope = { trade_goods = credit } 
 			}
+			300 = { trade_goods = credit }
 		}
 		effect = {
 			set_country_flag = dev_bank
