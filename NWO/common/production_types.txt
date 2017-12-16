@@ -7,8 +7,6 @@ factory_template = {
 		machine_parts = 0.2
 		petrochemicals = 0.1 
 		specialized_machinery = 0.1
-		electric_gear = 0.1
-		chemical_products = 0.1
 	}
 	
 	owner =
@@ -406,7 +404,7 @@ aluminium_factory = {#
 		coal = 4	
 	}
 	output_goods = aluminium 
-	value = 20
+	value = 15
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.125
@@ -580,7 +578,7 @@ luxury_clothes_factory = {#
 }
 
 instruments_factory = {#      
-	template = modern_factory_template
+	template = factory_template
 	input_goods = {    
 		other_minerals = 5	
 		copper = 1	
@@ -791,7 +789,7 @@ modern_aeroplane_factory = {#
 		turbines = 5
 	}
 	output_goods = aeroplanes 
-	value = 3
+	value = 2.5
 	bonus = {
 		trigger = { has_building = transport_factory }
 		value = 0.125
@@ -806,7 +804,7 @@ aeroplane_factory = {#
 		aluminium = 5	
 	}
 	output_goods = aeroplanes 
-	value = 2
+	value = 1.2
 	bonus = {
 		trigger = { has_building = aluminium_factory }
 		value = 0.125
