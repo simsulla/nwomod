@@ -4,8 +4,11 @@
 factory_template = {
 	efficiency = {
 		cement = 0.1 #if no cement, work at 75% efficiency 
-		machine_parts = 0.15 
-		petrochemicals = 0.05 
+		machine_parts = 0.2
+		petrochemicals = 0.1 
+		specialized_machinery = 0.1
+		electric_gear = 0.1
+		chemical_products = 0.1
 	}
 	
 	owner =
@@ -66,9 +69,14 @@ bank_template = {
 modern_factory_template = {
 	efficiency = {
 		cement = 0.1 #if no cement, work at 75% efficiency 
-		machine_parts = 0.15 
-		petrochemicals = 0.05 
+		machine_parts = 0.2
+		petrochemicals = 0.1 
+		specialized_machinery = 0.1
+		electric_gear = 0.1
+		chemical_products = 0.1
 		heating_electricity = 0.2
+		advanced_instruments = 0.2
+		advanced_machinery = 0.2	
 	}
 	
 	owner =
@@ -105,7 +113,7 @@ fertilizers_factory = {#
 		other_minerals = 5
 	}
 	output_goods = fertilizers 
-	value = 10
+	value = 15
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = petroleum
@@ -127,7 +135,7 @@ cement_factory = {#
 		iron = 2
 	} 
 	output_goods = cement 
-	value = 10
+	value = 20
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.125
@@ -144,7 +152,7 @@ modern_copper_wire_factory = {#
 		petrochemicals = 1	
 	} 
 	output_goods = copper_wire 
-	value = 12
+	value = 16
 	bonus = {
 		trigger = { has_building = petrochemicals_factory }
 		value = 0.25
@@ -154,10 +162,10 @@ modern_copper_wire_factory = {#
 copper_wire_factory = {#     
 	template = factory_template
 	input_goods = {    
-		copper = 1
+		copper = 5
 	} 
 	output_goods = copper_wire 
-	value = 9
+	value = 22
 	bonus = {
 		trigger = { trade_goods_in_state = copper }
 		value = 0.25
@@ -171,7 +179,7 @@ petrochemicals_factory = {#
 	} 
 	output_goods = petrochemicals 
 	# make this more profitable than coal petrochemicals
-	value = 10
+	value = 16
 	bonus = {
 		trigger = { trade_goods_in_state = petroleum }
 		value = 0.25
@@ -185,7 +193,7 @@ steel_factory = {#
 		coal = 4	
 	}
 	output_goods = steel 
-	value = 8
+	value = 16
 	bonus = {
 		trigger = { trade_goods_in_state = iron }
 		value = 0.125
@@ -203,7 +211,7 @@ engines_factory = {#
 		copper_wire = 2	
 	}
 	output_goods = engines 
-	value = 30
+	value = 32
 	bonus = {
 		trigger = { has_building = machine_parts_factory }
 		value = 0.125
@@ -217,10 +225,10 @@ engines_factory = {#
 chemical_products_factory = {#       
 	template = modern_factory_template
 	input_goods = {
-		petrochemicals = 1	
+		petrochemicals = 10	
 	}
 	output_goods = chemical_products 
-	value = 10
+	value = 22
 	bonus = {
 		trigger = { has_building = petrochemicals_factory }
 		value = 0.25
@@ -233,7 +241,7 @@ fabric_factory = {#
 		cotton = 5	
 	}
 	output_goods = fabric 
-	value = 10
+	value = 22
 	bonus = {
 		trigger = { trade_goods_in_state = cotton }
 		value = 0.25
@@ -246,7 +254,7 @@ wool_fabric_factory = {#
 		wool = 5	
 	}
 	output_goods = fabric 
-	value = 10
+	value = 22
 	bonus = {
 		trigger = { trade_goods_in_state = wool }
 		value = 0.25
@@ -269,11 +277,11 @@ synthetic_fabric_factory = {#
 petroleum_plastics_factory = {#       
 	template = modern_factory_template
 	input_goods = {    
-		petrochemicals = 1
+		petrochemicals = 20
 	}
 	output_goods = plastics 
 	# make this more profitable than rubber plastics 10%
-	value = 10
+	value = 35
 	bonus = {
 		trigger = { has_building = petrochemicals }
 		value = 0.25
@@ -286,17 +294,17 @@ rubber_factory = {#
 		petroleum = 17	
 	}
 	output_goods = rubber 
-	value = 20
+	value = 30
 }
 
 modern_paper_factory = {#       
 	template = factory_template
 	input_goods = {    
-		timber = 2	
+		timber = 4	
 		heating_electricity = 2
 	}
 	output_goods = paper 
-	value = 5
+	value = 11
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.125
@@ -310,10 +318,10 @@ modern_paper_factory = {#
 paper_factory = {#     
 	template = factory_template
 	input_goods = {    
-		timber = 2	
+		timber = 4	
 	}
 	output_goods = paper 
-	value = 4
+	value = 10
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.25
@@ -327,7 +335,7 @@ glass_factory = {#
 		coal = 4
 	}
 	output_goods = glass 
-	value = 10
+	value = 23
 	bonus = {
 		trigger = { trade_goods_in_state = other_minerals }
 		value = 0.125
@@ -344,7 +352,7 @@ modern_glass_factory = {#
 		petrochemicals = 1	
 	}
 	output_goods = glass 
-	value = 10
+	value = 16
 	bonus = {
 		trigger = { has_building = petrochemicals_factory }
 		value = 0.125
@@ -359,7 +367,7 @@ modern_machine_parts_factory = {#
 		petrochemicals = 1	
 	}
 	output_goods = machine_parts 
-	value = 13
+	value = 30
 	bonus = {
 		trigger = { has_building = diamonds_factory }
 		value = 0.125
@@ -381,7 +389,7 @@ machine_parts_factory = {#
 		coal = 4	
 	}
 	output_goods = machine_parts 
-	value = 11
+	value = 22
 	bonus = {
 		trigger = { trade_goods_in_state = iron }
 		value = 0.125
@@ -398,7 +406,7 @@ aluminium_factory = {#
 		coal = 4	
 	}
 	output_goods = aluminium 
-	value = 10.00
+	value = 20
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.125
@@ -411,7 +419,7 @@ petroleum_aluminium_factory = {#
 		petroleum = 17	
 	}
 	output_goods = aluminium 
-	value = 10.00
+	value = 28
 	bonus = {
 		trigger = { trade_goods_in_state = petroleum }
 		value = 0.125
@@ -428,7 +436,7 @@ trucks_vans_factory = {#
 		instruments = 5
 	}
 	output_goods = trucks_vans 
-	value = 20
+	value = 15
 	bonus = {
 		trigger = { has_building = steel_factory }
 		value = 0.125
@@ -449,7 +457,7 @@ heating_electricity_factory = {#
 		coal = 4
 	}
 	output_goods = heating_electricity 
-	value = 10
+	value = 15
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.25
@@ -462,7 +470,7 @@ petroleum_heating_electricity_factory = {#
 		petroleum = 17
 	}
 	output_goods = heating_electricity 
-	value = 10
+	value = 28
 	bonus = {
 		trigger = { trade_goods_in_state = petroleum }
 		value = 0.25
@@ -476,7 +484,7 @@ other_minerals_heating_electricity_factory = {#
 		turbines = 1
 	}
 	output_goods = heating_electricity 
-	value = 10
+	value = 16
 	bonus = {
 		trigger = { trade_goods_in_state = other_minerals }
 		value = 0.25
@@ -490,7 +498,7 @@ advanced_heating_electricity_factory = {#
 		turbines = 1
 	}
 	output_goods = heating_electricity 
-	value = 10
+	value = 16
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.25
@@ -504,7 +512,7 @@ advanced_petroleum_heating_electricity_factory = {#
 		turbines = 1
 	}
 	output_goods = heating_electricity 
-	value = 10
+	value = 21
 	bonus = {
 		trigger = { trade_goods_in_state = petroleum }
 		value = 0.25
@@ -519,7 +527,7 @@ modern_integrated_circuits_factory = {#
 		petrochemicals = 1
 	}
 	output_goods = integrated_circuits 
-	value = 5
+	value = 11
 	bonus = {
 		trigger = { has_building = copper_wire_factory }
 		value = 0.125
@@ -542,7 +550,7 @@ integrated_circuits_factory = {#
 		rubber = 1
 	}
 	output_goods = integrated_circuits 
-	value = 5
+	value = 8
 }
 
 clothes_factory = {#
@@ -551,7 +559,7 @@ clothes_factory = {#
 		cotton = 5	
 	}
 	output_goods = clothes 
-	value = 5
+	value = 13
 	bonus = {
 		trigger = { trade_goods_in_state = cotton }
 		value = 0.25
@@ -578,7 +586,7 @@ instruments_factory = {#
 		copper = 1	
 	}
 	output_goods = instruments 
-	value = 5
+	value = 6
 	bonus = {
 		trigger = { trade_goods_in_state = other_minerals }
 		value = 0.125
@@ -610,10 +618,10 @@ turbines_factory = {#
 footwear_factory = {#    
 	template = factory_template
 	input_goods = {    
-		cattle = 3	
+		cattle = 6	
 	}
 	output_goods = footwear 
-	value = 10
+	value = 20
 	bonus = {
 		trigger = { trade_goods_in_state = cattle }
 		value = 0.125
@@ -654,10 +662,10 @@ luxury_furniture_factory = {#
 furniture_factory = {#      
 	template = factory_template
 	input_goods = {    
-		timber = 2
+		timber = 4
 	}
 	output_goods = furniture 
-	value = 5
+	value = 10
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.25
@@ -670,7 +678,7 @@ modern_beverages_factory = {#
 		fertilizers = 5	
 	}
 	output_goods = beverages 
-	value = 5
+	value = 6
 	bonus = {
 		trigger = { trade_goods_in_state = fruit }
 		value = 0.125
@@ -691,7 +699,7 @@ beverages_factory = {#
 		fruit = 20	
 	}
 	output_goods = beverages 
-	value = 5
+	value = 8
 	bonus = {
 		trigger = { trade_goods_in_state = fruit }
 		value = 0.25
@@ -750,7 +758,7 @@ modern_ships_factory = {#
 	}
 	output_goods = ships 
 	is_coastal = yes
-	value = 3
+	value = 4
 	bonus = {
 		trigger = { has_building = steel_factory }
 		value = 0.125
@@ -773,7 +781,7 @@ ships_factory = {#
 	}
 	output_goods = ships 
 	is_coastal = yes
-	value = 2
+	value = 3
 }
 
 modern_aeroplane_factory = {#       
@@ -783,7 +791,7 @@ modern_aeroplane_factory = {#
 		turbines = 5
 	}
 	output_goods = aeroplanes 
-	value = 2
+	value = 3
 	bonus = {
 		trigger = { has_building = transport_factory }
 		value = 0.125
@@ -798,7 +806,7 @@ aeroplane_factory = {#
 		aluminium = 5	
 	}
 	output_goods = aeroplanes 
-	value = 1
+	value = 2
 	bonus = {
 		trigger = { has_building = aluminium_factory }
 		value = 0.125
@@ -813,7 +821,7 @@ computers_factory = {#
 		electric_gear = 15
 	}
 	output_goods = computers 
-	value = 20
+	value = 23
 	bonus = {
 		trigger = { has_building = advanced_machinery_factory }
 		value = 0.125
@@ -832,7 +840,7 @@ telecommunications_factory = {#
 		rubber = 1
 	}
 	output_goods = telecommunications 
-	value = 5
+	value = 11
 	bonus = {
 		trigger = { trade_goods_in_state = copper }
 		value = 0.125
@@ -897,7 +905,7 @@ modern_automobiles_factory = {#
 		electric_gear = 15
 	}
 	output_goods = automobiles 
-	value = 30
+	value = 33
 	bonus = {
 		trigger = { has_building = engines_factory }
 		value = 0.125
@@ -918,7 +926,7 @@ diamonds_factory = {#
 		coal = 4
 	}
 	output_goods = diamonds 
-	value = 5
+	value = 16
 }
 
 advanced_machinery_factory = {#
@@ -929,7 +937,7 @@ advanced_machinery_factory = {#
 		diamonds = 5
 	}
 	output_goods = advanced_machinery 
-	value = 30
+	value = 22
 	bonus = {
 		trigger = { has_building = machine_parts_factory }
 		value = 0.125
@@ -952,7 +960,7 @@ milk_cheese_factory = {#
 		cattle = 20		
 	}
 	output_goods = milk_cheese 
-	value = 10
+	value = 12
 	bonus = {
 		trigger = { has_building = fertilizers_factory }
 		value = 0.125
@@ -992,7 +1000,7 @@ modern_tvs_factory = {#
 		heating_electricity = 2
 	}
 	output_goods = tvs 
-	value = 10
+	value = 14
 	bonus = {
 		trigger = { has_building = telecommunications_factory }
 		value = 0.125
@@ -1029,7 +1037,7 @@ modern_home_appliance_factory = {#
 		heating_electricity = 2
 	}
 	output_goods = home_appliance 
-	value = 10
+	value = 28
 	bonus = {
 		trigger = { has_building = cement_factory }
 		value = 0.125
@@ -1051,7 +1059,7 @@ home_appliance_factory = {#
 		coal = 4
 	}
 	output_goods = home_appliance 
-	value = 10
+	value = 16
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.125
@@ -1069,7 +1077,7 @@ specialized_machinery_factory = {#
 		steel = 4
 	}
 	output_goods = specialized_machinery 
-	value = 10
+	value = 8
 	bonus = {
 		trigger = { has_building = machine_parts_factory }
 		value = 0.125
@@ -1263,133 +1271,133 @@ RGO_template_labourers = {
 fishing_wharf = {
 	template = RGO_template_farmers
 	output_goods = fish 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 cattle_ranch = {
 	template = RGO_template_farmers
 	output_goods = cattle 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 sheep_ranch = {
 	template = RGO_template_farmers
 	output_goods = wool 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 orchard = {
 	template = RGO_template_farmers
 	output_goods = fruit 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 grain_farm = {
 	template = RGO_template_farmers
 	output_goods = grain 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 timber_lodge = {
 	template = RGO_template_farmers
 	output_goods = timber 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 iron_mine = {
 	template = RGO_template_labourers
 	output_goods = iron
-	value = 2.0
+	value = 1.7
 	mine = yes
 }
 
 other_minerals_mine = {
 	template = RGO_template_labourers
 	output_goods = other_minerals
-	value = 2.0
+	value = 1.7
 	mine = yes
 }
 
 copper_mine = {
 	template = RGO_template_labourers
 	output_goods = copper
-	value = 2.0
+	value = 1.7
 	mine = yes
 }
 
 aluminium_mine = {
 	template = RGO_template_labourers
 	output_goods = aluminium 
-	value = 2.0
+	value = 1.7
 	mine = yes
 }
 
 diamonds_mine = {
 	template = RGO_template_labourers
 	output_goods = diamonds 
-	value = 2.0
+	value = 1.7
 	mine = yes
 }
 
 coal_mine = {
 	template = RGO_template_labourers
 	output_goods = coal 
-	value = 2.0
+	value = 1.7
 	mine = yes
 }
 
 petroleum_rig = {
 	template = RGO_template_labourers
 	output_goods = petroleum 
-	value = 2.0
+	value = 1.7
 	mine = yes
 }
 
 rubber_lodge = {
 	template = RGO_template_labourers
 	output_goods = rubber 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 precious_metal_mine = {
 	template = RGO_template_labourers
 	output_goods = gold_silver
-	value = 2.0
+	value = 1.7
 	mine = yes
 }
 
 sugar_plantation = {
 	template = RGO_template_farmers
 	output_goods = sugar 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 tobacco_plantation = {
 	template = RGO_template_farmers
 	output_goods = tobacco 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 coffee_plantation = {
 	template = RGO_template_farmers
 	output_goods = coffee 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
 cotton_plantation = {
 	template = RGO_template_farmers
 	output_goods = cotton 
-	value = 2.0
+	value = 1.7
 	farm = yes
 }
 
@@ -1407,8 +1415,8 @@ artisan_travel_services = {
 		automobiles = 10
 	}
 	output_goods = travel_services 
-	value = 10
-	
+	value = 12
+
 	owner = {
 		poptype = artisan 
 		effect = output
@@ -1424,7 +1432,7 @@ artisan_transport_services = {
 		automobiles = 10
 	}
 	output_goods = transport_services 
-	value = 10
+	value = 12
 	
 	owner = {
 		poptype = artisan 
@@ -1441,7 +1449,7 @@ artisan_services = {
 		automobiles = 10
 	}
 	output_goods = services 
-	value = 10
+	value = 12
 	
 	owner = {
 		poptype = artisan 
@@ -1459,7 +1467,7 @@ artisan_advanced_services = {
 		automobiles = 10
 	}
 	output_goods = advanced_services 
-	value = 10
+	value = 12
 	
 	owner = {
 		poptype = artisan 
