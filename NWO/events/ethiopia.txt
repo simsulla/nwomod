@@ -76,6 +76,9 @@ country_event = {
 			consciousness = 2
 			militancy = 8
 		}
+		all_core = {
+			add_province_modifier = { name = nationalist_agitation duration = 1095 }
+		}
 		ERI = {annex_to = THIS }
 	}
 	
@@ -117,6 +120,31 @@ country_event = {
     name = EVT_8005303_B
 	define_general = { name = " Amha Selassie" personality = energetic background = no_background }
 	government = hms_government country_event = 800054 
+	any_pop = {
+		limit = {
+			type = soldiers
+			type = officers
+		}
+		militancy = 3
+		consciousness = 3
+	}
+	any_pop = {
+		scaled_militancy = {
+			ideology = traditionalist
+			factor = 4
+		}
+		scaled_consciousness = {
+			ideology = traditionalist
+			factor = 4
+		}
+		scaled_militancy = {
+			ideology = conservative
+			factor = 2
+		}
+		scaled_consciousness = {
+			ideology = conservative
+			factor = 2
+		}
 	ai_chance = { factor = 0 }
   }
 }
@@ -129,11 +157,45 @@ country_event = {
 
   trigger = {
     tag = ETH
-	year = 1960 NOT = { year = 1974 }
+	year = 1974 NOT = { year = 1975 }
   }
-
-  mean_time_to_happen = { months = 8 }
-
+ 
+  mean_time_to_happen = {
+	months = 9
+	modifier = {
+		factor = 0.75
+		part_of_sphere = yes
+		sphere_owner = { government = proletarian_dictatorship }
+    }
+	modifier = {
+		factor = 1.2
+		ruling_party_ideology = socialist
+		NOT = { money = 100000 }
+	}
+	modifier = {
+		factor = 0.5
+		ruling_party_ideology = communist
+	}
+	modifier = {
+		factor = 0.8
+		average_consciousness = 4
+		NOT = { money = 100000 }
+	}
+	modifier = {
+		factor = 0.9
+		capital_scope = {
+			OR = {
+				pop_majority_ideology = socialist
+				pop_majority_ideology = communist
+		}
+	  }
+	}
+  }
+  
+  immediate = {
+	 government = proletarian_dictatorship
+  }
+  
   option = {
     name = EVT_8005305_A
 	government = proletarian_dictatorship country_event = 800052
@@ -146,7 +208,7 @@ country_event = {
 	any_pop = { militancy = 3.0 }
 	government = hms_government country_event = 800054
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19 } } }
-	country_event =  { id = 8005306 days = 360 } 
+	country_event =  { id = 8005306 days = 346 } 
 	ai_chance = { factor = 100 }
   }
 }
@@ -194,6 +256,7 @@ country_event = {
 	ai_chance = { factor = 0 }
   }
 }
+
 country_event = {
   id = 8005312
   title = EVT_8005312_NAME
@@ -215,3 +278,135 @@ country_event = {
   }
 }
 
+#End the occupation of Ogaden #Transferred from CWE
+country_event = {
+	id = 8005314
+	title = EVT_8005314_NAME
+	desc = EVT_8005314_DESC
+	picture = "ogaden"
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 9
+	}
+
+	trigger = {
+		year = 1948 NOT = { year = 1949 }
+		tag = GBR
+		any_owned_province = { is_core = ETH }
+		NOT = { war_with = ETH }
+	}
+
+	option = {
+		name = EVT_8005314_A
+		prestige = 10
+		1865 = { secede_province = ETH }
+		1866 = { secede_province = ETH }
+		1867 = { secede_province = ETH }		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 1.5
+				ETH = { in_sphere = THIS } # true at game start
+			}
+		}
+	}
+
+	option = {
+		name = EVT_8005314_B
+		1865 = { state_scope = { # Two scopes needed to change region name
+			change_region_name = "Ogaden"
+			add_core = SML
+		} }
+		diplomatic_influence = { who = ETH value = -200 }
+		random_country = { limit = { tag = ETH NOT = { government = proletarian_dictatorship } } USA = { relation = { who = THIS value = -50 } } } # America is unhappy unless ETH is communist
+		ai_chance = {
+			factor = 0.25
+			modifier = { # Disable if player is ETH
+				factor = 0
+				ETH = { ai = no }
+				OR = {
+					SOM = { ai = yes }
+					SOM = { exists = no }
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = { relation = { who = USA value = 0 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 8005315
+	title = EVT_8005315_NAME
+	# EVT_8005315_NAME;Bale Revolt
+	desc = EVT_8005315_DESC
+	picture = "ethiopian_old_provinces"
+	fire_only_once = yes
+
+	trigger = {
+		tag = ETH
+		year = 1963 NOT = { year = 1964 }
+		owns = 1861
+		NOT = { exists = ADL }
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = EVT_8005315_A
+		ai_chance = { factor = 100 }
+		1861 = { any_pop =  { limit = { culture = oromo } } militancy = 1.0  consciousness = 1 } 
+		1861 = { add_province_modifier = { name = nationalist_agitation duration = 2555 } }
+	}
+}
+
+country_event = {
+	id = 8005316
+	title = EVT_8005316_NAME
+	# EVT_8005316_NAME;1973-1974 Ethiopian Famine
+	desc = EVT_8005316_DESC
+	picture = "ethiopian_1973_famine"
+	fire_only_once = yes
+
+	trigger = {
+		tag = ETH
+		year = 1973 NOT = { year = 1974 }
+		owns = 1861
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = EVT_8005316_A
+		ai_chance = { factor = 100 }
+		badboy = 4
+		1856 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.95 militancy = 2 } }
+		1858 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.95 militancy = 2 } }
+		1863 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.95 militancy = 2 } }
+		set_country_flag = hide_1973_famine
+	}
+	option = {
+		name = EVT_8005316_B
+		ai_chance = { factor = 100 }
+		treaury = -2000
+		set_country_flag = alleviate_1973_famine
+		1856 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.98 militancy = 1 } }
+		1858 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.98 militancy = 1 } }
+		1863 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.98 militancy = 1 } }
+	}	
+	option = {
+		name = EVT_8005316_C
+		ai_chance = { factor = 100 }
+		treaury = -4000
+		1856 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.99 militancy = 0.1 } }
+		1858 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.99 militancy = 0.1 } }
+		1863 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.99 militancy = 0.1 } }
+	}		
+}
