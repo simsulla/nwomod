@@ -146,7 +146,6 @@ country_event = {
 			factor = 2
 		}
 	ai_chance = { factor = 0 }
-  }
 }
 country_event = {
   id = 8005305
@@ -165,6 +164,7 @@ country_event = {
 	modifier = {
 		factor = 0.75
 		part_of_sphere = yes
+		has_country_flag 
 		sphere_owner = { government = proletarian_dictatorship }
     }
 	modifier = {
@@ -179,8 +179,19 @@ country_event = {
 	modifier = {
 		factor = 0.8
 		average_consciousness = 4
+		has_country_flag = hide_1973_famine # The attempted cover up 1973-1974 famine by the Ethiopian government was  one of the major factors that caused the Ethiopian Reovlution and subsquently the rise of the Derg.
 		NOT = { money = 100000 }
 	}
+	modifier = {
+		factor = 2
+		average_consciousness = 4
+		has_country_flag = hide_1973_famine # The attempted cover up 1973-1974 famine by the Ethiopian government was  one of the major factors that caused the Ethiopian Reovlution and subsquently the rise of the Derg.
+	}
+	modifier = {
+		factor = 0.8
+		average_consciousness = 4
+		has_country_flag = alleviate_1973_famine # Alternate scenario where the efforts of the Ethiopian government to alleviate the famine were token at best, extremely petty as worse leads to the Ethiopian Reovlution still happening although with a lower chance than in reality.
+	}	
 	modifier = {
 		factor = 0.9
 		capital_scope = {
@@ -385,7 +396,7 @@ country_event = {
 	
 	option = {
 		name = EVT_8005316_A
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 70 }
 		badboy = 4
 		1856 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.95 militancy = 2 } }
 		1858 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.95 militancy = 2 } }
@@ -394,8 +405,8 @@ country_event = {
 	}
 	option = {
 		name = EVT_8005316_B
-		ai_chance = { factor = 100 }
-		treaury = -2000
+		ai_chance = { factor = 20 }
+		treaury = -200000
 		set_country_flag = alleviate_1973_famine
 		1856 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.98 militancy = 1 } }
 		1858 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.98 militancy = 1 } }
@@ -403,8 +414,8 @@ country_event = {
 	}	
 	option = {
 		name = EVT_8005316_C
-		ai_chance = { factor = 100 }
-		treaury = -4000
+		ai_chance = { factor = 10 }
+		treaury = -400000
 		1856 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.99 militancy = 0.1 } }
 		1858 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.99 militancy = 0.1 } }
 		1863 = { any_pop = { limit = { total_pops = 10000 } poor_strata = { reduce_pop = 0.99 militancy = 0.1 } }
