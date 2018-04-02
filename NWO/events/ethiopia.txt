@@ -42,12 +42,10 @@ country_event = {
 		ERI = { government = democracy country_event = 800054  }
 		release_vassal = ERI
 	}
-
 }
 
 country_event = {
 	id = 1005302
-
 	title = EVT_1005302_NAME
 	desc = EVT_1005302_DESC
 	picture = "haile_selassie"
@@ -63,6 +61,9 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 48 # TODO depend on ETH reforms
+		modifier = {
+			factor = 2
+		}
 	}
 
 	option = {
@@ -93,7 +94,6 @@ country_event = {
 			militancy = 5
 		}
 	}
-
 }
 country_event = {
   id = 8005303
@@ -148,80 +148,90 @@ country_event = {
 	ai_chance = { factor = 0 }
 }
 country_event = {
-  id = 8005305
-  title = EVT_8005305_NAME
-  desc = EVT_8005305_DESC
-  picture = "nwo2_derg"
-  fire_only_once = yes
+	id = 8005305
+	title = EVT_8005305_NAME
+	desc = EVT_8005305_DESC
+	picture = "nwo2_derg"
+	fire_only_once = yes
 
-  trigger = {
-    tag = ETH
-	year = 1974 NOT = { year = 1975 }
-  }
- 
-  mean_time_to_happen = {
-	months = 9
-	modifier = {
-		factor = 0.75
-		part_of_sphere = yes
-		has_country_flag 
-		sphere_owner = { government = proletarian_dictatorship }
-    }
-	modifier = {
-		factor = 1.2
-		ruling_party_ideology = socialist
-		NOT = { money = 100000 }
+	trigger = {
+		tag = ETH
+		year = 1974 NOT = { year = 1975 }
+		government = absolute_monarchy 
+		NOT = { has_country_flag = derg }
 	}
-	modifier = {
-		factor = 0.5
-		ruling_party_ideology = communist
-	}
-	modifier = {
-		factor = 0.8
-		average_consciousness = 4
-		has_country_flag = hide_1973_famine # The attempted cover up 1973-1974 famine by the Ethiopian government was  one of the major factors that caused the Ethiopian Reovlution and subsquently the rise of the Derg.
-		NOT = { money = 100000 }
-	}
-	modifier = {
-		factor = 2
-		average_consciousness = 4
-		has_country_flag = hide_1973_famine # The attempted cover up 1973-1974 famine by the Ethiopian government was  one of the major factors that caused the Ethiopian Reovlution and subsquently the rise of the Derg.
-	}
-	modifier = {
-		factor = 0.8
-		average_consciousness = 4
-		has_country_flag = alleviate_1973_famine # Alternate scenario where the efforts of the Ethiopian government to alleviate the famine were token at best, extremely petty as worse leads to the Ethiopian Reovlution still happening although with a lower chance than in reality.
-	}	
-	modifier = {
-		factor = 0.9
-		capital_scope = {
+
+	mean_time_to_happen = {
+		months = 8
+		modifier = {
+			factor = 0.75
+			part_of_sphere = yes
+			sphere_owner = { government = proletarian_dictatorship }
+		}
+		modifier = {
+			factor = 1.2
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 0.5
+			ruling_party_ideology = communist
+		}
+		modifier = {
+			factor = 0.75
+			ruling_party_ideology = communist_social
+		}
+		modifier = {
+			factor = 0.8
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.5
+			average_militancy = 1
+		}
+		modifier = {
+			factor = 2
+			has_country_flag = hide_1973_famine # The attempted cover up 1973-1974 famine by the Ethiopian government was  one of the major factors that caused the Ethiopian Reovlution and subsquently the rise of the Derg.
+		}		
+		modifier = {
+			factor = 1.5
+			has_country_flag = alleviate_1973_famine # Alternate scenario where the efforts of the Ethiopian government to alleviate the famine were token at best, extremely petty as worse leads to the Ethiopian Revolution still happening although with a lower chance than in reality.
+		}				
+		modifier = {
+			factor = 0.8
 			OR = {
 				pop_majority_ideology = socialist
 				pop_majority_ideology = communist
+				pop_majority_ideology = communist_social
+			}
 		}
-	  }
+		modifier = {
+			factor = 0.9
+			capital_scope = {
+				OR = {
+					pop_majority_ideology = socialist
+					pop_majority_ideology = communist
+					pop_majority_ideology = communist_social
+				}
+			}
+		}
 	}
-  }
-  
-  immediate = {
-	 government = proletarian_dictatorship
-  }
-  
-  option = {
-    name = EVT_8005305_A
-	government = proletarian_dictatorship country_event = 800052
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
-	ai_chance = { factor = 0 }
-  }
 
-  option = {
-    name = EVT_8005305_B
-	any_pop = { militancy = 3.0 }
-	government = hms_government country_event = 800054
-	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.19 } } }
-	country_event =  { id = 8005306 days = 346 } 
-	ai_chance = { factor = 100 }
-  }
+	immediate = {
+		government = proletarian_dictatorship
+	}
+
+	option = {
+		name = EVT_8005305_A
+		country_event = 800042
+		random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+	}
+	option = {
+		name = EVT_8005305_B
+		country_event =  { id = 8005306 days = 346 }
+		government = hms_government country_event = 800054
+		any_pop = { militancy = 3.0 }
+		random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+	}	
 }
 country_event = {
   id = 8005306
@@ -233,6 +243,7 @@ country_event = {
   option = {
     name = EVT_8005306_A
 	government = proletarian_dictatorship country_event = 800052
+	country_event = 8005317
 	relation = { who = USA value = -150 } 
 	relation = { who = GBR value = -150 } 
 	relation = { who = SUN value = 150 } 
@@ -325,10 +336,7 @@ country_event = {
 
 	option = {
 		name = EVT_8005314_B
-		1865 = { state_scope = { # Two scopes needed to change region name
-			change_region_name = "Ogaden"
-			add_core = SML
-		} }
+		1865 = { state_scope = { change_region_name = "Ogaden" add_core = SML } } # Two scopes needed to change region name
 		diplomatic_influence = { who = ETH value = -200 }
 		random_country = { limit = { tag = ETH NOT = { government = proletarian_dictatorship } } USA = { relation = { who = THIS value = -50 } } } # America is unhappy unless ETH is communist
 		ai_chance = {

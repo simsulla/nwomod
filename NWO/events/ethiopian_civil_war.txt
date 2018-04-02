@@ -34,3 +34,31 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 8005317
+	title = EVT_8005317_NAME
+	# EVT_8005317_NAME;Ethiopian Civil War
+	desc = EVT_8005317_DESC
+	picture = "ethiopian_civil_war"
+  	fire_only_once = yes
+ 	is_triggered_only = yes
+	
+	option = {
+		name = EVT_8005317_A
+		ai_chance = { factor = 100 }
+		1858 = { any_pop =  { limit = { culture = afar } militancy = 8.0  consciousness = 6 } 
+		1858 = { add_province_modifier = { name = nationalist_agitation duration = 7300 } }
+		1852 = { any_pop =  { limit = { ideology = traditionalist } militancy = 10.0  consciousness = 8  } 
+		1852 = { any_pop =  { limit = { ideology = conservative } militancy = 10.0  consciousness = 8  }
+		1855 = { any_pop =  { limit = { culture = oromo } militancy = 8.0  consciousness = 6 } 
+		1855 = { add_province_modifier = { name = nationalist_agitation duration = 6188 } }
+		1861 = { any_pop =  { limit = { culture = oromo } militancy = 8.0  consciousness = 6 } 
+		1861 = { add_province_modifier = { name = nationalist_agitation duration = 6188 } }
+		1863 = { any_pop =  { limit = { culture = oromo } militancy = 8.0  consciousness = 6 } 
+		1863 = { add_province_modifier = { name = nationalist_agitation duration = 6188 } }
+		any_pop =  { limit = { culture = somali } militancy = 8.0  consciousness = 7 } 
+		any_pop =  { limit = { culture = tigray } militancy = 8.0  consciousness = 8 }
+		any_pop =  { limit = { culture = tigre } militancy = 8.0  consciousness = 9 }
+		any_pop =  { limit = { culture = african_minor } militancy = 4.0  consciousness = 5 } 
+	}
+}
