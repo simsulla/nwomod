@@ -1,0 +1,88 @@
+country_event = {
+	id = 8001107
+	title = EVT_8001107_NAME # Independence of Tonga
+	desc = EVT_8001107_DESC
+	picture = "tongan_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_our_vassal = TON
+		year = 1970 NOT = { year = 1971 }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+    option = {
+	  name = EVT_8001107_A
+	  prestige = 10
+	  release_vassal = TON
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001107_B
+	  prestige = -10
+	  random_country = { limit = { tag = TON } any_pop = { limit = { culture = polynesian location = { is_core = TON } } militancy = 8  consciousness = 5.0 } }
+	  TON = {
+		relation = { who = GBR value = -150 } 
+	  }
+	  # TODO TON UDI
+	  ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+	id = 8001108
+	title = EVT_8001108_NAME # 2006 Nukuâ€˜alofa riots
+	desc = EVT_8001108_DESC
+	picture = "nuku‘alofa_riots"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TON
+		government = absolute_monarchy
+		year = 2006 NOT = { year = 2007 }
+	}
+	
+	mean_time_to_happen = { months = 11 }
+	
+    option = {
+	  name = EVT_8001108_A
+	  country_event =  { id = 8001108 days = 1140 }
+	  any_pop = { limit = { culture = polynesian } militancy = -4  consciousness = -3.0 }
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001108_B
+	  any_pop = { limit = { culture = polynesian } militancy = 4  consciousness = 3.0 }
+	  ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 8001109
+	title = EVT_8001109_NAME # The Democratisation of Tonga
+	desc = EVT_8001109_DESC
+	picture = "tonga_democratisation"
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { months = 11 }
+	
+    option = {
+	  name = EVT_8001109_A
+	  government = hms_government country_event =  { id = 800054 }
+	  any_pop = { limit = { culture = polynesian } militancy = -4  consciousness = -3.0 }
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001109_B
+	  any_pop = { limit = { culture = polynesian } militancy = 5  consciousness = 4.0 }
+	  ai_chance = { factor = 0 }
+    }
+}

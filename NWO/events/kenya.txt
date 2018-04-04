@@ -100,3 +100,28 @@ country_event = {
 	  government = presidential_dictatorship country_event = 800050
     }
 }
+
+country_event = {
+	id = 8029803
+	title = EVT_8029803_NAME # The Shifta War
+	desc = EVT_8029803_DESC
+	picture = "kenyatta" 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KEN
+		exists = KEN
+		war = no
+		year = 1963 NOT = { year = 1964 }
+		owns = 2031
+	}
+
+	mean_time_to_happen = { months = 8 }
+	
+    option = {
+	  name = EVT_8029803_A
+	  2031 = { add_province_modifier = { name = nationalist_agitation duration = 1460 } }
+	  any_pop = { limit = { culture = somali } militancy = 10 consciousness = 5 }
+    }
+}
