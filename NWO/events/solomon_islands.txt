@@ -1,0 +1,211 @@
+country_event = {
+	id = 8001111
+	title = EVT_8001111_NAME # Independence of Solomon Islands 
+	desc = EVT_8001111_DESC
+	picture = "solomon_islands_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		owns = 2534
+		owns = 2535
+		NOT = { exists = SOL }
+		year = 1976 NOT = { year = 1977 }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+    option = {
+	  name = EVT_8001111_A
+	  prestige = 5
+	  release_vassal = SOL
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001111_B
+	  prestige = -10
+	  any_pop = { limit = { culture = melanesian location = { is_core = SOL } } militancy = 8  consciousness = 5.0 }
+	  # TODO SOL UDI
+	  ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+	id = 8001112
+	title = EVT_8001112_NAME # Independence of the Solomon Islands
+	desc = EVT_8001112_DESC
+	picture = "solomon_islands_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		owns = 2534
+		owns = 2535
+		NOT = { exists = SOL }
+		year = 1975 NOT = { year = 1976 }
+		OR = { tag = GBR is_our_vassal = SOL year = 1975 NOT = { year = 1976 } }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+    option = {
+	  name = EVT_8001112_A
+	  prestige = 10
+	  release = SOL
+	  release_vassal = SOL
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001112_B
+	  prestige = -10
+	  any_pop = { limit = { culture = melanesian location = { is_core = SOL } } militancy = 8  consciousness = 5.0 }
+	  # TODO SOL UDI
+	  ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+	id = 8001113
+	title = EVT_8001113_NAME # Ethnic tensions in the Solomon Islands
+	desc = EVT_8001113_DESC
+	picture = "solomon_islands_ethnic_violence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOL
+		year = 1998 NOT = { year = 2000 }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+    option = {
+	  name = EVT_8001113_A
+	  release = SOL
+	  any_pop = { limit = { culture = melanesian idealogy = populist location = { is_core = SOL } } militancy = 8  consciousness = 5.0 }
+	  set_country_flag = solomon_islands_ethnic_violence
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001113_B
+	  any_pop = { limit = { culture = melanesian idealogy = populist location = { is_core = SOL } } militancy = 5  consciousness = 3.0 }
+	  set_country_flag = solomon_islands_ethnic_violence
+	  ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+	id = 8001114
+	title = EVT_8001114_NAME # 
+	desc = EVT_8001114_DESC
+	picture = "solomon_islands_ethnic_violence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOL
+		year = 2000 NOT = { year = 2001 }
+		has_country_flag = solomon_islands_ethnic_violence
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+    option = {
+	  name = EVT_8001114_A
+	  any_pop = { limit = { culture = melanesian idealogy = populist location = { is_core = SOL } } militancy = 2  consciousness = 2.0 }
+	  add_country_modifier = { name = national_confusion duration = 730 }
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001114_B
+	  any_pop = { limit = { culture = melanesian location = { is_core = SOL } } militancy = 4  consciousness = 3.0 }
+	  add_country_modifier = { name = power_vacuum duration = 730 }
+	  ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+	id = 8001116
+	title = EVT_8001116_NAME # 
+	desc = EVT_8001116_DESC
+	picture = "ramsi"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOL
+		year = 2003 NOT = { year = 2004 }
+		has_country_flag = solomon_islands_ethnic_violence
+	}
+	
+	mean_time_to_happen = { months = 7 }
+	
+    option = {
+	  name = EVT_8001116_A
+	  clr_country_flag = solomon_islands_ethnic_violence
+	  any_country = {
+		  limit = { OR = { tag = AST tag = NZL tag = PPN tag = FIJ tag = TON tag = NIU tag = COI  tag = SAM tag = MIC tag = KIR tag = MAR tag = TUV tag = PAU } }
+		  country_event = 8001117 # request outside help
+	  }
+	  any_pop = { limit = { culture = melanesian idealogy = populist location = { is_core = SOL } } militancy = 1  consciousness = 1.0 }
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001116_B
+	  any_pop = { limit = { culture = melanesian location = { is_core = SOL } } militancy = 3  consciousness = 2.0 } # The conflict continues
+	  clr_country_flag = solomon_islands_ethnic_violence
+	  ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+	id = 8001115
+	title = EVT_8001115_NAME # 
+	desc = EVT_8001115_DESC
+	picture = "solomon_islands_ethnic_violence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOL
+		year = 2000 NOT = { year = 2001 }
+		has_country_flag = solomon_islands_ethnic_violence
+	}
+	
+	mean_time_to_happen = { months = 10 }
+	
+    option = {
+	  name = EVT_8001115_A
+	  any_pop = { limit = { culture = melanesian idealogy = populist location = { is_core = SOL } } militancy = -2  consciousness = -3.0 }
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001115_B
+	  any_pop = { limit = { culture = melanesian location = { is_core = SOL } } militancy = 3  consciousness = 2.0 } # Do not sign the agreement
+	  ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+	id = 8001117
+	title = EVT_8001117_NAME # 
+	desc = EVT_8001117_DESC
+	picture = "ramsi"
+		
+    is_triggered_only = yes
+	
+    option = {
+	  name = EVT_8001117_A
+	  FROM = { relation = { who = THIS value = 100 } }
+	  SOL = { military_access = THIS }
+  	  ai_chance = { factor = 90 }
+    }
+  
+    option = {
+	  name = EVT_8001117_B
+	  prestige = -2
+	  ai_chance = { factor = 10 }
+    }
+}
