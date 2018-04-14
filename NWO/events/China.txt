@@ -1155,7 +1155,7 @@ country_event = {
 
   option = {
     name = EVT_8002853_A
-	any_pop = { militancy = 1.0 consciousness = 2 }relation = { who = USA value = -100 } 
+	any_pop = { militancy = 1.0 consciousness = 2 } relation = { who = USA value = -100 } 
   }
 }
 country_event = {
@@ -1622,7 +1622,7 @@ country_event = {
     name = "EVT_8200024_A"
 	relation = { who = CHI value = -100 } 
 	clr_global_flag = chinese_unity_govt 
-	CHI = { limit = { exists = KMT } country_event =  { id = 8200025 days = 30 } }
+	CHI = { country_event =  { id = 8200025 days = 30 } }
 	ai_chance = { factor = 100 }
   }
 
@@ -1630,7 +1630,7 @@ country_event = {
     name = "EVT_8200024_B"
 	relation = { who = CHI value = 20 } 
 	any_pop = { militancy = 1.0 consciousness = 1 }
-	CHI = { limit = { exists = KMT } country_event =  { id = 8200026 days = 30 } }
+	CHI = { country_event =  { id = 8200026 days = 30 } }
 	ai_chance = { factor = 0 }
   }
 }

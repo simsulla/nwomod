@@ -3,23 +3,14 @@ political_decisions = {
 	allow_form_korea = {
 		picture = "claim_greater_korea"
 		potential = {
-			OR = { 
-				is_sphere_leader_of = SKO
-				is_sphere_leader_of = NKO
-				SKO = { vassal_of = THIS }
-				NKO = { vassal_of = THIS }
-				AND = { year = 1960 NOT = { exists = NKO } }
-				AND = { year = 1960 NOT = { exists = SKO } } # need the year to prevent early formation
-			}
-			NOT = { exists = KOR }
+			NKO = { OR = { in_sphere = THIS vassal_of = THIS } }
+			SKO = { OR = { in_sphere = THIS vassal_of = THIS } }
 			NOT = { has_country_flag = allow_form_korea }
-			1624 = { OR = { owned_by = SKO owned_by = NKO } }
-			1619 = { OR = { owned_by = SKO owned_by = NKO } }
 		}
 		allow = {
 			war = no
-			NKO = { OR = { exists = no in_sphere = THIS vassal_of = THIS } }
-			SKO = { OR = { exists = no in_sphere = THIS vassal_of = THIS } }
+			NKO = { OR = { in_sphere = THIS vassal_of = THIS } NOT = { government = provisional_government } }
+			SKO = { OR = { in_sphere = THIS vassal_of = THIS } NOT = { government = provisional_government } }
 		}
 		effect = {
 			set_country_flag = allow_form_korea
@@ -45,44 +36,46 @@ political_decisions = {
 					exists = SKO
 					exists = NKO
 					NOT = { has_global_flag = korea_reformed }
-					SKO = {NOT = {war_with = NKO}}
+					SKO = { NOT = {war_with = NKO} }
 					OR = { # both can't be ai - find with multi player
 						AND = {
 							tag = SKO
-							NKO = {ai = yes is_vassal = no part_of_sphere = no }
+							NKO = { ai = yes is_vassal = no part_of_sphere = no }
 							is_vassal = no
 						}
 						AND = {
 							ai = no
 							tag = NKO
-							SKO = {ai = yes is_vassal = no part_of_sphere = no}
+							SKO = { ai = yes is_vassal = no part_of_sphere = no }
 							is_vassal = no
 						}
 					}
 					OR = {
 						AND = {
-							SKO = {government = proletarian_dictatorship}
-							NKO = {government = proletarian_dictatorship}
+							SKO = { government = proletarian_dictatorship }
+							NKO = { government = proletarian_dictatorship }
 						}
 						AND = {
-							SKO = {government = presidential_dictatorship}
-							NKO = {government = presidential_dictatorship}
+							SKO = { government = presidential_dictatorship }
+							NKO = { government = presidential_dictatorship }
 						}
 						AND = {
-							SKO = {government = populist_dictatorship}
-							NKO = {government = populist_dictatorship}
+							SKO = { government = populist_dictatorship }
+							NKO = { government = populist_dictatorship }
 						}
 						AND = {
-							SKO = {government = absolute_monarchy}
-							NKO = {government = absolute_monarchy}
+							SKO = { government = absolute_monarchy }
+							NKO = { government = absolute_monarchy }
 						}
 						AND = {
-							SKO = {government = hms_government}
-							NKO = {government = hms_government}
+							SKO = { government = hms_government }
+							NKO = { government = hms_government }
+							NOT = { ruling_party_ideology = communist }
 						}
 						AND = {
-							SKO = {government = democracy}
-							NKO = {government = democracy}
+							SKO = { government = democracy }
+							NKO = { government = democracy }
+							NOT = { ruling_party_ideology = communist }
 						}
 					}
 				}

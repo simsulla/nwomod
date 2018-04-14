@@ -1705,17 +1705,7 @@ country_event = {
 				NOT = { tag = FROM }
 				any_owned_province = {
 					is_core = THIS
-					OR = {
-						NOT = { province_control_days = 30 }
-						AND = {
-							has_pop_type = labourers
-							unemployment_by_type = { value = 1 type = labourers }
-						}
-						AND = {
-							has_pop_type = farmers
-							unemployment_by_type = { value = 1 type = farmers }
-						}
-					}
+					NOT = { province_control_days = 30 }
 				}
 			}
 			country_event = 2660
@@ -1738,17 +1728,7 @@ country_event = {
                         limit = {
                                 is_core = FROM
                                 NOT = { is_core = THIS }        
-                                OR = {
-                                        NOT = { province_control_days = 30 }
-                                        AND = {
-                                                has_pop_type = labourers
-                                                unemployment_by_type = { value = 1 type = labourers }
-                                        }
-                                        AND = {
-                                                has_pop_type = farmers
-                                                unemployment_by_type = { value = 1 type = farmers }
-                                        }
-                                }
+                                NOT = { province_control_days = 30 }
                         }
                         secede_province = FROM
                 }

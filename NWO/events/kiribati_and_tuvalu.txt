@@ -1,0 +1,103 @@
+country_event = {
+	id = 8001108
+	title = EVT_8001108_NAME # Independence of Kiribati
+	desc = EVT_8001108_DESC
+	picture = "kiribati_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		owns = 2527 
+		year = 1979 NOT = { year = 1980 }
+		NOT = { exists = KIR }
+		war = no
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+    option = {
+	  name = EVT_8001108_A
+	  prestige = 5
+	  release = KIR
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001108_B
+	  prestige = -5
+	  any_pop = { limit = { culture = micronesian location = { is_core = KIR } } militancy = 8  consciousness = 5.0 }
+	  # TODO KIR UDI
+	  ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+	id = 8001109
+	title = EVT_8001109_NAME # Independence of Tuvalu
+	desc = EVT_8001109_DESC
+	picture = "tuvalu_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		owns = 2541 
+		has_counntry_flag = split_gilbert_and_ellice_islands
+		year = 1978 NOT = { year = 1979 }
+		NOT = { exists = KIR }
+		war = no
+	}
+	
+	mean_time_to_happen = { months = 10 }
+	
+    option = {
+	  name = EVT_8001109_A
+	  prestige = 5
+	  release = TUV
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001109_B
+	  prestige = -5
+	  any_pop = { limit = { culture = polynesian location = { is_core = TUV } } militancy = 8  consciousness = 5.0 }
+	  # TODO TUV UDI
+	  ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+	id = 8001110
+	title = EVT_8001110_NAME # Independence of Tuvalu
+	desc = EVT_8001110_DESC
+	picture = "gilbert_and_ellice_islands"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		owns = 2541 
+		owns = 2527
+		has_counntry_flag = split_gilbert_and_ellice_islands
+		year = 1974 NOT = { year = 1975 }
+		NOT = { exists = KIR }
+		NOT = { exists = TUV }
+		war = no
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+    option = {
+	  name = EVT_8001110_A
+	  2541 = { remove_core = KIR }
+	  set_counntry_flag = split_gilbert_and_ellice_islands
+  	  ai_chance = { factor = 93 }
+    }
+  
+    option = {
+	  name = EVT_8001110_B
+	  any_pop = { limit = { culture = polynesian location = { is_core = TUV } } consciousness = 5.0 }
+	  ai_chance = { factor = 7 }
+    }
+}

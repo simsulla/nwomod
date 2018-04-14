@@ -353,13 +353,16 @@ country_event = {
 
   option = {
     name = EVT_8001059_A
-any_pop = { consciousness = -0.5 }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }
+	any_pop = { consciousness = -0.5 }
+	random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.35 } } }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8001059_B
-any_pop = { consciousness = 1  }random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.55 } } }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }
+	any_pop = { consciousness = 1  }
+	random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.55 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.55 } } }
 	ai_chance = { factor = 0 }
   }
 }
@@ -382,7 +385,8 @@ country_event = {
 
   option = {
     name = EVT_8001060_A
-any_pop = { consciousness = -0.1 }relation = { who = RAJ value = 10 } relation = { who = HND value = 10 } relation = { who = JAP value = 10 } relation = { who = NZL value = 10 } relation = { who = FRA value = 10 } relation = { who = GBR value = 10 } relation = { who = USA value = 10 } relation = { who = AST value = 10 } relation = { who = SUN value = -20 } 
+	any_pop = { consciousness = -0.1 }
+	relation = { who = RAJ value = 10 } relation = { who = HND value = 10 } relation = { who = JAP value = 10 } relation = { who = NZL value = 10 } relation = { who = FRA value = 10 } relation = { who = GBR value = 10 } relation = { who = USA value = 10 } relation = { who = AST value = 10 } relation = { who = SUN value = -20 } 
   }
 }
 country_event = {
@@ -893,7 +897,8 @@ country_event = {
 
   option = {
     name = EVT_8001084_A
-	any_pop = { consciousness = -0.7 }relation = { who = GBR value = 100 } 
+	any_pop = { consciousness = -0.7 }
+	relation = { who = GBR value = 100 } 
   }
 }
 country_event = {
@@ -938,12 +943,15 @@ country_event = {
   option = {
     name = EVT_8001086_B
 	ai_chance = { factor  = 0 }
-	relation = { who = USA value = -20 } relation = { who = GBR value = -20 } relation = { who = SUN value = 10 } any_pop = { militancy = 1.5 }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
+	relation = { who = USA value = -20 } relation = { who = GBR value = -20 } relation = { who = SUN value = 10 } any_pop = { militancy = 1.5 }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.4 } } }
   }
 
   option = {
     name = EVT_8001086_C
-	relation = { who = USA value = -10 } relation = { who = GBR value = -10 } any_pop = { consciousness = 1.8 }random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }
+	relation = { who = USA value = -10 } relation = { who = GBR value = -10 } any_pop = { consciousness = 1.8 }
+	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.6 } } }
+	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.6 } } }
   }
 }
 country_event = {

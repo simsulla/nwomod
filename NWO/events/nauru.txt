@@ -1,0 +1,65 @@
+country_event = {
+	id = 8001105
+	title = EVT_8001105_NAME # Independence of Nauru
+	desc = EVT_8001105_DESC
+	picture = "nauru_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AST
+		is_our_vassal = NAU
+		NAU = { government = provisional_government }
+		year = 1968 NOT = { year = 1969 }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+    option = {
+	  name = EVT_8001104_A
+	  prestige = 10
+	  release_vassal = NAU
+	  NAU = {
+		government = democracy country_event = 800054 #
+		relation = { who = AST value = 100 } 
+	  }
+	  create_alliance = NAU
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001104_B
+	  prestige = -10
+	  random_country = { limit = { tag = NAU } any_pop = { limit = { culture = polynesian location = { is_core = NAU } } militancy = 8  consciousness = 5.0 } }
+	  # TODO NAU UDI
+	  ai_chance = { factor = 0 }
+    }	
+	option = {
+	  name = EVT_8001104_C
+	  prestige = -10
+	  any_pop = { limit = { culture = polynesian location = { is_core = NAU } } militancy = 8  consciousness = 8.0 }
+	  inherit = NAU
+	  ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+	id = 8001106
+	title = EVT_8001106_NAME # Independence of Nauru
+	desc = EVT_8001106_DESC
+	picture = "nauru_phosphate"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 2523
+		year = 2000 NOT = { year = 2006 }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+    option = {
+	  name = EVT_8001106_A
+	  2523 = { trade_goods = fruit }
+  	  ai_chance = { factor = 100 }
+    }
+}

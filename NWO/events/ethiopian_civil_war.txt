@@ -1,0 +1,64 @@
+country_event = {
+	id = 8005313
+	title = EVT_8005313_NAME
+	# EVT_8005313_NAME;Rise of ethnic nationalism in Ethiopia
+	desc = EVT_8005313_DESC
+	picture = "ethiopia_pop_1976"
+	fire_only_once = yes
+
+	trigger = {
+		tag = ETH
+		year = 1960 NOT = { year = 1962 }
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVT_8005313_A
+		ai_chance = { factor = 100 }
+		1855 = { add_core = ADL } #Oromia
+		1859 = { add_core = ADL } #Oromia
+		1861 = { add_core = ADL } #Oromia
+		1863 = { add_core = ADL } #Oromia
+		1851 = { add_core = AFR } #Afaria
+		1858 = { add_core = AFR } #Afaria
+		1865 = { add_core = OGA } #Ogadenia
+		1866 = { add_core = OGA } #Ogadenia
+		1867 = { add_core = OGA } #Ogadenia
+		1860 = { add_core = SID } #Sidama
+		1864 = { add_core = SID } #Sidama
+		1862 = { add_core = GMB } #Gambela
+	}
+}
+
+country_event = {
+	id = 8005317
+	title = EVT_8005317_NAME
+	# EVT_8005317_NAME;Ethiopian Civil War
+	desc = EVT_8005317_DESC
+	picture = "ethiopian_civil_war"
+  	fire_only_once = yes
+ 	is_triggered_only = yes
+	
+	option = {
+		name = EVT_8005317_A
+		ai_chance = { factor = 100 }
+		1858 = { any_pop =  { limit = { culture = afar } militancy = 8.0  consciousness = 6 } 
+		1858 = { add_province_modifier = { name = nationalist_agitation duration = 7300 } }
+		1852 = { any_pop =  { limit = { ideology = traditionalist } militancy = 10.0  consciousness = 8  } 
+		1852 = { any_pop =  { limit = { ideology = conservative } militancy = 10.0  consciousness = 8  }
+		1855 = { any_pop =  { limit = { culture = oromo } militancy = 8.0  consciousness = 6 } 
+		1855 = { add_province_modifier = { name = nationalist_agitation duration = 6188 } }
+		1861 = { any_pop =  { limit = { culture = oromo } militancy = 8.0  consciousness = 6 } 
+		1861 = { add_province_modifier = { name = nationalist_agitation duration = 6188 } }
+		1863 = { any_pop =  { limit = { culture = oromo } militancy = 8.0  consciousness = 6 } 
+		1863 = { add_province_modifier = { name = nationalist_agitation duration = 6188 } }
+		any_pop =  { limit = { culture = somali } militancy = 8.0  consciousness = 7 } 
+		any_pop =  { limit = { culture = tigray } militancy = 8.0  consciousness = 8 }
+		any_pop =  { limit = { culture = tigre } militancy = 8.0  consciousness = 9 }
+		any_pop =  { limit = { culture = african_minor } militancy = 4.0  consciousness = 5 } 
+	}
+}

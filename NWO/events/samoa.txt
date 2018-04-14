@@ -1,0 +1,45 @@
+country_event = {
+	id = 8001104
+	title = EVT_8001104_NAME # Independence of Samoa
+	desc = EVT_8001104_DESC
+	picture = "samoan_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NZL
+		is_our_vassal = SAM
+		SAM = { government = provisional_government }
+		year = 1962 NOT = { year = 1963 }
+	}
+	
+	mean_time_to_happen = { months = 1 } 
+	
+	option = {
+	  	name = EVT_8001104_A
+	  	prestige = 10
+	  	release_vassal = SAM
+	  	SAM = {
+			government = hms_government country_event = 800054 # Treaty of Friendship between Samoa and New Zealand
+			relation = { who = NZL value = 200 } 
+	  	}
+	  	create_alliance = SAM
+  	  	ai_chance = { factor = 85 }
+	}
+  
+    option = {
+	  	name = EVT_8001104_B
+	  	prestige = -10
+	  	random_country = { limit = { tag = SAM } any_pop = { limit = { culture = polynesian location = { is_core = SAM } } militancy = 8  consciousness = 5.0 } }
+	  	# TODO SAM UDI
+	  	ai_chance = { factor = 15 }
+   	 }
+
+	option = {
+	  	name = EVT_8001104_C
+	  	prestige = -10
+	  	any_pop = { limit = { culture = polynesian location = { is_core = SAM } } militancy = 8  consciousness = 8.0 }
+	  	inherit = SAM
+	  	ai_chance = { factor = 0 }
+    	}
+}
