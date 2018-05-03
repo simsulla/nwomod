@@ -1,0 +1,36 @@
+country_event = {
+	id = 8001133
+	title = EVT_8001133_NAME # Independence of Vanuatu
+	desc = EVT_8001133_DESC
+	picture = "vanuatu_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1980 NOT = { year = 1990 }
+		OR = { tag = FRA tag = GBR }
+		OR = { government = hms_government government = democracy }
+		is_our_vassal = VAN
+		}
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+    option = {
+	  name = EVT_8001133_A
+	  prestige = 25
+	  release_vassal = VAN
+	  VAN = { government = democracy country_event = 800054 }
+	  diplomatic_influence = { who = VAN value = 200 }
+	  FRA = { diplomatic_influence = { who = VAN value = -110 } } 
+	  random_country = { limit = { is_our_vassal = VAN OR = { tag = FRA tag = GBR } } relation = { who = THIS value = -25 } }
+  	  ai_chance = { factor = 90 }
+    }
+  
+    option = {
+	  name = EVT_8001133_B
+	  prestige = -30
+	  random_country = { limit = { tag = VAN } any_pop = { limit = { culture = micronesian location = { is_core = VAN } } militancy = 8  consciousness = 5.0 } }
+	  ai_chance = { factor = 10 }
+    }
+}
