@@ -355,8 +355,8 @@ country_event = {
 #Fund Sanitarium?
 country_event = {
 	id = 3005
-	title = "EVTNAME3005"
-	desc = "EVTDESC3005"
+	title = "EVT_8001134_NAME"
+	desc = "EVT_8001134_DESC"
 	picture = "Hospital"
 	
 	trigger = {
@@ -379,7 +379,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA3005"
+		name = "EVT_8001134_A"
 		random_state = {
 			scaled_militancy = {
 				ideology = conservative
@@ -392,14 +392,14 @@ country_event = {
 			random_province = {
 				add_province_modifier = {
 					name = government_sanitarium
-					duration = -1
+					duration = 3650
 				}
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTB3005"
+		name = "EVT_8001134_B"
 		random_state = {
 			scaled_militancy = {
 				ideology = conservative
@@ -413,7 +413,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC3005"
+		name = "EVT_8001134_C"
 		random_state = {
 			rich_strata = {
 				militancy = -1
@@ -421,7 +421,7 @@ country_event = {
 			random_province = {
 				add_province_modifier = {
 					name = government_sanitarium
-					duration = 3650
+					duration = 1825
 				}
 			}
 		}
