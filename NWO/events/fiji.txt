@@ -1,0 +1,32 @@
+country_event = {
+	id = 8001134
+	title = EVT_8001134_NAME # Independence of Fiji
+	desc = EVT_8001134_DESC
+	picture = "fiji_independence"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		owns = 2520 
+		owns = 2454
+		year = 1970 NOT = { year = 1971 }
+		war = no
+	}
+	
+	mean_time_to_happen = { months = 10 }
+	
+    option = {
+	  name = EVT_8001134_A
+	  release = FIJ
+	  prestige = 10
+  	  ai_chance = { factor = 100 }
+    }
+  
+    option = {
+	  name = EVT_8001134_B
+	  prestige = -10
+	  any_pop = { limit = { culture = polynesian location = { is_core = FIJ } } militancy = 6.0 consciousness = 5.0 }
+	  ai_chance = { factor = 7 }
+    }
+}
