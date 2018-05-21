@@ -1,0 +1,37 @@
+country_event = {
+	id = 8001135
+	title = EVT_8001135_NAME
+	# EVT_8001135_NAME;The Ogaden War
+	desc = EVT_8001135_DESC
+	picture = "ethiopia_pop_1976"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOM
+		year = 1977 NOT = { year = 1978 }
+		has_global_flag = ogaden_war_prelude
+		war = no
+		NOT = { owns = 1865 }
+		NOT = { owns = 1866 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = 8001135_A
+		ai_chance = { factor = 100 }
+		badboy = 5
+		any_pop = { militancy = -2 consciousness = -1 }
+		prestige = 5
+		clr_global_flag = ogaden_war_prelude
+		war = { target = ETH attacker_goal = { casus_belli = acquire_core_state state_province_id = 1866 state_province_id = 1865 } defender_goal = { casus_belli = status_quo } }
+	}
+	option = {
+		name = 8001135_A
+		ai_chance = { factor = 0 }
+		any_pop = { militancy = 0.5 consciousness = 1 }
+        clr_global_flag = ogaden_war_prelude
+	}
+}

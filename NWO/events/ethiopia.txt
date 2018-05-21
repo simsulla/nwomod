@@ -224,6 +224,7 @@ country_event = {
 		name = EVT_8005305_A
 		country_event = 800042
 		random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+		set_global_flag = ogaden_war_prelude
 	}
 	option = {
 		name = EVT_8005305_B
@@ -231,6 +232,7 @@ country_event = {
 		government = hms_government country_event = 800054
 		any_pop = { militancy = 3.0 }
 		random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
+		set_global_flag = ogaden_war_prelude
 	}	
 }
 country_event = {
@@ -258,8 +260,8 @@ country_event = {
 
   trigger = {
     tag = ETH
-	year = 1991 NOT = { year = 1999 }
-    government = proletarian_dictatorship
+	capital_scope = { controlled_by = REB }
+	has_global_flag = ethiopian_civil_war
   }
 
   mean_time_to_happen = { months = 1 }
@@ -268,13 +270,15 @@ country_event = {
     name = EVT_8005309_A
 	government = democracy country_event = 800054
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	clr_global_flag = ethiopian_civil_war
 	release = ERI
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = EVT_8005309_B
-	any_pop = { militancy = 5.0 }
+	any_pop = { militancy = 10.0 }
+	clr_global_flag = ethiopian_civil_war
 	ai_chance = { factor = 0 }
   }
 }
