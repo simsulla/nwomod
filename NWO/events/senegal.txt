@@ -105,8 +105,8 @@ country_event = {
 #The Senegambia Confederation
 country_event = {
   id = 1512034
-  title = "The Senegambia Confederation"
-  desc = EVTDESC1512034
+  title = EVT_1512034_NAME
+  desc = EVT_1512034_DESC
   picture = "sen_gam_union"
 
   fire_only_once = yes
@@ -124,7 +124,7 @@ country_event = {
   mean_time_to_happen = { months = 2 }
 
   option = {
-    name = "Form a full union!"
+    name = EVT_1512034_A
     prestige = 100
     inherit = GAM
     any_owned = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
@@ -132,7 +132,7 @@ country_event = {
   }
 
   option = {
-    name = "Adopt a confederation structure"
+    name = EVT_1512034_B
     prestige = 50
     create_vassal = GAM
     create_alliance = GAM
@@ -141,7 +141,7 @@ country_event = {
   }
 
   option = {
-    name = "We want no Gambians in our glorious nation"
+    name = EVT_1512034_C
     prestige_factor = 0.25
     prestige = 25
     ai_chance = { factor = 0.1 }
@@ -152,8 +152,8 @@ country_event = {
 #The Senegambia Confederation end
 country_event = {
   id = 1512035
-  title = "Dissolution of the Senegambia Confederation"
-  desc = EVTDESC1512035
+  title = EVT_1512035_NAME
+  desc = EVT_1512035_DESC
   picture = "sen_gam_union_end"
 
   fire_only_once = yes
@@ -171,14 +171,14 @@ country_event = {
   mean_time_to_happen = { months = 9 }
 
   option = {
-    name = "End the confederation!"
+    name = EVT_1512035_A
     prestige = 15
     release_vassal = GAM
     ai_chance = { factor = 0.8 }
   }
 
   option = {
-    name = "Cling onto Gambia!"
+    name = EVT_1512035_B
     prestige = -50
     badboy = 5
     add_country_modifier = { name = national_confusion duration = 3650 }
