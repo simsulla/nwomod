@@ -1,7 +1,7 @@
 country_event = {
-	id = 8001108
-	title = EVT_8001108_NAME # Independence of Kiribati
-	desc = EVT_8001108_DESC
+	id = 8001151
+	title = EVT_8001151_NAME # Independence of Kiribati
+	desc = EVT_8001151_DESC
 	picture = "kiribati_independence"
 	
 	fire_only_once = yes
@@ -17,14 +17,14 @@ country_event = {
 	mean_time_to_happen = { months = 6 }
 	
     option = {
-	  name = EVT_8001108_A
+	  name = EVT_8001151_A
 	  prestige = 5
 	  release = KIR
   	  ai_chance = { factor = 100 }
     }
   
     option = {
-	  name = EVT_8001108_B
+	  name = EVT_8001151_B
 	  prestige = -5
 	  any_pop = { limit = { culture = micronesian location = { is_core = KIR } } militancy = 8  consciousness = 5.0 }
 	  # TODO KIR UDI
@@ -33,9 +33,9 @@ country_event = {
 }
 
 country_event = {
-	id = 8001109
-	title = EVT_8001109_NAME # Independence of Tuvalu
-	desc = EVT_8001109_DESC
+	id = 8001152
+	title = EVT_8001152_NAME # Independence of Tuvalu
+	desc = EVT_8001152_DESC
 	picture = "tuvalu_independence"
 	
 	fire_only_once = yes
@@ -52,7 +52,7 @@ country_event = {
 	mean_time_to_happen = { months = 10 }
 	
     option = {
-	  name = EVT_8001109_A
+	  name = EVT_8001152_A
 	  prestige = 5
 	  clr_country_flag = split_gilbert_and_ellice_islands
 	  release = TUV
@@ -60,7 +60,7 @@ country_event = {
     }
   
     option = {
-	  name = EVT_8001109_B
+	  name = EVT_8001152_B
 	  prestige = -5
 	  any_pop = { limit = { culture = polynesian location = { is_core = TUV } } militancy = 8  consciousness = 5.0 }
 	  # TODO TUV UDI
