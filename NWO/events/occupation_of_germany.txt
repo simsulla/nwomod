@@ -56,9 +56,9 @@ country_event = {
     OR = { tag = USA tag = FRA tag = GBR }
 	year = 1944 NOT = { year = 1963 }
 	OR = {
-		AND = { is_our_vassal = GER GER = { government = provisional_government } }
-		AND = { is_our_vassal = IAR IAR = { government = provisional_government } }
-		AND = { is_our_vassal = BAV BAV = { government = provisional_government } }
+		AND = { is_our_vassal = RHL RHL = { government = provisional_government } }
+		AND = { is_our_vassal = NGF NGF = { government = provisional_government } }
+		AND = { is_our_vassal = SGF SGF = { government = provisional_government } }
 	}
 	NOT = {has_country_flag = occupation_zones_in_germany }
   }
@@ -142,8 +142,8 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1946 NOT = { year = 1963 }
-	is_our_vassal = BAV
-	BAV = { government = provisional_government }
+	is_our_vassal = SGF
+	SGF = { government = provisional_government }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -151,7 +151,7 @@ country_event = {
   option = {
     name = EVT_8204010_A
 	any_country = { 
-		limit = { tag = BAV } 
+		limit = { tag = SGF } 
 		any_pop = { limit = { culture = german } consciousness = 2  }
 		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 200 } } 
 	}
@@ -161,7 +161,7 @@ country_event = {
   option = {
     name = EVT_8204010_B
 	any_country = { 
-		limit = { tag = BAV } 
+		limit = { tag = SGF } 
 		any_pop = { limit = { culture = german } militancy = 1.5 }
 		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = 1000 } }
 	}
@@ -181,8 +181,8 @@ country_event = {
 
   trigger = {
     OR = { 
-		AND = { tag = GBR is_our_vassal = IAR }
-		AND = { tag = FRA is_our_vassal = GER }
+		AND = { tag = GBR is_our_vassal = NGF }
+		AND = { tag = FRA is_our_vassal = RHL }
 	}
 	year = 1954 NOT = { year = 1959 }
 	NOT = { has_country_flag = morgenthau_plan }
@@ -195,7 +195,7 @@ country_event = {
   option = {
     name = "EVT_8204011_A"
 	any_country = { 
-		limit = { OR = { tag = GER tag = IAR } } 
+		limit = { OR = { tag = RHL tag = NGF } } 
 		any_pop = { limit = { culture = german } militancy = 1.5 }
 		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = 1000 } }
 	}
@@ -205,7 +205,7 @@ country_event = {
   option = {
     name = "EVT_8204011_B"
 	any_country = { 
-		limit = { OR = { tag = GER tag = IAR } } 
+		limit = { OR = { tag = RHL tag = NGF } } 
 		any_pop = { limit = { culture = german } consciousness = 2 }
 		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = 1000 } }
 	}
@@ -419,8 +419,8 @@ country_event = {
   trigger = {
     tag = USA
 	year = 1948 NOT = { year = 1949 }
-	is_our_vassal = BAV
-	BAV = { government = provisional_government }
+	is_our_vassal = SGF
+	SGF = { government = provisional_government }
   }
 
   mean_time_to_happen = { months = 1  }

@@ -6,7 +6,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-	is_our_vassal = BAV # USA
+	is_our_vassal = SGF # USA
     year = 1944 NOT = { year = 1963 }
 	AUS = { owns = 619 	government = provisional_government } # Wien
   }
@@ -15,14 +15,14 @@ country_event = {
 
   option = { 
     name = "EVT_8203000_A"
-	BAV = { any_pop = {  limit = { culture = german } consciousness = 1 } }
+	SGF = { any_pop = {  limit = { culture = german } consciousness = 1 } }
 	SUN = { country_event = 8203001 }
 	ai_chance = { factor = 100 }
   }
 
   option = {
     name = "EVT_8203000_B"
-	BAV = { any_pop = { limit = { culture = german } militancy = 8  } }
+	SGF = { any_pop = { limit = { culture = german } militancy = 8  } }
 	badboy = 15 
 	ai_chance = { factor = 0 }
   }

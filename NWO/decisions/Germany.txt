@@ -5,9 +5,9 @@ political_decisions = {
 		picture = "denazification"
 		potential = {
 			OR = { 
-				is_our_vassal = BAV
-				is_our_vassal = IAR
-				is_our_vassal = GER
+				is_our_vassal = SGF
+				is_our_vassal = NGF
+				is_our_vassal = RHL
 				is_our_vassal = DDR
 			}
 			NOT = { has_country_flag = denazification }
@@ -80,9 +80,7 @@ political_decisions = {
 
 		allow = {
 			tag = FRA 
-			573 = { owned_by = GER }
-			is_our_vassal = GER
-			GER = { government = provisional_government }
+			573 = { owned_by = FRA }
 			NOT = { has_country_flag = saar_protectorate }
 			has_country_flag = monnet_plan
 			marshall_plan = 1
@@ -102,22 +100,57 @@ political_decisions = {
 	
 	establish_west_germany = {
 		picture = "establish_west_germany"
-		potential = { # TODO occupiers need to have rationale to form Germany
-			exists = GER
-			is_our_vassal = GER 
-			GER = { government = provisional_government }
-			year = 1947
+		potential = {
+			GER = { exists = no }
+			OR = { 
+				AND = { 
+					has_country_flag = denazification
+					tag = GBR
+					year = 1952
+					is_our_vassal = NGF
+					369 = { owned_by = NGF }
+				}
+				AND = { 
+					has_country_flag = denazification
+					tag = USA 
+					is_our_vassal = SGF
+					564 = { owned_by = SGF NOT = { has_province_modifier = denazification } } 
+				}
+			}
+			NOT = { has_country_flag = establish_west_germany }
 		}
 
 		allow = {
 			NOT = { has_country_flag = establish_west_germany }
-			564 = { NOT = { has_province_modifier = denazification } } 
+			OR = { 
+				AND = { 
+					tag = GBR
+					year = 1952
+					is_our_vassal = NGF
+					369 = { owned_by = NGF }
+				}
+				AND = { 
+					tag = USA 
+					is_our_vassal = SGF
+					564 = { owned_by = SGF NOT = { has_province_modifier = denazification } } 
+				}
+			}
+			OR = {
+				AND = {
+					year = 1949
+					ai = yes
+				}
+				AND = {
+					NOT = { relation = { who = FRA value = 0 } }
+					ai = no
+				}
+			}
 			war = no
 		}
 
 		effect = {
+			any_country = { limit = { is_vassal = yes overlord = { tag = THIS } tag = SGF tag = NGF } }
 			set_country_flag = establish_west_germany
-			release_vassal = GER
 			GER = { primary_culture = german government = democracy country_event = 800054 }
 			diplomatic_influence = { who = GER value = 100 }
 			prestige = 5
@@ -152,7 +185,6 @@ political_decisions = {
 		effect = {
 			set_country_flag = establish_east_germany
 			any_owned = { limit = { is_core = GER } add_core = DDR }
-			release_vassal = DDR
 			DDR = { government = proletarian_dictatorship country_event = 800052 }
 			diplomatic_influence = { who = DDR value = 200 }
 			military_access = SUN
@@ -168,24 +200,24 @@ political_decisions = {
 		potential = {
 			GER = { exists = yes is_vassal = no NOT = { government = provisional_government } }
 			OR = { 
-				IAR = { vassal_of = THIS }
-				BAV = { vassal_of = THIS }
+				NGF = { vassal_of = THIS }
+				SGF = { vassal_of = THIS }
 			}
 			NOT = { has_country_flag = end_occupation_of_germany }
 		}
 
 		allow = {
 			OR = { 
-				IAR = { vassal_of = THIS }
-				BAV = { vassal_of = THIS }
+				NGF = { vassal_of = THIS }
+				SGF = { vassal_of = THIS }
 			}
 			war = no
 		}
 
 		effect = {
 			set_country_flag = end_occupation_of_germany
-			random_country = { limit = { vassal_of  = THIS tag = IAR } GER = { inherit = IAR } }
-			random_country = { limit = { vassal_of  = THIS tag = BAV } GER = { inherit = BAV } }
+			random_country = { limit = { vassal_of  = THIS tag = NGF } GER = { inherit = NGF } }
+			random_country = { limit = { vassal_of  = THIS tag = SGF } GER = { inherit = SGF } }
 			diplomatic_influence = { who = GER value = 100 }
 		}
 		ai_will_do = {
