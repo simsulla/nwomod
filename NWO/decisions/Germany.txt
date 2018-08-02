@@ -149,7 +149,7 @@ political_decisions = {
 		}
 
 		effect = {
-			any_country = { limit = { is_vassal = yes overlord = { tag = THIS } tag = SGF tag = NGF } }
+			any_country = { limit = { is_vassal = yes overlord = { tag = THIS } tag = SGF tag = NGF } change_tag_no_core_switch = GER }
 			set_country_flag = establish_west_germany
 			GER = { primary_culture = german government = democracy country_event = 800054 }
 			diplomatic_influence = { who = GER value = 100 }
