@@ -117,4 +117,31 @@ political_decisions = {
 			}
 		}
 	}
+	build_kra_canal = {
+		picture = kra_canal
+		potential = {
+			NOT = { is_canal_enabled = 6 }
+			money = 500000 # 100 Billion 2010 USD
+		}
+		allow = {
+			money = 1280000 # 128 Billion 2010 USD
+			NOT = { OR = { owns = 1384 1384 = { owner = { in_sphere = THIS } } } }
+			OR = { owns = 1392 1392 = { owner = { in_sphere = THIS } } }
+		}
+		effect = {
+			treasury = -280000 # 28 Billion 2010 USD
+			enable_canal = 5
+			prestige = 10
+			1392 = { set_province_flag = kra_canal }
+			prestige = 5
+			1392 = { any_pop =  { limit = { culture = malay } militancy = 3.0  consciousness = 5 } # Increases Malay separatism in Pattani
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}	
 }
