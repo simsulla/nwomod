@@ -21,13 +21,7 @@ country_event = {
 		name = EVT_1005301_A 
 		ai_chance = { factor = 100 }
 		prestige = -2
-		any_pop = {
-			limit = {
-				OR = { culture = tigre culture = afar }
-			}
-			consciousness = 2
-			militancy = 2
-		}
+		any_pop = { limit = { OR = { culture = tigre culture = afar } } consciousness = 2 militancy = 2 }
 		release_vassal = ERI
 		ERI = { government = absolute_monarchy country_event = 800050  }
 		primary_culture = tigre
@@ -70,15 +64,9 @@ country_event = {
 		name = EVT_1005302_A 
 		ai_chance = { factor = 100 }
 		badboy = 4
-		any_pop = {
-			limit = {
-				OR = { culture = tigre culture = tigray }
-			}
-			consciousness = 2
-			militancy = 8
-		}
-		all_core = {
-			add_province_modifier = { name = nationalist_agitation duration = 1095 }
+		any_pop = { limit = { OR = { culture = tigre culture = tigray } } consciousness = 2 militancy = 8 }
+		all_core = { 
+		add_province_modifier = { name = nationalist_agitation duration = 1095 }
 		}
 		ERI = {annex_to = THIS }
 	}
@@ -120,14 +108,7 @@ country_event = {
     name = EVT_8005303_B
 	define_general = { name = " Amha Selassie" personality = energetic background = no_background }
 	government = hms_government country_event = 800054 
-	any_pop = {
-		limit = {
-			type = soldiers
-			type = officers
-		}
-		militancy = 3
-		consciousness = 3
-	}
+	any_pop = { limit = { type = soldiers type = officers } militancy = 3 consciousness = 3 }
 	any_pop = {
 		scaled_militancy = {
 			ideology = traditionalist
@@ -300,7 +281,9 @@ country_event = {
 
   option = {
     name = EVT_8005312_A
-	1848 = { any_pop = { militancy = 5 } }1849 = { any_pop = { militancy = 5 } }1850 = { any_pop = { militancy = 5 } }
+	1848 = { any_pop = { militancy = 5 } } 
+	1849 = { any_pop = { militancy = 5 } } 
+	1850 = { any_pop = { militancy = 5 } }
   }
 }
 
@@ -383,7 +366,7 @@ country_event = {
 	option = {
 		name = EVT_8005315_A
 		ai_chance = { factor = 100 }
-		1861 = { any_pop =  { limit = { culture = oromo } } militancy = 1.0  consciousness = 1 } 
+		1861 = { any_pop =  { limit = { culture = oromo } militancy = 1.0  consciousness = 1 } 
 		1861 = { add_province_modifier = { name = nationalist_agitation duration = 2555 } }
 	}
 }
