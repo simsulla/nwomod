@@ -867,14 +867,14 @@ country_event = {
 
 	option = {
 		name = EVT_8008022_A
-		ai_chance = { factor = 95 }
+		ai_chance = { factor = 92 }
 		IRQ = { country_event = 8008023 }
 		prestige = 10
 	}
 
 	option = {
 		name = EVT_8008022_B
-		ai_chance = { factor = 5 }
+		ai_chance = { factor = 8 }
 		any_pop = { militancy = 2 consciousness = 4 }
 		prestige = -10
 	}
@@ -889,20 +889,15 @@ country_event = {
 
 	option = {
 		name = EVT_8008023_A
-		ai_chance = { factor = 70 }
+		ai_chance = { factor = 20 }
 		any_pop = { consciousness = 2 }
 		release_vassal = KUR
-		prestige = 5
+		prestige = -5
 	}
 
 	option = {
 		name = EVT_8008023_B
-		ai_chance = { factor = 30 }
-		925 = {
-			state_scope = {
-				flashpoint_tension = 30
-			}
-		}
+		ai_chance = { factor = 80 }
 		war = {
 			target = KUR
 			attacker_goal = {
@@ -913,9 +908,9 @@ country_event = {
 			}
 		}
 		prestige = 10
-		badboy = 8
 	}
 }
+# TODO Events are needed to represent the KDP quickly siding with the Iraqi government once hostilities broke out, causing the entire effort for Iraqi Kurdish independence to collapse
 
 country_event = {
 	id = 8008024
@@ -937,27 +932,22 @@ country_event = {
 
 	option = {
 		name = EVT_8008024_A
-		ai_chance = { factor = 60 }
+		ai_chance = { factor = 15 }
 		release_vassal = MSU
 		prestige = 8
 	}
 
 	option = {
 		name = EVT_8008024_B
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 5 }
 		release = MSU
 		prestige = 5
 	}
 
 	option = {
 		name = EVT_8008024_C
-		ai_chance = { factor = 20 }
-		923 = {
-			state_scope = {
-				flashpoint_tension = 30
-			}
-		}
-		any_pop = { limit = { culture = sunni_arab } militancy = 3.0  consciousness = 4 }
+		ai_chance = { factor = 80 }
+		any_pop = { limit = { culture = sunni_arab } consciousness = 2 }
 		prestige = 10
 	}
 }
