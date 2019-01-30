@@ -483,9 +483,117 @@ country_event = {
 
   option = {
     name = EVT_8007563_A
+	country_event =  { id = 8008027 days = 14 }
 	any_pop = { militancy = 2.5 }
   }
 }
+
+country_event = {
+  id = 8008027
+  title = "The Iraqi Uprisings of 1991"
+  desc = "Our humialiating defeat in the Gulf War has recently ignited a series of rebellions among the Shia Arabs in the South and the Kurds in the North, both long opressed by our government for decades. With our military devastated by mass desertion and the US led coalition and militias such as the Badr Brigades pouring into the country, the very survival of our government is at stake"
+  picture = "1991_iraqi_uprising"
+  is_triggered_only = yes
+
+  option = {
+    name = "We'll crush these rebels!"
+	any_pop = { limit = { culture = shia_arab } militancy = 10  consciousness = 5 }
+	any_pop = { limit = { culture = kurd } militancy = 10  consciousness = 5 }
+	set_country_flag = kurdish_sar
+  }
+  option = {
+    name = "Concede to their demands"
+	government = democracy country_event = 800054
+	any_pop = { consciousness = 5 }
+	set_country_flag = kurdish_sar
+  }  
+}
+# Event 800765 adapted from the CWE submod
+country_event = {
+	id = 8007565
+	title = EVT_8007565_NAME
+	desc = EVT_8007565_DESC
+	picture = "kurdistan_sar"
+	fire_only_once = yes
+
+	trigger = {
+	tag = IRQ
+		year = 1992
+		war = no
+		KUR = { exists = yes }
+		KUR = { is_vassal = no }
+		exists = KUW
+		NOT = { government = democracy }
+		has_country_flag = kurdish_sar
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "Grant Autonomy"
+		prestige = 25
+		badboy = -5
+		create_vassal = KUR
+		KUR = { government = democracy country_event = 800054 }
+		any_owned = { limit = { is_core = KUR } secede_province = KUR }
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Crush the Kurdish rebels"
+		prestige = -50
+		badboy = 5
+		release = KUR
+		war = {
+			target = KUR
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		ai_chance = { factor = 0.2 }
+	}
+	
+}
+
+country_event = {
+	id = 8008028
+	title = "The Iraq Kudish Civil War"
+	desc = "The Iraqi Kurdish Civil War was a military conflict that took place between rival Kurdish factions in Iraqi Kurdistan during the mid-1990s, most notably between the Patriotic Union of Kurdistan and the Kurdistan Democratic Party. Over the course of the conflict, Kurdish factions from Iran and Turkey, as well as Iranian, Iraqi and Turkish forces were drawn into the fighting, with additional involvement from the American forces. Between 3,000 and 5,000 fighters and civilians were killed. According to some estimates however, upwards of 8,000 civilians alone could have been killed throughout the more than three years of warfare"
+	picture = "kurdish_civil_war"
+	fire_only_once = yes
+
+	trigger = {
+	tag = KUR
+		year = 1994
+		war = no
+		government = democracy
+		NOT = { own = 1110 }
+		NOT = { own = 891 }
+		NOT = { own = 901 }
+		own = 924
+		own = 925
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "Side with the PUK"
+		any_pop = { limit = { ideology = conservative } militancy = 10  consciousness = 5 }
+		ai_chance = { factor = 90 }
+	}
+	
+	option = {
+		name = "Side with the KDP"
+		any_pop = { limit = { ideology = socialist } militancy = 10  consciousness = 5 }
+		ai_chance = { factor = 10 }
+	}
+	
+}
+
 country_event = {
   id = 8007564
   title = EVT_8007564_NAME
@@ -525,6 +633,7 @@ country_event = {
 		name = EVT_8007565_OPTA
 		ai_chance = { factor = 100 }
 		IRQ = { badboy = 20 }
+		IRQ = { release_vassal = KUR }
 		set_global_flag = iraq_war
 		random_country = {
 			limit = { tag = SAA ai = yes }
@@ -572,7 +681,7 @@ country_event = {
 		any_pop = { consciousness = 3 }
 		prestige = 10
 		IRQ = { 
-			release_vassal = KUR
+			create_vassal = KUR
 		}
 	}
 }
@@ -869,6 +978,11 @@ country_event = {
 		name = EVT_8008022_A
 		ai_chance = { factor = 92 }
 		IRQ = { country_event = 8008023 }
+		IRQ = { 
+			any_pop = { militancy = 2 consciousness = 4 }
+			prestige = -5
+			casus_belli = {target = IRQ type = liberate_country months = 12 }
+		}
 		prestige = 10
 	}
 
@@ -899,6 +1013,7 @@ country_event = {
 		name = EVT_8008023_B
 		ai_chance = { factor = 80 }
 		war = {
+			country_event =  { id = 8008029 days = 14 }
 			target = KUR
 			attacker_goal = {
 				casus_belli = become_independent
@@ -911,6 +1026,62 @@ country_event = {
 	}
 }
 # TODO Events are needed to represent the KDP quickly siding with the Iraqi government once hostilities broke out, causing the entire effort for Iraqi Kurdish independence to collapse
+
+country_event = {
+	id = 8008029
+	title = "The Battle of Kirkuk"
+	desc = "Just days after the Iraqi government decided the supress the referendum, a large portion of our fighters in Kirkuk, mainly aligned with opposition parties have withdrawn from the city, leading to large swathes of disputed territories being captured by the Iraqis. With this recent development, we may cannot sustain this war any further and it may be wise to concede to the Iraqi government."
+	picture = "kirkuk_battle"
+	is_triggered_only = yes
+
+	option = {
+		name = "Abandon our struggle for independence for now"
+		ai_chance = { factor = 80 }
+		any_pop = { consciousness = 5 }
+		IRQ = { 
+			create_vassal = KUR
+			KUR = { government = democracy }
+		}
+		end_war = IRQ
+		prestige = -15
+	}
+
+	option = {
+		name = "Despite this setback, we will still fight against the Iraqis"
+		ai_chance = { factor = 20 }
+		any_pop = { consciousness = 5 }
+		war_exhaustion = 50
+	}
+}
+
+country_event = {
+	id = 8008020
+	title = EVT_8008020_NAME
+	desc = EVT_8008020_DESC
+	picture = "irq_victory_civil_war"
+	fire_only_once = yes
+
+	trigger = {
+		tag = IRQ
+		war = no
+		owns = 923
+		owns = 927
+		owns = 931
+		has_global_flag = iraqi_civil_war
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = EVT_8008020_A
+		ai_chance = { factor = 100 }
+		set_global_flag = the_future_of_iraq
+		any_pop = { militancy = -3.0  consciousness = -1 }
+		prestige = 20
+	}
+}
 
 country_event = {
 	id = 8008024
