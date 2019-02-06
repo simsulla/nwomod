@@ -490,19 +490,19 @@ country_event = {
 
 country_event = {
   id = 8008027
-  title = "The Iraqi Uprisings of 1991"
-  desc = "Our humialiating defeat in the Gulf War has recently ignited a series of rebellions among the Shia Arabs in the South and the Kurds in the North, both long opressed by our government for decades. With our military devastated by mass desertion and the US led coalition and militias such as the Badr Brigades pouring into the country, the very survival of our government is at stake"
+  title = EVT_8008027_NAME
+  desc = EVT_8008027_DESC
   picture = "1991_iraqi_uprising"
   is_triggered_only = yes
 
   option = {
-    name = "We'll crush these rebels!"
+    name = EVT_8008027_A
 	any_pop = { limit = { culture = shia_arab } militancy = 10  consciousness = 5 }
 	any_pop = { limit = { culture = kurd } militancy = 10  consciousness = 5 }
 	set_country_flag = kurdish_sar
   }
   option = {
-    name = "Concede to their demands"
+    name = EVT_8008027_B
 	government = democracy country_event = 800054
 	any_pop = { consciousness = 5 }
 	set_country_flag = kurdish_sar
@@ -510,9 +510,9 @@ country_event = {
 }
 # Event 800765 adapted from the CWE submod
 country_event = {
-	id = 8007565
-	title = EVT_8007565_NAME
-	desc = EVT_8007565_DESC
+	id = 1512002
+	title = EVT_1512002_NAME
+	desc = EVT_1512002_DESC
 	picture = "kurdistan_sar"
 	fire_only_once = yes
 
@@ -532,7 +532,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Grant Autonomy"
+		name = EVT_1512002_A
 		prestige = 25
 		badboy = -5
 		create_vassal = KUR
@@ -542,7 +542,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Crush the Kurdish rebels"
+		name = EVT_1512002_B
 		prestige = -50
 		badboy = 5
 		release = KUR
@@ -559,8 +559,8 @@ country_event = {
 
 country_event = {
 	id = 8008028
-	title = "The Iraq Kudish Civil War"
-	desc = "The Iraqi Kurdish Civil War was a military conflict that took place between rival Kurdish factions in Iraqi Kurdistan during the mid-1990s, most notably between the Patriotic Union of Kurdistan and the Kurdistan Democratic Party. Over the course of the conflict, Kurdish factions from Iran and Turkey, as well as Iranian, Iraqi and Turkish forces were drawn into the fighting, with additional involvement from the American forces. Between 3,000 and 5,000 fighters and civilians were killed. According to some estimates however, upwards of 8,000 civilians alone could have been killed throughout the more than three years of warfare"
+	title = EVT_8008028_NAME
+	desc = EVT_8008028_DESC
 	picture = "kurdish_civil_war"
 	fire_only_once = yes
 
@@ -581,13 +581,13 @@ country_event = {
 	}
 	
 	option = {
-		name = "Side with the PUK"
+		name = EVT_8008028_A
 		any_pop = { limit = { ideology = conservative } militancy = 10  consciousness = 5 }
 		ai_chance = { factor = 90 }
 	}
 	
 	option = {
-		name = "Side with the KDP"
+		name = EVT_8008028_B
 		any_pop = { limit = { ideology = socialist } militancy = 10  consciousness = 5 }
 		ai_chance = { factor = 10 }
 	}
@@ -1029,13 +1029,13 @@ country_event = {
 
 country_event = {
 	id = 8008029
-	title = "The Battle of Kirkuk"
-	desc = "Just days after the Iraqi government decided the supress the referendum, a large portion of our fighters in Kirkuk, mainly aligned with opposition parties have withdrawn from the city, leading to large swathes of disputed territories being captured by the Iraqis. With this recent development, we may cannot sustain this war any further and it may be wise to concede to the Iraqi government."
+	title = EVT_8008029_NAME
+	desc = EVT_8008029_DESC
 	picture = "kirkuk_battle"
 	is_triggered_only = yes
 
 	option = {
-		name = "Abandon our struggle for independence for now"
+		name = EVT_8008029_A
 		ai_chance = { factor = 80 }
 		any_pop = { consciousness = 5 }
 		IRQ = { 
@@ -1047,7 +1047,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Despite this setback, we will still fight against the Iraqis"
+		name = EVT_8008029_B
 		ai_chance = { factor = 20 }
 		any_pop = { consciousness = 5 }
 		war_exhaustion = 50
