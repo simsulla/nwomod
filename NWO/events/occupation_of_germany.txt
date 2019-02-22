@@ -1018,3 +1018,68 @@ country_event = {
 	  any_owned = { add_core = DDR }
 	}
 }
+
+country_event = {
+	id = 8204185
+	title = EVT_8204185_NAME
+	desc = EVT_8204185_DESC
+	picture = "potsdam_conference"
+	fire_only_once = yes
+
+	trigger = { 
+	  tag = USA
+	  year = 1946
+	  owns = 564 # Frankfurt
+	  NOT = { exists = GER }
+	}
+
+	mean_time_to_happen = { months = 2 }
+	
+	# UK - seeks a to keep Soviet influence out of Germany
+	# FRA - seeks to detach the Saarland and the Rhineland from Germany as well as establish an international zone in the Ruhr to prevent further humilai
+	# SOV - seeks a neutral united Germany although is firmly opposed to a continued US presence in Germany
+	# POL - seeks to preserve its current borders around the Oder Neisse line and perhaps expand them
+
+	option = {
+	  name = EVT_8204185_A
+	  set_global_flag = no_partition_of_west_germany
+	  relation = { who = POL value = -25 }
+	  relation = { who = SUN value = -20 } 
+	  relation = { who = GBR value = 5 } 
+	  relation = { who = FRA value = -25 } # The US stays committed to a fully united Germany, displeasing France, the USSR and Poland.
+	  any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 }
+	  ai_chance = { factor = 0.15 }
+	}
+	option = {
+	  name = EVT_8204185_B
+	  set_global_flag = saar_option
+	  relation = { who = POL value = -25 }
+	  relation = { who = SUN value = -15 } 
+	  relation = { who = GBR value = 5 } 
+	  relation = { who = FRA value = 5 }  # The US stays committed to a united Germany although it supports French claims to the Saarland, displeasing the USSR and Poland.
+	  any_pop = { limit = { culture = german } consciousness = 0.5 militancy = 0.5 }
+	  ai_chance = { factor = 0.75 }
+	}
+	option = {
+	  name = EVT_8204185_C
+	  set_global_flag = rhineland_option
+	  relation = { who = POL value = 10 }
+	  relation = { who = SUN value = -10 }
+	  relation = { who = GBR value = 5 } 
+	  relation = { who = FRA value = 10 } # The US stays committed to a united Germany although it supports French efforts detach the Saarland and the Rhineland, displeasing the USSR while Poland is pleased with the prospect of a severely weakened Germany.
+	  any_pop = { limit = { culture = german } consciousness = 2 militancy = 2 }
+	  any_pop = { limit = { culture = german }  ideology = { factor = 0.15 value = communist } }
+	  ai_chance = { factor = 0.05 }
+	}
+	option = {
+	  name = EVT_8204185_D
+	  set_global_flag = partition_of_west_germany
+	  relation = { who = POL value = 15 }
+	  relation = { who = SUN value = 10 }
+	  relation = { who = GBR value = 5 } 
+	  relation = { who = FRA value = 15 } # The US supports a complete partition of Germany, pleasing the USSR, France, the UK and Poland while angering German nationalists
+	  any_pop = { limit = { culture = german } consciousness = 3 militancy = 3 }
+	  any_pop = { limit = { culture = german }  ideology = { factor = 0.25 value = communist } }
+	  ai_chance = { factor = 0.05 }
+	}	
+}

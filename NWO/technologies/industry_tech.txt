@@ -1,1011 +1,1746 @@
-photography = {
-	area = "healt_related_tech"
-	year = 1881
-	cost = 3500
+fossil_fuel_power = { 
+	area = tech_power
+	year = 1946
+	cost = 3600
 
-	activate_building = chemical_products_factory 
+	activate_building = petroleum_petrochemicals_factory 
+	rgo_goods_output = { coal = 0.25 }
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.1
+		modifier = {
+			factor = 2
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			year = 1965
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 25
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
 }
-film_base = {
-	area = "healt_related_tech"
-	year = 1889
-	cost = 4300
 
-	activate_building = recording_media_factory 
+oil_well = { 
+	area = tech_power
+	year = 1946
+	cost = 5400
 
+	rgo_goods_output = { petroleum = 1.0 }
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.1
+		modifier = {
+			factor = 2
+			big_producer = petroleum
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			year = 1965
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 25
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
 }
-modern_medicine = {
-	area = "healt_related_tech"
-	year = 1908
-	cost = 6200
 
-	activate_building = instruments_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-antibiotics = {
-	area = "healt_related_tech"
-	year = 1910
-	cost = 6400
-	
-	activate_building = health_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-motion_picture = {
-	area = "healt_related_tech"
-	year = 1912
-	cost = 6600
+nuclear_power = { 
+	area = tech_power
+	year = 1954
+	cost = 5400
 
-	factory_goods_output = { tvs = 0.05 }
+	activate_building = nuclear_petrochemicals_factory
+	factory_goods_output = { petrochemicals = 0.05 }
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.1
+		modifier = {
+			factor = 2
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			year = 1980
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 25
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
 }
-color_photography = {
-	area = "healt_related_tech"
-	year = 1920
-	cost = 7400
 
-	factory_goods_output = { recording_media = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-penicillin = {
-	area = "healt_related_tech"
-	year = 1928
-	cost = 8200
+liquefied_natural_gas = {
+	area = tech_power
+	year = 1965 
+	cost = 7200
 
-	factory_goods_output = { health = 0.05 }
+	rgo_goods_output = { petroleum = 0.1 }
 	ai_chance = {
-		factor = 1
+		factor = 1.01
+		modifier = {
+			factor = 2
+			big_producer = petroleum
+		}
+		modifier = {
+			factor = 2
+			year = 2000
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.02
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.02
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 1.02
+			industrial_score = 150
+		}
 	}
 }
-technicolor = {
-	area = "healt_related_tech"
-	year = 1932
-	cost = 8600
 
-	factory_goods_output = { tvs = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-molecular_biology = {
-	area = "healt_related_tech"
-	year = 1953
-	cost = 10700
-
-	activate_building = advanced_instruments_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-biotechnology = {
-	area = "healt_related_tech"
-	year = 1971
-	cost = 12500
-	
-	activate_building = modern_glass_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-clinical_pharmacology = {
-	area = "healt_related_tech"
-	year = 1980
-	cost = 13400
-
-	factory_goods_output = { health = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-evidence_based_medicine = {
-	area = "healt_related_tech"
-	year = 1980
-	cost = 13400
-
-	factory_goods_output = { health = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-digital_photography = {
-	area = "healt_related_tech"
-	year = 1980
-	cost = 13400
-
-	factory_goods_output = { recording_media = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-medical_instruments = {
-	area = "healt_related_tech"
+offshore_drilling = {
+	area = tech_power
 	year = 1990
+	cost = 12600
+	
+	rgo_goods_output = { petroleum = 0.25 }
+	ai_chance = {
+		factor = 1.01
+		modifier = {
+			factor = 2
+			big_producer = petroleum
+		}
+		modifier = {
+			factor = 2
+			year = 2030
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.02
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.02
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 1.02
+			industrial_score = 150
+		}
+	}
+}
+
+hydraulic_fracturing = {
+	area = tech_power
+	year = 2015
 	cost = 14400
 
-	factory_goods_output = { advanced_instruments = 0.05 }
-	factory_goods_output = { instruments = 0.05 }
+	mine_rgo_eff = 0.2
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 2
+			big_producer = petroleum
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = 1.4
+			is_greater_power = yes
+		}
 	}
 }
-genetic_engineering = {
-	area = "healt_related_tech"
-	year = 1990
-	cost = 14400
 
-	factory_goods_output = { advanced_instruments = 0.05 }
-	factory_goods_output = { instruments = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-genomics = {
-	area = "healt_related_tech"
-	year = 2000
-	cost = 15400
-
-	factory_goods_output = { health = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-pharmacogenomics = {
-	area = "healt_related_tech"
+sustainable_energy = {
+	area = tech_power
 	year = 2020
-	cost = 17400
+	cost = 14400
 
-	factory_goods_output = { health = 0.05 }
+	mine_rgo_eff = 0.05
+	farm_rgo_eff = 0.05
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = 1.4
+			is_greater_power = yes
+		}
 	}
 }
-gene_therapy = {
-	area = "healt_related_tech"
+
+microgeneration = {
+	area = tech_power
+	year = 2030
+	cost = 18000
+
+	mine_rgo_eff = 0.1
+	farm_rgo_eff = 0.1
+	ai_chance = {
+		factor = 1.01
+		modifier = {
+			factor = 1.01
+			year = 2045
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 200
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 250
+		}
+	}
+}
+
+nuclear_renaissance = {
+	area = tech_power
 	year = 2040
-	cost = 19400
+	cost = 18000
 
-	factory_goods_output = { health = 0.05 }
+	mine_rgo_eff = 0.05
+	farm_rgo_eff = 0.05
 	ai_chance = {
-		factor = 1
+		factor = 1.01
+		modifier = {
+			factor = 2
+			big_producer = other_minerals
+		}
+				modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			year = 2060
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
 	}
 }
-nanomedicine = {
-	area = "healt_related_tech"
-	year = 2060
-	cost = 21400
+micropower = {
+	area = tech_power
+	year = 2050
+	cost = 21600
 
-	factory_goods_output = { health = 0.05 }
+	mine_rgo_eff = 0.1
+	farm_rgo_eff = 0.1
 	ai_chance = {
-		factor = 1
+		factor = 1.25
+		modifier = {
+			factor = 2
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 2
+			year = 2080
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 750
+		}
 	}
 }
-stem_cell_therapy = {
-	area = "healt_related_tech"
-	year = 2080
-	cost = 23400
 
-	factory_goods_output = { health = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-electric_generator = {
-	area = "machinery_tech"
-	year = 1870
-	cost = 2400
+#computing
+radio = {
+	area = computing
+	year = 1946
+	cost = 3600
 
 	activate_building = copper_wire_factory
 	ai_chance = {
-		factor = 1
-	}
-}
-electric_light = {
-	area = "machinery_tech"
-	year = 1878
-	cost = 3200
-	
-	activate_building = telephones_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-electrical_machines = {
-	area = "machinery_tech"
-	year = 1890
-	cost = 4400
+		factor = 1.5
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+	}	
 
-	activate_building = specialized_machinery_factory 
-	ai_chance = {
-		factor = 1
-	}
 }
-sewing_machine = {
-	area = "machinery_tech"
-	year = 1900
-	cost = 5400
-	
-	factory_goods_output = { fabric = 0.05 }
-	factory_goods_output = { clothes = 0.05 }
-	factory_goods_output = { footwear = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-electric_power_stations = {
-	area = "machinery_tech"
-	year = 1900
-	cost = 5400
 
-	factory_goods_output = { heating_electricity = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-piston_engines = {
-	area = "machinery_tech"
-	year = 1892
-	cost = 4600
-	
-	activate_building = engines_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-machine_industry = {
-	area = "machinery_tech"
-	year = 1907
-	cost = 6100
-
-	activate_building = advanced_specialized_machinery_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-cars = {
-	area = "machinery_tech"
-	year = 1908
-	cost = 6200
-
-	activate_building = automobiles_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-trucks = {
-	area = "machinery_tech"
-	year = 1914
-	cost = 6800
-
-	activate_building = trucks_vans_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-electric_grid = {
-	area = "machinery_tech"
-	year = 1926
-	cost = 8000
-	
-	activate_building = tvs_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-circuit_breakers = {
-	area = "machinery_tech"
-	year = 1935
-	cost = 8900
-
-	activate_building = integrated_circuits_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-engine_power = {
-	area = "machinery_tech"
-	year = 1950
-	cost = 10400
-	
-	activate_building = modern_aeroplane_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-color_tvs = {
-	area = "machinery_tech"
-	year = 1955
-	cost = 10900
-
-	activate_building = modern_tvs_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-consolidation = {
-	area = "machinery_tech"
-	year = 1960
-	cost = 11400
-	
-	activate_building = modern_automobiles_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-platform_sharing = {
-	area = "machinery_tech"
-	year = 1970
-	cost = 12400
-
-	factory_throughput = 0.1
-	ai_chance = {
-		factor = 1
-	}
-}
-computer_aided_design = {
-	area = "machinery_tech"
-	year = 1990
-	cost = 14400
-	
-	activate_building = modern_integrated_circuits_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-led = {
-	area = "machinery_tech"
-	year = 2000
-	cost = 15400
-
-	factory_throughput = 0.1
-	ai_chance = {
-		factor = 1
-	}
-}
-displays_3d = {
-	area = "machinery_tech"
-	year = 2010
-	cost = 16400
-	
-	factory_throughput = 0.1
-	ai_chance = {
-		factor = 1
-	}
-}
-GPGPU = {
-	area = "machinery_tech"
-	year = 2020
-	cost = 17400
-
-	factory_throughput = 0.1
-	ai_chance = {
-		factor = 1
-	}
-}
-memristor = {
-	area = "machinery_tech"
-	year = 2050
-	cost = 20400
-	
-	factory_throughput = 0.1
-	ai_chance = {
-		factor = 1
-	}
-}
-toys_mass_market = {
-	area = "electronics_tech"
-	year = 1900
-	cost = 5400
-
-	activate_building = glass_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-analog_computer = {
-	area = "electronics_tech"
-	year = 1929
-	cost = 8300
-	
-	activate_building = electric_gear_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-calculators = {
-	area = "electronics_tech"
-	year = 1935
-	cost = 8900
-
-	activate_building = computers_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-electromechanical_computers = {
-	area = "electronics_tech"
-	year = 1939
-	cost = 9300
-	
-	activate_building = telecommunications_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-electronic_circuit = {
-	area = "electronics_tech"
-	year = 1939
-	cost = 9300
-
-	activate_building = electric_telecommunications_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-colossus_computer = {
-	area = "electronics_tech"
+television = {
+	area = computing
 	year = 1946
-	cost = 10000
-	
-	activate_building = modern_telephones_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-stored_program_computer = {
-	area = "electronics_tech"
-	year = 1950
-	cost = 10400
-
-	activate_building = computer_peripherals_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-microprogramming = {
-	area = "electronics_tech"
-	year = 1955
-	cost = 10900
-
-	factory_goods_output = { advanced_machinery = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-magnetic_storage = {
-	area = "electronics_tech"
-	year = 1955
-	cost = 10900
-
-	factory_goods_output = { recording_media = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-transistor_computer = {
-	area = "electronics_tech"
-	year = 1955
-	cost = 10900
-
-	factory_goods_output = { electric_gear = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-computer_peripherals = {
-	area = "electronics_tech"
-	year = 1960
-	cost = 11400
-
-	factory_goods_output = { computer_peripherals = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-integrated_circuit = {
-	area = "electronics_tech"
-	year = 1960
-	cost = 11400
-
-	factory_goods_output = { advanced_machinery = 0.05 }
-	factory_goods_output = { advanced_instruments = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-personal_computer = {
-	area = "electronics_tech"
-	year = 1970
-	cost = 12400
-
-	factory_goods_output = { computers = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-home_computers = {
-	area = "electronics_tech"
-	year = 1980
-	cost = 13400
-	
-	activate_building = financial_services_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-tablet_computer = {
-	area = "electronics_tech"
-	year = 2000
-	cost = 15400
-
-	factory_goods_output = { computers = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-smart_phones = {
-	area = "electronics_tech"
-	year = 2010
-	cost = 16400
-
-	factory_goods_output = { telephones = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-cloud_computing = {
-	area = "electronics_tech"
-	year = 2020
-	cost = 17400
-
-	factory_goods_output = { telecommunications = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-machine_learning = {
-	area = "electronics_tech"
-	year = 2020
-	cost = 17400
-
-	factory_goods_output = { computers = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-artificial_intelligence = {
-	area = "electronics_tech"
-	year = 2040
-	cost = 19400
-
-	factory_goods_output = { computers = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-bessemer_process = {
-	area = "construction_tech"
-	year = 1860
-	cost = 1400
-	
-	activate_building = machine_parts_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-break_bulk_cargo = {
-	area = "construction_tech"
-	year = 1880
-	cost = 3400
-
-	activate_building = ships_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-electric_wire = {
-	area = "construction_tech"
-	year = 1890
-	cost = 4400
-	
-	activate_building = cement_factory  
-	ai_chance = {
-		factor = 1
-	}
-}
-processed_aluminium = {
-	area = "construction_tech"
-	year = 1900
 	cost = 5400
 
-	activate_building = aluminium_factory 
+	factory_throughput = 0.05
 	ai_chance = {
-		factor = 1
-	}
-}
-open_hearth_furnace = {
-	area = "construction_tech"
-	year = 1900
-	cost = 5400
-	
-	activate_building = home_appliance_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-continuous_track = {
-	area = "construction_tech"
-	year = 1910
-	cost = 6400
+		factor = 1.5
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+	}	
 
-	activate_building = aeroplane_factory 
-	ai_chance = {
-		factor = 1
-	}
 }
-cranes = {
-	area = "construction_tech"
-	year = 1920
-	cost = 7400
-	
-	activate_building = furniture_factory 
+semiconductor = {
+	area = computing
+	year = 1952
+	cost = 5400
+
+	factory_throughput = 0.02
+	activate_building = integrated_circuits_factory
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.5
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+	}	
+
 }
-reinforced_concrete = {
-	area = "construction_tech"
-	year = 1936
+microprocessor = {
+	area = computing
+	year = 1968
+	cost = 7200
+
+	factory_throughput = 0.02
+	activate_building = computers_factory
+	ai_chance = {
+		factor = 1.5
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+	}	
+
+}
+microcomputer = {
+	area = computing
+	year = 1974
 	cost = 9000
 
-	activate_building = modern_home_appliance_factory 
+	factory_throughput = 0.1
+	rgo_throughput = 0.1
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.5
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+	}	
+
 }
-continuous_wide_strip_rolling = {
-	area = "construction_tech"
-	year = 1930
-	cost = 8400
+personal_computer = {
+	area = computing
+	year = 1981
+	cost = 10800
+
+	factory_throughput = 0.1
+	rgo_throughput = 0.1
 	
-	activate_building = petroleum_aluminium_factory  
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 20
+		}
+		modifier = {
+			factor = 1.5
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 50
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
 }
-prestressed_concrete = {
-	area = "construction_tech"
-	year = 1940
-	cost = 9400
-
-	factory_goods_output = { cement = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-palletization = {
-	area = "construction_tech"
-	year = 1950
-	cost = 10400
-
-	factory_throughput = 0.1
-	ai_chance = {
-		factor = 1
-	}
-}
-basic_oxygen_steelmaking = {
-	area = "construction_tech"
-	year = 1950
-	cost = 10400
-
-	factory_goods_output = { steel = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-continuous_casting = {
-	area = "construction_tech"
-	year = 1950
-	cost = 10400
-
-	factory_goods_output = { steel = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-bulk_materials_handling = {
-	area = "construction_tech"
-	year = 1960
-	cost = 11400
+handheld_devices = {
+	area = computing
+	year = 1990
+	cost = 12600
 
 	factory_throughput = 0.1
+	rgo_throughput = 0.1
+	
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 150
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
 }
-modern_cranes = {
-	area = "construction_tech"
-	year = 1962
-	cost = 11600
+cloud_computing = {
+	area = computing
+	year = 2015
+	cost = 14400
 
-	factory_throughput = 0.1
+	activate_building = computer_peripherals_factory
+	factory_throughput = 0.15
+	rgo_throughput = 0.15
+	factory_cost = -0.1
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 250
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
 }
-containerization = {
-	area = "construction_tech"
-	year = 1970
-	cost = 12400
-
-	factory_throughput = 0.1
-	ai_chance = {
-		factor = 1
-	}
-}
-piggyback_rail = {
-	area = "construction_tech"
-	year = 1980
-	cost = 13400
-
-	activate_building = transport_factory 
-	ai_chance = {
-		factor = 1
-	}
-}
-intermodal_freight_transport = {
-	area = "construction_tech"
-	year = 2010
-	cost = 16400
-
-	factory_goods_output = { transport = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-printing_3d = {
-	area = "construction_tech"
+artificial_intelligence = {
+	area = computing
 	year = 2030
-	cost = 18400
+	cost = 18000
 	
-	factory_input = -0.02
+	factory_throughput = 0.3
+	rgo_throughput = 0.3
+	factory_cost = -0.2 
 	ai_chance = {
-		factor = 1
-	}
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 750
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
 }
-industrial_printing = {
-	area = "construction_tech"
+quantum_computer = {
+	area = computing
 	year = 2050
-	cost = 20400
+	cost = 21600
 
-	factory_input = -0.1
-	ai_chance = {
-		factor = 1
-	}
-
-}
-pvc = {
-	area = "petro_chemicals_tech"
-	year = 1872
-	cost = 2600
 	
-	activate_building = petrochemicals_factory 
+	rgo_throughput = 0.5
+	factory_throughput = 0.5 
+	factory_cost = -0.4
 	ai_chance = {
-		factor = 1
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+
+#commodities
+intensive_farming = {
+	area = commodities
+	year = 1946
+	cost = 3600
+
+	activate_building = rubber_plastics_factory
+	rgo_goods_output = { rubber = 0.05 }
+	rgo_goods_output = { grain = 0.05 }
+	rgo_goods_output = { cattle = 0.05 }
+	rgo_goods_output = { cotton = 0.3 }
+	rgo_goods_output = { timber = 0.1 }
+	rgo_goods_output = { coffee = 0.3 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+mineral_processing = {
+	area = commodities
+	year = 1946
+	cost = 5400
+	
+	rgo_goods_output = { coal = 0.25 }
+	rgo_size = { coal = 0.2 }
+	rgo_goods_output = { other_minerals = 0.25 }
+	rgo_size = { other_minerals = 0.2 }
+	rgo_goods_output = { iron = 0.75 }
+	rgo_size = { iron = 0.2 }
+	rgo_goods_output = { gold_silver = 0.25 }
+	rgo_size = { gold_silver = 0.2 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+heavy_mining = {
+	area = commodities
+	year = 1946
+	cost = 5400
+	
+	rgo_goods_output = { copper = 0.1 }
+	rgo_goods_output = { coal = 0.25 }
+	rgo_size = { coal = 0.2 }
+	rgo_goods_output = { other_minerals = 0.25 }
+	rgo_size = { other_minerals = 0.2 }
+	rgo_goods_output = { iron = 0.75 }
+	rgo_size = { iron = 0.2 }
+	rgo_goods_output = { gold_silver =1 }
+	rgo_size = { gold_silver = 1 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+deep_mining = {
+	area = commodities
+	year = 1962
+	cost = 7200
+	
+	rgo_goods_output = { copper = 0.5 }
+	rgo_goods_output = { coal = 0.25 }
+	rgo_size = { coal = 0.2 }
+	rgo_goods_output = { other_minerals = 0.25 }
+	rgo_size = { other_minerals = 0.2 }
+	rgo_goods_output = { iron = 0.75 }
+	rgo_size = { iron = 0.2 }
+	rgo_goods_output = { gold_silver = 1.5 }
+	rgo_size = { gold_silver = 1.5 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+green_revolution = {
+	area = commodities
+	year = 1968
+	cost = 7200
+
+	rgo_goods_output = { rubber = 0.25 }
+	rgo_goods_output = { grain = 0.25 }
+	rgo_goods_output = { cattle = 0.25 }
+	rgo_goods_output = { timber = 0.1 }
+	rgo_goods_output = { tobacco = 0.4 }
+	rgo_goods_output = { cotton = 0.3 }
+	rgo_goods_output = { coffee = 0.3 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+contemporary_agriculture = {
+	area = commodities
+	year = 1992
+	cost = 12600
+	
+	rgo_goods_output = { rubber = 0.25 }
+	rgo_size = { rubber = 0.1 }
+	rgo_goods_output = { fruit = 0.25 }
+	rgo_size = { fruit = 0.1 }
+	rgo_goods_output = { coffee = 0.25 }
+	rgo_size = { coffee = 0.1 }
+	rgo_goods_output = { tobacco = 0.25 }
+	rgo_size = { tobacco = 0.1 }
+	rgo_goods_output = { cotton = 0.3 }
+	rgo_size = { cotton = 0.1 }
+	rgo_goods_output = { timber = 0.2 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = fruit
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = coffee
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = tobacco
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+automated_mining = {
+	area = commodities
+	year = 2000
+	cost = 14400
+
+	rgo_goods_output = { copper = 0.8 }
+	rgo_goods_output = { gold_silver = 0.25 }
+	rgo_goods_output = { coal = 0.25 }
+	rgo_goods_output = { iron = 0.25 }
+	rgo_size = { gold_silver = 0.2 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+genetically_modified_organism = {
+	area = commodities
+	year = 2004
+	cost = 14400
+
+	rgo_goods_output = { other_minerals = 0.5 }
+	rgo_goods_output = { coal = 0.25 }
+	rgo_goods_output = { iron = 0.25 }
+	rgo_size = { other_minerals = 0.2 }
+	rgo_goods_output = { cotton = 0.25 }
+	rgo_goods_output = { coffee = 0.25 }
+	rgo_size = { coffee = 0.1 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+new_green_revolution = {
+	area = commodities
+	year = 2025
+	cost = 18000
+	
+	rgo_goods_output = { fruit = 0.25 }
+	rgo_size = { fruit = 0.1 }
+	rgo_goods_output = { coffee = 0.25 }
+	rgo_size = { coffee = 0.1 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = fruit
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = coffee
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+landfill_mining_and_recycling = {
+	area = commodities
+	year = 2045
+	cost = 18000
+
+	rgo_goods_output = { copper = 0.4 }
+	rgo_goods_output = { gold_silver = 0.25 }
+	factory_goods_output = { steel = 0.1 }
+	rgo_goods_output = { coal = 1 }
+	rgo_goods_output = { iron = 1 }
+	rgo_goods_output = { gold_silver = 1 }
+	rgo_goods_output = { other_minerals = 1 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = other_minerals
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = other_minerals
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = gold_silver
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+
+#tech_infrastructure
+modern_roads = {
+	area = tech_infrastructure
+	year = 1946
+	cost = 3600
+
+	activate_building = railroad
+	mobilisation_size = 0.005
+	rgo_goods_output = { iron = 0.25 }
+	rgo_goods_output = { coal = 0.1 }
+	
+	ai_chance = {
+		factor = 1.5 #1.1
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2025
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+early_highway = {
+	area = tech_infrastructure
+	year = 1946
+	cost = 3600
+
+	max_railroad = 1
+	mobilisation_size = 0.005
+	
+	ai_chance = {
+		factor = 1.5 #1.1
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2025
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+high_speed_rail = {
+	area = tech_infrastructure
+	year = 1946
+	cost = 3600
+
+	max_railroad = 1
+	mobilisation_size = 0.005
+	
+	ai_chance = {
+		factor = 1.5 #1.1
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2025
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+interstate_highway_system = {
+	area = tech_infrastructure
+	year = 1955
+	cost = 5400
+
+	max_railroad = 1
+	mobilisation_size = 0.005
+	
+	ai_chance = {
+		factor = 1.5 #1.1
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2025
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+early_backbone = {
+	area = tech_infrastructure
+	year = 1992
+	cost = 12600
+
+	max_railroad = 1
+	mobilisation_size = 0.005
+	
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2035
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+modern_backbone = {
+	area = tech_infrastructure
+	year = 1992
+	cost = 12600
+
+	max_railroad = 1
+	mobilisation_size = 0.005	
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2045
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+mobile_network = {
+	area = tech_infrastructure
+	year = 2000
+	cost = 14400
+
+	mobilisation_size = 0.005	
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2045
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+dynamic_infrastructure = {
+	area = tech_infrastructure
+	year = 2015
+	cost = 14400
+
+	max_railroad = 1
+	mobilisation_size = 0.005	
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2065
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+universal_wireless_access = {
+	area = tech_infrastructure
+	year = 2030
+	cost = 18000
+
+	mobilisation_size = 0.005
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 2085
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+future_data_centers = {
+	area = tech_infrastructure
+	year = 2050
+	cost = 21600
+
+	mobilisation_size = 0.005
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+
+#medicine_tech
+electricity = {
+	area = medicine_tech
+	year = 1946
+	cost = 3600
+
+	supply_limit = 0.25
+	activate_building = electric_gear_factory
+	factory_goods_output = { fertilizers = 0.2 }
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
 	}
 }
 petrochemical_industry = {
-	area = "petro_chemicals_tech"
-	year = 1880
-	cost = 5000
+	area = medicine_tech
+	year = 1946
+	cost = 3600
 
-	factory_goods_output = { petrochemicals = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-synthetic_detergents = {
-	area = "petro_chemicals_tech"
-	year = 1910
-	cost = 6400
+	supply_limit = 0.25
+	factory_goods_output = { diamonds = 0.4 }
 	
-	activate_building = cosmetics_factory 
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
 	}
 }
-vulcanization = {
-	area = "petro_chemicals_tech"
-	year = 1910
-	cost = 6400
+plastic_industry = {
+	area = medicine_tech
+	year = 1955
+	cost = 5400
 
-	factory_goods_output = { rubber = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-cellophane = {
-	area = "petro_chemicals_tech"
-	year = 1930
-	cost = 8400
-
-	factory_goods_output = { plastics = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-polystyrene = {
-	area = "petro_chemicals_tech"
-	year = 1931
-	cost = 8500
-
-	activate_building = synthetic_fabric_factory 
-	ai_chance = {
-		factor = 1
-	}
-
-}
-nylon = {
-	area = "petro_chemicals_tech"
-	year = 1935
-	cost = 8900
+	supply_limit = 0.25
+	factory_goods_output = { beverages = 0.3 }
+	factory_goods_output = { diamonds = 0.3 }
 	
-	activate_building = petroleum_plastics_factory 
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
 	}
 }
-synthetic_rubber = {
-	area = "petro_chemicals_tech"
-	year = 1930
-	cost = 8400
+modern_medicine = {
+	area = medicine_tech
+	year = 1965
+	cost = 7200
 
-	activate_building = rubber_factory 
-	ai_chance = {
-		factor = 1
-	}
-
-}
-perfumery_and_cosmetics = {
-	area = "petro_chemicals_tech"
-	year = 1940
-	cost = 9400
+	supply_limit = 0.25
+	factory_goods_output = { beverages = 0.4 }
 	
-	factory_goods_output = { cosmetics = 0.05 }
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
 	}
 }
-styropor = {
-	area = "petro_chemicals_tech"
-	year = 1951
-	cost = 10500
-
-	factory_goods_output = { plastics = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-high_density_polyethylene = {
-	area = "petro_chemicals_tech"
-	year = 1960
-	cost = 11400
-
-	factory_goods_output = { plastics = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-}
-polyurethanes = {
-	area = "petro_chemicals_tech"
-	year = 1969
-	cost = 12300
-
-	factory_goods_output = { plastics = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-kevlar = {
-	area = "petro_chemicals_tech"
-	year = 1970
-	cost = 12400
-	
-	factory_input = -0.02
-	ai_chance = {
-		factor = 1
-	}
-}
-foams = {
-	area = "petro_chemicals_tech"
-	year = 1972
+molecular_biology = {
+	area = medicine_tech
+	year = 1992
 	cost = 12600
 
-	factory_input = -0.02
+	supply_limit = 0.25
+	factory_goods_output = { beverages = 0.3 }
+	factory_goods_output = { fabric = 0.2 }
+	
 	ai_chance = {
-		factor = 1
-	}
-
-}
-polyester_film_stock = {
-	area = "petro_chemicals_tech"
-	year = 1980
-	cost = 13400
-
-	factory_goods_output = { plastics = 0.05 }
-	ai_chance = {
-		factor = 1
-	}
-
-}
-engineering_plastics = {
-	area = "petro_chemicals_tech"
-	year = 1990
-
-	factory_goods_output = { plastics = 0.05 }
-	cost = 14400
-	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
 	}
 }
-silicon_carbide = {
-	area = "petro_chemicals_tech"
+biotechnology = {
+	area = medicine_tech
 	year = 2000
-	cost = 15400
+	cost = 14400
 
-	factory_goods_output = { petrochemicals = 0.05 }
+	supply_limit = 0.50
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1500
+		}
 	}
-
+	
 }
-biodegradable_plastics = {
-	area = "petro_chemicals_tech"
-	year = 2010
-	cost = 16400
+clinical_pharmacology = {
+	area = medicine_tech
+	year = 2015
+	cost = 14400
 
-	factory_goods_output = { plastics = 0.05 }
+	supply_limit = 0.25
+	
 	ai_chance = {
-		factor = 1
+		factor = 1.5
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
 	}
 }
-carbon_fiber = {
-	area = "petro_chemicals_tech"
-	year = 2010
-	cost = 16400
+genomics = {
+	area = medicine_tech
+	year = 2015
+	cost = 14400
 
-	factory_input = -0.02
+	supply_limit = 0.25
+	
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 1.1
+			year = 2040
+		}
+		modifier = {
+			factor = 2
+			year = 2050
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 150
+		}
 	}
 }
-neo_plastics = {
-	area = "petro_chemicals_tech"
+pharmacogenomics = {
+	area = medicine_tech
 	year = 2030
-	cost = 18400
+	cost = 18000
 
-	factory_input = -0.02
+	supply_limit = 0.25
+	
 	ai_chance = {
-		factor = 1
+		factor = 1.1
+		modifier = {
+			factor = 2
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 1.1
+			year = 2055
+		}
+		modifier = {
+			factor = 2
+			year = 2060
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
 	}
+}
+evidence_based_medicine = {
+	area = medicine_tech
+	year = 2050
+	cost = 21600
+	
+	supply_limit = 0.50
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			year = 2070
+		}
+		modifier = {
+			factor = 2
+			year = 2080
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 750
+		}
+	}
+
 }

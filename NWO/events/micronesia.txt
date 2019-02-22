@@ -1,0 +1,60 @@
+country_event = { # British Togoland Plebiscite
+  id = 8001136
+  title = EVT_8001136_NAME
+  desc = EVT_8001136_DESC
+  picture = "micronesia_independence"
+  fire_only_once = yes
+
+  trigger = {
+    tag = USA
+    year = 1986
+	is_our_vassal = MIC
+	exists = MIC
+	MIC = { government = provisional_government }
+  }
+
+  mean_time_to_happen = { months = 10 }
+
+  option = {
+    name = EVT_8001136_A
+	release_vassal = MIC
+	2517 = { add_core = MIC }
+	2518 = { add_core = MIC }
+	2522 = { add_core = MIC }
+	release = MIC
+	ai_chance = { factor = 50 }
+  }
+  
+  option = {
+    name = EVT_8001136_B
+	release_vassal = MIC
+	2517 = { add_core = MIC }
+	release = MIC
+	release = MAR
+	ai_chance = { factor = 50 }
+  }   
+  option = {
+    name = EVT_8001136_C
+	release_vassal = MIC
+	2518 = { add_core = MIC }
+	release = MIC
+	release_vassal = NMI
+	release = MAR
+	ai_chance = { factor = 50 }
+  }  
+  option = {
+    name = EVT_8001136_D
+	release_vassal = MIC
+	2522 = { add_core = MIC }
+	release = MIC
+	release_vassal = NMI
+	ai_chance = { factor = 50 }
+  } 
+  option = {
+    name = EVT_8001136_E
+	release_vassal = MIC
+	release_vassal = NMI
+	release = MAR
+	ai_chance = { factor = 50 }
+  }     
+}
