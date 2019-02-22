@@ -1,4 +1,4 @@
-country_event = { # British Togoland Plebiscite
+country_event = { 
   id = 8001136
   title = EVT_8001136_NAME
   desc = EVT_8001136_DESC
@@ -22,7 +22,8 @@ country_event = { # British Togoland Plebiscite
 	2518 = { add_core = MIC }
 	2522 = { add_core = MIC }
 	release = MIC
-	ai_chance = { factor = 50 }
+	create_alliance = MIC
+	ai_chance = { factor = 10 }
   }
   
   option = {
@@ -31,7 +32,9 @@ country_event = { # British Togoland Plebiscite
 	2517 = { add_core = MIC }
 	release = MIC
 	release = MAR
-	ai_chance = { factor = 50 }
+	create_alliance = MAR
+	create_alliance = MIC
+	ai_chance = { factor = 0.05 }
   }   
   option = {
     name = EVT_8001136_C
@@ -40,7 +43,7 @@ country_event = { # British Togoland Plebiscite
 	release = MIC
 	release_vassal = NMI
 	release = MAR
-	ai_chance = { factor = 50 }
+	ai_chance = { factor = 0.05 }
   }  
   option = {
     name = EVT_8001136_D
@@ -48,13 +51,16 @@ country_event = { # British Togoland Plebiscite
 	2522 = { add_core = MIC }
 	release = MIC
 	release_vassal = NMI
-	ai_chance = { factor = 50 }
+		create_alliance = MIC
+	ai_chance = { factor = 0.05 }
   } 
   option = {
     name = EVT_8001136_E
 	release_vassal = MIC
 	release_vassal = NMI
 	release = MAR
-	ai_chance = { factor = 50 }
+	create_alliance = MAR
+	create_alliance = MIC
+	ai_chance = { factor = 0.75 }
   }     
 }
